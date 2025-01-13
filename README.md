@@ -1,1 +1,0 @@
-# Private Captcha docs

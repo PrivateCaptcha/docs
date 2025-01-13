@@ -1,0 +1,243 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Private Captcha – Reference</title>
+    <link>https://docs.privatecaptcha.com/docs/reference/</link>
+    <description>Recent content in Reference on Private Captcha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://docs.privatecaptcha.com/docs/reference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Verify endpoint</title>
+      <link>https://docs.privatecaptcha.com/docs/reference/verify-endpoint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.privatecaptcha.com/docs/reference/verify-endpoint/</guid>
+      <description>
+        
+        
+        &lt;p&gt;To verify solutions you need to make a &lt;code&gt;POST&lt;/code&gt; request to &lt;code&gt;https://api.privatecaptcha.com/verify&lt;/code&gt; with the body of the request being solution field&amp;rsquo;s contents from your form.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -X POST &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;X-Api-Key: your-api-key-here&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;solution&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  https://api.privatecaptcha.com/verify&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Here&amp;rsquo;s how successful response from &lt;code&gt;/verify&lt;/code&gt; endpoint looks like:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;success&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;challenge_ts&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2025-01-13T16:17:27+00:00&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;hostname&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;privatecaptcha.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;error-codes&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;ℹ️&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;code&gt;/verify&lt;/code&gt; endpoint returns &lt;a href=&#34;https://developers.google.com/recaptcha/docs/verify&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reCAPTCHA-compatible&lt;/a&gt; response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header &lt;code&gt;X-Captcha-Compat-Version: rcV3&lt;/code&gt;.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In case of errors, &lt;code&gt;error-codes&lt;/code&gt; array will contain one or more of integer error codes:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Error code&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;No error&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;1&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Other (unknown) error&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;2&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Solution contains duplicates&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;3&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Solution verification error&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;4&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Solution has invalid format&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;5&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Puzzle for this solution has expired&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;6&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Property for this puzzle/solution cannot be found&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;7&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Property and API key&amp;rsquo;s accounts don&amp;rsquo;t match&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;8&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Solution has been already verified&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;9&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Maintenance mode (see below)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity is not verified. If solution is valid, &lt;code&gt;success&lt;/code&gt; in response is equal to &lt;code&gt;true&lt;/code&gt;, but &lt;code&gt;error-codes&lt;/code&gt; contains &lt;code&gt;9&lt;/code&gt; (maintenance mode error). You can decide yourself if you trust these form submissions.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Widget options</title>
+      <link>https://docs.privatecaptcha.com/docs/reference/widget-options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.privatecaptcha.com/docs/reference/widget-options/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Here&amp;rsquo;s the minimal captcha field declaration:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+
+&lt;div class=&#34;filename not-prose&#34; dir=&#34;auto&#34;&gt;index.html&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;private-captcha&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;data-sitekey&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;abcdef&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Private Captcha widget is automatically initialized on all elements with &lt;code&gt;private-captcha&lt;/code&gt; class name.&lt;/p&gt;
+&lt;h2&gt;Attributes&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;attributes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#attributes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Apart from the required &lt;code&gt;sitekey&lt;/code&gt; attribute, the following &lt;em&gt;optional&lt;/em&gt; attributes are supported:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Attribute&lt;/th&gt;
+          &lt;th&gt;Values&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-start-mode&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;auto&lt;/code&gt;, &lt;code&gt;click&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;In &lt;code&gt;auto&lt;/code&gt; mode (default) captcha widget starts solving captcha whenever parent form receives focus.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-debug&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;When set to &lt;code&gt;true&lt;/code&gt;, will show widget&amp;rsquo;s internal state and print debug logs.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-solution-field&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;private-captcha-solution&lt;/code&gt;, your value&lt;/td&gt;
+          &lt;td&gt;Name of the hidden form field with captcha solution that has to be verified on the server side.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-puzzle-endpoint&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;&#39;&#39;&lt;/code&gt; or your value&lt;/td&gt;
+          &lt;td&gt;Endpoint to get captcha puzzle (override in case of self-hosting).&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-display-mode&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;widget&lt;/code&gt;, &lt;code&gt;popup&lt;/code&gt;, &lt;code&gt;hidden&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;How captcha widget will be shown. Defaults to &lt;code&gt;widget&lt;/code&gt;. When hidden, you need to setup widget callbacks (see below).&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-lang&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;en&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Captcha widget localization.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-styles&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;{valid CSS}&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Overrides for host variables of the widget&amp;rsquo;s web component.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Notes and examples&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;notes-and-examples&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#notes-and-examples&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;&lt;code&gt;data-display-mode&lt;/code&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;data-display-mode&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#data-display-mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;popup&lt;/code&gt; captcha widget appears relative to the first parent that has a class &lt;code&gt;private-captcha-anchor&lt;/code&gt;.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;data-lang&lt;/code&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;data-lang&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#data-lang&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;data-lang&lt;/code&gt; allows you to show widget localization in your own language. Translations are defined in the &lt;code&gt;widget/js/strings.js&lt;/code&gt; file. If translation to your language is not there, feel free to contribute it.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;data-styles&lt;/code&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;data-styles&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#data-styles&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;data-styles&lt;/code&gt; allows you to override some of the widget styles to better fit into your website&amp;rsquo;s design. Example of override: &lt;code&gt;data-style=&amp;quot;:host { --border-radius: .75rem; }&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The following variables support overrides:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--dark-color&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--gray-color&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--light-color&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--lighter-color&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--gray-color&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--accent-color&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--extra-spacing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--label-spacing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--border-radius&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Callbacks&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;callbacks&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#callbacks&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can set your own Javascript handlers for various lifecycle events.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Callback&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-started-callback&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Captcha started solving the puzzle.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-finished-callback&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Puzzle has been solved. You can use this callback to enable the form submit button.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-errored-callback&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Puzzle endpoint is not reachable or puzzle solving has failed.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
