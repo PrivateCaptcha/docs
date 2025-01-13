@@ -18,11 +18,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 'latest'
-
       - name: Copy to Bunny CDN storage zone
         uses: sebastianpopp/ftp-action@releases/v2
         with:
