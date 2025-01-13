@@ -28,6 +28,6 @@ jobs:
       - name: Purge cache
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://api.bunny.net/purge?url=${{ secrets.BUNNY_PULL_ZONE }}.b-cdn.net&async=false'
+          url: 'https://api.bunny.net/purge?url=https%3A%2F%2F${{ secrets.BUNNY_PULL_ZONE }}.b-cdn.net&async=false'
           method: 'POST'
           customHeaders: '{"AccessKey": "${{ secrets.BUNNY_API }}"}'
