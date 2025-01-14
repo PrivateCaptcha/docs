@@ -25,7 +25,7 @@ jobs:
       - name: Load Secrets
         run: echo "machine storage.bunnycdn.com login ${{ secrets.BUNNY_STORAGE }} password ${{ secrets.BUNNY_API_STORAGE }}" > ~/.netrc
       - name: Upload Folder
-        run: lftp -e "mirror --exclude '^\..*$' --parallel=10 -R ./ /" storage.bunnycdn.com
+        run: lftp -e "mirror -vvv --exclude '^\..*$' --parallel=10 -R ./ ./" storage.bunnycdn.com
 
       - name: Purge cache
         uses: fjogeleit/http-request-action@v1
