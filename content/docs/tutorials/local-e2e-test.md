@@ -143,7 +143,7 @@ Make sure to use your own sitekey
      </div>
 ```
 
-If you did everything correctly, when you refresh the page (and/or restart your server), you will see a captcha widget:
+If you did everything correctly, when you refresh the page (and/or restart your server), you will see captcha widget:
 
 ![Captcha widget](/images/tutorials/e2e-local/form-with-widget.png)
 
@@ -153,7 +153,7 @@ However, currently captcha widget is not yet useful as we do not take it into ac
 
 ### Client-side
 
-In our simple web-page, let's add a JavaScript function to make enable the "Submit" button when captcha is solved.
+In our simple web-page, let's add a JavaScript function to enable the "Submit" button when captcha is solved.
 
 {{< tabs items="Diff,Code" >}}
 {{< tab >}}
@@ -207,7 +207,7 @@ For server-size, we need to add a handler for the form and verify captcha soluti
 
 ### Create a new API key
 
-To verify captcha solutions, we need an API key. Head to the [portal](https://portal.privatecaptcha.com/settings?tab=apikeys) and click "Create new key".
+To verify captcha solutions, we need an API key. Head to the [portal](https://portal.privatecaptcha.com/settings?tab=apikeys), open your user's Settings, then API keys and click "Create new key".
 
 ![Create new API key](/images/tutorials/create-api-key.png)
 
