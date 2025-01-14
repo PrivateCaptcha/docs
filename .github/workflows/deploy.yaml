@@ -18,17 +18,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: storage.bunnycdn.com
-          username: ${{ secrets.BUNNY_STORAGE }}
-          password: ${{ secrets.BUNNY_API_STORAGE }}
-          exclude: |
-            **/.devcontainer/**
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
+      - name: Get LFTP
+        run: sudo apt install lftp
+      - name: Configure LFTP
+        run: mkdir ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
+      - name: Load Secrets
+        run: echo "machine storage.bunnycdn.com login ${{ secrets.BUNNY_STORAGE }} password ${{ secrets.BUNNY_API_STORAGE }}" > ~/.netrc
+      - name: Upload Folder
+        run: lftp -e "mirror --exclude '^\..*$' --parallel=10 -R ./ /" storage.bunnycdn.com
 
       - name: Purge cache
         uses: fjogeleit/http-request-action@v1
