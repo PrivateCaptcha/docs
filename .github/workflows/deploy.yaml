@@ -18,8 +18,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Get LFTP
-        run: sudo apt install lftp
+      - name: Get LFTP and curl
+        run: sudo apt install lftp curl
       - name: Configure LFTP
         run: mkdir ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
       - name: Load Secrets
@@ -27,9 +27,10 @@ jobs:
       - name: Upload Folder
         run: lftp -e "mirror -vvv --exclude '^\..*$' --parallel=10 -R ./ ./" storage.bunnycdn.com
 
-      - name: Purge cache
-        uses: fjogeleit/http-request-action@v1
-        with:
-          url: 'https://api.bunny.net/purge?url=https%3A%2F%2F${{ secrets.BUNNY_PULL_ZONE }}.b-cdn.net&async=false'
-          method: 'POST'
-          customHeaders: '{"AccessKey": "${{ secrets.BUNNY_API }}"}'
+      - name: Purge cache CDN
+        run: |
+          curl -X POST -H 'AccessKey: ${{ secrets.BUNNY_API }}' 'https://api.bunny.net/purge?url=https%3A%2F%2F${{ secrets.BUNNY_PULL_ZONE }}.b-cdn.net&async=false'
+
+      - name: Purge cache domain
+        run: |
+          curl -X POST -H 'AccessKey: ${{ secrets.BUNNY_API }}' 'https://api.bunny.net/purge?url=https%3A%2F%2Fdocs.privatecaptcha.com&async=false'
