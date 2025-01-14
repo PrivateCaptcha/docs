@@ -18,12 +18,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Copy to Bunny CDN storage zone
-        uses: sebastianpopp/ftp-action@releases/v2
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          host: storage.bunnycdn.com
-          user: ${{ secrets.BUNNY_STORAGE }}
+          server: storage.bunnycdn.com
+          username: ${{ secrets.BUNNY_STORAGE }}
           password: ${{ secrets.BUNNY_API_STORAGE }}
+          dangerous-clean-slate: true
+          exclude: |
+            **/.devcontainer/**
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
 
       - name: Purge cache
         uses: fjogeleit/http-request-action@v1
