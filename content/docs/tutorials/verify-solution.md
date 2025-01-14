@@ -13,7 +13,7 @@ Solution verification is done on the server-side, when you are processing the fo
 
 ### Create an API key
 
-API key is a prerequisite for verifying captcha. You can create your Private Captcha API key [in the portal](https://portal.staging.privatecaptcha.com/settings?tab=apikeys).
+API key is a prerequisite for verifying captcha. You can create your Private Captcha API key [in the portal](https://portal.privatecaptcha.com/settings?tab=apikeys).
 
 ![Create new API key](/images/tutorials/create-api-key.png)
 
