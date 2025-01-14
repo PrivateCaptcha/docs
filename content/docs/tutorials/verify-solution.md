@@ -23,24 +23,34 @@ API key is a prerequisite for verifying captcha. You can create your Private Cap
 {{< tab >}}
 ```go {filename="main.go"}
 func checkSolution(solution, apiKey string) error {
-    req, err := http.NewRequest("POST", "https://api.privatecaptcha.com/verify", strings.NewReader(solution))
-    if err != nil {
-        return err
-    }
+	req, err := http.NewRequest("POST", "https://api.privatecaptcha.com/verify", strings.NewReader(solution))
+	if err != nil {
+		return err
+	}
 
-    req.Header.Set("X-Api-Key", apiKey)
-    
-    resp, err := http.DefaultClient.Do(req)
-    if err != nil {
-        return err
-    }
-    defer resp.Body.Close()
+	req.Header.Set("X-Api-Key", apiKey)
 
-    if resp.StatusCode != http.StatusOK {
-        return errors.New("solution is not correct")
-    }
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return err
+	}
+	defer resp.Body.Close()
 
-    return nil
+	response := struct {
+		Success    bool  `json:"success"`
+		ErrorCodes []int `json:"error-codes,omitempty"`
+		// NOTE: other fields omitted for brevity
+	}{}
+
+	if err := json.NewDecoder(resp.Body).Decode(&response); err != nil {
+		return err
+	}
+
+	if !response.Success {
+		return errors.New("solution is not correct")
+	}
+
+	return nil
 }
 ```
 {{< /tab >}}
