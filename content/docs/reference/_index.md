@@ -8,6 +8,6 @@ Reference of API and parameters that you can use.
 <!--more-->
 
 {{< cards >}}
-  {{< card link="widget-options" title="Widget options" icon="adjustments" >}}
-  {{< card link="verify-api" title="Verify API" icon="cloud" >}}
+  {{< card link="/docs/reference/widget-options" title="Widget options" icon="adjustments" >}}
+  {{< card link="/docs/reference/verify-api" title="Verify API" icon="cloud" >}}
 {{< /cards >}}
