@@ -143,6 +143,12 @@ Make sure to use your own sitekey
      </div>
 ```
 
+{{% details title="Other environments" closed="true" %}}
+
+For deployments, different from `privatecaptcha.com`, you also need to set `data-puzzle-endpoint="https://api.your-domain.com/puzzle"` attribute
+
+{{% /details %}}
+
 If you did everything correctly, when you refresh the page (and/or restart your server), you will see captcha widget:
 
 ![Captcha widget](/images/tutorials/e2e-local/form-with-widget.png)
@@ -244,10 +250,8 @@ Make sure to use your own API key
 +               // NOTE: other fields omitted for brevity
 +       }{}
 +
-+       if body, err := io.ReadAll(resp.Body); err == nil {
-+               if err = json.Unmarshal(body, &response); err != nil {
-+                       return err
-+               }
++       if err := json.NewDecoder(resp.Body).Decode(&response); err != nil {
++           return err
 +       }
 +
 +       if !response.Success {
@@ -294,10 +298,8 @@ func checkSolution(solution, apiKey string) error {
 		// NOTE: other fields omitted for brevity
 	}{}
 
-	if body, err := io.ReadAll(resp.Body); err == nil {
-		if err = json.Unmarshal(body, &response); err != nil {
-			return err
-		}
+	if err := json.NewDecoder(resp.Body).Decode(&response); err != nil {
+		return err
 	}
 
 	if !response.Success {
@@ -335,7 +337,7 @@ Now, if you did everything correct, your property dashboard in portal will also 
 
 ![Reports](/images/tutorials/e2e-local/reports.png)
 
-And if you print verify response to the console, you will get this json:
+And, if you print verify response to the console, you will get this json:
 
 ```json
 {"success":true,"challenge_ts":"2025-01-14T11:19:34Z","hostname":"27ca-193-138-7-216.ngrok-free.app"}
