@@ -58,7 +58,7 @@ params:
     displayLogo: true
     logo:
       path: images/pc-icon-dark.svg
-      dark: images/logo-icon-light.svg
+      dark: images/pc-icon-light.svg
       link: /
       width: 30
       height: 20
