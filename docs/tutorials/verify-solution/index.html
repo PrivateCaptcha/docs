@@ -11,14 +11,17 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Verify solution – Private Captcha</title>
-  <meta name="description" content="Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your API key in the portal.
-Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error { req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/verify&#34;, strings.NewReader(solution)) if err != nil { return err } req.Header.Set(&#34;X-Api-Key&#34;, apiKey) resp, err := http.DefaultClient.Do(req) if err != nil { return err } defer resp.Body.Close() if resp.StatusCode != http.StatusOK { return errors.New(&#34;solution is not correct&#34;) } return nil } Check response In case HTTP response code is not 200, you can parse response and check errors." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/verify-solution/" itemprop="url" />
+  <meta name="description" content="Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.
+Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal.
+Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error { req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/verify&#34;, strings.NewReader(solution)) if err != nil { return err } req.Header.Set(&#34;X-Api-Key&#34;, apiKey) resp, err := http.DefaultClient.Do(req) if err != nil { return err } defer resp.Body.Close() if resp.StatusCode != http.StatusOK { return errors.New(&#34;solution is not correct&#34;) } return nil } Check response Parse response and check errors." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/verify-solution/" itemprop="url" />
 
 <meta property="og:title" content="Verify solution" />
-<meta property="og:description" content="Step by step
+<meta property="og:description" content="Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.
+Step by step
     
 Create an API key
-    API key is a prerequisite for verifying captcha. You can create your API key in the portal.
+    API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal.
+
 Call REST endpoint
     
   Go
@@ -54,20 +57,22 @@ main.gofunc checkSolution(solution, apiKey string) error {
 
 
 Check response
-    In case HTTP response code is not 200, you can parse response and check errors." />
+    Parse response and check errors." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/verify-solution/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="Verify solution">
-  <meta itemprop="description" content="Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your API key in the portal.
-Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error { req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/verify&#34;, strings.NewReader(solution)) if err != nil { return err } req.Header.Set(&#34;X-Api-Key&#34;, apiKey) resp, err := http.DefaultClient.Do(req) if err != nil { return err } defer resp.Body.Close() if resp.StatusCode != http.StatusOK { return errors.New(&#34;solution is not correct&#34;) } return nil } Check response In case HTTP response code is not 200, you can parse response and check errors.">
-  <meta itemprop="wordCount" content="95">
+  <meta itemprop="description" content="Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.
+Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal.
+Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error { req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/verify&#34;, strings.NewReader(solution)) if err != nil { return err } req.Header.Set(&#34;X-Api-Key&#34;, apiKey) resp, err := http.DefaultClient.Do(req) if err != nil { return err } defer resp.Body.Close() if resp.StatusCode != http.StatusOK { return errors.New(&#34;solution is not correct&#34;) } return nil } Check response Parse response and check errors.">
+  <meta itemprop="wordCount" content="115">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Verify solution">
-  <meta name="twitter:description" content="Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your API key in the portal.
-Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error { req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/verify&#34;, strings.NewReader(solution)) if err != nil { return err } req.Header.Set(&#34;X-Api-Key&#34;, apiKey) resp, err := http.DefaultClient.Do(req) if err != nil { return err } defer resp.Body.Close() if resp.StatusCode != http.StatusOK { return errors.New(&#34;solution is not correct&#34;) } return nil } Check response In case HTTP response code is not 200, you can parse response and check errors.">
+  <meta name="twitter:description" content="Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.
+Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal.
+Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error { req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/verify&#34;, strings.NewReader(solution)) if err != nil { return err } req.Header.Set(&#34;X-Api-Key&#34;, apiKey) resp, err := http.DefaultClient.Do(req) if err != nil { return err } defer resp.Body.Close() if resp.StatusCode != http.StatusOK { return errors.New(&#34;solution is not correct&#34;) } return nil } Check response Parse response and check errors.">
 
     <link rel="preload" href="/css/compiled/main.min.c697307cafa791c9b405fe69f29b2345d58146c0293709ed7261c913cec724ba.css" as="style" integrity="sha256-xpcwfK&#43;nkcm0Bf5p8psjRdWBRsApNwntcmHJE87HJLo=" />
     <link href="/css/compiled/main.min.c697307cafa791c9b405fe69f29b2345d58146c0293709ed7261c913cec724ba.css" rel="stylesheet" integrity="sha256-xpcwfK&#43;nkcm0Bf5p8psjRdWBRsApNwntcmHJE87HJLo=" />
@@ -217,6 +222,14 @@ Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error {
         <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/deployment/"
+    
+  >Deployment
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/reference/"
     
   >Reference
@@ -226,9 +239,9 @@ Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error {
         <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/reference/verify-endpoint/"
+    href="/docs/reference/verify-api/"
     
-  >Verify endpoint
+  >Verify API
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -250,7 +263,15 @@ Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error {
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/tutorials/install-widget/"
+    
+  >Install widget
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/tutorials/verify-solution/"
@@ -267,14 +288,6 @@ Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error {
           </ul>
   
               
-            </li><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/tutorials/widget-example/"
-    
-  >Widget example
-    </a>
-              
             </li></ul>
       </div>
             </li></ul>
@@ -286,6 +299,13 @@ Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error {
           <li class=""><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/deployment/"
+    
+  >Deployment
+    </a></li>
+          <li class=""><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/reference/"
     
   >Reference
@@ -294,9 +314,9 @@ Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error {
         <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/reference/verify-endpoint/"
+    href="/docs/reference/verify-api/"
     
-  >Verify endpoint
+  >Verify API
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -317,20 +337,20 @@ Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error {
   >Tutorials
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/tutorials/install-widget/"
+    
+  >Install widget
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/tutorials/verify-solution/"
     
   >Verify solution
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/tutorials/widget-example/"
-    
-  >Widget example
     </a>
               
             </li></ul>
@@ -395,10 +415,12 @@ Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error {
 
         <div class="content">
           <h1>Verify solution</h1>
-          <h2>Step by step<span class="hx-absolute -hx-mt-20" id="step-by-step"></span>
+          <p>Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.</p>
+<h2>Step by step<span class="hx-absolute -hx-mt-20" id="step-by-step"></span>
     <a href="#step-by-step" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="steps hx-ml-4 hx-mb-12 ltr:hx-border-l rtl:hx-border-r hx-border-gray-200 ltr:hx-pl-6 rtl:hx-pr-6 dark:hx-border-neutral-800 [counter-reset:step]">
 <h3>Create an API key<span class="hx-absolute -hx-mt-20" id="create-an-api-key"></span>
-    <a href="#create-an-api-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>API key is a prerequisite for verifying captcha. You can create your API key <a href="https://portal.staging.privatecaptcha.com/settings?tab=apikeys" target="_blank" rel="noopener">in the portal</a>.</p>
+    <a href="#create-an-api-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>API key is a prerequisite for verifying captcha. You can create your Private Captcha API key <a href="https://portal.staging.privatecaptcha.com/settings?tab=apikeys" target="_blank" rel="noopener">in the portal</a>.</p>
+<p><img src="/images/tutorials/create-api-key.png" alt="Create new API key" loading="lazy" /></p>
 <h3>Call REST endpoint<span class="hx-absolute -hx-mt-20" id="call-rest-endpoint"></span>
     <a href="#call-rest-endpoint" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain">
   <div class="hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800"><button
@@ -444,20 +466,33 @@ Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error {
 </div>
 </div>
 <h3>Check response<span class="hx-absolute -hx-mt-20" id="check-response"></span>
-    <a href="#check-response" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In case HTTP response code is not <code>200</code>, you can parse response and <a href="/docs/reference/verify-endpoint/" >check errors</a>.</p>
+    <a href="#check-response" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Parse response and <a href="/docs/reference/verify-api/" >check errors</a>.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;success&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;challenge_ts&#34;</span><span class="p">:</span> <span class="s2">&#34;2025-01-13T16:17:27+00:00&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;hostname&#34;</span><span class="p">:</span> <span class="s2">&#34;privatecaptcha.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;error-codes&#34;</span><span class="p">:</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 </div>
 
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="/docs/tutorials/widget-example/"
-        title="Widget example"
+        href="/docs/tutorials/install-widget/"
+        title="Install widget"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
-      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Widget example</a><a
-        href="/docs/tutorials/widget-example/"
-        title="Widget example"
-        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >Widget example<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Install widget</a></div>
         
       </main>
     </article>

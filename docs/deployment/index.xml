@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Private Captcha – Deployment</title>
+    <link>https://docs.privatecaptcha.com/docs/deployment/</link>
+    <description>Recent content in Deployment on Private Captcha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://docs.privatecaptcha.com/docs/deployment/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

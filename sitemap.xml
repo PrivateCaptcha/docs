@@ -6,7 +6,11 @@
   </url><url>
     <loc>https://docs.privatecaptcha.com/categories/</loc>
   </url><url>
+    <loc>https://docs.privatecaptcha.com/docs/deployment/</loc>
+  </url><url>
     <loc>https://docs.privatecaptcha.com/docs/</loc>
+  </url><url>
+    <loc>https://docs.privatecaptcha.com/docs/tutorials/install-widget/</loc>
   </url><url>
     <loc>https://docs.privatecaptcha.com/</loc>
   </url><url>
@@ -16,11 +20,9 @@
   </url><url>
     <loc>https://docs.privatecaptcha.com/docs/tutorials/</loc>
   </url><url>
-    <loc>https://docs.privatecaptcha.com/docs/reference/verify-endpoint/</loc>
+    <loc>https://docs.privatecaptcha.com/docs/reference/verify-api/</loc>
   </url><url>
     <loc>https://docs.privatecaptcha.com/docs/tutorials/verify-solution/</loc>
-  </url><url>
-    <loc>https://docs.privatecaptcha.com/docs/tutorials/widget-example/</loc>
   </url><url>
     <loc>https://docs.privatecaptcha.com/docs/reference/widget-options/</loc>
   </url>
