@@ -24,6 +24,7 @@ jobs:
           server: storage.bunnycdn.com
           username: ${{ secrets.BUNNY_STORAGE }}
           password: ${{ secrets.BUNNY_API_STORAGE }}
+          log-level: verbose
           exclude: |
             **/.devcontainer/**
             **/.git*
