@@ -1,9 +1,11 @@
 ---
 title: Verify solution
 type: docs
-prev: widget-example
+prev: install-widget
 #next: ''
 ---
+
+Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.
 
 ## Step by step
 
@@ -11,7 +13,9 @@ prev: widget-example
 
 ### Create an API key
 
-API key is a prerequisite for verifying captcha. You can create your API key [in the portal](https://portal.staging.privatecaptcha.com/settings?tab=apikeys).
+API key is a prerequisite for verifying captcha. You can create your Private Captcha API key [in the portal](https://portal.staging.privatecaptcha.com/settings?tab=apikeys).
+
+![Create new API key](/images/tutorials/create-api-key.png)
 
 ### Call REST endpoint
 
@@ -44,6 +48,15 @@ func checkSolution(solution, apiKey string) error {
 
 ### Check response
 
-In case HTTP response code is not `200`, you can parse response and [check errors]({{< relref "/docs/reference/verify-endpoint.md" >}}).
+Parse response and [check errors]({{< relref "/docs/reference/verify-api.md" >}}).
+
+```json
+{
+  "success": true,
+  "challenge_ts": "2025-01-13T16:17:27+00:00",
+  "hostname": "privatecaptcha.com",
+  "error-codes": []
+}
+```
 
 {{% /steps %}}

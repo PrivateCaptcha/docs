@@ -1,18 +1,70 @@
 ---
 title: Private Captcha Documentation
-toc: false
+layout: hextra-home
 ---
 
-This is the landing page.
+{{< hextra/hero-badge >}}
+  <div class="hx-w-2 hx-h-2 hx-rounded-full hx-bg-primary-400"></div>
+  <span>Private, open source</span>
+  {{< icon name="arrow-circle-right" attributes="height=14" >}}
+{{< /hextra/hero-badge >}}
 
-## Explore
+<div class="hx-mt-6 hx-mb-6">
+{{< hextra/hero-headline >}}
+  Protect your websites&nbsp;<br class="sm:hx-block hx-hidden" />from bots and spam
+{{< /hextra/hero-headline >}}
+</div>
 
-{{< cards >}}
-  {{< card link="docs/reference" title="Reference" icon="book-open" >}}
-  {{< card link="docs/tutorials" title="Tutorials" icon="academic-cap" >}}
-  {{< card link="about" title="About" icon="user" >}}
-{{< /cards >}}
+<div class="hx-mb-12">
+{{< hextra/hero-subtitle >}}
+  Open-source, GDPR- and CCPA-compliant&nbsp;<br class="sm:hx-block hx-hidden" />solution for bot and abuse protection
+{{< /hextra/hero-subtitle >}}
+</div>
 
-## Documentation
+<div class="hx-mb-6">
+{{< hextra/hero-button text="Get Started" link="docs" >}}
+</div>
 
-For more information, visit [Private Captcha](https://privatecaptcha.com).
+<div class="hx-mt-6"></div>
+
+{{< hextra/feature-grid >}}
+  {{< hextra/feature-card
+    title="Tutorials"
+    subtitle="Simple step by step guides"
+    link="docs/tutorials"
+    class="hx-aspect-auto md:hx-aspect-[1.1/1] max-md:hx-min-h-[340px]"
+    image="images/tutorials.png"
+    imageClass="hx-top-[24px] hx-left-[36px] hx-w-full sm:hx-w-[110%] dark:hx-opacity-80"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(194,97,254,0.15),hsla(0,0%,100%,0));"
+  >}}
+  {{< hextra/feature-card
+    title="Reference"
+    subtitle="API documentation"
+    link="docs/reference"
+    class="hx-aspect-auto md:hx-aspect-[1.1/1] max-lg:hx-min-h-[340px]"
+    image="images/reference.png"
+    imageClass="hx-top-[24px] hx-left-[36px] hx-w-full sm:hx-w-[110%] dark:hx-opacity-80"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
+  >}}
+  {{< hextra/feature-card
+    title="Self-hostable"
+    subtitle="Deploy to your own infra"
+    link="docs/deployment"
+    class="hx-aspect-auto md:hx-aspect-[1.1/1] max-lg:hx-min-h-[340px]"
+    image="images/deployment.png"
+    imageClass="hx-top-[24px] hx-left-[36px] hx-w-full sm:hx-w-[110%] dark:hx-opacity-80"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  >}}
+  {{< hextra/feature-card
+    title="Get started in minutes"
+    subtitle="Simple examples with code that you copy and paste"
+  >}}
+  {{< hextra/feature-card
+    title="Detailed parameters"
+    subtitle="Customizations you can make to meet any needs you have"
+  >}}
+  {{< hextra/feature-card
+    title="Built to be self-hostable"
+    subtitle="Get up and running in minutes"
+  >}}
+{{< /hextra/feature-grid >}}

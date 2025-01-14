@@ -2,7 +2,7 @@
 title: Widget options
 type: docs
 #prev: /
-next: verify-endpoint
+next: verify-api
 ---
 
 Here's the minimal captcha field declaration:

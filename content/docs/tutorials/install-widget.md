@@ -1,5 +1,5 @@
 ---
-title: Widget example
+title: Install widget
 type: docs
 prev: docs/reference/
 next: verify-solution
@@ -13,24 +13,37 @@ next: verify-solution
 
 Create your property in the [dashboard](https://portal.privatecaptcha.com/) and copy the `sitekey` from the integration snippet.
 
+![Create new property](/images/tutorials/create-property.png)
+
 ### Copy widget snippet
 
 Add captcha widget inside your form:
 ```html {filename="index.html"}
-<div class="private-captcha"
-    data-sitekey="your-sitekey"
-    data-finished-callback="your-callback">
-</div>
+<form>
+    <!-- ... --->
+    <div class="private-captcha"
+        data-sitekey="your-sitekey"
+        data-finished-callback="your-callback">
+    </div>
+    <!-- ... --->
+</form>
 ```
 
 ### Verify solution
 
-In your form's handler, before processing user input, [verify solution]({{< relref "/docs/tutorials/verify-solution.md" >}}) using Private Captcha API.
+In your form's handler on the server, before processing user input, [verify solution]({{< relref "/docs/tutorials/verify-solution.md" >}}) using Private Captcha API.
+
+```bash
+curl -X POST \
+  -H "X-Api-Key: your-api-key-here" \
+  -d "solution" \
+  https://api.privatecaptcha.com/verify
+```
 
 {{% /steps %}}
 
 
-## Sample code
+## Sample client code
 
 Here's a minimal, yet functional, example of using widget with your form.
 

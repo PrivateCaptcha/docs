@@ -1,18 +1,23 @@
 ---
-title: Verify endpoint
+title: Verify API
 type: docs
 prev: widget-options
 #next: docs/folder/
 ---
 
+## Request
+
 To verify solutions you need to make a `POST` request to `https://api.privatecaptcha.com/verify` with the body of the request being solution field's contents from your form.
 
 ```bash
+# an example how that will look like with curl
 curl -X POST \
   -H "X-Api-Key: your-api-key-here" \
   -d "solution" \
   https://api.privatecaptcha.com/verify
 ```
+
+## Response
 
 Here's how successful response from `/verify` endpoint looks like:
 
@@ -28,6 +33,8 @@ Here's how successful response from `/verify` endpoint looks like:
 {{< callout type="info" >}}
 `/verify` endpoint returns [reCAPTCHA-compatible](https://developers.google.com/recaptcha/docs/verify) response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header `X-Captcha-Compat-Version: rcV3`.
 {{< /callout >}}
+
+## Error codes
 
 In case of errors, `error-codes` array will contain one or more of integer error codes:
 
