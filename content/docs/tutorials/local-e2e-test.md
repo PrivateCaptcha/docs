@@ -148,10 +148,10 @@ If you did everything correctly, when you refresh the page (and/or restart your 
 ![Captcha widget](/images/tutorials/e2e-local/form-with-widget.png)
 
 {{< callout type="warning" >}}
-Captcha has a strict CORS policy and it will load **only** on the domain configured during property creation. Therefore you need to open page created by `ngrok` instead of the `localhost:8081` address.
+Captcha has a strict CORS policy and, by default, it will load **only** on the domain configured during property creation. Therefore initially it will only work on URL created by `ngrok`.
 {{< /callout >}}
 
-However, currently captcha widget is not yet useful as we do not take it into account when submitting the form.
+However, currently captcha widget is not yet particularly useful as we do not take it into account when submitting the form.
 
 ## Integrating with Private Captcha
 
