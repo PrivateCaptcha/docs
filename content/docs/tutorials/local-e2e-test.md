@@ -207,7 +207,7 @@ Now client-side should be ready. What is left is only to verify captcha on the s
 
 ### Server-side
 
-For server-size, we need to add a handler for the form and verify captcha solution.
+For server-side, we need to add a handler for the form and verify captcha solution.
 
 ### Create a new API key
 
