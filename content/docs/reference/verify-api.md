@@ -5,7 +5,17 @@ prev: widget-options
 #next: docs/folder/
 ---
 
-After captcha widget has finished solving puzzle, it adds a hidden form field (defined by `data-solution-field` [attribute]({{< relref "/docs/reference/widget-options.md" >}})). When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.
+After captcha widget has finished solving puzzle, it adds a hidden form field (defined by `data-solution-field` [attribute]({{< relref "/docs/reference/widget-options.md" >}})).
+
+```html
+<form>
+    <!-- ... -->
+    <input name="private-captcha-solution" type="hidden" value="AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=">
+    <!-- ... -->
+</form>
+```
+
+When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.
 
 ## Request
 
@@ -42,7 +52,7 @@ In case of errors, `error-codes` array will contain one or more of integer error
 
 Error code | Description
 --- | ---
-`0` | No error
+`0` | No error (shown here for completeness)
 `1` | Other (unknown) error
 `2` | Solution contains duplicates
 `3` | Solution verification error
