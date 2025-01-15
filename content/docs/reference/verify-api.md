@@ -19,7 +19,7 @@ When handling form submission on the server-side, this is the field you need to 
 
 ## Request
 
-To verify solutions you need to make a `POST` request to `https://api.privatecaptcha.com/verify` with the body of the request being solution field's contents from your form.
+To verify solutions you need to make a `POST` request to `https://api.privatecaptcha.com/siteverify` with the body of the request being solution field's contents from your form.
 
 ```bash
 # an example how that will look like with curl
@@ -31,7 +31,7 @@ curl -X POST \
 
 ## Response
 
-Here's how successful response from `/verify` endpoint looks like:
+Here's how successful response from `/siteverify` endpoint looks like:
 
 ```json
 {
@@ -43,7 +43,7 @@ Here's how successful response from `/verify` endpoint looks like:
 ```
 
 {{< callout type="info" >}}
-`/verify` endpoint returns [reCAPTCHA-compatible](https://developers.google.com/recaptcha/docs/verify) response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header `X-Captcha-Compat-Version: rcV3`.
+`/siteverify` endpoint returns [reCAPTCHA-compatible](https://developers.google.com/recaptcha/docs/verify) response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header `X-Captcha-Compat-Version: rcV3`.
 {{< /callout >}}
 
 ## Error codes
@@ -52,15 +52,15 @@ In case of errors, `error-codes` array will contain one or more of integer error
 
 Error code | Description
 --- | ---
-`0` | No error (shown here for completeness)
-`1` | Other (unknown) error
-`2` | Solution contains duplicates
-`3` | Solution verification error
-`4` | Solution has invalid format
-`5` | Puzzle for this solution has expired
-`6` | Property for this puzzle/solution cannot be found
-`7` | Property and API key's accounts don't match
-`8` | Solution has been already verified
-`9` | Maintenance mode (see below)
+`no-error` | No error (shown here for completeness)
+`error-other` | Unspecified error
+`solution-duplicates` | Solution contains duplicates
+`solution-invalid` | Solution verification error
+`solution-bad-format` | Solution has invalid format
+`puzzle-expired` | Puzzle for this solution has expired
+`property-invalid` | Property for this puzzle/solution cannot be found
+`property-owner-mismatch` | Property and API key's accounts don't match
+`solution-verified-before` | Solution has been already verified
+`maintenance-mode` | Maintenance mode (see below)
 
 During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity is not verified. If solution is valid, `success` in response is equal to `true`, but `error-codes` contains `9` (maintenance mode error). You can decide yourself if you trust these form submissions.

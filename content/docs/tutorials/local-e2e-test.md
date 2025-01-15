@@ -217,7 +217,7 @@ To verify captcha solutions, we need an API key. Head to the [portal](https://po
 
 ### Add code to verify solution
 
-To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to send a `POST` request to `/verify` endpoint and check the result. By default, widget adds an invisible form input with [name]({{< relref "/docs/reference/widget-options.md" >}}) `private-captcha-solution`.
+To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to send a `POST` request to `/siteverify` endpoint and check the result. By default, widget adds an invisible form input with [name]({{< relref "/docs/reference/widget-options.md" >}}) `private-captcha-solution`.
 
 {{< callout type="info" >}}
 Make sure to use your own API key
