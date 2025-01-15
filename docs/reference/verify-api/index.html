@@ -11,44 +11,38 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Verify API – Private Captcha</title>
-  <meta name="description" content="After captcha widget has finished solving puzzle, it adds a hidden form field (defined by data-solution-field attribute). When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.
-Request To verify solutions you need to make a POST request to https://api.privatecaptcha.com/verify with the body of the request being solution field’s contents from your form.
-# an example how that will look like with curl curl -X POST \ -H &#34;X-Api-Key: your-api-key-here&#34; \ -d &#34;solution&#34; \ https://api.privatecaptcha.com/verify Response Here’s how successful response from /verify endpoint looks like:" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/verify-api/" itemprop="url" />
+  <meta name="description" content="After captcha widget has finished solving puzzle, it adds a hidden form field (defined by data-solution-field attribute).
+&lt;form&gt; &lt;!-- ... --&gt; &lt;input name=&#34;private-captcha-solution&#34; type=&#34;hidden&#34; value=&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;&gt; &lt;!-- ... --&gt; &lt;/form&gt; When handling form submission on the server-side, this is the field you need to validate using Private Captcha API." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/verify-api/" itemprop="url" />
 
 <meta property="og:title" content="Verify API" />
-<meta property="og:description" content="After captcha widget has finished solving puzzle, it adds a hidden form field (defined by data-solution-field attribute). When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.
-Request
-    To verify solutions you need to make a POST request to https://api.privatecaptcha.com/verify with the body of the request being solution field&rsquo;s contents from your form.
+<meta property="og:description" content="After captcha widget has finished solving puzzle, it adds a hidden form field (defined by data-solution-field attribute).
 
 
-# an example how that will look like with curl
-curl -X POST \
-  -H &#34;X-Api-Key: your-api-key-here&#34; \
-  -d &#34;solution&#34; \
-  https://api.privatecaptcha.com/verify
+&lt;form&gt;
+    &lt;!-- ... --&gt;
+    &lt;input name=&#34;private-captcha-solution&#34; type=&#34;hidden&#34; value=&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;&gt;
+    &lt;!-- ... --&gt;
+&lt;/form&gt;
   
     
     
   
 
 
-Response
-    Here&rsquo;s how successful response from /verify endpoint looks like:" />
+When handling form submission on the server-side, this is the field you need to validate using Private Captcha API." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/verify-api/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="Verify API">
-  <meta itemprop="description" content="After captcha widget has finished solving puzzle, it adds a hidden form field (defined by data-solution-field attribute). When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.
-Request To verify solutions you need to make a POST request to https://api.privatecaptcha.com/verify with the body of the request being solution field’s contents from your form.
-# an example how that will look like with curl curl -X POST \ -H &#34;X-Api-Key: your-api-key-here&#34; \ -d &#34;solution&#34; \ https://api.privatecaptcha.com/verify Response Here’s how successful response from /verify endpoint looks like:">
-  <meta itemprop="wordCount" content="246">
+  <meta itemprop="description" content="After captcha widget has finished solving puzzle, it adds a hidden form field (defined by data-solution-field attribute).
+&lt;form&gt; &lt;!-- ... --&gt; &lt;input name=&#34;private-captcha-solution&#34; type=&#34;hidden&#34; value=&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;&gt; &lt;!-- ... --&gt; &lt;/form&gt; When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.">
+  <meta itemprop="wordCount" content="262">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Verify API">
-  <meta name="twitter:description" content="After captcha widget has finished solving puzzle, it adds a hidden form field (defined by data-solution-field attribute). When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.
-Request To verify solutions you need to make a POST request to https://api.privatecaptcha.com/verify with the body of the request being solution field’s contents from your form.
-# an example how that will look like with curl curl -X POST \ -H &#34;X-Api-Key: your-api-key-here&#34; \ -d &#34;solution&#34; \ https://api.privatecaptcha.com/verify Response Here’s how successful response from /verify endpoint looks like:">
+  <meta name="twitter:description" content="After captcha widget has finished solving puzzle, it adds a hidden form field (defined by data-solution-field attribute).
+&lt;form&gt; &lt;!-- ... --&gt; &lt;input name=&#34;private-captcha-solution&#34; type=&#34;hidden&#34; value=&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;&gt; &lt;!-- ... --&gt; &lt;/form&gt; When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.">
 
     <link rel="preload" href="/css/compiled/main.min.c697307cafa791c9b405fe69f29b2345d58146c0293709ed7261c913cec724ba.css" as="style" integrity="sha256-xpcwfK&#43;nkcm0Bf5p8psjRdWBRsApNwntcmHJE87HJLo=" />
     <link href="/css/compiled/main.min.c697307cafa791c9b405fe69f29b2345d58146c0293709ed7261c913cec724ba.css" rel="stylesheet" integrity="sha256-xpcwfK&#43;nkcm0Bf5p8psjRdWBRsApNwntcmHJE87HJLo=" />
@@ -415,7 +409,24 @@ Request To verify solutions you need to make a POST request to https://api.priva
 
         <div class="content">
           <h1>Verify API</h1>
-          <p>After captcha widget has finished solving puzzle, it adds a hidden form field (defined by <code>data-solution-field</code> <a href="/docs/reference/widget-options/" >attribute</a>). When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.</p>
+          <p>After captcha widget has finished solving puzzle, it adds a hidden form field (defined by <code>data-solution-field</code> <a href="/docs/reference/widget-options/" >attribute</a>).</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- ... --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;private-captcha-solution&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;hidden&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- ... --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.</p>
 <h2>Request<span class="hx-absolute -hx-mt-20" id="request"></span>
     <a href="#request" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To verify solutions you need to make a <code>POST</code> request to <code>https://api.privatecaptcha.com/verify</code> with the body of the request being solution field&rsquo;s contents from your form.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -473,7 +484,7 @@ Request To verify solutions you need to make a POST request to https://api.priva
   <tbody>
       <tr>
           <td><code>0</code></td>
-          <td>No error</td>
+          <td>No error (shown here for completeness)</td>
       </tr>
       <tr>
           <td><code>1</code></td>
