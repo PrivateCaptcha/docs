@@ -42,7 +42,7 @@
 &lt;/div&gt;
 &lt;p&gt;When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.&lt;/p&gt;
 &lt;h2&gt;Request&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;request&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#request&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To verify solutions you need to make a &lt;code&gt;POST&lt;/code&gt; request to &lt;code&gt;https://api.privatecaptcha.com/verify&lt;/code&gt; with the body of the request being solution field&amp;rsquo;s contents from your form.&lt;/p&gt;
+    &lt;a href=&#34;#request&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To verify solutions you need to make a &lt;code&gt;POST&lt;/code&gt; request to &lt;code&gt;https://api.privatecaptcha.com/siteverify&lt;/code&gt; with the body of the request being solution field&amp;rsquo;s contents from your form.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# an example how that will look like with curl&lt;/span&gt;
@@ -60,7 +60,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2&gt;Response&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;response&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#response&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s how successful response from &lt;code&gt;/verify&lt;/code&gt; endpoint looks like:&lt;/p&gt;
+    &lt;a href=&#34;#response&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s how successful response from &lt;code&gt;/siteverify&lt;/code&gt; endpoint looks like:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -82,7 +82,7 @@
   &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;ℹ️&lt;/div&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
-    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;code&gt;/verify&lt;/code&gt; endpoint returns &lt;a href=&#34;https://developers.google.com/recaptcha/docs/verify&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reCAPTCHA-compatible&lt;/a&gt; response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header &lt;code&gt;X-Captcha-Compat-Version: rcV3&lt;/code&gt;.&lt;/div&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;code&gt;/siteverify&lt;/code&gt; endpoint returns &lt;a href=&#34;https://developers.google.com/recaptcha/docs/verify&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reCAPTCHA-compatible&lt;/a&gt; response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header &lt;code&gt;X-Captcha-Compat-Version: rcV3&lt;/code&gt;.&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -97,43 +97,43 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;no-error&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;No error (shown here for completeness)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;1&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Other (unknown) error&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;error-other&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Unspecified error&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;2&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;solution-duplicates&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Solution contains duplicates&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;3&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;solution-invalid&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Solution verification error&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;4&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;solution-bad-format&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Solution has invalid format&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;5&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;puzzle-expired&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Puzzle for this solution has expired&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;6&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;property-invalid&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Property for this puzzle/solution cannot be found&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;7&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;property-owner-mismatch&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Property and API key&amp;rsquo;s accounts don&amp;rsquo;t match&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;8&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;solution-verified-before&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Solution has been already verified&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;9&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;maintenance-mode&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Maintenance mode (see below)&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;

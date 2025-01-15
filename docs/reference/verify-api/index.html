@@ -38,7 +38,7 @@ When handling form submission on the server-side, this is the field you need to 
   <meta itemprop="name" content="Verify API">
   <meta itemprop="description" content="After captcha widget has finished solving puzzle, it adds a hidden form field (defined by data-solution-field attribute).
 &lt;form&gt; &lt;!-- ... --&gt; &lt;input name=&#34;private-captcha-solution&#34; type=&#34;hidden&#34; value=&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;&gt; &lt;!-- ... --&gt; &lt;/form&gt; When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.">
-  <meta itemprop="wordCount" content="262">
+  <meta itemprop="wordCount" content="261">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Verify API">
   <meta name="twitter:description" content="After captcha widget has finished solving puzzle, it adds a hidden form field (defined by data-solution-field attribute).
@@ -428,7 +428,7 @@ When handling form submission on the server-side, this is the field you need to 
 </div>
 <p>When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.</p>
 <h2>Request<span class="hx-absolute -hx-mt-20" id="request"></span>
-    <a href="#request" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To verify solutions you need to make a <code>POST</code> request to <code>https://api.privatecaptcha.com/verify</code> with the body of the request being solution field&rsquo;s contents from your form.</p>
+    <a href="#request" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To verify solutions you need to make a <code>POST</code> request to <code>https://api.privatecaptcha.com/siteverify</code> with the body of the request being solution field&rsquo;s contents from your form.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># an example how that will look like with curl</span>
@@ -446,7 +446,7 @@ When handling form submission on the server-side, this is the field you need to 
 </div>
 </div>
 <h2>Response<span class="hx-absolute -hx-mt-20" id="response"></span>
-    <a href="#response" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Here&rsquo;s how successful response from <code>/verify</code> endpoint looks like:</p>
+    <a href="#response" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Here&rsquo;s how successful response from <code>/siteverify</code> endpoint looks like:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
@@ -468,7 +468,7 @@ When handling form submission on the server-side, this is the field you need to 
   <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"><div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">ℹ️</div></div>
 
   <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><code>/verify</code> endpoint returns <a href="https://developers.google.com/recaptcha/docs/verify" target="_blank" rel="noopener">reCAPTCHA-compatible</a> response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header <code>X-Captcha-Compat-Version: rcV3</code>.</div>
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><code>/siteverify</code> endpoint returns <a href="https://developers.google.com/recaptcha/docs/verify" target="_blank" rel="noopener">reCAPTCHA-compatible</a> response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header <code>X-Captcha-Compat-Version: rcV3</code>.</div>
   </div>
 </div>
 
@@ -483,43 +483,43 @@ When handling form submission on the server-side, this is the field you need to 
   </thead>
   <tbody>
       <tr>
-          <td><code>0</code></td>
+          <td><code>no-error</code></td>
           <td>No error (shown here for completeness)</td>
       </tr>
       <tr>
-          <td><code>1</code></td>
-          <td>Other (unknown) error</td>
+          <td><code>error-other</code></td>
+          <td>Unspecified error</td>
       </tr>
       <tr>
-          <td><code>2</code></td>
+          <td><code>solution-duplicates</code></td>
           <td>Solution contains duplicates</td>
       </tr>
       <tr>
-          <td><code>3</code></td>
+          <td><code>solution-invalid</code></td>
           <td>Solution verification error</td>
       </tr>
       <tr>
-          <td><code>4</code></td>
+          <td><code>solution-bad-format</code></td>
           <td>Solution has invalid format</td>
       </tr>
       <tr>
-          <td><code>5</code></td>
+          <td><code>puzzle-expired</code></td>
           <td>Puzzle for this solution has expired</td>
       </tr>
       <tr>
-          <td><code>6</code></td>
+          <td><code>property-invalid</code></td>
           <td>Property for this puzzle/solution cannot be found</td>
       </tr>
       <tr>
-          <td><code>7</code></td>
+          <td><code>property-owner-mismatch</code></td>
           <td>Property and API key&rsquo;s accounts don&rsquo;t match</td>
       </tr>
       <tr>
-          <td><code>8</code></td>
+          <td><code>solution-verified-before</code></td>
           <td>Solution has been already verified</td>
       </tr>
       <tr>
-          <td><code>9</code></td>
+          <td><code>maintenance-mode</code></td>
           <td>Maintenance mode (see below)</td>
       </tr>
   </tbody>

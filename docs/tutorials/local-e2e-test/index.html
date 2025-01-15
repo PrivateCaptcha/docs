@@ -661,11 +661,11 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
   <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"><div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">⚠️</div></div>
 
   <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Captcha has a strict CORS policy and it will load <strong>only</strong> on the domain configured during property creation. Therefore you need to open page created by <code>ngrok</code> instead of the <code>localhost:8081</code> address.</div>
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Captcha has a strict CORS policy and, by default, it will load <strong>only</strong> on the domain configured during property creation. Therefore initially it will only work on URL created by <code>ngrok</code>.</div>
   </div>
 </div>
 
-<p>However, currently captcha widget is not yet useful as we do not take it into account when submitting the form.</p>
+<p>However, currently captcha widget is not yet particularly useful as we do not take it into account when submitting the form.</p>
 <h2>Integrating with Private Captcha<span class="hx-absolute -hx-mt-20" id="integrating-with-private-captcha"></span>
     <a href="#integrating-with-private-captcha" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Client-side<span class="hx-absolute -hx-mt-20" id="client-side"></span>
     <a href="#client-side" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In our simple web-page, let&rsquo;s add a JavaScript function to enable the &ldquo;Submit&rdquo; button when captcha is solved.</p>
@@ -761,7 +761,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
     <a href="#create-a-new-api-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To verify captcha solutions, we need an API key. Head to the <a href="https://portal.privatecaptcha.com/settings?tab=apikeys" target="_blank" rel="noopener">portal</a>, open your user&rsquo;s Settings, then API keys and click &ldquo;Create new key&rdquo;.</p>
 <p><img src="/images/tutorials/create-api-key.png" alt="Create new API key" loading="lazy" /></p>
 <h3>Add code to verify solution<span class="hx-absolute -hx-mt-20" id="add-code-to-verify-solution"></span>
-    <a href="#add-code-to-verify-solution" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To <a href="/docs/reference/verify-api/" >verify solution</a> we need to send a <code>POST</code> request to <code>/verify</code> endpoint and check the result. By default, widget adds an invisible form input with <a href="/docs/reference/widget-options/" >name</a> <code>private-captcha-solution</code>.</p>
+    <a href="#add-code-to-verify-solution" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To <a href="/docs/reference/verify-api/" >verify solution</a> we need to send a <code>POST</code> request to <code>/siteverify</code> endpoint and check the result. By default, widget adds an invisible form input with <a href="/docs/reference/widget-options/" >name</a> <code>private-captcha-solution</code>.</p>
 <div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
   <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"><div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">ℹ️</div></div>
 
