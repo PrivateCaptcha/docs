@@ -23,7 +23,7 @@ API key is a prerequisite for verifying captcha. You can create your Private Cap
 {{< tab >}}
 ```go {filename="main.go"}
 func checkSolution(solution, apiKey string) error {
-	req, err := http.NewRequest("POST", "https://api.privatecaptcha.com/verify", strings.NewReader(solution))
+	req, err := http.NewRequest("POST", "https://api.privatecaptcha.com/siteverify", strings.NewReader(solution))
 	if err != nil {
 		return err
 	}

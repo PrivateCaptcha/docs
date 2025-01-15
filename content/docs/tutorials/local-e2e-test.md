@@ -230,7 +230,7 @@ Make sure to use your own API key
  )
  
 +func checkSolution(solution, apiKey string) error {
-+       req, err := http.NewRequest("POST", "https://api.privatecaptcha.com/verify", strings.NewReader(solution))
++       req, err := http.NewRequest("POST", "https://api.privatecaptcha.com/siteverify", strings.NewReader(solution))
 +       if err != nil {
 +               return err
 +       }
@@ -278,7 +278,7 @@ Make sure to use your own API key
 {{< tab >}}
 ```go {filename="main.go"}
 func checkSolution(solution, apiKey string) error {
-	req, err := http.NewRequest("POST", "https://api.privatecaptcha.com/verify", strings.NewReader(solution))
+	req, err := http.NewRequest("POST", "https://api.privatecaptcha.com/siteverify", strings.NewReader(solution))
 	if err != nil {
 		return err
 	}
