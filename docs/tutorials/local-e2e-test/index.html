@@ -791,7 +791,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 </span></span></span><span class="line"><span class="cl"><span class="gu"></span> )
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"><span class="gi">+func checkSolution(solution, apiKey string) error {
-</span></span></span><span class="line"><span class="cl"><span class="gi">+       req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/verify&#34;, strings.NewReader(solution))
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/siteverify&#34;, strings.NewReader(solution))
 </span></span></span><span class="line"><span class="cl"><span class="gi">+       if err != nil {
 </span></span></span><span class="line"><span class="cl"><span class="gi">+               return err
 </span></span></span><span class="line"><span class="cl"><span class="gi">+       }
@@ -851,7 +851,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
   role="tabpanel"><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div class="filename not-prose" dir="auto">main.go</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">checkSolution</span><span class="p">(</span><span class="nx">solution</span><span class="p">,</span> <span class="nx">apiKey</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;POST&#34;</span><span class="p">,</span> <span class="s">&#34;https://api.privatecaptcha.com/verify&#34;</span><span class="p">,</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">solution</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;POST&#34;</span><span class="p">,</span> <span class="s">&#34;https://api.privatecaptcha.com/siteverify&#34;</span><span class="p">,</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">solution</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nx">err</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
