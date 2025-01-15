@@ -27,10 +27,6 @@ jobs:
       - name: Upload Folder
         run: lftp -e "mirror -vvv --exclude '^\..*$' --parallel=10 -R ./ ./" storage.bunnycdn.com
 
-      - name: Purge cache CDN
+      - name: Purge CDN cache
         run: |
-          curl -X POST -H 'AccessKey: ${{ secrets.BUNNY_API }}' 'https://api.bunny.net/purge?url=https%3A%2F%2F${{ secrets.BUNNY_PULL_ZONE }}.b-cdn.net&async=false'
-
-      - name: Purge cache domain
-        run: |
-          curl -X POST -H 'AccessKey: ${{ secrets.BUNNY_API }}' 'https://api.bunny.net/purge?url=https%3A%2F%2Fdocs.privatecaptcha.com&async=false'
+          curl -X POST -H 'AccessKey: ${{ secrets.BUNNY_API }}' 'https://api.bunny.net/pullzone/${{ secrets.BUNNY_PULL_ZONE_ID }}/purgeCache'
