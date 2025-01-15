@@ -48,7 +48,7 @@ Here's how successful response from `/siteverify` endpoint looks like:
 
 ## Error codes
 
-In case of errors, `error-codes` array will contain one or more of integer error codes:
+In case of errors, `error-codes` array will contain one or more of error codes:
 
 Error code | Description
 --- | ---
