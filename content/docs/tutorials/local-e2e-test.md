@@ -143,15 +143,13 @@ Make sure to use your own sitekey
      </div>
 ```
 
-{{% details title="Other environments" closed="true" %}}
-
-For deployments, different from `privatecaptcha.com`, you also need to set `data-puzzle-endpoint="https://api.your-domain.com/puzzle"` attribute
-
-{{% /details %}}
-
 If you did everything correctly, when you refresh the page (and/or restart your server), you will see captcha widget:
 
 ![Captcha widget](/images/tutorials/e2e-local/form-with-widget.png)
+
+{{< callout type="warning" >}}
+Captcha has a strict CORS policy and it will load **only** on the domain configured during property creation. Therefore you need to open page created by `ngrok` instead of the `localhost:8081` address.
+{{< /callout >}}
 
 However, currently captcha widget is not yet useful as we do not take it into account when submitting the form.
 
@@ -346,3 +344,14 @@ And, if you print verify response to the console, you will get this json:
 ### Full code
 
 Congratulations on completing this tutorial! You can find full code in [this gist](https://gist.github.com/ribtoks/1c0c0f70c89cdda7de656df01d5d19c8).
+
+### Troubleshooting
+
+To access browser logs you can add `data-debug="true"` attribute to the widget and then see if there are any errors in the console.
+
+{{% details title="Captcha verification fails (you see a red page)" closed="true" %}}
+
+- you opened localhost page instead of page provided by `ngrok`
+- for deployments, different from `privatecaptcha.com`, you also need to set `data-puzzle-endpoint="https://api.your-domain.com/puzzle"` attribute
+
+{{% /details %}}

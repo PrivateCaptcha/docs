@@ -5,6 +5,8 @@ prev: widget-options
 #next: docs/folder/
 ---
 
+After captcha widget has finished solving puzzle, it adds a hidden form field (defined by `data-solution-field` [attribute]({{< relref "/docs/reference/widget-options.md" >}})). When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.
+
 ## Request
 
 To verify solutions you need to make a `POST` request to `https://api.privatecaptcha.com/verify` with the body of the request being solution field's contents from your form.
