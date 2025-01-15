@@ -313,16 +313,16 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
-  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
-    &lt;strong class=&#34;hx-text-lg&#34;&gt;Other environments&lt;/strong&gt;
-  &lt;/summary&gt;
-  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
-    For deployments, different from &lt;code&gt;privatecaptcha.com&lt;/code&gt;, you also need to set &lt;code&gt;data-puzzle-endpoint=&amp;quot;https://api.your-domain.com/puzzle&amp;quot;&lt;/code&gt; attribute
-  &lt;/div&gt;
-&lt;/details&gt;
 &lt;p&gt;If you did everything correctly, when you refresh the page (and/or restart your server), you will see captcha widget:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/e2e-local/form-with-widget.png&#34; alt=&#34;Captcha widget&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;⚠️&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;Captcha has a strict CORS policy and it will load &lt;strong&gt;only&lt;/strong&gt; on the domain configured during property creation. Therefore you need to open page created by &lt;code&gt;ngrok&lt;/code&gt; instead of the &lt;code&gt;localhost:8081&lt;/code&gt; address.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;p&gt;However, currently captcha widget is not yet useful as we do not take it into account when submitting the form.&lt;/p&gt;
 &lt;h2&gt;Integrating with Private Captcha&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;integrating-with-private-captcha&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#integrating-with-private-captcha&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Client-side&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
@@ -582,6 +582,19 @@
 &lt;/div&gt;
 &lt;h3&gt;Full code&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;full-code&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#full-code&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Congratulations on completing this tutorial! You can find full code in &lt;a href=&#34;https://gist.github.com/ribtoks/1c0c0f70c89cdda7de656df01d5d19c8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this gist&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Troubleshooting&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;troubleshooting&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#troubleshooting&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;To access browser logs you can add &lt;code&gt;data-debug=&amp;quot;true&amp;quot;&lt;/code&gt; attribute to the widget and then see if there are any errors in the console.&lt;/p&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;Captcha verification fails (you see a red page)&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;you opened localhost page instead of page provided by &lt;code&gt;ngrok&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;for deployments, different from &lt;code&gt;privatecaptcha.com&lt;/code&gt;, you also need to set &lt;code&gt;data-puzzle-endpoint=&amp;quot;https://api.your-domain.com/puzzle&amp;quot;&lt;/code&gt; attribute&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
 
       </description>
     </item>
@@ -595,7 +608,8 @@
       <description>
         
         
-        &lt;h2&gt;Request&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;request&#34;&gt;&lt;/span&gt;
+        &lt;p&gt;After captcha widget has finished solving puzzle, it adds a hidden form field (defined by &lt;code&gt;data-solution-field&lt;/code&gt; &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34; &gt;attribute&lt;/a&gt;). When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.&lt;/p&gt;
+&lt;h2&gt;Request&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;request&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#request&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To verify solutions you need to make a &lt;code&gt;POST&lt;/code&gt; request to &lt;code&gt;https://api.privatecaptcha.com/verify&lt;/code&gt; with the body of the request being solution field&amp;rsquo;s contents from your form.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 

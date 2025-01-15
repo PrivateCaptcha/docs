@@ -53,7 +53,7 @@ Create a simple page with a form element in the middle of the page." />
   <meta itemprop="name" content="Local end-to-end test">
   <meta itemprop="description" content="In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submissions. And all this in the comfort of your own computer.
 Basic webpage and server ./ index.html main.go Create a simple page with a form element in the middle of the page.">
-  <meta itemprop="wordCount" content="1068">
+  <meta itemprop="wordCount" content="1141">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Local end-to-end test">
   <meta name="twitter:description" content="In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submissions. And all this in the comfort of your own computer.
@@ -443,6 +443,10 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#full-code">Full code
         </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#troubleshooting">Troubleshooting
+        </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/tutorials/local-e2e-test.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
@@ -651,16 +655,16 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
   </button>
 </div>
 </div>
-<details class="last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group" >
-  <summary class="hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[''] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90">
-    <strong class="hx-text-lg">Other environments</strong>
-  </summary>
-  <div class="hx-p-2 hx-overflow-hidden">
-    For deployments, different from <code>privatecaptcha.com</code>, you also need to set <code>data-puzzle-endpoint=&quot;https://api.your-domain.com/puzzle&quot;</code> attribute
-  </div>
-</details>
 <p>If you did everything correctly, when you refresh the page (and/or restart your server), you will see captcha widget:</p>
 <p><img src="/images/tutorials/e2e-local/form-with-widget.png" alt="Captcha widget" loading="lazy" /></p>
+<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200">
+  <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"><div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">⚠️</div></div>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Captcha has a strict CORS policy and it will load <strong>only</strong> on the domain configured during property creation. Therefore you need to open page created by <code>ngrok</code> instead of the <code>localhost:8081</code> address.</div>
+  </div>
+</div>
+
 <p>However, currently captcha widget is not yet useful as we do not take it into account when submitting the form.</p>
 <h2>Integrating with Private Captcha<span class="hx-absolute -hx-mt-20" id="integrating-with-private-captcha"></span>
     <a href="#integrating-with-private-captcha" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Client-side<span class="hx-absolute -hx-mt-20" id="client-side"></span>
@@ -920,6 +924,19 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 </div>
 <h3>Full code<span class="hx-absolute -hx-mt-20" id="full-code"></span>
     <a href="#full-code" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Congratulations on completing this tutorial! You can find full code in <a href="https://gist.github.com/ribtoks/1c0c0f70c89cdda7de656df01d5d19c8" target="_blank" rel="noopener">this gist</a>.</p>
+<h3>Troubleshooting<span class="hx-absolute -hx-mt-20" id="troubleshooting"></span>
+    <a href="#troubleshooting" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To access browser logs you can add <code>data-debug=&quot;true&quot;</code> attribute to the widget and then see if there are any errors in the console.</p>
+<details class="last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group" >
+  <summary class="hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[''] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90">
+    <strong class="hx-text-lg">Captcha verification fails (you see a red page)</strong>
+  </summary>
+  <div class="hx-p-2 hx-overflow-hidden">
+    <ul>
+<li>you opened localhost page instead of page provided by <code>ngrok</code></li>
+<li>for deployments, different from <code>privatecaptcha.com</code>, you also need to set <code>data-puzzle-endpoint=&quot;https://api.your-domain.com/puzzle&quot;</code> attribute</li>
+</ul>
+  </div>
+</details>
 
         </div>
         <div class="hx-mt-16"></div>

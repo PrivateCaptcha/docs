@@ -23,7 +23,8 @@
       <description>
         
         
-        &lt;h2&gt;Request&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;request&#34;&gt;&lt;/span&gt;
+        &lt;p&gt;After captcha widget has finished solving puzzle, it adds a hidden form field (defined by &lt;code&gt;data-solution-field&lt;/code&gt; &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34; &gt;attribute&lt;/a&gt;). When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.&lt;/p&gt;
+&lt;h2&gt;Request&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;request&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#request&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To verify solutions you need to make a &lt;code&gt;POST&lt;/code&gt; request to &lt;code&gt;https://api.privatecaptcha.com/verify&lt;/code&gt; with the body of the request being solution field&amp;rsquo;s contents from your form.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
