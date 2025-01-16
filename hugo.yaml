@@ -31,8 +31,8 @@ menu:
     - name: Tutorials
       pageRef: /docs/tutorials
       weight: 2
-    - name: Contact ↗
-      url: "https://privatecaptcha.com/"
+    - name: Office Hours ↗
+      url: "https://cal.com/privatecaptcha/20min"
       weight: 3
     - name: Search
       weight: 4
