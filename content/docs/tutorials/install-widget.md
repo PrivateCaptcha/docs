@@ -5,6 +5,8 @@ prev: docs/reference/
 next: verify-solution
 ---
 
+In this tutorial we will install captcha widget into an HTML form on your website.
+
 ## Step by step
 
 {{% steps %}}
@@ -14,6 +16,8 @@ next: verify-solution
 Create your property in the [dashboard](https://portal.privatecaptcha.com/) and copy the `sitekey` from the integration snippet.
 
 ![Create new property](/images/tutorials/create-property.png)
+
+Enter correct domain, where your website is hosted and leave other fields with their default values.
 
 ### Copy widget snippet
 
@@ -28,6 +32,8 @@ Add captcha widget inside your form:
     <!-- ... --->
 </form>
 ```
+
+In this code, `your-callback` is a Javascript function that will be called after captcha is solved. Typical use-case for this callback is to allow user to submit the form (see full example below).
 
 ### Verify solution
 

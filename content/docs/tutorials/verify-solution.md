@@ -2,10 +2,12 @@
 title: Verify solution
 type: docs
 prev: install-widget
-#next: ''
+next: local-e2e-test
 ---
 
-Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.
+After captcha widget has finished solving puzzle, it adds a hidden form field (defined by `data-solution-field` [attribute]({{< relref "/docs/reference/widget-options.md" >}})). When handling form submission on the server-side, this is the field you need to validate using [verify API]({{< relref "/docs/reference/verify-api.md" >}}).
+
+In this tutorial we will learn how to verify solution on the server side, given that we have [installed the widget]({{< relref "/docs/tutorials/install-widget.md" >}}) correctly.
 
 ## Step by step
 
