@@ -23,11 +23,13 @@
       <description>
         
         
-        &lt;h2&gt;Step by step&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;step-by-step&#34;&gt;&lt;/span&gt;
+        &lt;p&gt;In this tutorial we will install captcha widget into an HTML form on your website.&lt;/p&gt;
+&lt;h2&gt;Step by step&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;step-by-step&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#step-by-step&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;steps hx-ml-4 hx-mb-12 ltr:hx-border-l rtl:hx-border-r hx-border-gray-200 ltr:hx-pl-6 rtl:hx-pr-6 dark:hx-border-neutral-800 [counter-reset:step]&#34;&gt;
 &lt;h3&gt;Create new property&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;create-new-property&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#create-new-property&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Create your property in the &lt;a href=&#34;https://portal.privatecaptcha.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dashboard&lt;/a&gt; and copy the &lt;code&gt;sitekey&lt;/code&gt; from the integration snippet.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/create-property.png&#34; alt=&#34;Create new property&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Enter correct domain, where your website is hosted and leave other fields with their default values.&lt;/p&gt;
 &lt;h3&gt;Copy widget snippet&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;copy-widget-snippet&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#copy-widget-snippet&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Add captcha widget inside your form:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
@@ -49,6 +51,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;p&gt;In this code, &lt;code&gt;your-callback&lt;/code&gt; is a Javascript function that will be called after captcha is solved. Typical use-case for this callback is to allow user to submit the form (see full example below).&lt;/p&gt;
 &lt;h3&gt;Verify solution&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;verify-solution&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#verify-solution&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In your form&amp;rsquo;s handler on the server, before processing user input, &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/verify-solution/&#34; &gt;verify solution&lt;/a&gt; using Private Captcha API.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
@@ -608,7 +611,8 @@
       <description>
         
         
-        &lt;p&gt;Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.&lt;/p&gt;
+        &lt;p&gt;After captcha widget has finished solving the puzzle, it adds a hidden form field (defined by &lt;code&gt;data-solution-field&lt;/code&gt; &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34; &gt;attribute&lt;/a&gt;). When handling form submission on the server-side, this is the field you need to validate using &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/verify-api/&#34; &gt;verify API&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this tutorial we will learn how to verify solution on the server side, given that we have &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/install-widget/&#34; &gt;installed the widget&lt;/a&gt; correctly.&lt;/p&gt;
 &lt;h2&gt;Step by step&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;step-by-step&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#step-by-step&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;steps hx-ml-4 hx-mb-12 ltr:hx-border-l rtl:hx-border-r hx-border-gray-200 ltr:hx-pl-6 rtl:hx-pr-6 dark:hx-border-neutral-800 [counter-reset:step]&#34;&gt;
 &lt;h3&gt;Create an API key&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;create-an-api-key&#34;&gt;&lt;/span&gt;

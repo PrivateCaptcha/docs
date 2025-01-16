@@ -11,51 +11,33 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Install widget – Private Captcha</title>
-  <meta name="description" content="Step by step Create new property Create your property in the dashboard and copy the sitekey from the integration snippet.
-Copy widget snippet Add captcha widget inside your form:
-index.html&lt;form&gt; &lt;!-- ... ---&gt; &lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;your-sitekey&#34; data-finished-callback=&#34;your-callback&#34;&gt; &lt;/div&gt; &lt;!-- ... ---&gt; &lt;/form&gt; Verify solution In your form’s handler on the server, before processing user input, verify solution using Private Captcha API." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/install-widget/" itemprop="url" />
+  <meta name="description" content="In this tutorial we will install captcha widget into an HTML form on your website.
+Step by step Create new property Create your property in the dashboard and copy the sitekey from the integration snippet.
+Enter correct domain, where your website is hosted and leave other fields with their default values." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/install-widget/" itemprop="url" />
 
 <meta property="og:title" content="Install widget" />
-<meta property="og:description" content="Step by step
+<meta property="og:description" content="In this tutorial we will install captcha widget into an HTML form on your website.
+Step by step
     
 Create new property
     Create your property in the dashboard and copy the sitekey from the integration snippet.
 
-Copy widget snippet
-    Add captcha widget inside your form:
-
-
-index.html&lt;form&gt;
-    &lt;!-- ... ---&gt;
-    &lt;div class=&#34;private-captcha&#34;
-        data-sitekey=&#34;your-sitekey&#34;
-        data-finished-callback=&#34;your-callback&#34;&gt;
-    &lt;/div&gt;
-    &lt;!-- ... ---&gt;
-&lt;/form&gt;
-  
-    
-    
-  
-
-
-Verify solution
-    In your form&rsquo;s handler on the server, before processing user input, verify solution using Private Captcha API." />
+Enter correct domain, where your website is hosted and leave other fields with their default values." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/install-widget/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="Install widget">
-  <meta itemprop="description" content="Step by step Create new property Create your property in the dashboard and copy the sitekey from the integration snippet.
-Copy widget snippet Add captcha widget inside your form:
-index.html&lt;form&gt; &lt;!-- ... ---&gt; &lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;your-sitekey&#34; data-finished-callback=&#34;your-callback&#34;&gt; &lt;/div&gt; &lt;!-- ... ---&gt; &lt;/form&gt; Verify solution In your form’s handler on the server, before processing user input, verify solution using Private Captcha API.">
-  <meta itemprop="wordCount" content="251">
+  <meta itemprop="description" content="In this tutorial we will install captcha widget into an HTML form on your website.
+Step by step Create new property Create your property in the dashboard and copy the sitekey from the integration snippet.
+Enter correct domain, where your website is hosted and leave other fields with their default values.">
+  <meta itemprop="wordCount" content="315">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Install widget">
-  <meta name="twitter:description" content="Step by step Create new property Create your property in the dashboard and copy the sitekey from the integration snippet.
-Copy widget snippet Add captcha widget inside your form:
-index.html&lt;form&gt; &lt;!-- ... ---&gt; &lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;your-sitekey&#34; data-finished-callback=&#34;your-callback&#34;&gt; &lt;/div&gt; &lt;!-- ... ---&gt; &lt;/form&gt; Verify solution In your form’s handler on the server, before processing user input, verify solution using Private Captcha API.">
+  <meta name="twitter:description" content="In this tutorial we will install captcha widget into an HTML form on your website.
+Step by step Create new property Create your property in the dashboard and copy the sitekey from the integration snippet.
+Enter correct domain, where your website is hosted and leave other fields with their default values.">
 
     <link rel="preload" href="/css/compiled/main.min.c697307cafa791c9b405fe69f29b2345d58146c0293709ed7261c913cec724ba.css" as="style" integrity="sha256-xpcwfK&#43;nkcm0Bf5p8psjRdWBRsApNwntcmHJE87HJLo=" />
     <link href="/css/compiled/main.min.c697307cafa791c9b405fe69f29b2345d58146c0293709ed7261c913cec724ba.css" rel="stylesheet" integrity="sha256-xpcwfK&#43;nkcm0Bf5p8psjRdWBRsApNwntcmHJE87HJLo=" />
@@ -424,11 +406,13 @@ index.html&lt;form&gt; &lt;!-- ... ---&gt; &lt;div class=&#34;private-captcha&#3
 
         <div class="content">
           <h1>Install widget</h1>
-          <h2>Step by step<span class="hx-absolute -hx-mt-20" id="step-by-step"></span>
+          <p>In this tutorial we will install captcha widget into an HTML form on your website.</p>
+<h2>Step by step<span class="hx-absolute -hx-mt-20" id="step-by-step"></span>
     <a href="#step-by-step" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="steps hx-ml-4 hx-mb-12 ltr:hx-border-l rtl:hx-border-r hx-border-gray-200 ltr:hx-pl-6 rtl:hx-pr-6 dark:hx-border-neutral-800 [counter-reset:step]">
 <h3>Create new property<span class="hx-absolute -hx-mt-20" id="create-new-property"></span>
     <a href="#create-new-property" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Create your property in the <a href="https://portal.privatecaptcha.com/" target="_blank" rel="noopener">dashboard</a> and copy the <code>sitekey</code> from the integration snippet.</p>
 <p><img src="/images/tutorials/create-property.png" alt="Create new property" loading="lazy" /></p>
+<p>Enter correct domain, where your website is hosted and leave other fields with their default values.</p>
 <h3>Copy widget snippet<span class="hx-absolute -hx-mt-20" id="copy-widget-snippet"></span>
     <a href="#copy-widget-snippet" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Add captcha widget inside your form:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -450,6 +434,7 @@ index.html&lt;form&gt; &lt;!-- ... ---&gt; &lt;div class=&#34;private-captcha&#3
   </button>
 </div>
 </div>
+<p>In this code, <code>your-callback</code> is a Javascript function that will be called after captcha is solved. Typical use-case for this callback is to allow user to submit the form (see full example below).</p>
 <h3>Verify solution<span class="hx-absolute -hx-mt-20" id="verify-solution"></span>
     <a href="#verify-solution" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In your form&rsquo;s handler on the server, before processing user input, <a href="/docs/tutorials/verify-solution/" >verify solution</a> using Private Captcha API.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">

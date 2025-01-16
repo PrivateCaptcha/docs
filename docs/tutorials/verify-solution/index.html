@@ -11,78 +11,32 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Verify solution – Private Captcha</title>
-  <meta name="description" content="Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.
-Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal.
-Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error { req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/siteverify&#34;, strings.NewReader(solution)) if err != nil { return err } req.Header.Set(&#34;X-Api-Key&#34;, apiKey) resp, err := http.DefaultClient.Do(req) if err != nil { return err } defer resp.Body.Close() response := struct { Success bool `json:&#34;success&#34;` ErrorCodes []int `json:&#34;error-codes,omitempty&#34;` // NOTE: other fields omitted for brevity }{} if err := json.NewDecoder(resp.Body).Decode(&amp;response); err != nil { return err } if !response.Success { return errors.New(&#34;solution is not correct&#34;) } return nil } Check response Parse response and check errors." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/verify-solution/" itemprop="url" />
+  <meta name="description" content="After captcha widget has finished solving the puzzle, it adds a hidden form field (defined by data-solution-field attribute). When handling form submission on the server-side, this is the field you need to validate using verify API.
+In this tutorial we will learn how to verify solution on the server side, given that we have installed the widget correctly.
+Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/verify-solution/" itemprop="url" />
 
 <meta property="og:title" content="Verify solution" />
-<meta property="og:description" content="Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.
+<meta property="og:description" content="After captcha widget has finished solving the puzzle, it adds a hidden form field (defined by data-solution-field attribute). When handling form submission on the server-side, this is the field you need to validate using verify API.
+In this tutorial we will learn how to verify solution on the server side, given that we have installed the widget correctly.
 Step by step
     
 Create an API key
-    API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal.
-
-Call REST endpoint
-    
-  Go
-
-
-
-main.gofunc checkSolution(solution, apiKey string) error {
-	req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/siteverify&#34;, strings.NewReader(solution))
-	if err != nil {
-		return err
-	}
-
-	req.Header.Set(&#34;X-Api-Key&#34;, apiKey)
-
-	resp, err := http.DefaultClient.Do(req)
-	if err != nil {
-		return err
-	}
-	defer resp.Body.Close()
-
-	response := struct {
-		Success    bool  `json:&#34;success&#34;`
-		ErrorCodes []int `json:&#34;error-codes,omitempty&#34;`
-		// NOTE: other fields omitted for brevity
-	}{}
-
-	if err := json.NewDecoder(resp.Body).Decode(&amp;response); err != nil {
-		return err
-	}
-
-	if !response.Success {
-		return errors.New(&#34;solution is not correct&#34;)
-	}
-
-	return nil
-}
-  
-    
-    
-  
-
-
-
-
-Check response
-    Parse response and check errors." />
+    API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/verify-solution/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="Verify solution">
-  <meta itemprop="description" content="Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.
-Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal.
-Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error { req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/siteverify&#34;, strings.NewReader(solution)) if err != nil { return err } req.Header.Set(&#34;X-Api-Key&#34;, apiKey) resp, err := http.DefaultClient.Do(req) if err != nil { return err } defer resp.Body.Close() response := struct { Success bool `json:&#34;success&#34;` ErrorCodes []int `json:&#34;error-codes,omitempty&#34;` // NOTE: other fields omitted for brevity }{} if err := json.NewDecoder(resp.Body).Decode(&amp;response); err != nil { return err } if !response.Success { return errors.New(&#34;solution is not correct&#34;) } return nil } Check response Parse response and check errors.">
-  <meta itemprop="wordCount" content="142">
+  <meta itemprop="description" content="After captcha widget has finished solving the puzzle, it adds a hidden form field (defined by data-solution-field attribute). When handling form submission on the server-side, this is the field you need to validate using verify API.
+In this tutorial we will learn how to verify solution on the server side, given that we have installed the widget correctly.
+Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal.">
+  <meta itemprop="wordCount" content="182">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Verify solution">
-  <meta name="twitter:description" content="Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.
-Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal.
-Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error { req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/siteverify&#34;, strings.NewReader(solution)) if err != nil { return err } req.Header.Set(&#34;X-Api-Key&#34;, apiKey) resp, err := http.DefaultClient.Do(req) if err != nil { return err } defer resp.Body.Close() response := struct { Success bool `json:&#34;success&#34;` ErrorCodes []int `json:&#34;error-codes,omitempty&#34;` // NOTE: other fields omitted for brevity }{} if err := json.NewDecoder(resp.Body).Decode(&amp;response); err != nil { return err } if !response.Success { return errors.New(&#34;solution is not correct&#34;) } return nil } Check response Parse response and check errors.">
+  <meta name="twitter:description" content="After captcha widget has finished solving the puzzle, it adds a hidden form field (defined by data-solution-field attribute). When handling form submission on the server-side, this is the field you need to validate using verify API.
+In this tutorial we will learn how to verify solution on the server side, given that we have installed the widget correctly.
+Step by step Create an API key API key is a prerequisite for verifying captcha. You can create your Private Captcha API key in the portal.">
 
     <link rel="preload" href="/css/compiled/main.min.c697307cafa791c9b405fe69f29b2345d58146c0293709ed7261c913cec724ba.css" as="style" integrity="sha256-xpcwfK&#43;nkcm0Bf5p8psjRdWBRsApNwntcmHJE87HJLo=" />
     <link href="/css/compiled/main.min.c697307cafa791c9b405fe69f29b2345d58146c0293709ed7261c913cec724ba.css" rel="stylesheet" integrity="sha256-xpcwfK&#43;nkcm0Bf5p8psjRdWBRsApNwntcmHJE87HJLo=" />
@@ -441,7 +395,8 @@ Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error {
 
         <div class="content">
           <h1>Verify solution</h1>
-          <p>Solution verification is done on the server-side, when you are processing the form where captcha widget was installed.</p>
+          <p>After captcha widget has finished solving the puzzle, it adds a hidden form field (defined by <code>data-solution-field</code> <a href="/docs/reference/widget-options/" >attribute</a>). When handling form submission on the server-side, this is the field you need to validate using <a href="/docs/reference/verify-api/" >verify API</a>.</p>
+<p>In this tutorial we will learn how to verify solution on the server side, given that we have <a href="/docs/tutorials/install-widget/" >installed the widget</a> correctly.</p>
 <h2>Step by step<span class="hx-absolute -hx-mt-20" id="step-by-step"></span>
     <a href="#step-by-step" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="steps hx-ml-4 hx-mb-12 ltr:hx-border-l rtl:hx-border-r hx-border-gray-200 ltr:hx-pl-6 rtl:hx-pr-6 dark:hx-border-neutral-800 [counter-reset:step]">
 <h3>Create an API key<span class="hx-absolute -hx-mt-20" id="create-an-api-key"></span>
@@ -528,7 +483,11 @@ Call REST endpoint Go main.gofunc checkSolution(solution, apiKey string) error {
         href="/docs/tutorials/install-widget/"
         title="Install widget"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
-      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Install widget</a></div>
+      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Install widget</a><a
+        href="/docs/tutorials/local-e2e-test/"
+        title="Local end-to-end test"
+        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
+      >Local end-to-end test<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
