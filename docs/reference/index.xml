@@ -208,9 +208,14 @@
           &lt;td&gt;Captcha widget localization.&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-theme&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;light&lt;/code&gt;, &lt;code&gt;dark&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Widget theme (defaults to &lt;code&gt;light&lt;/code&gt;)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;data-styles&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;{valid CSS}&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Overrides for host variables of the widget&amp;rsquo;s web component.&lt;/td&gt;
+          &lt;td&gt;Overrides for host variables of the widget&amp;rsquo;s web component, on top of theme.&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -220,7 +225,7 @@
 &lt;h4&gt;&lt;code&gt;data-lang&lt;/code&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;data-lang&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#data-lang&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;data-lang&lt;/code&gt; allows you to show widget localization in your own language. Translations are defined in the &lt;code&gt;widget/js/strings.js&lt;/code&gt; file. If translation to your language is not there, feel free to contribute it.&lt;/p&gt;
 &lt;h4&gt;&lt;code&gt;data-styles&lt;/code&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;data-styles&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#data-styles&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;data-styles&lt;/code&gt; allows you to override some of the widget styles to better fit into your website&amp;rsquo;s design. Example of override: &lt;code&gt;data-style=&amp;quot;:host { --border-radius: .75rem; }&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+    &lt;a href=&#34;#data-styles&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;data-styles&lt;/code&gt; allows you to override some of the widget styles to better fit into your website&amp;rsquo;s design. Example of override: &lt;code&gt;data-style=&amp;quot;--border-radius: .75rem;&amp;quot;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The following variables support overrides:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;--dark-color&lt;/code&gt;&lt;/li&gt;

@@ -38,7 +38,7 @@ Attributes
   <meta itemprop="description" content="Here’s the minimal captcha field declaration:
 index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&gt;&lt;/div&gt; Private Captcha widget is automatically initialized on all elements with private-captcha class name.
 Attributes Apart from the required sitekey attribute, the following optional attributes are supported:">
-  <meta itemprop="wordCount" content="291">
+  <meta itemprop="wordCount" content="300">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Widget options">
   <meta name="twitter:description" content="Here’s the minimal captcha field declaration:
@@ -472,9 +472,14 @@ Attributes Apart from the required sitekey attribute, the following optional att
           <td>Captcha widget localization.</td>
       </tr>
       <tr>
+          <td><code>data-theme</code></td>
+          <td><code>light</code>, <code>dark</code></td>
+          <td>Widget theme (defaults to <code>light</code>)</td>
+      </tr>
+      <tr>
           <td><code>data-styles</code></td>
           <td><code>{valid CSS}</code></td>
-          <td>Overrides for host variables of the widget&rsquo;s web component.</td>
+          <td>Overrides for host variables of the widget&rsquo;s web component, on top of theme.</td>
       </tr>
   </tbody>
 </table>
@@ -484,7 +489,7 @@ Attributes Apart from the required sitekey attribute, the following optional att
 <h4><code>data-lang</code><span class="hx-absolute -hx-mt-20" id="data-lang"></span>
     <a href="#data-lang" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>data-lang</code> allows you to show widget localization in your own language. Translations are defined in the <code>widget/js/strings.js</code> file. If translation to your language is not there, feel free to contribute it.</p>
 <h4><code>data-styles</code><span class="hx-absolute -hx-mt-20" id="data-styles"></span>
-    <a href="#data-styles" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>data-styles</code> allows you to override some of the widget styles to better fit into your website&rsquo;s design. Example of override: <code>data-style=&quot;:host { --border-radius: .75rem; }&quot;</code>.</p>
+    <a href="#data-styles" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>data-styles</code> allows you to override some of the widget styles to better fit into your website&rsquo;s design. Example of override: <code>data-style=&quot;--border-radius: .75rem;&quot;</code>.</p>
 <p>The following variables support overrides:</p>
 <ul>
 <li><code>--dark-color</code></li>
