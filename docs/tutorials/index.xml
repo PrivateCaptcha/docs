@@ -219,7 +219,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;In order to make captcha widget to load on &lt;code&gt;localhost&lt;/code&gt; domain, we need to allow it in the settings of the property you just created&lt;/p&gt;
+&lt;p&gt;In order to make captcha widget to load on &lt;code&gt;localhost&lt;/code&gt; domain, we need to allow it in the settings of the property you just created (this is not required if you used &lt;code&gt;ngrok&lt;/code&gt; domain).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/e2e-local/allow-localhost.png&#34; alt=&#34;Allow localhost domain&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;However, currently captcha widget is not yet particularly useful as we do not take it into account when submitting the form.&lt;/p&gt;
 &lt;h2&gt;Integrating with Private Captcha&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;integrating-with-private-captcha&#34;&gt;&lt;/span&gt;
