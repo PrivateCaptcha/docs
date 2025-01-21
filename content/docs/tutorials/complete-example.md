@@ -153,7 +153,7 @@ If you did everything correctly, when you refresh the page (and/or restart your 
 Captcha has a strict CORS policy and, by default, it will load **only** on the domain configured during property creation. Subdomains and `localhost` access needs to be explicitly allowed.
 {{< /callout >}}
 
-In order to make captcha widget to load on `localhost` domain, we need to allow it in the settings of the property you just created
+In order to make captcha widget to load on `localhost` domain, we need to allow it in the settings of the property you just created (this is not required if you used `ngrok` domain).
 
 ![Allow localhost domain](/images/tutorials/e2e-local/allow-localhost.png)
 
