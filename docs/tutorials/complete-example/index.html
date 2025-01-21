@@ -10,12 +10,12 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Local end-to-end test – Private Captcha</title>
-  <meta name="description" content="In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submissions. And all this in the comfort of your own computer.
-Basic webpage and server ./ index.html main.go Create a simple page with a form element in the middle of the page." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/local-e2e-test/" itemprop="url" />
+<title>Complete example – Private Captcha</title>
+  <meta name="description" content="In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer.
+Basic webpage and server ./ index.html main.go Create a simple page with a form element in the middle of the page." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/complete-example/" itemprop="url" />
 
-<meta property="og:title" content="Local end-to-end test" />
-<meta property="og:description" content="In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submissions. And all this in the comfort of your own computer.
+<meta property="og:title" content="Complete example" />
+<meta property="og:description" content="In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer.
 Basic webpage and server
     
   
@@ -46,17 +46,17 @@ Basic webpage and server
 
 Create a simple page with a form element in the middle of the page." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/local-e2e-test/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/complete-example/" /><meta property="article:section" content="docs" />
 
 
 
-  <meta itemprop="name" content="Local end-to-end test">
-  <meta itemprop="description" content="In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submissions. And all this in the comfort of your own computer.
+  <meta itemprop="name" content="Complete example">
+  <meta itemprop="description" content="In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer.
 Basic webpage and server ./ index.html main.go Create a simple page with a form element in the middle of the page.">
-  <meta itemprop="wordCount" content="1141">
+  <meta itemprop="wordCount" content="1201">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Local end-to-end test">
-  <meta name="twitter:description" content="In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submissions. And all this in the comfort of your own computer.
+  <meta name="twitter:title" content="Complete example">
+  <meta name="twitter:description" content="In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer.
 Basic webpage and server ./ index.html main.go Create a simple page with a form element in the middle of the page.">
 
     <link rel="preload" href="/css/compiled/main.min.c697307cafa791c9b405fe69f29b2345d58146c0293709ed7261c913cec724ba.css" as="style" integrity="sha256-xpcwfK&#43;nkcm0Bf5p8psjRdWBRsApNwntcmHJE87HJLo=" />
@@ -248,20 +248,12 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/tutorials/install-widget/"
-    
-  >Install widget
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
-    href="/docs/tutorials/local-e2e-test/"
+    href="/docs/tutorials/complete-example/"
     
-  >Local end-to-end test
+  >Complete example
     </a>
   
     <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
@@ -290,6 +282,14 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
             </li>
           </ul>
   
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/tutorials/install-widget/"
+    
+  >Install widget
+    </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -348,20 +348,20 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
   >Tutorials
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/docs/tutorials/complete-example/"
+    
+  >Complete example
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/tutorials/install-widget/"
     
   >Install widget
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col open"><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
-    href="/docs/tutorials/local-e2e-test/"
-    
-  >Local end-to-end test
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -394,10 +394,6 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#basic-webpage-and-server">Basic webpage and server
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#making-this-server-available-publicly">Making this server available publicly
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
@@ -448,7 +444,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
         <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#troubleshooting">Troubleshooting
         </a>
       </li></ul>
-      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/tutorials/local-e2e-test.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/tutorials/complete-example.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -469,12 +465,12 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
         </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
           <a href="/docs/tutorials/">Tutorials</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Local end-to-end test</div>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Complete example</div>
   </div>
 
         <div class="content">
-          <h1>Local end-to-end test</h1>
-          <p>In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submissions. And all this in the comfort of your own computer.</p>
+          <h1>Complete example</h1>
+          <p>In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer.</p>
 <h2>Basic webpage and server<span class="hx-absolute -hx-mt-20" id="basic-webpage-and-server"></span>
     <a href="#basic-webpage-and-server" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-filetree hx-mt-6 hx-select-none hx-text-sm hx-text-gray-800 dark:hx-text-gray-300 not-prose">
   <div class="hx-inline-block hx-rounded-lg hx-border hx-px-4 hx-py-2 dark:hx-border-neutral-800">
@@ -595,11 +591,13 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 </div>
 <p>Here&rsquo;s how it looks like in Firefox:</p>
 <p><img src="/images/tutorials/e2e-local/bare-form.png" alt="Bare form" loading="lazy" /></p>
-<p>Now let&rsquo;s make this form available on the internet (as we need a domain name for captcha widget to work).</p>
-<h3>Making this server available publicly<span class="hx-absolute -hx-mt-20" id="making-this-server-available-publicly"></span>
-    <a href="#making-this-server-available-publicly" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>We will use <a href="https://ngrok.com/" target="_blank" rel="noopener">ngrok</a> for this purpose, but you can use any compatible solution, such as <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/" target="_blank" rel="noopener">CloudFlare Tunnel</a> or even reverse SSH tunnel from your own server.</p>
+<details class="last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group" >
+  <summary class="hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[''] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90">
+    <strong class="hx-text-lg">(optional) Making this server available publicly</strong>
+  </summary>
+  <div class="hx-p-2 hx-overflow-hidden">
+    <p>We can use <a href="https://ngrok.com/" target="_blank" rel="noopener">ngrok</a> for this purpose, but you can use any compatible solution, such as <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/" target="_blank" rel="noopener">CloudFlare Tunnel</a> or even reverse SSH tunnel from your own server.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># run ngrok to our previously exposed port 8081</span>
 </span></span><span class="line"><span class="cl">ngrok http <span class="m">8081</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
@@ -612,15 +610,18 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 </div>
 </div>
 <p>This will give you a public domain, in this case, <code>https://27ca-193-138-7-216.ngrok-free.app</code>. You can verify that it&rsquo;s working by opening it from your terminal.</p>
+<p>You can use this domain as a property domain below.</p>
+  </div>
+</details>
 <h2>Add captcha widget to the form<span class="hx-absolute -hx-mt-20" id="add-captcha-widget-to-the-form"></span>
     <a href="#add-captcha-widget-to-the-form" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This assumes that you already have an account with Private Captcha. If you don&rsquo;t, go ahead and create one.</p>
 <h3>Create new property<span class="hx-absolute -hx-mt-20" id="create-new-property"></span>
-    <a href="#create-new-property" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In the dashboard, click &ldquo;Add new property&rdquo;</p>
+    <a href="#create-new-property" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In the dashboard, click &ldquo;Add new property&rdquo;:</p>
 <p><img src="/images/tutorials/create-property.png" alt="Create new property" loading="lazy" /></p>
-<p>For a domain, enter the domain that <code>ngrok</code> generated for us before:</p>
-<p><img src="/images/tutorials/e2e-local/property-wizard.png" alt="Use ngrok domain" loading="lazy" /></p>
+<p>For a domain, enter any valid domain (if you used <code>ngrok</code> in the previous step, add the generated domain):</p>
+<p><img src="/images/tutorials/e2e-local/property-wizard.png" alt="Enter domain domain" loading="lazy" /></p>
 <p>After property is created, we will be presented with the integration snippet:</p>
-<p><img src="/images/tutorials/e2e-local/snippet.png" alt="Use ngrok domain" loading="lazy" /></p>
+<p><img src="/images/tutorials/e2e-local/snippet.png" alt="Integration snippet" loading="lazy" /></p>
 <h3>Add captcha widget to the form<span class="hx-absolute -hx-mt-20" id="add-captcha-widget-to-the-form-1"></span>
     <a href="#add-captcha-widget-to-the-form-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To integrate the widget, we need to add javascript include for <code>privatecaptcha.js</code> and the widget itself to the form. You can get them from the integration snippet above.</p>
 <div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
@@ -655,16 +656,18 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
   </button>
 </div>
 </div>
-<p>If you did everything correctly, when you refresh the page (and/or restart your server), you will see captcha widget:</p>
+<p>If you did everything correctly, when you refresh the page (and/or restart your server), you will see the captcha widget inside your form:</p>
 <p><img src="/images/tutorials/e2e-local/form-with-widget.png" alt="Captcha widget" loading="lazy" /></p>
 <div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200">
   <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"><div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">⚠️</div></div>
 
   <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Captcha has a strict CORS policy and, by default, it will load <strong>only</strong> on the domain configured during property creation. Therefore initially it will only work on URL created by <code>ngrok</code>.</div>
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Captcha has a strict CORS policy and, by default, it will load <strong>only</strong> on the domain configured during property creation. Subdomains and <code>localhost</code> access needs to be explicitly allowed.</div>
   </div>
 </div>
 
+<p>In order to make captcha widget to load on <code>localhost</code> domain, we need to allow it in the settings of the property you just created</p>
+<p><img src="/images/tutorials/e2e-local/allow-localhost.png" alt="Allow localhost domain" loading="lazy" /></p>
 <p>However, currently captcha widget is not yet particularly useful as we do not take it into account when submitting the form.</p>
 <h2>Integrating with Private Captcha<span class="hx-absolute -hx-mt-20" id="integrating-with-private-captcha"></span>
     <a href="#integrating-with-private-captcha" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Client-side<span class="hx-absolute -hx-mt-20" id="client-side"></span>
@@ -761,7 +764,24 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
     <a href="#create-a-new-api-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To verify captcha solutions, we need an API key. Head to the <a href="https://portal.privatecaptcha.com/settings?tab=apikeys" target="_blank" rel="noopener">portal</a>, open your user&rsquo;s Settings, then API keys and click &ldquo;Create new key&rdquo;.</p>
 <p><img src="/images/tutorials/create-api-key.png" alt="Create new API key" loading="lazy" /></p>
 <h3>Add code to verify solution<span class="hx-absolute -hx-mt-20" id="add-code-to-verify-solution"></span>
-    <a href="#add-code-to-verify-solution" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To <a href="/docs/reference/verify-api/" >verify solution</a> we need to send a <code>POST</code> request to <code>/siteverify</code> endpoint and check the result. By default, widget adds an invisible form input with <a href="/docs/reference/widget-options/" >name</a> <code>private-captcha-solution</code>.</p>
+    <a href="#add-code-to-verify-solution" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by <code>data-solution-field</code> <a href="/docs/reference/widget-options/" >attribute</a>).</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- ... --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;private-captcha-solution&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;hidden&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- ... --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>To <a href="/docs/reference/verify-api/" >verify solution</a> we need to send a <code>POST</code> request with the contents of this field to <code>/siteverify</code> endpoint and check the result. This is done in the server-side handler of the form.</p>
 <div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
   <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"><div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">ℹ️</div></div>
 
@@ -932,7 +952,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
   </summary>
   <div class="hx-p-2 hx-overflow-hidden">
     <ul>
-<li>you opened localhost page instead of page provided by <code>ngrok</code></li>
+<li>localhost was not allowed in the property settings</li>
 <li>for deployments, different from <code>privatecaptcha.com</code>, you also need to set <code>data-puzzle-endpoint=&quot;https://api.your-domain.com/puzzle&quot;</code> attribute</li>
 </ul>
   </div>
@@ -945,10 +965,10 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
         title="Verify solution"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
       ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Verify solution</a><a
-        href="/docs/tutorials/verify-solution/"
-        title="Verify solution"
+        href="/docs/tutorials/install-widget/"
+        title="Install widget"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >Verify solution<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Install widget<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
