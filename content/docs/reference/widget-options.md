@@ -25,7 +25,8 @@ Attribute | Values | Description
 `data-puzzle-endpoint` | `''` or your value | Endpoint to get captcha puzzle (override in case of self-hosting).
 `data-display-mode` | `widget`, `popup`, `hidden` | How captcha widget will be shown. Defaults to `widget`. When hidden, you need to setup widget callbacks (see below).
 `data-lang` | `en` | Captcha widget localization.
-`data-styles` | `{valid CSS}` | Overrides for host variables of the widget's web component.
+`data-theme` | `light`, `dark` | Widget theme (defaults to `light`)
+`data-styles` | `{valid CSS}` | Overrides for host variables of the widget's web component, on top of theme.
 
 ### Notes and examples
 
@@ -39,7 +40,7 @@ Attribute | Values | Description
 
 #### `data-styles`
 
-`data-styles` allows you to override some of the widget styles to better fit into your website's design. Example of override: `data-style=":host { --border-radius: .75rem; }"`.
+`data-styles` allows you to override some of the widget styles to better fit into your website's design. Example of override: `data-style="--border-radius: .75rem;"`.
 
 The following variables support overrides:
 
