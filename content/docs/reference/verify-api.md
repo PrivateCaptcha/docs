@@ -5,7 +5,7 @@ prev: widget-options
 #next: docs/folder/
 ---
 
-After captcha widget has finished solving the puzzle, it adds a hidden form field (defined by `data-solution-field` [attribute]({{< relref "/docs/reference/widget-options.md" >}})).
+After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by `data-solution-field` [attribute]({{< relref "/docs/reference/widget-options.md" >}})).
 
 ```html
 <form>

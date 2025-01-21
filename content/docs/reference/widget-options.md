@@ -52,6 +52,7 @@ The following variables support overrides:
 - `--extra-spacing`
 - `--label-spacing`
 - `--border-radius`
+- `--background-color`
 
 ## Callbacks
 
@@ -60,5 +61,5 @@ You can set your own Javascript handlers for various lifecycle events.
 Callback | Description
 --- | ---
 `data-started-callback` | Captcha started solving the puzzle.
-`data-finished-callback` | Puzzle has been solved. You can use this callback to enable the form submit button.
+`data-finished-callback` | Puzzle has been solved. You can use this callback to enable the form submit button. Solution is passed as an argument.
 `data-errored-callback` | Puzzle endpoint is not reachable or puzzle solving has failed.

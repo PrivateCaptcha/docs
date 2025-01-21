@@ -2,7 +2,7 @@
 title: Verify solution
 type: docs
 prev: install-widget
-next: local-e2e-test
+next: complete-example
 ---
 
 After captcha widget has finished solving the puzzle, it adds a hidden form field (defined by `data-solution-field` [attribute]({{< relref "/docs/reference/widget-options.md" >}})). When handling form submission on the server-side, this is the field you need to validate using [verify API]({{< relref "/docs/reference/verify-api.md" >}}).

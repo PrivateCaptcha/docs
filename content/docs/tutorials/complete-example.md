@@ -1,11 +1,11 @@
 ---
-title: Local end-to-end test
+title: Complete example
 type: docs
 prev: verify-solution
 #next: ''
 ---
 
-In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submissions. And all this in the comfort of your own computer.
+In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer.
 
 ## Basic webpage and server
 
@@ -89,11 +89,9 @@ Here's how it looks like in Firefox:
 
 ![Bare form](/images/tutorials/e2e-local/bare-form.png)
 
-Now let's make this form available on the internet (as we need a domain name for captcha widget to work).
+{{% details title="(optional) Making this server available publicly" closed="true" %}}
 
-### Making this server available publicly
-
-We will use [ngrok](https://ngrok.com/) for this purpose, but you can use any compatible solution, such as [CloudFlare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/) or even reverse SSH tunnel from your own server.
+We can use [ngrok](https://ngrok.com/) for this purpose, but you can use any compatible solution, such as [CloudFlare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/) or even reverse SSH tunnel from your own server.
 
 ```bash
 # run ngrok to our previously exposed port 8081
@@ -102,23 +100,27 @@ ngrok http 8081
 
 This will give you a public domain, in this case, `https://27ca-193-138-7-216.ngrok-free.app`. You can verify that it's working by opening it from your terminal.
 
+You can use this domain as a property domain below.
+
+{{% /details %}}
+
 ## Add captcha widget to the form
 
 This assumes that you already have an account with Private Captcha. If you don't, go ahead and create one.
 
 ### Create new property
 
-In the dashboard, click "Add new property"
+In the dashboard, click "Add new property":
 
 ![Create new property](/images/tutorials/create-property.png)
 
-For a domain, enter the domain that `ngrok` generated for us before:
+For a domain, enter any valid domain (if you used `ngrok` in the previous step, add the generated domain):
 
-![Use ngrok domain](/images/tutorials/e2e-local/property-wizard.png)
+![Enter domain domain](/images/tutorials/e2e-local/property-wizard.png)
 
 After property is created, we will be presented with the integration snippet:
 
-![Use ngrok domain](/images/tutorials/e2e-local/snippet.png)
+![Integration snippet](/images/tutorials/e2e-local/snippet.png)
 
 ### Add captcha widget to the form
 
@@ -143,13 +145,17 @@ Make sure to use your own sitekey
      </div>
 ```
 
-If you did everything correctly, when you refresh the page (and/or restart your server), you will see captcha widget:
+If you did everything correctly, when you refresh the page (and/or restart your server), you will see the captcha widget inside your form:
 
 ![Captcha widget](/images/tutorials/e2e-local/form-with-widget.png)
 
 {{< callout type="warning" >}}
-Captcha has a strict CORS policy and, by default, it will load **only** on the domain configured during property creation. Therefore initially it will only work on URL created by `ngrok`.
+Captcha has a strict CORS policy and, by default, it will load **only** on the domain configured during property creation. Subdomains and `localhost` access needs to be explicitly allowed.
 {{< /callout >}}
+
+In order to make captcha widget to load on `localhost` domain, we need to allow it in the settings of the property you just created
+
+![Allow localhost domain](/images/tutorials/e2e-local/allow-localhost.png)
 
 However, currently captcha widget is not yet particularly useful as we do not take it into account when submitting the form.
 
@@ -217,7 +223,17 @@ To verify captcha solutions, we need an API key. Head to the [portal](https://po
 
 ### Add code to verify solution
 
-To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to send a `POST` request to `/siteverify` endpoint and check the result. By default, widget adds an invisible form input with [name]({{< relref "/docs/reference/widget-options.md" >}}) `private-captcha-solution`.
+After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by `data-solution-field` [attribute]({{< relref "/docs/reference/widget-options.md" >}})).
+
+```html
+<form>
+    <!-- ... -->
+    <input name="private-captcha-solution" type="hidden" value="AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=">
+    <!-- ... -->
+</form>
+```
+
+To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to send a `POST` request with the contents of this field to `/siteverify` endpoint and check the result. This is done in the server-side handler of the form.
 
 {{< callout type="info" >}}
 Make sure to use your own API key
@@ -351,7 +367,7 @@ To access browser logs you can add `data-debug="true"` attribute to the widget a
 
 {{% details title="Captcha verification fails (you see a red page)" closed="true" %}}
 
-- you opened localhost page instead of page provided by `ngrok`
+- localhost was not allowed in the property settings
 - for deployments, different from `privatecaptcha.com`, you also need to set `data-puzzle-endpoint="https://api.your-domain.com/puzzle"` attribute
 
 {{% /details %}}
