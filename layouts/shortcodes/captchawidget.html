@@ -1,0 +1,6 @@
+{{- $theme := .Get "theme" | default "light" -}}
+<form class="pc-form">
+    <div class="private-captcha" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.staging.privatecaptcha.com/puzzle"
+        data-theme="{{$theme}}"></div>
+</form>

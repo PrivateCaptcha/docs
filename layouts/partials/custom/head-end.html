@@ -1,1 +1,13 @@
 <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script>
+{{- if .Params.captcha_scripts -}}
+<script async defer src="https://cdn.staging.privatecaptcha.com/widget/js/privatecaptcha.js"></script>
+<script type="text/javascript">
+function resetCaptcha(widget) {
+	setTimeout(() => widget.reset(), 1500);
+}
+function enableDisable(btn) {
+	btn.disabled = true;
+	setTimeout(() => { btn.disabled = false; }, 1500);
+}
+</script>
+{{- end -}}

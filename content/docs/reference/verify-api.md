@@ -1,7 +1,7 @@
 ---
 title: Verify API
 type: docs
-prev: widget-options
+prev: captcha-object
 #next: docs/folder/
 ---
 
@@ -42,9 +42,8 @@ Here's how successful response from `/siteverify` endpoint looks like:
 }
 ```
 
-{{< callout type="info" >}}
-`/siteverify` endpoint returns [reCAPTCHA-compatible](https://developers.google.com/recaptcha/docs/verify) response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header `X-Captcha-Compat-Version: rcV3`.
-{{< /callout >}}
+> [!NOTE]
+> `/siteverify` endpoint returns [reCAPTCHA-compatible](https://developers.google.com/recaptcha/docs/verify) response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header `X-Captcha-Compat-Version: rcV3`.
 
 ## Error codes
 
@@ -61,6 +60,9 @@ Error code | Description
 `property-invalid` | Property for this puzzle/solution cannot be found
 `property-owner-mismatch` | Property and API key's accounts don't match
 `solution-verified-before` | Solution has been already verified
+`property-test` | Test property is used for verification
 `maintenance-mode` | Maintenance mode (see below)
 
-During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity is not verified. If solution is valid, `success` in response is equal to `true`, but `error-codes` contains `9` (maintenance mode error). You can decide yourself if you trust these form submissions.
+When you're using a test property, `success` in response is equal to `true`, but `error-codes` contains test property error.
+
+During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity is not verified. If solution is valid, `success` in response is equal to `true`, but `error-codes` contains maintenance mode error. You can decide yourself if you trust these form submissions.

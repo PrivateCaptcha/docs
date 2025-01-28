@@ -1,7 +1,7 @@
 ---
 title: Complete example
 type: docs
-prev: verify-solution
+#prev: ''
 #next: ''
 ---
 
@@ -126,9 +126,8 @@ After property is created, we will be presented with the integration snippet:
 
 To integrate the widget, we need to add javascript include for `privatecaptcha.js` and the widget itself to the form. You can get them from the integration snippet above.
 
-{{< callout type="info" >}}
-Make sure to use your own sitekey
-{{< /callout >}}
+> [!NOTE]
+> Make sure to use your own sitekey
 
 ```diff {filename="index.html"}
      </style>
@@ -149,11 +148,10 @@ If you did everything correctly, when you refresh the page (and/or restart your 
 
 ![Captcha widget](/images/tutorials/e2e-local/form-with-widget.png)
 
-{{< callout type="warning" >}}
-Captcha has a strict CORS policy and, by default, it will load **only** on the domain configured during property creation. Subdomains and `localhost` access needs to be explicitly allowed.
-{{< /callout >}}
+> [!WARNING]
+> Captcha has a strict CORS policy and, by default, it will load **only** on the domain configured during property creation. Subdomains and `localhost` access needs to be explicitly allowed.
 
-In order to make captcha widget to load on `localhost` domain, we need to allow it in the settings of the property you just created (this is not required if you used `ngrok` domain).
+In order to make captcha widget to load on `localhost` domain, we need to allow it in the settings of the property you just created (this is **not** required if you used `ngrok` domain).
 
 ![Allow localhost domain](/images/tutorials/e2e-local/allow-localhost.png)
 
@@ -235,9 +233,8 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
 
 To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to send a `POST` request with the contents of this field to `/siteverify` endpoint and check the result. This is done in the server-side handler of the form.
 
-{{< callout type="info" >}}
-Make sure to use your own API key
-{{< /callout >}}
+> [!NOTE]
+> Make sure to use your own API key
 
 {{< tabs items="Diff,Go" >}}
 {{< tab >}}
@@ -293,6 +290,15 @@ Make sure to use your own API key
 {{< /tab >}}
 {{< tab >}}
 ```go {filename="main.go"}
+import (
+    "encoding/json"
+    "errors"
+    "fmt"
+    "log"
+    "net/http"
+    "strings"
+)
+
 func checkSolution(solution, apiKey string) error {
 	req, err := http.NewRequest("POST", "https://api.privatecaptcha.com/siteverify", strings.NewReader(solution))
 	if err != nil {

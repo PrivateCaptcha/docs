@@ -1,0 +1,11 @@
+<form class="pc-form">
+    <div class="private-captcha-anchor">
+        <div class="private-captcha" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+            id="popupCaptcha"
+            data-puzzle-endpoint="https://api.staging.privatecaptcha.com/puzzle"
+            data-display-mode="popup"
+            data-store-variable="_privateCaptcha"
+            data-finished-callback="resetCaptcha"></div>
+    </div>
+    <button type="button" style="all: revert;" onclick="enableDisable(this); document.getElementById('popupCaptcha')._privateCaptcha.execute()"> Click me! </button>
+</form>

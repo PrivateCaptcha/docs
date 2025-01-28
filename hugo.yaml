@@ -1,6 +1,7 @@
 # Hugo configuration file
 title: Private Captcha
 baseURL: 'https://docs.privatecaptcha.com/'
+enableGitInfo: true
 
 defaultContentLanguage: en
 languages:
@@ -50,6 +51,9 @@ menu:
         icon: globe-alt
 
 params:
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
   page:
     width: wide
 
