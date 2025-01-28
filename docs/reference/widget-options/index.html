@@ -13,7 +13,7 @@
 <title>Widget options – Private Captcha</title>
   <meta name="description" content="Here’s the minimal captcha field declaration:
 index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&gt;&lt;/div&gt; Private Captcha widget is automatically initialized on all elements with private-captcha class name.
-Attributes Apart from the required sitekey attribute, the following optional attributes are supported:" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/widget-options/" itemprop="url" />
+Attributes Apart from the required sitekey data attribute, the following optional attributes are supported:" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/widget-options/" itemprop="url" />
 
 <meta property="og:title" content="Widget options" />
 <meta property="og:description" content="Here&rsquo;s the minimal captcha field declaration:
@@ -28,29 +28,30 @@ index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&
 
 Private Captcha widget is automatically initialized on all elements with private-captcha class name.
 Attributes
-    Apart from the required sitekey attribute, the following optional attributes are supported:" />
+    Apart from the required sitekey data attribute, the following optional attributes are supported:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/widget-options/" /><meta property="article:section" content="docs" />
 
-
+<meta property="article:modified_time" content="2025-01-28T09:37:31+02:00" />
 
   <meta itemprop="name" content="Widget options">
   <meta itemprop="description" content="Here’s the minimal captcha field declaration:
 index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&gt;&lt;/div&gt; Private Captcha widget is automatically initialized on all elements with private-captcha class name.
-Attributes Apart from the required sitekey attribute, the following optional attributes are supported:">
-  <meta itemprop="wordCount" content="300">
+Attributes Apart from the required sitekey data attribute, the following optional attributes are supported:">
+  <meta itemprop="dateModified" content="2025-01-28T09:37:31+02:00">
+  <meta itemprop="wordCount" content="464">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Widget options">
   <meta name="twitter:description" content="Here’s the minimal captcha field declaration:
 index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&gt;&lt;/div&gt; Private Captcha widget is automatically initialized on all elements with private-captcha class name.
-Attributes Apart from the required sitekey attribute, the following optional attributes are supported:">
+Attributes Apart from the required sitekey data attribute, the following optional attributes are supported:">
 
-    <link rel="preload" href="/css/compiled/main.min.c697307cafa791c9b405fe69f29b2345d58146c0293709ed7261c913cec724ba.css" as="style" integrity="sha256-xpcwfK&#43;nkcm0Bf5p8psjRdWBRsApNwntcmHJE87HJLo=" />
-    <link href="/css/compiled/main.min.c697307cafa791c9b405fe69f29b2345d58146c0293709ed7261c913cec724ba.css" rel="stylesheet" integrity="sha256-xpcwfK&#43;nkcm0Bf5p8psjRdWBRsApNwntcmHJE87HJLo=" />
+    <link rel="preload" href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" as="style" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
+    <link href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" rel="stylesheet" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
 
 
 
-  <link href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" rel="stylesheet" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU=" />
+  <link href="/css/custom.min.c6f76a9097db1d49f6dd965af5ccfc06442b8b3eec6b85f51a7609b75368aa2f.css" rel="stylesheet" integrity="sha256-xvdqkJfbHUn23ZZa9cz8BkQriz7sa4X1GnYJt1Noqi8=" />
 
 
   <script>
@@ -76,7 +77,16 @@ Attributes Apart from the required sitekey attribute, the following optional att
     }
   </script>
 
-  <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script>
+  <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script><script async defer src="https://cdn.staging.privatecaptcha.com/widget/js/privatecaptcha.js"></script>
+<script type="text/javascript">
+function resetCaptcha(widget) {
+	setTimeout(() => widget.reset(), 1500);
+}
+function enableDisable(btn) {
+	btn.disabled = true;
+	setTimeout(() => { btn.disabled = false; }, 1500);
+}
+</script>
 </head>
 <body dir="ltr"><div class="nav-container hx-sticky hx-top-0 hx-z-20 hx-w-full hx-bg-transparent print:hx-hidden">
   <div class="nav-container-blur hx-pointer-events-none hx-absolute hx-z-[-1] hx-h-full hx-w-full hx-bg-white dark:hx-bg-dark hx-shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] contrast-more:hx-shadow-[0_0_0_1px_#000] dark:hx-shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:dark:hx-shadow-[0_0_0_1px_#fff]"></div>
@@ -210,6 +220,14 @@ Attributes Apart from the required sitekey attribute, the following optional att
         <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/reference/captcha-object/"
+    
+  >Captcha object
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/reference/verify-api/"
     
   >Verify API
@@ -257,22 +275,6 @@ Attributes Apart from the required sitekey attribute, the following optional att
   >Complete example
     </a>
               
-            </li><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/tutorials/install-widget/"
-    
-  >Install widget
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/tutorials/verify-solution/"
-    
-  >Verify solution
-    </a>
-              
             </li></ul>
       </div>
             </li></ul>
@@ -297,6 +299,14 @@ Attributes Apart from the required sitekey attribute, the following optional att
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
         <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/reference/captcha-object/"
+    
+  >Captcha object
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/reference/verify-api/"
@@ -328,22 +338,6 @@ Attributes Apart from the required sitekey attribute, the following optional att
     href="/docs/tutorials/complete-example/"
     
   >Complete example
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/tutorials/install-widget/"
-    
-  >Install widget
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/tutorials/verify-solution/"
-    
-  >Verify solution
     </a>
               
             </li></ul>
@@ -383,7 +377,15 @@ Attributes Apart from the required sitekey attribute, the following optional att
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#data-theme">data-theme
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#data-styles">data-styles
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#data-store-variable">data-store-variable
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
@@ -431,7 +433,7 @@ Attributes Apart from the required sitekey attribute, the following optional att
 </div>
 <p>Private Captcha widget is automatically initialized on all elements with <code>private-captcha</code> class name.</p>
 <h2>Attributes<span class="hx-absolute -hx-mt-20" id="attributes"></span>
-    <a href="#attributes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Apart from the required <code>sitekey</code> attribute, the following <em>optional</em> attributes are supported:</p>
+    <a href="#attributes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Apart from the required <code>sitekey</code> data attribute, the following <em>optional</em> attributes are supported:</p>
 <table>
   <thead>
       <tr>
@@ -481,15 +483,86 @@ Attributes Apart from the required sitekey attribute, the following optional att
           <td><code>{valid CSS}</code></td>
           <td>Overrides for host variables of the widget&rsquo;s web component, on top of theme.</td>
       </tr>
+      <tr>
+          <td><code>data-store-variable</code></td>
+          <td><code>{JS variable name}</code></td>
+          <td>If present, attaches Captcha Object to the html element (helps with multiple widgets on a page)</td>
+      </tr>
   </tbody>
 </table>
 <h3>Notes and examples<span class="hx-absolute -hx-mt-20" id="notes-and-examples"></span>
     <a href="#notes-and-examples" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4><code>data-display-mode</code><span class="hx-absolute -hx-mt-20" id="data-display-mode"></span>
-    <a href="#data-display-mode" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>popup</code> captcha widget appears relative to the first parent that has a class <code>private-captcha-anchor</code>.</p>
+    <a href="#data-display-mode" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><ul>
+<li>
+<p><code>widget</code> is the default display mode of captcha</p>
+</li>
+<li>
+<p><code>popup</code> captcha widget appears <em>relative</em> to the first parent that has a class <code>private-captcha-anchor</code>.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha-anchor&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span> <span class="na">data-display-mode</span><span class="o">=</span><span class="s">&#34;popup&#34;</span> <span class="na">data-sitekey</span><span class="o">=</span><span class="s">&#34;xyz&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- ... --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.privateCaptcha.autoWidget.execute()&#34;</span><span class="p">&gt;</span>Click me!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<form class="pc-form">
+      <div class="private-captcha-anchor">
+          <div class="private-captcha" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+              id="popupCaptcha"
+              data-puzzle-endpoint="https://api.staging.privatecaptcha.com/puzzle"
+              data-display-mode="popup"
+              data-store-variable="_privateCaptcha"
+              data-finished-callback="resetCaptcha"></div>
+      </div>
+      <button type="button" style="all: revert;" onclick="enableDisable(this); document.getElementById('popupCaptcha')._privateCaptcha.execute()"> Click me! </button>
+  </form>
+</li>
+<li>
+<p><code>hidden</code> captcha widget is permanently hidden and you need to handle all <a href="#callbacks" >callbacks</a> yourself.</p>
+</li>
+</ul>
 <h4><code>data-lang</code><span class="hx-absolute -hx-mt-20" id="data-lang"></span>
     <a href="#data-lang" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>data-lang</code> allows you to show widget localization in your own language. Translations are defined in the <code>widget/js/strings.js</code> file. If translation to your language is not there, feel free to contribute it.</p>
+<h4><code>data-theme</code><span class="hx-absolute -hx-mt-20" id="data-theme"></span>
+    <a href="#data-theme" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><blockquote>
+  <p>TIP: Use theme toggle on this website to check how the widget will look like</p>
+
+</blockquote>
+<table>
+  <thead>
+      <tr>
+          <th><code>light</code> theme</th>
+          <th><code>dark</code> theme</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><form class="pc-form">
+    <div class="private-captcha" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.staging.privatecaptcha.com/puzzle"
+        data-theme="light"></div>
+</form></td>
+          <td><form class="pc-form">
+    <div class="private-captcha" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.staging.privatecaptcha.com/puzzle"
+        data-theme="dark"></div>
+</form></td>
+      </tr>
+  </tbody>
+</table>
 <h4><code>data-styles</code><span class="hx-absolute -hx-mt-20" id="data-styles"></span>
-    <a href="#data-styles" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>data-styles</code> allows you to override some of the widget styles to better fit into your website&rsquo;s design. Example of override: <code>data-style=&quot;--border-radius: .75rem;&quot;</code>.</p>
+    <a href="#data-styles" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>data-styles</code> allows you to override some of the widget styles to better fit into your website&rsquo;s design, on top of <code>data-theme</code>. Example of override: <code>data-style=&quot;--border-radius: .75rem;&quot;</code>.</p>
 <p>The following variables support overrides:</p>
 <ul>
 <li><code>--dark-color</code></li>
@@ -503,8 +576,29 @@ Attributes Apart from the required sitekey attribute, the following optional att
 <li><code>--border-radius</code></li>
 <li><code>--background-color</code></li>
 </ul>
+<h4><code>data-store-variable</code><span class="hx-absolute -hx-mt-20" id="data-store-variable"></span>
+    <a href="#data-store-variable" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Captcha object, that is created from the widget configuation, provides a <a href="/docs/reference/captcha-object/" >number of APIs</a>.</p>
+<p>If this is the only captcha widget on a page, you can access this object via <code>window.privateCaptcha.autoWidget</code>.</p>
+<p>However, in case of multiple widgets, you can assign this attribute to a variable name and then access it as a field of the <code>HTMLElement</code>.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span> <span class="na">data-sitekey</span><span class="o">=</span><span class="s">&#34;xyz&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">id</span><span class="o">=</span><span class="s">&#34;pcWidget&#34;</span> <span class="na">data-store-variable</span><span class="o">=</span><span class="s">&#34;_privateCaptcha&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- Used in the onclick --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;document.getElementById(&#39;pcWidget&#39;)._privateCaptcha.execute()&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    Submit
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>Callbacks<span class="hx-absolute -hx-mt-20" id="callbacks"></span>
-    <a href="#callbacks" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You can set your own Javascript handlers for various lifecycle events.</p>
+    <a href="#callbacks" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You can set your own Javascript handlers for various lifecycle events. All callbacks receive a single argument which is the <a href="/docs/reference/captcha-object/" >Captcha Object</a> itself.</p>
 <table>
   <thead>
       <tr>
@@ -519,7 +613,7 @@ Attributes Apart from the required sitekey attribute, the following optional att
       </tr>
       <tr>
           <td><code>data-finished-callback</code></td>
-          <td>Puzzle has been solved. You can use this callback to enable the form submit button. Solution is passed as an argument.</td>
+          <td>Puzzle has been solved. You can use this callback to enable the form submit button.</td>
       </tr>
       <tr>
           <td><code>data-errored-callback</code></td>
@@ -529,16 +623,17 @@ Attributes Apart from the required sitekey attribute, the following optional att
 </table>
 
         </div>
-        <div class="hx-mt-16"></div>
+        
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-01-28T09:37:31.000Z">January 28, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/reference/verify-api/"
         title="Verify API"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
       ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Verify API</a><a
-        href="/docs/reference/verify-api/"
-        title="Verify API"
+        href="/docs/reference/captcha-object/"
+        title="Captcha object"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >Verify API<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Captcha object<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
@@ -556,7 +651,7 @@ Attributes Apart from the required sitekey attribute, the following optional att
 
 
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.4a72af14c5044971882cecddc91b1d5027c5a1ce9145e85eae7ee5145e971777.js" integrity="sha256-SnKvFMUESXGILOzdyRsdUCfFoc6RRehern7lFF6XF3c="></script>
+    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script>
 
 
   </body>
