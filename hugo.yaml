@@ -53,6 +53,7 @@ menu:
 params:
   displayUpdatedDate: true
   dateFormat: "January 2, 2006"
+  privateCaptchaDomain: "staging.privatecaptcha.com"
 
   page:
     width: wide

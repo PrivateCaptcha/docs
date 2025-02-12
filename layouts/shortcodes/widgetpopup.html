@@ -2,7 +2,7 @@
     <div class="private-captcha-anchor">
         <div class="private-captcha" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
             id="popupCaptcha"
-            data-puzzle-endpoint="https://api.staging.privatecaptcha.com/puzzle"
+            data-puzzle-endpoint="https://api.{{ .Site.Params.privateCaptchaDomain }}/puzzle"
             data-display-mode="popup"
             data-store-variable="_privateCaptcha"
             data-finished-callback="resetCaptcha"></div>

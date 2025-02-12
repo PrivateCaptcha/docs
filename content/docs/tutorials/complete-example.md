@@ -131,7 +131,7 @@ To integrate the widget, we need to add javascript include for `privatecaptcha.j
 
 ```diff {filename="index.html"}
      </style>
-+    <script defer src="https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js"></script>
++    <script defer src="https://cdn.{{< domain >}}/widget/js/privatecaptcha.js"></script>
  </head>
  <body>
      <div style="display: flex; flex: 1 1 0%">
@@ -169,7 +169,7 @@ In our simple web-page, let's add a JavaScript function to enable the "Submit" b
 @@ -18,7 +18,13 @@
              padding: 20px;
          }
-     <script defer src="https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js"></script>
+     <script defer src="https://cdn.{{< domain >}}/widget/js/privatecaptcha.js"></script>
 +    <script type="text/javascript">
 +        function onCaptchaSolved() {
 +            const submitButton = document.querySelector('#formSubmit');
@@ -215,7 +215,7 @@ For server-side, we need to add a handler for the form and verify captcha soluti
 
 ### Create a new API key
 
-To verify captcha solutions, we need an API key. Head to the [portal](https://portal.privatecaptcha.com/settings?tab=apikeys), open your user's Settings, then API keys and click "Create new key".
+To verify captcha solutions, we need an API key. Head to the [portal](https://portal.{{< domain >}}/settings?tab=apikeys), open your user's Settings, then API keys and click "Create new key".
 
 ![Create new API key](/images/tutorials/create-api-key.png)
 
@@ -243,7 +243,7 @@ To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to 
  )
  
 +func checkSolution(solution, apiKey string) error {
-+       req, err := http.NewRequest("POST", "https://api.privatecaptcha.com/siteverify", strings.NewReader(solution))
++       req, err := http.NewRequest("POST", "https://api.{{< domain >}}/siteverify", strings.NewReader(solution))
 +       if err != nil {
 +               return err
 +       }
@@ -300,7 +300,7 @@ import (
 )
 
 func checkSolution(solution, apiKey string) error {
-	req, err := http.NewRequest("POST", "https://api.privatecaptcha.com/siteverify", strings.NewReader(solution))
+	req, err := http.NewRequest("POST", "https://api.{{< domain >}}/siteverify", strings.NewReader(solution))
 	if err != nil {
 		return err
 	}
