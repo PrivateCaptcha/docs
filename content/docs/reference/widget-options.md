@@ -48,7 +48,7 @@ Attribute | Values | Description
 
   {{< widgetpopup >}}
 
-- `hidden` captcha widget is permanently hidden and you need to handle all [callbacks](#callbacks) yourself.
+- `hidden` captcha widget is permanently hidden and you need to handle all callbacks yourself. [See example]({{< relref "/docs/tutorials/invisible-captcha.md" >}}).
 
 #### `data-lang`
 
@@ -105,3 +105,19 @@ Callback | Description
 `data-started-callback` | Captcha started solving the puzzle.
 `data-finished-callback` | Puzzle has been solved. You can use this callback to enable the form submit button.
 `data-errored-callback` | Puzzle endpoint is not reachable or puzzle solving has failed.
+
+### Example
+
+```html {filename="index.html"}
+<form>
+    <div class="private-captcha"
+        data-finished-callback="onCaptchaSolved">
+    </div>
+</form>
+```
+
+```javascript {filename="script.js"}
+function onCaptchaSolved(widget) {
+    console.log('Solved!');
+}
+```

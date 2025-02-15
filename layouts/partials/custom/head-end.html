@@ -3,11 +3,27 @@
 <script async defer src="https://cdn.{{ .Site.Params.privateCaptchaDomain }}/widget/js/privatecaptcha.js"></script>
 <script type="text/javascript">
 function resetCaptcha(widget) {
-	setTimeout(() => widget.reset(), 1500);
+    setTimeout(() => widget.reset(), 1500);
 }
 function enableDisable(btn) {
-	btn.disabled = true;
-	setTimeout(() => { btn.disabled = false; }, 1500);
+    btn.disabled = true;
+    setTimeout(() => { btn.disabled = false; }, 1500);
+}
+function invisibleStarted() {
+    document.getElementById('spinner').classList.remove('hidden');
+    document.getElementById('checkmark').classList.add('hidden');
+}
+function invisibleFinished(widget) {
+    setTimeout(() => {
+        document.getElementById('spinner').classList.add('hidden');
+        document.getElementById('checkmark').classList.remove('hidden');
+    }, 1500);
+
+    setTimeout(() => {
+        widget.reset();
+        document.getElementById('spinner').classList.add('hidden');
+        document.getElementById('checkmark').classList.add('hidden');
+    }, 3000);
 }
 </script>
 {{- end -}}

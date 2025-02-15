@@ -1,0 +1,25 @@
+<form class="pc-form form-with-spinner">
+<div class="private-captcha"
+        data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.{{ .Site.Params.privateCaptchaDomain }}/puzzle"
+        data-display-mode="hidden"
+        data-started-callback="invisibleStarted"
+        data-finished-callback="invisibleFinished"
+        data-start-mode="click"
+>
+</div>
+<button
+  type="button"
+  class="not-prose hx-font-medium hx-cursor-pointer hx-px-6 hx-py-3 hx-rounded-full hx-text-center hx-text-white hx-inline-block hx-bg-primary-600 hover:hx-bg-primary-700 focus:hx-outline-none focus:hx-ring-4 focus:hx-ring-primary-300 dark:hx-bg-primary-600 dark:hover:hx-bg-primary-700 dark:focus:hx-ring-primary-800 hx-transition-all hx-ease-in hx-duration-200"
+  onclick="window.privateCaptcha.autoWidget.execute()"
+>
+        <svg id="spinner" class="spinner animate-spin hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <svg id="checkmark" xmlns="http://www.w3.org/2000/svg" class="checkmark hidden" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+        </svg>
+    Submit
+</button>
+</form>
