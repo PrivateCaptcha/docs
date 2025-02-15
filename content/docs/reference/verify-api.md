@@ -26,7 +26,7 @@ To verify solutions you need to make a `POST` request to `https://api.privatecap
 curl -X POST \
   -H "X-Api-Key: your-api-key-here" \
   -d "solution" \
-  https://api.{{< domain >}}/verify
+  https://api.{{< domain >}}/siteverify
 ```
 
 ## Response
