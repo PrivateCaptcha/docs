@@ -32,14 +32,14 @@ Attributes
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/widget-options/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-01-28T09:37:31+02:00" />
+<meta property="article:modified_time" content="2025-02-15T10:10:17+02:00" />
 
   <meta itemprop="name" content="Widget options">
   <meta itemprop="description" content="Here’s the minimal captcha field declaration:
 index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&gt;&lt;/div&gt; Private Captcha widget is automatically initialized on all elements with private-captcha class name.
 Attributes Apart from the required sitekey data attribute, the following optional attributes are supported:">
-  <meta itemprop="dateModified" content="2025-01-28T09:37:31+02:00">
-  <meta itemprop="wordCount" content="464">
+  <meta itemprop="dateModified" content="2025-02-15T10:10:17+02:00">
+  <meta itemprop="wordCount" content="478">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Widget options">
   <meta name="twitter:description" content="Here’s the minimal captcha field declaration:
@@ -51,7 +51,7 @@ Attributes Apart from the required sitekey data attribute, the following optiona
 
 
 
-  <link href="/css/custom.min.c6f76a9097db1d49f6dd965af5ccfc06442b8b3eec6b85f51a7609b75368aa2f.css" rel="stylesheet" integrity="sha256-xvdqkJfbHUn23ZZa9cz8BkQriz7sa4X1GnYJt1Noqi8=" />
+  <link href="/css/custom.min.9abf61a585b4ef556329328ccfc0978e2453a3140c9dd567e1a0bbe543e6a91d.css" rel="stylesheet" integrity="sha256-mr9hpYW071VjKTKMz8CXjiRToxQMndVn4aC75UPmqR0=" />
 
 
   <script>
@@ -80,11 +80,27 @@ Attributes Apart from the required sitekey data attribute, the following optiona
   <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script><script async defer src="https://cdn.staging.privatecaptcha.com/widget/js/privatecaptcha.js"></script>
 <script type="text/javascript">
 function resetCaptcha(widget) {
-	setTimeout(() => widget.reset(), 1500);
+    setTimeout(() => widget.reset(), 1500);
 }
 function enableDisable(btn) {
-	btn.disabled = true;
-	setTimeout(() => { btn.disabled = false; }, 1500);
+    btn.disabled = true;
+    setTimeout(() => { btn.disabled = false; }, 1500);
+}
+function invisibleStarted() {
+    document.getElementById('spinner').classList.remove('hidden');
+    document.getElementById('checkmark').classList.add('hidden');
+}
+function invisibleFinished(widget) {
+    setTimeout(() => {
+        document.getElementById('spinner').classList.add('hidden');
+        document.getElementById('checkmark').classList.remove('hidden');
+    }, 1500);
+
+    setTimeout(() => {
+        widget.reset();
+        document.getElementById('spinner').classList.add('hidden');
+        document.getElementById('checkmark').classList.add('hidden');
+    }, 3000);
 }
 </script>
 </head>
@@ -275,6 +291,14 @@ function enableDisable(btn) {
   >Complete example
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/tutorials/invisible-captcha/"
+    
+  >Invisible captcha
+    </a>
+              
             </li></ul>
       </div>
             </li></ul>
@@ -340,6 +364,14 @@ function enableDisable(btn) {
   >Complete example
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/tutorials/invisible-captcha/"
+    
+  >Invisible captcha
+    </a>
+              
             </li></ul>
       </div></li>
         
@@ -390,6 +422,10 @@ function enableDisable(btn) {
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#callbacks">Callbacks
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#example">Example
         </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/reference/widget-options.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
@@ -529,7 +565,7 @@ function enableDisable(btn) {
   </form>
 </li>
 <li>
-<p><code>hidden</code> captcha widget is permanently hidden and you need to handle all <a href="#callbacks" >callbacks</a> yourself.</p>
+<p><code>hidden</code> captcha widget is permanently hidden and you need to handle all callbacks yourself. <a href="/docs/tutorials/invisible-captcha/" >See example</a>.</p>
 </li>
 </ul>
 <h4><code>data-lang</code><span class="hx-absolute -hx-mt-20" id="data-lang"></span>
@@ -621,10 +657,41 @@ function enableDisable(btn) {
       </tr>
   </tbody>
 </table>
+<h3>Example<span class="hx-absolute -hx-mt-20" id="example"></span>
+    <a href="#example" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div class="filename not-prose" dir="auto">index.html</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">data-finished-callback</span><span class="o">=</span><span class="s">&#34;onCaptchaSolved&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div class="filename not-prose" dir="auto">script.js</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">onCaptchaSolved</span><span class="p">(</span><span class="nx">widget</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Solved!&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-01-28T09:37:31.000Z">January 28, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-02-15T10:10:17.000Z">February 15, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/reference/verify-api/"
         title="Verify API"
