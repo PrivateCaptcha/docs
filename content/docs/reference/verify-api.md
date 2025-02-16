@@ -19,7 +19,7 @@ When handling form submission on the server-side, this is the field you need to 
 
 ## Request
 
-To verify solutions you need to make a `POST` request to `https://api.privatecaptcha.com/siteverify` with the body of the request being solution field's contents from your form.
+To verify solutions you need to make a `POST` request to `https://api.{{<domain>}}/siteverify` with the body of the request being solution field's contents from your form.
 
 ```bash
 # an example how that will look like with curl
