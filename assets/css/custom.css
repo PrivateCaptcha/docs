@@ -1,3 +1,9 @@
+:root {
+  --primary-hue: 180deg;
+  --primary-saturation: 71%;
+  --primary-lightness: 32%;
+}
+
 .pc-form {
     margin-top: 10px;
     margin-bottom: 10px;
