@@ -62,6 +62,7 @@ Error code | Description
 `solution-verified-before` | Solution has been already verified
 `property-test` | Test property is used for verification
 `maintenance-mode` | Maintenance mode (see below)
+`integrity-error` | Puzzle or solution integrity is compromised
 
 When you're using a test property, `success` in response is equal to `true`, but `error-codes` contains test property error.
 

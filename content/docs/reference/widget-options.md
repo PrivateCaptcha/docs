@@ -102,6 +102,7 @@ You can set your own Javascript handlers for various lifecycle events. All callb
 
 Callback | Description
 --- | ---
+`data-init-callback` | Widget has received a new puzzle to solve (possibly after previous puzzle expiration).
 `data-started-callback` | Captcha started solving the puzzle.
 `data-finished-callback` | Puzzle has been solved. You can use this callback to enable the form submit button.
 `data-errored-callback` | Puzzle endpoint is not reachable or puzzle solving has failed.
