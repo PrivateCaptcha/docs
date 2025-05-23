@@ -38,14 +38,14 @@ Additionally, you need to supply callbacks for at least 2 events: data-started-c
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/invisible-captcha/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-02-15T10:10:17+02:00" />
+<meta property="article:modified_time" content="2025-05-23T14:13:03+03:00" />
 
   <meta itemprop="name" content="Invisible captcha">
   <meta itemprop="description" content="Invisible captcha refers to the situation when you don’t want to show captcha widget for various reasons (e.g. custom UI integraion or design restrictions).
 Setup To permanently hide the widget, set data-display-mode attribute to hidden.
 &lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;xyz&#34; ... &#43; data-display-mode=&#34;hidden&#34; ... &gt; &lt;/div&gt; Additionally, you need to supply callbacks for at least 2 events: data-started-callback and data-finished-callback.">
-  <meta itemprop="dateModified" content="2025-02-15T10:10:17+02:00">
-  <meta itemprop="wordCount" content="168">
+  <meta itemprop="dateModified" content="2025-05-23T14:13:03+03:00">
+  <meta itemprop="wordCount" content="202">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Invisible captcha">
   <meta name="twitter:description" content="Invisible captcha refers to the situation when you don’t want to show captcha widget for various reasons (e.g. custom UI integraion or design restrictions).
@@ -57,7 +57,7 @@ Setup To permanently hide the widget, set data-display-mode attribute to hidden.
 
 
 
-  <link href="/css/custom.min.9abf61a585b4ef556329328ccfc0978e2453a3140c9dd567e1a0bbe543e6a91d.css" rel="stylesheet" integrity="sha256-mr9hpYW071VjKTKMz8CXjiRToxQMndVn4aC75UPmqR0=" />
+  <link href="/css/custom.min.820d4d4a3525a09ab250526d162fcaaeaea56930d423c8437c7d9da5bef924e3.css" rel="stylesheet" integrity="sha256-gg1NSjUloJqyUFJtFi/Krq6laTDUI8hDfH2dpb75JOM=" />
 
 
   <script>
@@ -486,7 +486,22 @@ function invisibleFinished(widget) {
 <p>However, if you want to control when the solving will start, you can set <code>data-start-mode</code> <a href="/docs/reference/widget-options/#attributes" >attribute</a> to <code>click</code> and trigger solving captcha using <a href="/docs/reference/captcha-object/#execute" >API method</a> <code>execute()</code>.</p>
 <h2>Example<span class="hx-absolute -hx-mt-20" id="example"></span>
     <a href="#example" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Here&rsquo;s how a more complete example of the above looks like:</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+<div class="hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain">
+  <div class="hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800"><button
+        class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-0" aria-selected="true"  tabindex="0"  data-state="selected">HTML</button><button
+        class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-1">Javascript</button></div>
+</div>
+<div>
+<div
+  class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-0"
+  role="tabpanel" tabindex="0"  data-state="selected" ><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span>
@@ -497,6 +512,9 @@ function invisibleFinished(widget) {
 </span></span><span class="line"><span class="cl">        <span class="na">data-finished-callback</span><span class="o">=</span><span class="s">&#34;invisibleCaptchaFinished&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.privateCaptcha.autoWidget.execute()&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;spinner&#34;</span> <span class="err">...</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;checkmark&#34;</span> <span class="err">...</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        Submit
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
@@ -507,6 +525,40 @@ function invisibleFinished(widget) {
     <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
     <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
   </button>
+</div>
+</div>
+</div>
+<div
+  class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-1"
+  role="tabpanel"><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">invisibleCaptchaStarted</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;spinner&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;hidden&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;checkmark&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;hidden&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">invisibleCaptchaFinished</span><span class="p">(</span><span class="nx">widget</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;spinner&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;hidden&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;checkmark&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;hidden&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="mi">1500</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">widget</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;spinner&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;hidden&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;checkmark&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;hidden&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 </div>
 </div>
 <h3>Demo<span class="hx-absolute -hx-mt-20" id="demo"></span>
@@ -539,7 +591,7 @@ function invisibleFinished(widget) {
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-02-15T10:10:17.000Z">February 15, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-05-23T14:13:03.000Z">May 23, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/tutorials/complete-example/"
         title="Complete example"

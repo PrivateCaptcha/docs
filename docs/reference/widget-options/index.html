@@ -32,14 +32,14 @@ Attributes
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/widget-options/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-02-15T10:10:17+02:00" />
+<meta property="article:modified_time" content="2025-05-23T14:13:03+03:00" />
 
   <meta itemprop="name" content="Widget options">
   <meta itemprop="description" content="Here’s the minimal captcha field declaration:
 index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&gt;&lt;/div&gt; Private Captcha widget is automatically initialized on all elements with private-captcha class name.
 Attributes Apart from the required sitekey data attribute, the following optional attributes are supported:">
-  <meta itemprop="dateModified" content="2025-02-15T10:10:17+02:00">
-  <meta itemprop="wordCount" content="478">
+  <meta itemprop="dateModified" content="2025-05-23T14:13:03+03:00">
+  <meta itemprop="wordCount" content="596">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Widget options">
   <meta name="twitter:description" content="Here’s the minimal captcha field declaration:
@@ -51,7 +51,7 @@ Attributes Apart from the required sitekey data attribute, the following optiona
 
 
 
-  <link href="/css/custom.min.9abf61a585b4ef556329328ccfc0978e2453a3140c9dd567e1a0bbe543e6a91d.css" rel="stylesheet" integrity="sha256-mr9hpYW071VjKTKMz8CXjiRToxQMndVn4aC75UPmqR0=" />
+  <link href="/css/custom.min.820d4d4a3525a09ab250526d162fcaaeaea56930d423c8437c7d9da5bef924e3.css" rel="stylesheet" integrity="sha256-gg1NSjUloJqyUFJtFi/Krq6laTDUI8hDfH2dpb75JOM=" />
 
 
   <script>
@@ -417,6 +417,10 @@ function invisibleFinished(widget) {
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-12 rtl:hx-pr-12 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#making-large-widget">Making large widget
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#data-store-variable">data-store-variable
         </a>
       </li>
@@ -573,7 +577,6 @@ function invisibleFinished(widget) {
 <h4><code>data-theme</code><span class="hx-absolute -hx-mt-20" id="data-theme"></span>
     <a href="#data-theme" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><blockquote>
   <p>TIP: Use theme toggle on this website to check how the widget will look like</p>
-
 </blockquote>
 <table>
   <thead>
@@ -584,36 +587,73 @@ function invisibleFinished(widget) {
   </thead>
   <tbody>
       <tr>
-          <td><form class="pc-form">
-    <div class="private-captcha" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+          <td><form class="pc-form" style="">
+    <div class="private-captcha hx-h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
         data-puzzle-endpoint="https://api.staging.privatecaptcha.com/puzzle"
-        data-theme="light"></div>
+        data-theme="light"
+        data-styles=""></div>
 </form></td>
-          <td><form class="pc-form">
-    <div class="private-captcha" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+          <td><form class="pc-form" style="">
+    <div class="private-captcha hx-h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
         data-puzzle-endpoint="https://api.staging.privatecaptcha.com/puzzle"
-        data-theme="dark"></div>
+        data-theme="dark"
+        data-styles=""></div>
 </form></td>
       </tr>
   </tbody>
 </table>
 <h4><code>data-styles</code><span class="hx-absolute -hx-mt-20" id="data-styles"></span>
     <a href="#data-styles" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>data-styles</code> allows you to override some of the widget styles to better fit into your website&rsquo;s design, on top of <code>data-theme</code>. Example of override: <code>data-style=&quot;--border-radius: .75rem;&quot;</code>.</p>
-<p>The following variables support overrides:</p>
+<p>The following variables support overrides (but in general are <em>not encouraged</em> to change).</p>
+<p>Colors:</p>
 <ul>
 <li><code>--dark-color</code></li>
 <li><code>--gray-color</code></li>
-<li><code>--light-color</code></li>
-<li><code>--lighter-color</code></li>
-<li><code>--gray-color</code></li>
-<li><code>--accent-color</code></li>
-<li><code>--extra-spacing</code></li>
-<li><code>--label-spacing</code></li>
-<li><code>--border-radius</code></li>
+<li><code>--pie-color</code></li>
 <li><code>--background-color</code></li>
+<li><code>--checkbox-background-color</code></li>
+<li><code>--checkbox-hover-color</code></li>
+<li><code>--accent-color</code></li>
+<li><code>--warn-color</code></li>
 </ul>
+<p>Spacing:</p>
+<ul>
+<li><code>--border-radius</code></li>
+<li><code>--extra-spacing</code> (adds equal distance from sides and between checkbox and label)</li>
+<li><code>--label-spacing</code> (&ldquo;base&rdquo; distance from checkbox and label)</li>
+</ul>
+<p>Additionally, you can change the following CSS properties:</p>
+<ul>
+<li><code>display</code> (defaults to <code>inline-block</code>, set to <code>block</code> together with <code>height: 100%;</code> to &ldquo;stretch&rdquo; widget)</li>
+<li><code>font-size</code> (defaults to <code>1rem</code>, change to &ldquo;scale&rdquo; widget)</li>
+</ul>
+<h5>Making large widget<span class="hx-absolute -hx-mt-20" id="making-large-widget"></span>
+    <a href="#making-large-widget" class="subheading-anchor" aria-label="Permalink for this section"></a></h5><p>There&rsquo;re 2 things you can do: changing <code>font-size</code> scales everything inside the widget and stretching widget itself is done with <code>display</code> attribute (which by default is <code>inline-block</code>).</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 500px; height: 160px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100%&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="na">data-styles</span><span class="o">=</span><span class="s">&#34;display: block; height: 100%; font-size: 20px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<form class="pc-form hx-shadow-lg hx-rounded-lg" style="max-width; 100%; width: 500px; height: 160px;">
+    <div class="private-captcha hx-h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.staging.privatecaptcha.com/puzzle"
+        data-theme="light"
+        data-styles="display: block; height: 100%; font-size: 20px; --border-radius: 0.5rem; --extra-spacing: 8px;"></div>
+</form>
 <h4><code>data-store-variable</code><span class="hx-absolute -hx-mt-20" id="data-store-variable"></span>
-    <a href="#data-store-variable" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Captcha object, that is created from the widget configuation, provides a <a href="/docs/reference/captcha-object/" >number of APIs</a>.</p>
+    <a href="#data-store-variable" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Captcha object, that is created from the widget configuration, provides a <a href="/docs/reference/captcha-object/" >number of APIs</a>.</p>
 <p>If this is the only captcha widget on a page, you can access this object via <code>window.privateCaptcha.autoWidget</code>.</p>
 <p>However, in case of multiple widgets, you can assign this attribute to a variable name and then access it as a field of the <code>HTMLElement</code>.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -643,6 +683,10 @@ function invisibleFinished(widget) {
       </tr>
   </thead>
   <tbody>
+      <tr>
+          <td><code>data-init-callback</code></td>
+          <td>Widget has received a new puzzle to solve (possibly after previous puzzle expiration).</td>
+      </tr>
       <tr>
           <td><code>data-started-callback</code></td>
           <td>Captcha started solving the puzzle.</td>
@@ -691,7 +735,7 @@ function invisibleFinished(widget) {
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-02-15T10:10:17.000Z">February 15, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-05-23T14:13:03.000Z">May 23, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/reference/verify-api/"
         title="Verify API"

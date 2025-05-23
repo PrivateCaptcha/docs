@@ -33,13 +33,13 @@ When handling form submission on the server-side, this is the field you need to 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/verify-api/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-02-15T11:36:01+02:00" />
+<meta property="article:modified_time" content="2025-05-23T14:13:03+03:00" />
 
   <meta itemprop="name" content="Verify API">
   <meta itemprop="description" content="After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute).
 &lt;form&gt; &lt;!-- ... --&gt; &lt;input name=&#34;private-captcha-solution&#34; type=&#34;hidden&#34; value=&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;&gt; &lt;!-- ... --&gt; &lt;/form&gt; When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.">
-  <meta itemprop="dateModified" content="2025-02-15T11:36:01+02:00">
-  <meta itemprop="wordCount" content="288">
+  <meta itemprop="dateModified" content="2025-05-23T14:13:03+03:00">
+  <meta itemprop="wordCount" content="380">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Verify API">
   <meta name="twitter:description" content="After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute).
@@ -50,7 +50,7 @@ When handling form submission on the server-side, this is the field you need to 
 
 
 
-  <link href="/css/custom.min.9abf61a585b4ef556329328ccfc0978e2453a3140c9dd567e1a0bbe543e6a91d.css" rel="stylesheet" integrity="sha256-mr9hpYW071VjKTKMz8CXjiRToxQMndVn4aC75UPmqR0=" />
+  <link href="/css/custom.min.820d4d4a3525a09ab250526d162fcaaeaea56930d423c8437c7d9da5bef924e3.css" rel="stylesheet" integrity="sha256-gg1NSjUloJqyUFJtFi/Krq6laTDUI8hDfH2dpb75JOM=" />
 
 
   <script>
@@ -381,7 +381,15 @@ When handling form submission on the server-side, this is the field you need to 
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#verifying-captcha">Verifying captcha
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#error-codes">Error codes
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#errors-during-successful-verification">Errors during successful verification
         </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/reference/verify-api.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
@@ -429,7 +437,7 @@ When handling form submission on the server-side, this is the field you need to 
 </div>
 <p>When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.</p>
 <h2>Request<span class="hx-absolute -hx-mt-20" id="request"></span>
-    <a href="#request" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To verify solutions you need to make a <code>POST</code> request to <code>https://api.privatecaptcha.com/siteverify</code> with the body of the request being solution field&rsquo;s contents from your form.</p>
+    <a href="#request" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To verify solutions you need to make a <code>POST</code> request to <code>https://api.staging.privatecaptcha.com/siteverify</code> with the body of the request being solution field&rsquo;s contents from your form.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># an example how that will look like with curl</span>
@@ -472,8 +480,17 @@ When handling form submission on the server-side, this is the field you need to 
     <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p><code>/siteverify</code> endpoint returns <a href="https://developers.google.com/recaptcha/docs/verify" target="_blank" rel="noopener">reCAPTCHA-compatible</a> response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header <code>X-Captcha-Compat-Version: rcV3</code>.</p></div>
   </div>
 </div>
+<h3>Verifying captcha<span class="hx-absolute -hx-mt-20" id="verifying-captcha"></span>
+    <a href="#verifying-captcha" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Verification status is defined by a single field only: <code>success</code> (boolean) must be equal to <code>true</code>.</p>
 <h2>Error codes<span class="hx-absolute -hx-mt-20" id="error-codes"></span>
-    <a href="#error-codes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>In case of errors, <code>error-codes</code> array will contain one or more of error codes:</p>
+    <a href="#error-codes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+  <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>If <code>error-codes</code> is not empty, it does <strong>not</strong> mean that verification failed. See details <a href="#errors-during-successful-verification" >below</a>.</p></div>
+  </div>
+</div>
+<p><code>error-codes</code> array can contain one or more of error codes:</p>
 <table>
   <thead>
       <tr>
@@ -526,14 +543,23 @@ When handling form submission on the server-side, this is the field you need to 
           <td><code>maintenance-mode</code></td>
           <td>Maintenance mode (see below)</td>
       </tr>
+      <tr>
+          <td><code>integrity-error</code></td>
+          <td>Puzzle or solution integrity is compromised</td>
+      </tr>
   </tbody>
 </table>
-<p>When you&rsquo;re using a test property, <code>success</code> in response is equal to <code>true</code>, but <code>error-codes</code> contains test property error.</p>
-<p>During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity is not verified. If solution is valid, <code>success</code> in response is equal to <code>true</code>, but <code>error-codes</code> contains maintenance mode error. You can decide yourself if you trust these form submissions.</p>
+<h3>Errors during successful verification<span class="hx-absolute -hx-mt-20" id="errors-during-successful-verification"></span>
+    <a href="#errors-during-successful-verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>There are a couple of cases, when <code>success</code> in response will be equal to <code>true</code> (successful verification), but <code>error-codes</code> will not be empty. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):</p>
+<ul>
+<li>When you&rsquo;re using a test property, <code>error-codes</code> will contain <code>property-test</code> (but verification will succeed).</li>
+<li>During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, <code>success</code> in response is equal to <code>true</code>, but <code>error-codes</code> will contain <code>maintenance-mode</code>.</li>
+<li>If you configured property to <em>&ldquo;Accept repeated solutions&rdquo;</em> (during verification window), verification of repeated solution will cause <code>error-codes</code> to contain <code>solution-verified-before</code>.</li>
+</ul>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-02-15T11:36:01.000Z">February 15, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-05-23T14:13:03.000Z">May 23, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/reference/captcha-object/"
         title="Captcha object"
