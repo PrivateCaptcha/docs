@@ -45,9 +45,16 @@ Here's how successful response from `/siteverify` endpoint looks like:
 > [!NOTE]
 > `/siteverify` endpoint returns [reCAPTCHA-compatible](https://developers.google.com/recaptcha/docs/verify) response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header `X-Captcha-Compat-Version: rcV3`.
 
+### Verifying captcha
+
+Verification status is defined by a single field only: `success` (boolean) must be equal to `true`.
+
 ## Error codes
 
-In case of errors, `error-codes` array will contain one or more of error codes:
+> [!NOTE]
+> If `error-codes` is not empty, it does **not** mean that verification failed. See details [below](#errors-during-successful-verification).
+
+`error-codes` array can contain one or more of error codes:
 
 Error code | Description
 --- | ---
@@ -64,6 +71,10 @@ Error code | Description
 `maintenance-mode` | Maintenance mode (see below)
 `integrity-error` | Puzzle or solution integrity is compromised
 
-When you're using a test property, `success` in response is equal to `true`, but `error-codes` contains test property error.
+### Errors during successful verification
 
-During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity is not verified. If solution is valid, `success` in response is equal to `true`, but `error-codes` contains maintenance mode error. You can decide yourself if you trust these form submissions.
+There are a couple of cases, when `success` in response will be equal to `true` (successful verification), but `error-codes` will not be empty. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):
+
+- When you're using a test property, `error-codes` will contain `property-test` (but verification will succeed).
+- During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, `success` in response is equal to `true`, but `error-codes` will contain `maintenance-mode`.
+- If you configured property to _"Accept repeated solutions"_ (during verification window), verification of repeated solution will cause `error-codes` to contain `solution-verified-before`.

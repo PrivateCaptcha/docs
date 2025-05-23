@@ -66,22 +66,48 @@ Attribute | Values | Description
 
 `data-styles` allows you to override some of the widget styles to better fit into your website's design, on top of `data-theme`. Example of override: `data-style="--border-radius: .75rem;"`.
 
-The following variables support overrides:
+The following variables support overrides (but in general are *not encouraged* to change).
+
+Colors:
 
 - `--dark-color`
 - `--gray-color`
-- `--light-color`
-- `--lighter-color`
-- `--gray-color`
-- `--accent-color`
-- `--extra-spacing`
-- `--label-spacing`
-- `--border-radius`
+- `--pie-color`
 - `--background-color`
+- `--checkbox-background-color`
+- `--checkbox-hover-color`
+- `--accent-color`
+- `--warn-color`
+
+Spacing:
+
+- `--border-radius`
+- `--extra-spacing` (adds equal distance from sides and between checkbox and label)
+- `--label-spacing` ("base" distance from checkbox and label)
+
+Additionally, you can change the following CSS properties:
+
+- `display` (defaults to `inline-block`, set to `block` together with `height: 100%;` to "stretch" widget)
+- `font-size` (defaults to `1rem`, change to "scale" widget)
+
+##### Making large widget
+
+There're 2 things you can do: changing `font-size` scales everything inside the widget and stretching widget itself is done with `display` attribute (which by default is `inline-block`).
+
+```html
+<form style="width: 500px; height: 160px;">
+    <div class="private-captcha"
+         style="height: 100%"
+         data-styles="display: block; height: 100%; font-size: 20px;">
+    </div>
+</form>
+```
+
+{{< captchawidget formclass="pc-form hx-shadow-lg hx-rounded-lg" parentstyle="max-width; 100%; width: 500px; height: 160px;" widgetstyle="display: block; height: 100%; font-size: 20px; --border-radius: 0.5rem; --extra-spacing: 8px;" >}}
 
 #### `data-store-variable`
 
-Captcha object, that is created from the widget configuation, provides a [number of APIs]({{< relref "/docs/reference/captcha-object.md" >}}).
+Captcha object, that is created from the widget configuration, provides a [number of APIs]({{< relref "/docs/reference/captcha-object.md" >}}).
 
 If this is the only captcha widget on a page, you can access this object via `window.privateCaptcha.autoWidget`.
 

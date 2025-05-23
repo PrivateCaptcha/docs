@@ -1,6 +1,10 @@
 {{- $theme := .Get "theme" | default "light" -}}
-<form class="pc-form">
-    <div class="private-captcha" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+{{- $widgetStyle := .Get "widgetstyle" | default "" -}}
+{{- $parentStyle := .Get "parentstyle" | default "" -}}
+{{- $formClass := .Get "formclass" | default "pc-form" -}}
+<form class="{{$formClass}}" style="{{$parentStyle | safeCSS}}">
+    <div class="private-captcha hx-h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
         data-puzzle-endpoint="https://api.{{ .Site.Params.privateCaptchaDomain }}/puzzle"
-        data-theme="{{$theme}}"></div>
+        data-theme="{{$theme}}"
+        data-styles="{{$widgetStyle}}"></div>
 </form>

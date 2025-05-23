@@ -43,6 +43,8 @@ However, if you want to control when the solving will start, you can set `data-s
 
 Here's how a more complete example of the above looks like:
 
+{{< tabs items="HTML,Javascript" >}}
+{{< tab >}}
 ```html
 <form>
     <div class="private-captcha"
@@ -53,10 +55,36 @@ Here's how a more complete example of the above looks like:
         data-finished-callback="invisibleCaptchaFinished">
     </div>
     <button type="button" onclick="window.privateCaptcha.autoWidget.execute()">
+        <svg id="spinner" ... />
+        <svg id="checkmark" ... />
+
         Submit
     </button>
 </form>
 ```
+{{</ tab >}}
+{{< tab >}}
+```javascript
+function invisibleCaptchaStarted() {
+    document.getElementById('spinner').classList.remove('hidden');
+    document.getElementById('checkmark').classList.add('hidden');
+}
+
+function invisibleCaptchaFinished(widget) {
+    setTimeout(() => {
+        document.getElementById('spinner').classList.add('hidden');
+        document.getElementById('checkmark').classList.remove('hidden');
+    }, 1500);
+
+    setTimeout(() => {
+        widget.reset();
+        document.getElementById('spinner').classList.add('hidden');
+        document.getElementById('checkmark').classList.add('hidden');
+    }, 3000);
+}
+```
+{{</ tab >}}
+{{< /tabs >}}
 
 ### Demo
 
