@@ -90,7 +90,7 @@ Additionally, you can change the following CSS properties:
 - `display` (defaults to `inline-block`, set to `block` together with `height: 100%;` to "stretch" widget)
 - `font-size` (defaults to `1rem`, change to "scale" widget)
 
-##### Making large widget
+##### Making LARGE widget
 
 There're 2 things you can do: changing `font-size` scales everything inside the widget and stretching widget itself is done with `display` attribute (which by default is `inline-block`).
 
@@ -98,12 +98,12 @@ There're 2 things you can do: changing `font-size` scales everything inside the 
 <form style="width: 500px; height: 160px;">
     <div class="private-captcha"
          style="height: 100%"
-         data-styles="display: block; height: 100%; font-size: 20px;">
+         data-styles="display: block; height: 100%; font-size: 24px;">
     </div>
 </form>
 ```
 
-{{< captchawidget formclass="pc-form hx-shadow-lg hx-rounded-lg" parentstyle="max-width; 100%; width: 500px; height: 160px;" widgetstyle="display: block; height: 100%; font-size: 20px; --border-radius: 0.5rem; --extra-spacing: 8px;" >}}
+{{< captchawidget formclass="pc-form hx-shadow-lg hx-rounded-lg" parentstyle="max-width; 100%; width: 500px; height: 160px;" widgetstyle="display: block; height: 100%; font-size: 24px; --border-radius: 0.5rem; --extra-spacing: 8px;" >}}
 
 #### `data-store-variable`
 

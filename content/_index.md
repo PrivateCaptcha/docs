@@ -47,7 +47,7 @@ layout: hextra-home
     style="background: radial-gradient(ellipse at 50% 80%,rgb(255, 255, 255),hsla(0, 96.7%, 35.7%, 0.03));"
   >}}
   {{< hextra/feature-card
-    title="Self-hostable"
+    title="Self-hosting"
     subtitle="Deploy to your own infra"
     link="docs/deployment"
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-lg:hx-min-h-[340px]"
