@@ -34,8 +34,8 @@ layout: hextra-home
     link="docs/tutorials"
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-md:hx-min-h-[340px]"
     image="images/tutorials.png"
-    imageClass="hx-top-[24px] hx-left-[36px] hx-w-full sm:hx-w-[110%] dark:hx-opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(194,97,254,0.15),hsla(0,0%,100%,0));"
+    imageClass="hx-top-[24px] hx-h-full dark:hx-opacity-80"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(87, 152, 131, 0.15),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
     title="Reference"
@@ -43,8 +43,8 @@ layout: hextra-home
     link="docs/reference"
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-lg:hx-min-h-[340px]"
     image="images/reference.png"
-    imageClass="hx-top-[24px] hx-left-[36px] hx-w-full sm:hx-w-[110%] dark:hx-opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
+    imageClass="hx-h-full dark:hx-opacity-80"
+    style="background: radial-gradient(ellipse at 50% 80%,rgb(255, 255, 255),hsla(0, 96.7%, 35.7%, 0.03));"
   >}}
   {{< hextra/feature-card
     title="Self-hostable"
@@ -52,8 +52,8 @@ layout: hextra-home
     link="docs/deployment"
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-lg:hx-min-h-[340px]"
     image="images/deployment.png"
-    imageClass="hx-top-[24px] hx-left-[36px] hx-w-full sm:hx-w-[110%] dark:hx-opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+    imageClass="hx-w-full dark:hx-opacity-80"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(221, 210, 59, 0.05),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
     title="Get started in minutes"
