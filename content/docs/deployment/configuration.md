@@ -50,6 +50,7 @@ Variable | Example | Description
 `PC_PUZZLE_LEAKY_BUCKET_BURST` | `20` | Burst of puzzle API rate limiter.
 `PC_DEFAULT_LEAKY_BUCKET_RPS` | `0.5` | Leak rate per second (float) of default rate limiter (used for anything except puzzle requests) for unauthenticated requests.
 `PC_DEFAULT_LEAKY_BUCKET_BURST` | `10` | Burst of default rate limiter for unauthenticated requests.
+`PC_VERBOSE` | `true` | Boolean (`1`, `y`, `true`) to indicate verbose logging (trace level).
 
 > [!WARNING]
 > It's not recommended to modify leak rate configuration unless you really know what you're doing.
