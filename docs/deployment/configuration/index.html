@@ -10,40 +10,117 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Verify API – Private Captcha</title>
-  <meta name="description" content="After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute).
-&lt;form&gt; &lt;!-- ... --&gt; &lt;input name=&#34;private-captcha-solution&#34; type=&#34;hidden&#34; value=&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;&gt; &lt;!-- ... --&gt; &lt;/form&gt; When handling form submission on the server-side, this is the field you need to validate using Private Captcha API." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/verify-api/" itemprop="url" />
+<title>Configuration – Private Captcha</title>
+  <meta name="description" content="Environmental variables Required Variable Example Description STAGE dev Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/deployment/configuration/" itemprop="url" />
 
-<meta property="og:title" content="Verify API" />
-<meta property="og:description" content="After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute).
-
-
-&lt;form&gt;
-    &lt;!-- ... --&gt;
-    &lt;input name=&#34;private-captcha-solution&#34; type=&#34;hidden&#34; value=&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;&gt;
-    &lt;!-- ... --&gt;
-&lt;/form&gt;
-  
-    
+<meta property="og:title" content="Configuration" />
+<meta property="og:description" content="Environmental variables
+    Required
     
   
+      
+          Variable
+          Example
+          Description
+      
+  
+  
+      
+          STAGE
+          dev
+          Stage is used for building widget js code (e.g. minification) and for separation in logging.
+      
+      
+          PC_PORTAL_BASE_URL
+          portal.yourdomain.com
+          (Sub)domain where you will host PrivateCaptcha portal.
+      
+      
+          PC_API_BASE_URL
+          api.yourdomain.com
+          (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted.
+      
+      
+          PC_CDN_BASE_URL
+          cdn.yourdomain.com
+          (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.).
+      
+      
+          PC_ADMIN_EMAIL
+          admin@yourdomain.com
+          Email that will be used for admin user to login. Must be valid and functioning.
+      
+      
+          PC_EMAIL_FROM
+          no-reply@yourdomain.com
+          Sender address for various transactional emails (2FA auth, welcome email etc.)
+      
+      
+          PC_POSTGRES
+          postgres://username:pass@postgres:5432/privatecaptcha
+          Postgres connection string for backend DB. You can also specify separate values (see note below).
+      
+      
+          PC_CLICKHOUSE_HOST
+          clickhouse
+          Host (or IP address) where ClickHouse DB is running.
+      
+      
+          PC_CLICKHOUSE_DB
+          privatecaptcha
+          Database for connecting to ClickHouse.
+      
+      
+          PC_CLICKHOUSE_USER
+          captcha
+          Username for connecting to PC_CLICKHOUSE_DB.
+      
+      
+          PC_CLICKHOUSE_PASSWORD
+          qwerty12345
+          Password for PC_CLICKHOUSE_USER.
+      
+      
+          PC_USER_FINGERPRINT_KEY
+          abcdef...
+          HEX-encoded 64-character string, used as IV value for hashing user fingerprints.
+      
+      
+          PC_API_SALT
+          asdf...
+          String used as salt for creating puzzle signatures.
+      
+      
+          SMTP_ENDPOINT
+          smtp://your.provider.com:587
+          Endpoint used for sending transactional email.
+      
+      
+          SMTP_USERNAME
+          foobar
+          Username for SMTP_ENDPOINT.
+      
+      
+          SMTP_PASSWORD
+          qwerty12345
+          Password for SMTP_USERNAME.
+      
+  
 
 
-When handling form submission on the server-side, this is the field you need to validate using Private Captcha API." />
+  Note" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/verify-api/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/deployment/configuration/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-05-23T14:13:03+03:00" />
+<meta property="article:modified_time" content="2025-05-27T12:39:35+03:00" />
 
-  <meta itemprop="name" content="Verify API">
-  <meta itemprop="description" content="After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute).
-&lt;form&gt; &lt;!-- ... --&gt; &lt;input name=&#34;private-captcha-solution&#34; type=&#34;hidden&#34; value=&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;&gt; &lt;!-- ... --&gt; &lt;/form&gt; When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.">
-  <meta itemprop="dateModified" content="2025-05-23T14:13:03+03:00">
-  <meta itemprop="wordCount" content="380">
+  <meta itemprop="name" content="Configuration">
+  <meta itemprop="description" content="Environmental variables Required Variable Example Description STAGE dev Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note">
+  <meta itemprop="dateModified" content="2025-05-27T12:39:35+03:00">
+  <meta itemprop="wordCount" content="472">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Verify API">
-  <meta name="twitter:description" content="After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute).
-&lt;form&gt; &lt;!-- ... --&gt; &lt;input name=&#34;private-captcha-solution&#34; type=&#34;hidden&#34; value=&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;&gt; &lt;!-- ... --&gt; &lt;/form&gt; When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.">
+  <meta name="twitter:title" content="Configuration">
+  <meta name="twitter:description" content="Environmental variables Required Variable Example Description STAGE dev Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note">
 
     <link rel="preload" href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" as="style" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
     <link href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" rel="stylesheet" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
@@ -90,7 +167,7 @@ When handling form submission on the server-side, this is the field you need to 
             title="Reference"
             href="/docs/reference"
             
-            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-font-medium"
+            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-text-gray-600 hover:hx-text-gray-800 dark:hx-text-gray-400 dark:hover:hx-text-gray-200"
           >
             <span class="hx-text-center">Reference</span>
           </a><a
@@ -190,7 +267,7 @@ When handling form submission on the server-side, this is the field you need to 
   >Docs
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/deployment/"
@@ -199,17 +276,26 @@ When handling form submission on the server-side, this is the field you need to 
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/deployment/configuration/"
     
   >Configuration
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#environmental-variables"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Environmental variables</a>
+            </li>
+          </ul>
+  
               
             </li></ul>
       </div>
-            </li><li class="hx-flex hx-flex-col open"><a
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/reference/"
@@ -226,34 +312,13 @@ When handling form submission on the server-side, this is the field you need to 
   >Captcha object
     </a>
               
-            </li><li class="hx-flex hx-flex-col open"><a
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/reference/verify-api/"
     
   >Verify API
     </a>
-  
-    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
-              <a
-                href="#request"
-                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Request</a>
-            </li>
-          <li>
-              <a
-                href="#response"
-                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Response</a>
-            </li>
-          <li>
-              <a
-                href="#error-codes"
-                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Error codes</a>
-            </li>
-          </ul>
-  
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -298,7 +363,7 @@ When handling form submission on the server-side, this is the field you need to 
 
     <ul class="hx-flex hx-flex-col hx-gap-1 max-md:hx-hidden">
         
-          <li class=""><a
+          <li class="open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/deployment/"
@@ -306,9 +371,9 @@ When handling form submission on the server-side, this is the field you need to 
   >Deployment
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/deployment/configuration/"
     
   >Configuration
@@ -316,7 +381,7 @@ When handling form submission on the server-side, this is the field you need to 
               
             </li></ul>
       </div></li>
-          <li class="open"><a
+          <li class=""><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/reference/"
@@ -332,9 +397,9 @@ When handling form submission on the server-side, this is the field you need to 
   >Captcha object
     </a>
               
-            </li><li class="hx-flex hx-flex-col open"><a
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/reference/verify-api/"
     
   >Verify API
@@ -395,26 +460,18 @@ When handling form submission on the server-side, this is the field you need to 
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#request">Request
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#environmental-variables">Environmental variables
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#response">Response
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#required">Required
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#verifying-captcha">Verifying captcha
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#error-codes">Error codes
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#errors-during-successful-verification">Errors during successful verification
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#optional">Optional
         </a>
       </li></ul>
-      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/reference/verify-api.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/deployment/configuration.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -434,163 +491,216 @@ When handling form submission on the server-side, this is the field you need to 
           <a href="/docs/">Docs</a>
         </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
-          <a href="/docs/reference/">Reference</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Verify API</div>
+          <a href="/docs/deployment/">Deployment</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Configuration</div>
   </div>
 
         <div class="content">
-          <h1>Verify API</h1>
-          <p>After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by <code>data-solution-field</code> <a href="/docs/reference/widget-options/" >attribute</a>).</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- ... --&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;private-captcha-solution&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;hidden&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- ... --&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.</p>
-<h2>Request<span class="hx-absolute -hx-mt-20" id="request"></span>
-    <a href="#request" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To verify solutions you need to make a <code>POST</code> request to <code>https://api.staging.privatecaptcha.com/siteverify</code> with the body of the request being solution field&rsquo;s contents from your form.</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># an example how that will look like with curl</span>
-</span></span><span class="line"><span class="cl">curl -X POST <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;X-Api-Key: your-api-key-here&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -d <span class="s2">&#34;solution&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  https://api.staging.privatecaptcha.com/siteverify</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<h2>Response<span class="hx-absolute -hx-mt-20" id="response"></span>
-    <a href="#response" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Here&rsquo;s how successful response from <code>/siteverify</code> endpoint looks like:</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;success&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;challenge_ts&#34;</span><span class="p">:</span> <span class="s2">&#34;2025-01-13T16:17:27+00:00&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;hostname&#34;</span><span class="p">:</span> <span class="s2">&#34;privatecaptcha.com&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;error-codes&#34;</span><span class="p">:</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
-  <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
-
-  <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p><code>/siteverify</code> endpoint returns <a href="https://developers.google.com/recaptcha/docs/verify" target="_blank" rel="noopener">reCAPTCHA-compatible</a> response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header <code>X-Captcha-Compat-Version: rcV3</code>.</p></div>
-  </div>
-</div>
-<h3>Verifying captcha<span class="hx-absolute -hx-mt-20" id="verifying-captcha"></span>
-    <a href="#verifying-captcha" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Verification status is defined by a single field only: <code>success</code> (boolean) must be equal to <code>true</code>.</p>
-<h2>Error codes<span class="hx-absolute -hx-mt-20" id="error-codes"></span>
-    <a href="#error-codes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
-  <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
-
-  <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>If <code>error-codes</code> is not empty, it does <strong>not</strong> mean that verification failed. See details <a href="#errors-during-successful-verification" >below</a>.</p></div>
-  </div>
-</div>
-<p><code>error-codes</code> array can contain one or more of error codes:</p>
-<table>
+          <h1>Configuration</h1>
+          <h2>Environmental variables<span class="hx-absolute -hx-mt-20" id="environmental-variables"></span>
+    <a href="#environmental-variables" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Required<span class="hx-absolute -hx-mt-20" id="required"></span>
+    <a href="#required" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
   <thead>
       <tr>
-          <th>Error code</th>
+          <th>Variable</th>
+          <th>Example</th>
           <th>Description</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td><code>no-error</code></td>
-          <td>No error (shown here for completeness)</td>
+          <td><code>STAGE</code></td>
+          <td><code>dev</code></td>
+          <td>Stage is used for building widget js code (e.g. minification) and for separation in logging.</td>
       </tr>
       <tr>
-          <td><code>error-other</code></td>
-          <td>Unspecified error</td>
+          <td><code>PC_PORTAL_BASE_URL</code></td>
+          <td><code>portal.yourdomain.com</code></td>
+          <td>(Sub)domain where you will host PrivateCaptcha portal.</td>
       </tr>
       <tr>
-          <td><code>solution-duplicates</code></td>
-          <td>Solution contains duplicates</td>
+          <td><code>PC_API_BASE_URL</code></td>
+          <td><code>api.yourdomain.com</code></td>
+          <td>(Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted.</td>
       </tr>
       <tr>
-          <td><code>solution-invalid</code></td>
-          <td>Solution verification error</td>
+          <td><code>PC_CDN_BASE_URL</code></td>
+          <td><code>cdn.yourdomain.com</code></td>
+          <td>(Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.).</td>
       </tr>
       <tr>
-          <td><code>solution-bad-format</code></td>
-          <td>Solution has invalid format</td>
+          <td><code>PC_ADMIN_EMAIL</code></td>
+          <td><code>admin@yourdomain.com</code></td>
+          <td>Email that will be used for admin user to login. Must be valid and functioning.</td>
       </tr>
       <tr>
-          <td><code>puzzle-expired</code></td>
-          <td>Puzzle for this solution has expired</td>
+          <td><code>PC_EMAIL_FROM</code></td>
+          <td><code>no-reply@yourdomain.com</code></td>
+          <td>Sender address for various transactional emails (2FA auth, welcome email etc.)</td>
       </tr>
       <tr>
-          <td><code>property-invalid</code></td>
-          <td>Property for this puzzle/solution cannot be found</td>
+          <td><code>PC_POSTGRES</code></td>
+          <td><code>postgres://username:pass@postgres:5432/privatecaptcha</code></td>
+          <td><a href="https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING" target="_blank" rel="noopener">Postgres connection string</a> for backend DB. You can also specify separate values (see note below).</td>
       </tr>
       <tr>
-          <td><code>property-owner-mismatch</code></td>
-          <td>Property and API key&rsquo;s accounts don&rsquo;t match</td>
+          <td><code>PC_CLICKHOUSE_HOST</code></td>
+          <td><code>clickhouse</code></td>
+          <td>Host (or IP address) where ClickHouse DB is running.</td>
       </tr>
       <tr>
-          <td><code>solution-verified-before</code></td>
-          <td>Solution has been already verified</td>
+          <td><code>PC_CLICKHOUSE_DB</code></td>
+          <td><code>privatecaptcha</code></td>
+          <td>Database for connecting to ClickHouse.</td>
       </tr>
       <tr>
-          <td><code>property-test</code></td>
-          <td>Test property is used for verification</td>
+          <td><code>PC_CLICKHOUSE_USER</code></td>
+          <td><code>captcha</code></td>
+          <td>Username for connecting to <code>PC_CLICKHOUSE_DB</code>.</td>
       </tr>
       <tr>
-          <td><code>maintenance-mode</code></td>
-          <td>Maintenance mode (see below)</td>
+          <td><code>PC_CLICKHOUSE_PASSWORD</code></td>
+          <td><code>qwerty12345</code></td>
+          <td>Password for <code>PC_CLICKHOUSE_USER</code>.</td>
       </tr>
       <tr>
-          <td><code>integrity-error</code></td>
-          <td>Puzzle or solution integrity is compromised</td>
+          <td><code>PC_USER_FINGERPRINT_KEY</code></td>
+          <td><code>abcdef...</code></td>
+          <td>HEX-encoded <code>64</code>-character string, used as IV value for hashing user fingerprints.</td>
+      </tr>
+      <tr>
+          <td><code>PC_API_SALT</code></td>
+          <td><code>asdf...</code></td>
+          <td>String used as salt for creating puzzle signatures.</td>
+      </tr>
+      <tr>
+          <td><code>SMTP_ENDPOINT</code></td>
+          <td><code>smtp://your.provider.com:587</code></td>
+          <td>Endpoint used for sending transactional email.</td>
+      </tr>
+      <tr>
+          <td><code>SMTP_USERNAME</code></td>
+          <td><code>foobar</code></td>
+          <td>Username for <code>SMTP_ENDPOINT</code>.</td>
+      </tr>
+      <tr>
+          <td><code>SMTP_PASSWORD</code></td>
+          <td><code>qwerty12345</code></td>
+          <td>Password for <code>SMTP_USERNAME</code>.</td>
       </tr>
   </tbody>
 </table>
-<h3>Errors during successful verification<span class="hx-absolute -hx-mt-20" id="errors-during-successful-verification"></span>
-    <a href="#errors-during-successful-verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>There are a couple of cases, when <code>success</code> in response will be equal to <code>true</code> (successful verification), but <code>error-codes</code> will not be empty. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):</p>
-<ul>
-<li>When you&rsquo;re using a test property, <code>error-codes</code> will contain <code>property-test</code> (but verification will succeed).</li>
-<li>During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, <code>success</code> in response is equal to <code>true</code>, but <code>error-codes</code> will contain <code>maintenance-mode</code>.</li>
-<li>If you configured property to <em>&ldquo;Accept repeated solutions&rdquo;</em> (during verification window), verification of repeated solution will cause <code>error-codes</code> to contain <code>solution-verified-before</code>.</li>
-</ul>
+<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+  <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>Instead of <code>PC_POSTGRES</code> as connection string, you can specify <code>PC_POSTGRES_HOST</code>, <code>PC_POSTGRES_DB</code>, <code>PC_POSTGRES_USER</code>, <code>PC_POSTGRES_PASSWORD</code> separately.</p></div>
+  </div>
+</div>
+<h3>Optional<span class="hx-absolute -hx-mt-20" id="optional"></span>
+    <a href="#optional" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Example</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>PC_HOST</code></td>
+          <td><code>localhost</code></td>
+          <td>Host where to listen for HTTP connections.</td>
+      </tr>
+      <tr>
+          <td><code>PC_PORT</code></td>
+          <td><code>8080</code></td>
+          <td>Port where to listen for HTTP connections.</td>
+      </tr>
+      <tr>
+          <td><code>PC_LOCAL_ADDRESS</code></td>
+          <td><code>localhost:9090</code></td>
+          <td>Local &ldquo;admin&rdquo; endpoint that hosts Prometheus metrics, manual maintenance jobs triggers and kubernetes liveness/readiness probes. Does not have any auth and <em>must not</em> be exposed publicly.</td>
+      </tr>
+      <tr>
+          <td><code>PC_RATE_LIMIT_HEADER</code></td>
+          <td><code>X-Real-Ip</code></td>
+          <td>HTTP header which will contain IP address of the connecting user. Is expected to come from CDN or proxy (e.g., nginx, caddy). If empty, righmost non-private address of <code>X-Forwarded-For</code> will be used.</td>
+      </tr>
+      <tr>
+          <td><code>PC_CLICKHOUSE_ADMIN</code></td>
+          <td><code>captcha_admin</code></td>
+          <td>Separate username for ClickHouse to run migrations with. If empty, <code>PC_CLICKHOUSE_USER</code> will be used.</td>
+      </tr>
+      <tr>
+          <td><code>PC_CLICKHOUSE_ADMIN_PASSWORD</code></td>
+          <td><code>qwerty12345</code></td>
+          <td>Password for <code>PC_CLICKHOUSE_ADMIN</code>.</td>
+      </tr>
+      <tr>
+          <td><code>PC_POSTGRES_ADMIN</code></td>
+          <td><code>captcha_admin</code></td>
+          <td>Separate username for Postgres to run migrations with. If empty, <code>PC_POSTGRES_USER</code> (or <code>PC_POSTGRES</code>) will be used.</td>
+      </tr>
+      <tr>
+          <td><code>PC_POSTGRES_ADMIN_PASSWORD</code></td>
+          <td><code>qwerty12345</code></td>
+          <td>Password for <code>PC_POSTGRES_ADMIN</code>.</td>
+      </tr>
+      <tr>
+          <td><code>PC_MAINTENANCE_MODE</code></td>
+          <td><code>true</code></td>
+          <td>Boolean (<code>1</code>, <code>y</code>, <code>true</code>) value if server is in maintenance mode, during which communications with databases are offline, but APIs (and cache) are functional.</td>
+      </tr>
+      <tr>
+          <td><code>PC_REGISTRATION_ALLOWED</code></td>
+          <td><code>true</code></td>
+          <td>Boolean (<code>1</code>, <code>y</code>, <code>true</code>) value if this instance of PrivateCaptcha has registration page open.</td>
+      </tr>
+      <tr>
+          <td><code>PC_HEALTHCHECK_INTERVAL</code></td>
+          <td><code>60</code></td>
+          <td>Integer value that defines how frequently in seconds we perform internal health check of DB instances and http server. Defaults to <code>5</code> in prod and <code>60</code> in dev.</td>
+      </tr>
+      <tr>
+          <td><code>PC_PUZZLE_LEAKY_BUCKET_RPS</code></td>
+          <td><code>1.0</code></td>
+          <td>Leak rate per second (float) of puzzle API rate limiter.</td>
+      </tr>
+      <tr>
+          <td><code>PC_PUZZLE_LEAKY_BUCKET_BURST</code></td>
+          <td><code>20</code></td>
+          <td>Burst of puzzle API rate limiter.</td>
+      </tr>
+      <tr>
+          <td><code>PC_DEFAULT_LEAKY_BUCKET_RPS</code></td>
+          <td><code>0.5</code></td>
+          <td>Leak rate per second (float) of default rate limiter (used for anything except puzzle requests) for unauthenticated requests.</td>
+      </tr>
+      <tr>
+          <td><code>PC_DEFAULT_LEAKY_BUCKET_BURST</code></td>
+          <td><code>10</code></td>
+          <td>Burst of default rate limiter for unauthenticated requests.</td>
+      </tr>
+      <tr>
+          <td><code>PC_VERBOSE</code></td>
+          <td><code>true</code></td>
+          <td>Boolean (<code>1</code>, <code>y</code>, <code>true</code>) to indicate verbose logging (trace level).</td>
+      </tr>
+  </tbody>
+</table>
+<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-amber-200 hx-bg-amber-100 hx-text-amber-900 dark:hx-border-amber-200/30 dark:hx-bg-amber-900/30 dark:hx-text-amber-200">
+  <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>It&rsquo;s not recommended to modify leak rate configuration unless you really know what you&rsquo;re doing.</p></div>
+  </div>
+</div>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-05-23T14:13:03.000Z">May 23, 2025</time></div>
-        <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="/docs/reference/captcha-object/"
-        title="Captcha object"
-        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
-      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Captcha object</a><a
-        href="/docs/reference/widget-options/"
-        title="Widget options"
-        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >Widget options<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-05-27T12:39:35.000Z">May 27, 2025</time></div>
+        
         
       </main>
     </article>

@@ -599,6 +599,218 @@
     </item>
     
     <item>
+      <title>Configuration</title>
+      <link>https://docs.privatecaptcha.com/docs/deployment/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.privatecaptcha.com/docs/deployment/configuration/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Environmental variables&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;environmental-variables&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#environmental-variables&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Required&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;required&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#required&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Variable&lt;/th&gt;
+          &lt;th&gt;Example&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;STAGE&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;dev&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Stage is used for building widget js code (e.g. minification) and for separation in logging.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_PORTAL_BASE_URL&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;portal.yourdomain.com&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;(Sub)domain where you will host PrivateCaptcha portal.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_API_BASE_URL&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;api.yourdomain.com&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;(Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_CDN_BASE_URL&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;cdn.yourdomain.com&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;(Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.).&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_ADMIN_EMAIL&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;admin@yourdomain.com&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Email that will be used for admin user to login. Must be valid and functioning.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_EMAIL_FROM&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;no-reply@yourdomain.com&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Sender address for various transactional emails (2FA auth, welcome email etc.)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_POSTGRES&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;postgres://username:pass@postgres:5432/privatecaptcha&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Postgres connection string&lt;/a&gt; for backend DB. You can also specify separate values (see note below).&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_CLICKHOUSE_HOST&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;clickhouse&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Host (or IP address) where ClickHouse DB is running.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_CLICKHOUSE_DB&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;privatecaptcha&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Database for connecting to ClickHouse.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_CLICKHOUSE_USER&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;captcha&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Username for connecting to &lt;code&gt;PC_CLICKHOUSE_DB&lt;/code&gt;.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_CLICKHOUSE_PASSWORD&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;qwerty12345&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Password for &lt;code&gt;PC_CLICKHOUSE_USER&lt;/code&gt;.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_USER_FINGERPRINT_KEY&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;abcdef...&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;HEX-encoded &lt;code&gt;64&lt;/code&gt;-character string, used as IV value for hashing user fingerprints.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_API_SALT&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;asdf...&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;String used as salt for creating puzzle signatures.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;SMTP_ENDPOINT&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;smtp://your.provider.com:587&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Endpoint used for sending transactional email.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;SMTP_USERNAME&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;foobar&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Username for &lt;code&gt;SMTP_ENDPOINT&lt;/code&gt;.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;SMTP_PASSWORD&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;qwerty12345&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Password for &lt;code&gt;SMTP_USERNAME&lt;/code&gt;.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;p class=&#34;hx-flex hx-items-center hx-font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx-inline-block hx-align-middle hx-mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;Instead of &lt;code&gt;PC_POSTGRES&lt;/code&gt; as connection string, you can specify &lt;code&gt;PC_POSTGRES_HOST&lt;/code&gt;, &lt;code&gt;PC_POSTGRES_DB&lt;/code&gt;, &lt;code&gt;PC_POSTGRES_USER&lt;/code&gt;, &lt;code&gt;PC_POSTGRES_PASSWORD&lt;/code&gt; separately.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Optional&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;optional&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#optional&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Variable&lt;/th&gt;
+          &lt;th&gt;Example&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_HOST&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;localhost&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Host where to listen for HTTP connections.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_PORT&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;8080&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Port where to listen for HTTP connections.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_LOCAL_ADDRESS&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;localhost:9090&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Local &amp;ldquo;admin&amp;rdquo; endpoint that hosts Prometheus metrics, manual maintenance jobs triggers and kubernetes liveness/readiness probes. Does not have any auth and &lt;em&gt;must not&lt;/em&gt; be exposed publicly.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_RATE_LIMIT_HEADER&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;X-Real-Ip&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;HTTP header which will contain IP address of the connecting user. Is expected to come from CDN or proxy (e.g., nginx, caddy). If empty, righmost non-private address of &lt;code&gt;X-Forwarded-For&lt;/code&gt; will be used.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_CLICKHOUSE_ADMIN&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;captcha_admin&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Separate username for ClickHouse to run migrations with. If empty, &lt;code&gt;PC_CLICKHOUSE_USER&lt;/code&gt; will be used.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_CLICKHOUSE_ADMIN_PASSWORD&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;qwerty12345&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Password for &lt;code&gt;PC_CLICKHOUSE_ADMIN&lt;/code&gt;.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_POSTGRES_ADMIN&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;captcha_admin&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Separate username for Postgres to run migrations with. If empty, &lt;code&gt;PC_POSTGRES_USER&lt;/code&gt; (or &lt;code&gt;PC_POSTGRES&lt;/code&gt;) will be used.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_POSTGRES_ADMIN_PASSWORD&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;qwerty12345&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Password for &lt;code&gt;PC_POSTGRES_ADMIN&lt;/code&gt;.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_MAINTENANCE_MODE&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Boolean (&lt;code&gt;1&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;, &lt;code&gt;true&lt;/code&gt;) value if server is in maintenance mode, during which communications with databases are offline, but APIs (and cache) are functional.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_REGISTRATION_ALLOWED&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Boolean (&lt;code&gt;1&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;, &lt;code&gt;true&lt;/code&gt;) value if this instance of PrivateCaptcha has registration page open.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_HEALTHCHECK_INTERVAL&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;60&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Integer value that defines how frequently in seconds we perform internal health check of DB instances and http server. Defaults to &lt;code&gt;5&lt;/code&gt; in prod and &lt;code&gt;60&lt;/code&gt; in dev.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_PUZZLE_LEAKY_BUCKET_RPS&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;1.0&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Leak rate per second (float) of puzzle API rate limiter.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_PUZZLE_LEAKY_BUCKET_BURST&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;20&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Burst of puzzle API rate limiter.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_DEFAULT_LEAKY_BUCKET_RPS&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;0.5&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Leak rate per second (float) of default rate limiter (used for anything except puzzle requests) for unauthenticated requests.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_DEFAULT_LEAKY_BUCKET_BURST&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;10&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Burst of default rate limiter for unauthenticated requests.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_VERBOSE&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Boolean (&lt;code&gt;1&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;, &lt;code&gt;true&lt;/code&gt;) to indicate verbose logging (trace level).&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-amber-200 hx-bg-amber-100 hx-text-amber-900 dark:hx-border-amber-200/30 dark:hx-bg-amber-900/30 dark:hx-text-amber-200&#34;&gt;
+  &lt;p class=&#34;hx-flex hx-items-center hx-font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx-inline-block hx-align-middle hx-mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;It&amp;rsquo;s not recommended to modify leak rate configuration unless you really know what you&amp;rsquo;re doing.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Invisible captcha</title>
       <link>https://docs.privatecaptcha.com/docs/tutorials/invisible-captcha/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1088,14 +1300,14 @@
 &lt;li&gt;&lt;code&gt;display&lt;/code&gt; (defaults to &lt;code&gt;inline-block&lt;/code&gt;, set to &lt;code&gt;block&lt;/code&gt; together with &lt;code&gt;height: 100%;&lt;/code&gt; to &amp;ldquo;stretch&amp;rdquo; widget)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;font-size&lt;/code&gt; (defaults to &lt;code&gt;1rem&lt;/code&gt;, change to &amp;ldquo;scale&amp;rdquo; widget)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5&gt;Making large widget&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;making-large-widget&#34;&gt;&lt;/span&gt;
+&lt;h5&gt;Making LARGE widget&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;making-large-widget&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#making-large-widget&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;There&amp;rsquo;re 2 things you can do: changing &lt;code&gt;font-size&lt;/code&gt; scales everything inside the widget and stretching widget itself is done with &lt;code&gt;display&lt;/code&gt; attribute (which by default is &lt;code&gt;inline-block&lt;/code&gt;).&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;form&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;width: 500px; height: 160px;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;private-captcha&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         &lt;span class=&#34;na&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;height: 100%&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         &lt;span class=&#34;na&#34;&gt;data-styles&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;display: block; height: 100%; font-size: 20px;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         &lt;span class=&#34;na&#34;&gt;data-styles&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;display: block; height: 100%; font-size: 24px;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
   &lt;button
@@ -1111,7 +1323,7 @@
     &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
         data-puzzle-endpoint=&#34;https://api.staging.privatecaptcha.com/puzzle&#34;
         data-theme=&#34;light&#34;
-        data-styles=&#34;display: block; height: 100%; font-size: 20px; --border-radius: 0.5rem; --extra-spacing: 8px;&#34;&gt;&lt;/div&gt;
+        data-styles=&#34;display: block; height: 100%; font-size: 24px; --border-radius: 0.5rem; --extra-spacing: 8px;&#34;&gt;&lt;/div&gt;
 &lt;/form&gt;
 &lt;h4&gt;&lt;code&gt;data-store-variable&lt;/code&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;data-store-variable&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#data-store-variable&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Captcha object, that is created from the widget configuration, provides a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/&#34; &gt;number of APIs&lt;/a&gt;.&lt;/p&gt;
