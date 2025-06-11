@@ -657,7 +657,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div class="filename not-prose" dir="auto">index.html</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">     &lt;/style&gt;
-</span></span><span class="line"><span class="cl"><span class="gi">+    &lt;script defer src=&#34;https://cdn.staging.privatecaptcha.com/widget/js/privatecaptcha.js&#34;&gt;&lt;/script&gt;
+</span></span><span class="line"><span class="cl"><span class="gi">+    &lt;script defer src=&#34;https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js&#34;&gt;&lt;/script&gt;
 </span></span></span><span class="line"><span class="cl"><span class="gi"></span> &lt;/head&gt;
 </span></span><span class="line"><span class="cl"> &lt;body&gt;
 </span></span><span class="line"><span class="cl">     &lt;div style=&#34;display: flex; flex: 1 1 0%&#34;&gt;
@@ -713,7 +713,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 <div class="filename not-prose" dir="auto">index.html</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -18,7 +18,13 @@
 </span></span></span><span class="line"><span class="cl"><span class="gu"></span>             padding: 20px;
 </span></span><span class="line"><span class="cl">         }
-</span></span><span class="line"><span class="cl">     &lt;script defer src=&#34;https://cdn.staging.privatecaptcha.com/widget/js/privatecaptcha.js&#34;&gt;&lt;/script&gt;
+</span></span><span class="line"><span class="cl">     &lt;script defer src=&#34;https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js&#34;&gt;&lt;/script&gt;
 </span></span><span class="line"><span class="cl"><span class="gi">+    &lt;script type=&#34;text/javascript&#34;&gt;
 </span></span></span><span class="line"><span class="cl"><span class="gi">+        function onCaptchaSolved() {
 </span></span></span><span class="line"><span class="cl"><span class="gi">+            const submitButton = document.querySelector(&#39;#formSubmit&#39;);
@@ -782,7 +782,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 <h3>Server-side<span class="hx-absolute -hx-mt-20" id="server-side"></span>
     <a href="#server-side" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>For server-side, we need to add a handler for the form and verify captcha solution.</p>
 <h3>Create a new API key<span class="hx-absolute -hx-mt-20" id="create-a-new-api-key"></span>
-    <a href="#create-a-new-api-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To verify captcha solutions, we need an API key. Head to the <a href="https://portal.staging.privatecaptcha.com/settings?tab=apikeys" target="_blank" rel="noopener">portal</a>, open your user&rsquo;s Settings, then API keys and click &ldquo;Create new key&rdquo;.</p>
+    <a href="#create-a-new-api-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To verify captcha solutions, we need an API key. Head to the <a href="https://portal.privatecaptcha.com/settings?tab=apikeys" target="_blank" rel="noopener">portal</a>, open your user&rsquo;s Settings, then API keys and click &ldquo;Create new key&rdquo;.</p>
 <p><img src="/images/tutorials/create-api-key.png" alt="Create new API key" loading="lazy" /></p>
 <h3>Add code to verify solution<span class="hx-absolute -hx-mt-20" id="add-code-to-verify-solution"></span>
     <a href="#add-code-to-verify-solution" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by <code>data-solution-field</code> <a href="/docs/reference/widget-options/" >attribute</a>).</p>
@@ -831,7 +831,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 </span></span></span><span class="line"><span class="cl"><span class="gu"></span> )
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"><span class="gi">+func checkSolution(solution, apiKey string) error {
-</span></span></span><span class="line"><span class="cl"><span class="gi">+       req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.staging.privatecaptcha.com/siteverify&#34;, strings.NewReader(solution))
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/siteverify&#34;, strings.NewReader(solution))
 </span></span></span><span class="line"><span class="cl"><span class="gi">+       if err != nil {
 </span></span></span><span class="line"><span class="cl"><span class="gi">+               return err
 </span></span></span><span class="line"><span class="cl"><span class="gi">+       }
@@ -900,7 +900,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">checkSolution</span><span class="p">(</span><span class="nx">solution</span><span class="p">,</span> <span class="nx">apiKey</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;POST&#34;</span><span class="p">,</span> <span class="s">&#34;https://api.staging.privatecaptcha.com/siteverify&#34;</span><span class="p">,</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">solution</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;POST&#34;</span><span class="p">,</span> <span class="s">&#34;https://api.privatecaptcha.com/siteverify&#34;</span><span class="p">,</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">solution</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nx">err</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
