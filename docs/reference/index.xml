@@ -93,6 +93,174 @@
     </item>
     
     <item>
+      <title>EU Isolation</title>
+      <link>https://docs.privatecaptcha.com/docs/reference/eu-isolation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.privatecaptcha.com/docs/reference/eu-isolation/</guid>
+      <description>
+        
+        
+        &lt;p&gt;There&amp;rsquo;s a way to use Private Captcha APIs in such a way that all requests are routed &lt;strong&gt;exclusively&lt;/strong&gt; to our servers in EU locations.&lt;/p&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;p class=&#34;hx-flex hx-items-center hx-font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx-inline-block hx-align-middle hx-mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;Private Captcha uses EU-only suppliers so by &amp;ldquo;servers in EU locations&amp;rdquo; we don&amp;rsquo;t mean a US-based company (e.g. AWS) with EU points of presence.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;To achieve this you need to make 2 changes: one on the frontend and second on the backend.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TL;DR;&lt;/strong&gt; version is that you need to replace in your code &lt;code&gt;api.privatecaptcha.com&lt;/code&gt; to &lt;code&gt;api.eu.privatecaptcha.com&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Frontend changes&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;frontend-changes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#frontend-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To make sure captcha widget only talks to EU APIs you need to set a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/#attributes&#34; &gt;&lt;code&gt;data-puzzle-endpoint&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;https://api.eu.privatecaptcha.com/puzzle&lt;/code&gt; in the widget declaration:&lt;/p&gt;
+&lt;div class=&#34;hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain&#34;&gt;
+  &lt;div class=&#34;hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800&#34;&gt;&lt;button
+        class=&#34;hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white&#34;
+        role=&#34;tab&#34;
+        type=&#34;button&#34;
+        aria-controls=&#34;tabs-panel-0&#34; aria-selected=&#34;true&#34;  tabindex=&#34;0&#34;  data-state=&#34;selected&#34;&gt;Diff&lt;/button&gt;&lt;button
+        class=&#34;hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white&#34;
+        role=&#34;tab&#34;
+        type=&#34;button&#34;
+        aria-controls=&#34;tabs-panel-1&#34;&gt;Full code&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div
+  class=&#34;hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block&#34;
+  id=&#34;tabs-panel-0&#34;
+  role=&#34;tabpanel&#34; tabindex=&#34;0&#34;  data-state=&#34;selected&#34; &gt;&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;div class=&amp;#34;private-captcha&amp;#34; data-sitekey=&amp;#34;xyz&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+    data-puzzle-endpoint=&amp;#34;https://api.eu.privatecaptcha.com/puzzle&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;    ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div
+  class=&#34;hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block&#34;
+  id=&#34;tabs-panel-1&#34;
+  role=&#34;tabpanel&#34;&gt;&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;private-captcha&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;data-sitekey&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;xyz&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;data-puzzle-endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://api.eu.privatecaptcha.com/puzzle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;p class=&#34;hx-flex hx-items-center hx-font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx-inline-block hx-align-middle hx-mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;This does not affect the captcha widget Javascript snippet itself which loads from CDN points of presence over the world to decrease latency. No end-user PII is involved.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Backend changes&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;backend-changes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#backend-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When you verify the form submission on the server side, you need to make &lt;code&gt;POST&lt;/code&gt; request to the corresponding EU endpoint: &lt;code&gt;https://api.eu.privatecaptcha.com/siteverify&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -X POST \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &amp;#34;X-Api-Key: your-api-key-here&amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -d &amp;#34;solution&amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;-  https://api.privatecaptcha.com/siteverify
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+  https://api.eu.privatecaptcha.com/siteverify
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Implications&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;implications&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#implications&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The cost of EU isolation is the potential slowdown of the initial widget initialization, in case the end-user is accessing website geographically far from Europe. In most cases it should not be noticeable to the end-user as most operations happen strictly in the background.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>https://docs.privatecaptcha.com/docs/reference/testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.privatecaptcha.com/docs/reference/testing/</guid>
+      <description>
+        
+        
+        &lt;p&gt;There&amp;rsquo;re 2 main ways how you can keep using Private Captcha for testing of your local website:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;use a predefined (&amp;ldquo;dummy&amp;rdquo;) sitekey&lt;/li&gt;
+&lt;li&gt;allow localhost access for main property in Settings in portal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Testing with predefined sitekey&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;testing-with-predefined-sitekey&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#testing-with-predefined-sitekey&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a &amp;ldquo;dummy&amp;rdquo; sitekey (aka &amp;ldquo;test property&amp;rdquo;): &lt;code&gt;aaaaaaaabbbbccccddddeeeeeeeeeeee&lt;/code&gt;. This sitekey does not incur any actual solving &amp;ldquo;price&amp;rdquo; (in CPU cycles) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using &lt;code&gt;data-start-mode=&amp;quot;auto&amp;quot;&lt;/code&gt; (in which case parent &lt;code&gt;form&lt;/code&gt; needs to gain focus).&lt;/p&gt;
+&lt;h3&gt;Client side&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#client-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This is a sample captcha widget for testing:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;private-captcha&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;data-sitekey&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;p class=&#34;hx-flex hx-items-center hx-font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx-inline-block hx-align-middle hx-mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;Widget will show red &lt;code&gt;&amp;quot;testing&amp;quot;&lt;/code&gt; text to highlight that it&amp;rsquo;s not for production use once you click it.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;form class=&#34;pc-form&#34; style=&#34;&#34;&gt;
+    &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
+        data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
+        data-theme=&#34;light&#34;
+        data-styles=&#34;&#34;&gt;&lt;/div&gt;
+&lt;/form&gt;
+&lt;h3&gt;Server side&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;server-side&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#server-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;On the server side, once you are using &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/verify-api/&#34; &gt;Verify API&lt;/a&gt;, all responses will contain &lt;code&gt;{ &amp;quot;success&amp;quot;: true }&lt;/code&gt; (&amp;ldquo;verification passed&amp;rdquo;) and &lt;code&gt;{ &amp;quot;error-codes&amp;quot;: [&amp;quot;property-test&amp;quot;] }&lt;/code&gt; (non-empty error codes). Of course, you should be mainly checking &lt;code&gt;success&lt;/code&gt; field and &lt;code&gt;error-codes&lt;/code&gt; semantics is just to distinguish actual errors.&lt;/p&gt;
+&lt;h2&gt;Testing with localhost access&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;testing-with-localhost-access&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#testing-with-localhost-access&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-amber-200 hx-bg-amber-100 hx-text-amber-900 dark:hx-border-amber-200/30 dark:hx-bg-amber-900/30 dark:hx-text-amber-200&#34;&gt;
+  &lt;p class=&#34;hx-flex hx-items-center hx-font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx-inline-block hx-align-middle hx-mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;Captcha has a strict CORS policy and, by default, it will load &lt;strong&gt;only&lt;/strong&gt; on the domain configured during property creation. Subdomains and &lt;code&gt;localhost&lt;/code&gt; access needs to be explicitly allowed.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;In order to make captcha widget to load on &lt;code&gt;localhost&lt;/code&gt; domain, we need to allow it in the settings of the property you just created.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/e2e-local/allow-localhost.png&#34; alt=&#34;Allow localhost domain&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Worth noting that this is &lt;strong&gt;not required&lt;/strong&gt; if you use the &lt;a href=&#34;#testing-with-predefined-sitekey&#34; &gt;dummy sitekey&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Verify API</title>
       <link>https://docs.privatecaptcha.com/docs/reference/verify-api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -235,7 +403,7 @@
 &lt;h3&gt;Errors during successful verification&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;errors-during-successful-verification&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#errors-during-successful-verification&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;There are a couple of cases, when &lt;code&gt;success&lt;/code&gt; in response will be equal to &lt;code&gt;true&lt;/code&gt; (successful verification), but &lt;code&gt;error-codes&lt;/code&gt; will not be empty. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;When you&amp;rsquo;re using a test property, &lt;code&gt;error-codes&lt;/code&gt; will contain &lt;code&gt;property-test&lt;/code&gt; (but verification will succeed).&lt;/li&gt;
+&lt;li&gt;When you&amp;rsquo;re using a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/testing/&#34; &gt;test property&lt;/a&gt;, &lt;code&gt;error-codes&lt;/code&gt; will contain &lt;code&gt;property-test&lt;/code&gt; (but verification will succeed).&lt;/li&gt;
 &lt;li&gt;During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, &lt;code&gt;success&lt;/code&gt; in response is equal to &lt;code&gt;true&lt;/code&gt;, but &lt;code&gt;error-codes&lt;/code&gt; will contain &lt;code&gt;maintenance-mode&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;If you configured property to &lt;em&gt;&amp;ldquo;Accept repeated solutions&amp;rdquo;&lt;/em&gt; (during verification window), verification of repeated solution will cause &lt;code&gt;error-codes&lt;/code&gt; to contain &lt;code&gt;solution-verified-before&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -295,7 +463,7 @@
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;data-puzzle-endpoint&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;&#39;&#39;&lt;/code&gt; or your value&lt;/td&gt;
-          &lt;td&gt;Endpoint to get captcha puzzle (override in case of self-hosting).&lt;/td&gt;
+          &lt;td&gt;Endpoint to get captcha puzzle (override in case of self-hosting or &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/eu-isolation/&#34; &gt;EU-isolation&lt;/a&gt;).&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;data-display-mode&lt;/code&gt;&lt;/td&gt;
