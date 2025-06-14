@@ -10,7 +10,7 @@ There're 2 main ways how you can keep using Private Captcha for testing of your 
 
 ## Testing with predefined sitekey
 
-Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a "dummy" sitekey (aka "test property"): `aaaaaaaabbbbccccddddeeeeeeeeeeee`. This sitekey does not incur any actual solving "price" (in CPU cycles) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using `data-start-mode="auto"` (in which case parent `form` needs to gain focus).
+Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a "dummy" sitekey (aka "test property"): `aaaaaaaabbbbccccddddeeeeeeeeeeee`. This sitekey does not incur any actual solving "price" (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using `data-start-mode="auto"` (in which case parent `form` needs to gain focus).
 
 ### Client side
 
