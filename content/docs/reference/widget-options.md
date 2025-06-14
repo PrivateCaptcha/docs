@@ -21,7 +21,7 @@ Attribute | Values | Description
 `data-start-mode` | `auto`, `click` | In `auto` mode (default) captcha widget starts solving captcha whenever parent form receives focus.
 `data-debug` | `true` | When set to `true`, will show widget's internal state and print debug logs.
 `data-solution-field` | `private-captcha-solution`, your value | Name of the hidden form field with captcha solution that has to be verified on the server side.
-`data-puzzle-endpoint` | `''` or your value | Endpoint to get captcha puzzle (override in case of self-hosting).
+`data-puzzle-endpoint` | `''` or your value | Endpoint to get captcha puzzle (override in case of self-hosting or [EU-isolation]({{< relref "/docs/reference/eu-isolation.md" >}})).
 `data-display-mode` | `widget`, `popup`, `hidden` | How captcha widget will be shown. Defaults to `widget`. When hidden, you need to setup widget callbacks (see below).
 `data-lang` | `en` | Captcha widget localization.
 `data-theme` | `light`, `dark` | Widget theme (defaults to `light`)
