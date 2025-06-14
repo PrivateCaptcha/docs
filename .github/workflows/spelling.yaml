@@ -1,0 +1,57 @@
+name: Code style
+
+on:
+  workflow_dispatch:  # Manual trigger
+  schedule:
+    - cron: '0 2 26 * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: 'write'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Configure Git
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+
+    - name: Create branch
+      run: |
+        branch_name="cron/code-style-$(date +%Y%m%d-%H%M%S)"
+        git checkout -b $branch_name
+        echo "BRANCH_NAME=$branch_name" >> $GITHUB_ENV
+
+    - uses: sobolevn/misspell-fixer-action@master
+      with:
+        options: '-rnRVD ./content/'
+
+    - name: Check for changes
+      env:
+        GH_TOKEN: ${{ secrets. GITHUB_TOKEN }}
+      run: |
+        if [ -z "$(git status --porcelain)" ]; then
+          echo "No changes to commit"
+          gh run cancel ${{ github.run_id }}
+          gh run watch ${{ github.run_id }}
+        fi
+
+    - name: Commit changes
+      run: |
+        git add -u .
+        git commit -m "Fix spelling issues"
+
+    - name: Push changes
+      run: |
+        git push origin $BRANCH_NAME
+
+    - name: Create pull request
+      run: gh pr create -B main -H $BRANCH_NAME --title 'Fix spelling issues' --body 'Created by Github action'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
