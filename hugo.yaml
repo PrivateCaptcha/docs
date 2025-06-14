@@ -49,6 +49,14 @@ menu:
       url: "https://privatecaptcha.com"
       params:
         icon: globe-alt
+  sidebar:
+    - name: More
+      params:
+        type: separator
+      weight: 1
+    - name: "Status ↗"
+      url: "https://status.privatecaptcha.com"
+      weight: 2
 
 params:
   displayUpdatedDate: true
@@ -59,14 +67,14 @@ params:
     width: wide
 
   navbar:
-    displayTitle: true
+    displayTitle: false
     displayLogo: true
     logo:
-      path: images/pc-icon-dark.svg
-      dark: images/pc-icon-light.svg
+      path: images/pc-logo-dark.svg
+      dark: images/pc-logo-light.svg
       link: /
-      width: 30
-      height: 20
+      width: 134
+      height: 40
 
   footer:
     displayCopyright: true

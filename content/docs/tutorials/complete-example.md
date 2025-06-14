@@ -1,8 +1,6 @@
 ---
 title: Complete example
 type: docs
-#prev: ''
-next: 'invisible-captcha'
 ---
 
 In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer.

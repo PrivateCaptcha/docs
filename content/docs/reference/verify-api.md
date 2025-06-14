@@ -1,8 +1,6 @@
 ---
 title: Verify API
 type: docs
-prev: captcha-object
-#next: docs/folder/
 ---
 
 After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by `data-solution-field` [attribute]({{< relref "/docs/reference/widget-options.md" >}})).
@@ -75,6 +73,6 @@ Error code | Description
 
 There are a couple of cases, when `success` in response will be equal to `true` (successful verification), but `error-codes` will not be empty. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):
 
-- When you're using a test property, `error-codes` will contain `property-test` (but verification will succeed).
+- When you're using a [test property]({{< relref "/docs/reference/testing.md" >}}), `error-codes` will contain `property-test` (but verification will succeed).
 - During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, `success` in response is equal to `true`, but `error-codes` will contain `maintenance-mode`.
 - If you configured property to _"Accept repeated solutions"_ (during verification window), verification of repeated solution will cause `error-codes` to contain `solution-verified-before`.

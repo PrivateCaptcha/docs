@@ -1,8 +1,6 @@
 ---
 title: Widget options
 type: docs
-#prev: /
-next: captcha-object
 captcha_scripts: true
 ---
 

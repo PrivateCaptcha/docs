@@ -1,8 +1,6 @@
 ---
 title: Captcha object
 type: docs
-prev: widget-options
-next: verify-api
 ---
 
 Captcha object is available as the `window.privateCaptcha.autoWidget` or as attached via `data-store-variable` [attribute]({{< relref "/docs/reference/widget-options.md#data-store-variable" >}}). It is also passed as the only parameter into all of the [callbacks]({{< relref "/docs/reference/widget-options.md#callbacks" >}}).
