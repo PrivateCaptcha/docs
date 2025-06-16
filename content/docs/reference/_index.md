@@ -5,6 +5,9 @@ next: widget-options
 
 Reference of API and parameters that you can use.
 
+> [!NOTE]
+> API is also available [here](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/PrivateCaptcha/PrivateCaptcha/refs/heads/main/docs/openapi.yaml) as Swagger / OpenAPI definition.
+
 <!--more-->
 
 {{< cards >}}
