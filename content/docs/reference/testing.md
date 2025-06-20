@@ -29,6 +29,26 @@ This is a sample captcha widget for testing:
 
 On the server side, once you are using [Verify API]({{< relref "/docs/reference/verify-api.md" >}}), all responses will contain `{ "success": true }` ("verification passed") and `{ "error-codes": ["property-test"] }` (non-empty error codes). Of course, you should be mainly checking `success` field and `error-codes` semantics is just to distinguish actual errors.
 
+{{% details title="Sending verify request" closed="true" %}}
+
+This is a sample payload for test property, that should always return "success" (please note this is for illustration purposes **only** as payload can change)
+
+```bash
+curl \
+  -X POST \
+  -H "X-Api-Key: your-api-key" \
+  -d "Aaqqqqq7u8zM3d3u7u7u7u4AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=.AQCBnM2czBK6rlq+l06lXBtIDQH/PFk=.AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" \
+  https://api.{{<domain>}}/siteverify
+```
+
+And if everything is set up correctly, the output will be 
+
+```json
+{"success":true,"error-codes":["property-test"],"challenge_ts":"0001-01-01T00:00:00Z","hostname":""}
+```
+
+{{% /details %}}
+
 ## Testing with localhost access
 
 > [!WARNING]
