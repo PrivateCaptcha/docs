@@ -63,8 +63,9 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;PC_USER_FINGERPRINT_KEY&lt;/code&gt; you can generate using &lt;code&gt;openssl rand -hex 64&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;PC_ADMIN_EMAIL&lt;/code&gt; will be used to create actual admin account (see note for local use below)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PC_RATE_LIMIT_HEADER&lt;/code&gt; should be the header containing actual client IP (comes from your CDN or reverse proxy)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;You can find full documentation on environment variables &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/configuration/&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can find full documentation on these and other &lt;em&gt;required&lt;/em&gt; environment variables &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/configuration/&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; open&gt;
   &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
     &lt;strong class=&#34;hx-text-lg&#34;&gt;Tips for local use&lt;/strong&gt;
