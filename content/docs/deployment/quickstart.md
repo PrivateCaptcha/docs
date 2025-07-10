@@ -27,8 +27,9 @@ Some notes on environment variables:
 
 - `PC_USER_FINGERPRINT_KEY` you can generate using `openssl rand -hex 64`
 - `PC_ADMIN_EMAIL` will be used to create actual admin account (see note for local use below)
+- `PC_RATE_LIMIT_HEADER` should be the header containing actual client IP (comes from your CDN or reverse proxy)
 
-You can find full documentation on environment variables [here]({{< relref "/docs/deployment/configuration.md" >}}).
+You can find full documentation on these and other _required_ environment variables [here]({{< relref "/docs/deployment/configuration.md" >}}).
 
 {{% details title="Tips for local use" closed="false" %}}
 
