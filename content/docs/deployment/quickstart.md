@@ -1,5 +1,13 @@
 # Quick start
 
+## Prerequisites
+
+- Docker [installed](https://docs.docker.com/engine/install/)
+- (optional) Reverse proxy like Caddy or Nginx
+- Domain name `yourdomain.com` (for local-only installs, use `privatecaptcha.local`)
+- Transactional email provider with SMTP credentials (for production)
+- At least 2GB of RAM
+
 ## 1. Clone the self-hosting repo
 
 [Self-hosting repository](https://github.com/PrivateCaptcha/self-hosting) contains a Docker-based quickstart template.
@@ -38,7 +46,7 @@ To run Private Captcha only locally, use `privatecaptcha.local:8080` instead of 
 
 ## 3. (optional) Expose port
 
-If you want to use use Docker networking directly (which is not recommended) instead of reverse proxy like Nginx or Caddy, you can create a `compose.override.yml` file like this:
+By default Private Captcha is listening on `http://localhost:8080`. If you want to use Docker networking _for production_ directly (which is not recommended) instead of reverse proxy like Nginx or Caddy, you can create a `compose.override.yml` file like this:
 
 ```yaml
 services:
@@ -50,3 +58,5 @@ services:
 ## 4. Navigate to the Portal
 
 Now you can open `$PC_PORTAL_BASE_URL` (e.g. `portal.yourdomain.com` or `http://portal.privatecaptcha.local`) in browser and log in.
+
+> NOTE: For local-only use, when asked for a verification code, you might need to find it in the logs of `privatecaptcha` container. Search for "two factor code".

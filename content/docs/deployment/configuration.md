@@ -29,7 +29,7 @@ Variable | Example | Description
 `SMTP_PASSWORD` | `qwerty12345` | Password for `SMTP_USERNAME`.
 
 > [!NOTE]
-Instead of `PC_POSTGRES` as connection string, you **can** specify `PC_POSTGRES_HOST`, `PC_POSTGRES_DB`, `PC_POSTGRES_USER`, `PC_POSTGRES_PASSWORD` separately.
+Instead of `PC_POSTGRES` as a connection string, you **can** specify `PC_POSTGRES_HOST`, `PC_POSTGRES_DB`, `PC_POSTGRES_USER`, `PC_POSTGRES_PASSWORD` separately.
 
 ### Optional
 
