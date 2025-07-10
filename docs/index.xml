@@ -23,7 +23,15 @@
       <description>
         
         
-        &lt;h1&gt;Quick start&lt;/h1&gt;&lt;h2&gt;1. Clone the self-hosting repo&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-clone-the-self-hosting-repo&#34;&gt;&lt;/span&gt;
+        &lt;h1&gt;Quick start&lt;/h1&gt;&lt;h2&gt;Prerequisites&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;prerequisites&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#prerequisites&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Docker &lt;a href=&#34;https://docs.docker.com/engine/install/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;installed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(optional) Reverse proxy like Caddy or Nginx&lt;/li&gt;
+&lt;li&gt;Domain name &lt;code&gt;yourdomain.com&lt;/code&gt; (for local-only installs, use &lt;code&gt;privatecaptcha.local&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Transactional email provider with SMTP credentials (for production)&lt;/li&gt;
+&lt;li&gt;At least 2GB of RAM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;1. Clone the self-hosting repo&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-clone-the-self-hosting-repo&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#1-clone-the-self-hosting-repo&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/PrivateCaptcha/self-hosting&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Self-hosting repository&lt;/a&gt; contains a Docker-based quickstart template.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
@@ -85,7 +93,7 @@ title=&amp;ldquo;Copy code&amp;rdquo;&lt;/p&gt;
   &lt;/div&gt;
 &lt;/details&gt;
 &lt;h2&gt;3. (optional) Expose port&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-optional-expose-port&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#3-optional-expose-port&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;If you want to use use Docker networking directly (which is not recommended) instead of reverse proxy like Nginx or Caddy, you can create a &lt;code&gt;compose.override.yml&lt;/code&gt; file like this:&lt;/p&gt;
+    &lt;a href=&#34;#3-optional-expose-port&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;By default Private Captcha is listening on &lt;code&gt;http://localhost:8080&lt;/code&gt;. If you want to use Docker networking &lt;em&gt;for production&lt;/em&gt; directly (which is not recommended) instead of reverse proxy like Nginx or Caddy, you can create a &lt;code&gt;compose.override.yml&lt;/code&gt; file like this:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -103,6 +111,9 @@ title=&amp;ldquo;Copy code&amp;rdquo;&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2&gt;4. Navigate to the Portal&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;4-navigate-to-the-portal&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#4-navigate-to-the-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Now you can open &lt;code&gt;$PC_PORTAL_BASE_URL&lt;/code&gt; (e.g. &lt;code&gt;portal.yourdomain.com&lt;/code&gt; or &lt;code&gt;http://portal.privatecaptcha.local&lt;/code&gt;) in browser and log in.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;NOTE: For local-only use, when asked for a verification code, you might need to find it in the logs of &lt;code&gt;privatecaptcha&lt;/code&gt; container. Search for &amp;ldquo;two factor code&amp;rdquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
 
       </description>
     </item>
@@ -797,7 +808,7 @@ title=&amp;ldquo;Copy code&amp;rdquo;&lt;/p&gt;
   &lt;p class=&#34;hx-flex hx-items-center hx-font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx-inline-block hx-align-middle hx-mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
 
   &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
-    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;Instead of &lt;code&gt;PC_POSTGRES&lt;/code&gt; as connection string, you &lt;strong&gt;can&lt;/strong&gt; specify &lt;code&gt;PC_POSTGRES_HOST&lt;/code&gt;, &lt;code&gt;PC_POSTGRES_DB&lt;/code&gt;, &lt;code&gt;PC_POSTGRES_USER&lt;/code&gt;, &lt;code&gt;PC_POSTGRES_PASSWORD&lt;/code&gt; separately.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;Instead of &lt;code&gt;PC_POSTGRES&lt;/code&gt; as a connection string, you &lt;strong&gt;can&lt;/strong&gt; specify &lt;code&gt;PC_POSTGRES_HOST&lt;/code&gt;, &lt;code&gt;PC_POSTGRES_DB&lt;/code&gt;, &lt;code&gt;PC_POSTGRES_USER&lt;/code&gt;, &lt;code&gt;PC_POSTGRES_PASSWORD&lt;/code&gt; separately.&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;h3&gt;Optional&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;optional&#34;&gt;&lt;/span&gt;

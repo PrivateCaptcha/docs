@@ -11,11 +11,19 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Private Captcha</title>
-  <meta name="description" content="Quick start1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.
+  <meta name="description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.
 git clone https://github.com/PrivateCaptcha/self-hosting.git private-captcha cd private-captcha 2. Create .env file cp .env.example .env Some notes on environment variables:" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/deployment/quickstart/" itemprop="url" />
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="Quick start1. Clone the self-hosting repo
+<meta property="og:description" content="Quick startPrerequisites
+    
+Docker installed
+(optional) Reverse proxy like Caddy or Nginx
+Domain name yourdomain.com (for local-only installs, use privatecaptcha.local)
+Transactional email provider with SMTP credentials (for production)
+At least 2GB of RAM
+
+1. Clone the self-hosting repo
     Self-hosting repository contains a Docker-based quickstart template.
 
 
@@ -41,16 +49,16 @@ Some notes on environment variables:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/deployment/quickstart/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-07-09T17:48:52+03:00" />
+<meta property="article:modified_time" content="2025-07-10T08:59:32+03:00" />
 
   <meta itemprop="name" content="Private Captcha">
-  <meta itemprop="description" content="Quick start1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.
+  <meta itemprop="description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.
 git clone https://github.com/PrivateCaptcha/self-hosting.git private-captcha cd private-captcha 2. Create .env file cp .env.example .env Some notes on environment variables:">
-  <meta itemprop="dateModified" content="2025-07-09T17:48:52+03:00">
-  <meta itemprop="wordCount" content="217">
+  <meta itemprop="dateModified" content="2025-07-10T08:59:32+03:00">
+  <meta itemprop="wordCount" content="284">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Private Captcha">
-  <meta name="twitter:description" content="Quick start1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.
+  <meta name="twitter:description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.
 git clone https://github.com/PrivateCaptcha/self-hosting.git private-captcha cd private-captcha 2. Create .env file cp .env.example .env Some notes on environment variables:">
 
     <link rel="preload" href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" as="style" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
@@ -215,6 +223,12 @@ git clone https://github.com/PrivateCaptcha/self-hosting.git private-captcha cd 
     </a>
   
     <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#prerequisites"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Prerequisites</a>
+            </li>
+          <li>
               <a
                 href="#1-clone-the-self-hosting-repo"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
@@ -478,6 +492,10 @@ git clone https://github.com/PrivateCaptcha/self-hosting.git private-captcha cd 
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#prerequisites">Prerequisites
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#1-clone-the-self-hosting-repo">1. Clone the self-hosting repo
         </a>
       </li>
@@ -519,7 +537,15 @@ git clone https://github.com/PrivateCaptcha/self-hosting.git private-captcha cd 
 
         <div class="content">
           
-          <h1>Quick start</h1><h2>1. Clone the self-hosting repo<span class="hx-absolute -hx-mt-20" id="1-clone-the-self-hosting-repo"></span>
+          <h1>Quick start</h1><h2>Prerequisites<span class="hx-absolute -hx-mt-20" id="prerequisites"></span>
+    <a href="#prerequisites" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Docker <a href="https://docs.docker.com/engine/install/" target="_blank" rel="noopener">installed</a></li>
+<li>(optional) Reverse proxy like Caddy or Nginx</li>
+<li>Domain name <code>yourdomain.com</code> (for local-only installs, use <code>privatecaptcha.local</code>)</li>
+<li>Transactional email provider with SMTP credentials (for production)</li>
+<li>At least 2GB of RAM</li>
+</ul>
+<h2>1. Clone the self-hosting repo<span class="hx-absolute -hx-mt-20" id="1-clone-the-self-hosting-repo"></span>
     <a href="#1-clone-the-self-hosting-repo" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><a href="https://github.com/PrivateCaptcha/self-hosting" target="_blank" rel="noopener">Self-hosting repository</a> contains a Docker-based quickstart template.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
@@ -581,7 +607,7 @@ title=&ldquo;Copy code&rdquo;</p>
   </div>
 </details>
 <h2>3. (optional) Expose port<span class="hx-absolute -hx-mt-20" id="3-optional-expose-port"></span>
-    <a href="#3-optional-expose-port" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If you want to use use Docker networking directly (which is not recommended) instead of reverse proxy like Nginx or Caddy, you can create a <code>compose.override.yml</code> file like this:</p>
+    <a href="#3-optional-expose-port" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>By default Private Captcha is listening on <code>http://localhost:8080</code>. If you want to use Docker networking <em>for production</em> directly (which is not recommended) instead of reverse proxy like Nginx or Caddy, you can create a <code>compose.override.yml</code> file like this:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
@@ -599,10 +625,13 @@ title=&ldquo;Copy code&rdquo;</p>
 </div>
 <h2>4. Navigate to the Portal<span class="hx-absolute -hx-mt-20" id="4-navigate-to-the-portal"></span>
     <a href="#4-navigate-to-the-portal" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Now you can open <code>$PC_PORTAL_BASE_URL</code> (e.g. <code>portal.yourdomain.com</code> or <code>http://portal.privatecaptcha.local</code>) in browser and log in.</p>
+<blockquote>
+  <p>NOTE: For local-only use, when asked for a verification code, you might need to find it in the logs of <code>privatecaptcha</code> container. Search for &ldquo;two factor code&rdquo;.</p>
+</blockquote>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-09T17:48:52.000Z">July 9, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-10T08:59:32.000Z">July 10, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/deployment/configuration/"
         title="Configuration"
