@@ -31,11 +31,11 @@ Some notes on environment variables:
 
 You can find full documentation on these and other _required_ environment variables [here]({{< relref "/docs/deployment/configuration.md" >}}).
 
-{{% details title="Tips for local use" closed="false" %}}
+{{% details title="Tips for local use" closed="true" %}}
 
 To run Private Captcha only locally, use `privatecaptcha.local:8080` instead of `yourdomain.com`. To make it work, you need to add a few lines to `/etc/hosts` file:
 
-```
+```bash
 127.0.0.1       portal.privatecaptcha.local
 127.0.0.1       api.privatecaptcha.local
 127.0.0.1       cdn.privatecaptcha.local
