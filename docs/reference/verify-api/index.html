@@ -27,14 +27,14 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/verify-api/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-06-16T17:32:59+03:00" />
+<meta property="article:modified_time" content="2025-07-18T20:23:53+03:00" />
 
   <meta itemprop="name" content="Verify API">
   <meta itemprop="description" content="Note
 API is also available here as Swagger / OpenAPI definition.
 After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute).">
-  <meta itemprop="dateModified" content="2025-06-16T17:32:59+03:00">
-  <meta itemprop="wordCount" content="391">
+  <meta itemprop="dateModified" content="2025-07-18T20:23:53+03:00">
+  <meta itemprop="wordCount" content="427">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Verify API">
   <meta name="twitter:description" content="Note
@@ -584,33 +584,14 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
 </div>
 <p>When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.</p>
 <h2>Request<span class="hx-absolute -hx-mt-20" id="request"></span>
-    <a href="#request" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To verify solutions you need to make a <code>POST</code> request to <code>https://api.privatecaptcha.com/siteverify</code> with the body of the request being solution field&rsquo;s contents from your form.</p>
+    <a href="#request" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To verify solutions you need to make a <code>POST</code> request to <code>https://api.privatecaptcha.com/verify</code> with the body of the request being solution field&rsquo;s contents from your form.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># an example how that will look like with curl</span>
 </span></span><span class="line"><span class="cl">curl -X POST <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;X-Api-Key: your-api-key-here&#34;</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  -d <span class="s2">&#34;solution&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  https://api.privatecaptcha.com/siteverify</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<h2>Response<span class="hx-absolute -hx-mt-20" id="response"></span>
-    <a href="#response" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Here&rsquo;s how successful response from <code>/siteverify</code> endpoint looks like:</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;success&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;challenge_ts&#34;</span><span class="p">:</span> <span class="s2">&#34;2025-01-13T16:17:27+00:00&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;hostname&#34;</span><span class="p">:</span> <span class="s2">&#34;privatecaptcha.com&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;error-codes&#34;</span><span class="p">:</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  https://api.privatecaptcha.com/verify</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -624,8 +605,27 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
   <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p><code>/siteverify</code> endpoint returns <a href="https://developers.google.com/recaptcha/docs/verify" target="_blank" rel="noopener">reCAPTCHA-compatible</a> response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header <code>X-Captcha-Compat-Version: rcV3</code>.</p></div>
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>You can use <a href="https://developers.google.com/recaptcha/docs/verify" target="_blank" rel="noopener">reCAPTCHA-compatible</a> <code>/siteverify</code> endpoint instead. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header <code>X-Captcha-Compat-Version: rcV3</code>.</p></div>
   </div>
+</div>
+<h2>Response<span class="hx-absolute -hx-mt-20" id="response"></span>
+    <a href="#response" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Here&rsquo;s how successful response from <code>/verify</code> endpoint looks like:</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;success&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;timestamp&#34;</span><span class="p">:</span> <span class="s2">&#34;2025-01-13T16:17:27+00:00&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;origin&#34;</span><span class="p">:</span> <span class="s2">&#34;privatecaptcha.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
 </div>
 <h3>Verifying captcha<span class="hx-absolute -hx-mt-20" id="verifying-captcha"></span>
     <a href="#verifying-captcha" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Verification status is defined by a single field only: <code>success</code> (boolean) must be equal to <code>true</code>.</p>
@@ -634,10 +634,12 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
   <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>If <code>error-codes</code> is not empty, it does <strong>not</strong> mean that verification failed. See details <a href="#errors-during-successful-verification" >below</a>.</p></div>
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>If <code>code</code> is not zero, it does <strong>not</strong> mean that verification failed. See details <a href="#errors-during-successful-verification" >below</a>.</p></div>
   </div>
 </div>
-<p><code>error-codes</code> array can contain one or more of error codes:</p>
+<p>Default <code>/verify</code> endpoint should be used with one of the <a href="/docs/integrations/" >integration SDKs</a> which allow you to get a string description of the numeric error code.</p>
+<p>reCAPTCHA-compatible <code>/siteverify</code> endpoint will contain the string version in <code>error-codes</code> field.</p>
+<p><code>code</code> can be one of the error codes:</p>
 <table>
   <thead>
       <tr>
@@ -697,16 +699,16 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
   </tbody>
 </table>
 <h3>Errors during successful verification<span class="hx-absolute -hx-mt-20" id="errors-during-successful-verification"></span>
-    <a href="#errors-during-successful-verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>There are a couple of cases, when <code>success</code> in response will be equal to <code>true</code> (successful verification), but <code>error-codes</code> will not be empty. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):</p>
+    <a href="#errors-during-successful-verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>There are a couple of cases, when <code>success</code> in response will be equal to <code>true</code> (successful verification), but <code>code</code> will not be zero. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):</p>
 <ul>
-<li>When you&rsquo;re using a <a href="/docs/reference/testing/" >test property</a>, <code>error-codes</code> will contain <code>property-test</code> (but verification will succeed).</li>
-<li>During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, <code>success</code> in response is equal to <code>true</code>, but <code>error-codes</code> will contain <code>maintenance-mode</code>.</li>
-<li>If you configured property to <em>&ldquo;Accept repeated solutions&rdquo;</em> (during verification window), verification of repeated solution will cause <code>error-codes</code> to contain <code>solution-verified-before</code>.</li>
+<li>When you&rsquo;re using a <a href="/docs/reference/testing/" >test property</a>, <code>code</code> will be <code>property-test</code> (but verification will succeed).</li>
+<li>During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, <code>success</code> in response is equal to <code>true</code>, but <code>code</code> will be <code>maintenance-mode</code>.</li>
+<li>If you configured property to <em>&ldquo;Accept repeated solutions&rdquo;</em> (during verification window), verification of repeated solution will cause <code>code</code> to be <code>solution-verified-before</code>.</li>
 </ul>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-06-16T17:32:59.000Z">June 16, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-18T20:23:53.000Z">July 18, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/reference/testing/"
         title="Testing"

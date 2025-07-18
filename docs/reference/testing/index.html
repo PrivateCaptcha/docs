@@ -25,13 +25,13 @@ Testing with predefined sitekey
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/testing/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-07-14T13:33:44+03:00" />
+<meta property="article:modified_time" content="2025-07-18T20:23:53+03:00" />
 
   <meta itemprop="name" content="Testing">
   <meta itemprop="description" content="There’re 2 main ways how you can keep using Private Captcha for testing of your local website:
 use a predefined (“dummy”) sitekey allow localhost access for main property in Settings in portal Testing with predefined sitekey Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a “dummy” sitekey (aka “test property”): aaaaaaaabbbbccccddddeeeeeeeeeeee. This sitekey does not incur any actual solving “price” (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using data-start-mode=&#34;auto&#34; (in which case parent form needs to gain focus).">
-  <meta itemprop="dateModified" content="2025-07-14T13:33:44+03:00">
-  <meta itemprop="wordCount" content="320">
+  <meta itemprop="dateModified" content="2025-07-18T20:23:53+03:00">
+  <meta itemprop="wordCount" content="327">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Testing">
   <meta name="twitter:description" content="There’re 2 main ways how you can keep using Private Captcha for testing of your local website:
@@ -617,7 +617,7 @@ function invisibleFinished(widget) {
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  -X POST <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;X-Api-Key: your-api-key&#34;</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  -d <span class="s2">&#34;AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.Aaqqqqq7u8zM3d3u7u7u7u4AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=.AQCBnM2czBK6rlq+l06lXBtIDQH/PFk=&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  https://api.privatecaptcha.com/siteverify</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  https://api.privatecaptcha.com/verify</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -629,7 +629,7 @@ function invisibleFinished(widget) {
 </div>
 <p>And if everything is set up correctly, the output will be</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;success&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&#34;error-codes&#34;</span><span class="p">:[</span><span class="s2">&#34;property-test&#34;</span><span class="p">],</span><span class="nt">&#34;challenge_ts&#34;</span><span class="p">:</span><span class="s2">&#34;0001-01-01T00:00:00Z&#34;</span><span class="p">,</span><span class="nt">&#34;hostname&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;success&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&#34;code&#34;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="nt">&#34;timestamp&#34;</span><span class="p">:</span><span class="s2">&#34;0001-01-01T00:00:00Z&#34;</span><span class="p">,</span><span class="nt">&#34;origin&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -639,6 +639,7 @@ function invisibleFinished(widget) {
   </button>
 </div>
 </div>
+<p>Code <code>10</code> corresponds to <code>&quot;property-test&quot;</code> error description.</p>
   </div>
 </details>
 <h2>Testing with localhost access<span class="hx-absolute -hx-mt-20" id="testing-with-localhost-access"></span>
@@ -655,7 +656,7 @@ function invisibleFinished(widget) {
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-14T13:33:44.000Z">July 14, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-18T20:23:53.000Z">July 18, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/reference/eu-isolation/"
         title="EU Isolation"

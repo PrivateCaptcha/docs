@@ -48,12 +48,12 @@ Create a simple page with a form element in the middle of the page." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/complete-example/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-07-18T10:30:11+03:00" />
+<meta property="article:modified_time" content="2025-07-18T20:23:53+03:00" />
 
   <meta itemprop="name" content="Complete example">
   <meta itemprop="description" content="In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer.
 Basic webpage and server ./ index.html main.go Create a simple page with a form element in the middle of the page.">
-  <meta itemprop="dateModified" content="2025-07-18T10:30:11+03:00">
+  <meta itemprop="dateModified" content="2025-07-18T20:23:53+03:00">
   <meta itemprop="wordCount" content="1247">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Complete example">
@@ -924,7 +924,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
   </button>
 </div>
 </div>
-<p>To <a href="/docs/reference/verify-api/" >verify solution</a> we need to send a <code>POST</code> request with the contents of this field to <code>/siteverify</code> endpoint and check the result. This is done in the server-side handler of the form.</p>
+<p>To <a href="/docs/reference/verify-api/" >verify solution</a> we need to send a <code>POST</code> request with the contents of this field to <code>/verify</code> endpoint and check the result. This is done in the server-side handler of the form.</p>
 <div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-amber-200 hx-bg-amber-100 hx-text-amber-900 dark:hx-border-amber-200/30 dark:hx-bg-amber-900/30 dark:hx-text-amber-200">
   <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
 
@@ -960,7 +960,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 </span></span></span><span class="line"><span class="cl"><span class="gu"></span> )
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"><span class="gi">+func checkSolution(solution, apiKey string) error {
-</span></span></span><span class="line"><span class="cl"><span class="gi">+       req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/siteverify&#34;, strings.NewReader(solution))
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       req, err := http.NewRequest(&#34;POST&#34;, &#34;https://api.privatecaptcha.com/verify&#34;, strings.NewReader(solution))
 </span></span></span><span class="line"><span class="cl"><span class="gi">+       if err != nil {
 </span></span></span><span class="line"><span class="cl"><span class="gi">+               return err
 </span></span></span><span class="line"><span class="cl"><span class="gi">+       }
@@ -1029,7 +1029,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">checkSolution</span><span class="p">(</span><span class="nx">solution</span><span class="p">,</span> <span class="nx">apiKey</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;POST&#34;</span><span class="p">,</span> <span class="s">&#34;https://api.privatecaptcha.com/siteverify&#34;</span><span class="p">,</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">solution</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;POST&#34;</span><span class="p">,</span> <span class="s">&#34;https://api.privatecaptcha.com/verify&#34;</span><span class="p">,</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">solution</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nx">err</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
@@ -1090,7 +1090,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 <p>And, if you print verify response to the console, you will get this json:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;success&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&#34;challenge_ts&#34;</span><span class="p">:</span><span class="s2">&#34;2025-01-14T11:19:34Z&#34;</span><span class="p">,</span><span class="nt">&#34;hostname&#34;</span><span class="p">:</span><span class="s2">&#34;27ca-193-138-7-216.ngrok-free.app&#34;</span><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;success&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&#34;code&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;timestamp&#34;</span><span class="p">:</span><span class="s2">&#34;2025-01-14T11:19:34Z&#34;</span><span class="p">,</span><span class="nt">&#34;origin&#34;</span><span class="p">:</span><span class="s2">&#34;27ca-193-138-7-216.ngrok-free.app&#34;</span><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -1118,7 +1118,7 @@ Basic webpage and server ./ index.html main.go Create a simple page with a form 
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-18T10:30:11.000Z">July 18, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-18T20:23:53.000Z">July 18, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/tutorials/invisible-captcha/"
         title="Invisible captcha"

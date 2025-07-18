@@ -110,9 +110,9 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;To achieve this you need to make 2 changes: one on the frontend and second on the backend.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;TL;DR;&lt;/strong&gt; version is that you need to replace in your code &lt;code&gt;api.privatecaptcha.com&lt;/code&gt; to &lt;code&gt;api.eu.privatecaptcha.com&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TL;DR;&lt;/strong&gt; version is that you need to replace in your code &lt;code&gt;api.privatecaptcha.com&lt;/code&gt; to &lt;code&gt;api.eu.privatecaptcha.com&lt;/code&gt; and set &lt;code&gt;data-eu=&amp;quot;true&amp;quot;&lt;/code&gt; in widget.&lt;/p&gt;
 &lt;h2&gt;Frontend changes&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;frontend-changes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#frontend-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To make sure captcha widget only talks to EU APIs you need to set a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/#attributes&#34; &gt;&lt;code&gt;data-puzzle-endpoint&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;https://api.eu.privatecaptcha.com/puzzle&lt;/code&gt; in the widget declaration:&lt;/p&gt;
+    &lt;a href=&#34;#frontend-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To make sure captcha widget only talks to EU APIs you need to set a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/#attributes&#34; &gt;&lt;code&gt;data-eu&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;true&lt;/code&gt; in the widget declaration:&lt;/p&gt;
 &lt;div class=&#34;hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain&#34;&gt;
   &lt;div class=&#34;hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800&#34;&gt;&lt;button
         class=&#34;hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white&#34;
@@ -132,7 +132,7 @@
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;div class=&amp;#34;private-captcha&amp;#34; data-sitekey=&amp;#34;xyz&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+    data-puzzle-endpoint=&amp;#34;https://api.eu.privatecaptcha.com/puzzle&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+    data-eu=&amp;#34;true&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;    ...
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/div&amp;gt;
@@ -154,7 +154,7 @@
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;private-captcha&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;data-sitekey&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;xyz&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;data-puzzle-endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://api.eu.privatecaptcha.com/puzzle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;data-eu&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
@@ -175,7 +175,63 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2&gt;Backend changes&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;backend-changes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#backend-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When you verify the form submission on the server side, you need to make &lt;code&gt;POST&lt;/code&gt; request to the corresponding EU endpoint: &lt;code&gt;https://api.eu.privatecaptcha.com/siteverify&lt;/code&gt;.&lt;/p&gt;
+    &lt;a href=&#34;#backend-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;SDKs&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;sdks&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#sdks&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;When you&amp;rsquo;re using one of the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34; &gt;integration SDKs&lt;/a&gt; you need to specify EU isolation during configuration.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s an example for Go:&lt;/p&gt;
+&lt;div class=&#34;hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain&#34;&gt;
+  &lt;div class=&#34;hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800&#34;&gt;&lt;button
+        class=&#34;hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white&#34;
+        role=&#34;tab&#34;
+        type=&#34;button&#34;
+        aria-controls=&#34;tabs-panel-0&#34; aria-selected=&#34;true&#34;  tabindex=&#34;0&#34;  data-state=&#34;selected&#34;&gt;Diff&lt;/button&gt;&lt;button
+        class=&#34;hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white&#34;
+        role=&#34;tab&#34;
+        type=&#34;button&#34;
+        aria-controls=&#34;tabs-panel-1&#34;&gt;Full code&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div
+  class=&#34;hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block&#34;
+  id=&#34;tabs-panel-0&#34;
+  role=&#34;tabpanel&#34; tabindex=&#34;0&#34;  data-state=&#34;selected&#34; &gt;&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;client, err := privatecaptcha.NewClient(privatecaptcha.Configuration{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    APIKey: &amp;#34;pc_abcdef&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+   Domain: privatecaptcha.EUDomain,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;})
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div
+  class=&#34;hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block&#34;
+  id=&#34;tabs-panel-1&#34;
+  role=&#34;tabpanel&#34;&gt;&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;client&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;privatecaptcha&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;NewClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;privatecaptcha&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Configuration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;APIKey&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;pc_abcdef&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;Domain&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;privatecaptcha&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;EUDomain&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;reCAPTCHA-compatible API&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;recaptcha-compatible-api&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#recaptcha-compatible-api&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;When you verify the form submission on the server side, you need to make &lt;code&gt;POST&lt;/code&gt; request to the corresponding EU endpoint: &lt;code&gt;https://api.eu.privatecaptcha.com/siteverify&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -X POST \
@@ -256,7 +312,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -X POST &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;X-Api-Key: your-api-key&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.Aaqqqqq7u8zM3d3u7u7u7u4AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=.AQCBnM2czBK6rlq+l06lXBtIDQH/PFk=&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  https://api.privatecaptcha.com/siteverify&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  https://api.privatecaptcha.com/verify&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
     title=&#34;Copy code&#34;
@@ -268,7 +324,7 @@
 &lt;/div&gt;
 &lt;p&gt;And if everything is set up correctly, the output will be&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;success&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;error-codes&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;property-test&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;challenge_ts&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0001-01-01T00:00:00Z&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;hostname&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;success&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;timestamp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0001-01-01T00:00:00Z&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;origin&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
     title=&#34;Copy code&#34;
@@ -278,6 +334,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;p&gt;Code &lt;code&gt;10&lt;/code&gt; corresponds to &lt;code&gt;&amp;quot;property-test&amp;quot;&lt;/code&gt; error description.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/details&gt;
 &lt;h2&gt;Testing with localhost access&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;testing-with-localhost-access&#34;&gt;&lt;/span&gt;
@@ -330,33 +387,14 @@
 &lt;/div&gt;
 &lt;p&gt;When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.&lt;/p&gt;
 &lt;h2&gt;Request&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;request&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#request&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To verify solutions you need to make a &lt;code&gt;POST&lt;/code&gt; request to &lt;code&gt;https://api.privatecaptcha.com/siteverify&lt;/code&gt; with the body of the request being solution field&amp;rsquo;s contents from your form.&lt;/p&gt;
+    &lt;a href=&#34;#request&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To verify solutions you need to make a &lt;code&gt;POST&lt;/code&gt; request to &lt;code&gt;https://api.privatecaptcha.com/verify&lt;/code&gt; with the body of the request being solution field&amp;rsquo;s contents from your form.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# an example how that will look like with curl&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -X POST &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;X-Api-Key: your-api-key-here&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;solution&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  https://api.privatecaptcha.com/siteverify&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;h2&gt;Response&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;response&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#response&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s how successful response from &lt;code&gt;/siteverify&lt;/code&gt; endpoint looks like:&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;success&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;challenge_ts&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2025-01-13T16:17:27+00:00&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;hostname&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;privatecaptcha.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;error-codes&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  https://api.privatecaptcha.com/verify&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
     title=&#34;Copy code&#34;
@@ -370,8 +408,27 @@
   &lt;p class=&#34;hx-flex hx-items-center hx-font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx-inline-block hx-align-middle hx-mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
 
   &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
-    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;&lt;code&gt;/siteverify&lt;/code&gt; endpoint returns &lt;a href=&#34;https://developers.google.com/recaptcha/docs/verify&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reCAPTCHA-compatible&lt;/a&gt; response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header &lt;code&gt;X-Captcha-Compat-Version: rcV3&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;You can use &lt;a href=&#34;https://developers.google.com/recaptcha/docs/verify&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reCAPTCHA-compatible&lt;/a&gt; &lt;code&gt;/siteverify&lt;/code&gt; endpoint instead. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header &lt;code&gt;X-Captcha-Compat-Version: rcV3&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Response&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;response&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#response&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s how successful response from &lt;code&gt;/verify&lt;/code&gt; endpoint looks like:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;success&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;timestamp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2025-01-13T16:17:27+00:00&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;origin&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;privatecaptcha.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;h3&gt;Verifying captcha&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;verifying-captcha&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#verifying-captcha&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Verification status is defined by a single field only: &lt;code&gt;success&lt;/code&gt; (boolean) must be equal to &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
@@ -380,10 +437,12 @@
   &lt;p class=&#34;hx-flex hx-items-center hx-font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx-inline-block hx-align-middle hx-mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
 
   &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
-    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;If &lt;code&gt;error-codes&lt;/code&gt; is not empty, it does &lt;strong&gt;not&lt;/strong&gt; mean that verification failed. See details &lt;a href=&#34;#errors-during-successful-verification&#34; &gt;below&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;If &lt;code&gt;code&lt;/code&gt; is not zero, it does &lt;strong&gt;not&lt;/strong&gt; mean that verification failed. See details &lt;a href=&#34;#errors-during-successful-verification&#34; &gt;below&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;code&gt;error-codes&lt;/code&gt; array can contain one or more of error codes:&lt;/p&gt;
+&lt;p&gt;Default &lt;code&gt;/verify&lt;/code&gt; endpoint should be used with one of the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34; &gt;integration SDKs&lt;/a&gt; which allow you to get a string description of the numeric error code.&lt;/p&gt;
+&lt;p&gt;reCAPTCHA-compatible &lt;code&gt;/siteverify&lt;/code&gt; endpoint will contain the string version in &lt;code&gt;error-codes&lt;/code&gt; field.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;code&lt;/code&gt; can be one of the error codes:&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -443,11 +502,11 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3&gt;Errors during successful verification&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;errors-during-successful-verification&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#errors-during-successful-verification&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;There are a couple of cases, when &lt;code&gt;success&lt;/code&gt; in response will be equal to &lt;code&gt;true&lt;/code&gt; (successful verification), but &lt;code&gt;error-codes&lt;/code&gt; will not be empty. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):&lt;/p&gt;
+    &lt;a href=&#34;#errors-during-successful-verification&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;There are a couple of cases, when &lt;code&gt;success&lt;/code&gt; in response will be equal to &lt;code&gt;true&lt;/code&gt; (successful verification), but &lt;code&gt;code&lt;/code&gt; will not be zero. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;When you&amp;rsquo;re using a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/testing/&#34; &gt;test property&lt;/a&gt;, &lt;code&gt;error-codes&lt;/code&gt; will contain &lt;code&gt;property-test&lt;/code&gt; (but verification will succeed).&lt;/li&gt;
-&lt;li&gt;During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, &lt;code&gt;success&lt;/code&gt; in response is equal to &lt;code&gt;true&lt;/code&gt;, but &lt;code&gt;error-codes&lt;/code&gt; will contain &lt;code&gt;maintenance-mode&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;If you configured property to &lt;em&gt;&amp;ldquo;Accept repeated solutions&amp;rdquo;&lt;/em&gt; (during verification window), verification of repeated solution will cause &lt;code&gt;error-codes&lt;/code&gt; to contain &lt;code&gt;solution-verified-before&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;When you&amp;rsquo;re using a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/testing/&#34; &gt;test property&lt;/a&gt;, &lt;code&gt;code&lt;/code&gt; will be &lt;code&gt;property-test&lt;/code&gt; (but verification will succeed).&lt;/li&gt;
+&lt;li&gt;During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, &lt;code&gt;success&lt;/code&gt; in response is equal to &lt;code&gt;true&lt;/code&gt;, but &lt;code&gt;code&lt;/code&gt; will be &lt;code&gt;maintenance-mode&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;If you configured property to &lt;em&gt;&amp;ldquo;Accept repeated solutions&amp;rdquo;&lt;/em&gt; (during verification window), verification of repeated solution will cause &lt;code&gt;code&lt;/code&gt; to be &lt;code&gt;solution-verified-before&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -503,9 +562,14 @@
           &lt;td&gt;Name of the hidden form field with captcha solution that has to be verified on the server side.&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;data-eu&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;When set to &lt;code&gt;true&lt;/code&gt;, will make widget to use only EU endpoints for &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/eu-isolation/&#34; &gt;EU-isolation&lt;/a&gt;.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;data-puzzle-endpoint&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;&#39;&#39;&lt;/code&gt; or your value&lt;/td&gt;
-          &lt;td&gt;Endpoint to get captcha puzzle (override in case of self-hosting or &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/eu-isolation/&#34; &gt;EU-isolation&lt;/a&gt;).&lt;/td&gt;
+          &lt;td&gt;Endpoint to get captcha puzzle (override in case of self-hosting).&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;data-display-mode&lt;/code&gt;&lt;/td&gt;

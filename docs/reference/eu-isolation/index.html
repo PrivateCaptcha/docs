@@ -25,14 +25,14 @@ Private Captcha uses EU-only suppliers so by “servers in EU locations” we do
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/eu-isolation/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-06-14T12:56:36+03:00" />
+<meta property="article:modified_time" content="2025-07-18T20:23:53+03:00" />
 
   <meta itemprop="name" content="EU Isolation">
   <meta itemprop="description" content="There’s a way to use Private Captcha APIs in such a way that all requests are routed exclusively to our servers in EU locations.
 Note
 Private Captcha uses EU-only suppliers so by “servers in EU locations” we don’t mean a US-based company (e.g. AWS) with EU points of presence.">
-  <meta itemprop="dateModified" content="2025-06-14T12:56:36+03:00">
-  <meta itemprop="wordCount" content="234">
+  <meta itemprop="dateModified" content="2025-07-18T20:23:53+03:00">
+  <meta itemprop="wordCount" content="284">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="EU Isolation">
   <meta name="twitter:description" content="There’s a way to use Private Captcha APIs in such a way that all requests are routed exclusively to our servers in EU locations.
@@ -519,6 +519,14 @@ Private Captcha uses EU-only suppliers so by “servers in EU locations” we do
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#sdks">SDKs
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#recaptcha-compatible-api">reCAPTCHA-compatible API
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#implications">Implications
         </a>
       </li></ul>
@@ -557,9 +565,9 @@ Private Captcha uses EU-only suppliers so by “servers in EU locations” we do
   </div>
 </div>
 <p>To achieve this you need to make 2 changes: one on the frontend and second on the backend.</p>
-<p><strong>TL;DR;</strong> version is that you need to replace in your code <code>api.privatecaptcha.com</code> to <code>api.eu.privatecaptcha.com</code>.</p>
+<p><strong>TL;DR;</strong> version is that you need to replace in your code <code>api.privatecaptcha.com</code> to <code>api.eu.privatecaptcha.com</code> and set <code>data-eu=&quot;true&quot;</code> in widget.</p>
 <h2>Frontend changes<span class="hx-absolute -hx-mt-20" id="frontend-changes"></span>
-    <a href="#frontend-changes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To make sure captcha widget only talks to EU APIs you need to set a <a href="/docs/reference/widget-options/#attributes" ><code>data-puzzle-endpoint</code></a> to <code>https://api.eu.privatecaptcha.com/puzzle</code> in the widget declaration:</p>
+    <a href="#frontend-changes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To make sure captcha widget only talks to EU APIs you need to set a <a href="/docs/reference/widget-options/#attributes" ><code>data-eu</code></a> to <code>true</code> in the widget declaration:</p>
 <div class="hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain">
   <div class="hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800"><button
         class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
@@ -579,7 +587,7 @@ Private Captcha uses EU-only suppliers so by “servers in EU locations” we do
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;xyz&#34;
 </span></span><span class="line"><span class="cl">    ...
-</span></span><span class="line"><span class="cl"><span class="gi">+    data-puzzle-endpoint=&#34;https://api.eu.privatecaptcha.com/puzzle&#34;
+</span></span><span class="line"><span class="cl"><span class="gi">+    data-eu=&#34;true&#34;
 </span></span></span><span class="line"><span class="cl"><span class="gi"></span>    ...
 </span></span><span class="line"><span class="cl">&gt;
 </span></span><span class="line"><span class="cl">&lt;/div&gt;
@@ -601,7 +609,7 @@ Private Captcha uses EU-only suppliers so by “servers in EU locations” we do
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">data-sitekey</span><span class="o">=</span><span class="s">&#34;xyz&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="na">data-puzzle-endpoint</span><span class="o">=</span><span class="s">&#34;https://api.eu.privatecaptcha.com/puzzle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">data-eu</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -622,7 +630,63 @@ Private Captcha uses EU-only suppliers so by “servers in EU locations” we do
   </div>
 </div>
 <h2>Backend changes<span class="hx-absolute -hx-mt-20" id="backend-changes"></span>
-    <a href="#backend-changes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>When you verify the form submission on the server side, you need to make <code>POST</code> request to the corresponding EU endpoint: <code>https://api.eu.privatecaptcha.com/siteverify</code>.</p>
+    <a href="#backend-changes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>SDKs<span class="hx-absolute -hx-mt-20" id="sdks"></span>
+    <a href="#sdks" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>When you&rsquo;re using one of the <a href="/docs/integrations/" >integration SDKs</a> you need to specify EU isolation during configuration.</p>
+<p>Here&rsquo;s an example for Go:</p>
+<div class="hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain">
+  <div class="hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800"><button
+        class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-0" aria-selected="true"  tabindex="0"  data-state="selected">Diff</button><button
+        class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-1">Full code</button></div>
+</div>
+<div>
+<div
+  class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-0"
+  role="tabpanel" tabindex="0"  data-state="selected" ><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">client, err := privatecaptcha.NewClient(privatecaptcha.Configuration{
+</span></span><span class="line"><span class="cl">    APIKey: &#34;pc_abcdef&#34;,
+</span></span><span class="line"><span class="cl"><span class="gi">+   Domain: privatecaptcha.EUDomain,
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>})
+</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+</div>
+<div
+  class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-1"
+  role="tabpanel"><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">client</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">privatecaptcha</span><span class="p">.</span><span class="nf">NewClient</span><span class="p">(</span><span class="nx">privatecaptcha</span><span class="p">.</span><span class="nx">Configuration</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">APIKey</span><span class="p">:</span> <span class="s">&#34;pc_abcdef&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Domain</span><span class="p">:</span> <span class="nx">privatecaptcha</span><span class="p">.</span><span class="nx">EUDomain</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+</div>
+</div>
+<h3>reCAPTCHA-compatible API<span class="hx-absolute -hx-mt-20" id="recaptcha-compatible-api"></span>
+    <a href="#recaptcha-compatible-api" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>When you verify the form submission on the server side, you need to make <code>POST</code> request to the corresponding EU endpoint: <code>https://api.eu.privatecaptcha.com/siteverify</code>.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">curl -X POST \
@@ -645,7 +709,7 @@ Private Captcha uses EU-only suppliers so by “servers in EU locations” we do
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-06-14T12:56:36.000Z">June 14, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-18T20:23:53.000Z">July 18, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/reference/captcha-object/"
         title="Captcha object"
