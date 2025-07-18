@@ -38,14 +38,16 @@ curl \
   -X POST \
   -H "X-Api-Key: your-api-key" \
   -d "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.Aaqqqqq7u8zM3d3u7u7u7u4AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=.AQCBnM2czBK6rlq+l06lXBtIDQH/PFk=" \
-  https://api.{{<domain>}}/siteverify
+  https://api.{{<domain>}}/verify
 ```
 
 And if everything is set up correctly, the output will be 
 
 ```json
-{"success":true,"error-codes":["property-test"],"challenge_ts":"0001-01-01T00:00:00Z","hostname":""}
+{"success":true,"code":10,"timestamp":"0001-01-01T00:00:00Z","origin":""}
 ```
+
+Code `10` corresponds to `"property-test"` error description.
 
 {{% /details %}}
 

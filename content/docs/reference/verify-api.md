@@ -20,31 +20,31 @@ When handling form submission on the server-side, this is the field you need to 
 
 ## Request
 
-To verify solutions you need to make a `POST` request to `https://api.{{<domain>}}/siteverify` with the body of the request being solution field's contents from your form.
+To verify solutions you need to make a `POST` request to `https://api.{{<domain>}}/verify` with the body of the request being solution field's contents from your form.
 
 ```bash
 # an example how that will look like with curl
 curl -X POST \
   -H "X-Api-Key: your-api-key-here" \
   -d "solution" \
-  https://api.{{< domain >}}/siteverify
+  https://api.{{< domain >}}/verify
 ```
+
+> [!NOTE]
+> You can use [reCAPTCHA-compatible](https://developers.google.com/recaptcha/docs/verify) `/siteverify` endpoint instead. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header `X-Captcha-Compat-Version: rcV3`.
 
 ## Response
 
-Here's how successful response from `/siteverify` endpoint looks like:
+Here's how successful response from `/verify` endpoint looks like:
 
 ```json
 {
   "success": true,
-  "challenge_ts": "2025-01-13T16:17:27+00:00",
-  "hostname": "privatecaptcha.com",
-  "error-codes": []
+  "timestamp": "2025-01-13T16:17:27+00:00",
+  "origin": "privatecaptcha.com",
+  "code": 0
 }
 ```
-
-> [!NOTE]
-> `/siteverify` endpoint returns [reCAPTCHA-compatible](https://developers.google.com/recaptcha/docs/verify) response. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header `X-Captcha-Compat-Version: rcV3`.
 
 ### Verifying captcha
 
@@ -53,9 +53,13 @@ Verification status is defined by a single field only: `success` (boolean) must 
 ## Error codes
 
 > [!NOTE]
-> If `error-codes` is not empty, it does **not** mean that verification failed. See details [below](#errors-during-successful-verification).
+> If `code` is not zero, it does **not** mean that verification failed. See details [below](#errors-during-successful-verification).
 
-`error-codes` array can contain one or more of error codes:
+Default `/verify` endpoint should be used with one of the [integration SDKs]({{< relref "/docs/integrations" >}}) which allow you to get a string description of the numeric error code.
+
+reCAPTCHA-compatible `/siteverify` endpoint will contain the string version in `error-codes` field.
+
+`code` can be one of the error codes:
 
 Error code | Description
 --- | ---
@@ -74,8 +78,8 @@ Error code | Description
 
 ### Errors during successful verification
 
-There are a couple of cases, when `success` in response will be equal to `true` (successful verification), but `error-codes` will not be empty. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):
+There are a couple of cases, when `success` in response will be equal to `true` (successful verification), but `code` will not be zero. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):
 
-- When you're using a [test property]({{< relref "/docs/reference/testing.md" >}}), `error-codes` will contain `property-test` (but verification will succeed).
-- During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, `success` in response is equal to `true`, but `error-codes` will contain `maintenance-mode`.
-- If you configured property to _"Accept repeated solutions"_ (during verification window), verification of repeated solution will cause `error-codes` to contain `solution-verified-before`.
+- When you're using a [test property]({{< relref "/docs/reference/testing.md" >}}), `code` will be `property-test` (but verification will succeed).
+- During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, `success` in response is equal to `true`, but `code` will be `maintenance-mode`.
+- If you configured property to _"Accept repeated solutions"_ (during verification window), verification of repeated solution will cause `code` to be `solution-verified-before`.

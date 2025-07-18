@@ -229,7 +229,7 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
 </form>
 ```
 
-To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to send a `POST` request with the contents of this field to `/siteverify` endpoint and check the result. This is done in the server-side handler of the form.
+To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to send a `POST` request with the contents of this field to `/verify` endpoint and check the result. This is done in the server-side handler of the form.
 
 > [!WARNING]
 > Below we are using API directly only **for demonstration** purposes. Most likely you want to use of of the [integration SDKs]({{< relref "/docs/integrations" >}}) that are available for popular languages.
@@ -244,7 +244,7 @@ To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to 
  )
  
 +func checkSolution(solution, apiKey string) error {
-+       req, err := http.NewRequest("POST", "https://api.{{< domain >}}/siteverify", strings.NewReader(solution))
++       req, err := http.NewRequest("POST", "https://api.{{< domain >}}/verify", strings.NewReader(solution))
 +       if err != nil {
 +               return err
 +       }
@@ -301,7 +301,7 @@ import (
 )
 
 func checkSolution(solution, apiKey string) error {
-	req, err := http.NewRequest("POST", "https://api.{{< domain >}}/siteverify", strings.NewReader(solution))
+	req, err := http.NewRequest("POST", "https://api.{{< domain >}}/verify", strings.NewReader(solution))
 	if err != nil {
 		return err
 	}
@@ -361,7 +361,7 @@ Now, if you did everything correct, your property dashboard in portal will also 
 And, if you print verify response to the console, you will get this json:
 
 ```json
-{"success":true,"challenge_ts":"2025-01-14T11:19:34Z","hostname":"27ca-193-138-7-216.ngrok-free.app"}
+{"success":true,"code":0,"timestamp":"2025-01-14T11:19:34Z","origin":"27ca-193-138-7-216.ngrok-free.app"}
 ```
 
 ### Full code

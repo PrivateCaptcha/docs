@@ -10,18 +10,18 @@ There's a way to use Private Captcha APIs in such a way that all requests are ro
 
 To achieve this you need to make 2 changes: one on the frontend and second on the backend.
 
-**TL;DR;** version is that you need to replace in your code `api.{{<domain>}}` to `api.eu.{{<domain>}}`.
+**TL;DR;** version is that you need to replace in your code `api.{{<domain>}}` to `api.eu.{{<domain>}}` and set `data-eu="true"` in widget.
 
 ## Frontend changes
 
-To make sure captcha widget only talks to EU APIs you need to set a [`data-puzzle-endpoint`]({{< relref "/docs/reference/widget-options.md#attributes" >}}) to `https://api.eu.{{< domain >}}/puzzle` in the widget declaration:
+To make sure captcha widget only talks to EU APIs you need to set a [`data-eu`]({{< relref "/docs/reference/widget-options.md#attributes" >}}) to `true` in the widget declaration:
 
 {{< tabs items="Diff,Full code" >}}
 {{< tab >}}
 ```diff
 <div class="private-captcha" data-sitekey="xyz"
     ...
-+    data-puzzle-endpoint="https://api.eu.{{< domain >}}/puzzle"
++    data-eu="true"
     ...
 >
 </div>
@@ -31,7 +31,7 @@ To make sure captcha widget only talks to EU APIs you need to set a [`data-puzzl
 ```html
 <div class="private-captcha"
     data-sitekey="xyz"
-    data-puzzle-endpoint="https://api.eu.{{< domain >}}/puzzle">
+    data-eu="true">
 </div>
 ```
 {{</ tab >}}
@@ -41,6 +41,33 @@ To make sure captcha widget only talks to EU APIs you need to set a [`data-puzzl
 > This does not affect the captcha widget Javascript snippet itself which loads from CDN points of presence over the world to decrease latency. No end-user PII is involved.
 
 ## Backend changes
+
+### SDKs
+
+When you're using one of the [integration SDKs]({{< relref "/docs/integrations" >}}) you need to specify EU isolation during configuration.
+
+Here's an example for Go:
+
+{{< tabs items="Diff,Full code" >}}
+{{< tab >}}
+```diff
+client, err := privatecaptcha.NewClient(privatecaptcha.Configuration{
+    APIKey: "pc_abcdef",
++   Domain: privatecaptcha.EUDomain,
+})
+```
+{{</ tab >}}
+{{< tab >}}
+```go
+client, err := privatecaptcha.NewClient(privatecaptcha.Configuration{
+    APIKey: "pc_abcdef",
+    Domain: privatecaptcha.EUDomain,
+})
+```
+{{</ tab >}}
+{{< /tabs >}}
+
+### reCAPTCHA-compatible API
 
 When you verify the form submission on the server side, you need to make `POST` request to the corresponding EU endpoint: `https://api.eu.{{< domain >}}/siteverify`.
 
