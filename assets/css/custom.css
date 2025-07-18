@@ -11,6 +11,12 @@
     overflow: hidden;
 }
 
+.pc-form-popup {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
 .form-with-spinner > button {
     display: inline-flex;
     align-items: center;
