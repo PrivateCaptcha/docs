@@ -231,6 +231,9 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
 
 To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to send a `POST` request with the contents of this field to `/siteverify` endpoint and check the result. This is done in the server-side handler of the form.
 
+> [!WARNING]
+> Below we are using API directly only **for demonstration** purposes. Most likely you want to use of of the [integration SDKs]({{< relref "/docs/integrations" >}}) that are available for popular languages.
+
 > [!NOTE]
 > Make sure to use your own API key
 
