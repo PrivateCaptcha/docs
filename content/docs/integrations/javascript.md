@@ -2,7 +2,6 @@
 title: "Javascript"
 date: 2025-07-19T14:06:29+03:00
 type: docs
-draft: true
 ---
 
 > [!NOTE]
