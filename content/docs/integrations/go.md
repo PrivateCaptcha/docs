@@ -10,17 +10,15 @@ This is a server-side SDK, which you would use to verify captcha solution agains
 
 [GitHub repository](https://github.com/PrivateCaptcha/private-captcha-go)
 
-## Usage
-
-### Installation
+## Installation
 
 ```bash
 go get -u github.com/PrivateCaptcha/private-captcha-go
 ```
 
-### Code
+## Usage
 
-#### Import and instantiation
+### Import and instantiation
 
 Add import:
 
@@ -37,7 +35,7 @@ client, err := pc.NewClient(pc.Configuration{APIKey: "pc_abcdef"})
 
 `Configuration` object allows to switch to EU endpoint, specify default form field for the solution, HTTP client, and status code for middleware version.
 
-#### Verify solution directly
+### Verify solution directly
 
 `Verify()` supports automatic backoff and retrying (configured via `VerifyInput` parameter), enabled by default. You need to check the captcha verification status yourself.
 
@@ -50,7 +48,7 @@ if !output.Success {
 }
 ```
 
-#### Wrapper around HTTP request
+### Wrapper around HTTP request
 
 `VerifyRequest()` operates on the `http.Request` level, extracts and verifies form field, configured via `Configuration` object for the client instance, with standard defaults. You only need to check if the `err == nil`.
 
@@ -62,10 +60,35 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-#### Simple HTTP middleware
+### Simple HTTP middleware
 
 `VerifyFunc()` is a basic HTTP middleware that returns `http.StatusForbidden` (configured via `Configuration` object for client instance) if the captcha solution is not verified.
 
 ```go
 mux.Handle("POST /my/form", client.VerifyFunc(actualHandler))
+```
+
+### Configuration
+
+#### Non-standard backend domains
+
+For EU isolation, you can use built-in constant `EUDomain`:
+
+```go
+client, err := pc.NewClient(pc.Configuration{Domain: pc.EUDomain})
+// ... handle err
+```
+
+For self-hosted installation, use API domain name.
+
+#### Retry configuration
+
+```go
+input := pc.Configuration{
+	Solution: "solution",
+	MaxBackoffSeconds: 10,
+	Attempts: 10,
+}
+output, err := client.Verify(ctx, input)
+// ... handle err
 ```

@@ -11,13 +11,13 @@ This is a server-side SDK, which you would use to verify captcha solution agains
 
 [GitHub repository](https://github.com/PrivateCaptcha/private-captcha-js)
 
-## Usage
-
-### Installation
+## Installation
 
 ```bash
 npm install private-captcha-js
 ```
+
+## Usage
 
 ### Basic Verification
 
@@ -71,5 +71,15 @@ const client = createClient({
     formField: 'private-captcha-solution',  // Field from where to read the solution
     failedStatusCode: 403,                  // HTTP status code for failed verifications (middleware)
     domain: 'api.privatecaptcha.com'        // Override for EU isolation or for self-hosting
+});
+```
+
+#### Retry configuration
+
+```javascript
+client.verify({
+    solution: 'solution',
+    maxBackoffSeconds: 10,
+    attempts: 10
 });
 ```
