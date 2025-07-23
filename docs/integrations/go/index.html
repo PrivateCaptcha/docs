@@ -23,13 +23,13 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/integrations/go/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-07-23T21:17:34+03:00" />
+<meta property="article:modified_time" content="2025-07-23T21:40:04+03:00" />
 
   <meta itemprop="name" content="Go">
   <meta itemprop="description" content="Note
 You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just Golang-idiomatic implementation with convenience features.">
-  <meta itemprop="dateModified" content="2025-07-23T21:17:34+03:00">
-  <meta itemprop="wordCount" content="291">
+  <meta itemprop="dateModified" content="2025-07-23T21:40:04+03:00">
+  <meta itemprop="wordCount" content="327">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Go">
   <meta name="twitter:description" content="Note
@@ -698,8 +698,9 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
 </div>
 </div>
 <h3>Configuration<span class="hx-absolute -hx-mt-20" id="configuration"></span>
-    <a href="#configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>Non-standard backend domains<span class="hx-absolute -hx-mt-20" id="non-standard-backend-domains"></span>
-    <a href="#non-standard-backend-domains" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>For EU isolation, you can use built-in constant <code>EUDomain</code>:</p>
+    <a href="#configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Client configuration allows to set default form field, domain (can be used for self-hosting or EU isolation) and HTTP status for middleware version.</p>
+<h4>Non-standard backend domains<span class="hx-absolute -hx-mt-20" id="non-standard-backend-domains"></span>
+    <a href="#non-standard-backend-domains" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>For <a href="/docs/reference/eu-isolation/" >EU isolation</a>, you can use built-in constant <code>EUDomain</code>:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">client</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">pc</span><span class="p">.</span><span class="nf">NewClient</span><span class="p">(</span><span class="nx">pc</span><span class="p">.</span><span class="nx">Configuration</span><span class="p">{</span><span class="nx">Domain</span><span class="p">:</span> <span class="nx">pc</span><span class="p">.</span><span class="nx">EUDomain</span><span class="p">})</span>
@@ -715,7 +716,8 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
 </div>
 <p>For self-hosted installation, use API domain name.</p>
 <h4>Retry configuration<span class="hx-absolute -hx-mt-20" id="retry-configuration"></span>
-    <a href="#retry-configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+    <a href="#retry-configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>When verifying puzzle solutions, you can also specify some retry and backoff options.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">input</span> <span class="o">:=</span> <span class="nx">pc</span><span class="p">.</span><span class="nx">Configuration</span><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">Solution</span><span class="p">:</span> <span class="s">&#34;solution&#34;</span><span class="p">,</span>
@@ -736,7 +738,7 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-23T21:17:34.000Z">July 23, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-23T21:40:04.000Z">July 23, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/integrations/javascript/"
         title="Javascript"
