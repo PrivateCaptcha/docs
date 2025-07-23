@@ -65,6 +65,8 @@ app.post('/verify', async (req, res) => {
 
 ### Configuration
 
+Client configuration allows to set default form field, domain (can be used for self-hosting or [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}})) and HTTP status for middleware version.
+
 ```javascript
 const client = createClient({
     apiKey: 'your-api-key',                 // Required
@@ -75,6 +77,8 @@ const client = createClient({
 ```
 
 #### Retry configuration
+
+When verifying puzzle solutions, you can also specify some retry and backoff options.
 
 ```javascript
 client.verify({

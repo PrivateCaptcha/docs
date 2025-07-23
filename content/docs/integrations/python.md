@@ -97,6 +97,8 @@ client = Client(
 
 ### Non-standard backend domains
 
+For [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}}), you can use built-in constant `EU_DOMAIN`:
+
 ```python
 from private_captcha import Client, EU_DOMAIN
 
@@ -114,6 +116,8 @@ custom_client = Client(
 ```
 
 ### Retry Configuration
+
+When verifying puzzle solutions, you can also specify some retry and backoff options.
 
 ```python
 result = client.verify(

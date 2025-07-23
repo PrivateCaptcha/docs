@@ -70,9 +70,11 @@ mux.Handle("POST /my/form", client.VerifyFunc(actualHandler))
 
 ### Configuration
 
+Client configuration allows to set default form field, domain (can be used for self-hosting or EU isolation) and HTTP status for middleware version.
+
 #### Non-standard backend domains
 
-For EU isolation, you can use built-in constant `EUDomain`:
+For [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}}), you can use built-in constant `EUDomain`:
 
 ```go
 client, err := pc.NewClient(pc.Configuration{Domain: pc.EUDomain})
@@ -82,6 +84,8 @@ client, err := pc.NewClient(pc.Configuration{Domain: pc.EUDomain})
 For self-hosted installation, use API domain name.
 
 #### Retry configuration
+
+When verifying puzzle solutions, you can also specify some retry and backoff options.
 
 ```go
 input := pc.Configuration{
