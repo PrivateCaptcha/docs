@@ -7,7 +7,7 @@ type: docs
 > [!NOTE]
 > You can also use reCAPTCHA-compatible `/siteverify` endpoint directly (especially if you already have working reCAPTCHA integration) like in the [tutorial example]({{< relref "/docs/tutorials/complete-example.md" >}}), this SDK is just Python-idiomatic implementation with convenience features.
 
-This is a server-side SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does _not_ solve puzzles on the client side (used to protect APIs).
+This is a **server-side** SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does _not_ solve puzzles on the client side (used to protect APIs).
 
 [GitHub repository](https://github.com/PrivateCaptcha/private-captcha-py)
 

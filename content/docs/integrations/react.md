@@ -6,7 +6,7 @@ date: 2025-07-27T14:12:04+03:00
 > [!NOTE]
 > You can use a "default way" of adding `<div class="private-captcha" ...></div>` element with `https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js` Javascript include. But it will not work well with server-side rendering (e.g. in Next.js).
 
-This is a client-side SDK for React, which is an alternative to using a standard script directly.
+This is a **client-side** SDK for React, which is an alternative to using a standard script directly.
 
 [GitHub repository](https://github.com/PrivateCaptcha/private-captcha-react)
 
