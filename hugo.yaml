@@ -32,20 +32,23 @@ menu:
     - name: Tutorials
       pageRef: /docs/tutorials
       weight: 2
+    - name: Integrations
+      pageRef: /docs/integrations
+      weight: 3
     - name: Office Hours ↗
       url: "https://cal.com/privatecaptcha/20min"
-      weight: 3
-    - name: Search
       weight: 4
+    - name: Search
+      weight: 5
       params:
         type: search
     - name: GitHub
-      weight: 5
+      weight: 6
       url: "https://github.com/PrivateCaptcha/docs"
       params:
         icon: github
     - name: Website
-      weight: 6
+      weight: 7
       url: "https://privatecaptcha.com"
       params:
         icon: globe-alt
