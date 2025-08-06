@@ -10,30 +10,31 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Go – Private Captcha</title>
+<title>.NET – Private Captcha</title>
   <meta name="description" content=" Note
-You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just Golang-idiomatic implementation with convenience features." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/integrations/go/" itemprop="url" />
+You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just C#-idiomatic implementation with convenience features." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/integrations/dotnet/" itemprop="url" />
 
-<meta property="og:title" content="Go" />
+<meta property="og:title" content=".NET" />
 <meta property="og:description" content="
   Note
 
   
-    You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just Golang-idiomatic implementation with convenience features." />
+    You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just C#-idiomatic implementation with convenience features." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/integrations/go/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/integrations/dotnet/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2025-08-06T16:14:32+03:00" />
+<meta property="article:modified_time" content="2025-08-06T16:21:37+03:00" />
 
-<meta property="article:modified_time" content="2025-07-27T15:05:15+03:00" />
-
-  <meta itemprop="name" content="Go">
+  <meta itemprop="name" content=".NET">
   <meta itemprop="description" content="Note
-You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just Golang-idiomatic implementation with convenience features.">
-  <meta itemprop="dateModified" content="2025-07-27T15:05:15+03:00">
-  <meta itemprop="wordCount" content="327">
+You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just C#-idiomatic implementation with convenience features.">
+  <meta itemprop="datePublished" content="2025-08-06T16:14:32+03:00">
+  <meta itemprop="dateModified" content="2025-08-06T16:21:37+03:00">
+  <meta itemprop="wordCount" content="550">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Go">
+  <meta name="twitter:title" content=".NET">
   <meta name="twitter:description" content="Note
-You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just Golang-idiomatic implementation with convenience features.">
+You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just C#-idiomatic implementation with convenience features.">
 
     <link rel="preload" href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" as="style" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
     <link href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" rel="stylesheet" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
@@ -215,13 +216,28 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/integrations/dotnet/"
     
   >.NET
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#installation"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Installation</a>
+            </li>
+          <li>
+              <a
+                href="#usage"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Usage</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -247,28 +263,13 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   >Javascript
     </a>
               
-            </li><li class="hx-flex hx-flex-col open"><a
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/integrations/go/"
     
   >Go
     </a>
-  
-    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
-              <a
-                href="#installation"
-                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Installation</a>
-            </li>
-          <li>
-              <a
-                href="#usage"
-                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Usage</a>
-            </li>
-          </ul>
-  
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -416,9 +417,9 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   >Integrations
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/integrations/dotnet/"
     
   >.NET
@@ -448,9 +449,9 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   >Javascript
     </a>
               
-            </li><li class="hx-flex hx-flex-col open"><a
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/integrations/go/"
     
   >Go
@@ -580,19 +581,11 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#import-and-instantiation">Import and instantiation
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#basic-verification">Basic Verification
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#verify-solution-directly">Verify solution directly
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#wrapper-around-http-request">Wrapper around HTTP request
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#simple-http-middleware">Simple HTTP middleware
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#aspnet-core-middleware">ASP.NET Core Middleware
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
@@ -606,8 +599,12 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#retry-configuration">Retry configuration
         </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#error-handling">Error Handling
+        </a>
       </li></ul>
-      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/integrations/go.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/integrations/dotnet.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -628,24 +625,39 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
         </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
           <a href="/docs/integrations/">Integrations</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Go</div>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">.NET</div>
   </div>
 
         <div class="content">
-          <h1>Go</h1>
+          <h1>.NET</h1>
           <div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
   <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>You can also use reCAPTCHA-compatible <code>/siteverify</code> endpoint directly (especially if you already have working reCAPTCHA integration) like in the <a href="/docs/tutorials/complete-example/" >tutorial example</a>, this SDK is just Golang-idiomatic implementation with convenience features.</p></div>
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>You can also use reCAPTCHA-compatible <code>/siteverify</code> endpoint directly (especially if you already have working reCAPTCHA integration) like in the <a href="/docs/tutorials/complete-example/" >tutorial example</a>, this SDK is just C#-idiomatic implementation with convenience features.</p></div>
   </div>
 </div>
 <p>This is a <strong>server-side</strong> SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does <em>not</em> solve puzzles on the client side (used to protect APIs).</p>
-<p><a href="https://github.com/PrivateCaptcha/private-captcha-go" target="_blank" rel="noopener">GitHub repository</a></p>
+<p><a href="https://github.com/PrivateCaptcha/private-captcha-dotnet" target="_blank" rel="noopener">GitHub repository</a></p>
 <h2>Installation<span class="hx-absolute -hx-mt-20" id="installation"></span>
-    <a href="#installation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+    <a href="#installation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You can install the package via the .NET CLI or the NuGet Package Manager Console.</p>
+<p><strong>.NET CLI</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go get -u github.com/PrivateCaptcha/private-captcha-go</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet add package PrivateCaptcha</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Package Manager Console</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Install-Package</span> <span class="n">PrivateCaptcha</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -656,44 +668,25 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
 </div>
 </div>
 <h2>Usage<span class="hx-absolute -hx-mt-20" id="usage"></span>
-    <a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Import and instantiation<span class="hx-absolute -hx-mt-20" id="import-and-instantiation"></span>
-    <a href="#import-and-instantiation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Add import:</p>
+    <a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Basic Verification<span class="hx-absolute -hx-mt-20" id="basic-verification"></span>
+    <a href="#basic-verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To verify a CAPTCHA solution, instantiate <code>PrivateCaptchaClient</code> with your configuration and call <code>VerifyAsync</code>.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">pc</span> <span class="s">&#34;github.com/PrivateCaptcha/private-captcha-go&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>Create the client:</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">client</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">pc</span><span class="p">.</span><span class="nf">NewClient</span><span class="p">(</span><span class="nx">pc</span><span class="p">.</span><span class="nx">Configuration</span><span class="p">{</span><span class="nx">APIKey</span><span class="p">:</span> <span class="s">&#34;pc_abcdef&#34;</span><span class="p">})</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// ... handle err</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p><code>Configuration</code> object allows to switch to EU endpoint, specify default form field for the solution, HTTP client, and status code for middleware version.</p>
-<h3>Verify solution directly<span class="hx-absolute -hx-mt-20" id="verify-solution-directly"></span>
-    <a href="#verify-solution-directly" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>Verify()</code> supports automatic backoff and retrying (configured via <code>VerifyInput</code> parameter), enabled by default. You need to check the captcha verification status yourself.</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">output</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">client</span><span class="p">.</span><span class="nf">Verify</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span> <span class="nx">pc</span><span class="p">.</span><span class="nx">VerifyInput</span><span class="p">{</span><span class="nx">Solution</span><span class="p">:</span> <span class="nx">solution</span><span class="p">})</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// ... handle err</span>
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">config</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrivateCaptchaConfiguration</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ApiKey</span> <span class="p">=</span> <span class="s">&#34;YOUR_API_KEY&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">captchaClient</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrivateCaptchaClient</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">!</span><span class="nx">output</span><span class="p">.</span><span class="nx">Success</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Captcha verification failed. Error: %s&#34;</span><span class="p">,</span> <span class="nx">result</span><span class="p">.</span><span class="nf">Error</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="k">await</span> <span class="n">captchaClient</span><span class="p">.</span><span class="n">VerifyAsync</span><span class="p">(</span><span class="k">new</span> <span class="n">VerifyInput</span> <span class="p">{</span> <span class="n">Solution</span> <span class="p">=</span> <span class="n">captchaSolution</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">Success</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Captcha verification succeeded!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Verification failed, you can check the reason.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Verification failed: {result.GetErrorMessage()}&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -704,15 +697,22 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
-<h3>Wrapper around HTTP request<span class="hx-absolute -hx-mt-20" id="wrapper-around-http-request"></span>
-    <a href="#wrapper-around-http-request" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>VerifyRequest()</code> operates on the <code>http.Request</code> level, extracts and verifies form field, configured via <code>Configuration</code> object for the client instance, with standard defaults. You only need to check if the <code>err == nil</code>.</p>
+<h3>ASP.NET Core Middleware<span class="hx-absolute -hx-mt-20" id="aspnet-core-middleware"></span>
+    <a href="#aspnet-core-middleware" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>For web applications, the most convenient way to protect your endpoints is by using the provided middleware. It automatically intercepts POST requests with form data and verifies the CAPTCHA solution.</p>
+<p><strong>1. Register <code>PrivateCaptchaClient</code> for Dependency Injection</strong></p>
+<p>In your <code>Program.cs</code> (for .NET 6+ minimal APIs) or <code>Startup.cs</code>, register the <code>PrivateCaptchaClient</code>.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">handler</span><span class="p">(</span><span class="nx">w</span> <span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="nx">r</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">client</span><span class="p">.</span><span class="nf">VerifyRequest</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nf">Context</span><span class="p">(),</span> <span class="nx">r</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// Program.cs</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">PrivateCaptcha</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">builder</span> <span class="p">=</span> <span class="n">WebApplication</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddSingleton</span><span class="p">(</span><span class="n">sp</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">config</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrivateCaptchaConfiguration</span> <span class="p">{</span> <span class="n">ApiKey</span> <span class="p">=</span> <span class="s">&#34;YOUR_API_KEY&#34;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">new</span> <span class="n">PrivateCaptchaClient</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -722,11 +722,22 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
-<h3>Simple HTTP middleware<span class="hx-absolute -hx-mt-20" id="simple-http-middleware"></span>
-    <a href="#simple-http-middleware" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>VerifyFunc()</code> is a basic HTTP middleware that returns <code>http.StatusForbidden</code> (configured via <code>Configuration</code> object for client instance) if the captcha solution is not verified.</p>
+<p><strong>2. Add the Middleware to the Request Pipeline</strong></p>
+<p>Add <code>app.UsePrivateCaptcha()</code> to your request pipeline. It should be placed before the endpoints you want to protect.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">mux</span><span class="p">.</span><span class="nf">Handle</span><span class="p">(</span><span class="s">&#34;POST /my/form&#34;</span><span class="p">,</span> <span class="nx">client</span><span class="p">.</span><span class="nf">VerifyFunc</span><span class="p">(</span><span class="nx">actualHandler</span><span class="p">))</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">app</span> <span class="p">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ... other middleware</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Use the PrivateCaptcha middleware. This will automatically check POST requests</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// with a form content type for a valid captcha solution.</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">UsePrivateCaptcha</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This endpoint will now be protected by the CAPTCHA middleware.</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">MapPost</span><span class="p">(</span><span class="s">&#34;/register&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="s">&#34;Registration successful!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -736,14 +747,55 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
+<p>If verification fails, the middleware will short-circuit the request and return a <code>403 Forbidden</code> status code by default (can be changed in the configuration).</p>
 <h3>Configuration<span class="hx-absolute -hx-mt-20" id="configuration"></span>
-    <a href="#configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Client configuration allows to set default form field, domain (can be used for self-hosting or EU isolation) and HTTP status for middleware version.</p>
+    <a href="#configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>You can customize the client&rsquo;s behavior by passing a <code>PrivateCaptchaConfiguration</code> object to the constructor.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Property</th>
+          <th>Description</th>
+          <th>Default Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>ApiKey</code></td>
+          <td><strong>(Required)</strong> Your API key from the Private Captcha dashboard.</td>
+          <td><code>string.Empty</code></td>
+      </tr>
+      <tr>
+          <td><code>Domain</code></td>
+          <td>The API domain to use (use <code>Domains.EU</code> or an override in case of self-hosting)</td>
+          <td><code>Domains.Global</code></td>
+      </tr>
+      <tr>
+          <td><code>FormField</code></td>
+          <td>The name of the form field containing the CAPTCHA solution. Used by the middleware.</td>
+          <td><code>&quot;private-captcha-solution&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>FailedStatusCode</code></td>
+          <td>The <code>HttpStatusCode</code> to return when middleware verification fails.</td>
+          <td><code>HttpStatusCode.Forbidden</code> (403)</td>
+      </tr>
+      <tr>
+          <td><code>HttpClient</code></td>
+          <td>An optional <code>HttpClient</code> instance. If not provided, a new one will be created and managed by the client.</td>
+          <td><code>null</code></td>
+      </tr>
+  </tbody>
+</table>
 <h4>Non-standard backend domains<span class="hx-absolute -hx-mt-20" id="non-standard-backend-domains"></span>
-    <a href="#non-standard-backend-domains" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>For <a href="/docs/reference/eu-isolation/" >EU isolation</a>, you can use built-in constant <code>EUDomain</code>:</p>
+    <a href="#non-standard-backend-domains" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>For <a href="/docs/reference/eu-isolation/" >EU isolation</a>, you can use built-in constant <code>Domains.EU</code>:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">client</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">pc</span><span class="p">.</span><span class="nf">NewClient</span><span class="p">(</span><span class="nx">pc</span><span class="p">.</span><span class="nx">Configuration</span><span class="p">{</span><span class="nx">Domain</span><span class="p">:</span> <span class="nx">pc</span><span class="p">.</span><span class="nx">EUDomain</span><span class="p">})</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// ... handle err</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">config</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrivateCaptchaConfiguration</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ApiKey</span> <span class="p">=</span> <span class="s">&#34;YOUR_API_KEY&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Domain</span> <span class="p">=</span> <span class="n">Domains</span><span class="p">.</span><span class="n">EU</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrivateCaptchaClient</span><span class="p">(</span><span class="n">config</span><span class="p">);</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -753,18 +805,16 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
-<p>For self-hosted installation, use API domain name.</p>
 <h4>Retry configuration<span class="hx-absolute -hx-mt-20" id="retry-configuration"></span>
     <a href="#retry-configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>When verifying puzzle solutions, you can also specify some retry and backoff options.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">input</span> <span class="o">:=</span> <span class="nx">pc</span><span class="p">.</span><span class="nx">Configuration</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">Solution</span><span class="p">:</span> <span class="s">&#34;solution&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">MaxBackoffSeconds</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">Attempts</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="nx">output</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">client</span><span class="p">.</span><span class="nf">Verify</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span> <span class="nx">input</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// ... handle err</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">input</span> <span class="p">=</span> <span class="k">new</span> <span class="n">VerifyInput</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Solution</span> <span class="p">=</span> <span class="s">&#34;captcha-solution&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="n">MaxBackoffSeconds</span> <span class="p">=</span> <span class="m">30</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="n">MaxAttempts</span> <span class="p">=</span> <span class="m">10</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -774,19 +824,21 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
+<h3>Error Handling<span class="hx-absolute -hx-mt-20" id="error-handling"></span>
+    <a href="#error-handling" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><strong><code>VerifyOutput</code></strong>: The <code>VerifyAsync</code> method returns a <code>VerifyOutput</code> object. Check the <code>Success</code> property to see if verification passed. If <code>Success</code> is <code>false</code>, the <code>Code</code> property and <code>GetErrorMessage()</code> method provide more details.</li>
+<li><strong><code>VerificationFailedException</code></strong>: Thrown when the client cannot get a definitive success/fail response from the API after all retry attempts. This typically indicates a network issue.</li>
+<li><strong><code>ArgumentException</code></strong>: Thrown by <code>VerifyAsync</code> if the provided <code>VerifyInput.Solution</code> is null or empty.</li>
+</ul>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-27T15:05:15.000Z">July 27, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-08-06T16:21:37.000Z">August 6, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="/docs/integrations/javascript/"
-        title="Javascript"
-        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
-      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Javascript</a><a
-        href="/docs/integrations/openapi/"
-        title="OpenAPI"
+        href="/docs/integrations/react/"
+        title="React"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >OpenAPI<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >React<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
