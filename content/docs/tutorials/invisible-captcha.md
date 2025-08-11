@@ -2,8 +2,6 @@
 title: Invisible captcha
 type: docs
 captcha_scripts: true
-prev: 'complete-example'
-#next: ''
 ---
 
 Invisible captcha refers to the situation when you don't want to show captcha widget for various reasons (e.g. custom UI integraion or design restrictions).
