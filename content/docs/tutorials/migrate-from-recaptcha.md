@@ -1,7 +1,6 @@
 ---
 title: "Migrate from reCAPTCHA"
 date: 2025-08-11T13:30:34+03:00
-draft: true
 ---
 
 You can migrate from Google reCAPTCHA "fast" using compatibilty mode for server-side and client-side parts or you can fully migrate to Private Captcha.
