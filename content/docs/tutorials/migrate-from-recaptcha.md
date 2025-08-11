@@ -63,7 +63,7 @@ Things you generally will need to do:
 - replace script to use the Private Captcha one
 - replace added class `g-recaptcha` to `private-captcha` for automatic/implicit rendering (the default)
 - replace usage of `grecaptcha` global object (if any) to `privateCaptcha`
-- change stub sitekeys for testing, if you have any
+- change stub sitekeys for [testing]({{< relref "/docs/reference/testing.md" >}}), if you have any
 
 ### Server-side
 
