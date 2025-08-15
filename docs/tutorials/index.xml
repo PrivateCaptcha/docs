@@ -263,7 +263,7 @@
   &lt;/div&gt;
 &lt;/details&gt;
 &lt;h2&gt;Add captcha widget to the form&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;add-captcha-widget-to-the-form&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#add-captcha-widget-to-the-form&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This assumes that you already have an account with Private Captcha. If you don&amp;rsquo;t, go ahead and create one.&lt;/p&gt;
+    &lt;a href=&#34;#add-captcha-widget-to-the-form&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This assumes that you already have an account with Private Captcha. If you don&amp;rsquo;t, go ahead and &lt;a href=&#34;https://portal.privatecaptcha.com/signup&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;create one&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Create new property&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;create-new-property&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#create-new-property&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the dashboard, click &amp;ldquo;Add new property&amp;rdquo;:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/create-property.png&#34; alt=&#34;Create new property&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
