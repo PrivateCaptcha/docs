@@ -104,7 +104,7 @@ You can use this domain as a property domain below.
 
 ## Add captcha widget to the form
 
-This assumes that you already have an account with Private Captcha. If you don't, go ahead and create one.
+This assumes that you already have an account with Private Captcha. If you don't, go ahead and [create one](https://portal.{{< domain >}}/signup).
 
 ### Create new property
 

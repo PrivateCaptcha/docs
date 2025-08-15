@@ -4,7 +4,7 @@ type: docs
 ---
 
 > [!NOTE]
-> API is also available [here](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/PrivateCaptcha/PrivateCaptcha/refs/heads/main/docs/openapi.yaml) as Swagger / OpenAPI definition.
+> There're many [ready integrations]({{< relref "/docs/integrations" >}}) available and API is also available [here](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/PrivateCaptcha/PrivateCaptcha/refs/heads/main/docs/openapi.yaml) as Swagger / OpenAPI definition.
 
 After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by `data-solution-field` [attribute]({{< relref "/docs/reference/widget-options.md" >}})).
 
@@ -31,11 +31,11 @@ curl -X POST \
 ```
 
 > [!NOTE]
-> You can use [reCAPTCHA-compatible](https://developers.google.com/recaptcha/docs/verify) `/siteverify` endpoint instead. By default it uses reCAPTCHA v2 format. If you need v3 format, pass an additional header `X-Captcha-Compat-Version: rcV3`.
+> Usually you would not send that `POST` request yourself, but use one of our [pre-built integrations]({{< relref "/docs/integrations" >}}).
 
 ## Response
 
-Here's how successful response from `/verify` endpoint looks like:
+Here's how a successful response from `/verify` endpoint looks like:
 
 ```json
 {

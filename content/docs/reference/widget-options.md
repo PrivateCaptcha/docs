@@ -147,3 +147,17 @@ function onCaptchaSolved(widget) {
     console.log('Solved!');
 }
 ```
+
+## Explicit rendering
+
+All the above assumed that when you include the JavaScript `privatecaptcha.js`, it automatically initializes all of the elements with CSS class `private-captcha`. However, it's possible to omit that and instead do it manually in JavaScript.
+
+To achieve that, you need to add parameter `?render=explicit` to the script include:
+
+```diff {filename="index.html"}
+@@ -18,7 +18,13 @@
+- <script src="https://cdn.{{< domain >}}/widget/js/privatecaptcha.js" defer></script>
++ <script src="https://cdn.{{< domain >}}/widget/js/privatecaptcha.js?render=explicit" defer></script>
+```
+
+Then, you can use function `privateCaptcha.render(htmlElement, options)` to explicitly render captcha widget.
