@@ -3,7 +3,7 @@ title: "Migrate from reCAPTCHA"
 date: 2025-08-11T13:30:34+03:00
 ---
 
-You can migrate from Google reCAPTCHA "fast" using compatibilty mode for server-side and client-side parts or you can fully migrate to Private Captcha.
+You can migrate from Google reCAPTCHA "fast" using compatibility mode for server-side and client-side parts or you can fully migrate to Private Captcha.
 
 To proceed with migration, in Private Captcha [portal](https://portal.{{< domain >}}) you need to get a sitekey for client-side (property integrations) and API key for backend (account settings).
 
