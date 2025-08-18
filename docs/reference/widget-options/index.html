@@ -32,14 +32,14 @@ Attributes
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/widget-options/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-08-15T18:01:02+03:00" />
+<meta property="article:modified_time" content="2025-08-18T13:46:25+03:00" />
 
   <meta itemprop="name" content="Widget options">
   <meta itemprop="description" content="Here’s the minimal captcha field declaration:
 index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&gt;&lt;/div&gt; Private Captcha widget is automatically initialized on all elements with private-captcha class name.
 Attributes Apart from the required sitekey data attribute, the following optional attributes are supported:">
-  <meta itemprop="dateModified" content="2025-08-15T18:01:02+03:00">
-  <meta itemprop="wordCount" content="686">
+  <meta itemprop="dateModified" content="2025-08-18T13:46:25+03:00">
+  <meta itemprop="wordCount" content="777">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Widget options">
   <meta name="twitter:description" content="Here’s the minimal captcha field declaration:
@@ -819,7 +819,46 @@ function invisibleFinished(widget) {
 </li>
 </ul>
 <h4><code>data-lang</code><span class="hx-absolute -hx-mt-20" id="data-lang"></span>
-    <a href="#data-lang" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>data-lang</code> allows you to show widget localization in your own language. Translations are defined in the <code>widget/js/strings.js</code> file. If translation to your language is not there, feel free to contribute it.</p>
+    <a href="#data-lang" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>data-lang</code> allows you to show widget localization in your own language. Translations are defined in the <code>widget/js/strings.js</code> <a href="https://github.com/PrivateCaptcha/PrivateCaptcha/blob/main/widget/js/strings.js" target="_blank" rel="noopener">file</a>. If translation to your language is not there, feel free to contribute it.</p>
+<p>Here&rsquo;s the list of current supported languages:</p>
+<ul>
+<li>English (<code>en</code>)</li>
+<li>Deutsch (<code>de</code>)</li>
+<li>Español (<code>es</code>)</li>
+<li>Français (<code>fr</code>)</li>
+<li>Italiano (<code>it</code>)</li>
+<li>Nederlands (<code>nl</code>)</li>
+<li>Svenska (<code>sv</code>)</li>
+<li>Norsk (<code>no</code>)</li>
+<li>Polski (<code>pl</code>)</li>
+<li>Suomi (<code>fi</code>)</li>
+<li>Eesti (<code>et</code>)</li>
+</ul>
+<p>Here&rsquo;s a localized widget:</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div class="filename not-prose" dir="auto">index.html</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -32,7 +32,7 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>    &lt;div class=&#34;private-captcha&#34;
+</span></span><span class="line"><span class="cl"><span class="gi">+       data-lang=&#34;de&#34; 
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>        data-sitekey=&#34;xyz&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;/div&gt;
+</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<form class="pc-form" style="">
+    <div class="private-captcha hx-h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
+        data-theme="light"
+        data-lang="de"
+        data-styles="display: block; width: 350px;"></div>
+</form>
 <h4><code>data-theme</code><span class="hx-absolute -hx-mt-20" id="data-theme"></span>
     <a href="#data-theme" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><blockquote>
   <p>TIP: Use theme toggle on this website to check how the widget will look like</p>
@@ -837,12 +876,14 @@ function invisibleFinished(widget) {
     <div class="private-captcha hx-h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
         data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
         data-theme="light"
+        data-lang="en"
         data-styles=""></div>
 </form></td>
           <td><form class="pc-form" style="">
     <div class="private-captcha hx-h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
         data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
         data-theme="dark"
+        data-lang="en"
         data-styles=""></div>
 </form></td>
       </tr>
@@ -896,6 +937,7 @@ function invisibleFinished(widget) {
     <div class="private-captcha hx-h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
         data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
         data-theme="light"
+        data-lang="en"
         data-styles="display: block; height: 100%; font-size: 24px; --border-radius: 0.5rem; --extra-spacing: 8px;"></div>
 </form>
 <h4><code>data-store-variable</code><span class="hx-absolute -hx-mt-20" id="data-store-variable"></span>
@@ -947,6 +989,13 @@ function invisibleFinished(widget) {
       </tr>
   </tbody>
 </table>
+<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+  <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>It is also possible to set all callbacks purely from JavaScript side via <code>options</code> if you&rsquo;re using explicit rendering (<a href="#explicit-rendering" >below</a>)</p></div>
+  </div>
+</div>
 <h3>Example<span class="hx-absolute -hx-mt-20" id="example"></span>
     <a href="#example" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
@@ -996,11 +1045,11 @@ function invisibleFinished(widget) {
   </button>
 </div>
 </div>
-<p>Then, you can use function <code>privateCaptcha.render(htmlElement, options)</code> to explicitly render captcha widget.</p>
+<p>Then, you can use function <code>privateCaptcha.render(htmlElement, options)</code> to explicitly render captcha widget. <code>options</code> parameter allows to set properties with the same names as data-attributes above, taking into account the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset" target="_blank" rel="noopener">naming convention</a>. The latter also includes callbacks as JS functions.</p>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-08-15T18:01:02.000Z">August 15, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-08-18T13:46:25.000Z">August 18, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/reference/verify-api/"
         title="Verify API"
