@@ -2,9 +2,11 @@
 {{- $widgetStyle := .Get "widgetstyle" | default "" -}}
 {{- $parentStyle := .Get "parentstyle" | default "" -}}
 {{- $formClass := .Get "formclass" | default "pc-form" -}}
+{{- $lang := .Get "lang" | default "en" -}}
 <form class="{{$formClass}}" style="{{$parentStyle | safeCSS}}">
     <div class="private-captcha hx-h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
         data-puzzle-endpoint="https://api.{{ .Site.Params.privateCaptchaDomain }}/puzzle"
         data-theme="{{$theme}}"
+        data-lang="{{$lang}}"
         data-styles="{{$widgetStyle}}"></div>
 </form>

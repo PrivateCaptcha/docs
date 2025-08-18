@@ -51,7 +51,32 @@ Attribute | Values | Description
 
 #### `data-lang`
 
-`data-lang` allows you to show widget localization in your own language. Translations are defined in the `widget/js/strings.js` file. If translation to your language is not there, feel free to contribute it.
+`data-lang` allows you to show widget localization in your own language. Translations are defined in the `widget/js/strings.js` [file](https://github.com/PrivateCaptcha/PrivateCaptcha/blob/main/widget/js/strings.js). If translation to your language is not there, feel free to contribute it.
+
+Here's the list of current supported languages:
+
+- English (`en`)
+- Deutsch (`de`)
+- Español (`es`)
+- Français (`fr`)
+- Italiano (`it`)
+- Nederlands (`nl`)
+- Svenska (`sv`)
+- Norsk (`no`)
+- Polski (`pl`)
+- Suomi (`fi`)
+- Eesti (`et`)
+
+Here's a localized widget:
+```diff {filename="index.html"}
+@@ -32,7 +32,7 @@
+    <div class="private-captcha"
++       data-lang="de" 
+        data-sitekey="xyz">
+    </div>
+```
+
+{{< captchawidget lang=de widgetstyle="display: block; width: 350px;" >}}
 
 #### `data-theme`
 
@@ -132,6 +157,9 @@ Callback | Description
 `data-finished-callback` | Puzzle has been solved. You can use this callback to enable the form submit button.
 `data-errored-callback` | Puzzle endpoint is not reachable or puzzle solving has failed.
 
+> [!NOTE]
+> It is also possible to set all callbacks purely from JavaScript side via `options` if you're using explicit rendering ([below](#explicit-rendering))
+
 ### Example
 
 ```html {filename="index.html"}
@@ -160,4 +188,4 @@ To achieve that, you need to add parameter `?render=explicit` to the script incl
 + <script src="https://cdn.{{< domain >}}/widget/js/privatecaptcha.js?render=explicit" defer></script>
 ```
 
-Then, you can use function `privateCaptcha.render(htmlElement, options)` to explicitly render captcha widget.
+Then, you can use function `privateCaptcha.render(htmlElement, options)` to explicitly render captcha widget. `options` parameter allows to set properties with the same names as data-attributes above, taking into account the [naming convention](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset). The latter also includes callbacks as JS functions.
