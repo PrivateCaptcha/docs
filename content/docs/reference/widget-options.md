@@ -53,7 +53,7 @@ Attribute | Values | Description
 
 `data-lang` allows you to show widget localization in your own language. Translations are defined in the `widget/js/strings.js` [file](https://github.com/PrivateCaptcha/PrivateCaptcha/blob/main/widget/js/strings.js). If translation to your language is not there, feel free to contribute it.
 
-Here's the list of current supported languages:
+Here's the list of currently supported languages:
 
 - English (`en`)
 - Deutsch (`de`)
@@ -67,7 +67,7 @@ Here's the list of current supported languages:
 - Suomi (`fi`)
 - Eesti (`et`)
 
-Here's a localized widget:
+Here's how to localize a widget:
 ```diff {filename="index.html"}
 @@ -32,7 +32,7 @@
     <div class="private-captcha"
