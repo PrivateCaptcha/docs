@@ -643,7 +643,7 @@
 &lt;/ul&gt;
 &lt;h4&gt;&lt;code&gt;data-lang&lt;/code&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;data-lang&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#data-lang&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;data-lang&lt;/code&gt; allows you to show widget localization in your own language. Translations are defined in the &lt;code&gt;widget/js/strings.js&lt;/code&gt; &lt;a href=&#34;https://github.com/PrivateCaptcha/PrivateCaptcha/blob/main/widget/js/strings.js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;file&lt;/a&gt;. If translation to your language is not there, feel free to contribute it.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s the list of current supported languages:&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the list of currently supported languages:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;English (&lt;code&gt;en&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;Deutsch (&lt;code&gt;de&lt;/code&gt;)&lt;/li&gt;
@@ -657,7 +657,7 @@
 &lt;li&gt;Suomi (&lt;code&gt;fi&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;Eesti (&lt;code&gt;et&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Here&amp;rsquo;s a localized widget:&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how to localize a widget:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
 &lt;div class=&#34;filename not-prose&#34; dir=&#34;auto&#34;&gt;index.html&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;@@ -32,7 +32,7 @@
