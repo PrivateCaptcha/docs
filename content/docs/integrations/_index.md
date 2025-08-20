@@ -6,6 +6,7 @@ It is recommended to use one of the pre-built integrations. They use a more effi
 
 {{< cards >}}
   {{< card link="/docs/integrations/go" title="Go" subtitle="Server-side Golang library" tag="Server-side" tagType="info" >}}
+  {{< card link="/docs/integrations/php" title="PHP" subtitle="Server-side PHP library" tag="Server-side" tagType="info" >}}
   {{< card link="/docs/integrations/python" title="Python" subtitle="Server-side Python library" tag="Server-side" tagType="info" >}}
   {{< card link="/docs/integrations/dotnet" title=".NET" subtitle="Server-side .NET/C# library" tag="Server-side" tagType="info" >}}
   {{< card link="/docs/integrations/javascript" title="Javascript" subtitle="Server-side Javascript library" tag="Server-side" tagType="info" >}}
