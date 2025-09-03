@@ -585,8 +585,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;PrivateCaptcha&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;@private-captcha/private-captcha-react&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MyForm() {&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;handleCaptchaFinished&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;opts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Captcha solved!&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;opts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;solution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;());&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;handleCaptchaFinished&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;detail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Captcha solved!&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;detail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;widget&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;solution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;());&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// Submit your form here or enable the submit button
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -598,7 +598,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PrivateCaptcha&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;na&#34;&gt;siteKey&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;your-site-key-here&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;na&#34;&gt;theme&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dark&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;na&#34;&gt;finishedCallback&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;handleCaptchaFinished&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;na&#34;&gt;onFinish&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;handleCaptchaFinished&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;submit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Login&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;button&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -634,8 +634,12 @@
 &lt;/table&gt;
 &lt;h3&gt;Optional Props&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;optional-props&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#optional-props&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Please refer to the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34; &gt;official widget options&lt;/a&gt; documentation.&lt;/p&gt;
-&lt;h3&gt;Callback Props&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;callback-props&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#callback-props&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;All callback functions receive a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/&#34; &gt;captcha object&lt;/a&gt; as the only parameter.&lt;/p&gt;
+&lt;h3&gt;Event Handler Props&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;event-handler-props&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#event-handler-props&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;All event handler functions receive a &lt;code&gt;detail&lt;/code&gt; object with these properties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;detail.widget&lt;/code&gt; - &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/&#34; &gt;captcha object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;detail.element&lt;/code&gt; - The DOM element hosting the captcha&lt;/li&gt;
+&lt;/ul&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -646,23 +650,23 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;initCallback&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;(opts) =&amp;gt; void&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;onInit&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;(detail) =&amp;gt; void&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Called when captcha is initialized&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;startedCallback&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;(opts) =&amp;gt; void&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;onStart&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;(detail) =&amp;gt; void&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Called when solving starts&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;finishedCallback&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;(opts) =&amp;gt; void&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;onFinish&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;(detail) =&amp;gt; void&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Called when solving completes&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;erroredCallback&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;(opts) =&amp;gt; void&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;onError&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;(detail) =&amp;gt; void&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Called when an error occurs&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -2927,41 +2931,39 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Callbacks&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;callbacks&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#callbacks&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can set your own Javascript handlers for various lifecycle events. All callbacks receive a single argument which is the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/&#34; &gt;Captcha Object&lt;/a&gt; itself.&lt;/p&gt;
+&lt;h2&gt;Events and Callbacks&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;events-and-callbacks&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#events-and-callbacks&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Element, where &lt;code&gt;private-captcha&lt;/code&gt; class is set, will receive various lifecycle events (alternative to &lt;a href=&#34;#callbacks&#34; &gt;Callbacks&lt;/a&gt;). All events receieve a &lt;code&gt;detail&lt;/code&gt; parameter with &lt;code&gt;widget&lt;/code&gt; (&lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/&#34; &gt;Captcha Object&lt;/a&gt;) and &lt;code&gt;element&lt;/code&gt; properties. As an alternative, you can set &lt;code&gt;data&lt;/code&gt; attributes with JavaScript handlers (all callbacks receive a single argument which is the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/&#34; &gt;Captcha Object&lt;/a&gt; itself).&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
+          &lt;th&gt;Event&lt;/th&gt;
           &lt;th&gt;Callback&lt;/th&gt;
           &lt;th&gt;Description&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;privatecaptcha:init&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;data-init-callback&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Widget has received a new puzzle to solve (possibly after previous puzzle expiration).&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;privatecaptcha:start&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;data-started-callback&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Captcha started solving the puzzle.&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;privatecaptcha:finish&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;data-finished-callback&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Puzzle has been solved. You can use this callback to enable the form submit button.&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;privatecaptcha:error&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;data-errored-callback&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Puzzle endpoint is not reachable or puzzle solving has failed.&lt;/td&gt;
+          &lt;td&gt;Puzzle endpoint is not reachable or puzzle solving has failed&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx-flex hx-items-center hx-font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx-inline-block hx-align-middle hx-mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
-
-  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
-    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;It is also possible to set all callbacks purely from JavaScript side via &lt;code&gt;options&lt;/code&gt; if you&amp;rsquo;re using explicit rendering (&lt;a href=&#34;#explicit-rendering&#34; &gt;below&lt;/a&gt;)&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
 &lt;h3&gt;Example&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;example&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#example&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
@@ -3011,7 +3013,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Then, you can use function &lt;code&gt;privateCaptcha.render(htmlElement, options)&lt;/code&gt; to explicitly render captcha widget. &lt;code&gt;options&lt;/code&gt; parameter allows to set properties with the same names as data-attributes above, taking into account the &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;naming convention&lt;/a&gt;. The latter also includes callbacks as JS functions.&lt;/p&gt;
+&lt;p&gt;Then, you can use function &lt;code&gt;privateCaptcha.render(htmlElement, options)&lt;/code&gt; to explicitly render captcha widget. &lt;code&gt;options&lt;/code&gt; parameter allows to set properties with the same names as data-attributes above, taking into account the &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;naming convention&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>

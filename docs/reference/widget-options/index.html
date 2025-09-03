@@ -32,14 +32,14 @@ Attributes
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/widget-options/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2025-08-18T13:58:12+03:00" />
+<meta property="article:modified_time" content="2025-09-03T21:56:32+03:00" />
 
   <meta itemprop="name" content="Widget options">
   <meta itemprop="description" content="Here’s the minimal captcha field declaration:
 index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&gt;&lt;/div&gt; Private Captcha widget is automatically initialized on all elements with private-captcha class name.
 Attributes Apart from the required sitekey data attribute, the following optional attributes are supported:">
-  <meta itemprop="dateModified" content="2025-08-18T13:58:12+03:00">
-  <meta itemprop="wordCount" content="779">
+  <meta itemprop="dateModified" content="2025-09-03T21:56:32+03:00">
+  <meta itemprop="wordCount" content="784">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Widget options">
   <meta name="twitter:description" content="Here’s the minimal captcha field declaration:
@@ -366,9 +366,9 @@ function invisibleFinished(widget) {
             </li>
           <li>
               <a
-                href="#callbacks"
+                href="#events-and-callbacks"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Callbacks</a>
+              >Events and Callbacks</a>
             </li>
           <li>
               <a
@@ -678,7 +678,7 @@ function invisibleFinished(widget) {
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#callbacks">Callbacks
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#events-and-callbacks">Events and Callbacks
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
@@ -977,41 +977,39 @@ function invisibleFinished(widget) {
   </button>
 </div>
 </div>
-<h2>Callbacks<span class="hx-absolute -hx-mt-20" id="callbacks"></span>
-    <a href="#callbacks" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You can set your own Javascript handlers for various lifecycle events. All callbacks receive a single argument which is the <a href="/docs/reference/captcha-object/" >Captcha Object</a> itself.</p>
+<h2>Events and Callbacks<span class="hx-absolute -hx-mt-20" id="events-and-callbacks"></span>
+    <a href="#events-and-callbacks" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Element, where <code>private-captcha</code> class is set, will receive various lifecycle events (alternative to <a href="#callbacks" >Callbacks</a>). All events receieve a <code>detail</code> parameter with <code>widget</code> (<a href="/docs/reference/captcha-object/" >Captcha Object</a>) and <code>element</code> properties. As an alternative, you can set <code>data</code> attributes with JavaScript handlers (all callbacks receive a single argument which is the <a href="/docs/reference/captcha-object/" >Captcha Object</a> itself).</p>
 <table>
   <thead>
       <tr>
+          <th>Event</th>
           <th>Callback</th>
           <th>Description</th>
       </tr>
   </thead>
   <tbody>
       <tr>
+          <td><code>privatecaptcha:init</code></td>
           <td><code>data-init-callback</code></td>
           <td>Widget has received a new puzzle to solve (possibly after previous puzzle expiration).</td>
       </tr>
       <tr>
+          <td><code>privatecaptcha:start</code></td>
           <td><code>data-started-callback</code></td>
           <td>Captcha started solving the puzzle.</td>
       </tr>
       <tr>
+          <td><code>privatecaptcha:finish</code></td>
           <td><code>data-finished-callback</code></td>
           <td>Puzzle has been solved. You can use this callback to enable the form submit button.</td>
       </tr>
       <tr>
+          <td><code>privatecaptcha:error</code></td>
           <td><code>data-errored-callback</code></td>
-          <td>Puzzle endpoint is not reachable or puzzle solving has failed.</td>
+          <td>Puzzle endpoint is not reachable or puzzle solving has failed</td>
       </tr>
   </tbody>
 </table>
-<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
-  <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
-
-  <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>It is also possible to set all callbacks purely from JavaScript side via <code>options</code> if you&rsquo;re using explicit rendering (<a href="#explicit-rendering" >below</a>)</p></div>
-  </div>
-</div>
 <h3>Example<span class="hx-absolute -hx-mt-20" id="example"></span>
     <a href="#example" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
@@ -1061,11 +1059,11 @@ function invisibleFinished(widget) {
   </button>
 </div>
 </div>
-<p>Then, you can use function <code>privateCaptcha.render(htmlElement, options)</code> to explicitly render captcha widget. <code>options</code> parameter allows to set properties with the same names as data-attributes above, taking into account the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset" target="_blank" rel="noopener">naming convention</a>. The latter also includes callbacks as JS functions.</p>
+<p>Then, you can use function <code>privateCaptcha.render(htmlElement, options)</code> to explicitly render captcha widget. <code>options</code> parameter allows to set properties with the same names as data-attributes above, taking into account the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset" target="_blank" rel="noopener">naming convention</a>.</p>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-08-18T13:58:12.000Z">August 18, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-09-03T21:56:32.000Z">September 3, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/reference/verify-api/"
         title="Verify API"

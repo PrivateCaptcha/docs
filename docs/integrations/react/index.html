@@ -27,15 +27,15 @@ This is a client-side SDK for React, which is an alternative to using a standard
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/integrations/react/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2025-07-27T14:12:04+03:00" />
-<meta property="article:modified_time" content="2025-07-27T15:05:15+03:00" />
+<meta property="article:modified_time" content="2025-09-03T21:56:32+03:00" />
 
   <meta itemprop="name" content="React">
   <meta itemprop="description" content="Note
 You can use a “default way” of adding &lt;div class=&#34;private-captcha&#34; ...&gt;&lt;/div&gt; element with https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js Javascript include. But it will not work well with server-side rendering (e.g. in Next.js).
 This is a client-side SDK for React, which is an alternative to using a standard script directly.">
   <meta itemprop="datePublished" content="2025-07-27T14:12:04+03:00">
-  <meta itemprop="dateModified" content="2025-07-27T15:05:15+03:00">
-  <meta itemprop="wordCount" content="206">
+  <meta itemprop="dateModified" content="2025-09-03T21:56:32+03:00">
+  <meta itemprop="wordCount" content="219">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="React">
   <meta name="twitter:description" content="Note
@@ -649,7 +649,7 @@ This is a client-side SDK for React, which is an alternative to using a standard
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#callback-props">Callback Props
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#event-handler-props">Event Handler Props
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
@@ -719,8 +719,8 @@ This is a client-side SDK for React, which is an alternative to using a standard
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">PrivateCaptcha</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@private-captcha/private-captcha-react&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">MyForm() {</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleCaptchaFinished</span> <span class="o">=</span> <span class="p">(</span><span class="nx">opts</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Captcha solved!&#39;</span><span class="p">,</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">solution</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleCaptchaFinished</span> <span class="o">=</span> <span class="p">(</span><span class="nx">detail</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Captcha solved!&#39;</span><span class="p">,</span> <span class="nx">detail</span><span class="p">.</span><span class="nx">widget</span><span class="p">.</span><span class="nx">solution</span><span class="p">());</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// Submit your form here or enable the submit button
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">};</span>
 </span></span><span class="line"><span class="cl">
@@ -732,7 +732,7 @@ This is a client-side SDK for React, which is an alternative to using a standard
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">PrivateCaptcha</span>
 </span></span><span class="line"><span class="cl">        <span class="na">siteKey</span><span class="o">=</span><span class="s">&#34;your-site-key-here&#34;</span>
 </span></span><span class="line"><span class="cl">        <span class="na">theme</span><span class="o">=</span><span class="s">&#34;dark&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="na">finishedCallback</span><span class="o">=</span><span class="p">{</span><span class="nx">handleCaptchaFinished</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">onFinish</span><span class="o">=</span><span class="p">{</span><span class="nx">handleCaptchaFinished</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl">      <span class="p">/&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span><span class="nx">Login</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
@@ -768,8 +768,12 @@ This is a client-side SDK for React, which is an alternative to using a standard
 </table>
 <h3>Optional Props<span class="hx-absolute -hx-mt-20" id="optional-props"></span>
     <a href="#optional-props" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Please refer to the <a href="/docs/reference/widget-options/" >official widget options</a> documentation.</p>
-<h3>Callback Props<span class="hx-absolute -hx-mt-20" id="callback-props"></span>
-    <a href="#callback-props" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>All callback functions receive a <a href="/docs/reference/captcha-object/" >captcha object</a> as the only parameter.</p>
+<h3>Event Handler Props<span class="hx-absolute -hx-mt-20" id="event-handler-props"></span>
+    <a href="#event-handler-props" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>All event handler functions receive a <code>detail</code> object with these properties:</p>
+<ul>
+<li><code>detail.widget</code> - <a href="/docs/reference/captcha-object/" >captcha object</a></li>
+<li><code>detail.element</code> - The DOM element hosting the captcha</li>
+</ul>
 <table>
   <thead>
       <tr>
@@ -780,23 +784,23 @@ This is a client-side SDK for React, which is an alternative to using a standard
   </thead>
   <tbody>
       <tr>
-          <td><code>initCallback</code></td>
-          <td><code>(opts) =&gt; void</code></td>
+          <td><code>onInit</code></td>
+          <td><code>(detail) =&gt; void</code></td>
           <td>Called when captcha is initialized</td>
       </tr>
       <tr>
-          <td><code>startedCallback</code></td>
-          <td><code>(opts) =&gt; void</code></td>
+          <td><code>onStart</code></td>
+          <td><code>(detail) =&gt; void</code></td>
           <td>Called when solving starts</td>
       </tr>
       <tr>
-          <td><code>finishedCallback</code></td>
-          <td><code>(opts) =&gt; void</code></td>
+          <td><code>onFinish</code></td>
+          <td><code>(detail) =&gt; void</code></td>
           <td>Called when solving completes</td>
       </tr>
       <tr>
-          <td><code>erroredCallback</code></td>
-          <td><code>(opts) =&gt; void</code></td>
+          <td><code>onError</code></td>
+          <td><code>(detail) =&gt; void</code></td>
           <td>Called when an error occurs</td>
       </tr>
   </tbody>
@@ -826,7 +830,7 @@ This is a client-side SDK for React, which is an alternative to using a standard
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-27T15:05:15.000Z">July 27, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-09-03T21:56:32.000Z">September 3, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/integrations/dotnet/"
         title=".NET"
