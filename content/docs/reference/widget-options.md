@@ -146,19 +146,16 @@ However, in case of multiple widgets, you can assign this attribute to a variabl
 </button>
 ```
 
-## Callbacks
+## Events and Callbacks
 
-You can set your own Javascript handlers for various lifecycle events. All callbacks receive a single argument which is the [Captcha Object]({{< relref "/docs/reference/captcha-object.md" >}}) itself.
+Element, where `private-captcha` class is set, will receive various lifecycle events (alternative to [Callbacks](#callbacks)). All events receieve a `detail` parameter with `widget` ([Captcha Object]({{< relref "/docs/reference/captcha-object.md" >}})) and `element` properties. As an alternative, you can set `data` attributes with JavaScript handlers (all callbacks receive a single argument which is the [Captcha Object]({{< relref "/docs/reference/captcha-object.md" >}}) itself).
 
-Callback | Description
---- | ---
-`data-init-callback` | Widget has received a new puzzle to solve (possibly after previous puzzle expiration).
-`data-started-callback` | Captcha started solving the puzzle.
-`data-finished-callback` | Puzzle has been solved. You can use this callback to enable the form submit button.
-`data-errored-callback` | Puzzle endpoint is not reachable or puzzle solving has failed.
-
-> [!NOTE]
-> It is also possible to set all callbacks purely from JavaScript side via `options` if you're using explicit rendering ([below](#explicit-rendering))
+Event | Callback | Description
+--- | --- | ---
+`privatecaptcha:init` | `data-init-callback` | Widget has received a new puzzle to solve (possibly after previous puzzle expiration).
+`privatecaptcha:start` | `data-started-callback` | Captcha started solving the puzzle.
+`privatecaptcha:finish` | `data-finished-callback` | Puzzle has been solved. You can use this callback to enable the form submit button.
+`privatecaptcha:error` | `data-errored-callback` | Puzzle endpoint is not reachable or puzzle solving has failed
 
 ### Example
 
@@ -188,4 +185,4 @@ To achieve that, you need to add parameter `?render=explicit` to the script incl
 + <script src="https://cdn.{{< domain >}}/widget/js/privatecaptcha.js?render=explicit" defer></script>
 ```
 
-Then, you can use function `privateCaptcha.render(htmlElement, options)` to explicitly render captcha widget. `options` parameter allows to set properties with the same names as data-attributes above, taking into account the [naming convention](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset). The latter also includes callbacks as JS functions.
+Then, you can use function `privateCaptcha.render(htmlElement, options)` to explicitly render captcha widget. `options` parameter allows to set properties with the same names as data-attributes above, taking into account the [naming convention](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset).
