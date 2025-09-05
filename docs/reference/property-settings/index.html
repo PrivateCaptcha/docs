@@ -10,117 +10,34 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Configuration – Private Captcha</title>
-  <meta name="description" content="Environmental variables Required Variable Example Description STAGE prod Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/deployment/configuration/" itemprop="url" />
+<title>Property settings – Private Captcha</title>
+  <meta name="description" content="Protection of a website or a form starts with creating a property in the Portal. Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like aaaaaaaabbbbccccddddeeeeeeeeeeee. Site Key is used in the widget initialization.
+We’ll go through all property settings that you can change.
+Domain You set domain when you create the property in the Portal. You can change the property name, but you cannot change Domain." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/property-settings/" itemprop="url" />
 
-<meta property="og:title" content="Configuration" />
-<meta property="og:description" content="Environmental variables
-    Required
-    
-  
-      
-          Variable
-          Example
-          Description
-      
-  
-  
-      
-          STAGE
-          prod
-          Stage is used for building widget js code (e.g. minification) and for separation in logging.
-      
-      
-          PC_PORTAL_BASE_URL
-          portal.yourdomain.com
-          (Sub)domain where you will host PrivateCaptcha portal.
-      
-      
-          PC_API_BASE_URL
-          api.yourdomain.com
-          (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted.
-      
-      
-          PC_CDN_BASE_URL
-          cdn.yourdomain.com
-          (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.).
-      
-      
-          PC_ADMIN_EMAIL
-          admin@yourdomain.com
-          Email that will be used for admin user to login. Must be valid and functioning.
-      
-      
-          PC_EMAIL_FROM
-          no-reply@yourdomain.com
-          Sender address for various transactional emails (2FA auth, welcome email etc.)
-      
-      
-          PC_POSTGRES
-          postgres://username:pass@postgres:5432/privatecaptcha
-          Postgres connection string for backend DB. You can also specify separate values (see note below).
-      
-      
-          PC_CLICKHOUSE_HOST
-          clickhouse
-          Host (or IP address) where ClickHouse DB is running.
-      
-      
-          PC_CLICKHOUSE_DB
-          privatecaptcha
-          Database for connecting to ClickHouse.
-      
-      
-          PC_CLICKHOUSE_USER
-          captcha
-          Username for connecting to PC_CLICKHOUSE_DB.
-      
-      
-          PC_CLICKHOUSE_PASSWORD
-          qwerty12345
-          Password for PC_CLICKHOUSE_USER.
-      
-      
-          PC_USER_FINGERPRINT_KEY
-          abcdef...
-          HEX-encoded 64-character string, used as IV value for hashing user fingerprints.
-      
-      
-          PC_API_SALT
-          asdf...
-          String used as salt for creating puzzle signatures.
-      
-      
-          SMTP_ENDPOINT
-          smtp://your.provider.com:587
-          Endpoint used for sending transactional email.
-      
-      
-          SMTP_USERNAME
-          foobar
-          Username for SMTP_ENDPOINT.
-      
-      
-          SMTP_PASSWORD
-          qwerty12345
-          Password for SMTP_USERNAME.
-      
-  
+<meta property="og:title" content="Property settings" />
+<meta property="og:description" content="Protection of a website or a form starts with creating a property in the Portal. Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like aaaaaaaabbbbccccddddeeeeeeeeeeee. Site Key is used in the widget initialization.
+We&rsquo;ll go through all property settings that you can change.
 
-
-  Note" />
+Domain
+    You set domain when you create the property in the Portal. You can change the property name, but you cannot change Domain." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/deployment/configuration/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/property-settings/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2025-09-05T14:06:56+03:00" />
+<meta property="article:modified_time" content="2025-09-05T14:38:40+03:00" />
 
-<meta property="article:modified_time" content="2025-07-10T08:59:32+03:00" />
-
-  <meta itemprop="name" content="Configuration">
-  <meta itemprop="description" content="Environmental variables Required Variable Example Description STAGE prod Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note">
-  <meta itemprop="dateModified" content="2025-07-10T08:59:32+03:00">
-  <meta itemprop="wordCount" content="467">
+  <meta itemprop="name" content="Property settings">
+  <meta itemprop="description" content="Protection of a website or a form starts with creating a property in the Portal. Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like aaaaaaaabbbbccccddddeeeeeeeeeeee. Site Key is used in the widget initialization.
+We’ll go through all property settings that you can change.
+Domain You set domain when you create the property in the Portal. You can change the property name, but you cannot change Domain.">
+  <meta itemprop="datePublished" content="2025-09-05T14:06:56+03:00">
+  <meta itemprop="dateModified" content="2025-09-05T14:38:40+03:00">
+  <meta itemprop="wordCount" content="648">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Configuration">
-  <meta name="twitter:description" content="Environmental variables Required Variable Example Description STAGE prod Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note">
+  <meta name="twitter:title" content="Property settings">
+  <meta name="twitter:description" content="Protection of a website or a form starts with creating a property in the Portal. Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like aaaaaaaabbbbccccddddeeeeeeeeeeee. Site Key is used in the widget initialization.
+We’ll go through all property settings that you can change.
+Domain You set domain when you create the property in the Portal. You can change the property name, but you cannot change Domain.">
 
     <link rel="preload" href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" as="style" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
     <link href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" rel="stylesheet" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
@@ -166,7 +83,7 @@
             title="Reference"
             href="/docs/reference"
             
-            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-text-gray-600 hover:hx-text-gray-800 dark:hx-text-gray-400 dark:hover:hx-text-gray-200"
+            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-font-medium"
           >
             <span class="hx-text-center">Reference</span>
           </a><a
@@ -266,7 +183,7 @@
   >Docs
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/deployment/"
@@ -283,22 +200,13 @@
   >Quickstart
     </a>
               
-            </li><li class="hx-flex hx-flex-col open"><a
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/deployment/configuration/"
     
   >Configuration
     </a>
-  
-    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
-              <a
-                href="#environmental-variables"
-                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Environmental variables</a>
-            </li>
-          </ul>
-  
               
             </li></ul>
       </div>
@@ -369,7 +277,7 @@
               
             </li></ul>
       </div>
-            </li><li class="hx-flex hx-flex-col "><a
+            </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/reference/"
@@ -378,13 +286,34 @@
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/reference/property-settings/"
     
   >Property settings
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#domain"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Domain</a>
+            </li>
+          <li>
+              <a
+                href="#challenge-verification"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Challenge verification</a>
+            </li>
+          <li>
+              <a
+                href="#challenge-difficulty"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Challenge difficulty</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -487,7 +416,7 @@
 
     <ul class="hx-flex hx-flex-col hx-gap-1 max-md:hx-hidden">
         
-          <li class="open"><a
+          <li class=""><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/deployment/"
@@ -503,9 +432,9 @@
   >Quickstart
     </a>
               
-            </li><li class="hx-flex hx-flex-col open"><a
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/deployment/configuration/"
     
   >Configuration
@@ -579,7 +508,7 @@
               
             </li></ul>
       </div></li>
-          <li class=""><a
+          <li class="open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/reference/"
@@ -587,9 +516,9 @@
   >Reference
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/reference/property-settings/"
     
   >Property settings
@@ -701,18 +630,42 @@
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#environmental-variables">Environmental variables
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#domain">Domain
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#required">Required
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#subdomains">Subdomains
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#optional">Optional
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#localhost">Localhost
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#challenge-verification">Challenge verification
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#verification-window">Verification window
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#repeated-solutions">Repeated solutions
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#challenge-difficulty">Challenge difficulty
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#base-difficulty">Base difficulty
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#difficulty-growth">Difficulty growth
         </a>
       </li></ul>
-      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/deployment/configuration.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/reference/property-settings.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -732,217 +685,57 @@
           <a href="/docs/">Docs</a>
         </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
-          <a href="/docs/deployment/">Deployment</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Configuration</div>
+          <a href="/docs/reference/">Reference</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Property settings</div>
   </div>
 
         <div class="content">
-          <h1>Configuration</h1>
-          <h2>Environmental variables<span class="hx-absolute -hx-mt-20" id="environmental-variables"></span>
-    <a href="#environmental-variables" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Required<span class="hx-absolute -hx-mt-20" id="required"></span>
-    <a href="#required" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Variable</th>
-          <th>Example</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>STAGE</code></td>
-          <td><code>prod</code></td>
-          <td>Stage is used for building widget js code (e.g. minification) and for separation in logging.</td>
-      </tr>
-      <tr>
-          <td><code>PC_PORTAL_BASE_URL</code></td>
-          <td><code>portal.yourdomain.com</code></td>
-          <td>(Sub)domain where you will host PrivateCaptcha portal.</td>
-      </tr>
-      <tr>
-          <td><code>PC_API_BASE_URL</code></td>
-          <td><code>api.yourdomain.com</code></td>
-          <td>(Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CDN_BASE_URL</code></td>
-          <td><code>cdn.yourdomain.com</code></td>
-          <td>(Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.).</td>
-      </tr>
-      <tr>
-          <td><code>PC_ADMIN_EMAIL</code></td>
-          <td><code>admin@yourdomain.com</code></td>
-          <td>Email that will be used for admin user to login. Must be valid and functioning.</td>
-      </tr>
-      <tr>
-          <td><code>PC_EMAIL_FROM</code></td>
-          <td><code>no-reply@yourdomain.com</code></td>
-          <td>Sender address for various transactional emails (2FA auth, welcome email etc.)</td>
-      </tr>
-      <tr>
-          <td><code>PC_POSTGRES</code></td>
-          <td><code>postgres://username:pass@postgres:5432/privatecaptcha</code></td>
-          <td><a href="https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING" target="_blank" rel="noopener">Postgres connection string</a> for backend DB. You can also specify separate values (see note below).</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_HOST</code></td>
-          <td><code>clickhouse</code></td>
-          <td>Host (or IP address) where ClickHouse DB is running.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_DB</code></td>
-          <td><code>privatecaptcha</code></td>
-          <td>Database for connecting to ClickHouse.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_USER</code></td>
-          <td><code>captcha</code></td>
-          <td>Username for connecting to <code>PC_CLICKHOUSE_DB</code>.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_PASSWORD</code></td>
-          <td><code>qwerty12345</code></td>
-          <td>Password for <code>PC_CLICKHOUSE_USER</code>.</td>
-      </tr>
-      <tr>
-          <td><code>PC_USER_FINGERPRINT_KEY</code></td>
-          <td><code>abcdef...</code></td>
-          <td>HEX-encoded <code>64</code>-character string, used as IV value for hashing user fingerprints.</td>
-      </tr>
-      <tr>
-          <td><code>PC_API_SALT</code></td>
-          <td><code>asdf...</code></td>
-          <td>String used as salt for creating puzzle signatures.</td>
-      </tr>
-      <tr>
-          <td><code>SMTP_ENDPOINT</code></td>
-          <td><code>smtp://your.provider.com:587</code></td>
-          <td>Endpoint used for sending transactional email.</td>
-      </tr>
-      <tr>
-          <td><code>SMTP_USERNAME</code></td>
-          <td><code>foobar</code></td>
-          <td>Username for <code>SMTP_ENDPOINT</code>.</td>
-      </tr>
-      <tr>
-          <td><code>SMTP_PASSWORD</code></td>
-          <td><code>qwerty12345</code></td>
-          <td>Password for <code>SMTP_USERNAME</code>.</td>
-      </tr>
-  </tbody>
-</table>
-<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+          <h1>Property settings</h1>
+          <p>Protection of a website or a form starts with creating a property in the <a href="https://portal.privatecaptcha.com" target="_blank" rel="noopener">Portal</a>. Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like <code>aaaaaaaabbbbccccddddeeeeeeeeeeee</code>. Site Key is used in the <a href="/docs/reference/widget-options/" >widget initialization</a>.</p>
+<p>We&rsquo;ll go through all property settings that you can change.</p>
+<p><img src="/images/reference/property-settings.png" alt="Property settings" loading="lazy" /></p>
+<h2>Domain<span class="hx-absolute -hx-mt-20" id="domain"></span>
+    <a href="#domain" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You set domain when you create the property in the Portal. You can change the property name, but you cannot change Domain.</p>
+<h3>Subdomains<span class="hx-absolute -hx-mt-20" id="subdomains"></span>
+    <a href="#subdomains" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>By default CAPTCHA requests are only allowed on the domain that you used to create the property. If you created property with domain <code>example.com</code>, then you cannot use the same widget on <code>portal.example.com</code>. However, if you enable <em>&ldquo;Allow subdomains&rdquo;</em> checkbox, all subdomains are allowed.</p>
+<h3>Localhost<span class="hx-absolute -hx-mt-20" id="localhost"></span>
+    <a href="#localhost" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In the lieu of the &ldquo;Subdomains&rdquo; logic, localhost access (for development) is also not allowed by default (in that case anybody can use your property Site Key locally). But you can temporarily enable <em>&ldquo;Allow localhost&rdquo;</em> for development purposes. In that case you will have a &ldquo;testing&rdquo; label added to your property.</p>
+<h2>Challenge verification<span class="hx-absolute -hx-mt-20" id="challenge-verification"></span>
+    <a href="#challenge-verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Verification window<span class="hx-absolute -hx-mt-20" id="verification-window"></span>
+    <a href="#verification-window" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Captcha challenges (or &ldquo;puzzles&rdquo;) have a validity period during which they can be &ldquo;solved&rdquo; and verified. You can set validity period from few minutes to a couple of days. If a CAPTCHA solution is checked outside of validity period, it&rsquo;s considered invalid.</p>
+<h3>Repeated solutions<span class="hx-absolute -hx-mt-20" id="repeated-solutions"></span>
+    <a href="#repeated-solutions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
   <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>Instead of <code>PC_POSTGRES</code> as a connection string, you <strong>can</strong> specify <code>PC_POSTGRES_HOST</code>, <code>PC_POSTGRES_DB</code>, <code>PC_POSTGRES_USER</code>, <code>PC_POSTGRES_PASSWORD</code> separately.</p></div>
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>This is an advanced setting that allows to build different applications out of Private Captcha API.</p></div>
   </div>
 </div>
-<h3>Optional<span class="hx-absolute -hx-mt-20" id="optional"></span>
-    <a href="#optional" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Variable</th>
-          <th>Example</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>PC_HOST</code></td>
-          <td><code>localhost</code></td>
-          <td>Host where to listen for HTTP connections.</td>
-      </tr>
-      <tr>
-          <td><code>PC_PORT</code></td>
-          <td><code>8080</code></td>
-          <td>Port where to listen for HTTP connections.</td>
-      </tr>
-      <tr>
-          <td><code>PC_LOCAL_ADDRESS</code></td>
-          <td><code>localhost:9090</code></td>
-          <td>Local &ldquo;admin&rdquo; endpoint that hosts Prometheus metrics, manual maintenance jobs triggers and kubernetes liveness/readiness probes. Does not have any auth and <em>must not</em> be exposed publicly.</td>
-      </tr>
-      <tr>
-          <td><code>PC_RATE_LIMIT_HEADER</code></td>
-          <td><code>X-Real-Ip</code></td>
-          <td>HTTP header which will contain IP address of the connecting user. Is expected to come from CDN or proxy (e.g., nginx, caddy). If empty, righmost non-private address of <code>X-Forwarded-For</code> will be used.</td>
-      </tr>
-      <tr>
-          <td><code>PC_RATE_LIMIT_RPS</code></td>
-          <td><code>1.0</code></td>
-          <td>Leak rate per second (float) of default API rate limiter.</td>
-      </tr>
-      <tr>
-          <td><code>PC_RATE_LIMIT_BURST</code></td>
-          <td><code>20</code></td>
-          <td>Burst of default API rate limiter.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_ADMIN</code></td>
-          <td><code>captcha_admin</code></td>
-          <td>Separate username for ClickHouse to run migrations with. If empty, <code>PC_CLICKHOUSE_USER</code> will be used.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_ADMIN_PASSWORD</code></td>
-          <td><code>qwerty12345</code></td>
-          <td>Password for <code>PC_CLICKHOUSE_ADMIN</code>.</td>
-      </tr>
-      <tr>
-          <td><code>PC_POSTGRES_ADMIN</code></td>
-          <td><code>captcha_admin</code></td>
-          <td>Separate username for Postgres to run migrations with. If empty, <code>PC_POSTGRES_USER</code> (or <code>PC_POSTGRES</code>) will be used.</td>
-      </tr>
-      <tr>
-          <td><code>PC_POSTGRES_ADMIN_PASSWORD</code></td>
-          <td><code>qwerty12345</code></td>
-          <td>Password for <code>PC_POSTGRES_ADMIN</code>.</td>
-      </tr>
-      <tr>
-          <td><code>PC_MAINTENANCE_MODE</code></td>
-          <td><code>true</code></td>
-          <td>Boolean (<code>1</code>, <code>y</code>, <code>true</code>) value if server is in maintenance mode, during which communications with databases are offline, but APIs (and cache) are functional.</td>
-      </tr>
-      <tr>
-          <td><code>PC_REGISTRATION_ALLOWED</code></td>
-          <td><code>true</code></td>
-          <td>Boolean (<code>1</code>, <code>y</code>, <code>true</code>) value if this instance of PrivateCaptcha has registration page open.</td>
-      </tr>
-      <tr>
-          <td><code>PC_HEALTHCHECK_INTERVAL</code></td>
-          <td><code>60</code></td>
-          <td>Integer value that defines how frequently in seconds we perform internal health check of DB instances and http server. Defaults to <code>5</code> in prod and <code>60</code> in dev.</td>
-      </tr>
-      <tr>
-          <td><code>PC_VERBOSE</code></td>
-          <td><code>true</code></td>
-          <td>Boolean (<code>1</code>, <code>y</code>, <code>true</code>) to indicate verbose logging (trace level).</td>
-      </tr>
-  </tbody>
-</table>
-<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
-  <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
-
-  <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>&ldquo;Default&rdquo; rate limiter means the one for public APIs (<code>/puzzle</code>, <code>/siteverify</code> and some others). Various other APIs have pre-configured hardcoded limits, compiled in.</p></div>
-  </div>
-</div>
-<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-amber-200 hx-bg-amber-100 hx-text-amber-900 dark:hx-border-amber-200/30 dark:hx-bg-amber-900/30 dark:hx-text-amber-200">
-  <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
-
-  <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>It&rsquo;s not recommended to modify leak rate configuration unless you really know what you&rsquo;re doing.</p></div>
-  </div>
-</div>
+<p>By default you cannot submit a solution to the same CAPTCHA puzzle more than once. Second time it will be considered invalid. This is a protection against so called &ldquo;replay attack&rdquo;, where a malicious actor solves puzzle only once, but sends your form or accesses your page multiple times.</p>
+<p>However, there are cases when you want to allow this. One example if when Private Captcha is used as a proxy in front of your website, like in the use-case of AI scrapers protection (or API endpoints protection). In such case when the user requests a webpage with a valid solution (solved challenge/puzzle), we want to grant them access, up to a certain number of times.</p>
+<p>This is where the setting with the number of repeated solutions comes into play. If you set the value to, say, <code>5</code>, it means user can solve the CAPTCHA puzzle once to access your resources <code>5</code> times before being requested to pass another challenge. The exact number you want to use is the trade off between annoying your user base and protecting your resources against automated access or AI scrapers.</p>
+<h2>Challenge difficulty<span class="hx-absolute -hx-mt-20" id="challenge-difficulty"></span>
+    <a href="#challenge-difficulty" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Each CAPTCHA challenge has a certain &ldquo;difficulty&rdquo;. Difficulty corresponds to the amount of resource the client has to use in order to &ldquo;solve&rdquo; the challenge. The higher the difficulty, more resources are required to &ldquo;solve&rdquo; (pass) the challenge.</p>
+<p>Private Captcha offers dynamic (automatically scaled) difficulty out of the box in all plans. This means when there are more requests, the difficulty of each subsequent challenge will grow, and when there are less requests, it will fall back to base settings. This is the basis of the security of scale.</p>
+<h3>Base difficulty<span class="hx-absolute -hx-mt-20" id="base-difficulty"></span>
+    <a href="#base-difficulty" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This is the &ldquo;default&rdquo; challenge difficulty level when there are no user requests at all. You can test how does it feel using the playground right below those settings.</p>
+<h3>Difficulty growth<span class="hx-absolute -hx-mt-20" id="difficulty-growth"></span>
+    <a href="#difficulty-growth" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>When user (or bots) requests to your resources (websites, forms, API) keep coming, Private Captcha automatically scales the difficulty. You have 3 options of how fast the difficulty changes based on the number of requests:</p>
+<ul>
+<li><strong>Constant</strong> (difficulty does not change at all and the value you set will always be returned)</li>
+<li><strong>Slow</strong> (difficulty changes slower than usual, it will take more requests to increase the difficulty on average)</li>
+<li><strong>Normal</strong> (default setting of difficulty growth)</li>
+<li><strong>Fast</strong> (difficulty growth is very reactive and will grow faster as more requests come)</li>
+</ul>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-07-10T08:59:32.000Z">July 10, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-09-05T14:38:40.000Z">September 5, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="/docs/deployment/quickstart/"
-        title="Quickstart"
-        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
-      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Quickstart</a></div>
+        href="/docs/reference/captcha-object/"
+        title="Captcha object"
+        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
+      >Captcha object<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
