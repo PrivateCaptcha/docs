@@ -148,7 +148,7 @@ However, in case of multiple widgets, you can assign this attribute to a variabl
 
 ## Events and Callbacks
 
-Element, where `private-captcha` class is set, will receive various lifecycle events (alternative to [Callbacks](#callbacks)). All events receieve a `detail` parameter with `widget` ([Captcha Object]({{< relref "/docs/reference/captcha-object.md" >}})) and `element` properties. As an alternative, you can set `data` attributes with JavaScript handlers (all callbacks receive a single argument which is the [Captcha Object]({{< relref "/docs/reference/captcha-object.md" >}}) itself).
+Element, where `private-captcha` class is set, will receive various lifecycle events (alternative to [Callbacks](#callbacks)). All events receive a `detail` parameter with `widget` ([Captcha Object]({{< relref "/docs/reference/captcha-object.md" >}})) and `element` properties. As an alternative, you can set `data` attributes with JavaScript handlers (all callbacks receive a single argument which is the [Captcha Object]({{< relref "/docs/reference/captcha-object.md" >}}) itself).
 
 Event | Callback | Description
 --- | --- | ---
