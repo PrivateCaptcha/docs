@@ -5,6 +5,7 @@ title: Integrations
 It is recommended to use one of the pre-built integrations. They use a more efficient API than reCAPTCHA-compatible `/siteverify` API, include retry mechanism and are officially supported.
 
 {{< cards >}}
+  {{< card link="/docs/integrations/wordpress" title="WordPress" subtitle="WordPress plugin" tag="All-in-one" tagType="debug" >}}
   {{< card link="/docs/integrations/go" title="Go" subtitle="Server-side Golang library" tag="Server-side" tagType="info" >}}
   {{< card link="/docs/integrations/php" title="PHP" subtitle="Server-side PHP library" tag="Server-side" tagType="info" >}}
   {{< card link="/docs/integrations/python" title="Python" subtitle="Server-side Python library" tag="Server-side" tagType="info" >}}
