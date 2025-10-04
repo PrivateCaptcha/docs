@@ -1903,6 +1903,11 @@
           &lt;td&gt;String used as salt for creating puzzle signatures.&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_XSRF_KEY&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;jkl;...&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;String used as XSRF key for signing tokens&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;SMTP_ENDPOINT&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;smtp://your.provider.com:587&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Endpoint used for sending transactional email.&lt;/td&gt;
