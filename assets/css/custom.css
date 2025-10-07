@@ -2,6 +2,11 @@
   --primary-hue: 180deg;
   --primary-saturation: 71%;
   --primary-lightness: 32%;
+  --image-zoom-background-color: #fff;
+}
+
+html[class~="dark"] {
+  --image-zoom-background-color: #111111;
 }
 
 .pc-form {

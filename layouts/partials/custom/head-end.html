@@ -27,3 +27,15 @@ function invisibleFinished(widget) {
 }
 </script>
 {{- end -}}
+{{- if .Params.medium_zoom_selector -}}
+<script defer src="/js/medium-zoom.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        mediumZoom({{ .Params.medium_zoom_selector |  safeJSStr }}, {
+            margin: 40,
+            background: 'var(--image-zoom-background-color)',
+            scrollOffset: 0
+        })
+    });
+</script>
+{{- end -}}
