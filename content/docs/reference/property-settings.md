@@ -11,17 +11,27 @@ We'll go through all property settings that you can change.
 
 ## Domain
 
-You set domain when you create the property in the Portal. You can change the property name, but you cannot change Domain.
+![Enter name and domain](/images/integrations/new-wordpress-site.png)
+
+You set domain when you create the property in the Portal. You can change the property name, but you **cannot** change Domain in settings.
 
 ### Subdomains
+
+![Property settings subdomains](/images/reference/property-settings-subdomains.png)
 
 By default CAPTCHA requests are only allowed on the domain that you used to create the property. If you created property with domain `example.com`, then you cannot use the same widget on `portal.example.com`. However, if you enable _"Allow subdomains"_ checkbox, all subdomains are allowed.
 
 ### Localhost
 
+![Property settings localhost](/images/reference/property-settings-localhost.png)
+
 In the lieu of the "Subdomains" logic, localhost access (for development) is also not allowed by default (in that case anybody can use your property Site Key locally). But you can temporarily enable _"Allow localhost"_ for development purposes. In that case you will have a "testing" label added to your property.
 
 ## Challenge verification
+
+There're 2 important settings in this section:
+
+![Property settings verification](/images/reference/property-settings-verification.png)
 
 ### Verification window
 
@@ -41,6 +51,8 @@ This is where the setting with the number of repeated solutions comes into play.
 ## Challenge difficulty
 
 Each CAPTCHA challenge has a certain "difficulty". Difficulty corresponds to the amount of resource the client has to use in order to "solve" the challenge. The higher the difficulty, more resources are required to "solve" (pass) the challenge.
+
+![Property settings difficulty](/images/reference/property-settings-difficulty.png)
 
 Private Captcha offers dynamic (automatically scaled) difficulty out of the box in all plans. This means when there are more requests, the difficulty of each subsequent challenge will grow, and when there are less requests, it will fall back to base settings. This is the basis of the security of scale.
 
