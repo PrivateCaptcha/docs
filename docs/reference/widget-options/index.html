@@ -51,7 +51,7 @@ Attributes Apart from the required sitekey data attribute, the following optiona
 
 
 
-  <link href="/css/custom.min.a8bf430dcfd28d67c861066d56acc74274ec945ad845b75243d6bb0ea68f5205.css" rel="stylesheet" integrity="sha256-qL9DDc/SjWfIYQZtVqzHQnTslFrYRbdSQ9a7DqaPUgU=" />
+  <link href="/css/custom.min.13fc00f0b1af30f694163a2aac9d17fe78de45823bf31d17c9f6bfdef5a50d0f.css" rel="stylesheet" integrity="sha256-E/wA8LGvMPaUFjoqrJ0X/njeRYI78x0Xyfa/3vWlDQ8=" />
 
 
   <script>
@@ -102,6 +102,15 @@ function invisibleFinished(widget) {
         document.getElementById('checkmark').classList.add('hidden');
     }, 3000);
 }
+</script><script defer src="/js/medium-zoom.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        mediumZoom("article .content p:not(:has(a)) > img", {
+            margin: 40,
+            background: 'var(--image-zoom-background-color)',
+            scrollOffset: 0
+        })
+    });
 </script>
 </head>
 <body dir="ltr"><div class="nav-container hx-sticky hx-top-0 hx-z-20 hx-w-full hx-bg-transparent print:hx-hidden">
