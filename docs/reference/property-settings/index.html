@@ -13,31 +13,31 @@
 <title>Property settings – Private Captcha</title>
   <meta name="description" content="Protection of a website or a form starts with creating a property in the Portal. Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like aaaaaaaabbbbccccddddeeeeeeeeeeee. Site Key is used in the widget initialization.
 We’ll go through all property settings that you can change.
-Domain You set domain when you create the property in the Portal. You can change the property name, but you cannot change Domain." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/property-settings/" itemprop="url" />
+Domain " /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/property-settings/" itemprop="url" />
 
 <meta property="og:title" content="Property settings" />
 <meta property="og:description" content="Protection of a website or a form starts with creating a property in the Portal. Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like aaaaaaaabbbbccccddddeeeeeeeeeeee. Site Key is used in the widget initialization.
 We&rsquo;ll go through all property settings that you can change.
 
 Domain
-    You set domain when you create the property in the Portal. You can change the property name, but you cannot change Domain." />
+    " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/property-settings/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2025-09-05T14:06:56+03:00" />
-<meta property="article:modified_time" content="2025-09-05T14:38:40+03:00" />
+<meta property="article:modified_time" content="2025-10-07T17:55:14+03:00" />
 
   <meta itemprop="name" content="Property settings">
   <meta itemprop="description" content="Protection of a website or a form starts with creating a property in the Portal. Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like aaaaaaaabbbbccccddddeeeeeeeeeeee. Site Key is used in the widget initialization.
 We’ll go through all property settings that you can change.
-Domain You set domain when you create the property in the Portal. You can change the property name, but you cannot change Domain.">
+Domain">
   <meta itemprop="datePublished" content="2025-09-05T14:06:56+03:00">
-  <meta itemprop="dateModified" content="2025-09-05T14:38:40+03:00">
-  <meta itemprop="wordCount" content="648">
+  <meta itemprop="dateModified" content="2025-10-07T17:55:14+03:00">
+  <meta itemprop="wordCount" content="657">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Property settings">
   <meta name="twitter:description" content="Protection of a website or a form starts with creating a property in the Portal. Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like aaaaaaaabbbbccccddddeeeeeeeeeeee. Site Key is used in the widget initialization.
 We’ll go through all property settings that you can change.
-Domain You set domain when you create the property in the Portal. You can change the property name, but you cannot change Domain.">
+Domain">
 
     <link rel="preload" href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" as="style" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
     <link href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" rel="stylesheet" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
@@ -720,13 +720,18 @@ Domain You set domain when you create the property in the Portal. You can change
 <p>We&rsquo;ll go through all property settings that you can change.</p>
 <p><img src="/images/reference/property-settings.png" alt="Property settings" loading="lazy" /></p>
 <h2>Domain<span class="hx-absolute -hx-mt-20" id="domain"></span>
-    <a href="#domain" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You set domain when you create the property in the Portal. You can change the property name, but you cannot change Domain.</p>
+    <a href="#domain" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><img src="/images/integrations/new-wordpress-site.png" alt="Enter name and domain" loading="lazy" /></p>
+<p>You set domain when you create the property in the Portal. You can change the property name, but you <strong>cannot</strong> change Domain in settings.</p>
 <h3>Subdomains<span class="hx-absolute -hx-mt-20" id="subdomains"></span>
-    <a href="#subdomains" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>By default CAPTCHA requests are only allowed on the domain that you used to create the property. If you created property with domain <code>example.com</code>, then you cannot use the same widget on <code>portal.example.com</code>. However, if you enable <em>&ldquo;Allow subdomains&rdquo;</em> checkbox, all subdomains are allowed.</p>
+    <a href="#subdomains" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><img src="/images/reference/property-settings-subdomains.png" alt="Property settings subdomains" loading="lazy" /></p>
+<p>By default CAPTCHA requests are only allowed on the domain that you used to create the property. If you created property with domain <code>example.com</code>, then you cannot use the same widget on <code>portal.example.com</code>. However, if you enable <em>&ldquo;Allow subdomains&rdquo;</em> checkbox, all subdomains are allowed.</p>
 <h3>Localhost<span class="hx-absolute -hx-mt-20" id="localhost"></span>
-    <a href="#localhost" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In the lieu of the &ldquo;Subdomains&rdquo; logic, localhost access (for development) is also not allowed by default (in that case anybody can use your property Site Key locally). But you can temporarily enable <em>&ldquo;Allow localhost&rdquo;</em> for development purposes. In that case you will have a &ldquo;testing&rdquo; label added to your property.</p>
+    <a href="#localhost" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><img src="/images/reference/property-settings-localhost.png" alt="Property settings localhost" loading="lazy" /></p>
+<p>In the lieu of the &ldquo;Subdomains&rdquo; logic, localhost access (for development) is also not allowed by default (in that case anybody can use your property Site Key locally). But you can temporarily enable <em>&ldquo;Allow localhost&rdquo;</em> for development purposes. In that case you will have a &ldquo;testing&rdquo; label added to your property.</p>
 <h2>Challenge verification<span class="hx-absolute -hx-mt-20" id="challenge-verification"></span>
-    <a href="#challenge-verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Verification window<span class="hx-absolute -hx-mt-20" id="verification-window"></span>
+    <a href="#challenge-verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>There&rsquo;re 2 important settings in this section:</p>
+<p><img src="/images/reference/property-settings-verification.png" alt="Property settings verification" loading="lazy" /></p>
+<h3>Verification window<span class="hx-absolute -hx-mt-20" id="verification-window"></span>
     <a href="#verification-window" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Captcha challenges (or &ldquo;puzzles&rdquo;) have a validity period during which they can be &ldquo;solved&rdquo; and verified. You can set validity period from few minutes to a couple of days. If a CAPTCHA solution is checked outside of validity period, it&rsquo;s considered invalid.</p>
 <h3>Repeated solutions<span class="hx-absolute -hx-mt-20" id="repeated-solutions"></span>
     <a href="#repeated-solutions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
@@ -741,6 +746,7 @@ Domain You set domain when you create the property in the Portal. You can change
 <p>This is where the setting with the number of repeated solutions comes into play. If you set the value to, say, <code>5</code>, it means user can solve the CAPTCHA puzzle once to access your resources <code>5</code> times before being requested to pass another challenge. The exact number you want to use is the trade off between annoying your user base and protecting your resources against automated access or AI scrapers.</p>
 <h2>Challenge difficulty<span class="hx-absolute -hx-mt-20" id="challenge-difficulty"></span>
     <a href="#challenge-difficulty" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Each CAPTCHA challenge has a certain &ldquo;difficulty&rdquo;. Difficulty corresponds to the amount of resource the client has to use in order to &ldquo;solve&rdquo; the challenge. The higher the difficulty, more resources are required to &ldquo;solve&rdquo; (pass) the challenge.</p>
+<p><img src="/images/reference/property-settings-difficulty.png" alt="Property settings difficulty" loading="lazy" /></p>
 <p>Private Captcha offers dynamic (automatically scaled) difficulty out of the box in all plans. This means when there are more requests, the difficulty of each subsequent challenge will grow, and when there are less requests, it will fall back to base settings. This is the basis of the security of scale.</p>
 <h3>Base difficulty<span class="hx-absolute -hx-mt-20" id="base-difficulty"></span>
     <a href="#base-difficulty" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This is the &ldquo;default&rdquo; challenge difficulty level when there are no user requests at all. You can test how does it feel using the playground right below those settings.</p>
@@ -755,7 +761,7 @@ Domain You set domain when you create the property in the Portal. You can change
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-09-05T14:38:40.000Z">September 5, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-10-07T17:55:14.000Z">October 7, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/reference/captcha-object/"
         title="Captcha object"
