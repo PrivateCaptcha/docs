@@ -79,15 +79,13 @@ Now, open login dialog for your WordPress installation (e.g. in Private browser 
 
 {{% /steps %}}
 
-## 
-
 ## Supported Forms
 
 - WordPress Login Form
 - WordPress Registration Form
 - WordPress Password Reset Form
 - WordPress Comment Forms (logged-in and guest users)
-- _More forms support (including popular plugins) are currently in progress_
+- _More forms support (including popular plugins) are currently **in progress**_
 
 ## WP-CLI Commands
 
