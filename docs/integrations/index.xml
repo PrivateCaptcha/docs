@@ -77,6 +77,7 @@
 &lt;li&gt;WordPress Registration Form&lt;/li&gt;
 &lt;li&gt;WordPress Password Reset Form&lt;/li&gt;
 &lt;li&gt;WordPress Comment Forms (logged-in and guest users)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;More forms support (including popular plugins) are currently in progress&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;WP-CLI Commands&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;wp-cli-commands&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#wp-cli-commands&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Emergency management when locked out:&lt;/p&gt;
