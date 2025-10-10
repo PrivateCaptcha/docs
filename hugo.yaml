@@ -65,6 +65,7 @@ params:
   displayUpdatedDate: true
   dateFormat: "January 2, 2006"
   privateCaptchaDomain: "privatecaptcha.com"
+  externalLinkDecoration: true
 
   page:
     width: wide
