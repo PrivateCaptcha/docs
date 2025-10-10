@@ -353,7 +353,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;form class=&#34;pc-form&#34; style=&#34;&#34;&gt;
-    &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
+    &lt;div class=&#34;private-captcha hx:h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
         data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
         data-theme=&#34;light&#34;
         data-lang=&#34;en&#34;
@@ -739,7 +739,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;form class=&#34;pc-form&#34; style=&#34;&#34;&gt;
-    &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
+    &lt;div class=&#34;private-captcha hx:h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
         data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
         data-theme=&#34;light&#34;
         data-lang=&#34;de&#34;
@@ -759,14 +759,14 @@
   &lt;tbody&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;form class=&#34;pc-form&#34; style=&#34;&#34;&gt;
-    &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
+    &lt;div class=&#34;private-captcha hx:h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
         data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
         data-theme=&#34;light&#34;
         data-lang=&#34;en&#34;
         data-styles=&#34;&#34;&gt;&lt;/div&gt;
 &lt;/form&gt;&lt;/td&gt;
           &lt;td&gt;&lt;form class=&#34;pc-form&#34; style=&#34;&#34;&gt;
-    &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
+    &lt;div class=&#34;private-captcha hx:h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
         data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
         data-theme=&#34;dark&#34;
         data-lang=&#34;en&#34;
@@ -819,8 +819,8 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;form class=&#34;pc-form hx-shadow-lg hx-rounded-lg&#34; style=&#34;max-width; 100%; width: 500px; height: 160px;&#34;&gt;
-    &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
+&lt;form class=&#34;pc-form hx:shadow-lg hx:rounded-lg&#34; style=&#34;max-width; 100%; width: 500px; height: 160px;&#34;&gt;
+    &lt;div class=&#34;private-captcha hx:h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
         data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
         data-theme=&#34;light&#34;
         data-lang=&#34;en&#34;

@@ -2577,7 +2577,7 @@
 &lt;/div&gt;
 &lt;button
   type=&#34;button&#34;
-  class=&#34;not-prose hx-font-medium hx-cursor-pointer hx-px-6 hx-py-3 hx-rounded-full hx-text-center hx-text-white hx-inline-block hx-bg-primary-600 hover:hx-bg-primary-700 focus:hx-outline-none focus:hx-ring-4 focus:hx-ring-primary-300 dark:hx-bg-primary-600 dark:hover:hx-bg-primary-700 dark:focus:hx-ring-primary-800 hx-transition-all hx-ease-in hx-duration-200&#34;
+  class=&#34;not-prose hx:font-medium hx:cursor-pointer hx:px-6 hx:py-3 hx:rounded-full hx:text-center hx:text-white hx:inline-block hx:bg-primary-600 hx:hover:bg-primary-700 hx:focus:outline-none hx:focus:ring-4 hx:focus:ring-primary-300 hx:dark:bg-primary-600 hx:dark:hover:bg-primary-700 hx:dark:focus:ring-primary-800 hx:transition-all hx:ease-in hx:duration-200&#34;
   onclick=&#34;window.privateCaptcha.autoWidget.execute()&#34;
 &gt;
         &lt;svg id=&#34;spinner&#34; class=&#34;spinner animate-spin hidden&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34;&gt;
@@ -2654,7 +2654,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;form class=&#34;pc-form&#34; style=&#34;&#34;&gt;
-    &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
+    &lt;div class=&#34;private-captcha hx:h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
         data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
         data-theme=&#34;light&#34;
         data-lang=&#34;en&#34;
@@ -3040,7 +3040,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;form class=&#34;pc-form&#34; style=&#34;&#34;&gt;
-    &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
+    &lt;div class=&#34;private-captcha hx:h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
         data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
         data-theme=&#34;light&#34;
         data-lang=&#34;de&#34;
@@ -3060,14 +3060,14 @@
   &lt;tbody&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;form class=&#34;pc-form&#34; style=&#34;&#34;&gt;
-    &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
+    &lt;div class=&#34;private-captcha hx:h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
         data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
         data-theme=&#34;light&#34;
         data-lang=&#34;en&#34;
         data-styles=&#34;&#34;&gt;&lt;/div&gt;
 &lt;/form&gt;&lt;/td&gt;
           &lt;td&gt;&lt;form class=&#34;pc-form&#34; style=&#34;&#34;&gt;
-    &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
+    &lt;div class=&#34;private-captcha hx:h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
         data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
         data-theme=&#34;dark&#34;
         data-lang=&#34;en&#34;
@@ -3120,8 +3120,8 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;form class=&#34;pc-form hx-shadow-lg hx-rounded-lg&#34; style=&#34;max-width; 100%; width: 500px; height: 160px;&#34;&gt;
-    &lt;div class=&#34;private-captcha hx-h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
+&lt;form class=&#34;pc-form hx:shadow-lg hx:rounded-lg&#34; style=&#34;max-width; 100%; width: 500px; height: 160px;&#34;&gt;
+    &lt;div class=&#34;private-captcha hx:h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
         data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
         data-theme=&#34;light&#34;
         data-lang=&#34;en&#34;
