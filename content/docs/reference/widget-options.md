@@ -159,19 +159,38 @@ Event | Callback | Description
 
 ### Example
 
+
+{{< tabs items="Callback,Event" >}}
+{{< tab >}}
+HTML:
 ```html {filename="index.html"}
 <form>
-    <div class="private-captcha"
-        data-finished-callback="onCaptchaSolved">
+    <div class="private-captcha" data-finished-callback="onCaptchaSolved">
     </div>
 </form>
 ```
-
+Javascript:
 ```javascript {filename="script.js"}
 function onCaptchaSolved(widget) {
     console.log('Solved!');
 }
 ```
+{{< /tab >}}
+{{< tab >}}
+HTML:
+```html {filename="index.html"}
+<form>
+    <div class="private-captcha" id="myCaptchaWidget">
+    </div>
+</form>
+```
+Javascript:
+```javascript {filename="script.js"}
+const captchaElement = document.getElementById('myCaptchaWidget');
+captchaElement.addEventListener('privatecaptcha:finish', (event) => console.log(event.detail.element));
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Explicit rendering
 
