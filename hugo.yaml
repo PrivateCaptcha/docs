@@ -44,7 +44,7 @@ menu:
         type: search
     - name: GitHub
       weight: 6
-      url: "https://github.com/PrivateCaptcha/docs"
+      url: "https://github.com/PrivateCaptcha/PrivateCaptcha"
       params:
         icon: github
     - name: Website
@@ -71,6 +71,7 @@ params:
     width: wide
 
   navbar:
+    width: wide
     displayTitle: false
     displayLogo: true
     logo:
@@ -81,6 +82,7 @@ params:
       height: 40
 
   footer:
+    width: wide
     displayCopyright: true
     displayPoweredBy: false
 
