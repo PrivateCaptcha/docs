@@ -127,7 +127,7 @@ There're 2 things you can do: changing `font-size` scales everything inside the 
 </form>
 ```
 
-{{< captchawidget formclass="pc-form hx-shadow-lg hx-rounded-lg" parentstyle="max-width; 100%; width: 500px; height: 160px;" widgetstyle="display: block; height: 100%; font-size: 24px; --border-radius: 0.5rem; --extra-spacing: 8px;" >}}
+{{< captchawidget formclass="pc-form hx:shadow-lg hx:rounded-lg" parentstyle="max-width; 100%; width: 500px; height: 160px;" widgetstyle="display: block; height: 100%; font-size: 24px; --border-radius: 0.5rem; --extra-spacing: 8px;" >}}
 
 #### `data-store-variable`
 
