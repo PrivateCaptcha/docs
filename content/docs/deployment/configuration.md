@@ -52,7 +52,7 @@ Variable | Example | Description
 `PC_VERBOSE` | `true` | Boolean (`1`, `y`, `true`) to indicate verbose logging (trace level).
 
 > [!NOTE]
-"Default" rate limiter means the one for public APIs (`/puzzle`, `/siteverify` and some others). Various other APIs have pre-configured hardcoded limits, compiled in.
+"Default" rate limiter means the one for public APIs (`/puzzle`, `/verify` and some others). Various other APIs have pre-configured hardcoded limits, compiled in.
 
 > [!WARNING]
-> It's not recommended to modify leak rate configuration unless you really know what you're doing.
+> It's not recommended to modify leak rate configuration unless you **really** know what you're doing.
