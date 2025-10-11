@@ -65,7 +65,7 @@ Large widget
 
 <meta
   property="article:modified_time"
-  content="2025-10-11T17:10:12+03:00">
+  content="2025-10-11T17:19:47+03:00">
 
 
 
@@ -74,7 +74,7 @@ Large widget
 Full-width widget The only thing you need to do is to add display: block to data-styles (and make sure form itself is wide enough).
 WidgetHTML &lt;form&gt; &lt;div class=&#34;private-captcha&#34; data-styles=&#34;display: block;&#34;&gt; &lt;/div&gt; &lt;/form&gt; Large widget There’re 2 things you can do: changing font-size scales everything inside the widget and stretching widget itself is done with display attribute (which by default is inline-block).">
   <meta itemprop="datePublished" content="2025-10-11T16:23:09+03:00">
-  <meta itemprop="dateModified" content="2025-10-11T17:10:12+03:00">
+  <meta itemprop="dateModified" content="2025-10-11T17:19:47+03:00">
   <meta itemprop="wordCount" content="348">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Widget customization">
@@ -475,9 +475,9 @@ function invisibleFinished(widget) {
             </li>
           <li>
               <a
-                href="#autoscaling-size"
+                href="#responsive-size"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Autoscaling size</a>
+              >Responsive size</a>
             </li>
           <li>
               <a
@@ -830,7 +830,7 @@ function invisibleFinished(widget) {
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#autoscaling-size">Autoscaling size
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#responsive-size">Responsive size
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
@@ -866,7 +866,7 @@ function invisibleFinished(widget) {
 
         <div class="content">
           <h1>Widget customization</h1>
-          <p>This tutorial is mostly a collection of <strong>visual</strong> changes to the widget through <code>data-styles</code> attribute.</p>
+          <p>This tutorial is mostly a collection of <strong>visual</strong> changes to the widget through <code>data-styles</code> <a href="/docs/reference/widget-options/#data-styles">attribute</a>.</p>
 <h2>Full-width widget<span class="hx:absolute hx:-mt-20" id="full-width-widget"></span>
     <a href="#full-width-widget" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The only thing you need to do is to add <code>display: block</code> to <code>data-styles</code> (and make sure <code>form</code> itself is wide enough).</p>
 <div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
@@ -1113,8 +1113,8 @@ function invisibleFinished(widget) {
 </div>
 
 </div>
-<h2>Autoscaling size<span class="hx:absolute hx:-mt-20" id="autoscaling-size"></span>
-    <a href="#autoscaling-size" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For mobile clients we want to show a smaller widget. We can achieve this using <code>font-size</code> and <code>clamp</code> CSS built-in to have smth like <code>font-size: clamp(18px, 4vw, 20px)</code>. Trick can be also used to things like <code>--extra-spacing</code>.</p>
+<h2>Responsive size<span class="hx:absolute hx:-mt-20" id="responsive-size"></span>
+    <a href="#responsive-size" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For mobile clients we want to show a smaller widget. We can achieve this using <code>font-size</code> and <code>clamp</code> CSS built-in to have smth like <code>font-size: clamp(18px, 4vw, 20px)</code>. Trick can be also used to things like <code>--extra-spacing</code>.</p>
 <div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
   <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800"><button
         class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
@@ -1216,7 +1216,7 @@ function invisibleFinished(widget) {
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-11T17:10:12.000Z">October 11, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-11T17:19:47.000Z">October 11, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/tutorials/migrate-from-recaptcha/"
         title="Migrate from reCAPTCHA"
