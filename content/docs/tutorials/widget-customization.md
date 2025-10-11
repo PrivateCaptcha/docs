@@ -4,7 +4,7 @@ date: 2025-10-11T16:23:09+03:00
 captcha_scripts: true
 ---
 
-This tutorial is mostly a collection of **visual** changes to the widget through `data-styles` attribute.
+This tutorial is mostly a collection of **visual** changes to the widget through `data-styles` [attribute]({{< relref "/docs/reference/widget-options.md#data-styles" >}}).
 
 ## Full-width widget
 
@@ -118,7 +118,7 @@ Here's how to make a red widget. You need to override `--border` (obviously), th
 
 {{< /tabs >}}
 
-## Autoscaling size
+## Responsive size
 
 For mobile clients we want to show a smaller widget. We can achieve this using `font-size` and `clamp` CSS built-in to have smth like `font-size: clamp(18px, 4vw, 20px)`. Trick can be also used to things like `--extra-spacing`.
 
