@@ -8,20 +8,47 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>.NET – Private Captcha</title>
-  <meta name="description" content=" Note
-You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just C#-idiomatic implementation with convenience features." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/integrations/dotnet/" itemprop="url" />
+<title>Widget customization – Private Captcha</title>
+  <meta name="description" content="This tutorial is mostly a collection of visual changes to the widget through data-styles attribute.
+Full-width widget The only thing you need to do is to add display: block to data-styles (and make sure form itself is wide enough).
+WidgetHTML &lt;form&gt; &lt;div class=&#34;private-captcha&#34; data-styles=&#34;display: block;&#34;&gt; &lt;/div&gt; &lt;/form&gt; Large widget There’re 2 things you can do: changing font-size scales everything inside the widget and stretching widget itself is done with display attribute (which by default is inline-block)." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/widget-customization/" itemprop="url" />
 
-<meta property="og:title" content=".NET">
+<meta property="og:title" content="Widget customization">
 <meta
   property="og:description"
   content="
     
-      
-  Note
+      This tutorial is mostly a collection of visual changes to the widget through data-styles attribute.
+Full-width widget
+    The only thing you need to do is to add display: block to data-styles (and make sure form itself is wide enough).
+
+  WidgetHTML
+
+
+
+
+    
+
+
+
+
+
+&lt;form&gt;
+    &lt;div class=&#34;private-captcha&#34;
+         data-styles=&#34;display: block;&#34;&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+  
+    
 
   
-    You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just C#-idiomatic implementation with convenience features.
+
+
+
+
+
+Large widget
+    There&rsquo;re 2 things you can do: changing font-size scales everything inside the widget and stretching widget itself is done with display attribute (which by default is inline-block).
     
   ">
 <meta
@@ -29,29 +56,31 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   content="
     article
   ">
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/integrations/dotnet/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/widget-customization/"><meta property="article:section" content="docs">
 
 <meta
   property="article:published_time"
-  content="2025-08-06T16:14:32+03:00">
+  content="2025-10-11T16:23:09+03:00">
 
 
 <meta
   property="article:modified_time"
-  content="2025-08-06T16:21:37+03:00">
+  content="2025-10-11T17:10:12+03:00">
 
 
 
-  <meta itemprop="name" content=".NET">
-  <meta itemprop="description" content="Note
-You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just C#-idiomatic implementation with convenience features.">
-  <meta itemprop="datePublished" content="2025-08-06T16:14:32+03:00">
-  <meta itemprop="dateModified" content="2025-08-06T16:21:37+03:00">
-  <meta itemprop="wordCount" content="550">
+  <meta itemprop="name" content="Widget customization">
+  <meta itemprop="description" content="This tutorial is mostly a collection of visual changes to the widget through data-styles attribute.
+Full-width widget The only thing you need to do is to add display: block to data-styles (and make sure form itself is wide enough).
+WidgetHTML &lt;form&gt; &lt;div class=&#34;private-captcha&#34; data-styles=&#34;display: block;&#34;&gt; &lt;/div&gt; &lt;/form&gt; Large widget There’re 2 things you can do: changing font-size scales everything inside the widget and stretching widget itself is done with display attribute (which by default is inline-block).">
+  <meta itemprop="datePublished" content="2025-10-11T16:23:09+03:00">
+  <meta itemprop="dateModified" content="2025-10-11T17:10:12+03:00">
+  <meta itemprop="wordCount" content="348">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content=".NET">
-  <meta name="twitter:description" content="Note
-You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just C#-idiomatic implementation with convenience features.">
+  <meta name="twitter:title" content="Widget customization">
+  <meta name="twitter:description" content="This tutorial is mostly a collection of visual changes to the widget through data-styles attribute.
+Full-width widget The only thing you need to do is to add display: block to data-styles (and make sure form itself is wide enough).
+WidgetHTML &lt;form&gt; &lt;div class=&#34;private-captcha&#34; data-styles=&#34;display: block;&#34;&gt; &lt;/div&gt; &lt;/form&gt; Large widget There’re 2 things you can do: changing font-size scales everything inside the widget and stretching widget itself is done with display attribute (which by default is inline-block).">
 
     <link rel="preload" href="/css/compiled/main.min.d9462c89ac5d0a196fa492dc4dc845dc696e49d7a37f825d992181e883ac2e82.css" as="style" integrity="sha256-2UYsiaxdChlvpJLcTchF3GluSdejf4JdmSGB6IOsLoI=" />
     <link href="/css/compiled/main.min.d9462c89ac5d0a196fa492dc4dc845dc696e49d7a37f825d992181e883ac2e82.css" rel="stylesheet" integrity="sha256-2UYsiaxdChlvpJLcTchF3GluSdejf4JdmSGB6IOsLoI=" />
@@ -92,7 +121,32 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
 
   
   
-  <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script><script defer src="/js/medium-zoom.min.js"></script>
+  <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script><script async defer src="https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js"></script>
+<script type="text/javascript">
+function resetCaptcha(widget) {
+    setTimeout(() => widget.reset(), 1500);
+}
+function enableDisable(btn) {
+    btn.disabled = true;
+    setTimeout(() => { btn.disabled = false; }, 1500);
+}
+function invisibleStarted() {
+    document.getElementById('spinner').classList.remove('hidden');
+    document.getElementById('checkmark').classList.add('hidden');
+}
+function invisibleFinished(widget) {
+    setTimeout(() => {
+        document.getElementById('spinner').classList.add('hidden');
+        document.getElementById('checkmark').classList.remove('hidden');
+    }, 1500);
+
+    setTimeout(() => {
+        widget.reset();
+        document.getElementById('spinner').classList.add('hidden');
+        document.getElementById('checkmark').classList.add('hidden');
+    }, 3000);
+}
+</script><script defer src="/js/medium-zoom.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         mediumZoom("article .content p:not(:has(a)) > img", {
@@ -122,13 +176,13 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   title=""
   href="/docs/tutorials"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
 ><span class="hx:text-center">Tutorials</span>
 </a><a
   title=""
   href="/docs/integrations"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
 ><span class="hx:text-center">Integrations</span>
 </a><a
   title=""
@@ -238,7 +292,7 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/integrations/"
@@ -263,28 +317,13 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   >PHP
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/integrations/dotnet/"
     
   >.NET
     </a>
-  
-    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
-              <a
-                href="#installation"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Installation</a>
-            </li>
-          <li>
-              <a
-                href="#usage"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Usage</a>
-            </li>
-          </ul>
-  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -387,7 +426,7 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/tutorials/"
@@ -396,13 +435,64 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/tutorials/widget-customization/"
     
   >Widget customization
     </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#full-width-widget"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Full-width widget</a>
+            </li>
+          <li>
+              <a
+                href="#large-widget"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Large widget</a>
+            </li>
+          <li>
+              <a
+                href="#border-customization"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Border customization</a>
+            </li>
+          <li>
+              <a
+                href="#box-shadow"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Box shadow</a>
+            </li>
+          <li>
+              <a
+                href="#accent-colors"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Accent colors</a>
+            </li>
+          <li>
+              <a
+                href="#autoscaling-size"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Autoscaling size</a>
+            </li>
+          <li>
+              <a
+                href="#extra-spacing"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Extra spacing</a>
+            </li>
+          <li>
+              <a
+                href="#even-more-customization"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Even more customization</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -479,7 +569,7 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
               
             </li></ul>
       </div></li>
-          <li class="open"><a
+          <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/integrations/"
@@ -503,9 +593,9 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   >PHP
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/integrations/dotnet/"
     
   >.NET
@@ -611,7 +701,7 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
               
             </li></ul>
       </div></li>
-          <li class=""><a
+          <li class="open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/tutorials/"
@@ -619,9 +709,9 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   >Tutorials
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/tutorials/widget-customization/"
     
   >Widget customization
@@ -720,38 +810,38 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#installation">Installation
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#full-width-widget">Full-width widget
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#usage">Usage
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#large-widget">Large widget
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#basic-verification">Basic Verification
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#border-customization">Border customization
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#aspnet-core-middleware">ASP.NET Core Middleware
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#box-shadow">Box shadow
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#configuration">Configuration
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#accent-colors">Accent colors
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#non-standard-backend-domains">Non-standard backend domains
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#autoscaling-size">Autoscaling size
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#retry-configuration">Retry configuration
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#extra-spacing">Extra spacing
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#error-handling">Error Handling
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#even-more-customization">Even more customization
         </a>
       </li></ul>
-      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/integrations/dotnet.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/tutorials/widget-customization.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -770,29 +860,50 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
           <a href="/docs/">Docs</a>
         </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/integrations/">Integrations</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">.NET</div>
+          <a href="/docs/tutorials/">Tutorials</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Widget customization</div>
   </div>
 
         <div class="content">
-          <h1>.NET</h1>
-          <div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
-  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
-
-  <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>You can also use reCAPTCHA-compatible <code>/siteverify</code> endpoint directly (especially if you already have working reCAPTCHA integration) like in the <a href="/docs/tutorials/complete-example/">tutorial example</a>, this SDK is just C#-idiomatic implementation with convenience features.</p></div>
-  </div>
+          <h1>Widget customization</h1>
+          <p>This tutorial is mostly a collection of <strong>visual</strong> changes to the widget through <code>data-styles</code> attribute.</p>
+<h2>Full-width widget<span class="hx:absolute hx:-mt-20" id="full-width-widget"></span>
+    <a href="#full-width-widget" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The only thing you need to do is to add <code>display: block</code> to <code>data-styles</code> (and make sure <code>form</code> itself is wide enough).</p>
+<div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800"><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-0" aria-selected="true"  tabindex="0"  data-state="selected">Widget</button><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-1">HTML</button></div>
 </div>
-<p>This is a <strong>server-side</strong> SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does <em>not</em> solve puzzles on the client side (used to protect APIs).</p>
-<p><a href="https://github.com/PrivateCaptcha/private-captcha-dotnet"target="_blank" rel="noopener">GitHub repository<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></a></p>
-<h2>Installation<span class="hx:absolute hx:-mt-20" id="installation"></span>
-    <a href="#installation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You can install the package via the .NET CLI or the NuGet Package Manager Console.</p>
-<p><strong>.NET CLI</strong></p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<div>
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet add package PrivateCaptcha</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-0"
+  role="tabpanel" tabindex="0"  data-state="selected" ><form class="pc-form hx:rounded-lg" style="">
+    <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
+        data-theme="light"
+        data-lang="en"
+        data-styles="display: block; --border-radius: 0.5rem;"></div>
+</form>
+</div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-1"
+  role="tabpanel"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="na">data-styles</span><span class="o">=</span><span class="s">&#34;display: block;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -802,10 +913,47 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
-<p><strong>Package Manager Console</strong></p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+</div>
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Install-Package</span> <span class="n">PrivateCaptcha</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</div>
+<h2>Large widget<span class="hx:absolute hx:-mt-20" id="large-widget"></span>
+    <a href="#large-widget" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>There&rsquo;re 2 things you can do: changing <code>font-size</code> scales everything inside the widget and stretching widget itself is done with <code>display</code> attribute (which by default is <code>inline-block</code>).</p>
+<div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800"><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-0" aria-selected="true"  tabindex="0"  data-state="selected">Widget</button><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-1">HTML</button></div>
+</div>
+<div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-0"
+  role="tabpanel" tabindex="0"  data-state="selected" ><form class="pc-form hx:rounded-lg" style="width: 500px; height: 160px;">
+    <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
+        data-theme="light"
+        data-lang="en"
+        data-styles="display: block; height: 100%; font-size: 24px; --border-radius: 0.5rem; --extra-spacing: 8px;"></div>
+</form>
+</div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-1"
+  role="tabpanel"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 500px; height: 160px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100%&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="na">data-styles</span><span class="o">=</span><span class="s">&#34;display: block; height: 100%; font-size: 24px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -815,27 +963,46 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
-<h2>Usage<span class="hx:absolute hx:-mt-20" id="usage"></span>
-    <a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Basic Verification<span class="hx:absolute hx:-mt-20" id="basic-verification"></span>
-    <a href="#basic-verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To verify a CAPTCHA solution, instantiate <code>PrivateCaptchaClient</code> with your configuration and call <code>VerifyAsync</code>.</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+</div>
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">config</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrivateCaptchaConfiguration</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ApiKey</span> <span class="p">=</span> <span class="s">&#34;YOUR_API_KEY&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">captchaClient</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrivateCaptchaClient</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="k">await</span> <span class="n">captchaClient</span><span class="p">.</span><span class="n">VerifyAsync</span><span class="p">(</span><span class="k">new</span> <span class="n">VerifyInput</span> <span class="p">{</span> <span class="n">Solution</span> <span class="p">=</span> <span class="n">captchaSolution</span> <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">Success</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Captcha verification succeeded!&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">else</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// Verification failed, you can check the reason.</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Verification failed: {result.GetErrorMessage()}&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</div>
+<h2>Border customization<span class="hx:absolute hx:-mt-20" id="border-customization"></span>
+    <a href="#border-customization" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Border color is customized with <code>--border</code> variable (a proxy to <code>border</code> CSS property) and border radius is customized with <code>--border-radius</code></p>
+<div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800"><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-0" aria-selected="true"  tabindex="0"  data-state="selected">Widget</button><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-1">HTML</button></div>
+</div>
+<div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-0"
+  role="tabpanel" tabindex="0"  data-state="selected" ><form class="pc-form hx:rounded-lg" style="">
+    <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
+        data-theme="light"
+        data-lang="en"
+        data-styles="--border-radius: 1rem; --border: 1px dashed blue;"></div>
+</form>
+</div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-1"
+  role="tabpanel"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="na">data-styles</span><span class="o">=</span><span class="s">&#34;--border-radius: 1rem; --border: 1px dashed blue;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -845,22 +1012,46 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
-<h3>ASP.NET Core Middleware<span class="hx:absolute hx:-mt-20" id="aspnet-core-middleware"></span>
-    <a href="#aspnet-core-middleware" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>For web applications, the most convenient way to protect your endpoints is by using the provided middleware. It automatically intercepts POST requests with form data and verifies the CAPTCHA solution.</p>
-<p><strong>1. Register <code>PrivateCaptchaClient</code> for Dependency Injection</strong></p>
-<p>In your <code>Program.cs</code> (for .NET 6+ minimal APIs) or <code>Startup.cs</code>, register the <code>PrivateCaptchaClient</code>.</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+</div>
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// Program.cs</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">PrivateCaptcha</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">builder</span> <span class="p">=</span> <span class="n">WebApplication</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddSingleton</span><span class="p">(</span><span class="n">sp</span> <span class="p">=&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">config</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrivateCaptchaConfiguration</span> <span class="p">{</span> <span class="n">ApiKey</span> <span class="p">=</span> <span class="s">&#34;YOUR_API_KEY&#34;</span> <span class="p">};</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">new</span> <span class="n">PrivateCaptchaClient</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</div>
+<h2>Box shadow<span class="hx:absolute hx:-mt-20" id="box-shadow"></span>
+    <a href="#box-shadow" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Make sure that container&rsquo;s parent (or <code>form</code> itself) has the same <code>border-radius</code> so there&rsquo;re no visual conflicts. Also make sure the container does <strong>not</strong> have <code>overflow: hidden</code>.</p>
+<div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800"><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-0" aria-selected="true"  tabindex="0"  data-state="selected">Widget</button><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-1">HTML</button></div>
+</div>
+<div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-0"
+  role="tabpanel" tabindex="0"  data-state="selected" ><form class="pc-form hx:shadow-xl hx:rounded-lg" style="display: inline-block;">
+    <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
+        data-theme="light"
+        data-lang="en"
+        data-styles="display: block; height: 100%; --border-radius: 0.5rem;"></div>
+</form>
+</div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-1"
+  role="tabpanel"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="na">data-styles</span><span class="o">=</span><span class="s">&#34;box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); --border-radius: 0.5rem;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -870,22 +1061,46 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
-<p><strong>2. Add the Middleware to the Request Pipeline</strong></p>
-<p>Add <code>app.UsePrivateCaptcha()</code> to your request pipeline. It should be placed before the endpoints you want to protect.</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+</div>
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">app</span> <span class="p">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// ... other middleware</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Use the PrivateCaptcha middleware. This will automatically check POST requests</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// with a form content type for a valid captcha solution.</span>
-</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">UsePrivateCaptcha</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// This endpoint will now be protected by the CAPTCHA middleware.</span>
-</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">MapPost</span><span class="p">(</span><span class="s">&#34;/register&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="s">&#34;Registration successful!&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</div>
+<h2>Accent colors<span class="hx:absolute hx:-mt-20" id="accent-colors"></span>
+    <a href="#accent-colors" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Here&rsquo;s how to make a red widget. You need to override <code>--border</code> (obviously), then <code>--accent-color</code>, <code>--pie-color</code> and <code>--checkbox-hover-color</code>.</p>
+<div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800"><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-0" aria-selected="true"  tabindex="0"  data-state="selected">Widget</button><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-1">HTML</button></div>
+</div>
+<div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-0"
+  role="tabpanel" tabindex="0"  data-state="selected" ><form class="pc-form" style="display: inline-block;">
+    <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
+        data-theme="light"
+        data-lang="en"
+        data-styles="--border: 1px solid #cd1811; --accent-color: #cd1811; --pie-color: #fdb8b7; --checkbox-hover-color: #feeded;"></div>
+</form>
+</div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-1"
+  role="tabpanel"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="na">data-styles</span><span class="o">=</span><span class="s">&#34;--border: 1px solid #cd1811; --accent-color: #cd1811; --pie-color: #fdb8b7; --checkbox-hover-color: #feeded;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -895,55 +1110,46 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
-<p>If verification fails, the middleware will short-circuit the request and return a <code>403 Forbidden</code> status code by default (can be changed in the configuration).</p>
-<h3>Configuration<span class="hx:absolute hx:-mt-20" id="configuration"></span>
-    <a href="#configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>You can customize the client&rsquo;s behavior by passing a <code>PrivateCaptchaConfiguration</code> object to the constructor.</p>
-<table>
-  <thead>
-      <tr>
-          <th>Property</th>
-          <th>Description</th>
-          <th>Default Value</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>ApiKey</code></td>
-          <td><strong>(Required)</strong> Your API key from the Private Captcha dashboard.</td>
-          <td><code>string.Empty</code></td>
-      </tr>
-      <tr>
-          <td><code>Domain</code></td>
-          <td>The API domain to use (use <code>Domains.EU</code> or an override in case of self-hosting)</td>
-          <td><code>Domains.Global</code></td>
-      </tr>
-      <tr>
-          <td><code>FormField</code></td>
-          <td>The name of the form field containing the CAPTCHA solution. Used by the middleware.</td>
-          <td><code>&quot;private-captcha-solution&quot;</code></td>
-      </tr>
-      <tr>
-          <td><code>FailedStatusCode</code></td>
-          <td>The <code>HttpStatusCode</code> to return when middleware verification fails.</td>
-          <td><code>HttpStatusCode.Forbidden</code> (403)</td>
-      </tr>
-      <tr>
-          <td><code>HttpClient</code></td>
-          <td>An optional <code>HttpClient</code> instance. If not provided, a new one will be created and managed by the client.</td>
-          <td><code>null</code></td>
-      </tr>
-  </tbody>
-</table>
-<h4>Non-standard backend domains<span class="hx:absolute hx:-mt-20" id="non-standard-backend-domains"></span>
-    <a href="#non-standard-backend-domains" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>For <a href="/docs/reference/eu-isolation/">EU isolation</a>, you can use built-in constant <code>Domains.EU</code>:</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+</div>
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">config</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrivateCaptchaConfiguration</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ApiKey</span> <span class="p">=</span> <span class="s">&#34;YOUR_API_KEY&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Domain</span> <span class="p">=</span> <span class="n">Domains</span><span class="p">.</span><span class="n">EU</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrivateCaptchaClient</span><span class="p">(</span><span class="n">config</span><span class="p">);</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</div>
+<h2>Autoscaling size<span class="hx:absolute hx:-mt-20" id="autoscaling-size"></span>
+    <a href="#autoscaling-size" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For mobile clients we want to show a smaller widget. We can achieve this using <code>font-size</code> and <code>clamp</code> CSS built-in to have smth like <code>font-size: clamp(18px, 4vw, 20px)</code>. Trick can be also used to things like <code>--extra-spacing</code>.</p>
+<div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800"><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-0" aria-selected="true"  tabindex="0"  data-state="selected">Widget</button><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-1">HTML</button></div>
+</div>
+<div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-0"
+  role="tabpanel" tabindex="0"  data-state="selected" ><form class="pc-form" style="">
+    <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
+        data-theme="light"
+        data-lang="en"
+        data-styles="-extra-spacing: clamp(0.025rem, 2vw, 0.25rem); font-size: clamp(18px, 4vw, 20px); --border-radius: 0.5rem;"></div>
+</form>
+</div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-1"
+  role="tabpanel"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="na">data-styles</span><span class="o">=</span><span class="s">&#34;font-size: clamp(18px, 4vw, 20px); --extra-spacing: clamp(0.025rem, 2vw, 0.25rem);&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -953,16 +1159,46 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
-<h4>Retry configuration<span class="hx:absolute hx:-mt-20" id="retry-configuration"></span>
-    <a href="#retry-configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>When verifying puzzle solutions, you can also specify some retry and backoff options.</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+</div>
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">input</span> <span class="p">=</span> <span class="k">new</span> <span class="n">VerifyInput</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="n">Solution</span> <span class="p">=</span> <span class="s">&#34;captcha-solution&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">	<span class="n">MaxBackoffSeconds</span> <span class="p">=</span> <span class="m">30</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">	<span class="n">MaxAttempts</span> <span class="p">=</span> <span class="m">10</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</div>
+<h2>Extra spacing<span class="hx:absolute hx:-mt-20" id="extra-spacing"></span>
+    <a href="#extra-spacing" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Depending on preferred widget size, you might want to add more horizontal padding between sides and checkbox and logo. You can achieve that using <code>--extra-spacing</code>.</p>
+<div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800"><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-0" aria-selected="true"  tabindex="0"  data-state="selected">Widget</button><button
+        class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        role="tab"
+        type="button"
+        aria-controls="tabs-panel-1">HTML</button></div>
+</div>
+<div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-0"
+  role="tabpanel" tabindex="0"  data-state="selected" ><form class="pc-form" style="width: 400px">
+    <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
+        data-theme="light"
+        data-lang="en"
+        data-styles="display: block; --extra-spacing: 1.5rem;"></div>
+</form>
+</div>
+
+<div
+  class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block"
+  id="tabs-panel-1"
+  role="tabpanel"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 400px&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="na">data-styles</span><span class="o">=</span><span class="s">&#34;display: block; --extra-spacing: 1.5rem;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -972,25 +1208,20 @@ You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially 
   </button>
 </div>
 </div>
-<h3>Error Handling<span class="hx:absolute hx:-mt-20" id="error-handling"></span>
-    <a href="#error-handling" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
-<li><strong><code>VerifyOutput</code></strong>: The <code>VerifyAsync</code> method returns a <code>VerifyOutput</code> object. Check the <code>Success</code> property to see if verification passed. If <code>Success</code> is <code>false</code>, the <code>Code</code> property and <code>GetErrorMessage()</code> method provide more details.</li>
-<li><strong><code>VerificationFailedException</code></strong>: Thrown when the client cannot get a definitive success/fail response from the API after all retry attempts. This typically indicates a network issue.</li>
-<li><strong><code>ArgumentException</code></strong>: Thrown by <code>VerifyAsync</code> if the provided <code>VerifyInput.Solution</code> is null or empty.</li>
-</ul>
+</div>
+
+</div>
+<h2>Even more customization<span class="hx:absolute hx:-mt-20" id="even-more-customization"></span>
+    <a href="#even-more-customization" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For <em>absolutely custom visualization</em>, you can make Private Captcha widget <a href="/docs/tutorials/invisible-captcha/">&ldquo;invisible&rdquo;</a> and make your own visualizations based on widget&rsquo;s callbacks and/or events. You can see an example of it in the linked page.</p>
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-08-06T16:21:37.000Z">August 6, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-11T17:10:12.000Z">October 11, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/integrations/php/"
-        title="PHP"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>PHP</a><a
-        href="/docs/integrations/react/"
-        title="React"
+        href="/docs/tutorials/migrate-from-recaptcha/"
+        title="Migrate from reCAPTCHA"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >React<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Migrate from reCAPTCHA<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>

@@ -776,7 +776,15 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h4&gt;&lt;code&gt;data-styles&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-styles&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#data-styles&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;data-styles&lt;/code&gt; allows you to override some of the widget styles to better fit into your website&amp;rsquo;s design, on top of &lt;code&gt;data-theme&lt;/code&gt;. Example of override: &lt;code&gt;data-style=&amp;quot;--border-radius: .75rem;&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+    &lt;a href=&#34;#data-styles&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200&#34;&gt;
+  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Check out &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/widget-customization/&#34;&gt;a collection of examples&lt;/a&gt; of widget customization using this attribute.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;data-styles&lt;/code&gt; allows you to override some of the widget styles to better fit into your website&amp;rsquo;s design, on top of &lt;code&gt;data-theme&lt;/code&gt;. Example of override: &lt;code&gt;data-style=&amp;quot;--border-radius: .75rem;&amp;quot;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The following variables support overrides (but in general are &lt;em&gt;not encouraged&lt;/em&gt; to change).&lt;/p&gt;
 &lt;p&gt;Colors:&lt;/p&gt;
 &lt;ul&gt;
@@ -800,32 +808,7 @@
 &lt;li&gt;&lt;code&gt;display&lt;/code&gt; (defaults to &lt;code&gt;inline-block&lt;/code&gt;, set to &lt;code&gt;block&lt;/code&gt; together with &lt;code&gt;height: 100%;&lt;/code&gt; to &amp;ldquo;stretch&amp;rdquo; widget)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;font-size&lt;/code&gt; (defaults to &lt;code&gt;1rem&lt;/code&gt;, change to &amp;ldquo;scale&amp;rdquo; widget)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5&gt;Making LARGE widget&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;making-large-widget&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#making-large-widget&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;There&amp;rsquo;re 2 things you can do: changing &lt;code&gt;font-size&lt;/code&gt; scales everything inside the widget and stretching widget itself is done with &lt;code&gt;display&lt;/code&gt; attribute (which by default is &lt;code&gt;inline-block&lt;/code&gt;).&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;form&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;width: 500px; height: 160px;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;private-captcha&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         &lt;span class=&#34;na&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;height: 100%&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         &lt;span class=&#34;na&#34;&gt;data-styles&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;display: block; height: 100%; font-size: 24px;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;form class=&#34;pc-form hx:shadow-lg hx:rounded-lg&#34; style=&#34;max-width; 100%; width: 500px; height: 160px;&#34;&gt;
-    &lt;div class=&#34;private-captcha hx:h-full&#34; data-sitekey=&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;
-        data-puzzle-endpoint=&#34;https://api.privatecaptcha.com/puzzle&#34;
-        data-theme=&#34;light&#34;
-        data-lang=&#34;en&#34;
-        data-styles=&#34;display: block; height: 100%; font-size: 24px; --border-radius: 0.5rem; --extra-spacing: 8px;&#34;&gt;&lt;/div&gt;
-&lt;/form&gt;
+&lt;p&gt;Check few ready-made examples of using these properties &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/widget-customization/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;&lt;code&gt;data-store-variable&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-store-variable&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#data-store-variable&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Captcha object, that is created from the widget configuration, provides a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/&#34;&gt;number of APIs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If this is the only captcha widget on a page, you can access this object via &lt;code&gt;window.privateCaptcha.autoWidget&lt;/code&gt;.&lt;/p&gt;
