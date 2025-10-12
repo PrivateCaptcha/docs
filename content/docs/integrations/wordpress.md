@@ -5,7 +5,11 @@ date: 2025-09-18T09:15:02+03:00
 
 This is a **all-in-one** plugin for WordPress that allows you to configure _client-side_ captcha widget and _server-side_ verification.
 
-[WordPress plugin](https://wordpress.org/plugins/private-captcha/) / [GitHub repository](https://github.com/PrivateCaptcha/private-captcha-wordpress)
+
+{{< cards >}}
+  {{< card link="https://wordpress.org/plugins/private-captcha/" title="WordPress plugin" icon="wordpress" >}}
+  {{< card link="https://github.com/PrivateCaptcha/private-captcha-wordpress" title="GitHub repository" icon="github" >}}
+{{< /cards >}}
 
 ## Features
 

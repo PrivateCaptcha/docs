@@ -8,7 +8,9 @@ date: 2025-07-27T14:12:04+03:00
 
 This is a **client-side** SDK for React, which is an alternative to using a standard script directly.
 
-[GitHub repository](https://github.com/PrivateCaptcha/private-captcha-react)
+{{< cards >}}
+  {{< card link="https://github.com/PrivateCaptcha/private-captcha-react" title="GitHub repository" icon="github" >}}
+{{< /cards >}}
 
 ## Installation
 

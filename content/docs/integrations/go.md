@@ -8,7 +8,9 @@ type: docs
 
 This is a **server-side** SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does _not_ solve puzzles on the client side (used to protect APIs).
 
-[GitHub repository](https://github.com/PrivateCaptcha/private-captcha-go)
+{{< cards >}}
+  {{< card link="https://github.com/PrivateCaptcha/private-captcha-go" title="GitHub repository" icon="github" >}}
+{{< /cards >}}
 
 ## Installation
 
