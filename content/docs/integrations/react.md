@@ -10,6 +10,7 @@ This is a **client-side** SDK for React, which is an alternative to using a stan
 
 {{< cards >}}
   {{< card link="https://github.com/PrivateCaptcha/private-captcha-react" title="GitHub repository" icon="github" >}}
+  {{< card link="https://www.npmjs.com/package/@private-captcha/private-captcha-react" title="NPM package" icon="cube" >}}
 {{< /cards >}}
 
 ## Installation

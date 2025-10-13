@@ -10,6 +10,7 @@ This is a **server-side** SDK, which you would use to verify captcha solution ag
 
 {{< cards >}}
   {{< card link="https://github.com/PrivateCaptcha/private-captcha-dotnet" title="GitHub repository" icon="github" >}}
+  {{< card link="https://www.nuget.org/packages/PrivateCaptcha" title="NuGet package" icon="cube" >}}
 {{< /cards >}}
 
 ## Installation

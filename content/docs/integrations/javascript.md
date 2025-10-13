@@ -11,6 +11,7 @@ This is a **server-side** SDK, which you would use to verify captcha solution ag
 
 {{< cards >}}
   {{< card link="https://github.com/PrivateCaptcha/private-captcha-js" title="GitHub repository" icon="github" >}}
+  {{< card link="https://www.npmjs.com/package/@private-captcha/private-captcha-js" title="NPM package" icon="cube" >}}
 {{< /cards >}}
 
 ## Installation

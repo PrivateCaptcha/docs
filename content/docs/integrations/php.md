@@ -10,6 +10,7 @@ This is a **server-side** SDK, which you would use to verify captcha solution ag
 
 {{< cards >}}
   {{< card link="https://github.com/PrivateCaptcha/private-captcha-php" title="GitHub repository" icon="github" >}}
+  {{< card link="https://packagist.org/packages/private-captcha/private-captcha-php" title="Packagist package" icon="cube" >}}
 {{< /cards >}}
 
 ## Installation
