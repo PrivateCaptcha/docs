@@ -89,6 +89,8 @@ Now, open login dialog for your WordPress installation (e.g. in Private browser 
 - WordPress Registration Form
 - WordPress Password Reset Form
 - WordPress Comment Forms (logged-in and guest users)
+- WPForms
+- Contact Form 7 (use `[privatecaptcha]` tag)
 - _More forms support (including popular plugins) are currently **in progress**_
 
 ## WP-CLI Commands
