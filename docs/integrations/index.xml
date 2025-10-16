@@ -91,6 +91,8 @@
 &lt;li&gt;WordPress Registration Form&lt;/li&gt;
 &lt;li&gt;WordPress Password Reset Form&lt;/li&gt;
 &lt;li&gt;WordPress Comment Forms (logged-in and guest users)&lt;/li&gt;
+&lt;li&gt;WPForms&lt;/li&gt;
+&lt;li&gt;Contact Form 7 (use &lt;code&gt;[privatecaptcha]&lt;/code&gt; tag)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;More forms support (including popular plugins) are currently &lt;strong&gt;in progress&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;WP-CLI Commands&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;wp-cli-commands&#34;&gt;&lt;/span&gt;
