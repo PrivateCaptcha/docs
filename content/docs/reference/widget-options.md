@@ -24,7 +24,7 @@ Attribute | Values | Description
 `data-eu` | `true` | When set to `true`, will make widget to use only EU endpoints for [EU-isolation]({{< relref "/docs/reference/eu-isolation.md" >}}).
 `data-puzzle-endpoint` | `''` or your value | Endpoint to get captcha puzzle (override in case of self-hosting).
 `data-display-mode` | `widget`, `popup`, `hidden` | How captcha widget will be shown. Defaults to `widget`. When hidden, you need to setup widget callbacks (see below).
-`data-lang` | `en` | Captcha widget localization.
+`data-lang` | `en` | Captcha widget localization (defaults to `auto`)
 `data-theme` | `light`, `dark` | Widget theme (defaults to `light`)
 `data-styles` | `{valid CSS}` | Overrides for host variables of the widget's web component, on top of theme.
 `data-store-variable` | `{JS variable name}` | If present, attaches Captcha Object to the html element (helps with multiple widgets on a page)
@@ -52,6 +52,8 @@ Attribute | Values | Description
 #### `data-lang`
 
 `data-lang` allows you to show widget localization in your own language. Translations are defined in the `widget/js/strings.js` [file](https://github.com/PrivateCaptcha/PrivateCaptcha/blob/main/widget/js/strings.js). If translation to your language is not there, feel free to contribute it.
+
+> NOTE: by default `data-lang` attribute's value is `auto` which will attempt to get the current page language and fallback to English. If you want widget to have a static language, add this attribute.
 
 Here's the list of currently supported languages:
 
