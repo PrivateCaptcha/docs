@@ -3382,7 +3382,7 @@
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;data-lang&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;en&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Captcha widget localization.&lt;/td&gt;
+          &lt;td&gt;Captcha widget localization (defaults to &lt;code&gt;auto&lt;/code&gt;)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;data-theme&lt;/code&gt;&lt;/td&gt;
@@ -3447,6 +3447,9 @@
     &lt;a href=&#34;#data-lang&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;data-lang&lt;/code&gt; allows you to show widget localization in your own language. Translations are defined in the &lt;code&gt;widget/js/strings.js&lt;/code&gt; &lt;a href=&#34;https://github.com/PrivateCaptcha/PrivateCaptcha/blob/main/widget/js/strings.js&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;file&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;. If translation to your language is not there, feel free to contribute it.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;NOTE: by default &lt;code&gt;data-lang&lt;/code&gt; attribute&amp;rsquo;s value is &lt;code&gt;auto&lt;/code&gt; which will attempt to get the current page language and fallback to English. If you want widget to have a static language, add this attribute.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Here&amp;rsquo;s the list of currently supported languages:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;English (&lt;code&gt;en&lt;/code&gt;)&lt;/li&gt;
