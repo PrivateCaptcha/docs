@@ -19,15 +19,19 @@ cd private-captcha
 
 ## 2. Create `.env` file
 
+Copy sample environment variables and set all required ones.
+
 ```bash
 cp .env.example .env
+$EDITOR .env
 ```
 
 Some notes on environment variables:
 
+- Private Captcha assumes to run on 3 subdomains in total: `api.`, `cdn.` and `portal.`
 - `PC_USER_FINGERPRINT_KEY` you can generate using `openssl rand -hex 64`
-- `PC_ADMIN_EMAIL` will be used to create actual admin account (see note for local use below)
-- `PC_RATE_LIMIT_HEADER` should be the header containing actual client IP (comes from your CDN or reverse proxy)
+- `PC_ADMIN_EMAIL` will be used to create an actual admin account (see note for local use below)
+- `PC_RATE_LIMIT_HEADER` should be the header containing an actual client IP (comes from your CDN or reverse proxy)
 
 You can find full documentation on these and other _required_ environment variables [here]({{< relref "/docs/deployment/configuration.md" >}}).
 
@@ -45,9 +49,9 @@ To run Private Captcha only locally, use `privatecaptcha.local:8080` instead of 
 
 {{% /details %}}
 
-## 3. (optional) Expose port
+{{% details title="(optional) Expose public port" closed="true" %}}
 
-By default Private Captcha is listening on `http://localhost:8080`. If you want to use Docker networking _for production_ directly (which is not recommended) instead of reverse proxy like Nginx or Caddy, you can create a `compose.override.yml` file like this:
+By default Private Captcha server executable is listening on `http://localhost:8080`. If you want to use Docker networking _for production_ directly (which is **not** recommended) instead of reverse proxy like Nginx or Caddy, you can create a `compose.override.yml` file like this:
 
 ```yaml
 services:
@@ -56,8 +60,16 @@ services:
       - 8080:8080
 ```
 
+{{% /details %}}
+
+## 3. Run the stack
+
+```bash
+docker compose up
+```
+
 ## 4. Navigate to the Portal
 
-Now you can open `$PC_PORTAL_BASE_URL` (e.g. `portal.yourdomain.com` or `http://portal.privatecaptcha.local`) in browser and log in.
+Now you can open `$PC_PORTAL_BASE_URL` (e.g. `portal.yourdomain.com` or `http://portal.privatecaptcha.local:8080`) in browser and log in.
 
 > NOTE: For local-only use, when asked for a verification code, you might need to find it in the logs of `privatecaptcha` container. Search for "two factor code".

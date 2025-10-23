@@ -38,7 +38,8 @@ Variable | Example | Description
 --- | --- | ---
 `PC_HOST` | `localhost` | Host where to listen for HTTP connections.
 `PC_PORT` | `8080` | Port where to listen for HTTP connections.
-`PC_LOCAL_ADDRESS` | `localhost:9090` | Local "admin" endpoint that hosts Prometheus metrics, manual maintenance jobs triggers and kubernetes liveness/readiness probes. Does not have any auth and *must not* be exposed publicly.
+`PC_LOCAL_ADDRESS` | `localhost:9090` | Local "admin" endpoint that hosts Prometheus metrics, manual maintenance jobs triggers (requires `PC_LOCAL_API_KEY` to work) and kubernetes liveness/readiness probes. Does not have any auth and *must not* be exposed publicly.
+`PC_LOCAL_API_KEY` | `asdf...` | A *non-empty* API key **required** to access `PC_LOCAL_ADDRESS` maintenance jobs functionality
 `PC_RATE_LIMIT_HEADER` | `X-Real-Ip` | HTTP header which will contain IP address of the connecting user. Is expected to come from CDN or proxy (e.g., nginx, caddy). If empty, righmost non-private address of `X-Forwarded-For` will be used.
 `PC_RATE_LIMIT_RPS` | `1.0` | Leak rate per second (float) of default API rate limiter.
 `PC_RATE_LIMIT_BURST` | `20` | Burst of default API rate limiter.
