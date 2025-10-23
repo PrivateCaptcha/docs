@@ -45,7 +45,8 @@
 &lt;li&gt;do not enable registration if you&amp;rsquo;re the only admin/user (&lt;code&gt;PC_REGISTRATION_ALLOWED&lt;/code&gt; is empty/unset by default)&lt;/li&gt;
 &lt;li&gt;you can configure CDN/reverse proxy rate limits accordingly to your use-case (that is, &lt;em&gt;in addition&lt;/em&gt; to rate limit configuration of Private Captcha server itself)&lt;/li&gt;
 &lt;li&gt;correct rate limiting of Private Captcha server itself is &lt;em&gt;heavily&lt;/em&gt; dependent on correct configuration of &lt;code&gt;PC_RATE_LIMIT_HEADER&lt;/code&gt; environment variable (which value is expected to come from proxy/CDN)&lt;/li&gt;
-&lt;li&gt;if you run a larger installation with separate DB and server nodes, you need to secure network between them (docker compose single node setup does not use encryption for Postgres or ClickHouse)&lt;/li&gt;
+&lt;li&gt;if you run a larger installation with separate DB and server nodes, you need to secure network between them (docker compose single node setup does not use encryption for Postgres or ClickHouse connections)&lt;/li&gt;
+&lt;li&gt;for single-node installations, if you can, use Podman or rootless Docker&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Monitoring&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;monitoring&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#monitoring&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Prometheus metrics (&lt;code&gt;/metrics&lt;/code&gt; endpoint) are available on &lt;code&gt;$PC_LOCAL_ADDRESS&lt;/code&gt; address (if you set &lt;code&gt;PC_LOCAL_ADDRESS&lt;/code&gt; environment variable). Server exposes &amp;ldquo;standard&amp;rdquo; Go metrics and &lt;a href=&#34;https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;four golden signals&amp;rdquo;&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
@@ -53,7 +54,7 @@
 &lt;/svg&gt;&lt;/a&gt; metrics as well as few custom platform and business logic-specific metrics.&lt;/p&gt;
 &lt;p&gt;Additionally there&amp;rsquo;re &lt;code&gt;/live&lt;/code&gt; and &lt;code&gt;/ready&lt;/code&gt; endpoints available on &lt;code&gt;$PC_LOCAL_ADDRESS&lt;/code&gt; address that can be used if you run Private Captcha on Kubernetes cluster.&lt;/p&gt;
 &lt;h2&gt;Backups&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;backups&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#backups&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;While it is outside of the scope of this note, there&amp;rsquo;re many solutions that add a docker container to the stack to backup databases to S3-compatible storage. In order to add them, you can use &lt;code&gt;compose.override.yml&lt;/code&gt; file.&lt;/p&gt;
+    &lt;a href=&#34;#backups&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;While it is outside of the scope of this note, there&amp;rsquo;re many solutions that add a docker container to the compose stack to backup databases to S3-compatible storage. In order to add them, you can use &lt;code&gt;compose.override.yml&lt;/code&gt; file.&lt;/p&gt;
 &lt;h2&gt;Server&amp;rsquo;s command-line options&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;servers-command-line-options&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#servers-command-line-options&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -81,7 +82,10 @@
 &lt;h3&gt;HTTPS&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;https&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#https&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As you can see, it&amp;rsquo;s possible to use &lt;code&gt;-certifle&lt;/code&gt; and &lt;code&gt;-keyfile&lt;/code&gt; to force &lt;code&gt;HTTPS&lt;/code&gt; (by default server handles plain &lt;code&gt;HTTP&lt;/code&gt; and expects an external proxy to handle TLS/SSL termination)&lt;/p&gt;
 &lt;h3&gt;Migrations&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;migrations&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#migrations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;While in docker compose single-node setup migrations have been taken care of, if you run larger installation of Private Captcha with separate DB and server nodes, you might want to run migrations manually.&lt;/p&gt;
+    &lt;a href=&#34;#migrations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;
+  &lt;p&gt;Docker compose setup does &lt;strong&gt;not&lt;/strong&gt; require special handling. Below is only relevant for &amp;ldquo;large&amp;rdquo; custom installations.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;While in docker compose single-node setup migrations have been taken care of, if you run larger installation of Private Captcha with separate DB and server nodes, you might want to run migrations manually.&lt;/p&gt;
 &lt;p&gt;To run migration manually it&amp;rsquo;s required to pass &lt;code&gt;-mode migrate&lt;/code&gt; and &lt;code&gt;-migrate-hash&lt;/code&gt; (for example with value &lt;code&gt;$(git rev-list -1 HEAD)&lt;/code&gt;) to server binary. If you also use &lt;code&gt;-env stdin&lt;/code&gt; you can pipe secrets into it.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 

@@ -45,7 +45,7 @@ Private Captcha installation expects to be running on 3 subdomains (cdn., api. a
 
 <meta
   property="article:modified_time"
-  content="2025-10-23T12:13:37+03:00">
+  content="2025-10-23T12:20:36+03:00">
 
 
 
@@ -53,8 +53,8 @@ Private Captcha installation expects to be running on 3 subdomains (cdn., api. a
   <meta itemprop="description" content="Updates You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.
 CDN integration All responses from Private Captcha server already contain correct Cache-Control headers so your only job is to make sure CDN/proxy respects them and does not override them. Private Captcha installation expects to be running on 3 subdomains (cdn., api. and portal.) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice.">
   <meta itemprop="datePublished" content="2025-10-23T11:27:25+03:00">
-  <meta itemprop="dateModified" content="2025-10-23T12:13:37+03:00">
-  <meta itemprop="wordCount" content="587">
+  <meta itemprop="dateModified" content="2025-10-23T12:20:36+03:00">
+  <meta itemprop="wordCount" content="616">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Production use">
   <meta name="twitter:description" content="Updates You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.
@@ -871,7 +871,8 @@ CDN integration All responses from Private Captcha server already contain correc
 <li>do not enable registration if you&rsquo;re the only admin/user (<code>PC_REGISTRATION_ALLOWED</code> is empty/unset by default)</li>
 <li>you can configure CDN/reverse proxy rate limits accordingly to your use-case (that is, <em>in addition</em> to rate limit configuration of Private Captcha server itself)</li>
 <li>correct rate limiting of Private Captcha server itself is <em>heavily</em> dependent on correct configuration of <code>PC_RATE_LIMIT_HEADER</code> environment variable (which value is expected to come from proxy/CDN)</li>
-<li>if you run a larger installation with separate DB and server nodes, you need to secure network between them (docker compose single node setup does not use encryption for Postgres or ClickHouse)</li>
+<li>if you run a larger installation with separate DB and server nodes, you need to secure network between them (docker compose single node setup does not use encryption for Postgres or ClickHouse connections)</li>
+<li>for single-node installations, if you can, use Podman or rootless Docker</li>
 </ul>
 <h2>Monitoring<span class="hx:absolute hx:-mt-20" id="monitoring"></span>
     <a href="#monitoring" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Prometheus metrics (<code>/metrics</code> endpoint) are available on <code>$PC_LOCAL_ADDRESS</code> address (if you set <code>PC_LOCAL_ADDRESS</code> environment variable). Server exposes &ldquo;standard&rdquo; Go metrics and <a href="https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals"target="_blank" rel="noopener">&ldquo;four golden signals&rdquo;<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -879,7 +880,7 @@ CDN integration All responses from Private Captcha server already contain correc
 </svg></a> metrics as well as few custom platform and business logic-specific metrics.</p>
 <p>Additionally there&rsquo;re <code>/live</code> and <code>/ready</code> endpoints available on <code>$PC_LOCAL_ADDRESS</code> address that can be used if you run Private Captcha on Kubernetes cluster.</p>
 <h2>Backups<span class="hx:absolute hx:-mt-20" id="backups"></span>
-    <a href="#backups" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>While it is outside of the scope of this note, there&rsquo;re many solutions that add a docker container to the stack to backup databases to S3-compatible storage. In order to add them, you can use <code>compose.override.yml</code> file.</p>
+    <a href="#backups" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>While it is outside of the scope of this note, there&rsquo;re many solutions that add a docker container to the compose stack to backup databases to S3-compatible storage. In order to add them, you can use <code>compose.override.yml</code> file.</p>
 <h2>Server&rsquo;s command-line options<span class="hx:absolute hx:-mt-20" id="servers-command-line-options"></span>
     <a href="#servers-command-line-options" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -907,7 +908,10 @@ CDN integration All responses from Private Captcha server already contain correc
 <h3>HTTPS<span class="hx:absolute hx:-mt-20" id="https"></span>
     <a href="#https" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>As you can see, it&rsquo;s possible to use <code>-certifle</code> and <code>-keyfile</code> to force <code>HTTPS</code> (by default server handles plain <code>HTTP</code> and expects an external proxy to handle TLS/SSL termination)</p>
 <h3>Migrations<span class="hx:absolute hx:-mt-20" id="migrations"></span>
-    <a href="#migrations" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>While in docker compose single-node setup migrations have been taken care of, if you run larger installation of Private Captcha with separate DB and server nodes, you might want to run migrations manually.</p>
+    <a href="#migrations" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><blockquote>
+  <p>Docker compose setup does <strong>not</strong> require special handling. Below is only relevant for &ldquo;large&rdquo; custom installations.</p>
+</blockquote>
+<p>While in docker compose single-node setup migrations have been taken care of, if you run larger installation of Private Captcha with separate DB and server nodes, you might want to run migrations manually.</p>
 <p>To run migration manually it&rsquo;s required to pass <code>-mode migrate</code> and <code>-migrate-hash</code> (for example with value <code>$(git rev-list -1 HEAD)</code>) to server binary. If you also use <code>-env stdin</code> you can pipe secrets into it.</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -944,7 +948,7 @@ CDN integration All responses from Private Captcha server already contain correc
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-23T12:13:37.000Z">October 23, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-23T12:20:36.000Z">October 23, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/quickstart/"
         title="Quickstart"
