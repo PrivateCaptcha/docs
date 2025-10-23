@@ -130,14 +130,14 @@
 
 <meta
   property="article:modified_time"
-  content="2025-10-11T17:10:12+03:00">
+  content="2025-10-23T12:13:37+03:00">
 
 
 
   <meta itemprop="name" content="Configuration">
   <meta itemprop="description" content="Environmental variables Required Variable Example Description STAGE prod Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. PC_XSRF_KEY jkl;... String used as XSRF key for signing tokens SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note">
-  <meta itemprop="dateModified" content="2025-10-11T17:10:12+03:00">
-  <meta itemprop="wordCount" content="477">
+  <meta itemprop="dateModified" content="2025-10-23T12:13:37+03:00">
+  <meta itemprop="wordCount" content="494">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Configuration">
   <meta name="twitter:description" content="Environmental variables Required Variable Example Description STAGE prod Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. PC_XSRF_KEY jkl;... String used as XSRF key for signing tokens SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note">
@@ -310,6 +310,14 @@
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/deployment/production/"
+    
+  >Production use
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/deployment/quickstart/"
@@ -553,6 +561,14 @@
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/deployment/production/"
+    
+  >Production use
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/deployment/quickstart/"
@@ -985,7 +1001,12 @@
       <tr>
           <td><code>PC_LOCAL_ADDRESS</code></td>
           <td><code>localhost:9090</code></td>
-          <td>Local &ldquo;admin&rdquo; endpoint that hosts Prometheus metrics, manual maintenance jobs triggers and kubernetes liveness/readiness probes. Does not have any auth and <em>must not</em> be exposed publicly.</td>
+          <td>Local &ldquo;admin&rdquo; endpoint that hosts Prometheus metrics, manual maintenance jobs triggers (requires <code>PC_LOCAL_API_KEY</code> to work) and kubernetes liveness/readiness probes. Does not have any auth and <em>must not</em> be exposed publicly.</td>
+      </tr>
+      <tr>
+          <td><code>PC_LOCAL_API_KEY</code></td>
+          <td><code>asdf...</code></td>
+          <td>A <em>non-empty</em> API key <strong>required</strong> to access <code>PC_LOCAL_ADDRESS</code> maintenance jobs functionality</td>
       </tr>
       <tr>
           <td><code>PC_RATE_LIMIT_HEADER</code></td>
@@ -1061,7 +1082,7 @@
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-11T17:10:12.000Z">October 11, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-23T12:13:37.000Z">October 23, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/quickstart/"
         title="Quickstart"
