@@ -26,6 +26,7 @@
         
         &lt;h2&gt;Updates&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;updates&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#updates&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.&lt;/p&gt;
+&lt;p&gt;When you update Private Captcha you also need to purge CDN/proxy caches.&lt;/p&gt;
 &lt;h2&gt;CDN integration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;cdn-integration&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#cdn-integration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200&#34;&gt;
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
@@ -37,8 +38,15 @@
 
 &lt;p&gt;Private Captcha installation expects to be running on 3 subdomains (&lt;code&gt;cdn.&lt;/code&gt;, &lt;code&gt;api.&lt;/code&gt; and &lt;code&gt;portal.&lt;/code&gt;) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice.&lt;/p&gt;
 &lt;h2&gt;Security&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;security&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#security&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Overall, if you&amp;rsquo;re running Private Captcha in production, security is completely your responsibility. It is a very large topic and completely outside the scope of this note.&lt;/p&gt;
-&lt;p&gt;Some &lt;em&gt;very basic&lt;/em&gt; advice, specific to Private Captcha server itself:&lt;/p&gt;
+    &lt;a href=&#34;#security&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
+  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;If you&amp;rsquo;re running Private Captcha in production, security is completely &lt;strong&gt;your responsibility&lt;/strong&gt;. It is a very large topic and completely outside the scope of this note.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Some &lt;strong&gt;very basic&lt;/strong&gt; advice, specific to Private Captcha server itself:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;update Private Captcha server frequently&lt;/li&gt;
 &lt;li&gt;make sure server is behind CDN/proxy and is not directly connected to the internet&lt;/li&gt;
@@ -46,8 +54,10 @@
 &lt;li&gt;do not enable registration if you&amp;rsquo;re the only admin/user (&lt;code&gt;PC_REGISTRATION_ALLOWED&lt;/code&gt; is empty/unset by default)&lt;/li&gt;
 &lt;li&gt;you can configure CDN/reverse proxy rate limits accordingly to your use-case (that is, &lt;em&gt;in addition&lt;/em&gt; to rate limit configuration of Private Captcha server itself)&lt;/li&gt;
 &lt;li&gt;correct rate limiting of Private Captcha server itself is &lt;em&gt;heavily&lt;/em&gt; dependent on correct configuration of &lt;code&gt;PC_RATE_LIMIT_HEADER&lt;/code&gt; environment variable (which value is expected to come from proxy/CDN)&lt;/li&gt;
-&lt;li&gt;if you run a larger installation with separate DB and server nodes, you need to secure network between them (docker compose single node setup does not use encryption for Postgres or ClickHouse connections)&lt;/li&gt;
-&lt;li&gt;for single-node installations, if you can, use Podman or rootless Docker&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;if&lt;/em&gt; you run a larger installation with separate DB and server nodes, you need to secure network between them (docker compose single node setup does not use encryption for Postgres or ClickHouse connections)&lt;/li&gt;
+&lt;li&gt;for single-node installations, if you can, use &lt;a href=&#34;https://podman.io/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Podman&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; or rootless Docker&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Monitoring&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;monitoring&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#monitoring&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Prometheus metrics (&lt;code&gt;/metrics&lt;/code&gt; endpoint) are available on &lt;code&gt;$PC_LOCAL_ADDRESS&lt;/code&gt; address (if you set &lt;code&gt;PC_LOCAL_ADDRESS&lt;/code&gt; environment variable). Server exposes &amp;ldquo;standard&amp;rdquo; Go metrics and &lt;a href=&#34;https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;four golden signals&amp;rdquo;&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
@@ -56,6 +66,26 @@
 &lt;p&gt;Additionally there&amp;rsquo;re &lt;code&gt;/live&lt;/code&gt; and &lt;code&gt;/ready&lt;/code&gt; endpoints available on &lt;code&gt;$PC_LOCAL_ADDRESS&lt;/code&gt; address that can be used if you run Private Captcha on Kubernetes cluster.&lt;/p&gt;
 &lt;h2&gt;Backups&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;backups&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#backups&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;While it is outside of the scope of this note, there&amp;rsquo;re many solutions that add a docker container to the compose stack to backup databases to S3-compatible storage. In order to add them, you can use &lt;code&gt;compose.override.yml&lt;/code&gt; file.&lt;/p&gt;
+&lt;h2&gt;Enterprise edition&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;enterprise-edition&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#enterprise-edition&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are a few changes you will need to make using a &lt;code&gt;compose.override.yml&lt;/code&gt; file, namely replace &lt;code&gt;privatecaptcha&lt;/code&gt; image to &lt;code&gt;privatecaptcha-ee&lt;/code&gt; and set an additional environment variable &lt;code&gt;EE_LICENSE_KEY&lt;/code&gt; (which you should put in the &lt;code&gt;.env&lt;/code&gt; file).&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;privatecaptcha&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ghcr.io/privatecaptcha/privatecaptcha-ee:latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;EE_LICENSE_KEY=${EE_LICENSE_KEY}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;migration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ghcr.io/privatecaptcha/privatecaptcha-ee:latest&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;h2&gt;Server&amp;rsquo;s command-line options&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;servers-command-line-options&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#servers-command-line-options&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -81,36 +111,21 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h3&gt;HTTPS&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;https&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#https&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As you can see, it&amp;rsquo;s possible to use &lt;code&gt;-certifle&lt;/code&gt; and &lt;code&gt;-keyfile&lt;/code&gt; to force &lt;code&gt;HTTPS&lt;/code&gt; (by default server handles plain &lt;code&gt;HTTP&lt;/code&gt; and expects an external proxy to handle TLS/SSL termination)&lt;/p&gt;
+    &lt;a href=&#34;#https&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As you can see, it&amp;rsquo;s possible to use &lt;code&gt;-certifle&lt;/code&gt; and &lt;code&gt;-keyfile&lt;/code&gt; to force &lt;code&gt;HTTPS&lt;/code&gt; (by default server handles plain &lt;code&gt;HTTP&lt;/code&gt; and expects an external proxy to handle TLS/SSL termination).&lt;/p&gt;
 &lt;h3&gt;Migrations&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;migrations&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#migrations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;
-  &lt;p&gt;Docker compose setup does &lt;strong&gt;not&lt;/strong&gt; require special handling. Below is only relevant for &amp;ldquo;large&amp;rdquo; custom installations.&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;a href=&#34;#migrations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
+  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;If you use docker compose based setup, you can skip this. Below information is only relevant for &amp;ldquo;large&amp;rdquo; &lt;em&gt;custom&lt;/em&gt; installations.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;p&gt;While in docker compose single-node setup migrations have been taken care of, if you run larger installation of Private Captcha with separate DB and server nodes, you might want to run migrations manually.&lt;/p&gt;
 &lt;p&gt;To run migration manually it&amp;rsquo;s required to pass &lt;code&gt;-mode migrate&lt;/code&gt; and &lt;code&gt;-migrate-hash&lt;/code&gt; (for example with value &lt;code&gt;$(git rev-list -1 HEAD)&lt;/code&gt;) to server binary. If you also use &lt;code&gt;-env stdin&lt;/code&gt; you can pipe secrets into it.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat secrets.env &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bin/server -mode migrate -migrate-hash&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;git rev-list -1 HEAD&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;h2&gt;Enterprise edition&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;enterprise-edition&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#enterprise-edition&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are a few changes you will need to make using a &lt;code&gt;compose.override.yml&lt;/code&gt; file, namely replace &lt;code&gt;privatecaptcha&lt;/code&gt; image to &lt;code&gt;privatecaptcha-ee&lt;/code&gt; and set an additional environment variable &lt;code&gt;EE_LICENSE_KEY&lt;/code&gt; (which you should put in the &lt;code&gt;.env&lt;/code&gt; file).&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;privatecaptcha&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ghcr.io/privatecaptcha/privatecaptcha-ee:latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;EE_LICENSE_KEY=${EE_LICENSE_KEY}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;migration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ghcr.io/privatecaptcha/privatecaptcha-ee:latest&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
@@ -1786,7 +1801,7 @@
 &lt;li&gt;Private Captcha assumes to run on 3 subdomains in total: &lt;code&gt;api.&lt;/code&gt;, &lt;code&gt;cdn.&lt;/code&gt; and &lt;code&gt;portal.&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;PC_USER_FINGERPRINT_KEY&lt;/code&gt; you can generate using &lt;code&gt;openssl rand -hex 64&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;PC_ADMIN_EMAIL&lt;/code&gt; will be used to create an actual admin account (see note for local use below)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;PC_RATE_LIMIT_HEADER&lt;/code&gt; should be the header containing an actual client IP (comes from your CDN or reverse proxy)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PC_RATE_LIMIT_HEADER&lt;/code&gt; should be the header containing an actual client IP (comes from your CDN or reverse proxy, for example &lt;code&gt;X-Real-Ip&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You can find full documentation on these and other &lt;em&gt;required&lt;/em&gt; environment variables &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/configuration/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
@@ -1818,7 +1833,7 @@
     &lt;strong class=&#34;hx:text-lg&#34;&gt;(optional) Expose public port&lt;/strong&gt;
   &lt;/summary&gt;
   &lt;div class=&#34;hx:p-2 hx:overflow-hidden&#34;&gt;
-    &lt;p&gt;By default Private Captcha server executable is listening on &lt;code&gt;http://localhost:8080&lt;/code&gt;. If you want to use Docker networking &lt;em&gt;for production&lt;/em&gt; directly (which is &lt;strong&gt;not&lt;/strong&gt; recommended) instead of reverse proxy like Nginx or Caddy, you can create a &lt;code&gt;compose.override.yml&lt;/code&gt; file like this:&lt;/p&gt;
+    &lt;p&gt;By default Private Captcha server executable is listening on &lt;code&gt;http://localhost:8080&lt;/code&gt;. If you want to use Docker networking &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/production/&#34;&gt;for production&lt;/a&gt; directly (which is &lt;strong&gt;not&lt;/strong&gt; recommended) instead of reverse proxy like Nginx or Caddy, you can create a &lt;code&gt;compose.override.yml&lt;/code&gt; file like this:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;privatecaptcha&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -1849,7 +1864,9 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2&gt;4. Navigate to the Portal&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4-navigate-to-the-portal&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4-navigate-to-the-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Now you can open &lt;code&gt;$PC_PORTAL_BASE_URL&lt;/code&gt; (e.g. &lt;code&gt;portal.yourdomain.com&lt;/code&gt; or &lt;code&gt;http://portal.privatecaptcha.local:8080&lt;/code&gt;) in browser and log in.&lt;/p&gt;
+    &lt;a href=&#34;#4-navigate-to-the-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Now you can open &lt;code&gt;$PC_PORTAL_BASE_URL&lt;/code&gt; (e.g. &lt;code&gt;portal.yourdomain.com&lt;/code&gt; or &lt;a href=&#34;http://portal.privatecaptcha.local:8080&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://portal.privatecaptcha.local:8080&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;) in browser and log in.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;NOTE: For local-only use, when asked for a verification code, you might need to find it in the logs of &lt;code&gt;privatecaptcha&lt;/code&gt; container. Search for &amp;ldquo;two factor code&amp;rdquo;.&lt;/p&gt;
 &lt;/blockquote&gt;

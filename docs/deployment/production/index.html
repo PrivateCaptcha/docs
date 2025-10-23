@@ -10,6 +10,7 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Production use – Private Captcha</title>
   <meta name="description" content="Updates You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.
+When you update Private Captcha you also need to purge CDN/proxy caches.
 CDN integration All responses from Private Captcha server already contain correct Cache-Control headers so your only job is to make sure CDN/proxy respects them and does not override them. Private Captcha installation expects to be running on 3 subdomains (cdn., api. and portal.) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/deployment/production/" itemprop="url" />
 
 <meta property="og:title" content="Production use">
@@ -19,6 +20,7 @@ CDN integration All responses from Private Captcha server already contain correc
     
       Updates
     You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.
+When you update Private Captcha you also need to purge CDN/proxy caches.
 CDN integration
     
   
@@ -45,19 +47,21 @@ Private Captcha installation expects to be running on 3 subdomains (cdn., api. a
 
 <meta
   property="article:modified_time"
-  content="2025-10-23T12:20:36+03:00">
+  content="2025-10-23T13:29:04+03:00">
 
 
 
   <meta itemprop="name" content="Production use">
   <meta itemprop="description" content="Updates You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.
+When you update Private Captcha you also need to purge CDN/proxy caches.
 CDN integration All responses from Private Captcha server already contain correct Cache-Control headers so your only job is to make sure CDN/proxy respects them and does not override them. Private Captcha installation expects to be running on 3 subdomains (cdn., api. and portal.) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice.">
   <meta itemprop="datePublished" content="2025-10-23T11:27:25+03:00">
-  <meta itemprop="dateModified" content="2025-10-23T12:20:36+03:00">
-  <meta itemprop="wordCount" content="616">
+  <meta itemprop="dateModified" content="2025-10-23T13:29:04+03:00">
+  <meta itemprop="wordCount" content="631">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Production use">
   <meta name="twitter:description" content="Updates You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.
+When you update Private Captcha you also need to purge CDN/proxy caches.
 CDN integration All responses from Private Captcha server already contain correct Cache-Control headers so your only job is to make sure CDN/proxy respects them and does not override them. Private Captcha installation expects to be running on 3 subdomains (cdn., api. and portal.) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice.">
 
     <link rel="preload" href="/css/compiled/main.min.d9462c89ac5d0a196fa492dc4dc845dc696e49d7a37f825d992181e883ac2e82.css" as="style" integrity="sha256-2UYsiaxdChlvpJLcTchF3GluSdejf4JdmSGB6IOsLoI=" />
@@ -267,15 +271,15 @@ CDN integration All responses from Private Captcha server already contain correc
             </li>
           <li>
               <a
-                href="#servers-command-line-options"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Server’s command-line options</a>
-            </li>
-          <li>
-              <a
                 href="#enterprise-edition"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
               >Enterprise edition</a>
+            </li>
+          <li>
+              <a
+                href="#servers-command-line-options"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Server’s command-line options</a>
             </li>
           </ul>
   
@@ -809,6 +813,10 @@ CDN integration All responses from Private Captcha server already contain correc
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#enterprise-edition">Enterprise edition
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#servers-command-line-options">Server’s command-line options
         </a>
       </li>
@@ -818,10 +826,6 @@ CDN integration All responses from Private Captcha server already contain correc
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#migrations">Migrations
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#enterprise-edition">Enterprise edition
         </a>
       </li></ul>
       <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/deployment/production.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
@@ -851,6 +855,7 @@ CDN integration All responses from Private Captcha server already contain correc
           <h1>Production use</h1>
           <h2>Updates<span class="hx:absolute hx:-mt-20" id="updates"></span>
     <a href="#updates" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.</p>
+<p>When you update Private Captcha you also need to purge CDN/proxy caches.</p>
 <h2>CDN integration<span class="hx:absolute hx:-mt-20" id="cdn-integration"></span>
     <a href="#cdn-integration" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200">
   <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
@@ -862,8 +867,15 @@ CDN integration All responses from Private Captcha server already contain correc
 
 <p>Private Captcha installation expects to be running on 3 subdomains (<code>cdn.</code>, <code>api.</code> and <code>portal.</code>) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice.</p>
 <h2>Security<span class="hx:absolute hx:-mt-20" id="security"></span>
-    <a href="#security" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Overall, if you&rsquo;re running Private Captcha in production, security is completely your responsibility. It is a very large topic and completely outside the scope of this note.</p>
-<p>Some <em>very basic</em> advice, specific to Private Captcha server itself:</p>
+    <a href="#security" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></div>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">If you&rsquo;re running Private Captcha in production, security is completely <strong>your responsibility</strong>. It is a very large topic and completely outside the scope of this note.</div>
+  </div>
+</div>
+
+<p>Some <strong>very basic</strong> advice, specific to Private Captcha server itself:</p>
 <ul>
 <li>update Private Captcha server frequently</li>
 <li>make sure server is behind CDN/proxy and is not directly connected to the internet</li>
@@ -871,8 +883,10 @@ CDN integration All responses from Private Captcha server already contain correc
 <li>do not enable registration if you&rsquo;re the only admin/user (<code>PC_REGISTRATION_ALLOWED</code> is empty/unset by default)</li>
 <li>you can configure CDN/reverse proxy rate limits accordingly to your use-case (that is, <em>in addition</em> to rate limit configuration of Private Captcha server itself)</li>
 <li>correct rate limiting of Private Captcha server itself is <em>heavily</em> dependent on correct configuration of <code>PC_RATE_LIMIT_HEADER</code> environment variable (which value is expected to come from proxy/CDN)</li>
-<li>if you run a larger installation with separate DB and server nodes, you need to secure network between them (docker compose single node setup does not use encryption for Postgres or ClickHouse connections)</li>
-<li>for single-node installations, if you can, use Podman or rootless Docker</li>
+<li><em>if</em> you run a larger installation with separate DB and server nodes, you need to secure network between them (docker compose single node setup does not use encryption for Postgres or ClickHouse connections)</li>
+<li>for single-node installations, if you can, use <a href="https://podman.io/"target="_blank" rel="noopener">Podman<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> or rootless Docker</li>
 </ul>
 <h2>Monitoring<span class="hx:absolute hx:-mt-20" id="monitoring"></span>
     <a href="#monitoring" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Prometheus metrics (<code>/metrics</code> endpoint) are available on <code>$PC_LOCAL_ADDRESS</code> address (if you set <code>PC_LOCAL_ADDRESS</code> environment variable). Server exposes &ldquo;standard&rdquo; Go metrics and <a href="https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals"target="_blank" rel="noopener">&ldquo;four golden signals&rdquo;<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -881,6 +895,26 @@ CDN integration All responses from Private Captcha server already contain correc
 <p>Additionally there&rsquo;re <code>/live</code> and <code>/ready</code> endpoints available on <code>$PC_LOCAL_ADDRESS</code> address that can be used if you run Private Captcha on Kubernetes cluster.</p>
 <h2>Backups<span class="hx:absolute hx:-mt-20" id="backups"></span>
     <a href="#backups" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>While it is outside of the scope of this note, there&rsquo;re many solutions that add a docker container to the compose stack to backup databases to S3-compatible storage. In order to add them, you can use <code>compose.override.yml</code> file.</p>
+<h2>Enterprise edition<span class="hx:absolute hx:-mt-20" id="enterprise-edition"></span>
+    <a href="#enterprise-edition" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>There are a few changes you will need to make using a <code>compose.override.yml</code> file, namely replace <code>privatecaptcha</code> image to <code>privatecaptcha-ee</code> and set an additional environment variable <code>EE_LICENSE_KEY</code> (which you should put in the <code>.env</code> file).</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">privatecaptcha</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io/privatecaptcha/privatecaptcha-ee:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">EE_LICENSE_KEY=${EE_LICENSE_KEY}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">migration</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io/privatecaptcha/privatecaptcha-ee:latest</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
 <h2>Server&rsquo;s command-line options<span class="hx:absolute hx:-mt-20" id="servers-command-line-options"></span>
     <a href="#servers-command-line-options" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -906,11 +940,16 @@ CDN integration All responses from Private Captcha server already contain correc
 </div>
 </div>
 <h3>HTTPS<span class="hx:absolute hx:-mt-20" id="https"></span>
-    <a href="#https" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>As you can see, it&rsquo;s possible to use <code>-certifle</code> and <code>-keyfile</code> to force <code>HTTPS</code> (by default server handles plain <code>HTTP</code> and expects an external proxy to handle TLS/SSL termination)</p>
+    <a href="#https" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>As you can see, it&rsquo;s possible to use <code>-certifle</code> and <code>-keyfile</code> to force <code>HTTPS</code> (by default server handles plain <code>HTTP</code> and expects an external proxy to handle TLS/SSL termination).</p>
 <h3>Migrations<span class="hx:absolute hx:-mt-20" id="migrations"></span>
-    <a href="#migrations" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><blockquote>
-  <p>Docker compose setup does <strong>not</strong> require special handling. Below is only relevant for &ldquo;large&rdquo; custom installations.</p>
-</blockquote>
+    <a href="#migrations" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">If you use docker compose based setup, you can skip this. Below information is only relevant for &ldquo;large&rdquo; <em>custom</em> installations.</div>
+  </div>
+</div>
+
 <p>While in docker compose single-node setup migrations have been taken care of, if you run larger installation of Private Captcha with separate DB and server nodes, you might want to run migrations manually.</p>
 <p>To run migration manually it&rsquo;s required to pass <code>-mode migrate</code> and <code>-migrate-hash</code> (for example with value <code>$(git rev-list -1 HEAD)</code>) to server binary. If you also use <code>-env stdin</code> you can pipe secrets into it.</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
@@ -925,30 +964,10 @@ CDN integration All responses from Private Captcha server already contain correc
   </button>
 </div>
 </div>
-<h2>Enterprise edition<span class="hx:absolute hx:-mt-20" id="enterprise-edition"></span>
-    <a href="#enterprise-edition" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>There are a few changes you will need to make using a <code>compose.override.yml</code> file, namely replace <code>privatecaptcha</code> image to <code>privatecaptcha-ee</code> and set an additional environment variable <code>EE_LICENSE_KEY</code> (which you should put in the <code>.env</code> file).</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">privatecaptcha</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io/privatecaptcha/privatecaptcha-ee:latest</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">EE_LICENSE_KEY=${EE_LICENSE_KEY}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">migration</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io/privatecaptcha/privatecaptcha-ee:latest</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-23T12:20:36.000Z">October 23, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-23T13:29:04.000Z">October 23, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/quickstart/"
         title="Quickstart"

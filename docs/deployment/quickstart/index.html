@@ -42,14 +42,14 @@ At least 2GB of RAM
 
 <meta
   property="article:modified_time"
-  content="2025-10-23T12:13:37+03:00">
+  content="2025-10-23T13:29:04+03:00">
 
 
 
   <meta itemprop="name" content="Private Captcha">
   <meta itemprop="description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.">
-  <meta itemprop="dateModified" content="2025-10-23T12:13:37+03:00">
-  <meta itemprop="wordCount" content="309">
+  <meta itemprop="dateModified" content="2025-10-23T13:29:04+03:00">
+  <meta itemprop="wordCount" content="313">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Private Captcha">
   <meta name="twitter:description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.">
@@ -862,7 +862,7 @@ At least 2GB of RAM
 <li>Private Captcha assumes to run on 3 subdomains in total: <code>api.</code>, <code>cdn.</code> and <code>portal.</code></li>
 <li><code>PC_USER_FINGERPRINT_KEY</code> you can generate using <code>openssl rand -hex 64</code></li>
 <li><code>PC_ADMIN_EMAIL</code> will be used to create an actual admin account (see note for local use below)</li>
-<li><code>PC_RATE_LIMIT_HEADER</code> should be the header containing an actual client IP (comes from your CDN or reverse proxy)</li>
+<li><code>PC_RATE_LIMIT_HEADER</code> should be the header containing an actual client IP (comes from your CDN or reverse proxy, for example <code>X-Real-Ip</code>)</li>
 </ul>
 <p>You can find full documentation on these and other <em>required</em> environment variables <a href="/docs/deployment/configuration/">here</a>.</p>
 <details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
@@ -894,7 +894,7 @@ At least 2GB of RAM
     <strong class="hx:text-lg">(optional) Expose public port</strong>
   </summary>
   <div class="hx:p-2 hx:overflow-hidden">
-    <p>By default Private Captcha server executable is listening on <code>http://localhost:8080</code>. If you want to use Docker networking <em>for production</em> directly (which is <strong>not</strong> recommended) instead of reverse proxy like Nginx or Caddy, you can create a <code>compose.override.yml</code> file like this:</p>
+    <p>By default Private Captcha server executable is listening on <code>http://localhost:8080</code>. If you want to use Docker networking <a href="/docs/deployment/production/">for production</a> directly (which is <strong>not</strong> recommended) instead of reverse proxy like Nginx or Caddy, you can create a <code>compose.override.yml</code> file like this:</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">privatecaptcha</span><span class="p">:</span><span class="w">
@@ -925,14 +925,16 @@ At least 2GB of RAM
 </div>
 </div>
 <h2>4. Navigate to the Portal<span class="hx:absolute hx:-mt-20" id="4-navigate-to-the-portal"></span>
-    <a href="#4-navigate-to-the-portal" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Now you can open <code>$PC_PORTAL_BASE_URL</code> (e.g. <code>portal.yourdomain.com</code> or <code>http://portal.privatecaptcha.local:8080</code>) in browser and log in.</p>
+    <a href="#4-navigate-to-the-portal" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Now you can open <code>$PC_PORTAL_BASE_URL</code> (e.g. <code>portal.yourdomain.com</code> or <a href="http://portal.privatecaptcha.local:8080"target="_blank" rel="noopener">http://portal.privatecaptcha.local:8080<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>) in browser and log in.</p>
 <blockquote>
   <p>NOTE: For local-only use, when asked for a verification code, you might need to find it in the logs of <code>privatecaptcha</code> container. Search for &ldquo;two factor code&rdquo;.</p>
 </blockquote>
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-23T12:13:37.000Z">October 23, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-23T13:29:04.000Z">October 23, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/production/"
         title="Production use"
