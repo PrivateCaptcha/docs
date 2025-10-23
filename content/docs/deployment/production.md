@@ -26,7 +26,8 @@ Some _very basic_ advice, specific to Private Captcha server itself:
 - do not enable registration if you're the only admin/user (`PC_REGISTRATION_ALLOWED` is empty/unset by default)
 - you can configure CDN/reverse proxy rate limits accordingly to your use-case (that is, _in addition_ to rate limit configuration of Private Captcha server itself)
 - correct rate limiting of Private Captcha server itself is _heavily_ dependent on correct configuration of `PC_RATE_LIMIT_HEADER` environment variable (which value is expected to come from proxy/CDN)
-- if you run a larger installation with separate DB and server nodes, you need to secure network between them (docker compose single node setup does not use encryption for Postgres or ClickHouse)
+- if you run a larger installation with separate DB and server nodes, you need to secure network between them (docker compose single node setup does not use encryption for Postgres or ClickHouse connections)
+- for single-node installations, if you can, use Podman or rootless Docker
 
 ## Monitoring
 
@@ -36,7 +37,7 @@ Additionally there're `/live` and `/ready` endpoints available on `$PC_LOCAL_ADD
 
 ## Backups
 
-While it is outside of the scope of this note, there're many solutions that add a docker container to the stack to backup databases to S3-compatible storage. In order to add them, you can use `compose.override.yml` file.
+While it is outside of the scope of this note, there're many solutions that add a docker container to the compose stack to backup databases to S3-compatible storage. In order to add them, you can use `compose.override.yml` file.
 
 ## Server's command-line options
 
@@ -60,6 +61,8 @@ While it is outside of the scope of this note, there're many solutions that add 
 As you can see, it's possible to use `-certifle` and `-keyfile` to force `HTTPS` (by default server handles plain `HTTP` and expects an external proxy to handle TLS/SSL termination)
 
 ### Migrations
+
+> Docker compose setup does **not** require special handling. Below is only relevant for "large" custom installations.
 
 While in docker compose single-node setup migrations have been taken care of, if you run larger installation of Private Captcha with separate DB and server nodes, you might want to run migrations manually.
 
