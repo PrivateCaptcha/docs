@@ -2618,12 +2618,12 @@
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;PC_LOCAL_ADDRESS&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;localhost:9090&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Local &amp;ldquo;admin&amp;rdquo; endpoint that hosts Prometheus metrics, manual maintenance jobs triggers (requires &lt;code&gt;PC_LOCAL_API_KEY&lt;/code&gt; to work) and kubernetes liveness/readiness probes. Does not have any auth and &lt;em&gt;must not&lt;/em&gt; be exposed publicly.&lt;/td&gt;
+          &lt;td&gt;Local &amp;ldquo;admin&amp;rdquo; endpoint that hosts Prometheus metrics, manual maintenance jobs triggers (requires &lt;code&gt;PC_LOCAL_API_KEY&lt;/code&gt; to work) and kubernetes liveness/readiness probes. &lt;strong&gt;Must not&lt;/strong&gt; be exposed publicly.&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;PC_LOCAL_API_KEY&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;asdf...&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;A &lt;em&gt;non-empty&lt;/em&gt; API key &lt;strong&gt;required&lt;/strong&gt; to access &lt;code&gt;PC_LOCAL_ADDRESS&lt;/code&gt; maintenance jobs functionality&lt;/td&gt;
+          &lt;td&gt;A &lt;em&gt;non-empty&lt;/em&gt; API key &lt;strong&gt;required&lt;/strong&gt; to access &lt;code&gt;PC_LOCAL_ADDRESS&lt;/code&gt; maintenance jobs &amp;ldquo;admin&amp;rdquo; functionality&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;PC_RATE_LIMIT_HEADER&lt;/code&gt;&lt;/td&gt;
