@@ -8,116 +8,20 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Configuration – Private Captcha</title>
-  <meta name="description" content="Environmental variables Required Variable Example Description STAGE prod Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. PC_XSRF_KEY jkl;... String used as XSRF key for signing tokens SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/deployment/configuration/" itemprop="url" />
+<title>Ruby – Private Captcha</title>
+  <meta name="description" content=" Note
+You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just Python-idiomatic implementation with convenience features." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/integrations/ruby/" itemprop="url" />
 
-<meta property="og:title" content="Configuration">
+<meta property="og:title" content="Ruby">
 <meta
   property="og:description"
   content="
     
-      Environmental variables
-    Required
-    
-  
       
-          Variable
-          Example
-          Description
-      
-  
-  
-      
-          STAGE
-          prod
-          Stage is used for building widget js code (e.g. minification) and for separation in logging.
-      
-      
-          PC_PORTAL_BASE_URL
-          portal.yourdomain.com
-          (Sub)domain where you will host PrivateCaptcha portal.
-      
-      
-          PC_API_BASE_URL
-          api.yourdomain.com
-          (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted.
-      
-      
-          PC_CDN_BASE_URL
-          cdn.yourdomain.com
-          (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.).
-      
-      
-          PC_ADMIN_EMAIL
-          admin@yourdomain.com
-          Email that will be used for admin user to login. Must be valid and functioning.
-      
-      
-          PC_EMAIL_FROM
-          no-reply@yourdomain.com
-          Sender address for various transactional emails (2FA auth, welcome email etc.)
-      
-      
-          PC_POSTGRES
-          postgres://username:pass@postgres:5432/privatecaptcha
-          Postgres connection string
- 
- for backend DB. You can also specify separate values (see note below).
-      
-      
-          PC_CLICKHOUSE_HOST
-          clickhouse
-          Host (or IP address) where ClickHouse DB is running.
-      
-      
-          PC_CLICKHOUSE_DB
-          privatecaptcha
-          Database for connecting to ClickHouse.
-      
-      
-          PC_CLICKHOUSE_USER
-          captcha
-          Username for connecting to PC_CLICKHOUSE_DB.
-      
-      
-          PC_CLICKHOUSE_PASSWORD
-          qwerty12345
-          Password for PC_CLICKHOUSE_USER.
-      
-      
-          PC_USER_FINGERPRINT_KEY
-          abcdef...
-          HEX-encoded 64-character string, used as IV value for hashing user fingerprints.
-      
-      
-          PC_API_SALT
-          asdf...
-          String used as salt for creating puzzle signatures.
-      
-      
-          PC_XSRF_KEY
-          jkl;...
-          String used as XSRF key for signing tokens
-      
-      
-          SMTP_ENDPOINT
-          smtp://your.provider.com:587
-          Endpoint used for sending transactional email.
-      
-      
-          SMTP_USERNAME
-          foobar
-          Username for SMTP_ENDPOINT.
-      
-      
-          SMTP_PASSWORD
-          qwerty12345
-          Password for SMTP_USERNAME.
-      
-  
-
-
   Note
+
+  
+    You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just Python-idiomatic implementation with convenience features.
     
   ">
 <meta
@@ -125,22 +29,29 @@
   content="
     article
   ">
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/deployment/configuration/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/integrations/ruby/"><meta property="article:section" content="docs">
+
+<meta
+  property="article:published_time"
+  content="2025-10-26T08:48:32+02:00">
 
 
 <meta
   property="article:modified_time"
-  content="2025-10-24T08:38:12+03:00">
+  content="2025-10-26T08:51:07+02:00">
 
 
 
-  <meta itemprop="name" content="Configuration">
-  <meta itemprop="description" content="Environmental variables Required Variable Example Description STAGE prod Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. PC_XSRF_KEY jkl;... String used as XSRF key for signing tokens SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note">
-  <meta itemprop="dateModified" content="2025-10-24T08:38:12+03:00">
-  <meta itemprop="wordCount" content="489">
+  <meta itemprop="name" content="Ruby">
+  <meta itemprop="description" content="Note
+You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just Python-idiomatic implementation with convenience features.">
+  <meta itemprop="datePublished" content="2025-10-26T08:48:32+02:00">
+  <meta itemprop="dateModified" content="2025-10-26T08:51:07+02:00">
+  <meta itemprop="wordCount" content="353">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Configuration">
-  <meta name="twitter:description" content="Environmental variables Required Variable Example Description STAGE prod Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. PC_XSRF_KEY jkl;... String used as XSRF key for signing tokens SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note">
+  <meta name="twitter:title" content="Ruby">
+  <meta name="twitter:description" content="Note
+You can also use reCAPTCHA-compatible /siteverify endpoint directly (especially if you already have working reCAPTCHA integration) like in the tutorial example, this SDK is just Python-idiomatic implementation with convenience features.">
 
     <link rel="preload" href="/css/compiled/main.min.d9462c89ac5d0a196fa492dc4dc845dc696e49d7a37f825d992181e883ac2e82.css" as="style" integrity="sha256-2UYsiaxdChlvpJLcTchF3GluSdejf4JdmSGB6IOsLoI=" />
     <link href="/css/compiled/main.min.d9462c89ac5d0a196fa492dc4dc845dc696e49d7a37f825d992181e883ac2e82.css" rel="stylesheet" integrity="sha256-2UYsiaxdChlvpJLcTchF3GluSdejf4JdmSGB6IOsLoI=" />
@@ -217,7 +128,7 @@
   title=""
   href="/docs/integrations"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
 ><span class="hx:text-center">Integrations</span>
 </a><a
   title=""
@@ -300,7 +211,7 @@
   >Docs
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/deployment/"
@@ -325,26 +236,17 @@
   >Quickstart
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/deployment/configuration/"
     
   >Configuration
     </a>
-  
-    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
-              <a
-                href="#environmental-variables"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Environmental variables</a>
-            </li>
-          </ul>
-  
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/integrations/"
@@ -353,13 +255,40 @@
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/integrations/ruby/"
     
   >Ruby
     </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#installation"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Installation</a>
+            </li>
+          <li>
+              <a
+                href="#quick-start"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Quick Start</a>
+            </li>
+          <li>
+              <a
+                href="#web-framework-integration"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Web Framework Integration</a>
+            </li>
+          <li>
+              <a
+                href="#configuration"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Configuration</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -560,7 +489,7 @@
 
     <ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
         
-          <li class="open"><a
+          <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/deployment/"
@@ -584,9 +513,9 @@
   >Quickstart
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/deployment/configuration/"
     
   >Configuration
@@ -594,7 +523,7 @@
               
             </li></ul>
       </div></li>
-          <li class=""><a
+          <li class="open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/integrations/"
@@ -602,9 +531,9 @@
   >Integrations
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/integrations/ruby/"
     
   >Ruby
@@ -851,18 +780,46 @@
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#environmental-variables">Environmental variables
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#installation">Installation
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#required">Required
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#quick-start">Quick Start
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#optional">Optional
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#web-framework-integration">Web Framework Integration
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#sinatra-example">Sinatra Example
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#rails-example">Rails Example
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#rack-middleware">Rack Middleware
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#configuration">Configuration
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#client-options">Client Options
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#non-standard-backend-domains">Non-standard backend domains
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#retry-configuration">Retry Configuration
         </a>
       </li></ul>
-      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/deployment/configuration.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/integrations/ruby.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -881,229 +838,252 @@
           <a href="/docs/">Docs</a>
         </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/deployment/">Deployment</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Configuration</div>
+          <a href="/docs/integrations/">Integrations</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Ruby</div>
   </div>
 
         <div class="content">
-          <h1>Configuration</h1>
-          <h2>Environmental variables<span class="hx:absolute hx:-mt-20" id="environmental-variables"></span>
-    <a href="#environmental-variables" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Required<span class="hx:absolute hx:-mt-20" id="required"></span>
-    <a href="#required" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Variable</th>
-          <th>Example</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>STAGE</code></td>
-          <td><code>prod</code></td>
-          <td>Stage is used for building widget js code (e.g. minification) and for separation in logging.</td>
-      </tr>
-      <tr>
-          <td><code>PC_PORTAL_BASE_URL</code></td>
-          <td><code>portal.yourdomain.com</code></td>
-          <td>(Sub)domain where you will host PrivateCaptcha portal.</td>
-      </tr>
-      <tr>
-          <td><code>PC_API_BASE_URL</code></td>
-          <td><code>api.yourdomain.com</code></td>
-          <td>(Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CDN_BASE_URL</code></td>
-          <td><code>cdn.yourdomain.com</code></td>
-          <td>(Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.).</td>
-      </tr>
-      <tr>
-          <td><code>PC_ADMIN_EMAIL</code></td>
-          <td><code>admin@yourdomain.com</code></td>
-          <td>Email that will be used for admin user to login. Must be valid and functioning.</td>
-      </tr>
-      <tr>
-          <td><code>PC_EMAIL_FROM</code></td>
-          <td><code>no-reply@yourdomain.com</code></td>
-          <td>Sender address for various transactional emails (2FA auth, welcome email etc.)</td>
-      </tr>
-      <tr>
-          <td><code>PC_POSTGRES</code></td>
-          <td><code>postgres://username:pass@postgres:5432/privatecaptcha</code></td>
-          <td><a href="https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING"target="_blank" rel="noopener">Postgres connection string<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></a> for backend DB. You can also specify separate values (see note below).</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_HOST</code></td>
-          <td><code>clickhouse</code></td>
-          <td>Host (or IP address) where ClickHouse DB is running.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_DB</code></td>
-          <td><code>privatecaptcha</code></td>
-          <td>Database for connecting to ClickHouse.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_USER</code></td>
-          <td><code>captcha</code></td>
-          <td>Username for connecting to <code>PC_CLICKHOUSE_DB</code>.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_PASSWORD</code></td>
-          <td><code>qwerty12345</code></td>
-          <td>Password for <code>PC_CLICKHOUSE_USER</code>.</td>
-      </tr>
-      <tr>
-          <td><code>PC_USER_FINGERPRINT_KEY</code></td>
-          <td><code>abcdef...</code></td>
-          <td>HEX-encoded <code>64</code>-character string, used as IV value for hashing user fingerprints.</td>
-      </tr>
-      <tr>
-          <td><code>PC_API_SALT</code></td>
-          <td><code>asdf...</code></td>
-          <td>String used as salt for creating puzzle signatures.</td>
-      </tr>
-      <tr>
-          <td><code>PC_XSRF_KEY</code></td>
-          <td><code>jkl;...</code></td>
-          <td>String used as XSRF key for signing tokens</td>
-      </tr>
-      <tr>
-          <td><code>SMTP_ENDPOINT</code></td>
-          <td><code>smtp://your.provider.com:587</code></td>
-          <td>Endpoint used for sending transactional email.</td>
-      </tr>
-      <tr>
-          <td><code>SMTP_USERNAME</code></td>
-          <td><code>foobar</code></td>
-          <td>Username for <code>SMTP_ENDPOINT</code>.</td>
-      </tr>
-      <tr>
-          <td><code>SMTP_PASSWORD</code></td>
-          <td><code>qwerty12345</code></td>
-          <td>Password for <code>SMTP_USERNAME</code>.</td>
-      </tr>
-  </tbody>
-</table>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+          <h1>Ruby</h1>
+          <div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Instead of <code>PC_POSTGRES</code> as a connection string, you <strong>can</strong> specify <code>PC_POSTGRES_HOST</code>, <code>PC_POSTGRES_DB</code>, <code>PC_POSTGRES_USER</code>, <code>PC_POSTGRES_PASSWORD</code> separately.</p></div>
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>You can also use reCAPTCHA-compatible <code>/siteverify</code> endpoint directly (especially if you already have working reCAPTCHA integration) like in the <a href="/docs/tutorials/complete-example/">tutorial example</a>, this SDK is just Python-idiomatic implementation with convenience features.</p></div>
   </div>
 </div>
-<h3>Optional<span class="hx:absolute hx:-mt-20" id="optional"></span>
-    <a href="#optional" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Variable</th>
-          <th>Example</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>PC_HOST</code></td>
-          <td><code>localhost</code></td>
-          <td>Host where to listen for HTTP connections.</td>
-      </tr>
-      <tr>
-          <td><code>PC_PORT</code></td>
-          <td><code>8080</code></td>
-          <td>Port where to listen for HTTP connections.</td>
-      </tr>
-      <tr>
-          <td><code>PC_LOCAL_ADDRESS</code></td>
-          <td><code>localhost:9090</code></td>
-          <td>Local &ldquo;admin&rdquo; endpoint that hosts Prometheus metrics, manual maintenance jobs triggers (requires <code>PC_LOCAL_API_KEY</code> to work) and kubernetes liveness/readiness probes. <strong>Must not</strong> be exposed publicly.</td>
-      </tr>
-      <tr>
-          <td><code>PC_LOCAL_API_KEY</code></td>
-          <td><code>asdf...</code></td>
-          <td>A <em>non-empty</em> API key <strong>required</strong> to access <code>PC_LOCAL_ADDRESS</code> maintenance jobs &ldquo;admin&rdquo; functionality</td>
-      </tr>
-      <tr>
-          <td><code>PC_RATE_LIMIT_HEADER</code></td>
-          <td><code>X-Real-Ip</code></td>
-          <td>HTTP header which will contain IP address of the connecting user. Is expected to come from CDN or proxy (e.g., nginx, caddy). If empty, righmost non-private address of <code>X-Forwarded-For</code> will be used.</td>
-      </tr>
-      <tr>
-          <td><code>PC_RATE_LIMIT_RPS</code></td>
-          <td><code>1.0</code></td>
-          <td>Leak rate per second (float) of default API rate limiter.</td>
-      </tr>
-      <tr>
-          <td><code>PC_RATE_LIMIT_BURST</code></td>
-          <td><code>20</code></td>
-          <td>Burst of default API rate limiter.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_ADMIN</code></td>
-          <td><code>captcha_admin</code></td>
-          <td>Separate username for ClickHouse to run migrations with. If empty, <code>PC_CLICKHOUSE_USER</code> will be used.</td>
-      </tr>
-      <tr>
-          <td><code>PC_CLICKHOUSE_ADMIN_PASSWORD</code></td>
-          <td><code>qwerty12345</code></td>
-          <td>Password for <code>PC_CLICKHOUSE_ADMIN</code>.</td>
-      </tr>
-      <tr>
-          <td><code>PC_POSTGRES_ADMIN</code></td>
-          <td><code>captcha_admin</code></td>
-          <td>Separate username for Postgres to run migrations with. If empty, <code>PC_POSTGRES_USER</code> (or <code>PC_POSTGRES</code>) will be used.</td>
-      </tr>
-      <tr>
-          <td><code>PC_POSTGRES_ADMIN_PASSWORD</code></td>
-          <td><code>qwerty12345</code></td>
-          <td>Password for <code>PC_POSTGRES_ADMIN</code>.</td>
-      </tr>
-      <tr>
-          <td><code>PC_MAINTENANCE_MODE</code></td>
-          <td><code>true</code></td>
-          <td>Boolean (<code>1</code>, <code>y</code>, <code>true</code>) value if server is in maintenance mode, during which communications with databases are offline, but APIs (and cache) are functional.</td>
-      </tr>
-      <tr>
-          <td><code>PC_REGISTRATION_ALLOWED</code></td>
-          <td><code>true</code></td>
-          <td>Boolean (<code>1</code>, <code>y</code>, <code>true</code>) value if this instance of PrivateCaptcha has registration page open.</td>
-      </tr>
-      <tr>
-          <td><code>PC_HEALTHCHECK_INTERVAL</code></td>
-          <td><code>60</code></td>
-          <td>Integer value that defines how frequently in seconds we perform internal health check of DB instances and http server. Defaults to <code>5</code> in prod and <code>60</code> in dev.</td>
-      </tr>
-      <tr>
-          <td><code>PC_VERBOSE</code></td>
-          <td><code>true</code></td>
-          <td>Boolean (<code>1</code>, <code>y</code>, <code>true</code>) to indicate verbose logging (trace level).</td>
-      </tr>
-  </tbody>
-</table>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
-  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
-
-  <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>&ldquo;Default&rdquo; rate limiter means the one for public APIs (<code>/puzzle</code>, <code>/verify</code> and some others). Various other APIs have pre-configured hardcoded limits, compiled in.</p></div>
-  </div>
+<p>This is a <strong>server-side</strong> SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does <em>not</em> solve puzzles on the client side (used to protect APIs).</p>
+<div class="hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose" style="--hextra-cards-grid-cols: 3;">
+  <a
+    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="https://github.com/PrivateCaptcha/private-captcha-ruby"
+      target="_blank" rel="noreferrer"><span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"><svg fill="currentColor" viewBox="3 3 18 18">
+    <path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path>
+  </svg>
+  GitHub repository</span></a>
+  <a
+    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="https://rubygems.org/gems/private_captcha/"
+      target="_blank" rel="noreferrer"><span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>RubyGems package</span></a>
 </div>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
-  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
 
-  <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>It&rsquo;s not recommended to modify leak rate configuration unless you <strong>really</strong> know what you&rsquo;re doing.</p></div>
-  </div>
+<h2>Installation<span class="hx:absolute hx:-mt-20" id="installation"></span>
+    <a href="#installation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Add this line to your application&rsquo;s Gemfile:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;private_captcha&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>And then execute:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bundle install</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Or install it yourself as:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gem install private_captcha</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Quick Start<span class="hx:absolute hx:-mt-20" id="quick-start"></span>
+    <a href="#quick-start" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;private_captcha&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Initialize the client with your API key</span>
+</span></span><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;your-api-key-here&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Verify a captcha solution</span>
+</span></span><span class="line"><span class="cl"><span class="k">begin</span>
+</span></span><span class="line"><span class="cl">  <span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="s1">&#39;user-solution-from-frontend&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">success</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s1">&#39;Captcha verified successfully!&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s2">&#34;Verification failed: </span><span class="si">#{</span><span class="n">result</span><span class="o">.</span><span class="n">error_message</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">rescue</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Error</span> <span class="o">=&gt;</span> <span class="n">e</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">puts</span> <span class="s2">&#34;Error: </span><span class="si">#{</span><span class="n">e</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Web Framework Integration<span class="hx:absolute hx:-mt-20" id="web-framework-integration"></span>
+    <a href="#web-framework-integration" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Sinatra Example<span class="hx:absolute hx:-mt-20" id="sinatra-example"></span>
+    <a href="#sinatra-example" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;private_captcha&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;your-api-key&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">post</span> <span class="s1">&#39;/submit&#39;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="k">begin</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Verify captcha from form data</span>
+</span></span><span class="line"><span class="cl">    <span class="n">client</span><span class="o">.</span><span class="n">verify_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Process your form data here</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;Form submitted successfully!&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">rescue</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Error</span>
+</span></span><span class="line"><span class="cl">    <span class="n">status</span> <span class="mi">400</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;Captcha verification failed&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Rails Example<span class="hx:absolute hx:-mt-20" id="rails-example"></span>
+    <a href="#rails-example" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">FormsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">submit</span>
+</span></span><span class="line"><span class="cl">    <span class="n">client</span> <span class="o">=</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;your-api-key&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">begin</span>
+</span></span><span class="line"><span class="cl">      <span class="n">client</span><span class="o">.</span><span class="n">verify_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="c1"># Process form data</span>
+</span></span><span class="line"><span class="cl">      <span class="n">render</span> <span class="ss">plain</span><span class="p">:</span> <span class="s1">&#39;Success!&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">rescue</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Error</span>
+</span></span><span class="line"><span class="cl">      <span class="n">render</span> <span class="ss">plain</span><span class="p">:</span> <span class="s1">&#39;Captcha failed&#39;</span><span class="p">,</span> <span class="ss">status</span><span class="p">:</span> <span class="ss">:bad_request</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Rack Middleware<span class="hx:absolute hx:-mt-20" id="rack-middleware"></span>
+    <a href="#rack-middleware" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;private_captcha&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">use</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Middleware</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">api_key</span><span class="p">:</span> <span class="s1">&#39;your-api-key&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">failed_status_code</span><span class="p">:</span> <span class="mi">403</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Configuration<span class="hx:absolute hx:-mt-20" id="configuration"></span>
+    <a href="#configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Client Options<span class="hx:absolute hx:-mt-20" id="client-options"></span>
+    <a href="#client-options" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;private_captcha&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;your-api-key&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">domain</span> <span class="o">=</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Configuration</span><span class="o">::</span><span class="no">EU_DOMAIN</span>  <span class="c1"># replace domain for self-hosting or EU isolation</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">form_field</span> <span class="o">=</span> <span class="s1">&#39;private-captcha-solution&#39;</span>            <span class="c1"># custom form field name</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">max_backoff_seconds</span> <span class="o">=</span> <span class="mi">20</span>                           <span class="c1"># maximum wait between retries</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">attempts</span> <span class="o">=</span> <span class="mi">5</span>                                       <span class="c1"># number of retry attempts</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="no">Logger</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">STDOUT</span><span class="p">)</span>                        <span class="c1"># optional logger</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Non-standard backend domains<span class="hx:absolute hx:-mt-20" id="non-standard-backend-domains"></span>
+    <a href="#non-standard-backend-domains" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;private_captcha&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use EU domain</span>
+</span></span><span class="line"><span class="cl"><span class="n">eu_client</span> <span class="o">=</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;your-api-key&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">domain</span> <span class="o">=</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Configuration</span><span class="o">::</span><span class="no">EU_DOMAIN</span>  <span class="c1"># api.eu.privatecaptcha.com</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or specify custom domain in case of self-hosting</span>
+</span></span><span class="line"><span class="cl"><span class="n">custom_client</span> <span class="o">=</span> <span class="no">PrivateCaptcha</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;your-api-key&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span><span class="o">.</span><span class="n">domain</span> <span class="o">=</span> <span class="s1">&#39;your-custom-domain.com&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Retry Configuration<span class="hx:absolute hx:-mt-20" id="retry-configuration"></span>
+    <a href="#retry-configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;solution&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">max_backoff_seconds</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>  <span class="c1"># maximum wait between retries</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">attempts</span><span class="p">:</span> <span class="mi">3</span>               <span class="c1"># number of retry attempts</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
 </div>
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-24T08:38:12.000Z">October 24, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-26T08:51:07.000Z">October 26, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/deployment/quickstart/"
-        title="Quickstart"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Quickstart</a></div>
+        href="/docs/integrations/wordpress/"
+        title="WordPress"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
+      >WordPress<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
