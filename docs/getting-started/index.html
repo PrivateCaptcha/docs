@@ -8,22 +8,28 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Testing – Private Captcha</title>
-  <meta name="description" content="There’re 2 main ways how you can keep using Private Captcha for testing of your local website:
-use a predefined (“dummy”) sitekey allow localhost access for main property in Settings in portal Testing with predefined sitekey Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a “dummy” sitekey (aka “test property”): aaaaaaaabbbbccccddddeeeeeeeeeeee. This sitekey does not incur any actual solving “price” (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using data-start-mode=&#34;auto&#34; (in which case parent form needs to gain focus)." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/testing/" itemprop="url" />
+<title>Getting started – Private Captcha</title>
+  <meta name="description" content="Before integrating Private Captcha into your application, you need to complete a few setup steps in the Private Captcha Portal .
+Prerequisites A Private Captcha account (sign up if you don’t have one) Setup steps Create a new property in Private Captcha portal A property represents a single CAPTCHA widget that can be used on a website, web page, or form. Each property is identified by a unique Sitekey." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/getting-started/" itemprop="url" />
 
-<meta property="og:title" content="Testing">
+<meta property="og:title" content="Getting started">
 <meta
   property="og:description"
   content="
     
-      There&rsquo;re 2 main ways how you can keep using Private Captcha for testing of your local website:
+      Before integrating Private Captcha into your application, you need to complete a few setup steps in the Private Captcha Portal
+ 
+.
+Prerequisites
+    
+A Private Captcha account (sign up
+ 
+ if you don&rsquo;t have one)
 
-use a predefined (&ldquo;dummy&rdquo;) sitekey
-allow localhost access for main property in Settings in portal
-
-Testing with predefined sitekey
-    Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a &ldquo;dummy&rdquo; sitekey (aka &ldquo;test property&rdquo;): aaaaaaaabbbbccccddddeeeeeeeeeeee. This sitekey does not incur any actual solving &ldquo;price&rdquo; (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using data-start-mode=&quot;auto&quot; (in which case parent form needs to gain focus).
+Setup steps
+    
+Create a new property in Private Captcha portal
+    A property represents a single CAPTCHA widget that can be used on a website, web page, or form. Each property is identified by a unique Sitekey.
     
   ">
 <meta
@@ -31,24 +37,24 @@ Testing with predefined sitekey
   content="
     article
   ">
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/testing/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/getting-started/"><meta property="article:section" content="docs">
 
 
 <meta
   property="article:modified_time"
-  content="2025-07-18T20:23:53+03:00">
+  content="2025-11-04T16:59:09+02:00">
 
 
 
-  <meta itemprop="name" content="Testing">
-  <meta itemprop="description" content="There’re 2 main ways how you can keep using Private Captcha for testing of your local website:
-use a predefined (“dummy”) sitekey allow localhost access for main property in Settings in portal Testing with predefined sitekey Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a “dummy” sitekey (aka “test property”): aaaaaaaabbbbccccddddeeeeeeeeeeee. This sitekey does not incur any actual solving “price” (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using data-start-mode=&#34;auto&#34; (in which case parent form needs to gain focus).">
-  <meta itemprop="dateModified" content="2025-07-18T20:23:53+03:00">
-  <meta itemprop="wordCount" content="327">
+  <meta itemprop="name" content="Getting started">
+  <meta itemprop="description" content="Before integrating Private Captcha into your application, you need to complete a few setup steps in the Private Captcha Portal .
+Prerequisites A Private Captcha account (sign up if you don’t have one) Setup steps Create a new property in Private Captcha portal A property represents a single CAPTCHA widget that can be used on a website, web page, or form. Each property is identified by a unique Sitekey.">
+  <meta itemprop="dateModified" content="2025-11-04T16:59:09+02:00">
+  <meta itemprop="wordCount" content="351">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Testing">
-  <meta name="twitter:description" content="There’re 2 main ways how you can keep using Private Captcha for testing of your local website:
-use a predefined (“dummy”) sitekey allow localhost access for main property in Settings in portal Testing with predefined sitekey Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a “dummy” sitekey (aka “test property”): aaaaaaaabbbbccccddddeeeeeeeeeeee. This sitekey does not incur any actual solving “price” (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using data-start-mode=&#34;auto&#34; (in which case parent form needs to gain focus).">
+  <meta name="twitter:title" content="Getting started">
+  <meta name="twitter:description" content="Before integrating Private Captcha into your application, you need to complete a few setup steps in the Private Captcha Portal .
+Prerequisites A Private Captcha account (sign up if you don’t have one) Setup steps Create a new property in Private Captcha portal A property represents a single CAPTCHA widget that can be used on a website, web page, or form. Each property is identified by a unique Sitekey.">
 
     <link rel="preload" href="/css/compiled/main.min.d9462c89ac5d0a196fa492dc4dc845dc696e49d7a37f825d992181e883ac2e82.css" as="style" integrity="sha256-2UYsiaxdChlvpJLcTchF3GluSdejf4JdmSGB6IOsLoI=" />
     <link href="/css/compiled/main.min.d9462c89ac5d0a196fa492dc4dc845dc696e49d7a37f825d992181e883ac2e82.css" rel="stylesheet" integrity="sha256-2UYsiaxdChlvpJLcTchF3GluSdejf4JdmSGB6IOsLoI=" />
@@ -89,32 +95,7 @@ use a predefined (“dummy”) sitekey allow localhost access for main property 
 
   
   
-  <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script><script async defer src="https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js"></script>
-<script type="text/javascript">
-function resetCaptcha(widget) {
-    setTimeout(() => widget.reset(), 1500);
-}
-function enableDisable(btn) {
-    btn.disabled = true;
-    setTimeout(() => { btn.disabled = false; }, 1500);
-}
-function invisibleStarted() {
-    document.getElementById('spinner').classList.remove('hidden');
-    document.getElementById('checkmark').classList.add('hidden');
-}
-function invisibleFinished(widget) {
-    setTimeout(() => {
-        document.getElementById('spinner').classList.add('hidden');
-        document.getElementById('checkmark').classList.remove('hidden');
-    }, 1500);
-
-    setTimeout(() => {
-        widget.reset();
-        document.getElementById('spinner').classList.add('hidden');
-        document.getElementById('checkmark').classList.add('hidden');
-    }, 3000);
-}
-</script><script defer src="/js/medium-zoom.min.js"></script>
+  <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script><script defer src="/js/medium-zoom.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         mediumZoom("article .content p:not(:has(a)) > img", {
@@ -138,13 +119,13 @@ function invisibleFinished(widget) {
   title=""
   href="/docs/getting-started"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
 ><span class="hx:text-center">Getting started</span>
 </a><a
   title=""
   href="/docs/reference"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
 ><span class="hx:text-center">Reference</span>
 </a><a
   title=""
@@ -239,13 +220,34 @@ function invisibleFinished(widget) {
   >Docs
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/getting-started/"
     
   >Getting started
     </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#prerequisites"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Prerequisites</a>
+            </li>
+          <li>
+              <a
+                href="#setup-steps"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Setup steps</a>
+            </li>
+          <li>
+              <a
+                href="#next-steps"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Next Steps</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -330,7 +332,7 @@ function invisibleFinished(widget) {
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/reference/"
@@ -371,28 +373,13 @@ function invisibleFinished(widget) {
   >EU Isolation
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/reference/testing/"
     
   >Testing
     </a>
-  
-    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
-              <a
-                href="#testing-with-predefined-sitekey"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Testing with predefined sitekey</a>
-            </li>
-          <li>
-              <a
-                href="#testing-with-localhost-access"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Testing with localhost access</a>
-            </li>
-          </ul>
-  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -513,9 +500,9 @@ function invisibleFinished(widget) {
 
     <ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
         
-          <li class=""><a
+          <li class="open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/getting-started/"
     
   >Getting started
@@ -602,7 +589,7 @@ function invisibleFinished(widget) {
               
             </li></ul>
       </div></li>
-          <li class="open"><a
+          <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/reference/"
@@ -642,9 +629,9 @@ function invisibleFinished(widget) {
   >EU Isolation
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/reference/testing/"
     
   >Testing
@@ -811,22 +798,34 @@ function invisibleFinished(widget) {
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#testing-with-predefined-sitekey">Testing with predefined sitekey
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#prerequisites">Prerequisites
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#client-side">Client side
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#setup-steps">Setup steps
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#server-side">Server side
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#create-a-new-property-in-private-captcha-portal">Create a new property in Private Captcha portal
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#testing-with-localhost-access">Testing with localhost access
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#note-sitekey-of-the-property">Note Sitekey of the property
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#create-a-new-api-key">Create a new API key
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#copy-and-store-your-api-key">Copy and store your API key
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#next-steps">Next Steps
         </a>
       </li></ul>
-      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/reference/testing.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/getting-started.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -843,112 +842,80 @@ function invisibleFinished(widget) {
         <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
           <a href="/docs/">Docs</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/reference/">Reference</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Testing</div>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Getting started</div>
   </div>
 
         <div class="content">
-          <h1>Testing</h1>
-          <p>There&rsquo;re 2 main ways how you can keep using Private Captcha for testing of your local website:</p>
-<ul>
-<li>use a predefined (&ldquo;dummy&rdquo;) sitekey</li>
-<li>allow localhost access for main property in Settings in portal</li>
+          <h1>Getting started</h1>
+          <p>Before integrating Private Captcha into your application, you need to complete a few setup steps in the <a href="https://portal.privatecaptcha.com"target="_blank" rel="noopener">Private Captcha Portal<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>.</p>
+<h2>Prerequisites<span class="hx:absolute hx:-mt-20" id="prerequisites"></span>
+    <a href="#prerequisites" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>A Private Captcha account (<a href="https://portal.privatecaptcha.com/signup"target="_blank" rel="noopener">sign up<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> if you don&rsquo;t have one)</li>
 </ul>
-<h2>Testing with predefined sitekey<span class="hx:absolute hx:-mt-20" id="testing-with-predefined-sitekey"></span>
-    <a href="#testing-with-predefined-sitekey" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a &ldquo;dummy&rdquo; sitekey (aka &ldquo;test property&rdquo;): <code>aaaaaaaabbbbccccddddeeeeeeeeeeee</code>. This sitekey does not incur any actual solving &ldquo;price&rdquo; (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using <code>data-start-mode=&quot;auto&quot;</code> (in which case parent <code>form</code> needs to gain focus).</p>
-<h3>Client side<span class="hx:absolute hx:-mt-20" id="client-side"></span>
-    <a href="#client-side" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This is a sample captcha widget for testing:</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span> <span class="na">data-sitekey</span><span class="o">=</span><span class="s">&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
-  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
-
-  <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Widget will show red <code>&quot;testing&quot;</code> text to highlight that it&rsquo;s not for production use once you click it.</p></div>
-  </div>
-</div>
-<form class="pc-form" style="">
-    <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
-        data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
-        data-theme="light"
-        data-lang="en"
-        data-styles=""></div>
-</form>
-<h3>Server side<span class="hx:absolute hx:-mt-20" id="server-side"></span>
-    <a href="#server-side" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>On the server side, once you are using <a href="/docs/reference/verify-api/">Verify API</a>, all responses will contain <code>{ &quot;success&quot;: true }</code> (&ldquo;verification passed&rdquo;) and <code>{ &quot;error-codes&quot;: [&quot;property-test&quot;] }</code> (non-empty error codes). Of course, you should be mainly checking <code>success</code> field and <code>error-codes</code> semantics is just to distinguish actual errors.</p>
-<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">Sending verify request</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>This is a sample payload for test property, that should always return &ldquo;success&rdquo; (please note this is for illustration purposes <strong>only</strong> as payload can change)</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -X POST <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;X-Api-Key: your-api-key&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -d <span class="s2">&#34;AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.Aaqqqqq7u8zM3d3u7u7u7u4AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=.AQCBnM2czBK6rlq+l06lXBtIDQH/PFk=&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  https://api.privatecaptcha.com/verify</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p>And if everything is set up correctly, the output will be</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;success&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&#34;code&#34;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="nt">&#34;timestamp&#34;</span><span class="p">:</span><span class="s2">&#34;0001-01-01T00:00:00Z&#34;</span><span class="p">,</span><span class="nt">&#34;origin&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p>Code <code>10</code> corresponds to <code>&quot;property-test&quot;</code> error description.</p>
-  </div>
-</details>
-<h2>Testing with localhost access<span class="hx:absolute hx:-mt-20" id="testing-with-localhost-access"></span>
-    <a href="#testing-with-localhost-access" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+<h2>Setup steps<span class="hx:absolute hx:-mt-20" id="setup-steps"></span>
+    <a href="#setup-steps" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]">
+<h3>Create a new property in Private Captcha portal<span class="hx:absolute hx:-mt-20" id="create-a-new-property-in-private-captcha-portal"></span>
+    <a href="#create-a-new-property-in-private-captcha-portal" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A property represents a single CAPTCHA widget that can be used on a website, web page, or form. Each property is identified by a unique <strong>Sitekey</strong>.</p>
+<p>Go to <a href="https://portal.privatecaptcha.com"target="_blank" rel="noopener">Private Captcha Portal<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> and click <strong>&ldquo;Add new property&rdquo;</strong>.</p>
+<p><img src="/images/integrations/add-new-property.png" alt="Add new property"  loading="lazy" /></p>
+<p>Enter a name for your property (e.g., <em>&ldquo;My Website&rdquo;</em>) and the domain where you&rsquo;ll use the CAPTCHA (e.g., <code>example.com</code>).</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Captcha has a strict CORS policy and, by default, it will load <strong>only</strong> on the domain configured during property creation. Subdomains and <code>localhost</code> access needs to be explicitly allowed.</p></div>
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>The domain should <strong>exactly</strong> match your website domain. For local development, you&rsquo;ll need to enable &ldquo;Allow localhost&rdquo; in <a href="/docs/reference/property-settings/#localhost">property settings</a> later.</p></div>
   </div>
 </div>
-<p>In order to make captcha widget to load on <code>localhost</code> domain, we need to allow it in the settings of the property you just created.</p>
-<p><img src="/images/tutorials/e2e-local/allow-localhost.png" alt="Allow localhost domain"  loading="lazy" /></p>
-<p>Worth noting that this is <strong>not required</strong> if you use the <a href="#testing-with-predefined-sitekey">dummy sitekey</a>.</p>
+<p><img src="/images/integrations/new-wordpress-site.png" alt="Enter name and domain"  loading="lazy" /></p>
+<p>Click <strong>&ldquo;Create&rdquo;</strong> to complete property creation.</p>
+<h3>Note Sitekey of the property<span class="hx:absolute hx:-mt-20" id="note-sitekey-of-the-property"></span>
+    <a href="#note-sitekey-of-the-property" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After creating the property, you&rsquo;ll be presented with an integration snippet. The <em>Sitekey</em> is visible in the widget configuration.</p>
+<p>Alternatively, you can find it later by opening your property in the portal, going to the <strong>&ldquo;Integrations&rdquo;</strong> tab, and noting the <strong>Sitekey</strong> value.</p>
+<p><img src="/images/integrations/property-sitekey.png" alt="Property sitekey"  loading="lazy" /></p>
+<p>The <em>Sitekey</em> looks like <code>aaaaaaaabbbbccccddddeeeeeeeeeeee</code> and is used for the client-side widget initialization.</p>
+<h3>Create a new API key<span class="hx:absolute hx:-mt-20" id="create-a-new-api-key"></span>
+    <a href="#create-a-new-api-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>API keys are used for server-side verification of CAPTCHA solutions. Each API key has an expiration date and can be revoked at any time.</p>
+<p>Go to <a href="https://portal.privatecaptcha.com/settings?tab=apikeys"target="_blank" rel="noopener">API key settings<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> and click <strong>&ldquo;Create new key&rdquo;</strong>. Give it a meaningful name (e.g., &ldquo;Production API key&rdquo;, &ldquo;WordPress API key&rdquo;).</p>
+<p><img src="/images/integrations/new-api-key.png" alt="Create a new API key"  loading="lazy" /></p>
+<p>Set an expiration date and click <strong>&ldquo;Create&rdquo;</strong>.</p>
+<h3>Copy and store your API key<span class="hx:absolute hx:-mt-20" id="copy-and-store-your-api-key"></span>
+    <a href="#copy-and-store-your-api-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After creation, the API key value will be displayed. <strong>Copy it immediately</strong> and store it securely (e.g., in a password manager).</p>
+<p><img src="/images/integrations/copy-api-key.png" alt="Copy API key value"  loading="lazy" /></p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>The API key value is only shown once. If you lose it, you&rsquo;ll need to create a new API key. Store it securely and never commit it to version control.</p></div>
+  </div>
+</div>
+</div>
+<h2>Next Steps<span class="hx:absolute hx:-mt-20" id="next-steps"></span>
+    <a href="#next-steps" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Now that you have a property with a <em>Sitekey</em> (for client-side widget) and an API key (for server-side verification), you can proceed to:</p>
+<div class="hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose" style="--hextra-cards-grid-cols: 3;">
+  <a
+    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/tutorials/complete-example"
+      ><span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>End-to-end example</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Follow along to see a complete integration example</div></a>
+  <a
+    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/integrations/go"
+      ><span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50">Integrations</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Use one of the SDKs for server-side verification</div></a>
+  <a
+    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/tutorials/widget-customization"
+      ><span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>Widget customization</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Integrate the widget on your frontend</div></a>
+</div>
+
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-07-18T20:23:53.000Z">July 18, 2025</time></div>
-        <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/reference/eu-isolation/"
-        title="EU Isolation"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>EU Isolation</a><a
-        href="/docs/reference/verify-api/"
-        title="Verify API"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >Verify API<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-11-04T16:59:09.000Z">November 4, 2025</time></div>
+        
         
       </main>
     </article>
