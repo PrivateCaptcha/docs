@@ -3,6 +3,10 @@ title: "PHP"
 date: 2025-08-20T08:35:57+03:00
 ---
 
+{{< callout type="warning" icon="key" >}}
+  To use this integration you need to [create an API key](https://portal.{{< domain >}}/settings?tab=apikeys) in your account.
+{{< /callout >}}
+
 > [!NOTE]
 > You can also use reCAPTCHA-compatible `/siteverify` endpoint directly (especially if you already have working reCAPTCHA integration) like in the [tutorial example]({{< relref "/docs/tutorials/complete-example.md" >}}), this SDK is just PHP-idiomatic implementation with convenience features.
 

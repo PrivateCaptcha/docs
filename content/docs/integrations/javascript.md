@@ -4,6 +4,10 @@ date: 2025-07-19T14:06:29+03:00
 type: docs
 ---
 
+{{< callout type="warning" icon="key" >}}
+  To use this integration you need to [create an API key](https://portal.{{< domain >}}/settings?tab=apikeys) in your account.
+{{< /callout >}}
+
 > [!NOTE]
 > You can also use reCAPTCHA-compatible `/siteverify` endpoint directly (especially if you already have working reCAPTCHA integration) like in the [tutorial example]({{< relref "/docs/tutorials/complete-example.md" >}}), this SDK is just Javascript-idiomatic implementation with convenience features.
 
@@ -80,7 +84,7 @@ const client = createClient({
     apiKey: 'your-api-key',                 // Required
     formField: 'private-captcha-solution',  // Field from where to read the solution
     failedStatusCode: 403,                  // HTTP status code for failed verifications (middleware)
-    domain: 'api.privatecaptcha.com'        // Override for EU isolation or for self-hosting
+    domain: 'api.eu.privatecaptcha.com'        // Override for EU isolation or for self-hosting
 });
 ```
 
