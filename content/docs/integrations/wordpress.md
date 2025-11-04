@@ -5,7 +5,6 @@ date: 2025-09-18T09:15:02+03:00
 
 This is a **all-in-one** plugin for WordPress that allows you to configure _client-side_ captcha widget and _server-side_ verification.
 
-
 {{< cards >}}
   {{< card link="https://wordpress.org/plugins/private-captcha/" title="WordPress plugin" icon="wordpress" >}}
   {{< card link="https://github.com/PrivateCaptcha/private-captcha-wordpress" title="GitHub repository" icon="github" >}}
@@ -24,7 +23,7 @@ This is a **all-in-one** plugin for WordPress that allows you to configure _clie
 
 ### Create a new property in Private Captcha portal
 
-Go to [Private Captcha Portal](https://portal.privatecaptcha.com) and click _"Add new property"_ button.
+Go to [Private Captcha Portal](https://portal.{{< domain >}}) and click _"Add new property"_ button.
 
 ![Add new](/images/integrations/add-new-property.png)
 
@@ -43,7 +42,7 @@ Open _"Integrations"_ tab and note the **Sitekey** of the property you just crea
 
 ### Create a new API key
 
-Go to [API key settings](https://portal.privatecaptcha.com/settings?tab=apikeys) and click _"Create new key"_. Give it some meaningful name, like _"WordPress API key"_
+Go to [API key settings](https://portal.{{< domain >}}/settings?tab=apikeys) and click _"Create new key"_. Give it some meaningful name, like _"WordPress API key"_
 
 ![Create a new API key](/images/integrations/new-api-key.png)
 
@@ -118,4 +117,4 @@ Possible reasons:
 
 - WordPress 5.6+
 - PHP 8.2+
-- [Private Captcha account](https://portal.privatecaptcha.com/signup)
+- [Private Captcha account](https://portal.{{< domain >}}/signup)

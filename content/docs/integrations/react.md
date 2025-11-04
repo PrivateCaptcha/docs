@@ -3,6 +3,10 @@ title: "React"
 date: 2025-07-27T14:12:04+03:00
 ---
 
+{{< callout type="warning" icon="key" >}}
+  To use this integration you need to [create a property]({{< relref "docs/reference/property-settings.md" >}}) in your organization and get it's _sitekey_.
+{{< /callout >}}
+
 > [!NOTE]
 > You can use a "default way" of adding `<div class="private-captcha" ...></div>` element with `https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js` Javascript include. But it will not work well with server-side rendering (e.g. in Next.js).
 

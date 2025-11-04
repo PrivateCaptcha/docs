@@ -4,6 +4,10 @@ date: 2025-07-23T21:09:29+03:00
 type: docs
 ---
 
+{{< callout type="warning" icon="key" >}}
+  To use this integration you need to [create an API key](https://portal.{{< domain >}}/settings?tab=apikeys) in your account.
+{{< /callout >}}
+
 > [!NOTE]
 > You can also use reCAPTCHA-compatible `/siteverify` endpoint directly (especially if you already have working reCAPTCHA integration) like in the [tutorial example]({{< relref "/docs/tutorials/complete-example.md" >}}), this SDK is just Python-idiomatic implementation with convenience features.
 
