@@ -22,10 +22,10 @@ This is a **server-side** SDK, which you would use to verify captcha solution ag
 go get -u github.com/PrivateCaptcha/private-captcha-go
 ```
 
-> [!NOTE]
-> Before using this SDK, you'll need an API key. If you don't have one yet, see how to [create an API key]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}) in the Getting Started guide.
-
 ## Usage
+
+> [!NOTE]
+> Before using this SDK, you'll need an API key. If you don't have one yet, see how to create it in the [Getting Started guide]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}).
 
 ### Import and instantiation
 

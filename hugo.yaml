@@ -26,7 +26,7 @@ markup:
 
 menu:
   main:
-    - name: Getting Started
+    - name: Getting started
       pageRef: /docs/getting-started
       weight: 1
     - name: Reference

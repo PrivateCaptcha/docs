@@ -26,7 +26,7 @@ composer require private-captcha/private-captcha-php
 > [!NOTE]
 > Before using this SDK, you'll need an API key. If you don't have one yet, see how to [create an API key]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}) in the Getting Started guide.
 
-## Quick Start
+## Quick start
 
 ```php
 <?php
@@ -51,9 +51,9 @@ try {
 
 ## Usage
 
-### Web Framework Integration
+### Web framework integration
 
-#### Laravel Example
+#### Laravel example
 
 ```php
 <?php
@@ -87,7 +87,7 @@ class FormController extends Controller
 }
 ```
 
-#### Symfony Example
+#### Symfony example
 
 ```php
 <?php
@@ -123,7 +123,7 @@ class FormController
 
 Client configuration allows to set default form field and domain (can be used for self-hosting or [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}})).
 
-#### Client Options
+#### Client options
 
 ```php
 <?php
@@ -158,7 +158,7 @@ $customClient = new Client(
 );
 ```
 
-#### Retry Configuration
+#### Retry configuration
 
 ```php
 <?php

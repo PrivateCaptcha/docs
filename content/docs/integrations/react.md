@@ -23,7 +23,7 @@ This is a **client-side** SDK for React, which is an alternative to using a stan
 npm install @private-captcha/private-captcha-react
 ```
 
-## Basic Usage
+## Basic usage
 
 ```tsx
 import React from 'react';
@@ -54,17 +54,17 @@ function MyForm() {
 
 ## Props API
 
-### Required Props
+### Required props
 
 | Prop | Type | Description |
 |------|------|-------------|
 | `siteKey` | `string` | Your Private Captcha site key |
 
-### Optional Props
+### Optional props
 
 Please refer to the [official widget options]({{< relref "/docs/reference/widget-options.md" >}}) documentation.
 
-### Event Handler Props
+### Event handler props
 
 All event handler functions receive a `detail` object with these properties:
 - `detail.widget` - [captcha object]({{< relref "/docs/reference/captcha-object.md" >}})
