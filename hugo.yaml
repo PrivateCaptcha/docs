@@ -26,29 +26,32 @@ markup:
 
 menu:
   main:
+    - name: Getting Started
+      pageRef: /docs/getting-started
+      weight: 1
     - name: Reference
       pageRef: /docs/reference
-      weight: 1
+      weight: 2
     - name: Tutorials
       pageRef: /docs/tutorials
-      weight: 2
+      weight: 3
     - name: Integrations
       pageRef: /docs/integrations
-      weight: 3
+      weight: 4
     - name: Office Hours ↗
       url: "https://cal.com/privatecaptcha/20min"
-      weight: 4
-    - name: Search
       weight: 5
+    - name: Search
+      weight: 6
       params:
         type: search
     - name: GitHub
-      weight: 6
+      weight: 7
       url: "https://github.com/PrivateCaptcha/PrivateCaptcha"
       params:
         icon: github
     - name: Website
-      weight: 7
+      weight: 8
       url: "https://privatecaptcha.com"
       params:
         icon: globe-alt

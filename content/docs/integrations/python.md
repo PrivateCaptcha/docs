@@ -85,7 +85,7 @@ def submit_view(request):
 
 ## Configuration
 
-### Client Options
+#### Client Options
 
 ```python
 from private_captcha import Client, EU_DOMAIN
@@ -98,7 +98,7 @@ client = Client(
 )
 ```
 
-### Non-standard backend domains
+#### Non-standard backend domains
 
 For [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}}), you can use built-in constant `EU_DOMAIN`:
 
@@ -118,7 +118,7 @@ custom_client = Client(
 )
 ```
 
-### Retry Configuration
+#### Retry Configuration
 
 When verifying puzzle solutions, you can also specify some retry and backoff options.
 

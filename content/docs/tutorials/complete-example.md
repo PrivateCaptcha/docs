@@ -211,11 +211,7 @@ Now client-side should be ready. What is left is only to verify captcha on the s
 
 For server-side, we need to add a handler for the form and verify captcha solution.
 
-### Create a new API key
-
 To verify captcha solutions, we need an API key. Head to the [portal](https://portal.{{< domain >}}/settings?tab=apikeys), open your user's Settings, then API keys and click "Create new key".
-
-![Create new API key](/images/tutorials/create-api-key.png)
 
 ### Add code to verify solution
 

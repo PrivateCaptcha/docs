@@ -1,5 +1,6 @@
 ---
 title: Integrations
+weight: 2
 ---
 
 It is recommended to use one of the pre-built integrations. They use a more efficient API than reCAPTCHA-compatible `/siteverify` API, include retry mechanism and are officially supported.

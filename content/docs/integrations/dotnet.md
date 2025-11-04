@@ -99,6 +99,8 @@ If verification fails, the middleware will short-circuit the request and return 
 
 You can customize the client's behavior by passing a `PrivateCaptchaConfiguration` object to the constructor.
 
+#### Client Options
+
 | Property           | Description                                                                                             | Default Value                  |
 | ------------------ | ------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | `ApiKey`           | **(Required)** Your API key from the Private Captcha dashboard.                                         | `string.Empty`                 |
@@ -120,7 +122,7 @@ var config = new PrivateCaptchaConfiguration
 var client = new PrivateCaptchaClient(config);
 ```
 
-#### Retry configuration
+#### Retry Configuration
 
 When verifying puzzle solutions, you can also specify some retry and backoff options.
 

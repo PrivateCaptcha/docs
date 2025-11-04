@@ -70,6 +70,8 @@ app.post('/verify', async (req, res) => {
 
 Client configuration allows to set default form field, domain (can be used for self-hosting or [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}})) and HTTP status for middleware version.
 
+#### Client Options
+
 ```javascript
 const client = createClient({
     apiKey: 'your-api-key',                 // Required
@@ -79,7 +81,18 @@ const client = createClient({
 });
 ```
 
-#### Retry configuration
+#### Non-standard backend domains
+
+For [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}}), you can use the domain option:
+
+```javascript
+const client = createClient({
+    apiKey: 'your-api-key',
+    domain: 'api.eu.privatecaptcha.com'  // EU domain
+});
+```
+
+#### Retry Configuration
 
 When verifying puzzle solutions, you can also specify some retry and backoff options.
 

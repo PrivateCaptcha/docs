@@ -116,7 +116,7 @@ class FormController
 
 Client configuration allows to set default form field and domain (can be used for self-hosting or [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}})).
 
-### Client Options
+#### Client Options
 
 ```php
 <?php
@@ -131,7 +131,7 @@ $client = new Client(
 );
 ```
 
-### Non-standard backend domains
+#### Non-standard backend domains
 
 ```php
 <?php
@@ -151,7 +151,7 @@ $customClient = new Client(
 );
 ```
 
-### Retry Configuration
+#### Retry Configuration
 
 ```php
 <?php

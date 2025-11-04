@@ -1,6 +1,7 @@
 ---
 title: Deployment
 next: configuration
+weight: 5
 ---
 
 Information related to self-hosting topics.

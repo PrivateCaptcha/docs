@@ -56,7 +56,9 @@ rescue PrivateCaptcha::Error => e
 end
 ```
 
-## Web Framework Integration
+## Usage
+
+### Web Framework Integration
 
 ### Sinatra Example
 

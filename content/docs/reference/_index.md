@@ -1,6 +1,7 @@
 ---
 title: Reference
 next: widget-options
+weight: 3
 ---
 
 Reference of API and parameters that you can use.

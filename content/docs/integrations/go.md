@@ -85,7 +85,7 @@ client, err := pc.NewClient(pc.Configuration{Domain: pc.EUDomain})
 
 For self-hosted installation, use API domain name.
 
-#### Retry configuration
+#### Retry Configuration
 
 When verifying puzzle solutions, you can also specify some retry and backoff options.
 
