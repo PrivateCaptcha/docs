@@ -62,7 +62,7 @@ After creation, the API key value will be displayed. **Copy it immediately** and
 
 {{% /steps %}}
 
-## Next Steps
+## Next steps
 
 Now that you have a property with a _Sitekey_ (for client-side widget) and an API key (for server-side verification), you can proceed to:
 
