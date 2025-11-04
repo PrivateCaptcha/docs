@@ -20,6 +20,9 @@ This is a **server-side** SDK, which you would use to verify captcha solution ag
 pip install private-captcha
 ```
 
+> [!NOTE]
+> Before using this SDK, you'll need an API key. If you don't have one yet, see how to [create an API key]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}) in the Getting Started guide.
+
 ## Quick Start
 
 ```python

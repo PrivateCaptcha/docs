@@ -33,6 +33,9 @@ Or install it yourself as:
 gem install private_captcha
 ```
 
+> [!NOTE]
+> Before using this SDK, you'll need an API key. If you don't have one yet, see how to [create an API key]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}) in the Getting Started guide.
+
 ## Quick Start
 
 ```ruby

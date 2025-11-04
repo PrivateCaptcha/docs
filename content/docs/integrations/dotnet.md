@@ -27,6 +27,9 @@ dotnet add package PrivateCaptcha
 Install-Package PrivateCaptcha
 ```
 
+> [!NOTE]
+> Before using this SDK, you'll need an API key. If you don't have one yet, see how to [create an API key]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}) in the Getting Started guide.
+
 ## Usage
 
 ### Basic Verification

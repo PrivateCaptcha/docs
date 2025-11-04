@@ -20,6 +20,9 @@ This is a **server-side** SDK, which you would use to verify captcha solution ag
 npm install private-captcha-js
 ```
 
+> [!NOTE]
+> Before using this SDK, you'll need an API key. If you don't have one yet, see how to [create an API key]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}) in the Getting Started guide.
+
 ## Usage
 
 ### Basic Verification
