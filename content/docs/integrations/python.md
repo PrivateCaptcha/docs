@@ -24,7 +24,10 @@ This is a **server-side** SDK, which you would use to verify captcha solution ag
 pip install private-captcha
 ```
 
-## Quick Start
+## Quick start
+
+> [!NOTE]
+> Before using this SDK, you'll need an API key. If you don't have one yet, see how to create it in the [Getting Started guide]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}).
 
 ```python
 from private_captcha import Client
@@ -45,9 +48,9 @@ except Exception as e:
 
 ## Usage
 
-### Web Framework Integration
+### Web framework integration
 
-#### Flask Example
+#### Flask example
 
 ```python
 from flask import Flask, request
@@ -69,7 +72,7 @@ def submit_form():
         return "Captcha verification failed", 400
 ```
 
-#### Django Example
+#### Django example
 
 ```python
 from django.http import HttpResponse
@@ -89,7 +92,7 @@ def submit_view(request):
 
 ## Configuration
 
-### Client Options
+#### Client options
 
 ```python
 from private_captcha import Client, EU_DOMAIN
@@ -102,7 +105,7 @@ client = Client(
 )
 ```
 
-### Non-standard backend domains
+#### Non-standard backend domains
 
 For [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}}), you can use built-in constant `EU_DOMAIN`:
 
@@ -122,7 +125,7 @@ custom_client = Client(
 )
 ```
 
-### Retry Configuration
+#### Retry configuration
 
 When verifying puzzle solutions, you can also specify some retry and backoff options.
 

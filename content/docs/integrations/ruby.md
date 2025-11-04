@@ -37,7 +37,10 @@ Or install it yourself as:
 gem install private_captcha
 ```
 
-## Quick Start
+## Quick start
+
+> [!NOTE]
+> Before using this SDK, you'll need an API key. If you don't have one yet, see how to [create an API key]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}) in the Getting Started guide.
 
 ```ruby
 require 'private_captcha'
@@ -60,9 +63,11 @@ rescue PrivateCaptcha::Error => e
 end
 ```
 
-## Web Framework Integration
+## Usage
 
-### Sinatra Example
+### Web framework integration
+
+### Sinatra example
 
 ```ruby
 require 'sinatra'
@@ -86,7 +91,7 @@ post '/submit' do
 end
 ```
 
-### Rails Example
+### Rails example
 
 ```ruby
 class FormsController < ApplicationController
@@ -106,7 +111,7 @@ class FormsController < ApplicationController
 end
 ```
 
-### Rack Middleware
+### Rack middleware
 
 ```ruby
 require 'private_captcha'
@@ -118,7 +123,7 @@ use PrivateCaptcha::Middleware,
 
 ## Configuration
 
-### Client Options
+### Client options
 
 ```ruby
 require 'private_captcha'
@@ -151,7 +156,7 @@ custom_client = PrivateCaptcha::Client.new do |config|
 end
 ```
 
-### Retry Configuration
+### Retry configuration
 
 ```ruby
 result = client.verify(

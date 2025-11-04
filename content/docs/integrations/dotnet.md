@@ -33,7 +33,10 @@ Install-Package PrivateCaptcha
 
 ## Usage
 
-### Basic Verification
+> [!NOTE]
+> Before using this SDK, you'll need an API key. If you don't have one yet, see how to create it in the [Getting Started guide]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}).
+
+### Basic verification
 
 To verify a CAPTCHA solution, instantiate `PrivateCaptchaClient` with your configuration and call `VerifyAsync`.
 
@@ -56,7 +59,7 @@ else
 }
 ```
 
-### ASP.NET Core Middleware
+### ASP.NET Core middleware
 
 For web applications, the most convenient way to protect your endpoints is by using the provided middleware. It automatically intercepts POST requests with form data and verifies the CAPTCHA solution.
 
@@ -103,6 +106,8 @@ If verification fails, the middleware will short-circuit the request and return 
 
 You can customize the client's behavior by passing a `PrivateCaptchaConfiguration` object to the constructor.
 
+#### Client options
+
 | Property           | Description                                                                                             | Default Value                  |
 | ------------------ | ------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | `ApiKey`           | **(Required)** Your API key from the Private Captcha dashboard.                                         | `string.Empty`                 |
@@ -137,7 +142,7 @@ var input = new VerifyInput
 };
 ```
 
-### Error Handling
+### Error handling
 
 - **`VerifyOutput`**: The `VerifyAsync` method returns a `VerifyOutput` object. Check the `Success` property to see if verification passed. If `Success` is `false`, the `Code` property and `GetErrorMessage()` method provide more details.
 - **`VerificationFailedException`**: Thrown when the client cannot get a definitive success/fail response from the API after all retry attempts. This typically indicates a network issue.

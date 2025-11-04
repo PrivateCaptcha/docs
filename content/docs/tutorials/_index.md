@@ -1,5 +1,6 @@
 ---
 title: Tutorials
+weight: 4
 ---
 
 Here you can find tutorials with code examples that you can copy and paste.

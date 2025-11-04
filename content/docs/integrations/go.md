@@ -24,6 +24,9 @@ go get -u github.com/PrivateCaptcha/private-captcha-go
 
 ## Usage
 
+> [!NOTE]
+> Before using this SDK, you'll need an API key. If you don't have one yet, see how to create it in the [Getting Started guide]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}).
+
 ### Import and instantiation
 
 Add import:
@@ -89,7 +92,7 @@ client, err := pc.NewClient(pc.Configuration{Domain: pc.EUDomain})
 
 For self-hosted installation, use API domain name.
 
-#### Retry configuration
+#### Retry Configuration
 
 When verifying puzzle solutions, you can also specify some retry and backoff options.
 
