@@ -5,7 +5,7 @@
     <description>Recent content in Docs on Private Captcha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Oct 2025 08:48:32 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 08:22:05 +0200</lastBuildDate>
     
 	  <atom:link href="https://docs.privatecaptcha.com/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -88,6 +88,123 @@
       &gt;&lt;span class=&#34;hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;Widget customization&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2&#34;&gt;Integrate the widget on your frontend&lt;/div&gt;&lt;/a&gt;
 &lt;/div&gt;
 
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Bunny CDN</title>
+      <link>https://docs.privatecaptcha.com/docs/deployment/bunny-cdn/</link>
+      <pubDate>Mon, 10 Nov 2025 08:22:05 +0200</pubDate>
+      
+      <guid>https://docs.privatecaptcha.com/docs/deployment/bunny-cdn/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Using Bunny CDN is &lt;strong&gt;not required&lt;/strong&gt;. This is an example of self-hosting Private Captcha behind &lt;a href=&#34;https://bunny.net&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bunny CDN&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;. Instructions for other CDN providers will be different, but core ideas are the same.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Prerequisites&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;prerequisites&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#prerequisites&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Basic version of self-hosted Private Captcha is the single-node docker-compose setup, described in the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/quickstart/&#34;&gt;Quickstart&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It is assumed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;you are running a single node compute resource (e.g. a VPS in Hetzner/Linode/Scaleway or EC2 instance in AWS)&lt;/li&gt;
+&lt;li&gt;you have setup, configured, &lt;strong&gt;and&lt;/strong&gt; secured your compute node such that for the rest of this guide you have an active shell access (e.g. SSH or &amp;ldquo;cloud shell&amp;rdquo; from your provider)&lt;/li&gt;
+&lt;li&gt;your compute node has a public IPv4 address and &lt;code&gt;80&lt;/code&gt;/&lt;code&gt;443&lt;/code&gt; port is exposed publicly in your firewall&lt;/li&gt;
+&lt;li&gt;you have a domain &lt;code&gt;mydomain.com&lt;/code&gt; purchased and access to your domain name registar&lt;/li&gt;
+&lt;li&gt;you already did the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/quickstart/&#34;&gt;Quickstart&lt;/a&gt; guide, configured your environment variables, SMTP provider etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Setup steps&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup-steps&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#setup-steps&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]&#34;&gt;
+&lt;h3&gt;Point nameservers for your domain to Bunny DNS servers&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;point-nameservers-for-your-domain-to-bunny-dns-servers&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#point-nameservers-for-your-domain-to-bunny-dns-servers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;For the domain (or subdomain) where you will host your Private Captcha instance, we will need Bunny to manage our DNS. For that we need to point your current domain name registar DNS to Bunny.net. Login to your registar and find DNS section. Inside point your DNS to &lt;a href=&#34;https://docs.bunny.net/docs/dns-overview&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bunny&amp;rsquo;s servers&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; &lt;code&gt;kiki.bunny.net&lt;/code&gt; and &lt;code&gt;coco.bunny.net&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/dns-redirect.png&#34; title=&#34;Example of Namecheap DNS configuration&#34; alt=&#34;Point DNS to Bunny&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example of Namecheap DNS configuration&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;Add three type-A DNS records for &lt;code&gt;api.&lt;/code&gt;, &lt;code&gt;cnd.&lt;/code&gt; and &lt;code&gt;portal.&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-three-type-a-dns-records-for-api-cnd-and-portal&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#add-three-type-a-dns-records-for-api-cnd-and-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-dns-records.png&#34; title=&#34;Three new records in Bunny DNS dashboard&#34; alt=&#34;Add records in Bunny&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Three new records in Bunny DNS dashboard&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Point all 3 records to the same public IPv4 address for your compute resource (VPS server, EC2 instance etc.) and click &lt;em&gt;&amp;ldquo;Enable CDN acceleration&amp;rdquo;&lt;/em&gt; button for each of them. This will create 3 respective CDN zones which we will configure separately below.&lt;/p&gt;
+&lt;h3&gt;Decide on HTTPS termination&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;decide-on-https-termination&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#decide-on-https-termination&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In general you have a few options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bunny does HTTPS termination for and your Private Captcha instance listens on port &lt;code&gt;80&lt;/code&gt; (which you will allow in firewall of your server). Traffic between Bunny and your server is &lt;em&gt;not encrypted&lt;/em&gt;. This is the default option and does not involve any additional steps. Your only job is to click &lt;em&gt;&amp;ldquo;Force SSL&amp;rdquo;&lt;/em&gt; and &lt;em&gt;&amp;ldquo;Get a free certificate&amp;rdquo;&lt;/em&gt; (Let&amp;rsquo;s Encrypt) in Bunny UI and you are done.&lt;/li&gt;
+&lt;li&gt;Bunny does HTTPS termination and you use self-signed certificates for Private Captcha. Same as the above, but traffic between Bunny and your server is encrypted (albeit potentially vulnerable to MITM attack). Your instance listens on port &lt;code&gt;443&lt;/code&gt; instead. You can pass certificates to the Private Captcha server using &lt;code&gt;-certfile&lt;/code&gt; and &lt;code&gt;-keyfile&lt;/code&gt; command line parameters.&lt;/li&gt;
+&lt;li&gt;You use your own certificates all the way, starting from your server. You upload your certificate to Bunny and tell Bunny CDN to verify the certificate origin for you. Certificates can be updated using &lt;a href=&#34;https://certbot.eff.org/instructions&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;certbot&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Configuring the &lt;code&gt;api.&lt;/code&gt; CDN zone&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;configuring-the-api-cdn-zone&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#configuring-the-api-cdn-zone&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Hostnames&lt;/strong&gt;. Click &lt;em&gt;&amp;ldquo;Force SSL&amp;rdquo;&lt;/em&gt; both on Bunny proxy and &lt;code&gt;api.mydomain.com&lt;/code&gt; address.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Origin&lt;/strong&gt;. &lt;em&gt;If&lt;/em&gt; you are using custom certificates for docker-compose setup, use port &lt;code&gt;443&lt;/code&gt;, otherwise use &lt;code&gt;80&lt;/code&gt; (see &lt;a href=&#34;#decide-on-https-termination&#34;&gt;above&lt;/a&gt;)
+&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-origin-config.png&#34; alt=&#34;Origin config&#34;  loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pricing &amp;amp; Routing&lt;/strong&gt;. Use &amp;ldquo;High-volume tier&amp;rdquo; setup. At the time of the writing Bunny has a problem with IPv6 connections on &lt;em&gt;&amp;ldquo;Standard tier&amp;rdquo;&lt;/em&gt; and only &lt;em&gt;&amp;ldquo;High-volume tier&amp;rdquo;&lt;/em&gt; does not have this issue. It does reduce the number of points-of-presence but it&amp;rsquo;s not a substantial problem. (This is a pretty much only Bunny-specific setting in this guide)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Caching&lt;/strong&gt;. Disable &lt;em&gt;&amp;ldquo;Smart Cache&amp;rdquo;&lt;/em&gt;, &lt;em&gt;&amp;ldquo;Query string sort&amp;rdquo;&lt;/em&gt;, &lt;em&gt;&amp;ldquo;Cache error_response&amp;rdquo;&lt;/em&gt; settings. Make sure to use &lt;em&gt;&amp;ldquo;Respect origin Cache-Control&amp;rdquo;&lt;/em&gt; for Cache expiration time setting.
+&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-cache-api.png&#34; alt=&#34;Disable basic cache&#34;  loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vary Cache&lt;/strong&gt;. Enable &lt;em&gt;&amp;ldquo;Vary cache&amp;rdquo;&lt;/em&gt; by query string and enter &lt;code&gt;sitekey&lt;/code&gt; as a parameter.
+&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-vary-cache-api.png&#34; alt=&#34;Vary cache config&#34;  loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Configuring the &lt;code&gt;cdn.&lt;/code&gt; CDN zone&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;configuring-the-cdn-cdn-zone&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#configuring-the-cdn-cdn-zone&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Hostnames&lt;/strong&gt;. The same as for &lt;code&gt;api.&lt;/code&gt; zone above.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Origin&lt;/strong&gt;. The same as for &lt;code&gt;api.&lt;/code&gt; zone above.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pricing &amp;amp; Routing&lt;/strong&gt;. The same as for &lt;code&gt;api.&lt;/code&gt; zone above.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Caching&lt;/strong&gt;. Here you can enable &lt;em&gt;&amp;ldquo;Smart cache&amp;rdquo;&lt;/em&gt; and few other settings, like &lt;em&gt;&amp;ldquo;Cache error response&amp;rdquo;&lt;/em&gt;.
+&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-cache-cdn.png&#34; alt=&#34;Enable basic cache&#34;  loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vary Cache&lt;/strong&gt;. Do not enable &lt;em&gt;&amp;ldquo;Vary cache&amp;rdquo;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Security&lt;/strong&gt;. Enable &lt;em&gt;&amp;ldquo;Block POST requests&amp;rdquo;&lt;/em&gt;.
+&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-security-cdn.png&#34; alt=&#34;Basic security settings&#34;  loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Configuring the &lt;code&gt;portal.&lt;/code&gt; CDN zone&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;configuring-the-portal-cdn-zone&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#configuring-the-portal-cdn-zone&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Hostnames&lt;/strong&gt;. The same as for &lt;code&gt;api.&lt;/code&gt; zone above.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Origin&lt;/strong&gt;. The same as for &lt;code&gt;api.&lt;/code&gt; zone above.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pricing &amp;amp; Routing&lt;/strong&gt;. The same as for &lt;code&gt;api.&lt;/code&gt; zone above.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Caching&lt;/strong&gt;. Here you can enable &lt;em&gt;&amp;ldquo;Smart cache&amp;rdquo;&lt;/em&gt; and few other settings, but not &lt;em&gt;&amp;ldquo;Cache error response&amp;rdquo;&lt;/em&gt;.
+&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-cache-portal.png&#34; alt=&#34;Enable basic cache&#34;  loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vary Cache&lt;/strong&gt;. Enable &lt;em&gt;&amp;ldquo;Vary cache&amp;rdquo;&lt;/em&gt; by URL query string, but do not enter any specific parameter.
+&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-vary-cache-portal.png&#34; alt=&#34;Vary cache config&#34;  loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2&gt;EU routing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;eu-routing&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#eu-routing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In case you have a &amp;ldquo;larger&amp;rdquo; Private Captcha installation (e.g. multi-node Enterprise edition) and you want to restrict routing to be EU-only (meaning, you also have non-EU servers), in Bunny you can achieve that in &lt;em&gt;&amp;ldquo;Pricing &amp;amp; Routing&amp;rdquo;&lt;/em&gt; section of the dashboard.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-eu-routing.png&#34; alt=&#34;EU routing&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Security (optional)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;security-optional&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#security-optional&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; a comprehensive security guide. Here are only a very few settings, specific to Bunny CDN that you can tweak.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Allowing only Bunny servers to access your compute node&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;allowing-only-bunny-servers-to-access-your-compute-node&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#allowing-only-bunny-servers-to-access-your-compute-node&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As a general rule of thumb, you should only allow Bunny&amp;rsquo;s CDN servers to access your compute resource.&lt;/p&gt;
+&lt;h4&gt;IP addresses&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;ip-addresses&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#ip-addresses&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Bunny &lt;a href=&#34;https://support.bunny.net/hc/en-us/articles/115003578911-How-to-detect-when-BunnyCDN-PoP-servers-are-accessing-your-backend&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;publishes&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; a list of IP addresses/ranges of their servers (both IPv4 and IPv6). While the implementation of this is outside of the scope of this guide, you can have network firewall rules in your cloud provider (e.g. Firewalls in Hetzner, Vultr etc.) that only allow access from Bunny&amp;rsquo;s IPs. You will have to keep those firewall rules updated to ensure availability of your Private Captcha installation.&lt;/p&gt;
+&lt;h4&gt;HTTP headers&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;http-headers&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#http-headers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Additionally you can add a secret request header to each request in Bunny CDN using an &lt;em&gt;&amp;ldquo;Edge rule&amp;rdquo;&lt;/em&gt; and check this header yourself before accessing Private Captcha instance (for example, if you use Caddy or Nginx as a reverse proxy).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-edge-rule-header.png&#34; alt=&#34;Add header&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;Network limits&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;network-limits&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#network-limits&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Per each of the CDN zones above you can setup rate limiting on Bunny side (which is recommended).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-network-limits.png&#34; alt=&#34;Rate limiting&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;WAF&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;waf&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#waf&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Bunny now also provides a &lt;a href=&#34;https://docs.bunny.net/docs/shield-waf&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Web Application Firewall&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; which you can use to block abusers or configure custom rules. Use at your own discretion.&lt;/p&gt;
 
       </description>
     </item>
@@ -376,6 +493,7 @@
 &lt;/div&gt;
 
 &lt;p&gt;Private Captcha installation expects to be running on 3 subdomains (&lt;code&gt;cdn.&lt;/code&gt;, &lt;code&gt;api.&lt;/code&gt; and &lt;code&gt;portal.&lt;/code&gt;) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice.&lt;/p&gt;
+&lt;p&gt;You can find &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/bunny-cdn/&#34;&gt;an example for Bunny CDN&lt;/a&gt; in the docs.&lt;/p&gt;
 &lt;h2&gt;Security&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;security&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#security&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;

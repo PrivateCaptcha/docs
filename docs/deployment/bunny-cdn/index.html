@@ -8,12 +8,11 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Verify API – Private Captcha</title>
+<title>Bunny CDN – Private Captcha</title>
   <meta name="description" content=" Note
-There’re many ready integrations available and API is also available here as Swagger / OpenAPI definition.
-After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute)." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/verify-api/" itemprop="url" />
+Using Bunny CDN is not required. This is an example of self-hosting Private Captcha behind Bunny CDN . Instructions for other CDN providers will be different, but core ideas are the same." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/deployment/bunny-cdn/" itemprop="url" />
 
-<meta property="og:title" content="Verify API">
+<meta property="og:title" content="Bunny CDN">
 <meta
   property="og:description"
   content="
@@ -22,12 +21,9 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
   Note
 
   
-    There&rsquo;re many ready integrations available and API is also available here
+    Using Bunny CDN is not required. This is an example of self-hosting Private Captcha behind Bunny CDN
  
- as Swagger / OpenAPI definition.
-  
-
-After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute).
+. Instructions for other CDN providers will be different, but core ideas are the same.
     
   ">
 <meta
@@ -35,26 +31,29 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
   content="
     article
   ">
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/verify-api/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/deployment/bunny-cdn/"><meta property="article:section" content="docs">
+
+<meta
+  property="article:published_time"
+  content="2025-11-10T08:22:05+02:00">
 
 
 <meta
   property="article:modified_time"
-  content="2025-08-15T18:01:02+03:00">
+  content="2025-11-10T09:51:18+02:00">
 
 
 
-  <meta itemprop="name" content="Verify API">
+  <meta itemprop="name" content="Bunny CDN">
   <meta itemprop="description" content="Note
-There’re many ready integrations available and API is also available here as Swagger / OpenAPI definition.
-After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute).">
-  <meta itemprop="dateModified" content="2025-08-15T18:01:02+03:00">
-  <meta itemprop="wordCount" content="425">
+Using Bunny CDN is not required. This is an example of self-hosting Private Captcha behind Bunny CDN . Instructions for other CDN providers will be different, but core ideas are the same.">
+  <meta itemprop="datePublished" content="2025-11-10T08:22:05+02:00">
+  <meta itemprop="dateModified" content="2025-11-10T09:51:18+02:00">
+  <meta itemprop="wordCount" content="938">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Verify API">
+  <meta name="twitter:title" content="Bunny CDN">
   <meta name="twitter:description" content="Note
-There’re many ready integrations available and API is also available here as Swagger / OpenAPI definition.
-After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute).">
+Using Bunny CDN is not required. This is an example of self-hosting Private Captcha behind Bunny CDN . Instructions for other CDN providers will be different, but core ideas are the same.">
 
     <link rel="preload" href="/css/compiled/main.min.d9462c89ac5d0a196fa492dc4dc845dc696e49d7a37f825d992181e883ac2e82.css" as="style" integrity="sha256-2UYsiaxdChlvpJLcTchF3GluSdejf4JdmSGB6IOsLoI=" />
     <link href="/css/compiled/main.min.d9462c89ac5d0a196fa492dc4dc845dc696e49d7a37f825d992181e883ac2e82.css" rel="stylesheet" integrity="sha256-2UYsiaxdChlvpJLcTchF3GluSdejf4JdmSGB6IOsLoI=" />
@@ -119,7 +118,7 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
   title=""
   href="/docs/reference"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
 ><span class="hx:text-center">Reference</span>
 </a><a
   title=""
@@ -305,7 +304,7 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/reference/"
@@ -354,34 +353,13 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
   >Testing
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/reference/verify-api/"
     
   >Verify API
     </a>
-  
-    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
-              <a
-                href="#request"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Request</a>
-            </li>
-          <li>
-              <a
-                href="#response"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Response</a>
-            </li>
-          <li>
-              <a
-                href="#error-codes"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Error codes</a>
-            </li>
-          </ul>
-  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -436,7 +414,7 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/deployment/"
@@ -445,13 +423,40 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/deployment/bunny-cdn/"
     
   >Bunny CDN
     </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#prerequisites"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Prerequisites</a>
+            </li>
+          <li>
+              <a
+                href="#setup-steps"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Setup steps</a>
+            </li>
+          <li>
+              <a
+                href="#eu-routing"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >EU routing</a>
+            </li>
+          <li>
+              <a
+                href="#security-optional"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Security (optional)</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -591,7 +596,7 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
               
             </li></ul>
       </div></li>
-          <li class="open"><a
+          <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/reference/"
@@ -639,9 +644,9 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
   >Testing
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/reference/verify-api/"
     
   >Verify API
@@ -699,7 +704,7 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
               
             </li></ul>
       </div></li>
-          <li class=""><a
+          <li class="open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/deployment/"
@@ -707,9 +712,9 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
   >Deployment
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/deployment/bunny-cdn/"
     
   >Bunny CDN
@@ -808,26 +813,66 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#request">Request
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#prerequisites">Prerequisites
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#response">Response
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#setup-steps">Setup steps
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#verifying-captcha">Verifying captcha
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#point-nameservers-for-your-domain-to-bunny-dns-servers">Point nameservers for your domain to Bunny DNS servers
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#error-codes">Error codes
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#add-three-type-a-dns-records-for-api-cnd-and-portal">Add three type-A DNS records for api., cnd. and portal.
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#errors-during-successful-verification">Errors during successful verification
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#decide-on-https-termination">Decide on HTTPS termination
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#configuring-the-api-cdn-zone">Configuring the api. CDN zone
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#configuring-the-cdn-cdn-zone">Configuring the cdn. CDN zone
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#configuring-the-portal-cdn-zone">Configuring the portal. CDN zone
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#eu-routing">EU routing
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#security-optional">Security (optional)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#allowing-only-bunny-servers-to-access-your-compute-node">Allowing only Bunny servers to access your compute node
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#ip-addresses">IP addresses
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#http-headers">HTTP headers
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#network-limits">Network limits
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#waf">WAF
         </a>
       </li></ul>
-      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/reference/verify-api.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/deployment/bunny-cdn.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -846,174 +891,125 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
           <a href="/docs/">Docs</a>
         </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/reference/">Reference</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Verify API</div>
+          <a href="/docs/deployment/">Deployment</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Bunny CDN</div>
   </div>
 
         <div class="content">
-          <h1>Verify API</h1>
+          <h1>Bunny CDN</h1>
           <div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>There&rsquo;re many <a href="/docs/integrations/">ready integrations</a> available and API is also available <a href="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/PrivateCaptcha/PrivateCaptcha/refs/heads/main/docs/openapi.yaml"target="_blank" rel="noopener">here<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Using Bunny CDN is <strong>not required</strong>. This is an example of self-hosting Private Captcha behind <a href="https://bunny.net"target="_blank" rel="noopener">Bunny CDN<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></a> as Swagger / OpenAPI definition.</p></div>
+</svg></a>. Instructions for other CDN providers will be different, but core ideas are the same.</p></div>
   </div>
 </div>
-<p>After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by <code>data-solution-field</code> <a href="/docs/reference/widget-options/">attribute</a>).</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- ... --&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;private-captcha-solution&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;hidden&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;AAAAAAACAhQEAOiDAAAAAAC...IsoSTgYAAA=&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- ... --&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p>When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.</p>
-<h2>Request<span class="hx:absolute hx:-mt-20" id="request"></span>
-    <a href="#request" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To verify solutions you need to make a <code>POST</code> request to <code>https://api.privatecaptcha.com/verify</code> with the body of the request being solution field&rsquo;s contents from your form.</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># an example how that will look like with curl</span>
-</span></span><span class="line"><span class="cl">curl -X POST <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;X-Api-Key: your-api-key-here&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -d <span class="s2">&#34;solution&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  https://api.privatecaptcha.com/verify</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
-  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
-
-  <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Usually you would not send that <code>POST</code> request yourself, but use one of our <a href="/docs/integrations/">pre-built integrations</a>.</p></div>
-  </div>
-</div>
-<h2>Response<span class="hx:absolute hx:-mt-20" id="response"></span>
-    <a href="#response" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Here&rsquo;s how a successful response from <code>/verify</code> endpoint looks like:</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;success&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;timestamp&#34;</span><span class="p">:</span> <span class="s2">&#34;2025-01-13T16:17:27+00:00&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;origin&#34;</span><span class="p">:</span> <span class="s2">&#34;privatecaptcha.com&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<h3>Verifying captcha<span class="hx:absolute hx:-mt-20" id="verifying-captcha"></span>
-    <a href="#verifying-captcha" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Verification status is defined by a single field only: <code>success</code> (boolean) must be equal to <code>true</code>.</p>
-<h2>Error codes<span class="hx:absolute hx:-mt-20" id="error-codes"></span>
-    <a href="#error-codes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
-  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
-
-  <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>If <code>code</code> is not zero, it does <strong>not</strong> mean that verification failed. See details <a href="#errors-during-successful-verification">below</a>.</p></div>
-  </div>
-</div>
-<p>Default <code>/verify</code> endpoint should be used with one of the <a href="/docs/integrations/">integration SDKs</a> which allow you to get a string description of the numeric error code.</p>
-<p>reCAPTCHA-compatible <code>/siteverify</code> endpoint will contain the string version in <code>error-codes</code> field.</p>
-<p><code>code</code> can be one of the error codes:</p>
-<table>
-  <thead>
-      <tr>
-          <th>Error code</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>no-error</code></td>
-          <td>No error (shown here for completeness)</td>
-      </tr>
-      <tr>
-          <td><code>error-other</code></td>
-          <td>Unspecified error</td>
-      </tr>
-      <tr>
-          <td><code>solution-duplicates</code></td>
-          <td>Solution contains duplicates</td>
-      </tr>
-      <tr>
-          <td><code>solution-invalid</code></td>
-          <td>Solution verification error</td>
-      </tr>
-      <tr>
-          <td><code>solution-bad-format</code></td>
-          <td>Solution has invalid format</td>
-      </tr>
-      <tr>
-          <td><code>puzzle-expired</code></td>
-          <td>Puzzle for this solution has expired</td>
-      </tr>
-      <tr>
-          <td><code>property-invalid</code></td>
-          <td>Property for this puzzle/solution cannot be found</td>
-      </tr>
-      <tr>
-          <td><code>property-owner-mismatch</code></td>
-          <td>Property and API key&rsquo;s accounts don&rsquo;t match</td>
-      </tr>
-      <tr>
-          <td><code>solution-verified-before</code></td>
-          <td>Solution has been already verified</td>
-      </tr>
-      <tr>
-          <td><code>property-test</code></td>
-          <td>Test property is used for verification</td>
-      </tr>
-      <tr>
-          <td><code>maintenance-mode</code></td>
-          <td>Maintenance mode (see below)</td>
-      </tr>
-      <tr>
-          <td><code>integrity-error</code></td>
-          <td>Puzzle or solution integrity is compromised</td>
-      </tr>
-  </tbody>
-</table>
-<h3>Errors during successful verification<span class="hx:absolute hx:-mt-20" id="errors-during-successful-verification"></span>
-    <a href="#errors-during-successful-verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>There are a couple of cases, when <code>success</code> in response will be equal to <code>true</code> (successful verification), but <code>code</code> will not be zero. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):</p>
+<h2>Prerequisites<span class="hx:absolute hx:-mt-20" id="prerequisites"></span>
+    <a href="#prerequisites" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Basic version of self-hosted Private Captcha is the single-node docker-compose setup, described in the <a href="/docs/deployment/quickstart/">Quickstart</a>.</p>
+<p>It is assumed:</p>
 <ul>
-<li>When you&rsquo;re using a <a href="/docs/reference/testing/">test property</a>, <code>code</code> will be <code>property-test</code> (but verification will succeed).</li>
-<li>During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, <code>success</code> in response is equal to <code>true</code>, but <code>code</code> will be <code>maintenance-mode</code>.</li>
-<li>If you configured property to <em>&ldquo;Accept repeated solutions&rdquo;</em> (during verification window), verification of repeated solution will cause <code>code</code> to be <code>solution-verified-before</code>.</li>
+<li>you are running a single node compute resource (e.g. a VPS in Hetzner/Linode/Scaleway or EC2 instance in AWS)</li>
+<li>you have setup, configured, <strong>and</strong> secured your compute node such that for the rest of this guide you have an active shell access (e.g. SSH or &ldquo;cloud shell&rdquo; from your provider)</li>
+<li>your compute node has a public IPv4 address and <code>80</code>/<code>443</code> port is exposed publicly in your firewall</li>
+<li>you have a domain <code>mydomain.com</code> purchased and access to your domain name registar</li>
+<li>you already did the <a href="/docs/deployment/quickstart/">Quickstart</a> guide, configured your environment variables, SMTP provider etc.</li>
 </ul>
+<h2>Setup steps<span class="hx:absolute hx:-mt-20" id="setup-steps"></span>
+    <a href="#setup-steps" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]">
+<h3>Point nameservers for your domain to Bunny DNS servers<span class="hx:absolute hx:-mt-20" id="point-nameservers-for-your-domain-to-bunny-dns-servers"></span>
+    <a href="#point-nameservers-for-your-domain-to-bunny-dns-servers" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>For the domain (or subdomain) where you will host your Private Captcha instance, we will need Bunny to manage our DNS. For that we need to point your current domain name registar DNS to Bunny.net. Login to your registar and find DNS section. Inside point your DNS to <a href="https://docs.bunny.net/docs/dns-overview"target="_blank" rel="noopener">Bunny&rsquo;s servers<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> <code>kiki.bunny.net</code> and <code>coco.bunny.net</code>.</p>
+<p><figure>
+    <img src="/images/deployment/dns-redirect.png" title="Example of Namecheap DNS configuration" alt="Point DNS to Bunny"  loading="lazy" />
+    <figcaption>Example of Namecheap DNS configuration</figcaption>
+  </figure></p>
+<h3>Add three type-A DNS records for <code>api.</code>, <code>cnd.</code> and <code>portal.</code><span class="hx:absolute hx:-mt-20" id="add-three-type-a-dns-records-for-api-cnd-and-portal"></span>
+    <a href="#add-three-type-a-dns-records-for-api-cnd-and-portal" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><figure>
+    <img src="/images/deployment/bunny-dns-records.png" title="Three new records in Bunny DNS dashboard" alt="Add records in Bunny"  loading="lazy" />
+    <figcaption>Three new records in Bunny DNS dashboard</figcaption>
+  </figure></p>
+<p>Point all 3 records to the same public IPv4 address for your compute resource (VPS server, EC2 instance etc.) and click <em>&ldquo;Enable CDN acceleration&rdquo;</em> button for each of them. This will create 3 respective CDN zones which we will configure separately below.</p>
+<h3>Decide on HTTPS termination<span class="hx:absolute hx:-mt-20" id="decide-on-https-termination"></span>
+    <a href="#decide-on-https-termination" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In general you have a few options:</p>
+<ul>
+<li>Bunny does HTTPS termination for and your Private Captcha instance listens on port <code>80</code> (which you will allow in firewall of your server). Traffic between Bunny and your server is <em>not encrypted</em>. This is the default option and does not involve any additional steps. Your only job is to click <em>&ldquo;Force SSL&rdquo;</em> and <em>&ldquo;Get a free certificate&rdquo;</em> (Let&rsquo;s Encrypt) in Bunny UI and you are done.</li>
+<li>Bunny does HTTPS termination and you use self-signed certificates for Private Captcha. Same as the above, but traffic between Bunny and your server is encrypted (albeit potentially vulnerable to MITM attack). Your instance listens on port <code>443</code> instead. You can pass certificates to the Private Captcha server using <code>-certfile</code> and <code>-keyfile</code> command line parameters.</li>
+<li>You use your own certificates all the way, starting from your server. You upload your certificate to Bunny and tell Bunny CDN to verify the certificate origin for you. Certificates can be updated using <a href="https://certbot.eff.org/instructions"target="_blank" rel="noopener">certbot<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>.</li>
+</ul>
+<h3>Configuring the <code>api.</code> CDN zone<span class="hx:absolute hx:-mt-20" id="configuring-the-api-cdn-zone"></span>
+    <a href="#configuring-the-api-cdn-zone" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><strong>Hostnames</strong>. Click <em>&ldquo;Force SSL&rdquo;</em> both on Bunny proxy and <code>api.mydomain.com</code> address.</li>
+<li><strong>Origin</strong>. <em>If</em> you are using custom certificates for docker-compose setup, use port <code>443</code>, otherwise use <code>80</code> (see <a href="#decide-on-https-termination">above</a>)
+<img src="/images/deployment/bunny-origin-config.png" alt="Origin config"  loading="lazy" /></li>
+<li><strong>Pricing &amp; Routing</strong>. Use &ldquo;High-volume tier&rdquo; setup. At the time of the writing Bunny has a problem with IPv6 connections on <em>&ldquo;Standard tier&rdquo;</em> and only <em>&ldquo;High-volume tier&rdquo;</em> does not have this issue. It does reduce the number of points-of-presence but it&rsquo;s not a substantial problem. (This is a pretty much only Bunny-specific setting in this guide)</li>
+<li><strong>Caching</strong>. Disable <em>&ldquo;Smart Cache&rdquo;</em>, <em>&ldquo;Query string sort&rdquo;</em>, <em>&ldquo;Cache error_response&rdquo;</em> settings. Make sure to use <em>&ldquo;Respect origin Cache-Control&rdquo;</em> for Cache expiration time setting.
+<img src="/images/deployment/bunny-cache-api.png" alt="Disable basic cache"  loading="lazy" /></li>
+<li><strong>Vary Cache</strong>. Enable <em>&ldquo;Vary cache&rdquo;</em> by query string and enter <code>sitekey</code> as a parameter.
+<img src="/images/deployment/bunny-vary-cache-api.png" alt="Vary cache config"  loading="lazy" /></li>
+</ul>
+<h3>Configuring the <code>cdn.</code> CDN zone<span class="hx:absolute hx:-mt-20" id="configuring-the-cdn-cdn-zone"></span>
+    <a href="#configuring-the-cdn-cdn-zone" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><strong>Hostnames</strong>. The same as for <code>api.</code> zone above.</li>
+<li><strong>Origin</strong>. The same as for <code>api.</code> zone above.</li>
+<li><strong>Pricing &amp; Routing</strong>. The same as for <code>api.</code> zone above.</li>
+<li><strong>Caching</strong>. Here you can enable <em>&ldquo;Smart cache&rdquo;</em> and few other settings, like <em>&ldquo;Cache error response&rdquo;</em>.
+<img src="/images/deployment/bunny-cache-cdn.png" alt="Enable basic cache"  loading="lazy" /></li>
+<li><strong>Vary Cache</strong>. Do not enable <em>&ldquo;Vary cache&rdquo;</em>.</li>
+<li><strong>Security</strong>. Enable <em>&ldquo;Block POST requests&rdquo;</em>.
+<img src="/images/deployment/bunny-security-cdn.png" alt="Basic security settings"  loading="lazy" /></li>
+</ul>
+<h3>Configuring the <code>portal.</code> CDN zone<span class="hx:absolute hx:-mt-20" id="configuring-the-portal-cdn-zone"></span>
+    <a href="#configuring-the-portal-cdn-zone" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><strong>Hostnames</strong>. The same as for <code>api.</code> zone above.</li>
+<li><strong>Origin</strong>. The same as for <code>api.</code> zone above.</li>
+<li><strong>Pricing &amp; Routing</strong>. The same as for <code>api.</code> zone above.</li>
+<li><strong>Caching</strong>. Here you can enable <em>&ldquo;Smart cache&rdquo;</em> and few other settings, but not <em>&ldquo;Cache error response&rdquo;</em>.
+<img src="/images/deployment/bunny-cache-portal.png" alt="Enable basic cache"  loading="lazy" /></li>
+<li><strong>Vary Cache</strong>. Enable <em>&ldquo;Vary cache&rdquo;</em> by URL query string, but do not enter any specific parameter.
+<img src="/images/deployment/bunny-vary-cache-portal.png" alt="Vary cache config"  loading="lazy" /></li>
+</ul>
+</div>
+<h2>EU routing<span class="hx:absolute hx:-mt-20" id="eu-routing"></span>
+    <a href="#eu-routing" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>In case you have a &ldquo;larger&rdquo; Private Captcha installation (e.g. multi-node Enterprise edition) and you want to restrict routing to be EU-only (meaning, you also have non-EU servers), in Bunny you can achieve that in <em>&ldquo;Pricing &amp; Routing&rdquo;</em> section of the dashboard.</p>
+<p><img src="/images/deployment/bunny-eu-routing.png" alt="EU routing"  loading="lazy" /></p>
+<h2>Security (optional)<span class="hx:absolute hx:-mt-20" id="security-optional"></span>
+    <a href="#security-optional" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>This is <strong>not</strong> a comprehensive security guide. Here are only a very few settings, specific to Bunny CDN that you can tweak.</p></div>
+  </div>
+</div>
+<h3>Allowing only Bunny servers to access your compute node<span class="hx:absolute hx:-mt-20" id="allowing-only-bunny-servers-to-access-your-compute-node"></span>
+    <a href="#allowing-only-bunny-servers-to-access-your-compute-node" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>As a general rule of thumb, you should only allow Bunny&rsquo;s CDN servers to access your compute resource.</p>
+<h4>IP addresses<span class="hx:absolute hx:-mt-20" id="ip-addresses"></span>
+    <a href="#ip-addresses" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Bunny <a href="https://support.bunny.net/hc/en-us/articles/115003578911-How-to-detect-when-BunnyCDN-PoP-servers-are-accessing-your-backend"target="_blank" rel="noopener">publishes<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> a list of IP addresses/ranges of their servers (both IPv4 and IPv6). While the implementation of this is outside of the scope of this guide, you can have network firewall rules in your cloud provider (e.g. Firewalls in Hetzner, Vultr etc.) that only allow access from Bunny&rsquo;s IPs. You will have to keep those firewall rules updated to ensure availability of your Private Captcha installation.</p>
+<h4>HTTP headers<span class="hx:absolute hx:-mt-20" id="http-headers"></span>
+    <a href="#http-headers" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Additionally you can add a secret request header to each request in Bunny CDN using an <em>&ldquo;Edge rule&rdquo;</em> and check this header yourself before accessing Private Captcha instance (for example, if you use Caddy or Nginx as a reverse proxy).</p>
+<p><img src="/images/deployment/bunny-edge-rule-header.png" alt="Add header"  loading="lazy" /></p>
+<h3>Network limits<span class="hx:absolute hx:-mt-20" id="network-limits"></span>
+    <a href="#network-limits" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Per each of the CDN zones above you can setup rate limiting on Bunny side (which is recommended).</p>
+<p><img src="/images/deployment/bunny-network-limits.png" alt="Rate limiting"  loading="lazy" /></p>
+<h3>WAF<span class="hx:absolute hx:-mt-20" id="waf"></span>
+    <a href="#waf" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Bunny now also provides a <a href="https://docs.bunny.net/docs/shield-waf"target="_blank" rel="noopener">Web Application Firewall<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> which you can use to block abusers or configure custom rules. Use at your own discretion.</p>
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-08-15T18:01:02.000Z">August 15, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-11-10T09:51:18.000Z">November 10, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/reference/testing/"
-        title="Testing"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Testing</a><a
-        href="/docs/reference/widget-options/"
-        title="Widget options"
+        href="/docs/deployment/production/"
+        title="Production use"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >Widget options<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Production use<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
