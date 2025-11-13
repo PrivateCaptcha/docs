@@ -653,7 +653,7 @@
 
 &lt;p&gt;Some &lt;strong&gt;very basic&lt;/strong&gt; advice, specific to Private Captcha server itself:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;update Private Captcha server frequently&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/updating/&#34;&gt;update&lt;/a&gt; Private Captcha server frequently&lt;/li&gt;
 &lt;li&gt;make sure server is behind CDN/proxy and is not directly connected to the internet&lt;/li&gt;
 &lt;li&gt;do not expose public port from docker container, keep it listening on localhost and use &lt;code&gt;Nginx/Caddy&lt;/code&gt; (Docker has it&amp;rsquo;s own security issues)&lt;/li&gt;
 &lt;li&gt;do not enable registration if you&amp;rsquo;re the only admin/user (&lt;code&gt;PC_REGISTRATION_ALLOWED&lt;/code&gt; is empty/unset by default)&lt;/li&gt;
@@ -730,7 +730,7 @@
 &lt;p&gt;To run migration manually it&amp;rsquo;s required to pass &lt;code&gt;-mode migrate&lt;/code&gt; and &lt;code&gt;-migrate-hash&lt;/code&gt; (for example with value &lt;code&gt;$(git rev-list -1 HEAD)&lt;/code&gt;) to server binary. If you also use &lt;code&gt;-env stdin&lt;/code&gt; you can pipe secrets into it.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat secrets.env &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bin/server -mode migrate -migrate-hash&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;git rev-list -1 HEAD&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat secrets.env &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bin/server -mode migrate -migrate-hash&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;git rev-list -1 HEAD&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; -env stdin&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
@@ -2461,7 +2461,7 @@
 &lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;(optional) Reverse proxy like Caddy or Nginx&lt;/li&gt;
 &lt;li&gt;Domain name &lt;code&gt;yourdomain.com&lt;/code&gt; (for local-only installs, use &lt;code&gt;privatecaptcha.local&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Transactional email provider with SMTP credentials (for production)&lt;/li&gt;
+&lt;li&gt;Transactional email provider with SMTP credentials (required for production)&lt;/li&gt;
 &lt;li&gt;At least 2GB of RAM&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;1. Clone the self-hosting repo&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-clone-the-self-hosting-repo&#34;&gt;&lt;/span&gt;
