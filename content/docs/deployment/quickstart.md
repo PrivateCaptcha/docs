@@ -5,7 +5,7 @@
 - Docker [installed](https://docs.docker.com/engine/install/)
 - (optional) Reverse proxy like Caddy or Nginx
 - Domain name `yourdomain.com` (for local-only installs, use `privatecaptcha.local`)
-- Transactional email provider with SMTP credentials (for production)
+- Transactional email provider with SMTP credentials (required for production)
 - At least 2GB of RAM
 
 ## 1. Clone the self-hosting repo

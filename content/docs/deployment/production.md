@@ -32,7 +32,7 @@ If you're running Private Captcha in production, security is completely **your r
 {{< /callout >}}
 
 Some **very basic** advice, specific to Private Captcha server itself:
-- update Private Captcha server frequently
+- [update]({{< relref "docs/deployment/updating.md" >}}) Private Captcha server frequently
 - make sure server is behind CDN/proxy and is not directly connected to the internet
 - do not expose public port from docker container, keep it listening on localhost and use `Nginx/Caddy` (Docker has it's own security issues)
 - do not enable registration if you're the only admin/user (`PC_REGISTRATION_ALLOWED` is empty/unset by default)
@@ -97,5 +97,5 @@ While in docker compose single-node setup migrations have been taken care of, if
 To run migration manually it's required to pass `-mode migrate` and `-migrate-hash` (for example with value `$(git rev-list -1 HEAD)`) to server binary. If you also use `-env stdin` you can pipe secrets into it.
 
 ```bash
-cat secrets.env | bin/server -mode migrate -migrate-hash=$(git rev-list -1 HEAD)
+cat secrets.env | bin/server -mode migrate -migrate-hash=$(git rev-list -1 HEAD) -env stdin
 ```
