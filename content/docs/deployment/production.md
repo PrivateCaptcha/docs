@@ -5,9 +5,15 @@ date: 2025-10-23T11:27:25+03:00
 
 ## Updates
 
+{{< callout type="warning" >}}
+  Before bumping docker tag you need to read [upgrade instructions]({{< relref "docs/deployment/updating.md" >}}) for each version.
+{{< /callout >}}
+
 You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.
 
 When you update Private Captcha you also need to purge CDN/proxy caches.
+
+Always check [upgrade instructions]({{< relref "docs/deployment/updating.md" >}}) **before** applying updates.
 
 ## CDN integration
 
