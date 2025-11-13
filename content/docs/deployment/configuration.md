@@ -25,6 +25,7 @@ Variable | Example | Description
 `PC_USER_FINGERPRINT_KEY` | `abcdef...` | HEX-encoded `64`-character string, used as IV value for hashing user fingerprints.
 `PC_API_SALT` | `asdf...` | String used as salt for creating puzzle signatures.
 `PC_XSRF_KEY` | `jkl;...` | String used as XSRF key for signing tokens
+`PC_ID_HASH_SALT` | `abcd...` | String used as salt for obscuring internal IDs in URLs (is actually optional, but recommended)
 `SMTP_ENDPOINT` | `smtp://your.provider.com:587` | Endpoint used for sending transactional email.
 `SMTP_USERNAME` | `foobar` | Username for `SMTP_ENDPOINT`.
 `SMTP_PASSWORD` | `qwerty12345` | Password for `SMTP_USERNAME`.
