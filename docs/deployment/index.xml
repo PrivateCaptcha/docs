@@ -478,6 +478,11 @@
           &lt;td&gt;String used as XSRF key for signing tokens&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;PC_ID_HASH_SALT&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;abcd...&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;String used as salt for obscuring internal IDs in URLs (is actually optional, but recommended)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;SMTP_ENDPOINT&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;smtp://your.provider.com:587&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Endpoint used for sending transactional email.&lt;/td&gt;
