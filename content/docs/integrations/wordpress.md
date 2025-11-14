@@ -106,6 +106,9 @@ wp private-captcha disable-login
 
 ## Troubleshooting
 
+> [!WARNING]
+> Make sure to **exclude** Private Captcha script from any caching plugins you might be using like _"WP Super Cache"_, _"W3 Total Cache"_, or _"WP Rocket"_. Only load script from `cdn.privatecaptcha.com`.
+
 **Form integration is enabled, but captcha does not load.**
 
 Possible reasons:
