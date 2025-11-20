@@ -563,7 +563,7 @@
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;property-owner-mismatch&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Property and API key&amp;rsquo;s accounts don&amp;rsquo;t match&lt;/td&gt;
+          &lt;td&gt;API key&amp;rsquo;s owner does not have permission for property&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;solution-verified-before&lt;/code&gt;&lt;/td&gt;

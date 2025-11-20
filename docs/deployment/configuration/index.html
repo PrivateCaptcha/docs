@@ -135,14 +135,14 @@
 
 <meta
   property="article:modified_time"
-  content="2025-11-13T10:13:23+02:00">
+  content="2025-11-20T10:27:13+02:00">
 
 
 
   <meta itemprop="name" content="Configuration">
   <meta itemprop="description" content="Environmental variables Required Variable Example Description STAGE prod Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. PC_XSRF_KEY jkl;... String used as XSRF key for signing tokens PC_ID_HASH_SALT abcd... String used as salt for obscuring internal IDs in URLs (is actually optional, but recommended) SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note">
-  <meta itemprop="dateModified" content="2025-11-13T10:13:23+02:00">
-  <meta itemprop="wordCount" content="506">
+  <meta itemprop="dateModified" content="2025-11-20T10:27:13+02:00">
+  <meta itemprop="wordCount" content="520">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Configuration">
   <meta name="twitter:description" content="Environmental variables Required Variable Example Description STAGE prod Stage is used for building widget js code (e.g. minification) and for separation in logging. PC_PORTAL_BASE_URL portal.yourdomain.com (Sub)domain where you will host PrivateCaptcha portal. PC_API_BASE_URL api.yourdomain.com (Sub)domain where CAPTCHA API (puzzles, verification etc.) will be hosted. PC_CDN_BASE_URL cdn.yourdomain.com (Sub)domain where CDN assets will be hosted (e.g., client-side widget package, pictures, email assets etc.). PC_ADMIN_EMAIL admin@yourdomain.com Email that will be used for admin user to login. Must be valid and functioning. PC_EMAIL_FROM no-reply@yourdomain.com Sender address for various transactional emails (2FA auth, welcome email etc.) PC_POSTGRES postgres://username:pass@postgres:5432/privatecaptcha Postgres connection string for backend DB. You can also specify separate values (see note below). PC_CLICKHOUSE_HOST clickhouse Host (or IP address) where ClickHouse DB is running. PC_CLICKHOUSE_DB privatecaptcha Database for connecting to ClickHouse. PC_CLICKHOUSE_USER captcha Username for connecting to PC_CLICKHOUSE_DB. PC_CLICKHOUSE_PASSWORD qwerty12345 Password for PC_CLICKHOUSE_USER. PC_USER_FINGERPRINT_KEY abcdef... HEX-encoded 64-character string, used as IV value for hashing user fingerprints. PC_API_SALT asdf... String used as salt for creating puzzle signatures. PC_XSRF_KEY jkl;... String used as XSRF key for signing tokens PC_ID_HASH_SALT abcd... String used as salt for obscuring internal IDs in URLs (is actually optional, but recommended) SMTP_ENDPOINT smtp://your.provider.com:587 Endpoint used for sending transactional email. SMTP_USERNAME foobar Username for SMTP_ENDPOINT. SMTP_PASSWORD qwerty12345 Password for SMTP_USERNAME. Note">
@@ -1136,6 +1136,11 @@
           <td><code>true</code></td>
           <td>Boolean (<code>1</code>, <code>y</code>, <code>true</code>) to indicate verbose logging (trace level).</td>
       </tr>
+      <tr>
+          <td><code>PC_COUNTRY_CODE_HEADER</code></td>
+          <td><code>CDN-RequestCountryCode</code></td>
+          <td>HTTP header with 2-letter country code (usually comes from your CDN provider)</td>
+      </tr>
   </tbody>
 </table>
 <div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
@@ -1155,7 +1160,7 @@
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-11-13T10:13:23.000Z">November 13, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-11-20T10:27:13.000Z">November 20, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/quickstart/"
         title="Quickstart"

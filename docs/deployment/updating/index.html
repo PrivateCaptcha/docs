@@ -62,15 +62,15 @@ For this guide it is assumed you are using the self-hosting repository
 
 <meta
   property="article:modified_time"
-  content="2025-11-13T12:37:55+02:00">
+  content="2025-11-20T10:27:13+02:00">
 
 
 
   <meta itemprop="name" content="Updating">
   <meta itemprop="description" content="Generic instructions Backward compatibility is kept on the level of public APIs of Private Captcha, not service configuration itself. It is your responsibility to check for any and all changes before applying updates. It is not recommended to use something like a Watchtower or any other solution that automatically bumps tag versions. Before each update make sure to backup your data in case you’re using any backup solutions. For this guide it is assumed you are using the self-hosting repository setup.">
   <meta itemprop="datePublished" content="2025-11-13T11:58:19+02:00">
-  <meta itemprop="dateModified" content="2025-11-13T12:37:55+02:00">
-  <meta itemprop="wordCount" content="236">
+  <meta itemprop="dateModified" content="2025-11-20T10:27:13+02:00">
+  <meta itemprop="wordCount" content="266">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Updating">
   <meta name="twitter:description" content="Generic instructions Backward compatibility is kept on the level of public APIs of Private Captcha, not service configuration itself. It is your responsibility to check for any and all changes before applying updates. It is not recommended to use something like a Watchtower or any other solution that automatically bumps tag versions. Before each update make sure to backup your data in case you’re using any backup solutions. For this guide it is assumed you are using the self-hosting repository setup.">
@@ -459,9 +459,9 @@ For this guide it is assumed you are using the self-hosting repository
             </li>
           <li>
               <a
-                href="#notable-changes"
+                href="#notable-deployment-changes"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Notable changes</a>
+              >Notable deployment changes</a>
             </li>
           </ul>
   
@@ -841,7 +841,11 @@ For this guide it is assumed you are using the self-hosting repository
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#notable-changes">Notable changes
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#notable-deployment-changes">Notable deployment changes
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#v0023">v0.0.23
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
@@ -993,10 +997,14 @@ For this guide it is assumed you are using the self-hosting repository
 </div>
 </li>
 </ol>
-<h2>Notable changes<span class="hx:absolute hx:-mt-20" id="notable-changes"></span>
-    <a href="#notable-changes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>v0.0.22<span class="hx:absolute hx:-mt-20" id="v0022"></span>
+<h2>Notable deployment changes<span class="hx:absolute hx:-mt-20" id="notable-deployment-changes"></span>
+    <a href="#notable-deployment-changes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>v0.0.23<span class="hx:absolute hx:-mt-20" id="v0023"></span>
+    <a href="#v0023" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>a new <a href="/docs/deployment/configuration/">environment variable</a> <em>can</em> be added: <code>PC_COUNTRY_CODE_HEADER</code> (a header from CDN provider with 2-letter country code). Usual suspects are: Bunny CDN (<code>CDN-RequestCountryCode</code>), CloudFlare (<code>CF-IPCountry</code>), AWS CloudFront (<code>CloudFront-Viewer-Country</code>)</li>
+</ul>
+<h3>v0.0.22<span class="hx:absolute hx:-mt-20" id="v0022"></span>
     <a href="#v0022" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
-<li>a new <em>highly recommended</em> (albeit non-mandatory) <a href="/docs/deployment/configuration/">environment variable</a> has to be added: <code>PC_ID_HASH_SALT</code> (used to obscure internal IDs in URLs)</li>
+<li>a new <em>highly recommended</em> (albeit non-mandatory) <a href="/docs/deployment/configuration/">environment variable</a> <em>has</em> to be added: <code>PC_ID_HASH_SALT</code> (used to obscure internal IDs in URLs)</li>
 <li>in case you&rsquo;re monitoring Private Captcha with Prometheus-compatible agent, a new metric has been added: <code>fine_http_error_total</code> with dimensions <code>code</code>, <code>method</code>, <code>service</code>, <code>handler</code>. This is the metric for &ldquo;soft&rdquo; internal errors happening in Portal.</li>
 </ul>
 <h3>v0.0.21<span class="hx:absolute hx:-mt-20" id="v0021"></span>
@@ -1010,7 +1018,7 @@ For this guide it is assumed you are using the self-hosting repository
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-11-13T12:37:55.000Z">November 13, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-11-20T10:27:13.000Z">November 20, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/bunny-cdn/"
         title="Bunny CDN"
