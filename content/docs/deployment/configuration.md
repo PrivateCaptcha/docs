@@ -52,6 +52,7 @@ Variable | Example | Description
 `PC_REGISTRATION_ALLOWED` | `true` | Boolean (`1`, `y`, `true`) value if this instance of PrivateCaptcha has registration page open.
 `PC_HEALTHCHECK_INTERVAL` | `60` | Integer value that defines how frequently in seconds we perform internal health check of DB instances and http server. Defaults to `5` in prod and `60` in dev.
 `PC_VERBOSE` | `true` | Boolean (`1`, `y`, `true`) to indicate verbose logging (trace level).
+`PC_COUNTRY_CODE_HEADER` | `CDN-RequestCountryCode` | HTTP header with 2-letter country code (usually comes from your CDN provider)
 
 > [!NOTE]
 "Default" rate limiter means the one for public APIs (`/puzzle`, `/verify` and some others). Various other APIs have pre-configured hardcoded limits, compiled in.

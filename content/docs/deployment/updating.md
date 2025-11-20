@@ -43,11 +43,15 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
     docker compose up -d
     ```
 
-## Notable changes
+## Notable deployment changes
+
+### v0.0.23
+
+- a new [environment variable]({{< relref "docs/deployment/configuration.md" >}}) _can_ be added: `PC_COUNTRY_CODE_HEADER` (a header from CDN provider with 2-letter country code). Usual suspects are: Bunny CDN (`CDN-RequestCountryCode`), CloudFlare (`CF-IPCountry`), AWS CloudFront (`CloudFront-Viewer-Country`)
 
 ### v0.0.22
 
-- a new *highly recommended* (albeit non-mandatory) [environment variable]({{< relref "docs/deployment/configuration.md" >}}) has to be added: `PC_ID_HASH_SALT` (used to obscure internal IDs in URLs)
+- a new *highly recommended* (albeit non-mandatory) [environment variable]({{< relref "docs/deployment/configuration.md" >}}) _has_ to be added: `PC_ID_HASH_SALT` (used to obscure internal IDs in URLs)
 - in case you're monitoring Private Captcha with Prometheus-compatible agent, a new metric has been added: `fine_http_error_total` with dimensions `code`, `method`, `service`, `handler`. This is the metric for "soft" internal errors happening in Portal.
 
 ### v0.0.21

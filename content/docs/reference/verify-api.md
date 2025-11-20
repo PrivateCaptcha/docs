@@ -70,7 +70,7 @@ Error code | Description
 `solution-bad-format` | Solution has invalid format
 `puzzle-expired` | Puzzle for this solution has expired
 `property-invalid` | Property for this puzzle/solution cannot be found
-`property-owner-mismatch` | Property and API key's accounts don't match
+`property-owner-mismatch` | API key's owner does not have permission for property
 `solution-verified-before` | Solution has been already verified
 `property-test` | Test property is used for verification
 `maintenance-mode` | Maintenance mode (see below)
