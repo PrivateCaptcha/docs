@@ -35,10 +35,12 @@ Attribute | Values | Description
 
 - `widget` is the default display mode of captcha
 - `popup` captcha widget appears _relative_ to the first parent that has a class `private-captcha-anchor`.
+  > NOTE: `popup` style is recommended to use with `data-start-mode="click"` for security purposes
   ```html
   <form>
       <div class="private-captcha-anchor">
-          <div class="private-captcha" data-display-mode="popup" data-sitekey="xyz"></div>
+          <div class="private-captcha" data-sitekey="xyz"
+               data-display-mode="popup" data-start-mode="click"></div>
       </div>
       <!-- ... -->
       <button type="button" onclick="window.privateCaptcha.autoWidget.execute()">Click me!</button>
