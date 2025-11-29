@@ -45,6 +45,11 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
 
 ## Notable deployment changes
 
+### v0.0.24
+
+- widget has been updated, purge your CDN cache
+- a new [environment variable]({{< relref "docs/deployment/configuration.md" >}}) is available for Enterprise edition: `EE_AUDIT_LOGS_DAYS` (retention period in days for audit logs)
+
 ### v0.0.23
 
 - a new [environment variable]({{< relref "docs/deployment/configuration.md" >}}) _can_ be added: `PC_COUNTRY_CODE_HEADER` (a header from CDN provider with 2-letter country code). Usual suspects are: Bunny CDN (`CDN-RequestCountryCode`), CloudFlare (`CF-IPCountry`), AWS CloudFront (`CloudFront-Viewer-Country`)

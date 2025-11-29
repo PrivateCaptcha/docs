@@ -53,6 +53,7 @@ Variable | Example | Description
 `PC_HEALTHCHECK_INTERVAL` | `60` | Integer value that defines how frequently in seconds we perform internal health check of DB instances and http server. Defaults to `5` in prod and `60` in dev.
 `PC_VERBOSE` | `true` | Boolean (`1`, `y`, `true`) to indicate verbose logging (trace level).
 `PC_COUNTRY_CODE_HEADER` | `CDN-RequestCountryCode` | HTTP header with 2-letter country code (usually comes from your CDN provider)
+`EE_AUDIT_LOGS_DAYS` | `365` | Enterprise-only config for retention period of audit log history (defaults to `365`)
 
 > [!NOTE]
 "Default" rate limiter means the one for public APIs (`/puzzle`, `/verify` and some others). Various other APIs have pre-configured hardcoded limits, compiled in.
