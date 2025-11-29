@@ -62,15 +62,15 @@ For this guide it is assumed you are using the self-hosting repository
 
 <meta
   property="article:modified_time"
-  content="2025-11-20T10:27:13+02:00">
+  content="2025-11-29T14:21:00+01:00">
 
 
 
   <meta itemprop="name" content="Updating">
   <meta itemprop="description" content="Generic instructions Backward compatibility is kept on the level of public APIs of Private Captcha, not service configuration itself. It is your responsibility to check for any and all changes before applying updates. It is not recommended to use something like a Watchtower or any other solution that automatically bumps tag versions. Before each update make sure to backup your data in case you’re using any backup solutions. For this guide it is assumed you are using the self-hosting repository setup.">
   <meta itemprop="datePublished" content="2025-11-13T11:58:19+02:00">
-  <meta itemprop="dateModified" content="2025-11-20T10:27:13+02:00">
-  <meta itemprop="wordCount" content="266">
+  <meta itemprop="dateModified" content="2025-11-29T14:21:00+01:00">
+  <meta itemprop="wordCount" content="292">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Updating">
   <meta name="twitter:description" content="Generic instructions Backward compatibility is kept on the level of public APIs of Private Captcha, not service configuration itself. It is your responsibility to check for any and all changes before applying updates. It is not recommended to use something like a Watchtower or any other solution that automatically bumps tag versions. Before each update make sure to backup your data in case you’re using any backup solutions. For this guide it is assumed you are using the self-hosting repository setup.">
@@ -845,6 +845,10 @@ For this guide it is assumed you are using the self-hosting repository
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#v0024">v0.0.24
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#v0023">v0.0.23
         </a>
       </li>
@@ -998,7 +1002,12 @@ For this guide it is assumed you are using the self-hosting repository
 </li>
 </ol>
 <h2>Notable deployment changes<span class="hx:absolute hx:-mt-20" id="notable-deployment-changes"></span>
-    <a href="#notable-deployment-changes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>v0.0.23<span class="hx:absolute hx:-mt-20" id="v0023"></span>
+    <a href="#notable-deployment-changes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>v0.0.24<span class="hx:absolute hx:-mt-20" id="v0024"></span>
+    <a href="#v0024" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>widget has been updated, purge your CDN cache</li>
+<li>a new <a href="/docs/deployment/configuration/">environment variable</a> is available for Enterprise edition: <code>EE_AUDIT_LOGS_DAYS</code> (retention period in days for audit logs)</li>
+</ul>
+<h3>v0.0.23<span class="hx:absolute hx:-mt-20" id="v0023"></span>
     <a href="#v0023" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
 <li>a new <a href="/docs/deployment/configuration/">environment variable</a> <em>can</em> be added: <code>PC_COUNTRY_CODE_HEADER</code> (a header from CDN provider with 2-letter country code). Usual suspects are: Bunny CDN (<code>CDN-RequestCountryCode</code>), CloudFlare (<code>CF-IPCountry</code>), AWS CloudFront (<code>CloudFront-Viewer-Country</code>)</li>
 </ul>
@@ -1018,7 +1027,7 @@ For this guide it is assumed you are using the self-hosting repository
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-11-20T10:27:13.000Z">November 20, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-11-29T14:21:00.000Z">November 29, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/bunny-cdn/"
         title="Bunny CDN"
