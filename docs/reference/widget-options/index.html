@@ -43,7 +43,7 @@ Attributes
 
 <meta
   property="article:modified_time"
-  content="2025-10-21T09:13:18+03:00">
+  content="2025-11-29T14:09:37+01:00">
 
 
 
@@ -51,8 +51,8 @@ Attributes
   <meta itemprop="description" content="Here’s the minimal captcha field declaration:
 index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&gt;&lt;/div&gt; Private Captcha widget is automatically initialized on all elements with private-captcha class name.
 Attributes Apart from the required sitekey data attribute, the following optional attributes are supported:">
-  <meta itemprop="dateModified" content="2025-10-21T09:13:18+03:00">
-  <meta itemprop="wordCount" content="815">
+  <meta itemprop="dateModified" content="2025-11-29T14:09:37+01:00">
+  <meta itemprop="wordCount" content="828">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Widget options">
   <meta name="twitter:description" content="Here’s the minimal captcha field declaration:
@@ -1001,11 +1001,15 @@ function invisibleFinished(widget) {
 </li>
 <li>
 <p><code>popup</code> captcha widget appears <em>relative</em> to the first parent that has a class <code>private-captcha-anchor</code>.</p>
+<blockquote>
+  <p>NOTE: <code>popup</code> style is recommended to use with <code>data-start-mode=&quot;click&quot;</code> for security purposes</p>
+</blockquote>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha-anchor&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span> <span class="na">data-display-mode</span><span class="o">=</span><span class="s">&#34;popup&#34;</span> <span class="na">data-sitekey</span><span class="o">=</span><span class="s">&#34;xyz&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span> <span class="na">data-sitekey</span><span class="o">=</span><span class="s">&#34;xyz&#34;</span>
+</span></span><span class="line"><span class="cl">             <span class="na">data-display-mode</span><span class="o">=</span><span class="s">&#34;popup&#34;</span> <span class="na">data-start-mode</span><span class="o">=</span><span class="s">&#34;click&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- ... --&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.privateCaptcha.autoWidget.execute()&#34;</span><span class="p">&gt;</span>Click me!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
@@ -1025,6 +1029,7 @@ function invisibleFinished(widget) {
               id="popupCaptcha"
               data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
               data-display-mode="popup"
+              data-start-mode="click"
               data-store-variable="_privateCaptcha"
               data-finished-callback="resetCaptcha"></div>
       </div>
@@ -1306,7 +1311,7 @@ function invisibleFinished(widget) {
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-10-21T09:13:18.000Z">October 21, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-11-29T14:09:37.000Z">November 29, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/verify-api/"
         title="Verify API"
