@@ -27,7 +27,7 @@ All [server-side integrations]({{< relref "docs/integrations/_index.md" >}}) all
 
 {{% details title="What is the point of the `sitekey` argument" closed="true" %}}
 
-It an additional layer of verification. For example, if you're using verification API incorrectly, an attacker can send you a solution for test puzzle. Verification will return `Success` field set to `true` (by design) and `Code` (error) set as `test-property`. If you would set the expected `sitekey`, it will eliminate this kind of errors.
+It is an additional layer of verification. For example, if you're using verification API incorrectly, an attacker can send you a solution for test puzzle. Verification will return `Success` field set to `true` (by design) and `Code` (error) set as `test-property`. If you would set the expected `sitekey`, it will eliminate this kind of errors.
 
 > NOTE: this kind of errors is already eliminated if you're using `OK()` methods and not checking `success`/`code` yourself
 
