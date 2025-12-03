@@ -6,6 +6,10 @@ captcha_scripts: true
 
 Invisible captcha refers to the situation when you don't want to show captcha widget for various reasons (e.g. custom UI integraion or design restrictions).
 
+{{< callout type="warning" >}}
+Invisible captcha **can** provide the lowest level of protection, when implemented incorrectly. [Read more]({{< relref "docs/tutorials/security-recommendations" >}})
+{{< /callout >}}
+
 ## Setup
 
 To permanently hide the widget, set `data-display-mode` [attribute]({{< relref "/docs/reference/widget-options.md#data-display-mode" >}}) to `hidden`.

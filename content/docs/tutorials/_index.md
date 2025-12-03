@@ -12,4 +12,5 @@ Here you can find tutorials with code examples that you can copy and paste.
   {{< card link="/docs/tutorials/invisible-captcha" title="Invisible captcha" icon="check-circle" >}}
   {{< card link="/docs/tutorials/migrate-from-recaptcha" title="reCAPTCHA migration" icon="refresh" >}}
   {{< card link="/docs/tutorials/widget-customization" title="Widget customization" icon="light-bulb" >}}
+  {{< card link="/docs/tutorials/security-recommendations" title="Security tips" icon="shield-exclamation" >}}
 {{< /cards >}}
