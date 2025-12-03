@@ -23,10 +23,16 @@ This is a **server-side** SDK, which you would use to verify captcha solution ag
 composer require private-captcha/private-captcha-php
 ```
 
+## Usage
+
+{{< callout >}}
+Always check our [security recommendations]({{< relref "/docs/tutorials/security-recommendations.md#server-side" >}}) when using this integration.
+{{< /callout >}}
+
 > [!NOTE]
 > Before using this SDK, you'll need an API key. If you don't have one yet, see how to [create an API key]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}) in the Getting Started guide.
 
-## Quick start
+### Quick start
 
 ```php
 <?php
@@ -39,7 +45,7 @@ $client = new Client(apiKey: "your-api-key-here");
 // Verify a captcha solution
 try {
     $result = $client->verify(solution: "user-solution-from-frontend");
-    if ($result->success) {
+    if ($result->isOK()) {
         echo "Captcha verified successfully!";
     } else {
         echo "Verification failed: {$result}";
@@ -48,8 +54,6 @@ try {
     echo "Error: {$e->getMessage()}";
 }
 ```
-
-## Usage
 
 ### Web framework integration
 

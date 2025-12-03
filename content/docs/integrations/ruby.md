@@ -37,10 +37,16 @@ Or install it yourself as:
 gem install private_captcha
 ```
 
-## Quick start
+## Usage
+
+{{< callout >}}
+Always check our [security recommendations]({{< relref "/docs/tutorials/security-recommendations.md#server-side" >}}) when using this integration.
+{{< /callout >}}
 
 > [!NOTE]
 > Before using this SDK, you'll need an API key. If you don't have one yet, see how to [create an API key]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}) in the Getting Started guide.
+
+### Quick start
 
 ```ruby
 require 'private_captcha'
@@ -53,7 +59,7 @@ end
 # Verify a captcha solution
 begin
   result = client.verify('user-solution-from-frontend')
-  if result.success
+  if result.ok?
     puts 'Captcha verified successfully!'
   else
     puts "Verification failed: #{result.error_message}"
@@ -62,8 +68,6 @@ rescue PrivateCaptcha::Error => e
   puts "Error: #{e.message}"
 end
 ```
-
-## Usage
 
 ### Web framework integration
 

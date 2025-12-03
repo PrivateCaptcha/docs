@@ -33,6 +33,10 @@ Install-Package PrivateCaptcha
 
 ## Usage
 
+{{< callout >}}
+Always check our [security recommendations]({{< relref "/docs/tutorials/security-recommendations.md#server-side" >}}) when using this integration.
+{{< /callout >}}
+
 > [!NOTE]
 > Before using this SDK, you'll need an API key. If you don't have one yet, see how to create it in the [Getting Started guide]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}).
 
@@ -48,7 +52,7 @@ var config = new PrivateCaptchaConfiguration
 var captchaClient = new PrivateCaptchaClient(config);
 
 var result = await captchaClient.VerifyAsync(new VerifyInput { Solution = captchaSolution });
-if (result.Success)
+if (result.OK())
 {
     Console.WriteLine("Captcha verification succeeded!");
 }

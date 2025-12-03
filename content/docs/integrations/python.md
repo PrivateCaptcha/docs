@@ -24,10 +24,16 @@ This is a **server-side** SDK, which you would use to verify captcha solution ag
 pip install private-captcha
 ```
 
-## Quick start
+## Usage
+
+{{< callout >}}
+Always check our [security recommendations]({{< relref "/docs/tutorials/security-recommendations.md#server-side" >}}) when using this integration.
+{{< /callout >}}
 
 > [!NOTE]
 > Before using this SDK, you'll need an API key. If you don't have one yet, see how to create it in the [Getting Started guide]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}).
+
+### Quick start
 
 ```python
 from private_captcha import Client
@@ -38,15 +44,13 @@ client = Client(api_key="your-api-key-here")
 # Verify a captcha solution
 try:
     result = client.verify(solution="user-solution-from-frontend")
-    if result.success:
+    if result.ok():
         print("Captcha verified successfully!")
     else:
         print(f"Verification failed: {result}")
 except Exception as e:
     print(f"Error: {e}")
 ```
-
-## Usage
 
 ### Web framework integration
 

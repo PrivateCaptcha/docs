@@ -24,6 +24,10 @@ go get -u github.com/PrivateCaptcha/private-captcha-go
 
 ## Usage
 
+{{< callout >}}
+Always check our [security recommendations]({{< relref "/docs/tutorials/security-recommendations.md#server-side" >}}) when using this integration.
+{{< /callout >}}
+
 > [!NOTE]
 > Before using this SDK, you'll need an API key. If you don't have one yet, see how to create it in the [Getting Started guide]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}).
 
@@ -52,7 +56,7 @@ client, err := pc.NewClient(pc.Configuration{APIKey: "pc_abcdef"})
 output, err := client.Verify(ctx, pc.VerifyInput{Solution: solution})
 // ... handle err
 
-if !output.Success {
+if !output.OK() {
 	fmt.Printf("Captcha verification failed. Error: %s", result.Error())
 }
 ```
