@@ -39,7 +39,7 @@ When you hide the widget using data-display-mode=&quot;hidden&quot;, security of
 
 <meta
   property="article:modified_time"
-  content="2025-12-03T19:59:41+01:00">
+  content="2025-12-03T20:53:31+01:00">
 
 
 
@@ -48,8 +48,8 @@ When you hide the widget using data-display-mode=&quot;hidden&quot;, security of
 Equally secure is using a popup widget IF it has data-start-mode=&#34;click&#34;, thus forcing user to click the widget in the popup. Using popup widget with auto start mode (the default) is not the most secure option and is not recommended.
 When you hide the widget using data-display-mode=&#34;hidden&#34;, security of the CAPTCHA protection depends entirely on your implementation. For example, if you start solving captcha automatically (instead of somehow forcing user to click on something), it is relatively similar for bots to having no captcha at all (sans the resource cost of proof-of-work).">
   <meta itemprop="datePublished" content="2025-12-03T19:04:27+01:00">
-  <meta itemprop="dateModified" content="2025-12-03T19:59:41+01:00">
-  <meta itemprop="wordCount" content="347">
+  <meta itemprop="dateModified" content="2025-12-03T20:53:31+01:00">
+  <meta itemprop="wordCount" content="348">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Security recommendations">
   <meta name="twitter:description" content="Client side Widget display mode Usual widget type (data-display-mode=&#34;widget&#34;) is the safest option.
@@ -898,7 +898,7 @@ When you hide the widget using data-display-mode=&#34;hidden&#34;, security of t
     <strong class="hx:text-lg">What is the point of the <code>sitekey</code> argument</strong>
   </summary>
   <div class="hx:p-2 hx:overflow-hidden">
-    <p>It an additional layer of verification. For example, if you&rsquo;re using verification API incorrectly, an attacker can send you a solution for test puzzle. Verification will return <code>Success</code> field set to <code>true</code> (by design) and <code>Code</code> (error) set as <code>test-property</code>. If you would set the expected <code>sitekey</code>, it will eliminate this kind of errors.</p>
+    <p>It is an additional layer of verification. For example, if you&rsquo;re using verification API incorrectly, an attacker can send you a solution for test puzzle. Verification will return <code>Success</code> field set to <code>true</code> (by design) and <code>Code</code> (error) set as <code>test-property</code>. If you would set the expected <code>sitekey</code>, it will eliminate this kind of errors.</p>
 <blockquote>
   <p>NOTE: this kind of errors is already eliminated if you&rsquo;re using <code>OK()</code> methods and not checking <code>success</code>/<code>code</code> yourself</p>
 </blockquote>
@@ -909,7 +909,7 @@ When you hide the widget using data-display-mode=&#34;hidden&#34;, security of t
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-12-03T19:59:41.000Z">December 3, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-12-03T20:53:31.000Z">December 3, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/tutorials/widget-customization/"
         title="Widget customization"

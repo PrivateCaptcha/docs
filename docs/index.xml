@@ -117,7 +117,7 @@
     &lt;strong class=&#34;hx:text-lg&#34;&gt;What is the point of the &lt;code&gt;sitekey&lt;/code&gt; argument&lt;/strong&gt;
   &lt;/summary&gt;
   &lt;div class=&#34;hx:p-2 hx:overflow-hidden&#34;&gt;
-    &lt;p&gt;It an additional layer of verification. For example, if you&amp;rsquo;re using verification API incorrectly, an attacker can send you a solution for test puzzle. Verification will return &lt;code&gt;Success&lt;/code&gt; field set to &lt;code&gt;true&lt;/code&gt; (by design) and &lt;code&gt;Code&lt;/code&gt; (error) set as &lt;code&gt;test-property&lt;/code&gt;. If you would set the expected &lt;code&gt;sitekey&lt;/code&gt;, it will eliminate this kind of errors.&lt;/p&gt;
+    &lt;p&gt;It is an additional layer of verification. For example, if you&amp;rsquo;re using verification API incorrectly, an attacker can send you a solution for test puzzle. Verification will return &lt;code&gt;Success&lt;/code&gt; field set to &lt;code&gt;true&lt;/code&gt; (by design) and &lt;code&gt;Code&lt;/code&gt; (error) set as &lt;code&gt;test-property&lt;/code&gt;. If you would set the expected &lt;code&gt;sitekey&lt;/code&gt;, it will eliminate this kind of errors.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;NOTE: this kind of errors is already eliminated if you&amp;rsquo;re using &lt;code&gt;OK()&lt;/code&gt; methods and not checking &lt;code&gt;success&lt;/code&gt;/&lt;code&gt;code&lt;/code&gt; yourself&lt;/p&gt;
 &lt;/blockquote&gt;
