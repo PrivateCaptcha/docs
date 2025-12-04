@@ -25,7 +25,7 @@ go get -u github.com/PrivateCaptcha/private-captcha-go
 ## Usage
 
 {{< callout >}}
-Always check our [security recommendations]({{< relref "/docs/tutorials/security-recommendations.md#server-side" >}}) when using this integration.
+Always check our [security recommendations]({{< relref "/docs/reference/security.md#server-side" >}}) when using this integration.
 {{< /callout >}}
 
 > [!NOTE]
