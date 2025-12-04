@@ -5,7 +5,7 @@
     <description>Recent content in Docs on Private Captcha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Dec 2025 19:04:27 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 13 Nov 2025 11:58:19 +0200</lastBuildDate>
     
 	  <atom:link href="https://docs.privatecaptcha.com/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -88,43 +88,6 @@
       &gt;&lt;span class=&#34;hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;Widget customization&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2&#34;&gt;Integrate the widget on your frontend&lt;/div&gt;&lt;/a&gt;
 &lt;/div&gt;
 
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Security recommendations</title>
-      <link>https://docs.privatecaptcha.com/docs/tutorials/security-recommendations/</link>
-      <pubDate>Wed, 03 Dec 2025 19:04:27 +0100</pubDate>
-      
-      <guid>https://docs.privatecaptcha.com/docs/tutorials/security-recommendations/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;Client side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#client-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Widget display mode&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;widget-display-mode&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#widget-display-mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Usual widget type (&lt;code&gt;data-display-mode=&amp;quot;widget&amp;quot;&lt;/code&gt;) is the safest option.&lt;/p&gt;
-&lt;p&gt;Equally secure is using a popup widget &lt;strong&gt;IF&lt;/strong&gt; it has &lt;code&gt;data-start-mode=&amp;quot;click&amp;quot;&lt;/code&gt;, thus forcing user to click the widget in the popup. Using popup widget with &lt;code&gt;auto&lt;/code&gt; start mode (the default) is &lt;strong&gt;not&lt;/strong&gt; the most secure option and is not recommended.&lt;/p&gt;
-&lt;p&gt;When you hide the widget using &lt;code&gt;data-display-mode=&amp;quot;hidden&amp;quot;&lt;/code&gt;, security of the CAPTCHA protection depends entirely on your implementation. For example, if you start solving captcha automatically (instead of somehow forcing user to click on something), it is relatively similar for bots to having no captcha at all (sans the resource cost of proof-of-work).&lt;/p&gt;
-&lt;h3&gt;Widget script (CDN)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;widget-script-cdn&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#widget-script-cdn&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Make sure that you are not serving the Private Captcha widget yourself (especially relevant for various WordPress caching plugins) and you are always loading widget from &lt;code&gt;cdn.privatecaptcha.com&lt;/code&gt;.&lt;/p&gt;
-&lt;h2&gt;Server side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#server-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Verification&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;verification&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#verification&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;All &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;server-side integrations&lt;/a&gt; have some kind of a &lt;code&gt;verify()&lt;/code&gt; method that returns an object that has a method &lt;code&gt;OK()&lt;/code&gt;. This is the only method you should be checking to see if CAPTCHA solution is valid. If the result is &lt;code&gt;false&lt;/code&gt;, you can get more details by checking underlying fields &lt;code&gt;Success&lt;/code&gt; and &lt;code&gt;Code&lt;/code&gt; (for debugging purposes only).&lt;/p&gt;
-&lt;p&gt;All &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;server-side integrations&lt;/a&gt; allow you to specify an optional &lt;code&gt;sitekey&lt;/code&gt; parameter with each verification request. This is the sitekey that you are expected to check the solution against and, while being optional, is recommended to make use of.&lt;/p&gt;
-&lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
-  &lt;summary class=&#34;hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[&#39;&#39;] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90&#34;&gt;
-    &lt;strong class=&#34;hx:text-lg&#34;&gt;What is the point of the &lt;code&gt;sitekey&lt;/code&gt; argument&lt;/strong&gt;
-  &lt;/summary&gt;
-  &lt;div class=&#34;hx:p-2 hx:overflow-hidden&#34;&gt;
-    &lt;p&gt;It is an additional layer of verification. For example, if you&amp;rsquo;re using verification API incorrectly, an attacker can send you a solution for test puzzle. Verification will return &lt;code&gt;Success&lt;/code&gt; field set to &lt;code&gt;true&lt;/code&gt; (by design) and &lt;code&gt;Code&lt;/code&gt; (error) set as &lt;code&gt;test-property&lt;/code&gt;. If you would set the expected &lt;code&gt;sitekey&lt;/code&gt;, it will eliminate this kind of errors.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;NOTE: this kind of errors is already eliminated if you&amp;rsquo;re using &lt;code&gt;OK()&lt;/code&gt; methods and not checking &lt;code&gt;success&lt;/code&gt;/&lt;code&gt;code&lt;/code&gt; yourself&lt;/p&gt;
-&lt;/blockquote&gt;
-  &lt;/div&gt;
-&lt;/details&gt;
-&lt;h3&gt;Client libraries&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-libraries&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#client-libraries&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Make sure to automatically update your client library version for Private Captcha (e.g. using Renovate or Dependabot). Safe option is to have a &amp;ldquo;stability days&amp;rdquo; buffer (e.g. 7 days) before automatically merging updates.&lt;/p&gt;
 
       </description>
     </item>
@@ -478,7 +441,7 @@
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/security-recommendations/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/security/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -807,13 +770,40 @@
       <description>
         
         
-        &lt;h2&gt;Content-Security-Policy Settings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;content-security-policy-settings&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#content-security-policy-settings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/eu-isolation/&#34;&gt;EU Isolation&lt;/a&gt;).&lt;/p&gt;
+        &lt;h2&gt;Client side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#client-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Content-Security-Policy Settings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;content-security-policy-settings&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#content-security-policy-settings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/eu-isolation/&#34;&gt;EU Isolation&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;You need to add &lt;code&gt;https://privatecaptcha.com&lt;/code&gt;, &lt;code&gt;https://*.privatecaptcha.com&lt;/code&gt; to &lt;code&gt;script-src&lt;/code&gt;, &lt;code&gt;frame-src&lt;/code&gt;, &lt;code&gt;style-src&lt;/code&gt;, &lt;code&gt;connect-src&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Do &lt;strong&gt;not&lt;/strong&gt; hard-code specific subdomains, like &lt;code&gt;api.privatecaptcha.com&lt;/code&gt;, into your CSP.&lt;/p&gt;
-&lt;h2&gt;Secrets rotation&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;secrets-rotation&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#secrets-rotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Usually you do not need to rotate the &lt;strong&gt;client&lt;/strong&gt; widget sitekey.&lt;/p&gt;
-&lt;p&gt;However, each API key that you use for the &lt;strong&gt;server-side&lt;/strong&gt; validation, has an expiration date and will either expire or will have to be rotated. You should receive an email notification before your API key is expired.&lt;/p&gt;
+&lt;h3&gt;Widget display mode&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;widget-display-mode&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#widget-display-mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Usual &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34;&gt;widget type&lt;/a&gt; (&lt;code&gt;data-display-mode=&amp;quot;widget&amp;quot;&lt;/code&gt;) is the safest option.&lt;/p&gt;
+&lt;p&gt;Equally secure is using a popup widget &lt;strong&gt;IF&lt;/strong&gt; it has &lt;code&gt;data-start-mode=&amp;quot;click&amp;quot;&lt;/code&gt;, thus forcing user to click the widget in the popup. Using popup widget with &lt;code&gt;auto&lt;/code&gt; start mode (the default) is not the most secure option and is &lt;strong&gt;not recommended&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;When you &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/invisible-captcha/&#34;&gt;hide the widget&lt;/a&gt; using &lt;code&gt;data-display-mode=&amp;quot;hidden&amp;quot;&lt;/code&gt;, security of the CAPTCHA protection depends entirely on your implementation. For example, if you start solving captcha automatically (instead of somehow forcing user to click on something), it is relatively similar for bots to having no captcha at all (sans the resource cost of proof-of-work).&lt;/p&gt;
+&lt;h3&gt;Widget script (CDN)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;widget-script-cdn&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#widget-script-cdn&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Make sure that you are &lt;strong&gt;not&lt;/strong&gt; serving the Private Captcha widget yourself (especially relevant for various WordPress caching plugins) and your website is &lt;em&gt;always&lt;/em&gt; loading widget from &lt;code&gt;cdn.privatecaptcha.com&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Localhost access&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;localhost-access&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#localhost-access&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Make sure that &lt;em&gt;&amp;ldquo;Allow localhost&amp;rdquo;&lt;/em&gt; is &lt;strong&gt;not&lt;/strong&gt; enabled in &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings/&#34;&gt;Property settings&lt;/a&gt; for the &amp;ldquo;production&amp;rdquo; sitekey. It is acceptable only for the development version of the property (which you should use).&lt;/p&gt;
+&lt;h3&gt;Sitekey rotation&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;sitekey-rotation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#sitekey-rotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Usually you do not need to rotate the &lt;strong&gt;client&lt;/strong&gt; widget sitekey.&lt;/p&gt;
+&lt;h2&gt;Server side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#server-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Verification&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;verification&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#verification&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;All &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;server-side integrations&lt;/a&gt; have some kind of a &lt;code&gt;Verify(solution)&lt;/code&gt; method that returns an object that has a method &lt;code&gt;OK()&lt;/code&gt;. This is the only method you should be checking to see if CAPTCHA solution is valid. If the result is &lt;code&gt;false&lt;/code&gt;, you can get more details by checking underlying fields &lt;code&gt;Success&lt;/code&gt; and &lt;code&gt;Code&lt;/code&gt; (for debugging purposes only).&lt;/p&gt;
+&lt;p&gt;All &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;server-side integrations&lt;/a&gt; allow you to specify an optional &lt;code&gt;sitekey&lt;/code&gt; parameter with each verification request. This is the sitekey that you are expected to check the solution against and, while being optional, is recommended to make use of.&lt;/p&gt;
+&lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
+  &lt;summary class=&#34;hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[&#39;&#39;] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx:text-lg&#34;&gt;What is the point of the &lt;code&gt;sitekey&lt;/code&gt; argument&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx:p-2 hx:overflow-hidden&#34;&gt;
+    &lt;p&gt;It is an additional layer of verification. For example, if you&amp;rsquo;re using verification API incorrectly, an attacker can send you a solution for test puzzle. Verification will return &lt;code&gt;Success&lt;/code&gt; field set to &lt;code&gt;true&lt;/code&gt; (by design) and &lt;code&gt;Code&lt;/code&gt; (error) set as &lt;code&gt;test-property&lt;/code&gt;. If you would set the expected &lt;code&gt;sitekey&lt;/code&gt;, it will eliminate this kind of errors.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;NOTE: this kind of errors is already eliminated if you&amp;rsquo;re using &lt;code&gt;OK()&lt;/code&gt; methods and not checking &lt;code&gt;success&lt;/code&gt;/&lt;code&gt;code&lt;/code&gt; yourself&lt;/p&gt;
+&lt;/blockquote&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;h3&gt;Client libraries&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-libraries&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#client-libraries&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Make sure to automatically update your client library version for Private Captcha (e.g. using Renovate or Dependabot). Safe option is to have a &amp;ldquo;stability days&amp;rdquo; buffer (e.g. 7 days) before automatically merging updates.&lt;/p&gt;
+&lt;h3&gt;API key rotation&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;api-key-rotation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#api-key-rotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each API key that you use for the &lt;strong&gt;server-side&lt;/strong&gt; validation, has an expiration date and will either expire or will have to be rotated. You should receive an email notification before your API key is expired.&lt;/p&gt;
 
       </description>
     </item>
@@ -1417,7 +1407,7 @@
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/security-recommendations/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/security/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1791,7 +1781,7 @@
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/security-recommendations/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/security/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -2195,7 +2185,7 @@
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/security-recommendations/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/security/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -2412,7 +2402,7 @@
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/security-recommendations/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/security/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3723,7 +3713,7 @@
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/security-recommendations/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Always check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/security/#server-side&#34;&gt;security recommendations&lt;/a&gt; when using this integration.&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3870,7 +3860,7 @@
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Invisible captcha &lt;strong&gt;can&lt;/strong&gt; provide the lowest level of protection, when implemented incorrectly. &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/security-recommendations/&#34;&gt;Read more&lt;/a&gt;&lt;/div&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Invisible captcha &lt;strong&gt;can&lt;/strong&gt; provide the lowest level of protection, when implemented incorrectly. &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/security/&#34;&gt;Read more&lt;/a&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
