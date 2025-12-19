@@ -31,7 +31,7 @@ curl -X POST \
 ```
 
 > [!NOTE]
-> Usually you would not send that `POST` request yourself, but use one of our [pre-built integrations]({{< relref "/docs/integrations" >}}).
+> Usually you would **not** send that `POST` request yourself, but use one of our [pre-built integrations]({{< relref "/docs/integrations" >}}).
 
 ## Response
 
@@ -48,7 +48,7 @@ Here's how a successful response from `/verify` endpoint looks like:
 
 ### Verifying captcha
 
-Verification status is defined by a single field only: `success` (boolean) must be equal to `true`.
+Verification status is defined by 2 fields: `success` (boolean) must be equal to `true` and `code` (integer) must be `0`.
 
 ## Error codes
 
@@ -61,20 +61,20 @@ reCAPTCHA-compatible `/siteverify` endpoint will contain the string version in `
 
 `code` can be one of the error codes:
 
-Error code | Description
---- | ---
-`no-error` | No error (shown here for completeness)
-`error-other` | Unspecified error
-`solution-duplicates` | Solution contains duplicates
-`solution-invalid` | Solution verification error
-`solution-bad-format` | Solution has invalid format
-`puzzle-expired` | Puzzle for this solution has expired
-`property-invalid` | Property for this puzzle/solution cannot be found
-`property-owner-mismatch` | API key's owner does not have permission for property
-`solution-verified-before` | Solution has been already verified
-`property-test` | Test property is used for verification
-`maintenance-mode` | Maintenance mode (see below)
-`integrity-error` | Puzzle or solution integrity is compromised
+Code | Error | Description
+--- | --- | ---
+`0` | `no-error` | No error (shown here for completeness)
+`1` | `error-other` | Unspecified error
+`2` | `solution-duplicates` | Solution contains duplicates
+`3` | `solution-invalid` | Solution verification error
+`4` | `solution-bad-format` | Solution has invalid format
+`5` | `puzzle-expired` | Puzzle for this solution has expired
+`6` | `property-invalid` | Property for this puzzle/solution cannot be found
+`7` | `property-owner-mismatch` | API key's owner does not have permission for property
+`8` | `solution-verified-before` | Solution has been already verified
+`9` | `maintenance-mode` | Maintenance mode (see below)
+`10` | `property-test` | Test property is used for verification
+`11` | `integrity-error` | Puzzle or solution integrity is compromised
 
 ### Errors during successful verification
 

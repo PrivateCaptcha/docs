@@ -255,6 +255,7 @@ To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to 
 +
 +       response := struct {
 +               Success bool `json:"success"`
++               Code    int  `json:"code"`
 +               // NOTE: other fields omitted for brevity
 +       }{}
 +
@@ -262,7 +263,7 @@ To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to 
 +           return err
 +       }
 +
-+       if !response.Success {
++       if !(response.Success && response.Code == 0) {
 +               return errors.New("solution is not correct")
 +       }
 +
@@ -312,6 +313,7 @@ func checkSolution(solution, apiKey string) error {
 
 	response := struct {
 		Success bool `json:"success"`
+        Code    int  `json:"code"`
 		// NOTE: other fields omitted for brevity
 	}{}
 
@@ -319,7 +321,7 @@ func checkSolution(solution, apiKey string) error {
 		return err
 	}
 
-	if !response.Success {
+	if !(response.Success && response.Code == 0) {
 		return errors.New("solution is not correct")
 	}
 
