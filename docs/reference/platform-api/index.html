@@ -44,7 +44,7 @@ This reference documentation describes the Portal API for Private Captcha, which
 
 <meta
   property="article:modified_time"
-  content="2025-12-19T18:42:24+01:00">
+  content="2025-12-19T20:06:35+01:00">
 
 
 
@@ -53,7 +53,7 @@ This reference documentation describes the Portal API for Private Captcha, which
 API is also available here as Swagger / OpenAPI definition.
 This reference documentation describes the Portal API for Private Captcha, which allows for the management of organizations, properties, and asynchronous tasks.">
   <meta itemprop="datePublished" content="2025-12-19T17:50:22+01:00">
-  <meta itemprop="dateModified" content="2025-12-19T18:42:24+01:00">
+  <meta itemprop="dateModified" content="2025-12-19T20:06:35+01:00">
   <meta itemprop="wordCount" content="1188">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Platform API">
@@ -1729,7 +1729,7 @@ This reference documentation describes the Portal API for Private Captcha, which
 <h3>Update Properties (Async)<span class="hx:absolute hx:-mt-20" id="update-properties-async"></span>
     <a href="#update-properties-async" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Triggers an asynchronous task to update a batch of properties.</p>
 <ul>
-<li><strong>Method:</strong> <code>PATCH</code></li>
+<li><strong>Method:</strong> <code>PUT</code></li>
 <li><strong>Endpoint:</strong> <code>/properties</code></li>
 <li><strong>Input:</strong> Array of objects containing <code>id</code> and settings to update.</li>
 <li><strong>Output:</strong> Object containing task <code>id</code>.</li>
@@ -1751,7 +1751,7 @@ This reference documentation describes the Portal API for Private Captcha, which
   id="tabs-panel-0"
   role="tabpanel" tabindex="0"  data-state="selected" ><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -X PATCH https://api.privatecaptcha.com/properties <span class="se">\
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -X PUT https://api.privatecaptcha.com/properties <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;X-API-Key: your_portal_api_key_here&#34;</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  -d <span class="s1">&#39;[{&#34;id&#34;: &#34;0VgGggmbGa&#34;, &#34;level&#34;: 2}]&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
@@ -1915,7 +1915,7 @@ This reference documentation describes the Portal API for Private Captcha, which
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-12-19T18:42:24.000Z">December 19, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-12-19T20:06:35.000Z">December 19, 2025</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/security/"
         title="Security"

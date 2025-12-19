@@ -807,7 +807,7 @@
 &lt;h3&gt;Update Properties (Async)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;update-properties-async&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#update-properties-async&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Triggers an asynchronous task to update a batch of properties.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;PATCH&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;PUT&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Endpoint:&lt;/strong&gt; &lt;code&gt;/properties&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Input:&lt;/strong&gt; Array of objects containing &lt;code&gt;id&lt;/code&gt; and settings to update.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Output:&lt;/strong&gt; Object containing task &lt;code&gt;id&lt;/code&gt;.&lt;/li&gt;
@@ -829,7 +829,7 @@
   id=&#34;tabs-panel-0&#34;
   role=&#34;tabpanel&#34; tabindex=&#34;0&#34;  data-state=&#34;selected&#34; &gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -X PATCH https://api.privatecaptcha.com/properties &lt;span class=&#34;se&#34;&gt;\
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -X PUT https://api.privatecaptcha.com/properties &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;X-API-Key: your_portal_api_key_here&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;[{&amp;#34;id&amp;#34;: &amp;#34;0VgGggmbGa&amp;#34;, &amp;#34;level&amp;#34;: 2}]&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
