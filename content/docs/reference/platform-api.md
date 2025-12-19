@@ -406,7 +406,7 @@ curl -X POST https://api.privatecaptcha.com/org/vDWtASYqrB/properties \
 
 Triggers an asynchronous task to update a batch of properties.
 
-* **Method:** `PATCH`
+* **Method:** `PUT`
 * **Endpoint:** `/properties`
 * **Input:** Array of objects containing `id` and settings to update.
 * **Output:** Object containing task `id`.
@@ -415,7 +415,7 @@ Triggers an asynchronous task to update a batch of properties.
 {{< tab >}}
 
 ```bash
-curl -X PATCH https://api.privatecaptcha.com/properties \
+curl -X PUT https://api.privatecaptcha.com/properties \
   -H "X-API-Key: your_portal_api_key_here" \
   -H "Content-Type: application/json" \
   -d '[{"id": "0VgGggmbGa", "level": 2}]'
