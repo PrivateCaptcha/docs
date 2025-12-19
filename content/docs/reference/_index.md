@@ -19,4 +19,5 @@ Reference of API and parameters that you can use.
   {{< card link="/docs/reference/testing" title="Testing" icon="beaker" >}}
   {{< card link="/docs/reference/eu-isolation" title="EU isolation" icon="lock-closed" >}}
   {{< card link="/docs/reference/security" title="Security" icon="shield-exclamation" >}}
+  {{< card link="/docs/reference/platform-api" title="Platform API" icon="terminal" >}}
 {{< /cards >}}
