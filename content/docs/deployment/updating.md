@@ -45,6 +45,11 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
 
 ## Notable deployment changes
 
+### v0.0.26
+
+- widget has been updated, purge your CDN cache
+- if you're monitoring Private Captcha with Prometheus-compatible agent, a new metric has been added: `fine_api_error_total` with dimensions `code`, `method`, `service`, `handler`. This is the metric for [platform API]({{< relref "docs/reference/platform-api.md" >}}) errors.
+
 ### v0.0.24
 
 - widget has been updated, purge your CDN cache
