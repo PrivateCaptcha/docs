@@ -42,9 +42,9 @@ Open _"Integrations"_ tab and note the **Sitekey** of the property you just crea
 
 ### Create a new API key
 
-Go to [API key settings](https://portal.{{< domain >}}/settings?tab=apikeys) and click _"Create new key"_. Give it some meaningful name, like _"WordPress API key"_
+Go to [API key settings](https://portal.{{< domain >}}/settings?tab=apikeys) and click _"Create new key"_. Give it some meaningful name, like _"WordPress API key"_ and select the scope `Puzzle verification`.
 
-![Create a new API key](/images/integrations/new-api-key.png)
+![Create a new API key](/images/integrations/new-api-key-scope.png "Make sure to select scope 'Puzzle verification'")
 
 Copy API key value to your password manager to temporarily save it (note the expiration time you selected when creating above).
 

@@ -45,9 +45,9 @@ The _Sitekey_ looks like `aaaaaaaabbbbccccddddeeeeeeeeeeee` and is used for the 
 
 API keys are used for server-side verification of CAPTCHA solutions. Each API key has an expiration date and can be revoked at any time.
 
-Go to [API key settings](https://portal.{{< domain >}}/settings?tab=apikeys) and click **"Create new key"**. Give it a meaningful name (e.g., "Production API key", "WordPress API key").
+Go to [API key settings](https://portal.{{< domain >}}/settings?tab=apikeys) and click **"Create new key"**. Give it a meaningful name (e.g., "Production API key", "WordPress API key"), and select scope `Puzzle verification` (default).
 
-![Create a new API key](/images/integrations/new-api-key.png)
+![Create a new API key](/images/integrations/new-api-key-scope.png "Make sure to select scope 'Puzzle verification'")
 
 Set an expiration date and click **"Create"**.
 
