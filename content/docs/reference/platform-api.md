@@ -8,6 +8,8 @@ date: 2025-12-19T17:50:22+01:00
 
 This reference documentation describes the Portal API for Private Captcha, which allows for the management of organizations, properties, and asynchronous tasks.
 
+{{< callout type="warning" >}}If you are looking for an API to verify captcha challenges, see [Verify API]({{< relref "docs/reference/verify-api.md" >}}).{{</callout>}}
+
 ## Authentication
 
 All endpoints in this section require an API key with the **portal** scope. This key must be sent in the `X-API-Key` header.
