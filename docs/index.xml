@@ -60,8 +60,11 @@
     &lt;a href=&#34;#create-a-new-api-key&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;API keys are used for server-side verification of CAPTCHA solutions. Each API key has an expiration date and can be revoked at any time.&lt;/p&gt;
 &lt;p&gt;Go to &lt;a href=&#34;https://portal.privatecaptcha.com/settings?tab=apikeys&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;API key settings&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
-&lt;/svg&gt;&lt;/a&gt; and click &lt;strong&gt;&amp;ldquo;Create new key&amp;rdquo;&lt;/strong&gt;. Give it a meaningful name (e.g., &amp;ldquo;Production API key&amp;rdquo;, &amp;ldquo;WordPress API key&amp;rdquo;).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/integrations/new-api-key.png&#34; alt=&#34;Create a new API key&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;/svg&gt;&lt;/a&gt; and click &lt;strong&gt;&amp;ldquo;Create new key&amp;rdquo;&lt;/strong&gt;. Give it a meaningful name (e.g., &amp;ldquo;Production API key&amp;rdquo;, &amp;ldquo;WordPress API key&amp;rdquo;), and select scope &lt;code&gt;Puzzle verification&lt;/code&gt; (default).&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/integrations/new-api-key-scope.png&#34; title=&#34;Make sure to select scope &amp;#39;Puzzle verification&amp;#39;&#34; alt=&#34;Create a new API key&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Make sure to select scope &amp;#39;Puzzle verification&amp;#39;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Set an expiration date and click &lt;strong&gt;&amp;ldquo;Create&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
 &lt;h3&gt;Copy and store your API key&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;copy-and-store-your-api-key&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#copy-and-store-your-api-key&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After creation, the API key value will be displayed. &lt;strong&gt;Copy it immediately&lt;/strong&gt; and store it securely (e.g., in a password manager).&lt;/p&gt;
@@ -2212,8 +2215,11 @@
 &lt;h3&gt;Create a new API key&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-a-new-api-key&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#create-a-new-api-key&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Go to &lt;a href=&#34;https://portal.privatecaptcha.com/settings?tab=apikeys&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;API key settings&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
-&lt;/svg&gt;&lt;/a&gt; and click &lt;em&gt;&amp;ldquo;Create new key&amp;rdquo;&lt;/em&gt;. Give it some meaningful name, like &lt;em&gt;&amp;ldquo;WordPress API key&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/integrations/new-api-key.png&#34; alt=&#34;Create a new API key&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;/svg&gt;&lt;/a&gt; and click &lt;em&gt;&amp;ldquo;Create new key&amp;rdquo;&lt;/em&gt;. Give it some meaningful name, like &lt;em&gt;&amp;ldquo;WordPress API key&amp;rdquo;&lt;/em&gt; and select the scope &lt;code&gt;Puzzle verification&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/integrations/new-api-key-scope.png&#34; title=&#34;Make sure to select scope &amp;#39;Puzzle verification&amp;#39;&#34; alt=&#34;Create a new API key&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Make sure to select scope &amp;#39;Puzzle verification&amp;#39;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Copy API key value to your password manager to temporarily save it (note the expiration time you selected when creating above).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/integrations/copy-api-key.png&#34; alt=&#34;Copy API key value&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3&gt;Install Private Captcha plugin in WordPress&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;install-private-captcha-plugin-in-wordpress&#34;&gt;&lt;/span&gt;
