@@ -77,6 +77,7 @@ Code | Error | Description
 `9` | `maintenance-mode` | Maintenance mode (see below)
 `10` | `property-test` | Test property is used for verification
 `11` | `integrity-error` | Puzzle or solution integrity is compromised
+`12` | `org-scope-error` | Property belongs to a different org than API key scope
 
 ### Errors during successful verification
 
