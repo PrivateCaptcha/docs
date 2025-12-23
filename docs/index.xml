@@ -5305,6 +5305,11 @@
           &lt;td&gt;&lt;code&gt;integrity-error&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;Puzzle or solution integrity is compromised&lt;/td&gt;
       &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;12&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;org-scope-error&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Property belongs to a different org than API key scope&lt;/td&gt;
+      &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3&gt;Errors during successful verification&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;errors-during-successful-verification&#34;&gt;&lt;/span&gt;
