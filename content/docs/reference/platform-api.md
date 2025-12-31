@@ -12,12 +12,12 @@ This reference documentation describes the Portal API for Private Captcha, which
 
 ## Authentication
 
-All endpoints in this section require an API key with the **portal** scope. This key must be sent in the `X-API-Key` header.
+All endpoints in this section require an API key with the _"Portal operations"_ scope. This key must be sent in the `X-API-Key` header.
 
 **Example Header:**
 
 ```http
-X-API-Key: your_portal_api_key_here
+X-API-Key: your-portal-api-key
 ```
 
 ## Response structure
@@ -114,7 +114,7 @@ Retrieves a list of all organizations owned by the authenticated user.
 
 ```bash
 curl -X GET https://api.privatecaptcha.com/orgs \
-  -H "X-API-Key: your_portal_api_key_here"
+  -H "X-API-Key: your-portal-api-key"
 
 ```
 
@@ -156,7 +156,7 @@ Creates a new organization for the user. Note that the `id` field in the input m
 
 ```bash
 curl -X POST https://api.privatecaptcha.com/org \
-  -H "X-API-Key: your_portal_api_key_here" \
+  -H "X-API-Key: your-portal-api-key" \
   -H "Content-Type: application/json" \
   -d '{"name": "New Marketing Org"}'
 
@@ -197,7 +197,7 @@ Updates an existing organization. Only the owner can perform this action.
 
 ```bash
 curl -X PUT https://api.privatecaptcha.com/org \
-  -H "X-API-Key: your_portal_api_key_here" \
+  -H "X-API-Key: your-portal-api-key" \
   -H "Content-Type: application/json" \
   -d '{"id": "vDWtASYqrB", "name": "Updated Name"}'
 
@@ -238,7 +238,7 @@ Deletes an existing organization. Only the owner can perform this action.
 
 ```bash
 curl -X DELETE https://api.privatecaptcha.com/org \
-  -H "X-API-Key: your_portal_api_key_here" \
+  -H "X-API-Key: your-portal-api-key" \
   -H "Content-Type: application/json" \
   -d '{"id": "vDWtASYqrB"}'
 
@@ -279,7 +279,7 @@ Lists properties associated with a specific organization. This endpoint supports
 
 ```bash
 curl -X GET "https://api.privatecaptcha.com/org/vDWtASYqrB/properties?page=1&per_page=10" \
-  -H "X-API-Key: your_portal_api_key_here"
+  -H "X-API-Key: your-portal-api-key"
 
 ```
 
@@ -324,7 +324,7 @@ Retrieves detailed settings for a specific property.
 
 ```bash
 curl -X GET https://api.privatecaptcha.com/org/vDWtASYqrB/property/0VgGggmbGa \
-  -H "X-API-Key: your_portal_api_key_here"
+  -H "X-API-Key: your-portal-api-key"
 
 ```
 
@@ -382,7 +382,7 @@ Triggers an asynchronous task to create a batch of properties (up to 128). It re
 
 ```bash
 curl -X POST https://api.privatecaptcha.com/org/vDWtASYqrB/properties \
-  -H "X-API-Key: your_portal_api_key_here" \
+  -H "X-API-Key: your-portal-api-key" \
   -H "Content-Type: application/json" \
   -d '[{"name": "Blog", "domain": "blog.example.com"}]'
 
@@ -418,7 +418,7 @@ Triggers an asynchronous task to update a batch of properties.
 
 ```bash
 curl -X PUT https://api.privatecaptcha.com/properties \
-  -H "X-API-Key: your_portal_api_key_here" \
+  -H "X-API-Key: your-portal-api-key" \
   -H "Content-Type: application/json" \
   -d '[{"id": "0VgGggmbGa", "level": 2}]'
 
@@ -454,7 +454,7 @@ Triggers an asynchronous task to delete a batch of properties.
 
 ```bash
 curl -X DELETE https://api.privatecaptcha.com/properties \
-  -H "X-API-Key: your_portal_api_key_here" \
+  -H "X-API-Key: your-portal-api-key" \
   -H "Content-Type: application/json" \
   -d '["0VgGggmbGa"]'
 
@@ -490,7 +490,7 @@ Retrieves the current status and results of an asynchronous task.
 
 ```bash
 curl -X GET https://api.privatecaptcha.com/asynctask/e3e6854e06944cf48f49f93abb5a527e \
-  -H "X-API-Key: your_portal_api_key_here"
+  -H "X-API-Key: your-portal-api-key"
 
 ```
 
