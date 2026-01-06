@@ -7,8 +7,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -16,16 +18,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Get LFTP and curl
-        run: sudo apt install lftp curl
-      - name: Configure LFTP
-        run: mkdir ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
-      - name: Load Secrets
-        run: echo "machine storage.bunnycdn.com login ${{ secrets.BUNNY_STORAGE }} password ${{ secrets.BUNNY_API_STORAGE }}" > ~/.netrc
-      - name: Upload Folder
-        run: lftp -e "mirror -vvv --exclude '^\..*$' --parallel=10 -R ./ ./" storage.bunnycdn.com
+        run: |
+          command -v curl >/dev/null 2>&1 || sudo apt install -y curl
+          command -v lftp >/dev/null 2>&1 || sudo apt install -y lftp
+
+      - name: Upload Folder to BunnyCDN
+        run: |
+          lftp -c "set ssl:verify-certificate false; \
+                   open -u ${{ secrets.BUNNY_STORAGE }},${{ secrets.BUNNY_API_STORAGE }} storage.bunnycdn.com; \
+                   mirror -vvv --exclude '^\..*$' --parallel=10 -R ./ ./"
 
       - name: Purge CDN cache
         run: |
