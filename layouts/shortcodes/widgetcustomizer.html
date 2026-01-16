@@ -60,6 +60,7 @@
         const sitekey = 'aaaaaaaabbbbccccddddeeeeeeeeeeee';
         const puzzleEndpoint = 'https://api.{{ .Site.Params.privateCaptchaDomain }}/puzzle';
         let currentWidget = null;
+        const pollIntervalMs = 250;
 
         const getOptionValue = (id) => {
             const element = document.getElementById(id);
@@ -86,11 +87,11 @@
             }
 
             if (getOptionChecked('pc-widget-debug')) {
-                options.debug = 'true';
+                options.debug = true;
             }
 
             if (getOptionChecked('pc-widget-eu')) {
-                options.eu = 'true';
+                options.eu = true;
             }
 
             return options;
@@ -134,7 +135,7 @@
                 return;
             }
 
-            setTimeout(waitForWidget, 250);
+            setTimeout(waitForWidget, pollIntervalMs);
         };
 
         const handleTriggerClick = () => {
