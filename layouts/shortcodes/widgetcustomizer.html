@@ -119,11 +119,10 @@
             const anchor = document.createElement('div');
             const widgetElement = document.createElement('div');
 
-            host.innerHTML = '';
             anchor.className = 'private-captcha-anchor';
             widgetElement.className = 'private-captcha';
             anchor.appendChild(widgetElement);
-            host.appendChild(anchor);
+            host.replaceChildren(anchor);
 
             currentWidget = window.privateCaptcha.render(widgetElement, options);
             toggleTrigger(options.displayMode);
@@ -135,7 +134,7 @@
                 return;
             }
 
-            setTimeout(waitForWidget, 100);
+            setTimeout(waitForWidget, 250);
         };
 
         const handleTriggerClick = () => {
