@@ -12,6 +12,12 @@ Here's the minimal captcha field declaration:
 
 Private Captcha widget is automatically initialized on all elements with `private-captcha` class name.
 
+## Widget customization preview
+
+Use the controls below to explore a few of the most common widget options and see the result immediately.
+
+{{< widgetcustomizer >}}
+
 ## Attributes
 
 Apart from the required `sitekey` data attribute, the following _optional_ attributes are supported:

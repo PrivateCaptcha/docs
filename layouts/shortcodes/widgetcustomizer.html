@@ -1,0 +1,165 @@
+<div id="pc-widget-customizer" class="not-prose hx:flex hx:flex-col hx:gap-6">
+    <div class="pc-form hx:flex hx:flex-col hx:items-center hx:gap-3">
+        <div id="pc-widget-customizer-preview" class="hx:flex hx:justify-center hx:w-full"></div>
+        <button
+            type="button"
+            id="pc-widget-customizer-trigger"
+            class="not-prose hx:font-medium hx:cursor-pointer hx:px-4 hx:py-2 hx:rounded-full hx:text-center hx:text-white hx:inline-block hx:bg-primary-600 hx:hover:bg-primary-700 hx:focus:outline-none hx:focus:ring-4 hx:focus:ring-primary-300 hx:dark:bg-primary-600 hx:dark:hover:bg-primary-700 hx:dark:focus:ring-primary-800 hx:transition-all hx:ease-in hx:duration-200 hidden"
+        >
+            Start captcha
+        </button>
+    </div>
+    <div class="hx:grid hx:gap-4 hx:md:grid-cols-2">
+        <label class="hx:flex hx:flex-col hx:gap-1">
+            <span class="hx:text-sm hx:font-medium">Theme</span>
+            <select id="pc-widget-theme" data-widget-option class="hx:w-full">
+                <option value="light" selected>Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </label>
+        <label class="hx:flex hx:flex-col hx:gap-1">
+            <span class="hx:text-sm hx:font-medium">Display mode</span>
+            <select id="pc-widget-display-mode" data-widget-option class="hx:w-full">
+                <option value="widget" selected>Widget</option>
+                <option value="popup">Popup</option>
+                <option value="hidden">Hidden</option>
+            </select>
+        </label>
+        <label class="hx:flex hx:flex-col hx:gap-1">
+            <span class="hx:text-sm hx:font-medium">Start mode</span>
+            <select id="pc-widget-start-mode" data-widget-option class="hx:w-full">
+                <option value="auto" selected>Auto</option>
+                <option value="click">Click</option>
+            </select>
+        </label>
+        <label class="hx:flex hx:flex-col hx:gap-1">
+            <span class="hx:text-sm hx:font-medium">Language</span>
+            <select id="pc-widget-lang" data-widget-option class="hx:w-full">
+                <option value="auto" selected>Auto</option>
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+        </label>
+        <label class="hx:flex hx:items-center hx:gap-2 hx:text-sm hx:font-medium">
+            <input id="pc-widget-debug" data-widget-option type="checkbox">
+            Debug mode
+        </label>
+        <label class="hx:flex hx:items-center hx:gap-2 hx:text-sm hx:font-medium">
+            <input id="pc-widget-eu" data-widget-option type="checkbox">
+            EU isolation
+        </label>
+    </div>
+</div>
+<script>
+    (() => {
+        const widgetPreviewId = 'pc-widget-customizer-preview';
+        const customizerId = 'pc-widget-customizer';
+        const triggerId = 'pc-widget-customizer-trigger';
+        const sitekey = 'aaaaaaaabbbbccccddddeeeeeeeeeeee';
+        const puzzleEndpoint = 'https://api.{{ .Site.Params.privateCaptchaDomain }}/puzzle';
+        let currentWidget = null;
+
+        const getOptionValue = (id) => {
+            const element = document.getElementById(id);
+            return element ? element.value : '';
+        };
+
+        const getOptionChecked = (id) => {
+            const element = document.getElementById(id);
+            return element ? element.checked : false;
+        };
+
+        const buildOptions = () => {
+            const options = {
+                sitekey,
+                puzzleEndpoint,
+                theme: getOptionValue('pc-widget-theme'),
+                displayMode: getOptionValue('pc-widget-display-mode'),
+                startMode: getOptionValue('pc-widget-start-mode')
+            };
+
+            const lang = getOptionValue('pc-widget-lang');
+            if (lang && lang !== 'auto') {
+                options.lang = lang;
+            }
+
+            if (getOptionChecked('pc-widget-debug')) {
+                options.debug = 'true';
+            }
+
+            if (getOptionChecked('pc-widget-eu')) {
+                options.eu = 'true';
+            }
+
+            return options;
+        };
+
+        const toggleTrigger = (displayMode) => {
+            const trigger = document.getElementById(triggerId);
+            if (!trigger) {
+                return;
+            }
+
+            if (displayMode === 'popup' || displayMode === 'hidden') {
+                trigger.classList.remove('hidden');
+            } else {
+                trigger.classList.add('hidden');
+            }
+        };
+
+        const renderWidget = () => {
+            const host = document.getElementById(widgetPreviewId);
+            if (!host || !window.privateCaptcha || typeof window.privateCaptcha.render !== 'function') {
+                return;
+            }
+
+            const options = buildOptions();
+            const anchor = document.createElement('div');
+            const widgetElement = document.createElement('div');
+
+            host.innerHTML = '';
+            anchor.className = 'private-captcha-anchor';
+            widgetElement.className = 'private-captcha';
+            anchor.appendChild(widgetElement);
+            host.appendChild(anchor);
+
+            currentWidget = window.privateCaptcha.render(widgetElement, options);
+            toggleTrigger(options.displayMode);
+        };
+
+        const waitForWidget = () => {
+            if (window.privateCaptcha && typeof window.privateCaptcha.render === 'function') {
+                renderWidget();
+                return;
+            }
+
+            setTimeout(waitForWidget, 100);
+        };
+
+        const handleTriggerClick = () => {
+            if (currentWidget && typeof currentWidget.execute === 'function') {
+                currentWidget.execute();
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const root = document.getElementById(customizerId);
+            if (!root) {
+                return;
+            }
+
+            root.querySelectorAll('[data-widget-option]').forEach((input) => {
+                input.addEventListener('change', renderWidget);
+            });
+
+            const trigger = document.getElementById(triggerId);
+            if (trigger) {
+                trigger.addEventListener('click', handleTriggerClick);
+            }
+
+            waitForWidget();
+        });
+    })();
+</script>
