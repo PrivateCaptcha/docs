@@ -61,6 +61,8 @@
         const puzzleEndpoint = 'https://api.{{ .Site.Params.privateCaptchaDomain }}/puzzle';
         let currentWidget = null;
         const pollIntervalMs = 250;
+        const maxPollAttempts = 40;
+        let pollAttempts = 0;
 
         const getOptionValue = (id) => {
             const element = document.getElementById(id);
@@ -132,6 +134,11 @@
         const waitForWidget = () => {
             if (window.privateCaptcha && typeof window.privateCaptcha.render === 'function') {
                 renderWidget();
+                return;
+            }
+
+            pollAttempts += 1;
+            if (pollAttempts >= maxPollAttempts) {
                 return;
             }
 
