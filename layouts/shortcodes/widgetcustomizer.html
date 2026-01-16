@@ -125,10 +125,14 @@
             anchor.className = 'private-captcha-anchor';
             widgetElement.className = 'private-captcha';
             anchor.appendChild(widgetElement);
-            host.replaceChildren(anchor);
+            while (host.firstChild) {
+                host.removeChild(host.firstChild);
+            }
+            host.appendChild(anchor);
 
             currentWidget = window.privateCaptcha.render(widgetElement, options);
             toggleTrigger(options.displayMode);
+            pollAttempts = 0;
         };
 
         const waitForWidget = () => {
