@@ -1,0 +1,337 @@
+{{- /* Widget Preview Tool - Interactive widget customization with live preview and code generation */ -}}
+
+<div id="widget-preview-tool" class="hx:mt-6">
+  <!-- Preview Tabs (Widget/Source Code) -->
+  <div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+    <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800">
+      <button
+        id="preview-tab-widget"
+        class="preview-tab hx:cursor-pointer hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-primary-500 hx:text-primary-600 hx:dark:border-primary-500 hx:dark:text-primary-600"
+        type="button"
+        onclick="showPreviewTab('widget')"
+      >
+        Widget Preview
+      </button>
+      <button
+        id="preview-tab-code"
+        class="preview-tab hx:cursor-pointer hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        type="button"
+        onclick="showPreviewTab('code')"
+      >
+        Source Code
+      </button>
+    </div>
+  </div>
+
+  <!-- Widget Preview Panel -->
+  <div id="preview-panel-widget" class="preview-panel hx:rounded-sm hx:pt-6">
+    <div id="captcha-preview-container" class="hx:p-4 hx:border hx:border-gray-200 hx:dark:border-neutral-700 hx:rounded-lg hx:bg-gray-50 hx:dark:bg-neutral-800/50">
+      <div id="captcha-preview-element"></div>
+    </div>
+  </div>
+
+  <!-- Source Code Panel -->
+  <div id="preview-panel-code" class="preview-panel hx:rounded-sm hx:pt-6 hx:hidden">
+    <div class="hx:relative">
+      <pre class="hx:overflow-x-auto hx:p-4 hx:border hx:border-gray-200 hx:dark:border-neutral-700 hx:rounded-lg hx:bg-gray-50 hx:dark:bg-neutral-800/50"><code id="generated-code" class="hx:text-sm hx:whitespace-pre-wrap"></code></pre>
+      <button
+        id="copy-code-btn"
+        onclick="copyGeneratedCode()"
+        class="hx:absolute hx:top-2 hx:right-2 hx:px-3 hx:py-1.5 hx:text-sm hx:font-medium hx:rounded-md hx:bg-primary-600 hx:text-white hx:hover:bg-primary-700 hx:transition-colors hx:cursor-pointer"
+      >
+        Copy Code
+      </button>
+    </div>
+  </div>
+
+  <!-- Options Section -->
+  <div class="hx:mt-8 hx:mb-4">
+    <h3 class="hx:text-lg hx:font-semibold hx:mb-4">Widget Options</h3>
+    
+    <div class="hx:space-y-4">
+      <!-- Theme -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-theme" class="hx:w-40 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">Theme</label>
+        <select
+          id="opt-theme"
+          onchange="updateWidget()"
+          class="hx:flex-1 hx:max-w-xs hx:rounded-md hx:border-gray-300 hx:dark:border-neutral-600 hx:bg-white hx:dark:bg-neutral-800 hx:text-sm hx:px-3 hx:py-2"
+        >
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+
+      <!-- Language -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-lang" class="hx:w-40 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">Language</label>
+        <select
+          id="opt-lang"
+          onchange="updateWidget()"
+          class="hx:flex-1 hx:max-w-xs hx:rounded-md hx:border-gray-300 hx:dark:border-neutral-600 hx:bg-white hx:dark:bg-neutral-800 hx:text-sm hx:px-3 hx:py-2"
+        >
+          <option value="auto">Auto</option>
+          <option value="en">English (en)</option>
+          <option value="de">Deutsch (de)</option>
+          <option value="es">Español (es)</option>
+          <option value="fr">Français (fr)</option>
+          <option value="it">Italiano (it)</option>
+          <option value="nl">Nederlands (nl)</option>
+          <option value="sv">Svenska (sv)</option>
+          <option value="no">Norsk (no)</option>
+          <option value="pl">Polski (pl)</option>
+          <option value="fi">Suomi (fi)</option>
+          <option value="et">Eesti (et)</option>
+        </select>
+      </div>
+
+      <!-- Display Mode -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-display-mode" class="hx:w-40 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">Display Mode</label>
+        <select
+          id="opt-display-mode"
+          onchange="updateWidget()"
+          class="hx:flex-1 hx:max-w-xs hx:rounded-md hx:border-gray-300 hx:dark:border-neutral-600 hx:bg-white hx:dark:bg-neutral-800 hx:text-sm hx:px-3 hx:py-2"
+        >
+          <option value="widget">Widget (default)</option>
+          <option value="popup">Popup</option>
+          <option value="hidden">Hidden (invisible)</option>
+        </select>
+      </div>
+
+      <!-- Start Mode -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-start-mode" class="hx:w-40 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">Start Mode</label>
+        <select
+          id="opt-start-mode"
+          onchange="updateWidget()"
+          class="hx:flex-1 hx:max-w-xs hx:rounded-md hx:border-gray-300 hx:dark:border-neutral-600 hx:bg-white hx:dark:bg-neutral-800 hx:text-sm hx:px-3 hx:py-2"
+        >
+          <option value="auto">Auto (default)</option>
+          <option value="click">Click</option>
+        </select>
+      </div>
+
+      <!-- EU Isolation -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-eu" class="hx:w-40 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">EU Isolation</label>
+        <input
+          type="checkbox"
+          id="opt-eu"
+          onchange="updateWidget()"
+          class="hx:rounded hx:border-gray-300 hx:dark:border-neutral-600 hx:text-primary-600 hx:focus:ring-primary-500"
+        />
+        <span class="hx:text-sm hx:text-gray-500 hx:dark:text-gray-400">Use only EU endpoints</span>
+      </div>
+
+      <!-- Debug Mode -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-debug" class="hx:w-40 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">Debug Mode</label>
+        <input
+          type="checkbox"
+          id="opt-debug"
+          onchange="updateWidget()"
+          class="hx:rounded hx:border-gray-300 hx:dark:border-neutral-600 hx:text-primary-600 hx:focus:ring-primary-500"
+        />
+        <span class="hx:text-sm hx:text-gray-500 hx:dark:text-gray-400">Show debug logs</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copy Code Button -->
+  <div class="hx:mt-6 hx:flex hx:gap-3">
+    <button
+      onclick="showPreviewTab('code')"
+      class="hx:px-4 hx:py-2 hx:text-sm hx:font-medium hx:rounded-md hx:bg-gray-100 hx:dark:bg-neutral-700 hx:text-gray-700 hx:dark:text-gray-200 hx:hover:bg-gray-200 hx:dark:hover:bg-neutral-600 hx:transition-colors hx:cursor-pointer"
+    >
+      View Code
+    </button>
+    <button
+      onclick="copyGeneratedCode()"
+      class="hx:px-4 hx:py-2 hx:text-sm hx:font-medium hx:rounded-md hx:bg-primary-600 hx:text-white hx:hover:bg-primary-700 hx:transition-colors hx:cursor-pointer"
+    >
+      Copy Code to Clipboard
+    </button>
+  </div>
+</div>
+
+<script>
+(function() {
+  const TEST_SITEKEY = 'aaaaaaaabbbbccccddddeeeeeeeeeeee';
+  const PUZZLE_ENDPOINT = 'https://api.{{ .Site.Params.privateCaptchaDomain }}/puzzle';
+  let currentWidget = null;
+
+  function getWidgetOptions() {
+    return {
+      theme: document.getElementById('opt-theme').value,
+      lang: document.getElementById('opt-lang').value,
+      displayMode: document.getElementById('opt-display-mode').value,
+      startMode: document.getElementById('opt-start-mode').value,
+      eu: document.getElementById('opt-eu').checked,
+      debug: document.getElementById('opt-debug').checked
+    };
+  }
+
+  function renderWidget() {
+    const container = document.getElementById('captcha-preview-element');
+    const opts = getWidgetOptions();
+    
+    // Clear the container
+    container.innerHTML = '';
+    
+    // Create wrapper for popup anchor if needed
+    if (opts.displayMode === 'popup') {
+      container.classList.add('private-captcha-anchor');
+    } else {
+      container.classList.remove('private-captcha-anchor');
+    }
+    
+    // Create new widget element
+    const widgetEl = document.createElement('div');
+    widgetEl.id = 'preview-widget';
+    container.appendChild(widgetEl);
+
+    // Build render options
+    const renderOpts = {
+      sitekey: TEST_SITEKEY,
+      puzzleEndpoint: PUZZLE_ENDPOINT,
+      theme: opts.theme,
+      displayMode: opts.displayMode,
+      startMode: opts.startMode
+    };
+
+    if (opts.lang !== 'auto') {
+      renderOpts.lang = opts.lang;
+    }
+
+    if (opts.eu) {
+      renderOpts.eu = true;
+    }
+
+    if (opts.debug) {
+      renderOpts.debug = true;
+    }
+
+    // Check if privateCaptcha is available and render
+    if (window.privateCaptcha && typeof window.privateCaptcha.render === 'function') {
+      try {
+        currentWidget = window.privateCaptcha.render(widgetEl, renderOpts);
+      } catch (e) {
+        console.error('Error rendering widget:', e);
+        container.innerHTML = '<p class="hx:text-red-500">Error rendering widget. Please refresh the page.</p>';
+      }
+    } else {
+      container.innerHTML = '<p class="hx:text-yellow-600 hx:dark:text-yellow-400">Loading widget script...</p>';
+      // Retry after a short delay
+      setTimeout(renderWidget, 500);
+    }
+  }
+
+  function generateCode() {
+    const opts = getWidgetOptions();
+    
+    let dataAttrs = `data-sitekey="YOUR_SITEKEY"`;
+    
+    if (opts.theme !== 'light') {
+      dataAttrs += `\n         data-theme="${opts.theme}"`;
+    }
+    
+    if (opts.lang !== 'auto') {
+      dataAttrs += `\n         data-lang="${opts.lang}"`;
+    }
+    
+    if (opts.displayMode !== 'widget') {
+      dataAttrs += `\n         data-display-mode="${opts.displayMode}"`;
+    }
+    
+    if (opts.startMode !== 'auto') {
+      dataAttrs += `\n         data-start-mode="${opts.startMode}"`;
+    }
+    
+    if (opts.eu) {
+      dataAttrs += `\n         data-eu="true"`;
+    }
+    
+    if (opts.debug) {
+      dataAttrs += `\n         data-debug="true"`;
+    }
+
+    let code = `<!-- Include the Private Captcha script in your <head> -->
+<script defer src="https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js"><\/script>
+
+<!-- Add the widget to your form -->
+<form>
+    <div class="private-captcha"
+         ${dataAttrs}>
+    </div>
+    <button type="submit">Submit</button>
+</form>`;
+
+    return code;
+  }
+
+  function updateGeneratedCode() {
+    const codeEl = document.getElementById('generated-code');
+    if (codeEl) {
+      codeEl.textContent = generateCode();
+    }
+  }
+
+  window.updateWidget = function() {
+    renderWidget();
+    updateGeneratedCode();
+  };
+
+  window.showPreviewTab = function(tab) {
+    const widgetTab = document.getElementById('preview-tab-widget');
+    const codeTab = document.getElementById('preview-tab-code');
+    const widgetPanel = document.getElementById('preview-panel-widget');
+    const codePanel = document.getElementById('preview-panel-code');
+
+    const activeClasses = 'hx:border-primary-500 hx:text-primary-600 hx:dark:border-primary-500 hx:dark:text-primary-600';
+    const inactiveClasses = 'hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white';
+
+    if (tab === 'widget') {
+      widgetTab.className = widgetTab.className.replace(inactiveClasses, activeClasses);
+      codeTab.className = codeTab.className.replace(activeClasses, inactiveClasses);
+      widgetPanel.classList.remove('hx:hidden');
+      codePanel.classList.add('hx:hidden');
+    } else {
+      widgetTab.className = widgetTab.className.replace(activeClasses, inactiveClasses);
+      codeTab.className = codeTab.className.replace(inactiveClasses, activeClasses);
+      widgetPanel.classList.add('hx:hidden');
+      codePanel.classList.remove('hx:hidden');
+      updateGeneratedCode();
+    }
+  };
+
+  window.copyGeneratedCode = function() {
+    const code = generateCode();
+    navigator.clipboard.writeText(code).then(function() {
+      const btn = document.getElementById('copy-code-btn');
+      const originalText = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(function() {
+        btn.textContent = originalText;
+      }, 2000);
+    }).catch(function(err) {
+      console.error('Failed to copy:', err);
+      alert('Failed to copy code. Please select and copy manually.');
+    });
+  };
+
+  // Initialize on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      renderWidget();
+      updateGeneratedCode();
+    });
+  } else {
+    // DOM is already ready
+    setTimeout(function() {
+      renderWidget();
+      updateGeneratedCode();
+    }, 100);
+  }
+})();
+</script>
