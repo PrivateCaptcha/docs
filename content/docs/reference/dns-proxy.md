@@ -1,7 +1,6 @@
 ---
 title: "DNS Proxy"
 date: 2026-01-19T16:42:03+02:00
-draft: true
 ---
 
 It is possible to make captcha widget to fetch puzzles and, later, verify solutions against your domain or subdomain instead of `api.privatecaptcha.com` by using a "CNAME proxy".
