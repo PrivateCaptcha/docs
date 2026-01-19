@@ -50,6 +50,7 @@
         const sitekey = 'aaaaaaaabbbbccccddddeeeeeeeeeeee';
         const puzzleEndpoint = 'https://api.{{ .Site.Params.privateCaptchaDomain }}/puzzle';
         const scriptUrl = 'https://cdn.{{ .Site.Params.privateCaptchaDomain }}/widget/js/privatecaptcha.js?render=explicit';
+        const snippetElementId = 'pc-widget';
         const triggerModes = new Set(['popup', 'hidden']);
         const pollIntervalMs = 250;
         const maxPollAttempts = 40;
@@ -101,7 +102,7 @@
                 `    startMode: '${options.startMode}',`
             ];
 
-            if (options.lang) {
+            if (options.lang && options.lang !== 'auto') {
                 optionLines.push(`    lang: '${options.lang}',`);
             }
 
@@ -115,9 +116,9 @@
 
             return [
                 `<script defer src="${scriptUrl}"><\\/script>`,
-                '<div id="pc-widget"></div>',
+                `<div id="${snippetElementId}"></div>`,
                 '<script>',
-                '  const widget = privateCaptcha.render(document.getElementById(\'pc-widget\'), {',
+                `  const widget = privateCaptcha.render(document.getElementById('${snippetElementId}'), {`,
                 ...optionLines,
                 '  });',
                 '<\\/script>'
@@ -154,6 +155,7 @@
 
             host.innerHTML = '';
             const widgetElement = document.createElement('div');
+            widgetElement.id = snippetElementId;
             host.appendChild(widgetElement);
             currentWidget = window.privateCaptcha.render(widgetElement, options);
             toggleTrigger(options.displayMode);
