@@ -27,6 +27,11 @@ function invisibleFinished(widget) {
 }
 </script>
 {{- end -}}
+{{- if .Params.widget_preview -}}
+<script>window.PRIVATE_CAPTCHA_PUZZLE_ENDPOINT = 'https://api.{{ .Site.Params.privateCaptchaDomain }}/puzzle';</script>
+<script defer src="https://cdn.{{ .Site.Params.privateCaptchaDomain }}/widget/js/privatecaptcha.js?render=explicit"></script>
+<script defer src="/js/widget-preview.js"></script>
+{{- end -}}
 {{- if .Params.medium_zoom_selector -}}
 <script defer src="/js/medium-zoom.min.js"></script>
 <script>
