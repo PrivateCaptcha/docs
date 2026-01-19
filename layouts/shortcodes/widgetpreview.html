@@ -288,17 +288,27 @@
     const widgetPanel = document.getElementById('preview-panel-widget');
     const codePanel = document.getElementById('preview-panel-code');
 
-    const activeClasses = 'hx:border-primary-500 hx:text-primary-600 hx:dark:border-primary-500 hx:dark:text-primary-600';
-    const inactiveClasses = 'hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white';
+    const activeClasses = ['hx:border-primary-500', 'hx:text-primary-600', 'hx:dark:border-primary-500', 'hx:dark:text-primary-600'];
+    const inactiveClasses = ['hx:border-transparent', 'hx:text-gray-600', 'hx:hover:border-gray-200', 'hx:hover:text-black', 'hx:dark:text-gray-200', 'hx:dark:hover:border-neutral-800', 'hx:dark:hover:text-white'];
+
+    function setTabActive(tabEl, isActive) {
+      if (isActive) {
+        inactiveClasses.forEach(function(cls) { tabEl.classList.remove(cls); });
+        activeClasses.forEach(function(cls) { tabEl.classList.add(cls); });
+      } else {
+        activeClasses.forEach(function(cls) { tabEl.classList.remove(cls); });
+        inactiveClasses.forEach(function(cls) { tabEl.classList.add(cls); });
+      }
+    }
 
     if (tab === 'widget') {
-      widgetTab.className = widgetTab.className.replace(inactiveClasses, activeClasses);
-      codeTab.className = codeTab.className.replace(activeClasses, inactiveClasses);
+      setTabActive(widgetTab, true);
+      setTabActive(codeTab, false);
       widgetPanel.classList.remove('hx:hidden');
       codePanel.classList.add('hx:hidden');
     } else {
-      widgetTab.className = widgetTab.className.replace(activeClasses, inactiveClasses);
-      codeTab.className = codeTab.className.replace(inactiveClasses, activeClasses);
+      setTabActive(widgetTab, false);
+      setTabActive(codeTab, true);
       widgetPanel.classList.add('hx:hidden');
       codePanel.classList.remove('hx:hidden');
       updateGeneratedCode();
@@ -307,18 +317,54 @@
 
   window.copyGeneratedCode = function() {
     const code = generateCode();
-    navigator.clipboard.writeText(code).then(function() {
-      const btn = document.getElementById('copy-code-btn');
-      const originalText = btn.textContent;
-      btn.textContent = 'Copied!';
-      setTimeout(function() {
-        btn.textContent = originalText;
-      }, 2000);
-    }).catch(function(err) {
-      console.error('Failed to copy:', err);
-      alert('Failed to copy code. Please select and copy manually.');
-    });
+    
+    // Feature detection for clipboard API
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      navigator.clipboard.writeText(code).then(function() {
+        showCopySuccess();
+      }).catch(function(err) {
+        console.error('Clipboard API failed:', err);
+        fallbackCopy(code);
+      });
+    } else {
+      fallbackCopy(code);
+    }
   };
+
+  function showCopySuccess() {
+    const btn = document.getElementById('copy-code-btn');
+    const originalText = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(function() {
+      btn.textContent = originalText;
+    }, 2000);
+  }
+
+  function fallbackCopy(text) {
+    // Fallback using textarea and execCommand
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    textarea.style.top = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    
+    try {
+      var successful = document.execCommand('copy');
+      if (successful) {
+        showCopySuccess();
+      } else {
+        alert('Failed to copy code. Please select and copy manually.');
+      }
+    } catch (err) {
+      console.error('Fallback copy failed:', err);
+      alert('Failed to copy code. Please select and copy manually.');
+    }
+    
+    document.body.removeChild(textarea);
+  }
 
   // Initialize on DOM ready
   if (document.readyState === 'loading') {
