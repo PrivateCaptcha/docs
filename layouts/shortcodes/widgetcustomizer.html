@@ -1,68 +1,61 @@
-<div id="pc-widget-customizer" class="not-prose hx:flex hx:flex-col hx:gap-6">
-    <div class="pc-form hx:flex hx:flex-col hx:items-center hx:gap-3">
-        <div id="pc-widget-customizer-preview" class="hx:flex hx:justify-center hx:w-full"></div>
-        <button
-            type="button"
-            id="pc-widget-customizer-trigger"
-            class="not-prose hx:font-medium hx:cursor-pointer hx:px-4 hx:py-2 hx:rounded-full hx:text-center hx:text-white hx:inline-block hx:bg-primary-600 hx:hover:bg-primary-700 hx:focus:outline-none hx:focus:ring-4 hx:focus:ring-primary-300 hx:dark:bg-primary-600 hx:dark:hover:bg-primary-700 hx:dark:focus:ring-primary-800 hx:transition-all hx:ease-in hx:duration-200 hidden"
-        >
-            Start captcha
-        </button>
+<div id="pc-widget-customizer" class="not-prose hx:flex hx:flex-col hx:gap-4 hx:mt-6">
+    <div class="hx:flex hx:flex-col hx:gap-1 hx:md:flex-row hx:md:items-center hx:md:justify-between">
+        <label class="hx:text-sm hx:font-medium" for="pc-widget-theme">Theme</label>
+        <select id="pc-widget-theme" data-widget-option class="hx:w-full hx:md:w-64">
+            <option value="light" selected>Light</option>
+            <option value="dark">Dark</option>
+        </select>
     </div>
-    <div class="hx:grid hx:gap-4 hx:md:grid-cols-2">
-        <label class="hx:flex hx:flex-col hx:gap-1">
-            <span class="hx:text-sm hx:font-medium">Theme</span>
-            <select id="pc-widget-theme" data-widget-option class="hx:w-full">
-                <option value="light" selected>Light</option>
-                <option value="dark">Dark</option>
-            </select>
-        </label>
-        <label class="hx:flex hx:flex-col hx:gap-1">
-            <span class="hx:text-sm hx:font-medium">Display mode</span>
-            <select id="pc-widget-display-mode" data-widget-option class="hx:w-full">
-                <option value="widget" selected>Widget</option>
-                <option value="popup">Popup</option>
-                <option value="hidden">Hidden</option>
-            </select>
-        </label>
-        <label class="hx:flex hx:flex-col hx:gap-1">
-            <span class="hx:text-sm hx:font-medium">Start mode</span>
-            <select id="pc-widget-start-mode" data-widget-option class="hx:w-full">
-                <option value="auto" selected>Auto</option>
-                <option value="click">Click</option>
-            </select>
-        </label>
-        <label class="hx:flex hx:flex-col hx:gap-1">
-            <span class="hx:text-sm hx:font-medium">Language</span>
-            <select id="pc-widget-lang" data-widget-option class="hx:w-full">
-                <option value="auto" selected>Auto</option>
-                <option value="en">English</option>
-                <option value="de">Deutsch</option>
-                <option value="es">Español</option>
-                <option value="fr">Français</option>
-            </select>
-        </label>
-        <label class="hx:flex hx:items-center hx:gap-2 hx:text-sm hx:font-medium">
-            <input id="pc-widget-debug" data-widget-option type="checkbox">
-            Debug mode
-        </label>
-        <label class="hx:flex hx:items-center hx:gap-2 hx:text-sm hx:font-medium">
-            <input id="pc-widget-eu" data-widget-option type="checkbox">
-            EU isolation
-        </label>
+    <div class="hx:flex hx:flex-col hx:gap-1 hx:md:flex-row hx:md:items-center hx:md:justify-between">
+        <label class="hx:text-sm hx:font-medium" for="pc-widget-display-mode">Display mode</label>
+        <select id="pc-widget-display-mode" data-widget-option class="hx:w-full hx:md:w-64">
+            <option value="widget" selected>Widget</option>
+            <option value="popup">Popup</option>
+            <option value="hidden">Hidden</option>
+        </select>
+    </div>
+    <div class="hx:flex hx:flex-col hx:gap-1 hx:md:flex-row hx:md:items-center hx:md:justify-between">
+        <label class="hx:text-sm hx:font-medium" for="pc-widget-start-mode">Start mode</label>
+        <select id="pc-widget-start-mode" data-widget-option class="hx:w-full hx:md:w-64">
+            <option value="auto" selected>Auto</option>
+            <option value="click">Click</option>
+        </select>
+    </div>
+    <div class="hx:flex hx:flex-col hx:gap-1 hx:md:flex-row hx:md:items-center hx:md:justify-between">
+        <label class="hx:text-sm hx:font-medium" for="pc-widget-lang">Language</label>
+        <select id="pc-widget-lang" data-widget-option class="hx:w-full hx:md:w-64">
+            <option value="auto" selected>Auto</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
+    <div class="hx:flex hx:flex-col hx:gap-1 hx:md:flex-row hx:md:items-center hx:md:justify-between">
+        <label class="hx:text-sm hx:font-medium" for="pc-widget-debug">Debug mode</label>
+        <input id="pc-widget-debug" data-widget-option type="checkbox" class="hx:md:w-64">
+    </div>
+    <div class="hx:flex hx:flex-col hx:gap-1 hx:md:flex-row hx:md:items-center hx:md:justify-between">
+        <label class="hx:text-sm hx:font-medium" for="pc-widget-eu">EU isolation</label>
+        <input id="pc-widget-eu" data-widget-option type="checkbox" class="hx:md:w-64">
     </div>
 </div>
 <script>
     (() => {
-        const widgetPreviewId = 'pc-widget-customizer-preview';
         const customizerId = 'pc-widget-customizer';
-        const triggerId = 'pc-widget-customizer-trigger';
+        const widgetPreviewId = 'pc-widget-preview';
+        const codeElementId = 'pc-widget-code';
+        const copyButtonId = 'pc-widget-copy';
+        const triggerButtonId = 'pc-widget-trigger';
         const sitekey = 'aaaaaaaabbbbccccddddeeeeeeeeeeee';
         const puzzleEndpoint = 'https://api.{{ .Site.Params.privateCaptchaDomain }}/puzzle';
-        let currentWidget = null;
+        const scriptUrl = 'https://cdn.{{ .Site.Params.privateCaptchaDomain }}/widget/js/privatecaptcha.js?render=explicit';
+        const triggerModes = new Set(['popup', 'hidden']);
         const pollIntervalMs = 250;
         const maxPollAttempts = 40;
         let pollAttempts = 0;
+        let currentWidget = null;
+        let latestOptions = null;
 
         const getOptionValue = (id) => {
             const element = document.getElementById(id);
@@ -99,45 +92,87 @@
             return options;
         };
 
+        const buildSnippet = (options) => {
+            const optionLines = [
+                `    sitekey: '${sitekey}',`,
+                `    puzzleEndpoint: '${puzzleEndpoint}',`,
+                `    theme: '${options.theme}',`,
+                `    displayMode: '${options.displayMode}',`,
+                `    startMode: '${options.startMode}',`
+            ];
+
+            if (options.lang) {
+                optionLines.push(`    lang: '${options.lang}',`);
+            }
+
+            if (options.debug) {
+                optionLines.push('    debug: true,');
+            }
+
+            if (options.eu) {
+                optionLines.push('    eu: true,');
+            }
+
+            return [
+                `<script defer src="${scriptUrl}"><\\/script>`,
+                '<div id="pc-widget"></div>',
+                '<script>',
+                '  const widget = privateCaptcha.render(document.getElementById(\'pc-widget\'), {',
+                ...optionLines,
+                '  });',
+                '<\\/script>'
+            ].join('\n');
+        };
+
         const toggleTrigger = (displayMode) => {
-            const trigger = document.getElementById(triggerId);
+            const trigger = document.getElementById(triggerButtonId);
             if (!trigger) {
                 return;
             }
 
-            if (displayMode === 'popup' || displayMode === 'hidden') {
+            if (triggerModes.has(displayMode)) {
                 trigger.classList.remove('hidden');
             } else {
                 trigger.classList.add('hidden');
             }
         };
 
-        const renderWidget = () => {
+        const updateCodeSnippet = (options) => {
+            const codeElement = document.getElementById(codeElementId);
+            if (!codeElement) {
+                return;
+            }
+
+            codeElement.textContent = buildSnippet(options);
+        };
+
+        const renderWidget = (options) => {
             const host = document.getElementById(widgetPreviewId);
             if (!host || !window.privateCaptcha || typeof window.privateCaptcha.render !== 'function') {
                 return;
             }
 
-            const options = buildOptions();
-            const anchor = document.createElement('div');
+            host.innerHTML = '';
             const widgetElement = document.createElement('div');
-
-            anchor.className = 'private-captcha-anchor';
-            widgetElement.className = 'private-captcha';
-            anchor.appendChild(widgetElement);
-            while (host.firstChild) {
-                host.removeChild(host.firstChild);
-            }
-            host.appendChild(anchor);
-
+            host.appendChild(widgetElement);
             currentWidget = window.privateCaptcha.render(widgetElement, options);
             toggleTrigger(options.displayMode);
-            pollAttempts = 0;
+        };
+
+        const updatePreview = () => {
+            latestOptions = buildOptions();
+            updateCodeSnippet(latestOptions);
+            renderWidget(latestOptions);
         };
 
         const waitForWidget = () => {
             if (window.privateCaptcha && typeof window.privateCaptcha.render === 'function') {
-                renderWidget();
+                pollAttempts = 0;
+                if (!latestOptions) {
+                    latestOptions = buildOptions();
+                    updateCodeSnippet(latestOptions);
+                }
+                renderWidget(latestOptions);
                 return;
             }
 
@@ -147,6 +182,22 @@
             }
 
             setTimeout(waitForWidget, pollIntervalMs);
+        };
+
+        const handleCopy = () => {
+            const codeElement = document.getElementById(codeElementId);
+            const copyButton = document.getElementById(copyButtonId);
+            if (!codeElement || !copyButton || !navigator.clipboard) {
+                return;
+            }
+
+            const originalText = copyButton.textContent;
+            navigator.clipboard.writeText(codeElement.textContent || '').then(() => {
+                copyButton.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyButton.textContent = originalText;
+                }, 1500);
+            });
         };
 
         const handleTriggerClick = () => {
@@ -162,14 +213,20 @@
             }
 
             root.querySelectorAll('[data-widget-option]').forEach((input) => {
-                input.addEventListener('change', renderWidget);
+                input.addEventListener('change', updatePreview);
             });
 
-            const trigger = document.getElementById(triggerId);
+            const copyButton = document.getElementById(copyButtonId);
+            if (copyButton) {
+                copyButton.addEventListener('click', handleCopy);
+            }
+
+            const trigger = document.getElementById(triggerButtonId);
             if (trigger) {
                 trigger.addEventListener('click', handleTriggerClick);
             }
 
+            updatePreview();
             waitForWidget();
         });
     })();

@@ -1,6 +1,11 @@
 <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script>
 {{- if .Params.captcha_scripts -}}
-<script async defer src="https://cdn.{{ .Site.Params.privateCaptchaDomain }}/widget/js/privatecaptcha.js"></script>
+{{- $captchaScript := printf "https://cdn.%s/widget/js/privatecaptcha.js" .Site.Params.privateCaptchaDomain -}}
+{{- if .Params.captcha_render_explicit -}}
+<script async defer src="{{ $captchaScript }}?render=explicit"></script>
+{{- else -}}
+<script async defer src="{{ $captchaScript }}"></script>
+{{- end -}}
 <script type="text/javascript">
 function resetCaptcha(widget) {
     setTimeout(() => widget.reset(), 1500);
