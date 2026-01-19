@@ -96,6 +96,104 @@
     </item>
     
     <item>
+      <title>DNS Proxy</title>
+      <link>https://docs.privatecaptcha.com/docs/reference/dns-proxy/</link>
+      <pubDate>Mon, 19 Jan 2026 16:42:03 +0200</pubDate>
+      
+      <guid>https://docs.privatecaptcha.com/docs/reference/dns-proxy/</guid>
+      <description>
+        
+        
+        &lt;p&gt;It is possible to make captcha widget to fetch puzzles and, later, verify solutions against your domain or subdomain instead of &lt;code&gt;api.privatecaptcha.com&lt;/code&gt; by using a &amp;ldquo;CNAME proxy&amp;rdquo;.&lt;/p&gt;
+&lt;h2&gt;Basic idea&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;basic-idea&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#basic-idea&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;For loading captcha widget, end-user &lt;em&gt;never&lt;/em&gt; contacts &lt;code&gt;*.privatecaptcha.com&lt;/code&gt; domains.&lt;/p&gt;
+&lt;pre class=&#34;mermaid hx:mt-6&#34;&gt;
+  sequenceDiagram
+    participant User as End User
+    participant Web as Customer Website
+    participant CNAME as captcha.customer.com&amp;lt;br/&amp;gt;(CNAME Record)
+    participant API as api.privatecaptcha.com
+
+    Note over User,API: Captcha Display Flow
+    User-&amp;gt;&amp;gt;Web: Visit website
+    Web-&amp;gt;&amp;gt;CNAME: Load captcha widget
+    Note over CNAME: DNS resolves to&amp;lt;br/&amp;gt;api.privatecaptcha.com
+    CNAME-&amp;gt;&amp;gt;API: Request forwarded
+    API--&amp;gt;&amp;gt;User: Captcha displayed&amp;lt;br/&amp;gt;(appears from customer.com)
+    
+    Note over User,API: ✓ User only sees customer.com domain
+&lt;/pre&gt;&lt;p&gt;You can also verify puzzle solutions against the same configured domain, but, on the backend, this has little value.&lt;/p&gt;
+&lt;h2&gt;Step-by-step setup&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;step-by-step-setup&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#step-by-step-setup&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]&#34;&gt;
+&lt;h3&gt;Add a new DNS record&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-a-new-dns-record&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#add-a-new-dns-record&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;With your DNS provider, setup a CNAME record for the chosen domain/subdomain to point to &lt;code&gt;api.privatecaptcha.com&lt;/code&gt; (also possible to choose &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/eu-isolation/&#34;&gt;EU isolation&lt;/a&gt;) endpoint &lt;code&gt;api.eu.privatecaptcha.com&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Example with CloudFlare:&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/dns-proxy-cloudflare.png&#34; title=&#34;In CloudFlare use &amp;#39;DNS only&amp;#39; record type&#34; alt=&#34;CloudFlare example&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;In CloudFlare use &amp;#39;DNS only&amp;#39; record type&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;Setup DNS proxy in Portal&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup-dns-proxy-in-portal&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#setup-dns-proxy-in-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;&amp;ldquo;DNS Proxy&amp;rdquo; functionality requires to have an add-on purchased via the &lt;code&gt;Billing&lt;/code&gt; settings.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Go to the &lt;a href=&#34;https://portal.privatecaptcha.com&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Private Captcha Portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; and navigate to &lt;code&gt;Settings -&amp;gt; DNS Proxy&lt;/code&gt;. Enter you domain and select the same endpoint (Global/EU) that you added in the previous step with your DNS provider.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/dns-proxy-privatecaptcha.png&#34; title=&#34;Enter your domain and select Global/EU endpoint&#34; alt=&#34;DNS proxy setup in private captcha&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Enter your domain and select Global/EU endpoint&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;Update widget snippet&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;update-widget-snippet&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#update-widget-snippet&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The last step is to update the widget to fetch puzzles via your domain. To achieve that you need to set &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34;&gt;&lt;code&gt;data-puzzle-endpoint&lt;/code&gt; attribute&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;index.html&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;@@ -32,7 +32,7 @@
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;    &amp;lt;div class=&amp;#34;private-captcha&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+       data-puzzle-endpoint=&amp;#34;https://privatecaptcha.mydomain.com/puzzle&amp;#34; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;        data-sitekey=&amp;#34;xyz&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Testing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;testing&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#testing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;DNS changes (on both sides!) can take up to 24 hours to propagate.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;You test this locally using a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/testing/&#34;&gt;test puzzle&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Origin: not-empty&amp;#34;&lt;/span&gt; https://privatecaptcha.yourdomain.com/puzzle&lt;span class=&#34;se&#34;&gt;\?&lt;/span&gt;sitekey&lt;span class=&#34;se&#34;&gt;\=&lt;/span&gt;aaaaaaaabbbbccccddddeeeeeeeeeeee&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;when this works, you can try opening the webpage where you have your widget.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Platform API</title>
       <link>https://docs.privatecaptcha.com/docs/reference/platform-api/</link>
       <pubDate>Fri, 19 Dec 2025 17:50:22 +0100</pubDate>
