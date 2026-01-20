@@ -53,7 +53,7 @@ You can also verify puzzle solutions against the same configured domain, but, on
 
 <meta
   property="article:modified_time"
-  content="2026-01-19T17:21:58+02:00">
+  content="2026-01-20T08:39:21+02:00">
 
 
 
@@ -62,7 +62,7 @@ You can also verify puzzle solutions against the same configured domain, but, on
 Basic idea For loading captcha widget, end-user never contacts *.privatecaptcha.com domains.
 sequenceDiagram participant User as End User participant Web as Customer Website participant CNAME as captcha.customer.com&lt;br/&gt;(CNAME Record) participant API as api.privatecaptcha.com Note over User,API: Captcha Display Flow User-&gt;&gt;Web: Visit website Web-&gt;&gt;CNAME: Load captcha widget Note over CNAME: DNS resolves to&lt;br/&gt;api.privatecaptcha.com CNAME-&gt;&gt;API: Request forwarded API--&gt;&gt;User: Captcha displayed&lt;br/&gt;(appears from customer.com) Note over User,API: ✓ User only sees customer.com domain You can also verify puzzle solutions against the same configured domain, but, on the backend, this has little value.">
   <meta itemprop="datePublished" content="2026-01-19T16:42:03+02:00">
-  <meta itemprop="dateModified" content="2026-01-19T17:21:58+02:00">
+  <meta itemprop="dateModified" content="2026-01-20T08:39:21+02:00">
   <meta itemprop="wordCount" content="291">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="DNS Proxy">
@@ -940,7 +940,7 @@ sequenceDiagram participant User as End User participant Web as Customer Website
 <h2>Step-by-step setup<span class="hx:absolute hx:-mt-20" id="step-by-step-setup"></span>
     <a href="#step-by-step-setup" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]">
 <h3>Add a new DNS record<span class="hx:absolute hx:-mt-20" id="add-a-new-dns-record"></span>
-    <a href="#add-a-new-dns-record" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>With your DNS provider, setup a CNAME record for the chosen domain/subdomain to point to <code>api.privatecaptcha.com</code> (also possible to choose <a href="/docs/reference/eu-isolation/">EU isolation</a>) endpoint <code>api.eu.privatecaptcha.com</code>).</p>
+    <a href="#add-a-new-dns-record" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>With your DNS provider, setup a CNAME record for the chosen domain/subdomain to point to <code>api.privatecaptcha.com</code> (also possible to choose <a href="/docs/reference/eu-isolation/">EU isolation</a> endpoint <code>api.eu.privatecaptcha.com</code>).</p>
 <p>Example with CloudFlare:</p>
 <p><figure>
     <img src="/images/reference/dns-proxy-cloudflare.png" title="In CloudFlare use &#39;DNS only&#39; record type" alt="CloudFlare example"  loading="lazy" />
@@ -992,7 +992,7 @@ sequenceDiagram participant User as End User participant Web as Customer Website
 <p>You test this locally using a <a href="/docs/reference/testing/">test puzzle</a>:</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -H <span class="s2">&#34;Origin: not-empty&#34;</span> https://privatecaptcha.yourdomain.com/puzzle<span class="se">\?</span>sitekey<span class="se">\=</span>aaaaaaaabbbbccccddddeeeeeeeeeeee</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -H <span class="s2">&#34;Origin: not-empty&#34;</span> https://yourdomain.com/puzzle<span class="se">\?</span>sitekey<span class="se">\=</span>aaaaaaaabbbbccccddddeeeeeeeeeeee</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -1002,11 +1002,11 @@ sequenceDiagram participant User as End User participant Web as Customer Website
   </button>
 </div>
 </div>
-<p>when this works, you can try opening the webpage where you have your widget.</p>
+<p>when this works, you can try opening the webpage where you have the widget.</p>
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2026-01-19T17:21:58.000Z">January 19, 2026</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2026-01-20T08:39:21.000Z">January 20, 2026</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/platform-api/"
         title="Platform API"
