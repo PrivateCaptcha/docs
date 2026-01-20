@@ -35,7 +35,7 @@ You can also verify puzzle solutions against the same configured domain, but, on
 
 ### Add a new DNS record
 
-With your DNS provider, setup a CNAME record for the chosen domain/subdomain to point to `api.privatecaptcha.com` (also possible to choose [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}})) endpoint `api.eu.privatecaptcha.com`).
+With your DNS provider, setup a CNAME record for the chosen domain/subdomain to point to `api.privatecaptcha.com` (also possible to choose [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}}) endpoint `api.eu.privatecaptcha.com`).
 
 Example with CloudFlare:
 
@@ -72,7 +72,7 @@ The last step is to update the widget to fetch puzzles via your domain. To achie
 You test this locally using a [test puzzle]({{< relref "/docs/reference/testing.md" >}}):
 
 ```bash
-curl -H "Origin: not-empty" https://privatecaptcha.yourdomain.com/puzzle\?sitekey\=aaaaaaaabbbbccccddddeeeeeeeeeeee
+curl -H "Origin: not-empty" https://yourdomain.com/puzzle\?sitekey\=aaaaaaaabbbbccccddddeeeeeeeeeeee
 ```
 
-when this works, you can try opening the webpage where you have your widget.
+when this works, you can try opening the webpage where you have the widget.
