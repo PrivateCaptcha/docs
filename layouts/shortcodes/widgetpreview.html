@@ -1,0 +1,159 @@
+{{- /* Widget Preview Tool - Interactive widget customization with live preview and code generation */ -}}
+
+<div id="widget-preview-tool">
+  <!-- Preview Tabs (Widget/Source Code) -->
+  <div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+    <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800">
+      <button
+        id="preview-tab-widget"
+        class="preview-tab hx:cursor-pointer hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-primary-500 hx:text-primary-600 hx:dark:border-primary-500 hx:dark:text-primary-600"
+        type="button"
+        onclick="widgetPreviewShowTab('widget')"
+      >
+        Widget Preview
+      </button>
+      <button
+        id="preview-tab-code"
+        class="preview-tab hx:cursor-pointer hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white"
+        type="button"
+        onclick="widgetPreviewShowTab('code')"
+      >
+        Source Code
+      </button>
+    </div>
+  </div>
+
+  <!-- Widget Preview Panel -->
+  <div id="preview-panel-widget" class="preview-panel hx:rounded-sm hx:pt-6">
+    <div id="captcha-preview-container" class="hx:p-4 hx:border hx:border-gray-200 hx:dark:border-neutral-700 hx:rounded-lg hx:bg-gray-50 hx:dark:bg-neutral-800/50">
+      <div id="captcha-preview-element"></div>
+    </div>
+  </div>
+
+  <!-- Source Code Panel -->
+  <div id="preview-panel-code" class="preview-panel hx:rounded-sm hx:pt-6 hx:hidden">
+    <div class="hx:relative">
+      <pre class="hx:overflow-x-auto hx:p-4 hx:border hx:border-gray-200 hx:dark:border-neutral-700 hx:rounded-lg hx:bg-gray-50 hx:dark:bg-neutral-800/50"><code id="generated-code" class="hx:text-sm hx:whitespace-pre-wrap"></code></pre>
+      <button
+        id="copy-code-btn"
+        onclick="widgetPreviewCopyCode()"
+        class="hx:absolute hx:top-2 hx:right-2 hx:px-3 hx:py-1.5 hx:text-sm hx:font-medium hx:rounded-md hx:bg-primary-600 hx:text-white hx:hover:bg-primary-700 hx:transition-colors hx:cursor-pointer"
+      >
+        Copy Code
+      </button>
+    </div>
+  </div>
+
+  <!-- Options Section -->
+  <div class="hx:mt-8 hx:mb-4">
+    <h3 class="hx:text-lg hx:font-semibold hx:mb-4">Widget Options</h3>
+    
+    <div class="hx:space-y-4">
+      <!-- Theme -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-theme" class="hx:w-32 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">Theme</label>
+        <select
+          id="opt-theme"
+          onchange="widgetPreviewUpdateWidget()"
+          class="hx:w-48 hx:rounded-md hx:border hx:border-gray-300 hx:dark:border-neutral-600 hx:bg-white hx:dark:bg-neutral-800 hx:text-sm hx:px-3 hx:py-2"
+        >
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+
+      <!-- Language -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-lang" class="hx:w-32 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">Language</label>
+        <select
+          id="opt-lang"
+          onchange="widgetPreviewUpdateWidget()"
+          class="hx:w-48 hx:rounded-md hx:border hx:border-gray-300 hx:dark:border-neutral-600 hx:bg-white hx:dark:bg-neutral-800 hx:text-sm hx:px-3 hx:py-2"
+        >
+          <option value="auto">Auto</option>
+          <option value="en">English (en)</option>
+          <option value="de">Deutsch (de)</option>
+          <option value="es">Español (es)</option>
+          <option value="fr">Français (fr)</option>
+          <option value="it">Italiano (it)</option>
+          <option value="nl">Nederlands (nl)</option>
+          <option value="sv">Svenska (sv)</option>
+          <option value="no">Norsk (no)</option>
+          <option value="pl">Polski (pl)</option>
+          <option value="fi">Suomi (fi)</option>
+          <option value="et">Eesti (et)</option>
+        </select>
+      </div>
+
+      <!-- Display Mode -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-display-mode" class="hx:w-32 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">Display Mode</label>
+        <select
+          id="opt-display-mode"
+          onchange="widgetPreviewUpdateWidget()"
+          class="hx:w-48 hx:rounded-md hx:border hx:border-gray-300 hx:dark:border-neutral-600 hx:bg-white hx:dark:bg-neutral-800 hx:text-sm hx:px-3 hx:py-2"
+        >
+          <option value="widget">Widget</option>
+          <option value="popup">Popup</option>
+        </select>
+      </div>
+
+      <!-- Start Mode -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-start-mode" class="hx:w-32 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">Start Mode</label>
+        <select
+          id="opt-start-mode"
+          onchange="widgetPreviewUpdateWidget()"
+          class="hx:w-48 hx:rounded-md hx:border hx:border-gray-300 hx:dark:border-neutral-600 hx:bg-white hx:dark:bg-neutral-800 hx:text-sm hx:px-3 hx:py-2"
+        >
+          <option value="auto">Auto</option>
+          <option value="click">Click</option>
+        </select>
+      </div>
+
+      <!-- EU Isolation -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-eu" class="hx:w-32 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">EU Isolation</label>
+        <div class="hx:flex hx:items-center hx:gap-2">
+          <input
+            type="checkbox"
+            id="opt-eu"
+            onchange="widgetPreviewUpdateWidget()"
+            class="hx:rounded hx:border-gray-300 hx:dark:border-neutral-600 hx:text-primary-600 hx:focus:ring-primary-500"
+          />
+          <span class="hx:text-sm hx:text-gray-500 hx:dark:text-gray-400">Use only EU endpoints</span>
+        </div>
+      </div>
+
+      <!-- Debug Mode -->
+      <div class="hx:flex hx:items-center hx:gap-4">
+        <label for="opt-debug" class="hx:w-32 hx:text-sm hx:font-medium hx:text-gray-700 hx:dark:text-gray-300">Debug Mode</label>
+        <div class="hx:flex hx:items-center hx:gap-2">
+          <input
+            type="checkbox"
+            id="opt-debug"
+            onchange="widgetPreviewUpdateWidget()"
+            class="hx:rounded hx:border-gray-300 hx:dark:border-neutral-600 hx:text-primary-600 hx:focus:ring-primary-500"
+          />
+          <span class="hx:text-sm hx:text-gray-500 hx:dark:text-gray-400">Show debug logs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copy Code Button -->
+  <div class="hx:mt-6 hx:flex hx:gap-3">
+    <button
+      onclick="widgetPreviewShowTab('code')"
+      class="hx:px-4 hx:py-2 hx:text-sm hx:font-medium hx:rounded-md hx:bg-gray-100 hx:dark:bg-neutral-700 hx:text-gray-700 hx:dark:text-gray-200 hx:hover:bg-gray-200 hx:dark:hover:bg-neutral-600 hx:transition-colors hx:cursor-pointer"
+    >
+      View Code
+    </button>
+    <button
+      onclick="widgetPreviewCopyCode()"
+      class="hx:px-4 hx:py-2 hx:text-sm hx:font-medium hx:rounded-md hx:bg-primary-600 hx:text-white hx:hover:bg-primary-700 hx:transition-colors hx:cursor-pointer"
+    >
+      Copy Code to Clipboard
+    </button>
+  </div>
+</div>
