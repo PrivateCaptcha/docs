@@ -24,6 +24,10 @@ markup:
   highlight:
     noClasses: false
 
+outputs:
+  page: [html, markdown]
+  section: [html, rss, markdown]
+
 menu:
   main:
     - name: Reference
@@ -67,8 +71,19 @@ params:
   privateCaptchaDomain: "privatecaptcha.com"
   externalLinkDecoration: true
 
+  imageZoom:
+    js: "js/medium-zoom.min.js"
+
   page:
     width: wide
+    contextMenu:
+      links:
+        - name: "Ask ChatGPT ↗"
+          url: "https://chat.openai.com/?q=Hi%20ChatGPT!%20Can%20you%20please%20read%20this%20page%20{url}%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
+          icon: "sparkles"
+        - name: "Ask Claude ↗"
+          url: "https://claude.ai/new?q=Hi%20Claude!%20Can%20you%20please%20read%20this%20page%20{url}%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
+          icon: "sparkles"
 
   navbar:
     width: wide

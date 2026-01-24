@@ -3,7 +3,9 @@ title: Private Captcha Documentation
 layout: hextra-home
 cascade:
   params:
-    medium_zoom_selector: 'article .content p:not(:has(a)) > img'
+    contextMenu: true
+    imageZoom:
+      enable: true
 ---
 
 {{< hextra/hero-badge >}}
