@@ -41,8 +41,8 @@ However, you can also explicitly render captcha elements using `window.grecaptch
 Private Captcha offers reCAPTCHA compatible API endpoint `/siteverify`, that you can use like this:
 
 ```diff
-- "https://www.google.com/recaptcha/api/siteverify"
-+ "https://api.{{< domain >}}/siteverify"
+- https://www.google.com/recaptcha/api/siteverify
++ https://api.{{< domain >}}/siteverify
 ```
 
 > [!WARNING]

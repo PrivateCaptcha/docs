@@ -7,8 +7,9 @@ date: 2025-08-06T16:14:32+03:00
   To use this integration you need to [create an API key](https://portal.{{< domain >}}/settings?tab=apikeys) in your account.
 {{< /callout >}}
 
-> [!NOTE]
-> You can also use reCAPTCHA-compatible `/siteverify` endpoint directly (especially if you already have working reCAPTCHA integration) like in the [tutorial example]({{< relref "/docs/tutorials/complete-example.md" >}}), this SDK is just C#-idiomatic implementation with convenience features.
+{{< callout >}}
+  If you have a working reCAPTCHA integration, check our [migration guide]({{< relref "/docs/tutorials/migrate-from-recaptcha.md" >}}) for easy instructions.
+{{< /callout >}}
 
 This is a **server-side** SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does _not_ solve puzzles on the client side (used to protect APIs).
 

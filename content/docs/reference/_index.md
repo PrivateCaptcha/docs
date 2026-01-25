@@ -2,6 +2,7 @@
 title: Reference
 next: widget-options
 weight: 3
+contextMenu: false
 ---
 
 Reference of API and parameters that you can use.

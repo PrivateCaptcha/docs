@@ -2,6 +2,7 @@
 title: Deployment
 next: configuration
 weight: 5
+contextMenu: false
 ---
 
 Information related to self-hosting topics.
