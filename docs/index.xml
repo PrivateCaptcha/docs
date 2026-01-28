@@ -2292,7 +2292,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;NOTE: Mode &lt;code&gt;auto&lt;/code&gt; migrates databases and then runs server - usually done separately - so that you don&amp;rsquo;t need a separate migration container. This is &lt;strong&gt;not&lt;/strong&gt; recommended for production use as by default Private Captcha uses different database permissions for migrations and normal use.&lt;/p&gt;
+  &lt;p&gt;NOTE: Mode &lt;code&gt;auto&lt;/code&gt; migrates databases and then runs server - usually done separately - so that you don&amp;rsquo;t need a separate migration container. This is &lt;strong&gt;not&lt;/strong&gt; recommended for production use as by default Private Captcha uses different database permissions for migrations and normal use. If you use &lt;code&gt;auto&lt;/code&gt; you might also need to specify &lt;code&gt;-migrate-hash ignore&lt;/code&gt; at the same time.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;HTTPS&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;https&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#https&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As you can see, it&amp;rsquo;s possible to use &lt;code&gt;-certifle&lt;/code&gt; and &lt;code&gt;-keyfile&lt;/code&gt; to force &lt;code&gt;HTTPS&lt;/code&gt; (by default server handles plain &lt;code&gt;HTTP&lt;/code&gt; and expects an external proxy to handle TLS/SSL termination).&lt;/p&gt;
@@ -2319,6 +2319,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;p&gt;It is possible to specify &lt;code&gt;-migrate-hash ignore&lt;/code&gt; to disable this &amp;ldquo;recency&amp;rdquo; check (which is, of course, discouraged).&lt;/p&gt;
 
       </description>
     </item>

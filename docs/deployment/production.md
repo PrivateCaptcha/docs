@@ -78,7 +78,7 @@ services:
     	Print version and exit
 ```
 
-> NOTE: Mode `auto` migrates databases and then runs server - usually done separately - so that you don't need a separate migration container. This is **not** recommended for production use as by default Private Captcha uses different database permissions for migrations and normal use.
+> NOTE: Mode `auto` migrates databases and then runs server - usually done separately - so that you don't need a separate migration container. This is **not** recommended for production use as by default Private Captcha uses different database permissions for migrations and normal use. If you use `auto` you might also need to specify `-migrate-hash ignore` at the same time.
 
 ### HTTPS
 
@@ -97,3 +97,5 @@ To run migration manually it's required to pass `-mode migrate` and `-migrate-ha
 ```bash
 cat secrets.env | bin/server -mode migrate -migrate-hash=$(git rev-list -1 HEAD) -env stdin
 ```
+
+It is possible to specify `-migrate-hash ignore` to disable this "recency" check (which is, of course, discouraged).
