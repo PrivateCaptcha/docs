@@ -10,11 +10,11 @@ Backward compatibility is kept on the level of public APIs of Private Captcha, n
 {{< /callout >}}
 
 {{< callout type="info" >}}
-It is **not** recommended to use something like a [Watchtower](https://github.com/containrrr/watchtower) or any other solution that automatically bumps tag versions.
+It is **not** recommended to use something like a ~~now-dead~~ [Watchtower](https://github.com/containrrr/watchtower) or any other solution that automatically bumps tag versions.
 {{< /callout >}}
 
 {{< callout type="warning" >}}
-  Before each update make sure to backup your data in case you're using any backup solutions.
+  Before **each** update make sure to backup your data in case you're using any backup solutions.
 {{< /callout >}}
 
 For this guide it is assumed you are using the [self-hosting repository](https://github.com/PrivateCaptcha/self-hosting) setup.
@@ -44,6 +44,17 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
     ```
 
 ## Notable deployment changes
+
+### v1.28.1
+
+> NOTE: Versioning now follows semver logic so this release v1.28.x follows v0.0.27 practically speaking
+
+- Postgres major version increase to 18 and ClickHouse to 25 in docker compose stack. Make sure to backup your data before updating!
+- widget has been updated, purge your CDN cache
+- if you're monitoring Private Captcha with Prometheus-compatible agent: 
+    - a new metric has been added: `server_platform_drop_total` with dimension `type` (specifies amount of internal events dropped due to concurrency pressure)
+    - ClickHouse health metric name was changed to `server_platform_health_clickhouse` for consistency with Postgres version (previous prefix was `portal_platform_`)
+    - for all HTTP metrics dimension `label` was changed to `method` (typo fixed)
 
 ### v0.0.26
 
