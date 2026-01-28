@@ -42,15 +42,15 @@ You should monitor updates (new docker tags) and update frequently. Updates are 
 
 <meta
   property="article:modified_time"
-  content="2025-11-13T12:45:46+02:00">
+  content="2026-01-28T09:17:46+02:00">
 
 
 
   <meta itemprop="name" content="Production use">
   <meta itemprop="description" content="Updates Before bumping docker tag you need to read upgrade instructions for each version. You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.">
   <meta itemprop="datePublished" content="2025-10-23T11:27:25+03:00">
-  <meta itemprop="dateModified" content="2025-11-13T12:45:46+02:00">
-  <meta itemprop="wordCount" content="664">
+  <meta itemprop="dateModified" content="2026-01-28T09:17:46+02:00">
+  <meta itemprop="wordCount" content="710">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Production use">
   <meta name="twitter:description" content="Updates Before bumping docker tag you need to read upgrade instructions for each version. You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.">
@@ -1098,7 +1098,7 @@ You should monitor updates (new docker tags) and update frequently. Updates are 
   -migrate-hash string
     	Target migration version (git commit)
   -mode string
-    	migrate | server
+    	migrate | server | auto
   -version
     	Print version and exit</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
@@ -1110,6 +1110,9 @@ You should monitor updates (new docker tags) and update frequently. Updates are 
   </button>
 </div>
 </div>
+<blockquote>
+  <p>NOTE: Mode <code>auto</code> migrates databases and then runs server - usually done separately - so that you don&rsquo;t need a separate migration container. This is <strong>not</strong> recommended for production use as by default Private Captcha uses different database permissions for migrations and normal use.</p>
+</blockquote>
 <h3>HTTPS<span class="hx:absolute hx:-mt-20" id="https"></span>
     <a href="#https" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>As you can see, it&rsquo;s possible to use <code>-certifle</code> and <code>-keyfile</code> to force <code>HTTPS</code> (by default server handles plain <code>HTTP</code> and expects an external proxy to handle TLS/SSL termination).</p>
 <h3>Migrations<span class="hx:absolute hx:-mt-20" id="migrations"></span>
@@ -1138,7 +1141,7 @@ You should monitor updates (new docker tags) and update frequently. Updates are 
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2025-11-13T12:45:46.000Z">November 13, 2025</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2026-01-28T09:17:46.000Z">January 28, 2026</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/bunny-cdn/"
         title="Bunny CDN"

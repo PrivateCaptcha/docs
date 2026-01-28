@@ -73,10 +73,12 @@ services:
   -migrate-hash string
     	Target migration version (git commit)
   -mode string
-    	migrate | server
+    	migrate | server | auto
   -version
     	Print version and exit
 ```
+
+> NOTE: Mode `auto` migrates databases and then runs server - usually done separately - so that you don't need a separate migration container. This is **not** recommended for production use as by default Private Captcha uses different database permissions for migrations and normal use.
 
 ### HTTPS
 
