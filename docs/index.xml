@@ -125,7 +125,9 @@
     &lt;blockquote&gt;
   &lt;p&gt;aka &amp;ldquo;Maximum number of attempts exceeded&amp;rdquo; error&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Please check if you have an active subscription (or active trial period).&lt;/p&gt;
+&lt;p&gt;Please check if you have an active subscription (or active trial period) in the &lt;a href=&#34;https://portal.privatecaptcha.com/settings?tab=billing&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Billing settings&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/details&gt;
 &lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
