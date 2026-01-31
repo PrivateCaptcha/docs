@@ -13,7 +13,7 @@ weight: 6
 
 > aka "Maximum number of attempts exceeded" error
 
-Please check if you have an active subscription (or active trial period).
+Please check if you have an active subscription (or active trial period) in the [Billing settings](https://portal.{{<domain>}}/settings?tab=billing).
 
 {{% /details %}}
 
