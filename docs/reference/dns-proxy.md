@@ -1,9 +1,12 @@
 # DNS Proxy
-It is possible to make captcha widget to fetch puzzles and, later, verify solutions against your domain or subdomain instead of `api.privatecaptcha.com` by using a "CNAME proxy".
+It is possible for customers to use their own domains names (subdomains or vanity) with Private Captcha SaaS (at https://privatecaptcha.com) services. For example, a customer may want to use a domain line `captcha.customer.com` to point to `api.privatecaptcha.com` so that captcha widget does not contact _any_ other domains except of those of the customer. This is possible to achieve using DNS proxying (also known as _"CNAME proxy"_).
 
-## Basic idea
+> [!NOTE]
+> This feature does not apply to the [self-hosted]({{< relref "/docs/deployment/quickstart.md" >}}) version, which **always** uses "custom" DNS.
 
-For loading captcha widget, end-user _never_ contacts `*.privatecaptcha.com` domains.
+## How it works
+
+To make this setup work we need two DNS changes: one on customer side and one on Private Captcha SaaS side. Customer can point their own domains via domain name registar to `api.privatecaptcha.com` and we handle similar setup on our side. As a result, when end-user visits customer's website, all interaction with `*.privatecaptcha.com` domains is fully transparent to them.
 
 ```mermaid
 sequenceDiagram

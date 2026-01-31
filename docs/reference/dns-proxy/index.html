@@ -9,34 +9,16 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>DNS Proxy – Private Captcha</title>
-  <meta name="description" content="It is possible to make captcha widget to fetch puzzles and, later, verify solutions against your domain or subdomain instead of api.privatecaptcha.com by using a “CNAME proxy”.
-Basic idea For loading captcha widget, end-user never contacts *.privatecaptcha.com domains.
-sequenceDiagram participant User as End User participant Web as Customer Website participant CNAME as captcha.customer.com&lt;br/&gt;(CNAME Record) participant API as api.privatecaptcha.com Note over User,API: Captcha Display Flow User-&gt;&gt;Web: Visit website Web-&gt;&gt;CNAME: Load captcha widget Note over CNAME: DNS resolves to&lt;br/&gt;api.privatecaptcha.com CNAME-&gt;&gt;API: Request forwarded API--&gt;&gt;User: Captcha displayed&lt;br/&gt;(appears from customer.com) Note over User,API: ✓ User only sees customer.com domain You can also verify puzzle solutions against the same configured domain, but, on the backend, this has little value." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/dns-proxy/" itemprop="url" />
+  <meta name="description" content="It is possible for customers to use their own domains names (subdomains or vanity) with Private Captcha SaaS (at https://privatecaptcha.com ) services. For example, a customer may want to use a domain line captcha.customer.com to point to api.privatecaptcha.com so that captcha widget does not contact any other domains except of those of the customer. This is possible to achieve using DNS proxying (also known as “CNAME proxy”)." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/dns-proxy/" itemprop="url" />
 
 <meta property="og:title" content="DNS Proxy">
 <meta
   property="og:description"
   content="
     
-      It is possible to make captcha widget to fetch puzzles and, later, verify solutions against your domain or subdomain instead of api.privatecaptcha.com by using a &ldquo;CNAME proxy&rdquo;.
-Basic idea
-    For loading captcha widget, end-user never contacts *.privatecaptcha.com domains.
-
-  sequenceDiagram
-    participant User as End User
-    participant Web as Customer Website
-    participant CNAME as captcha.customer.com&lt;br/&gt;(CNAME Record)
-    participant API as api.privatecaptcha.com
-
-    Note over User,API: Captcha Display Flow
-    User-&gt;&gt;Web: Visit website
-    Web-&gt;&gt;CNAME: Load captcha widget
-    Note over CNAME: DNS resolves to&lt;br/&gt;api.privatecaptcha.com
-    CNAME-&gt;&gt;API: Request forwarded
-    API--&gt;&gt;User: Captcha displayed&lt;br/&gt;(appears from customer.com)
-    
-    Note over User,API: ✓ User only sees customer.com domain
-You can also verify puzzle solutions against the same configured domain, but, on the backend, this has little value.
+      It is possible for customers to use their own domains names (subdomains or vanity) with Private Captcha SaaS (at https://privatecaptcha.com
+ 
+) services. For example, a customer may want to use a domain line captcha.customer.com to point to api.privatecaptcha.com so that captcha widget does not contact any other domains except of those of the customer. This is possible to achieve using DNS proxying (also known as &ldquo;CNAME proxy&rdquo;).
     
   ">
 <meta
@@ -53,22 +35,18 @@ You can also verify puzzle solutions against the same configured domain, but, on
 
 <meta
   property="article:modified_time"
-  content="2026-01-20T08:39:21+02:00">
+  content="2026-01-31T13:38:47+02:00">
 
 
 
   <meta itemprop="name" content="DNS Proxy">
-  <meta itemprop="description" content="It is possible to make captcha widget to fetch puzzles and, later, verify solutions against your domain or subdomain instead of api.privatecaptcha.com by using a “CNAME proxy”.
-Basic idea For loading captcha widget, end-user never contacts *.privatecaptcha.com domains.
-sequenceDiagram participant User as End User participant Web as Customer Website participant CNAME as captcha.customer.com&lt;br/&gt;(CNAME Record) participant API as api.privatecaptcha.com Note over User,API: Captcha Display Flow User-&gt;&gt;Web: Visit website Web-&gt;&gt;CNAME: Load captcha widget Note over CNAME: DNS resolves to&lt;br/&gt;api.privatecaptcha.com CNAME-&gt;&gt;API: Request forwarded API--&gt;&gt;User: Captcha displayed&lt;br/&gt;(appears from customer.com) Note over User,API: ✓ User only sees customer.com domain You can also verify puzzle solutions against the same configured domain, but, on the backend, this has little value.">
+  <meta itemprop="description" content="It is possible for customers to use their own domains names (subdomains or vanity) with Private Captcha SaaS (at https://privatecaptcha.com ) services. For example, a customer may want to use a domain line captcha.customer.com to point to api.privatecaptcha.com so that captcha widget does not contact any other domains except of those of the customer. This is possible to achieve using DNS proxying (also known as “CNAME proxy”).">
   <meta itemprop="datePublished" content="2026-01-19T16:42:03+02:00">
-  <meta itemprop="dateModified" content="2026-01-20T08:39:21+02:00">
-  <meta itemprop="wordCount" content="291">
+  <meta itemprop="dateModified" content="2026-01-31T13:38:47+02:00">
+  <meta itemprop="wordCount" content="397">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="DNS Proxy">
-  <meta name="twitter:description" content="It is possible to make captcha widget to fetch puzzles and, later, verify solutions against your domain or subdomain instead of api.privatecaptcha.com by using a “CNAME proxy”.
-Basic idea For loading captcha widget, end-user never contacts *.privatecaptcha.com domains.
-sequenceDiagram participant User as End User participant Web as Customer Website participant CNAME as captcha.customer.com&lt;br/&gt;(CNAME Record) participant API as api.privatecaptcha.com Note over User,API: Captcha Display Flow User-&gt;&gt;Web: Visit website Web-&gt;&gt;CNAME: Load captcha widget Note over CNAME: DNS resolves to&lt;br/&gt;api.privatecaptcha.com CNAME-&gt;&gt;API: Request forwarded API--&gt;&gt;User: Captcha displayed&lt;br/&gt;(appears from customer.com) Note over User,API: ✓ User only sees customer.com domain You can also verify puzzle solutions against the same configured domain, but, on the backend, this has little value.">
+  <meta name="twitter:description" content="It is possible for customers to use their own domains names (subdomains or vanity) with Private Captcha SaaS (at https://privatecaptcha.com ) services. For example, a customer may want to use a domain line captcha.customer.com to point to api.privatecaptcha.com so that captcha widget does not contact any other domains except of those of the customer. This is possible to achieve using DNS proxying (also known as “CNAME proxy”).">
 
     <link rel="preload" href="/css/compiled/main.min.bd63415ff42ec5904a0d31391db1a19464e00072cb62f63743767e8f0ac0eef1.css" as="style" integrity="sha256-vWNBX/QuxZBKDTE5HbGhlGTgAHLLYvY3Q3Z&#43;jwrA7vE=" />
     <link href="/css/compiled/main.min.bd63415ff42ec5904a0d31391db1a19464e00072cb62f63743767e8f0ac0eef1.css" rel="stylesheet" integrity="sha256-vWNBX/QuxZBKDTE5HbGhlGTgAHLLYvY3Q3Z&#43;jwrA7vE=" />
@@ -310,9 +288,9 @@ sequenceDiagram participant User as End User participant Web as Customer Website
   
     <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
               <a
-                href="#basic-idea"
+                href="#how-it-works"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Basic idea</a>
+              >How it works</a>
             </li>
           <li>
               <a
@@ -884,7 +862,7 @@ sequenceDiagram participant User as End User participant Web as Customer Website
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word" href="#basic-idea">Basic idea
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word" href="#how-it-works">How it works
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
@@ -993,9 +971,18 @@ sequenceDiagram participant User as End User participant Web as Customer Website
     </div>
           </div>
           
-          <p>It is possible to make captcha widget to fetch puzzles and, later, verify solutions against your domain or subdomain instead of <code>api.privatecaptcha.com</code> by using a &ldquo;CNAME proxy&rdquo;.</p>
-<h2>Basic idea<span class="hx:absolute hx:-mt-20" id="basic-idea"></span>
-    <a href="#basic-idea" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For loading captcha widget, end-user <em>never</em> contacts <code>*.privatecaptcha.com</code> domains.</p>
+          <p>It is possible for customers to use their own domains names (subdomains or vanity) with Private Captcha SaaS (at <a href="https://privatecaptcha.com"target="_blank" rel="noopener">https://privatecaptcha.com<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>) services. For example, a customer may want to use a domain line <code>captcha.customer.com</code> to point to <code>api.privatecaptcha.com</code> so that captcha widget does not contact <em>any</em> other domains except of those of the customer. This is possible to achieve using DNS proxying (also known as <em>&ldquo;CNAME proxy&rdquo;</em>).</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>This feature does not apply to the <a href="/docs/deployment/quickstart/">self-hosted</a> version, which <strong>always</strong> uses &ldquo;custom&rdquo; DNS.</p></div>
+  </div>
+</div>
+<h2>How it works<span class="hx:absolute hx:-mt-20" id="how-it-works"></span>
+    <a href="#how-it-works" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To make this setup work we need two DNS changes: one on customer side and one on Private Captcha SaaS side. Customer can point their own domains via domain name registar to <code>api.privatecaptcha.com</code> and we handle similar setup on our side. As a result, when end-user visits customer&rsquo;s website, all interaction with <code>*.privatecaptcha.com</code> domains is fully transparent to them.</p>
 <pre class="mermaid hx:mt-6">
   sequenceDiagram
     participant User as End User
@@ -1081,7 +1068,7 @@ sequenceDiagram participant User as End User participant Web as Customer Website
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2026-01-20T08:39:21.000Z">January 20, 2026</time></div>
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2026-01-31T13:38:47.000Z">January 31, 2026</time></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/platform-api/"
         title="Platform API"
