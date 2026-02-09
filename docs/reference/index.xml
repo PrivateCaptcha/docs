@@ -103,7 +103,7 @@
     &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;DNS changes (on both sides!) can take up to 24 hours to propagate.&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;You test this locally using a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/testing/&#34;&gt;test puzzle&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;You can test this locally using a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/testing/&#34;&gt;test puzzle&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Origin: not-empty&amp;#34;&lt;/span&gt; https://yourdomain.com/puzzle&lt;span class=&#34;se&#34;&gt;\?&lt;/span&gt;sitekey&lt;span class=&#34;se&#34;&gt;\=&lt;/span&gt;aaaaaaaabbbbccccddddeeeeeeeeeeee&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
