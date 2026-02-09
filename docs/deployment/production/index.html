@@ -42,15 +42,15 @@ You should monitor updates (new docker tags) and update frequently. Updates are 
 
 <meta
   property="article:modified_time"
-  content="2026-01-28T14:47:59+02:00">
+  content="2026-02-09T14:28:35+02:00">
 
 
 
   <meta itemprop="name" content="Production use">
   <meta itemprop="description" content="Updates Before bumping docker tag you need to read upgrade instructions for each version. You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.">
   <meta itemprop="datePublished" content="2025-10-23T11:27:25+03:00">
-  <meta itemprop="dateModified" content="2026-01-28T14:47:59+02:00">
-  <meta itemprop="wordCount" content="743">
+  <meta itemprop="dateModified" content="2026-02-09T14:28:35+02:00">
+  <meta itemprop="wordCount" content="772">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Production use">
   <meta name="twitter:description" content="Updates Before bumping docker tag you need to read upgrade instructions for each version. You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.">
@@ -467,9 +467,9 @@ You should monitor updates (new docker tags) and update frequently. Updates are 
             </li>
           <li>
               <a
-                href="#enterprise-edition"
+                href="#licensed-use"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Enterprise edition</a>
+              >Licensed use</a>
             </li>
           <li>
               <a
@@ -894,7 +894,15 @@ You should monitor updates (new docker tags) and update frequently. Updates are 
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word" href="#enterprise-edition">Enterprise edition
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word" href="#licensed-use">Licensed use
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word" href="#community-edition">Community edition
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word" href="#enterprise-edition">Enterprise edition
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
@@ -1047,8 +1055,26 @@ You should monitor updates (new docker tags) and update frequently. Updates are 
 <p>Additionally there&rsquo;re <code>/live</code> and <code>/ready</code> endpoints available on <code>$PC_LOCAL_ADDRESS</code> address that can be used if you run Private Captcha on Kubernetes cluster.</p>
 <h2>Backups<span class="hx:absolute hx:-mt-20" id="backups"></span>
     <a href="#backups" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>While it is outside of the scope of this note, there&rsquo;re many solutions that add a docker container to the compose stack to backup databases to S3-compatible storage. In order to add them, you can use <code>compose.override.yml</code> file.</p>
-<h2>Enterprise edition<span class="hx:absolute hx:-mt-20" id="enterprise-edition"></span>
-    <a href="#enterprise-edition" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>There are a few changes you will need to make using a <code>compose.override.yml</code> file, namely replace <code>privatecaptcha</code> image to <code>privatecaptcha-ee</code> and set an additional environment variable <code>EE_LICENSE_KEY</code> (which you should put in the <code>.env</code> file).</p>
+<h2>Licensed use<span class="hx:absolute hx:-mt-20" id="licensed-use"></span>
+    <a href="#licensed-use" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Community edition<span class="hx:absolute hx:-mt-20" id="community-edition"></span>
+    <a href="#community-edition" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>You need to add an additional environment variable <code>CE_LICENSE_KEY</code> via <code>compose.override.yml</code> file (which you should put in the <code>.env</code> file).</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">privatecaptcha</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">CE_LICENSE_KEY=${CE_LICENSE_KEY}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Enterprise edition<span class="hx:absolute hx:-mt-20" id="enterprise-edition"></span>
+    <a href="#enterprise-edition" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>There are a few changes you will need to make using a <code>compose.override.yml</code> file, namely replace <code>privatecaptcha</code> image to <code>privatecaptcha-ee</code> and set an additional environment variable <code>EE_LICENSE_KEY</code> (which you should put in the <code>.env</code> file).</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
@@ -1123,7 +1149,7 @@ You should monitor updates (new docker tags) and update frequently. Updates are 
 
         </div>
         
-    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2026-01-28T14:47:59.000Z">January 28, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+    <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">Last updated on <time datetime="2026-02-09T14:28:35.000Z">February 9, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/bunny-cdn/"
         title="Bunny CDN"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"

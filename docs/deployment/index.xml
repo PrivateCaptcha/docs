@@ -360,8 +360,26 @@
 &lt;p&gt;Additionally there&amp;rsquo;re &lt;code&gt;/live&lt;/code&gt; and &lt;code&gt;/ready&lt;/code&gt; endpoints available on &lt;code&gt;$PC_LOCAL_ADDRESS&lt;/code&gt; address that can be used if you run Private Captcha on Kubernetes cluster.&lt;/p&gt;
 &lt;h2&gt;Backups&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;backups&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#backups&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;While it is outside of the scope of this note, there&amp;rsquo;re many solutions that add a docker container to the compose stack to backup databases to S3-compatible storage. In order to add them, you can use &lt;code&gt;compose.override.yml&lt;/code&gt; file.&lt;/p&gt;
-&lt;h2&gt;Enterprise edition&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;enterprise-edition&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#enterprise-edition&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are a few changes you will need to make using a &lt;code&gt;compose.override.yml&lt;/code&gt; file, namely replace &lt;code&gt;privatecaptcha&lt;/code&gt; image to &lt;code&gt;privatecaptcha-ee&lt;/code&gt; and set an additional environment variable &lt;code&gt;EE_LICENSE_KEY&lt;/code&gt; (which you should put in the &lt;code&gt;.env&lt;/code&gt; file).&lt;/p&gt;
+&lt;h2&gt;Licensed use&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;licensed-use&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#licensed-use&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Community edition&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;community-edition&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#community-edition&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You need to add an additional environment variable &lt;code&gt;CE_LICENSE_KEY&lt;/code&gt; via &lt;code&gt;compose.override.yml&lt;/code&gt; file (which you should put in the &lt;code&gt;.env&lt;/code&gt; file).&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;privatecaptcha&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;CE_LICENSE_KEY=${CE_LICENSE_KEY}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Enterprise edition&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;enterprise-edition&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#enterprise-edition&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;There are a few changes you will need to make using a &lt;code&gt;compose.override.yml&lt;/code&gt; file, namely replace &lt;code&gt;privatecaptcha&lt;/code&gt; image to &lt;code&gt;privatecaptcha-ee&lt;/code&gt; and set an additional environment variable &lt;code&gt;EE_LICENSE_KEY&lt;/code&gt; (which you should put in the &lt;code&gt;.env&lt;/code&gt; file).&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;

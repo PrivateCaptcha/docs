@@ -47,7 +47,20 @@ Additionally there're `/live` and `/ready` endpoints available on `$PC_LOCAL_ADD
 
 While it is outside of the scope of this note, there're many solutions that add a docker container to the compose stack to backup databases to S3-compatible storage. In order to add them, you can use `compose.override.yml` file.
 
-## Enterprise edition
+## Licensed use
+
+### Community edition
+
+You need to add an additional environment variable `CE_LICENSE_KEY` via `compose.override.yml` file (which you should put in the `.env` file).
+
+```yaml
+services:
+  privatecaptcha:
+    environment:
+      - CE_LICENSE_KEY=${CE_LICENSE_KEY}
+```
+
+### Enterprise edition
 
 There are a few changes you will need to make using a `compose.override.yml` file, namely replace `privatecaptcha` image to `privatecaptcha-ee` and set an additional environment variable `EE_LICENSE_KEY` (which you should put in the `.env` file).
 
