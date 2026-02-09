@@ -72,7 +72,7 @@ The last step is to update the widget to fetch puzzles via your domain. To achie
 > [!NOTE]
 > DNS changes (on both sides!) can take up to 24 hours to propagate.
 
-You test this locally using a [test puzzle]({{< relref "/docs/reference/testing.md" >}}):
+You can test this locally using a [test puzzle]({{< relref "/docs/reference/testing.md" >}}):
 
 ```bash
 curl -H "Origin: not-empty" https://yourdomain.com/puzzle\?sitekey\=aaaaaaaabbbbccccddddeeeeeeeeeeee
