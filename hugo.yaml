@@ -39,20 +39,17 @@ menu:
     - name: Integrations
       pageRef: /docs/integrations
       weight: 3
-    - name: Office Hours ↗
-      url: "https://cal.com/privatecaptcha/20min"
-      weight: 4
     - name: Search
-      weight: 5
+      weight: 4
       params:
         type: search
     - name: GitHub
-      weight: 6
+      weight: 5
       url: "https://github.com/PrivateCaptcha/PrivateCaptcha"
       params:
         icon: github
     - name: Website
-      weight: 7
+      weight: 6
       url: "https://privatecaptcha.com"
       params:
         icon: globe-alt
