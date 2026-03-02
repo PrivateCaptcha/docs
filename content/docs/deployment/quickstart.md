@@ -73,3 +73,19 @@ docker compose up
 Now you can open `$PC_PORTAL_BASE_URL` (e.g. `portal.yourdomain.com` or http://portal.privatecaptcha.local:8080) in browser and log in.
 
 > NOTE: For local-only use, when asked for a verification code, you might need to find it in the logs of `privatecaptcha` container. Search for "two factor code".
+
+## Next steps
+
+How to go live, check this:
+
+{{< cards >}}
+  {{< card link="/docs/deployment/production" title="Production use"
+  subtitle="Deploying to production requires extra steps"
+  icon="briefcase" >}}
+  {{< card link="/docs/deployment/updating" title="Updating"  
+  subtitle="Read per-version instructions for updates"
+  icon="refresh" >}}
+  {{< card link="/docs/reference/security" title="Security"
+  subtitle="Security best-practices when using Private Captcha"
+  icon="shield-exclamation" >}}
+{{< /cards >}}
