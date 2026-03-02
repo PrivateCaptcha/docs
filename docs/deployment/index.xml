@@ -36,7 +36,7 @@
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;It is &lt;strong&gt;not&lt;/strong&gt; recommended to use something like a &lt;del&gt;now-dead&lt;/del&gt; &lt;a href=&#34;https://github.com/containrrr/watchtower&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Watchtower&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;It is &lt;strong&gt;not&lt;/strong&gt; recommended to use something like a &lt;del&gt;now-dead&lt;/del&gt; &lt;a href=&#34;https://github.com/containrrr/watchtower&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Watchtower&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; or any other solution that automatically bumps tag versions.&lt;/div&gt;
   &lt;/div&gt;
@@ -50,7 +50,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;For this guide it is assumed you are using the &lt;a href=&#34;https://github.com/PrivateCaptcha/self-hosting&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;self-hosting repository&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;p&gt;For this guide it is assumed you are using the &lt;a href=&#34;https://github.com/PrivateCaptcha/self-hosting&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;self-hosting repository&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; setup.&lt;/p&gt;
 &lt;ol start=&#34;0&#34;&gt;
@@ -62,6 +62,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -76,6 +78,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -90,6 +94,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -104,6 +110,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -127,6 +135,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -136,7 +146,11 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;Notable deployment changes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;notable-deployment-changes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#notable-deployment-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;v1.28.1&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;v1281&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#notable-deployment-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;v1.30.0&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;v1300&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#v1300&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;widget has been updated, purge your CDN cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;v1.28.1&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;v1281&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#v1281&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;
   &lt;p&gt;NOTE: Versioning now follows semver logic so this release v1.28.x follows v0.0.27 practically speaking&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -195,7 +209,7 @@
   &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
 
   &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Using Bunny CDN is &lt;strong&gt;not required&lt;/strong&gt;. This is an example of self-hosting Private Captcha behind &lt;a href=&#34;https://bunny.net&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bunny CDN&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Using Bunny CDN is &lt;strong&gt;not required&lt;/strong&gt;. This is an example of self-hosting Private Captcha behind &lt;a href=&#34;https://bunny.net&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bunny CDN&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;. Instructions for other CDN providers will be different, but core ideas are the same.&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
@@ -213,7 +227,7 @@
 &lt;h2&gt;Setup steps&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup-steps&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#setup-steps&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]&#34;&gt;
 &lt;h3&gt;Point nameservers for your domain to Bunny DNS servers&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;point-nameservers-for-your-domain-to-bunny-dns-servers&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#point-nameservers-for-your-domain-to-bunny-dns-servers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;For the domain (or subdomain) where you will host your Private Captcha instance, we will need Bunny to manage our DNS. For that we need to point your current domain name registar DNS to Bunny.net. Login to your registar and find DNS section. Inside point your DNS to &lt;a href=&#34;https://docs.bunny.net/docs/dns-overview&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bunny&amp;rsquo;s servers&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;a href=&#34;#point-nameservers-for-your-domain-to-bunny-dns-servers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;For the domain (or subdomain) where you will host your Private Captcha instance, we will need Bunny to manage our DNS. For that we need to point your current domain name registar DNS to Bunny.net. Login to your registar and find DNS section. Inside point your DNS to &lt;a href=&#34;https://docs.bunny.net/docs/dns-overview&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bunny&amp;rsquo;s servers&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; &lt;code&gt;kiki.bunny.net&lt;/code&gt; and &lt;code&gt;coco.bunny.net&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
@@ -231,7 +245,7 @@
 &lt;ul&gt;
 &lt;li&gt;Bunny does HTTPS termination for and your Private Captcha instance listens on port &lt;code&gt;80&lt;/code&gt; (which you will allow in firewall of your server). Traffic between Bunny and your server is &lt;em&gt;not encrypted&lt;/em&gt;. This is the default option and does not involve any additional steps. Your only job is to click &lt;em&gt;&amp;ldquo;Force SSL&amp;rdquo;&lt;/em&gt; and &lt;em&gt;&amp;ldquo;Get a free certificate&amp;rdquo;&lt;/em&gt; (Let&amp;rsquo;s Encrypt) in Bunny UI and you are done.&lt;/li&gt;
 &lt;li&gt;Bunny does HTTPS termination and you use self-signed certificates for Private Captcha. Same as the above, but traffic between Bunny and your server is encrypted (albeit potentially vulnerable to MITM attack). Your instance listens on port &lt;code&gt;443&lt;/code&gt; instead. You can pass certificates to the Private Captcha server using &lt;code&gt;-certfile&lt;/code&gt; and &lt;code&gt;-keyfile&lt;/code&gt; command line parameters.&lt;/li&gt;
-&lt;li&gt;You use your own certificates all the way, starting from your server. You upload your certificate to Bunny and tell Bunny CDN to verify the certificate origin for you. Certificates can be updated using &lt;a href=&#34;https://certbot.eff.org/instructions&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;certbot&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;li&gt;You use your own certificates all the way, starting from your server. You upload your certificate to Bunny and tell Bunny CDN to verify the certificate origin for you. Certificates can be updated using &lt;a href=&#34;https://certbot.eff.org/instructions&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;certbot&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -282,7 +296,7 @@
 &lt;h3&gt;Allowing only Bunny servers to access your compute node&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;allowing-only-bunny-servers-to-access-your-compute-node&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#allowing-only-bunny-servers-to-access-your-compute-node&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As a general rule of thumb, you should only allow Bunny&amp;rsquo;s CDN servers to access your compute resource.&lt;/p&gt;
 &lt;h4&gt;IP addresses&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;ip-addresses&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#ip-addresses&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Bunny &lt;a href=&#34;https://support.bunny.net/hc/en-us/articles/115003578911-How-to-detect-when-BunnyCDN-PoP-servers-are-accessing-your-backend&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;publishes&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;a href=&#34;#ip-addresses&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Bunny &lt;a href=&#34;https://support.bunny.net/hc/en-us/articles/115003578911-How-to-detect-when-BunnyCDN-PoP-servers-are-accessing-your-backend&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;publishes&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; a list of IP addresses/ranges of their servers (both IPv4 and IPv6). While the implementation of this is outside of the scope of this guide, you can have network firewall rules in your cloud provider (e.g. Firewalls in Hetzner, Vultr etc.) that only allow access from Bunny&amp;rsquo;s IPs. You will have to keep those firewall rules updated to ensure availability of your Private Captcha installation.&lt;/p&gt;
 &lt;h4&gt;HTTP headers&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;http-headers&#34;&gt;&lt;/span&gt;
@@ -292,7 +306,7 @@
     &lt;a href=&#34;#network-limits&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Per each of the CDN zones above you can setup rate limiting on Bunny side (which is recommended).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-network-limits.png&#34; alt=&#34;Rate limiting&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3&gt;WAF&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;waf&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#waf&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Bunny now also provides a &lt;a href=&#34;https://docs.bunny.net/docs/shield-waf&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Web Application Firewall&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;a href=&#34;#waf&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Bunny now also provides a &lt;a href=&#34;https://docs.bunny.net/docs/shield-waf&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Web Application Firewall&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; which you can use to block abusers or configure custom rules. Use at your own discretion.&lt;/p&gt;
 
@@ -349,12 +363,12 @@
 &lt;li&gt;you can configure CDN/reverse proxy rate limits accordingly to your use-case (that is, &lt;em&gt;in addition&lt;/em&gt; to rate limit configuration of Private Captcha server itself)&lt;/li&gt;
 &lt;li&gt;correct rate limiting of Private Captcha server itself is &lt;em&gt;heavily&lt;/em&gt; dependent on correct configuration of &lt;code&gt;PC_RATE_LIMIT_HEADER&lt;/code&gt; environment variable (which value is expected to come from proxy/CDN)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;if&lt;/em&gt; you run a larger installation with separate DB and server nodes, you need to secure network between them (docker compose single node setup does not use encryption for Postgres or ClickHouse connections)&lt;/li&gt;
-&lt;li&gt;for single-node installations, if you can, use &lt;a href=&#34;https://podman.io/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Podman&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;li&gt;for single-node installations, if you can, use &lt;a href=&#34;https://podman.io/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Podman&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; or rootless Docker&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Monitoring&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;monitoring&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#monitoring&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Prometheus metrics (&lt;code&gt;/metrics&lt;/code&gt; endpoint) are available on &lt;code&gt;$PC_LOCAL_ADDRESS&lt;/code&gt; address (if you set &lt;code&gt;PC_LOCAL_ADDRESS&lt;/code&gt; environment variable). Server exposes &amp;ldquo;standard&amp;rdquo; Go metrics and &lt;a href=&#34;https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;four golden signals&amp;rdquo;&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;a href=&#34;#monitoring&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Prometheus metrics (&lt;code&gt;/metrics&lt;/code&gt; endpoint) are available on &lt;code&gt;$PC_LOCAL_ADDRESS&lt;/code&gt; address (if you set &lt;code&gt;PC_LOCAL_ADDRESS&lt;/code&gt; environment variable). Server exposes &amp;ldquo;standard&amp;rdquo; Go metrics and &lt;a href=&#34;https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;four golden signals&amp;rdquo;&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; metrics as well as few custom platform and business logic-specific metrics.&lt;/p&gt;
 &lt;p&gt;Additionally there&amp;rsquo;re &lt;code&gt;/live&lt;/code&gt; and &lt;code&gt;/ready&lt;/code&gt; endpoints available on &lt;code&gt;$PC_LOCAL_ADDRESS&lt;/code&gt; address that can be used if you run Private Captcha on Kubernetes cluster.&lt;/p&gt;
@@ -372,6 +386,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -392,6 +408,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -416,6 +434,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -444,6 +464,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -466,7 +488,7 @@
         
         &lt;h1&gt;Quick start&lt;/h1&gt;&lt;h2&gt;Prerequisites&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;prerequisites&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#prerequisites&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Docker &lt;a href=&#34;https://docs.docker.com/engine/install/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;installed&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;li&gt;Docker &lt;a href=&#34;https://docs.docker.com/engine/install/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;installed&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;(optional) Reverse proxy like Caddy or Nginx&lt;/li&gt;
@@ -475,7 +497,7 @@
 &lt;li&gt;At least 2GB of RAM&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;1. Clone the self-hosting repo&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-clone-the-self-hosting-repo&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#1-clone-the-self-hosting-repo&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/PrivateCaptcha/self-hosting&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Self-hosting repository&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;a href=&#34;#1-clone-the-self-hosting-repo&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/PrivateCaptcha/self-hosting&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Self-hosting repository&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; contains a Docker-based quickstart template.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
@@ -485,6 +507,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -500,6 +524,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -527,6 +553,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -552,6 +580,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -567,6 +597,8 @@
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -574,7 +606,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2&gt;4. Navigate to the Portal&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4-navigate-to-the-portal&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4-navigate-to-the-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Now you can open &lt;code&gt;$PC_PORTAL_BASE_URL&lt;/code&gt; (e.g. &lt;code&gt;portal.yourdomain.com&lt;/code&gt; or &lt;a href=&#34;http://portal.privatecaptcha.local:8080&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://portal.privatecaptcha.local:8080&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;a href=&#34;#4-navigate-to-the-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Now you can open &lt;code&gt;$PC_PORTAL_BASE_URL&lt;/code&gt; (e.g. &lt;code&gt;portal.yourdomain.com&lt;/code&gt; or &lt;a href=&#34;http://portal.privatecaptcha.local:8080&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://portal.privatecaptcha.local:8080&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;) in browser and log in.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -637,7 +669,7 @@
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;PC_POSTGRES&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;postgres://username:pass@postgres:5432/privatecaptcha&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Postgres connection string&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+          &lt;td&gt;&lt;a href=&#34;https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Postgres connection string&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; for backend DB. You can also specify separate values (see note below).&lt;/td&gt;
       &lt;/tr&gt;

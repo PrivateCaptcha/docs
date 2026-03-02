@@ -41,6 +41,10 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
 
 ## Notable deployment changes
 
+### v1.30.0
+
+- widget has been updated, purge your CDN cache
+
 ### v1.28.1
 
 > NOTE: Versioning now follows semver logic so this release v1.28.x follows v0.0.27 practically speaking
