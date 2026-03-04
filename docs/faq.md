@@ -49,6 +49,12 @@ Yes, please check the [DNS Proxy]({{< relref "/docs/reference/dns-proxy.md" >}})
 
 ## Widget
 
+{{% details title="Widget takes 100% CPU and page freezes" closed="true" %}}
+
+Unless you set a really high difficulty in [Property Settings]({{< relref "/docs/reference/property-settings.md" >}}), the likely problem is that a security policy is blocking WASM workers from doing proof-of-work verification so the plain JavaScript fallback is used (which is much slower). Another possible reason could be that you proxy (an outdated) Private Captcha script which you definitely should not - always make sure to load it from `cdn.privatecaptcha.com`.
+
+{{% /details %}}
+
 {{% details title="'Invisible' mode does not stop bots" closed="true" %}}
 
 If you're using `auto` mode for captcha widget together with "invisible" mode, this offers the least protection (only resource utilization cost). Check our [security guide]({{< relref "/docs/reference/security.md" >}}) in the client section.

@@ -47,7 +47,7 @@ API
 
 <meta
   property="article:modified_time"
-  content="2026-01-31T15:32:40+02:00">
+  content="2026-03-04T09:38:30+01:00">
 
 
 
@@ -55,8 +55,8 @@ API
   <meta itemprop="description" content="Note
 This is a technical FAQ. If you’re looking for product FAQ, click here .
 API Captcha widget does not load the puzzle aka “Maximum number of attempts exceeded” error">
-  <meta itemprop="dateModified" content="2026-01-31T15:32:40+02:00">
-  <meta itemprop="wordCount" content="436">
+  <meta itemprop="dateModified" content="2026-03-04T09:38:30+01:00">
+  <meta itemprop="wordCount" content="507">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="FAQ">
   <meta name="twitter:description" content="Note
@@ -1184,6 +1184,14 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
 <h2>Widget<span class="hx:absolute hx:-mt-20" id="widget"></span>
     <a href="#widget" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
   <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <strong class="hx:text-lg">Widget takes 100% CPU and page freezes</strong>
+  </summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    Unless you set a really high difficulty in <a href="/docs/reference/property-settings/">Property Settings</a>, the likely problem is that a security policy is blocking WASM workers from doing proof-of-work verification so the plain JavaScript fallback is used (which is much slower). Another possible reason could be that you proxy (an outdated) Private Captcha script which you definitely should not - always make sure to load it from <code>cdn.privatecaptcha.com</code>.
+  </div>
+</details>
+<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
     <strong class="hx:text-lg">&lsquo;Invisible&rsquo; mode does not stop bots</strong>
   </summary>
   <div class="hx:p-2 hx:overflow-hidden">
@@ -1229,7 +1237,7 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-01-31T15:32:40.000Z">January 31, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-03-04T09:38:30.000Z">March 4, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/getting-started/"
         title="Getting started"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"

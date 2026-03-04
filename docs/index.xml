@@ -172,6 +172,14 @@
 &lt;h2&gt;Widget&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;widget&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#widget&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
   &lt;summary class=&#34;hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[&#39;&#39;] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx:text-lg&#34;&gt;Widget takes 100% CPU and page freezes&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx:p-2 hx:overflow-hidden&#34;&gt;
+    Unless you set a really high difficulty in &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings/&#34;&gt;Property Settings&lt;/a&gt;, the likely problem is that a security policy is blocking WASM workers from doing proof-of-work verification so the plain JavaScript fallback is used (which is much slower). Another possible reason could be that you proxy (an outdated) Private Captcha script which you definitely should not - always make sure to load it from &lt;code&gt;cdn.privatecaptcha.com&lt;/code&gt;.
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
+  &lt;summary class=&#34;hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[&#39;&#39;] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90&#34;&gt;
     &lt;strong class=&#34;hx:text-lg&#34;&gt;&amp;lsquo;Invisible&amp;rsquo; mode does not stop bots&lt;/strong&gt;
   &lt;/summary&gt;
   &lt;div class=&#34;hx:p-2 hx:overflow-hidden&#34;&gt;
