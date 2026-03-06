@@ -1,0 +1,17 @@
+{{- /*
+Renders all FAQ sections and items from site.Data.faq.
+Each item is rendered using the hextra built-in 'details' shortcode
+via Page.RenderString, so styling stays in sync with the theme.
+
+The question is passed as a quoted shortcode parameter (%q in printf
+handles escaping). The answer is passed as the inner content of the
+shortcode (not a parameter), so no additional escaping is needed.
+*/ -}}
+{{- $page := .Page -}}
+{{- range site.Data.faq.sections -}}
+<h2>{{ .title }}</h2>
+{{ range .items -}}
+{{- $markup := printf "{{%% details title=%q closed=\"true\" %%}}\n%s\n{{%% /details %%}}" .question .answer -}}
+{{ $page.RenderString $markup }}
+{{ end -}}
+{{ end -}}
