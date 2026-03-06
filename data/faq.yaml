@@ -1,0 +1,74 @@
+sections:
+  - title: API
+    items:
+      - question: Captcha widget does not load the puzzle
+        answer: |
+          > aka "Maximum number of attempts exceeded" error
+
+          Please check if you have an active subscription (or active trial period) in the [Billing settings](https://portal.privatecaptcha.com/settings?tab=billing).
+
+      - question: Verification requests fail, but I did everything correctly
+        answer: |
+          We need request ID to tell the exact reason why your request was rejected.
+
+          Each request to Private Captcha API returns request ID, available in each [integration](/docs/integrations/) as a method `traceID()` (or similar) of the response object (or in the exception object) or, if you're using HTTP API directly, in the response header `X-Trace-ID`.
+
+          Please also check our [status page](https://status.privatecaptcha.com) to see if there're any ongoing incidents.
+
+      - question: HTTP 400/403 to all verification requests
+        answer: |
+          Chances are, you're not using a correct API key (e.g. you're using a sitekey instead of API key, or your API key is expired or has invalid scope). Check our [Getting Started](/docs/getting-started/#create-a-new-api-key) guide.
+
+      - question: Test solution passes verification for any sitekey
+        answer: |
+          [Test solution](/docs/reference/testing/) passes verification by design to enable testing.
+
+          Private Captcha [verify API](/docs/reference/verify-api/) returns `success` and `code` fields and **both** fields should be used for verification, which is done in all [integrations](/docs/integrations/) by using method `OK()` (or similar).
+
+          Additionally, you can specify `sitekey` argument with each `/verify` request which will cause `success` field to fail even without `code` check.
+
+          Check our [security guide](/docs/reference/security/#verification) for details.
+
+      - question: Can we proxy/CNAME the API endpoints without self-hosting?
+        answer: |
+          Yes, please check the [DNS Proxy](/docs/reference/dns-proxy/) docs.
+
+  - title: Widget
+    items:
+      - question: Widget takes 100% CPU and page freezes
+        answer: |
+          Unless you set a really high difficulty in [Property Settings](/docs/reference/property-settings/), the likely problem is that a security policy is blocking WASM workers from doing proof-of-work verification so the plain JavaScript fallback is used (which is much slower). Another possible reason could be that you proxy (an outdated) Private Captcha script which you definitely should not - always make sure to load it from `cdn.privatecaptcha.com`.
+
+      - question: "'Invisible' mode does not stop bots"
+        answer: |
+          If you're using `auto` mode for captcha widget together with "invisible" mode, this offers the least protection (only resource utilization cost). Check our [security guide](/docs/reference/security/) in the client section.
+
+      - question: I want to use the same sitekey on multiple domains
+        answer: |
+          This scenario is not possible as it compromises security of Private Captcha solution, not to mention inherent problems like "noisy neighbor" (load of one domain affects the other domains puzzle difficulty).
+
+          Private Captcha allows to have the same sitekey on multiple [subdomains](/docs/reference/property-settings/#subdomains) only (which is also not recommended for the same reasons).
+
+      - question: Does WordPress integration support widget popup mode?
+        answer: |
+          Currently widget only works in default mode, particularly for security reasons, but it is possible this will be available in future. Please contact support with your use-case.
+
+  - title: Misc
+    items:
+      - question: Best practices for using Private Captcha during development
+        answer: |
+          Create a separate property and set [Allow localhost](/docs/reference/property-settings/#localhost) setting. Use a different sitekey and API key for prod.
+
+          Alternatively you can use a [stub sitekey](/docs/reference/testing/) which always passes verification.
+
+      - question: Is it possible to import domains in bulk to Private Captcha?
+        answer: |
+          Yes, please check our [Platform API](/docs/reference/platform-api/) docs.
+
+      - question: Still getting bot submissions (spam) even though widget is added
+        answer: |
+          Just inserting widget into the form is not enough:
+          1. Form "submit" mechanism has to be disabled until the captcha is solved
+          2. Captcha solution has to be verified on the backend before form submission is processed
+
+          Please check our [end-to-end tutorial](/docs/tutorials/complete-example/) to understand how the big picture works.
