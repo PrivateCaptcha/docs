@@ -1,6 +1,9 @@
 # Complete example
 In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer (meaning, you don't have to have a running server in the cloud).
 
+> [!NOTE]
+> For transparency, in this tutorial everything is implemented from scratch, but in production one would typically use our [existing integrations]({{< relref "/docs/integrations/" >}}).
+
 ## Basic webpage and server
 
 {{< filetree/container >}}
