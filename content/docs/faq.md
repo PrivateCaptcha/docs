@@ -95,3 +95,13 @@ Alternatively you can use a [stub sitekey]({{< relref "/docs/reference/testing.m
 Yes, please check our [Platform API]({{< relref "/docs/reference/platform-api.md" >}}) docs.
 
 {{% /details %}}
+
+{{% details title="Still getting bot submissions (spam) even though widget is added" closed="true" %}}
+
+Just inserting widget into the form is not enough:
+1. Form "submit" mechanism has to be disabled until the captcha is solved
+2. Captcha solution has to be verified on the backend before form submission is processed
+
+Please check our [end-to-end tutorial]({{< relref "/docs/tutorials/complete-example.md" >}}) to understand how the big picture works.
+
+{{% /details %}}
