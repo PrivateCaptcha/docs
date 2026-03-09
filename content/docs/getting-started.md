@@ -62,6 +62,14 @@ After creation, the API key value will be displayed. **Copy it immediately** and
 
 {{% /steps %}}
 
+
+## Security checklist
+
+Just few useful thing to check if everything is setup correctly:
+
+- [ ] You cannot submit your HTML form without having to click captcha widget (form submission is not blocked automatically, you have to hook into captcha solved event)
+- [ ] Your backend form processing does not process the form submission without verifying captcha **first**
+
 ## Next steps
 
 Now that you have a property with a _Sitekey_ (for client-side widget) and an API key (for server-side verification), you can proceed to:
