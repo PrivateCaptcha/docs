@@ -52,3 +52,5 @@ Make sure to automatically update your client library version for Private Captch
 ### API key rotation
 
 Each API key that you use for the **server-side** validation, has an expiration date and will either expire or will have to be rotated. You should receive an email notification before your API key is expired.
+
+When you rotate an API key, it gets invalidated/replaced _almost_ immediately (taking into account few minutes for DB cache / replication).
