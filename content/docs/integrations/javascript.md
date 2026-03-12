@@ -22,7 +22,7 @@ This is a **server-side** SDK, which you would use to verify captcha solution ag
 ## Installation
 
 ```bash
-npm install private-captcha-js
+npm install @private-captcha/private-captcha-js
 ```
 
 ## Usage
