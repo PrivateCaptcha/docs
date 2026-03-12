@@ -419,7 +419,7 @@ function checkSolution(solution, apiKey) {
     });
 }
 
-const page = (backgroundColor) => `<!DOCTYPE html><html><body style="background-color: ${backgroundColor};"></body></html>`;
+const resultPage = (backgroundColor) => `<!DOCTYPE html><html><body style="background-color: ${backgroundColor};"></body></html>`;
 
 const server = http.createServer((req, res) => {
     if (req.url === '/submit' && req.method === 'POST') {
@@ -433,9 +433,9 @@ const server = http.createServer((req, res) => {
             const captchaSolution = formData.get('private-captcha-solution') ?? '';
             try {
                 await checkSolution(captchaSolution, 'your-api-key');
-                res.end(page('green'));
+                res.end(resultPage('green'));
             } catch (error) {
-                res.end(page('red'));
+                res.end(resultPage('red'));
             }
         });
         return;
@@ -459,7 +459,9 @@ const server = http.createServer((req, res) => {
     res.end('Not found');
 });
 
-server.listen(8081);
+server.listen(8081, () => {
+    console.log('Listening on http://localhost:8081/');
+});
 ```
 {{< /tab >}}
 {{< /tabs >}}
