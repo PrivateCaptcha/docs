@@ -87,8 +87,8 @@ You can run it using `go run main.go` and open [http://localhost:8081/](http://l
 {{< /tab >}}
 {{< tab >}}
 ```javascript {filename="server.js"}
-const fs = require('node:fs');
-const http = require('node:http');
+const fs = require('fs');
+const http = require('http');
 
 const server = http.createServer((req, res) => {
     if (req.url === '/' && req.method === 'GET') {
@@ -379,9 +379,9 @@ func main() {
 {{< /tab >}}
 {{< tab >}}
 ```javascript {filename="server.js"}
-const fs = require('node:fs');
-const http = require('node:http');
-const https = require('node:https');
+const fs = require('fs');
+const http = require('http');
+const https = require('https');
 
 function checkSolution(solution, apiKey) {
     return new Promise((resolve, reject) => {
@@ -419,23 +419,52 @@ function checkSolution(solution, apiKey) {
     });
 }
 
-const resultPage = (backgroundColor) => `<!DOCTYPE html><html><body style="background-color: ${backgroundColor};"></body></html>`;
+const RESULT_PAGES = {
+    green: '<!DOCTYPE html><html><body style="background-color: green;"></body></html>',
+    red: '<!DOCTYPE html><html><body style="background-color: red;"></body></html>',
+};
+const CAPTCHA_SOLUTION_FIELD = 'private-captcha-solution';
+const MAX_BODY_SIZE = 10000;
 
 const server = http.createServer((req, res) => {
     if (req.url === '/submit' && req.method === 'POST') {
+        const contentType = req.headers['content-type'] ?? '';
+        if (!contentType.startsWith('application/x-www-form-urlencoded')) {
+            res.statusCode = 415;
+            res.end('Unsupported Media Type');
+            return;
+        }
+
+        const apiKey = process.env.PRIVATE_CAPTCHA_API_KEY;
+        if (!apiKey) {
+            res.statusCode = 500;
+            res.end('Missing PRIVATE_CAPTCHA_API_KEY');
+            return;
+        }
+
         let body = '';
+        let requestTooLarge = false;
         req.setEncoding('utf8');
         req.on('data', (chunk) => {
             body += chunk;
+            if (body.length > MAX_BODY_SIZE) {
+                requestTooLarge = true;
+                res.statusCode = 413;
+                res.end('Payload Too Large');
+                req.destroy();
+            }
         });
         req.on('end', async () => {
+            if (requestTooLarge) {
+                return;
+            }
             const formData = new URLSearchParams(body);
-            const captchaSolution = formData.get('private-captcha-solution') ?? '';
+            const captchaSolution = formData.get(CAPTCHA_SOLUTION_FIELD) || '';
             try {
-                await checkSolution(captchaSolution, 'your-api-key');
-                res.end(resultPage('green'));
+                await checkSolution(captchaSolution, apiKey);
+                res.end(RESULT_PAGES.green);
             } catch (error) {
-                res.end(resultPage('red'));
+                res.end(RESULT_PAGES.red);
             }
         });
         return;
