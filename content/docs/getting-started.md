@@ -4,7 +4,9 @@ type: docs
 weight: 1
 ---
 
-Before integrating Private Captcha into your application, you need to complete a few setup steps in the [Private Captcha Portal](https://portal.{{< domain >}}).
+{{< callout >}}
+If you're new to using CAPTCHAs in general, read our [quick explanation]({{< relref "docs/tutorials/captcha-101.md" >}}) first.
+{{< /callout >}}
 
 ## Prerequisites
 
