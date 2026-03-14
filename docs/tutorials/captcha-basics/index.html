@@ -10,7 +10,7 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>How CAPTCHA works – Private Captcha</title>
   <meta name="description" content="Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).
-sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/captcha-101/" itemprop="url" />
+sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/captcha-basics/" itemprop="url" />
 
 <meta property="og:title" content="How CAPTCHA works">
 <meta
@@ -45,19 +45,19 @@ Frontend
   content="
     article
   ">
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/captcha-101/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/captcha-basics/"><meta property="article:section" content="docs">
 
 
 <meta
   property="article:modified_time"
-  content="2026-03-13T10:22:53+01:00">
+  content="2026-03-14T20:28:15+01:00">
 
 
 
   <meta itemprop="name" content="How CAPTCHA works">
   <meta itemprop="description" content="Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).
 sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers.">
-  <meta itemprop="dateModified" content="2026-03-13T10:22:53+01:00">
+  <meta itemprop="dateModified" content="2026-03-14T20:28:15+01:00">
   <meta itemprop="wordCount" content="238">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="How CAPTCHA works">
@@ -356,7 +356,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
-      href="/docs/tutorials/captcha-101/"
+      href="/docs/tutorials/captcha-basics/"
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">How CAPTCHA works</span>
@@ -883,7 +883,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
         hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
-      href="/docs/tutorials/captcha-101/"
+      href="/docs/tutorials/captcha-basics/"
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">How CAPTCHA works</span>
@@ -1084,7 +1084,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
         <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#backend">Backend
         </a>
       </li></ul>
-      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:inline-block hx:rounded-sm hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50 hx:hextra-focus-visible-inset" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/tutorials/captcha-101.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:inline-block hx:rounded-sm hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50 hx:hextra-focus-visible-inset" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/tutorials/captcha-basics.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button id="backToTop" tabindex="-1" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -1115,7 +1115,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
       <div class="hx:inline-flex hx:rounded-lg hx:border hx:border-gray-200 hx:transition-colors hx:hover:border-gray-300 hx:dark:border-neutral-800 hx:dark:hover:border-neutral-700">
         <button
           class="hextra-page-context-menu-copy hx:group/copybtn hx:inline-flex hx:cursor-pointer hx:items-center hx:gap-1.5 hx:bg-transparent hx:px-2.5 hx:py-1 hx:text-sm hx:font-medium hx:text-gray-700 hx:transition-colors hx:hover:bg-slate-50 hx:dark:text-gray-300 hx:dark:hover:bg-neutral-900 hx:ltr:rounded-l-lg hx:rtl:rounded-r-lg hx:hextra-focus-visible-inset"
-          data-url="https://docs.privatecaptcha.com/docs/tutorials/captcha-101.md"
+          data-url="https://docs.privatecaptcha.com/docs/tutorials/captcha-basics.md"
           title="Copy as Markdown"
           aria-label="Copy as Markdown"
         >
@@ -1147,7 +1147,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
         <li role="none">
           <button
             data-action="view"
-            data-url="https://docs.privatecaptcha.com/docs/tutorials/captcha-101.md"
+            data-url="https://docs.privatecaptcha.com/docs/tutorials/captcha-basics.md"
             role="menuitem"
             class="hx:flex hx:w-full hx:cursor-pointer hx:select-none hx:items-center hx:gap-2 hx:whitespace-nowrap hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:text-gray-700 hx:outline-none hx:transition-colors hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-gray-300 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100"
           >
@@ -1156,7 +1156,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
           </button>
         </li><li class="hx:my-1 hx:h-px hx:bg-gray-200 hx:dark:bg-neutral-700" role="separator"></li><li role="none">
             <a
-              href="https://chat.openai.com/?q=Hi%20ChatGPT!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Ftutorials%2Fcaptcha-101%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
+              href="https://chat.openai.com/?q=Hi%20ChatGPT!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Ftutorials%2Fcaptcha-basics%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
               target="_blank"
               rel="noopener noreferrer"
               role="menuitem"
@@ -1165,7 +1165,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
             </a>
           </li><li role="none">
             <a
-              href="https://claude.ai/new?q=Hi%20Claude!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Ftutorials%2Fcaptcha-101%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
+              href="https://claude.ai/new?q=Hi%20Claude!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Ftutorials%2Fcaptcha-basics%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
               target="_blank"
               rel="noopener noreferrer"
               role="menuitem"
@@ -1217,7 +1217,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-03-13T10:22:53.000Z">March 13, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-03-14T20:28:15.000Z">March 14, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/tutorials/complete-example/"
         title="Complete example"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
