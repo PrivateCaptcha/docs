@@ -5,7 +5,7 @@ weight: 1
 ---
 
 {{< callout >}}
-If you're new to using CAPTCHAs in general, read our [quick explanation]({{< relref "docs/tutorials/captcha-101.md" >}}) first.
+If you're new to using CAPTCHAs in general, read our [quick explanation]({{< relref "docs/tutorials/captcha-basics.md" >}}) first.
 {{< /callout >}}
 
 ## Prerequisites
