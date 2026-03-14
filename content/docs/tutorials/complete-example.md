@@ -17,7 +17,7 @@ In this tutorial we will create a simple html form, serve it locally with a simp
 {{< filetree/container >}}
   {{< filetree/folder name="./" >}}
     {{< filetree/file name="index.html" >}}
-    {{< filetree/file name="main.go" >}}
+    {{< filetree/file name="main.go (or server.js)" >}}
   {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
@@ -58,9 +58,9 @@ Create a simple page with a form element in the middle of the page.
 </html>
 ```
 
-And a web-server that will serve it (Go is used here as an example).
+And a web-server that will serve it (Go and Node.js are used here as examples).
 
-{{< tabs items="Go" >}}
+{{< tabs items="Go,Node JS" >}}
 {{< tab >}}
 ```go {filename="main.go"}
 package main
@@ -87,6 +87,37 @@ func main() {
 ```
 
 You can run it using `go run main.go` and open [http://localhost:8081/](http://localhost:8081/) in the browser.
+{{< /tab >}}
+{{< tab >}}
+```javascript {filename="server.js"}
+const fs = require('node:fs');
+const http = require('node:http');
+
+const server = http.createServer((req, res) => {
+    if (req.url === '/' && req.method === 'GET') {
+        fs.readFile('index.html', (err, html) => {
+            if (err) {
+                res.statusCode = 500;
+                res.end('Internal Server Error');
+                return;
+            }
+
+            res.setHeader('Content-Type', 'text/html; charset=utf-8');
+            res.end(html);
+        });
+        return;
+    }
+
+    res.statusCode = 404;
+    res.end('Not found');
+});
+
+server.listen(8081, () => {
+    console.log('Listening on http://localhost:8081/');
+});
+```
+
+You can run it using `node server.js` and open [http://localhost:8081/](http://localhost:8081/) in the browser.
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -240,7 +271,7 @@ To [verify solution]({{< relref "/docs/reference/verify-api.md" >}}) we need to 
 > [!NOTE]
 > Make sure to use your own API key
 
-{{< tabs items="Diff,Go" >}}
+{{< tabs items="Diff,Go,Node JS" >}}
 {{< tab >}}
 ```diff {filename="main.go"}
 @@ -1,11 +1,60 @@
@@ -349,6 +380,50 @@ func main() {
 }
 ```
 {{< /tab >}}
+{{< tab >}}
+```javascript {filename="server.js"}
+const http = require('node:http');
+const fs = require('node:fs');
+
+async function checkSolution(solution, apiKey) {
+    const response = await fetch('https://api.privatecaptcha.com/verify', {
+        method: 'POST',
+        headers: { 'X-Api-Key': apiKey },
+        body: solution
+    });
+    
+    const data = await response.json();
+    if (!data.success || data.code !== 0) {
+        throw new Error('solution is not correct');
+    }
+}
+
+const resultPage = (color) => `<!DOCTYPE html><html><body style="background-color: ${color};"></body></html>`;
+
+const server = http.createServer(async (req, res) => {
+    if (req.url === '/submit' && req.method === 'POST') {
+        let body = '';
+        for await (const chunk of req) body += chunk; 
+
+        const formData = new URLSearchParams(body);
+        const captchaSolution = formData.get('private-captcha-solution') ?? '';
+        
+        try {
+            await checkSolution(captchaSolution, 'your-api-key');
+            res.end(resultPage('green'));
+        } catch (error) {
+            res.end(resultPage('red'));
+        }
+        return;
+    }
+    // ... handle other routes
+});
+
+server.listen(8081, () => {
+    console.log('Listening on http://localhost:8081/');
+});
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Finale
@@ -371,7 +446,7 @@ And, if you print verify response to the console, you will get this json:
 
 ### Full code
 
-Congratulations on completing this tutorial! You can find full code in [this gist](https://gist.github.com/ribtoks/1c0c0f70c89cdda7de656df01d5d19c8).
+Congratulations on completing this tutorial! You can find the full Go version of the code in [this gist](https://gist.github.com/ribtoks/1c0c0f70c89cdda7de656df01d5d19c8) and Node JS version in [this gist](https://gist.github.com/ribtoks/c59a9fed190532bde91b947e97a5e80c).
 
 ### Troubleshooting
 
