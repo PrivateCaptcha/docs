@@ -1,5 +1,5 @@
 ---
-title: "DNS Proxy"
+title: "DNS proxy"
 date: 2026-01-19T16:42:03+02:00
 ---
 

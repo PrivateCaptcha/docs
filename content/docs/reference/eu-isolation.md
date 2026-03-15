@@ -1,5 +1,5 @@
 ---
-title: EU Isolation
+title: EU isolation
 type: docs
 ---
 
