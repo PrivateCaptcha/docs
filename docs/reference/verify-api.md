@@ -31,6 +31,8 @@ curl -X POST \
 > [!NOTE]
 > Usually you would **not** send that `POST` request yourself, but use one of our [pre-built integrations]({{< relref "/docs/integrations" >}}).
 
+Additionally, for `/verify` request you can set `X-PC-Sitekey` header with the "intended" sitekey for which you are verifying the solution. This reduces number of attack vectors and tightens security.
+
 ## Response
 
 Here's how a successful response from `/verify` endpoint looks like:
@@ -79,6 +81,6 @@ Code | Error | Description
 
 There are a couple of cases, when `success` in response will be equal to `true` (successful verification), but `code` will not be zero. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):
 
-- When you're using a [test property]({{< relref "/docs/reference/testing.md" >}}), `code` will be `property-test` (but verification will succeed).
+- When you're using a [test property]({{< relref "/docs/reference/testing.md" >}}), `code` will be `property-test` (but verification might succeed).
 - During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, `success` in response is equal to `true`, but `code` will be `maintenance-mode`.
 - If you configured property to _"Accept repeated solutions"_ (during verification window), verification of repeated solution will cause `code` to be `solution-verified-before`.

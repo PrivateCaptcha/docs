@@ -40,7 +40,7 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
 
 <meta
   property="article:modified_time"
-  content="2025-12-31T17:26:30+01:00">
+  content="2026-03-16T13:43:41+01:00">
 
 
 
@@ -48,8 +48,8 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
   <meta itemprop="description" content="Note
 There’re many ready integrations available and API is also available here as Swagger / OpenAPI definition.
 After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by data-solution-field attribute).">
-  <meta itemprop="dateModified" content="2025-12-31T17:26:30+01:00">
-  <meta itemprop="wordCount" content="478">
+  <meta itemprop="dateModified" content="2026-03-16T13:43:41+01:00">
+  <meta itemprop="wordCount" content="507">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Verify API">
   <meta name="twitter:description" content="Note
@@ -1256,6 +1256,7 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Usually you would <strong>not</strong> send that <code>POST</code> request yourself, but use one of our <a href="/docs/integrations/">pre-built integrations</a>.</p></div>
   </div>
 </div>
+<p>Additionally, for <code>/verify</code> request you can set <code>X-PC-Sitekey</code> header with the &ldquo;intended&rdquo; sitekey for which you are verifying the solution. This reduces number of attack vectors and tightens security.</p>
 <h2>Response<span class="hx:absolute hx:-mt-20" id="response"></span>
     <a href="#response" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Here&rsquo;s how a successful response from <code>/verify</code> endpoint looks like:</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
@@ -1369,7 +1370,7 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
 <h3>Errors during successful verification<span class="hx:absolute hx:-mt-20" id="errors-during-successful-verification"></span>
     <a href="#errors-during-successful-verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>There are a couple of cases, when <code>success</code> in response will be equal to <code>true</code> (successful verification), but <code>code</code> will not be zero. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):</p>
 <ul>
-<li>When you&rsquo;re using a <a href="/docs/reference/testing/">test property</a>, <code>code</code> will be <code>property-test</code> (but verification will succeed).</li>
+<li>When you&rsquo;re using a <a href="/docs/reference/testing/">test property</a>, <code>code</code> will be <code>property-test</code> (but verification might succeed).</li>
 <li>During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, <code>success</code> in response is equal to <code>true</code>, but <code>code</code> will be <code>maintenance-mode</code>.</li>
 <li>If you configured property to <em>&ldquo;Accept repeated solutions&rdquo;</em> (during verification window), verification of repeated solution will cause <code>code</code> to be <code>solution-verified-before</code>.</li>
 </ul>
@@ -1377,7 +1378,7 @@ After captcha widget has finished solving the puzzle, it adds a hidden form fiel
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2025-12-31T17:26:30.000Z">December 31, 2025</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-03-16T13:43:41.000Z">March 16, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/testing/"
         title="Testing"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
