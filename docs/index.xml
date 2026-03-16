@@ -250,6 +250,159 @@
     </item>
     
     <item>
+      <title>Difficulty rules</title>
+      <link>https://docs.privatecaptcha.com/docs/reference/rules/</link>
+      <pubDate>Sun, 15 Mar 2026 12:40:53 +0100</pubDate>
+      
+      <guid>https://docs.privatecaptcha.com/docs/reference/rules/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Difficulty rules is a system of custom modifiers for CAPTCHA puzzle difficulty returned for the end-user, based on various conditions.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rules-example.png&#34; title=&#34;Example of a couple of difficulty rules&#34; alt=&#34;Difficulty rules example&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example of a couple of difficulty rules&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h2&gt;Building a Difficulty rule&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;building-a-difficulty-rule&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#building-a-difficulty-rule&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Difficulty rule consists of two parts: &lt;strong&gt;Condition&lt;/strong&gt; and &lt;strong&gt;Action&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-structure.png&#34; title=&#34;Structure of the difficulty rule&#34; alt=&#34;Difficulty rules structure&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Structure of the difficulty rule&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Condition and Action have different background colors in the list of rules and in the rule builder.&lt;/p&gt;
+&lt;h3&gt;Conditions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;conditions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#conditions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Conditions consist of the property of the request being matched, an operator that is applied to that property and a value it is matched against.&lt;/p&gt;
+&lt;h4&gt;User Agent&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;user-agent&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#user-agent&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Standard condition is the condition that matches &lt;code&gt;User-Agent&lt;/code&gt; HTTP header using the following operators:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Equals&lt;/li&gt;
+&lt;li&gt;Contains&lt;/li&gt;
+&lt;li&gt;Empty&lt;/li&gt;
+&lt;li&gt;Known bot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(each operator can be negated, so that &lt;code&gt;&amp;quot;Empty&amp;quot;&lt;/code&gt; becomes &lt;code&gt;&amp;quot;Not empty&amp;quot;&lt;/code&gt;). Note that &lt;code&gt;Contains&lt;/code&gt; is case-insensitive here.&lt;/p&gt;
+&lt;p&gt;Condition operator &lt;code&gt;&amp;quot;Known Bot&amp;quot;&lt;/code&gt; covers all requesters that identify themselves as bots (curl, Python requests module and many others).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-user-agent.png&#34; title=&#34;Example: match all &amp;#39;curl&amp;#39; requests&#34; alt=&#34;Difficulty rules User Agent&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: match all &amp;#39;curl&amp;#39; requests&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;Traffic Source&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;traffic-source&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#traffic-source&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;This condition is available &lt;strong&gt;only&lt;/strong&gt; in SaaS version of Private Captcha at &lt;em&gt;privatecaptcha.com&lt;/em&gt;. It is not available in the self-hosted version.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Traffic sources are IP ranges maintained by &lt;em&gt;privatecaptcha.com&lt;/em&gt; service and consist of the following lists:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloud providers (AWS, GCP, Azure, Hetzner, and many many others)&lt;/li&gt;
+&lt;li&gt;CDN providers (Cloudflare, Fastly, Akamai, and others)&lt;/li&gt;
+&lt;li&gt;TOR network exit nodes&lt;/li&gt;
+&lt;li&gt;VPN providers (Mullvad, ProtonVPN, and others)&lt;/li&gt;
+&lt;li&gt;Consumer proxies (mainly Apple Private Relay)&lt;/li&gt;
+&lt;li&gt;Search crawlers (Googlebot, Bingbot, GTPBot, and many others)&lt;/li&gt;
+&lt;li&gt;Firehol list (Level 1 and Level 2 combined)&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Common Threats&amp;rdquo; (Blocklist DE, NETMOUNTAINS, Emerging Threats, and CINS Army list)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These lists are not complete (e.g. for TOR network they don&amp;rsquo;t cover literally &lt;em&gt;all&lt;/em&gt; exit nodes), but they cover the vast majority of the providers and are comprehensive enough for &lt;code&gt;99.9%&lt;/code&gt; of the use-cases.&lt;/p&gt;
+&lt;p&gt;These lists are kept up-to-date automatically.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-traffic-source.png&#34; title=&#34;Example: match requests from TOR, VPN and search crawlers&#34; alt=&#34;Difficulty rules Traffic Source&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: match requests from TOR, VPN and search crawlers&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;IP Address&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;ip-address&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#ip-address&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;You can match standard IP addresses using standard CIDR notation with a list of up to &lt;code&gt;10&lt;/code&gt; comma-separated prefixes. Both IPv4 and IPv6 addresses work. Supported operators:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Matches&lt;/li&gt;
+&lt;li&gt;Empty&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example, this can be useful as an allow-list for your organization IP ranges.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-ip-address.png&#34; title=&#34;Example: match local networks&#34; alt=&#34;Difficulty rules IP address&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: match local networks&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;Country&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;country&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#country&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Detected country of the request, available as a list of countries.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-country.png&#34; title=&#34;Example: match suspicious requests from Antarctica&#34; alt=&#34;Difficulty rules Country&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: match suspicious requests from Antarctica&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;HTTP Header&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;http-header&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#http-header&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Match if the request has (or has not) one of up to &lt;code&gt;10&lt;/code&gt; comma-separated HTTP headers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-header.png&#34; title=&#34;Example: match requests from Cloudflare Workers&#34; alt=&#34;Difficulty rules HTTP header&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: match requests from Cloudflare Workers&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;Actions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;actions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#actions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;When few conditions match and have the same action type, only the last modification counts.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Actions typically mean adjusting the puzzle difficulty or blocking the request completely. Also here you can decide on the control flow if to keep processing the other difficulty rules after this one.&lt;/p&gt;
+&lt;h4&gt;Difficulty level&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;difficulty-level&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#difficulty-level&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Difficulty of the puzzle can be adjusted in percents (&lt;code&gt;%&lt;/code&gt;) where percents mean &amp;ldquo;resources&amp;rdquo;. So &lt;code&gt;+100%&lt;/code&gt; adjustment means puzzle will require &lt;code&gt;100%&lt;/code&gt; more compute resources to complete. This adjustment is applied on top of the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings/#base-difficulty&#34;&gt;Base difficulty&lt;/a&gt; and &lt;strong&gt;not&lt;/strong&gt; the final difficulty. It means that on top of that automatic difficulty scaling will take place. You can both increase and decrease difficulty using this action.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-level.png&#34; title=&#34;Example: require &amp;#43;50% more compute resources&#34; alt=&#34;Difficulty rules Level&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: require &amp;#43;50% more compute resources&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;Difficulty growth&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;difficulty-growth&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#difficulty-growth&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings/#difficulty-growth&#34;&gt;Difficulty growth&lt;/a&gt; (how reactive is automatic difficulty scaling to changes in requests) can be adjusted to any valid level here.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-growth.png&#34; title=&#34;Example: change difficulty growth to &amp;#39;Fast&amp;#39; for this request&#34; alt=&#34;Difficulty rules Growth&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: change difficulty growth to &amp;#39;Fast&amp;#39; for this request&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;Block request&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;block-request&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#block-request&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;You can simply block the request, ultimately meaning that form submission will never pass CAPTCHA &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/verify-api/&#34;&gt;verification&lt;/a&gt; (because there will be no CAPTCHA solution in the first place).&lt;/p&gt;
+&lt;p&gt;Note that blocking the request automatically means that following rules will not be processed (like if you clicked &lt;em&gt;&amp;ldquo;Stop processing following rules&amp;rdquo;&lt;/em&gt; on any other rule action).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-block.png&#34; title=&#34;Example: block CAPTCHA request completely&#34; alt=&#34;Difficulty rules Block&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: block CAPTCHA request completely&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;Break / noop&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;break--noop&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#break--noop&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;There&amp;rsquo;s a &lt;code&gt;break&lt;/code&gt; semantics control flow that allows you to stop processing following rules without any action. This preserves any previous modifiers made by matching rules.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-break.png&#34; title=&#34;Example: &amp;#39;break&amp;#39; from rules&#34; alt=&#34;Difficulty rules Break&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: &amp;#39;break&amp;#39; from rules&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h2&gt;Priority and conflict resolution&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;priority-and-conflict-resolution&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#priority-and-conflict-resolution&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Organization vs Property&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;organization-vs-property&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#organization-vs-property&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Property-level rules will be applied to the request &lt;strong&gt;after&lt;/strong&gt; Organization rules.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;All rules defined on the Organization level will apply to all properties in that organization. This is a very convenient way to manage rules of many properties at once.&lt;/p&gt;
+&lt;h3&gt;Multiple applied rules&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;multiple-applied-rules&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#multiple-applied-rules&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;When the request is matched to a few rules and same action is applied (e.g. &lt;code&gt;Difficulty level&lt;/code&gt; adjustment, but with different values), only last modification is preserved (aka &lt;em&gt;&amp;ldquo;last-write wins&amp;rdquo;&lt;/em&gt;).&lt;/p&gt;
+&lt;h2&gt;Reports&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;reports&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#reports&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Usage reports are available only on property level and show how many times property rules were triggered.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-reports.png&#34; alt=&#34;Difficulty rules reports&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Recommendations&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;recommendations&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#recommendations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;It is recommended to make use of &lt;a href=&#34;#traffic-source&#34;&gt;Traffic Source&lt;/a&gt; (cover at least Cloud providers, Search/Crawlers and &amp;ldquo;Threat&amp;rdquo; lists) and bot &lt;a href=&#34;#user-agent&#34;&gt;User-Agent&lt;/a&gt; right away as those are very classical spammers/abusers.&lt;/p&gt;
+&lt;p&gt;You can also change both &lt;a href=&#34;#difficulty-growth&#34;&gt;Growth&lt;/a&gt; and &lt;a href=&#34;#difficulty-levels&#34;&gt;Level&lt;/a&gt; independently as they help each other and do not conflict.&lt;/p&gt;
+&lt;h2&gt;Limits&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;limits&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#limits&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SaaS version of &lt;a href=&#34;privatecaptcha.com&#34;&gt;Private Captcha&lt;/a&gt; has different limits for number of Organization-level and Property-level rules (subject to having specific add-ons). By default every Property has 1 rule included.&lt;/p&gt;
+&lt;p&gt;Self-hosted version (&lt;em&gt;&amp;ldquo;Enterprise Edition&amp;rdquo;&lt;/em&gt;) has no rule limit, while &lt;em&gt;&amp;ldquo;Community Edition&amp;rdquo;&lt;/em&gt; does not have the rules feature at all.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Client side</title>
       <link>https://docs.privatecaptcha.com/docs/integrations/client-side/</link>
       <pubDate>Fri, 13 Mar 2026 09:39:18 +0100</pubDate>

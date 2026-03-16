@@ -8,36 +8,28 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>How CAPTCHA works – Private Captcha</title>
-  <meta name="description" content="Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).
-sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/captcha-basics/" itemprop="url" />
+<title>Difficulty rules – Private Captcha</title>
+  <meta name="description" content="Difficulty rules is a system of custom modifiers for CAPTCHA puzzle difficulty returned for the end-user, based on various conditions.
+Example of a couple of difficulty rules Building a Difficulty rule Difficulty rule consists of two parts: Condition and Action.
+Structure of the difficulty rule Condition and Action have different background colors in the list of rules and in the rule builder." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/rules/" itemprop="url" />
 
-<meta property="og:title" content="How CAPTCHA works">
+<meta property="og:title" content="Difficulty rules">
 <meta
   property="og:description"
   content="
     
-      Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).
+      Difficulty rules is a system of custom modifiers for CAPTCHA puzzle difficulty returned for the end-user, based on various conditions.
 
+    
+    Example of a couple of difficulty rules
   
-    sequenceDiagram
-    actor User
-    participant Browser
-    participant Server
-    participant CAPTCHAProvider as CAPTCHA Provider
+Building a Difficulty rule
+    Difficulty rule consists of two parts: Condition and Action.
 
-    User-&gt;&gt;Browser: Solve the challenge
-    Browser--&gt;&gt;Browser: Challenge passed — token generated
-
-    User-&gt;&gt;Browser: Submit form
-    Browser-&gt;&gt;Server: Form data &#43; token
-    Server-&gt;&gt;CAPTCHAProvider: Is this token valid?
-    CAPTCHAProvider--&gt;&gt;Server: Yes / No
-    Server-&gt;&gt;Server: Process form (only if valid)
+    
+    Structure of the difficulty rule
   
-
-Frontend
-    You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider&rsquo;s servers.
+Condition and Action have different background colors in the list of rules and in the rule builder.
     
   ">
 <meta
@@ -45,24 +37,31 @@ Frontend
   content="
     article
   ">
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/captcha-basics/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/rules/"><meta property="article:section" content="docs">
+
+<meta
+  property="article:published_time"
+  content="2026-03-15T12:40:53+01:00">
 
 
 <meta
   property="article:modified_time"
-  content="2026-03-14T20:28:15+01:00">
+  content="2026-03-16T15:48:38+01:00">
 
 
 
-  <meta itemprop="name" content="How CAPTCHA works">
-  <meta itemprop="description" content="Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).
-sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers.">
-  <meta itemprop="dateModified" content="2026-03-14T20:28:15+01:00">
-  <meta itemprop="wordCount" content="238">
+  <meta itemprop="name" content="Difficulty rules">
+  <meta itemprop="description" content="Difficulty rules is a system of custom modifiers for CAPTCHA puzzle difficulty returned for the end-user, based on various conditions.
+Example of a couple of difficulty rules Building a Difficulty rule Difficulty rule consists of two parts: Condition and Action.
+Structure of the difficulty rule Condition and Action have different background colors in the list of rules and in the rule builder.">
+  <meta itemprop="datePublished" content="2026-03-15T12:40:53+01:00">
+  <meta itemprop="dateModified" content="2026-03-16T15:48:38+01:00">
+  <meta itemprop="wordCount" content="840">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="How CAPTCHA works">
-  <meta name="twitter:description" content="Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).
-sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers.">
+  <meta name="twitter:title" content="Difficulty rules">
+  <meta name="twitter:description" content="Difficulty rules is a system of custom modifiers for CAPTCHA puzzle difficulty returned for the end-user, based on various conditions.
+Example of a couple of difficulty rules Building a Difficulty rule Difficulty rule consists of two parts: Condition and Action.
+Structure of the difficulty rule Condition and Action have different background colors in the list of rules and in the rule builder.">
 
     <link rel="preload" href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" as="style" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
     <link href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" rel="stylesheet" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
@@ -94,13 +93,13 @@ sequenceDiagram actor User participant Browser participant Server participant CA
   title=""
   href="/docs/reference"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
 ><span class="hx:text-center">Reference</span>
 </a><a
   title=""
   href="/docs/tutorials"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
 ><span class="hx:text-center">Tutorials</span>
 </a><a
   title=""
@@ -181,7 +180,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
     <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
       
       
-          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:ltr:pr-8 hx:rtl:pl-8
       hx:hextra-focus-visible-inset
@@ -191,19 +190,52 @@ sequenceDiagram actor User participant Browser participant Server participant CA
     >
       <span class="hx:min-w-0 [word-break:break-word]">Reference</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
       href="/docs/reference/rules/"
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">Difficulty rules</span>
     </a>
   </div>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#building-a-difficulty-rule"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Building a Difficulty rule</a>
+            </li>
+          <li>
+              <a
+                href="#priority-and-conflict-resolution"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Priority and conflict resolution</a>
+            </li>
+          <li>
+              <a
+                href="#reports"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Reports</a>
+            </li>
+          <li>
+              <a
+                href="#recommendations"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Recommendations</a>
+            </li>
+          <li>
+              <a
+                href="#limits"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Limits</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
@@ -315,7 +347,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
               
             </li></ul>
       </div></li>
-          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:ltr:pr-8 hx:rtl:pl-8
       hx:hextra-focus-visible-inset
@@ -325,7 +357,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
     >
       <span class="hx:min-w-0 [word-break:break-word]">Tutorials</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
@@ -363,26 +395,17 @@ sequenceDiagram actor User participant Browser participant Server participant CA
     </a>
   </div>
               
-            </li><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
-        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/docs/tutorials/captcha-basics/"
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">How CAPTCHA works</span>
     </a>
   </div>
-  
-    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
-              <a
-                href="#"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              ></a>
-            </li>
-          </ul>
-  
               
             </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
@@ -720,7 +743,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
               
             </li></ul>
       </div></li>
-          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:ltr:pr-8 hx:rtl:pl-8
       hx:hextra-focus-visible-inset
@@ -730,13 +753,13 @@ sequenceDiagram actor User participant Browser participant Server participant CA
     >
       <span class="hx:min-w-0 [word-break:break-word]">Reference</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
       href="/docs/reference/rules/"
       
     >
@@ -854,7 +877,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
               
             </li></ul>
       </div></li>
-          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:ltr:pr-8 hx:rtl:pl-8
       hx:hextra-focus-visible-inset
@@ -864,7 +887,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
     >
       <span class="hx:min-w-0 [word-break:break-word]">Tutorials</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
@@ -902,11 +925,11 @@ sequenceDiagram actor User participant Browser participant Server participant CA
     </a>
   </div>
               
-            </li><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
-        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/docs/tutorials/captcha-basics/"
       
     >
@@ -1101,14 +1124,78 @@ sequenceDiagram actor User participant Browser participant Server participant CA
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="Table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#frontend">Frontend
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#building-a-difficulty-rule">Building a Difficulty rule
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#backend">Backend
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#conditions">Conditions
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#user-agent">User Agent
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#traffic-source">Traffic Source
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#ip-address">IP Address
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#country">Country
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#http-header">HTTP Header
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#actions">Actions
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#difficulty-level">Difficulty level
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#difficulty-growth">Difficulty growth
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#block-request">Block request
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#break--noop">Break / noop
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#priority-and-conflict-resolution">Priority and conflict resolution
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#organization-vs-property">Organization vs Property
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#multiple-applied-rules">Multiple applied rules
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#reports">Reports
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#recommendations">Recommendations
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#limits">Limits
         </a>
       </li></ul>
-      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:inline-block hx:rounded-sm hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50 hx:hextra-focus-visible-inset" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/tutorials/captcha-basics.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:inline-block hx:rounded-sm hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50 hx:hextra-focus-visible-inset" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/reference/rules.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button id="backToTop" tabindex="-1" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -1127,19 +1214,19 @@ sequenceDiagram actor User participant Browser participant Server participant CA
           <a href="/docs/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Docs</a>
         </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/tutorials/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Tutorials</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">How CAPTCHA works</div>
+          <a href="/docs/reference/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Reference</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Difficulty rules</div>
   </div>
 
         <div class="content">
           
           <div class="hx:flex hx:flex-col hx:sm:flex-row hx:items-start hx:sm:items-center hx:sm:justify-between hx:gap-4 hx:mb-4">
-            <h1 class="hx:mb-0">How CAPTCHA works</h1>
+            <h1 class="hx:mb-0">Difficulty rules</h1>
             <div class="hextra-page-context-menu hx:relative hx:inline-flex hx:shrink-0">
       <div class="hx:inline-flex hx:rounded-lg hx:border hx:border-gray-200 hx:transition-colors hx:hover:border-gray-300 hx:dark:border-neutral-800 hx:dark:hover:border-neutral-700">
         <button
           class="hextra-page-context-menu-copy hx:group/copybtn hx:inline-flex hx:cursor-pointer hx:items-center hx:gap-1.5 hx:bg-transparent hx:px-2.5 hx:py-1 hx:text-sm hx:font-medium hx:text-gray-700 hx:transition-colors hx:hover:bg-slate-50 hx:dark:text-gray-300 hx:dark:hover:bg-neutral-900 hx:ltr:rounded-l-lg hx:rtl:rounded-r-lg hx:hextra-focus-visible-inset"
-          data-url="https://docs.privatecaptcha.com/docs/tutorials/captcha-basics.md"
+          data-url="https://docs.privatecaptcha.com/docs/reference/rules.md"
           title="Copy as Markdown"
           aria-label="Copy as Markdown"
         >
@@ -1171,7 +1258,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
         <li role="none">
           <button
             data-action="view"
-            data-url="https://docs.privatecaptcha.com/docs/tutorials/captcha-basics.md"
+            data-url="https://docs.privatecaptcha.com/docs/reference/rules.md"
             role="menuitem"
             class="hx:flex hx:w-full hx:cursor-pointer hx:select-none hx:items-center hx:gap-2 hx:whitespace-nowrap hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:text-gray-700 hx:outline-none hx:transition-colors hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-gray-300 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100"
           >
@@ -1180,7 +1267,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
           </button>
         </li><li class="hx:my-1 hx:h-px hx:bg-gray-200 hx:dark:bg-neutral-700" role="separator"></li><li role="none">
             <a
-              href="https://chat.openai.com/?q=Hi%20ChatGPT!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Ftutorials%2Fcaptcha-basics%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
+              href="https://chat.openai.com/?q=Hi%20ChatGPT!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Freference%2Frules%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
               target="_blank"
               rel="noopener noreferrer"
               role="menuitem"
@@ -1189,7 +1276,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
             </a>
           </li><li role="none">
             <a
-              href="https://claude.ai/new?q=Hi%20Claude!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Ftutorials%2Fcaptcha-basics%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
+              href="https://claude.ai/new?q=Hi%20Claude!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Freference%2Frules%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
               target="_blank"
               rel="noopener noreferrer"
               role="menuitem"
@@ -1200,56 +1287,155 @@ sequenceDiagram actor User participant Browser participant Server participant CA
     </div>
           </div>
           
-          <p>Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).</p>
-<div role="img" aria-label="Diagram">
-  <pre class="mermaid hx:mt-6">
-    sequenceDiagram
-    actor User
-    participant Browser
-    participant Server
-    participant CAPTCHAProvider as CAPTCHA Provider
+          <p>Difficulty rules is a system of custom modifiers for CAPTCHA puzzle difficulty returned for the end-user, based on various conditions.</p>
+<p><figure>
+    <img src="/images/reference/difficulty-rules-example.png" title="Example of a couple of difficulty rules" alt="Difficulty rules example"  data-zoomable loading="lazy" />
+    <figcaption>Example of a couple of difficulty rules</figcaption>
+  </figure></p>
+<h2>Building a Difficulty rule<span class="hx:absolute hx:-mt-20" id="building-a-difficulty-rule"></span>
+    <a href="#building-a-difficulty-rule" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Difficulty rule consists of two parts: <strong>Condition</strong> and <strong>Action</strong>.</p>
+<p><figure>
+    <img src="/images/reference/difficulty-rule-structure.png" title="Structure of the difficulty rule" alt="Difficulty rules structure"  data-zoomable loading="lazy" />
+    <figcaption>Structure of the difficulty rule</figcaption>
+  </figure></p>
+<p>Condition and Action have different background colors in the list of rules and in the rule builder.</p>
+<h3>Conditions<span class="hx:absolute hx:-mt-20" id="conditions"></span>
+    <a href="#conditions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Conditions consist of the property of the request being matched, an operator that is applied to that property and a value it is matched against.</p>
+<h4>User Agent<span class="hx:absolute hx:-mt-20" id="user-agent"></span>
+    <a href="#user-agent" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Standard condition is the condition that matches <code>User-Agent</code> HTTP header using the following operators:</p>
+<ul>
+<li>Equals</li>
+<li>Contains</li>
+<li>Empty</li>
+<li>Known bot</li>
+</ul>
+<p>(each operator can be negated, so that <code>&quot;Empty&quot;</code> becomes <code>&quot;Not empty&quot;</code>). Note that <code>Contains</code> is case-insensitive here.</p>
+<p>Condition operator <code>&quot;Known Bot&quot;</code> covers all requesters that identify themselves as bots (curl, Python requests module and many others).</p>
+<p><strong>Example</strong></p>
+<p><figure>
+    <img src="/images/reference/difficulty-rule-user-agent.png" title="Example: match all &#39;curl&#39; requests" alt="Difficulty rules User Agent"  data-zoomable loading="lazy" />
+    <figcaption>Example: match all &#39;curl&#39; requests</figcaption>
+  </figure></p>
+<h4>Traffic Source<span class="hx:absolute hx:-mt-20" id="traffic-source"></span>
+    <a href="#traffic-source" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
-    User-&gt;&gt;Browser: Solve the challenge
-    Browser--&gt;&gt;Browser: Challenge passed — token generated
-
-    User-&gt;&gt;Browser: Submit form
-    Browser-&gt;&gt;Server: Form data + token
-    Server-&gt;&gt;CAPTCHAProvider: Is this token valid?
-    CAPTCHAProvider--&gt;&gt;Server: Yes / No
-    Server-&gt;&gt;Server: Process form (only if valid)
-  </pre>
-</div><div class="hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]">
-<h3>Frontend<span class="hx:absolute hx:-mt-20" id="frontend"></span>
-    <a href="#frontend" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>You add two things to your HTML page: <strong>a widget</strong> (the visual challenge the user interacts with) and <strong>a script</strong> loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider&rsquo;s servers.</p>
-<p>When the user completes the challenge, the provider&rsquo;s script injects a hidden input field into your form containing a short-lived token. The user never sees this field — it travels silently alongside the rest of the form data when the form is submitted.</p>
-<p><a href="/docs/integrations/client-side/">Read more</a></p>
-<h3>Backend<span class="hx:absolute hx:-mt-20" id="backend"></span>
-    <a href="#backend" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>On the server, <strong>before</strong> you do anything with the submission, you take that token and send it to the CAPTCHA provider&rsquo;s verification API. The provider confirms whether the token is valid and was genuinely earned by a human. Only if verification passes do you proceed to process the form — save the data, send the email, create the account, etc. If it fails, you reject the submission outright.</p>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>This condition is available <strong>only</strong> in SaaS version of Private Captcha at <em>privatecaptcha.com</em>. It is not available in the self-hosted version.</p></div>
+  </div>
 </div>
-<div class="hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose" style="--hextra-cards-grid-cols: 3;">
-  <a
-    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/getting-started.md"
-      ><div class="hx:mt-auto">
-      <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50">Getting started</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">How to start using Private Captcha</div></div></a>
-  <a
-    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/tutorials/complete-example"
-      ><div class="hx:mt-auto">
-      <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>End-to-end example</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Follow along to see a complete integration example</div></div></a>
-</div>
+<p>Traffic sources are IP ranges maintained by <em>privatecaptcha.com</em> service and consist of the following lists:</p>
+<ul>
+<li>Cloud providers (AWS, GCP, Azure, Hetzner, and many many others)</li>
+<li>CDN providers (Cloudflare, Fastly, Akamai, and others)</li>
+<li>TOR network exit nodes</li>
+<li>VPN providers (Mullvad, ProtonVPN, and others)</li>
+<li>Consumer proxies (mainly Apple Private Relay)</li>
+<li>Search crawlers (Googlebot, Bingbot, GTPBot, and many others)</li>
+<li>Firehol list (Level 1 and Level 2 combined)</li>
+<li>&ldquo;Common Threats&rdquo; (Blocklist DE, NETMOUNTAINS, Emerging Threats, and CINS Army list)</li>
+</ul>
+<p>These lists are not complete (e.g. for TOR network they don&rsquo;t cover literally <em>all</em> exit nodes), but they cover the vast majority of the providers and are comprehensive enough for <code>99.9%</code> of the use-cases.</p>
+<p>These lists are kept up-to-date automatically.</p>
+<p><strong>Example</strong></p>
+<p><figure>
+    <img src="/images/reference/difficulty-rule-traffic-source.png" title="Example: match requests from TOR, VPN and search crawlers" alt="Difficulty rules Traffic Source"  data-zoomable loading="lazy" />
+    <figcaption>Example: match requests from TOR, VPN and search crawlers</figcaption>
+  </figure></p>
+<h4>IP Address<span class="hx:absolute hx:-mt-20" id="ip-address"></span>
+    <a href="#ip-address" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>You can match standard IP addresses using standard CIDR notation with a list of up to <code>10</code> comma-separated prefixes. Both IPv4 and IPv6 addresses work. Supported operators:</p>
+<ul>
+<li>Matches</li>
+<li>Empty</li>
+</ul>
+<p>For example, this can be useful as an allow-list for your organization IP ranges.</p>
+<p><strong>Example</strong></p>
+<p><figure>
+    <img src="/images/reference/difficulty-rule-ip-address.png" title="Example: match local networks" alt="Difficulty rules IP address"  data-zoomable loading="lazy" />
+    <figcaption>Example: match local networks</figcaption>
+  </figure></p>
+<h4>Country<span class="hx:absolute hx:-mt-20" id="country"></span>
+    <a href="#country" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Detected country of the request, available as a list of countries.</p>
+<p><strong>Example</strong></p>
+<p><figure>
+    <img src="/images/reference/difficulty-rule-country.png" title="Example: match suspicious requests from Antarctica" alt="Difficulty rules Country"  data-zoomable loading="lazy" />
+    <figcaption>Example: match suspicious requests from Antarctica</figcaption>
+  </figure></p>
+<h4>HTTP Header<span class="hx:absolute hx:-mt-20" id="http-header"></span>
+    <a href="#http-header" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Match if the request has (or has not) one of up to <code>10</code> comma-separated HTTP headers.</p>
+<p><strong>Example</strong></p>
+<p><figure>
+    <img src="/images/reference/difficulty-rule-header.png" title="Example: match requests from Cloudflare Workers" alt="Difficulty rules HTTP header"  data-zoomable loading="lazy" />
+    <figcaption>Example: match requests from Cloudflare Workers</figcaption>
+  </figure></p>
+<h3>Actions<span class="hx:absolute hx:-mt-20" id="actions"></span>
+    <a href="#actions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
 
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>When few conditions match and have the same action type, only the last modification counts.</p></div>
+  </div>
+</div>
+<p>Actions typically mean adjusting the puzzle difficulty or blocking the request completely. Also here you can decide on the control flow if to keep processing the other difficulty rules after this one.</p>
+<h4>Difficulty level<span class="hx:absolute hx:-mt-20" id="difficulty-level"></span>
+    <a href="#difficulty-level" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Difficulty of the puzzle can be adjusted in percents (<code>%</code>) where percents mean &ldquo;resources&rdquo;. So <code>+100%</code> adjustment means puzzle will require <code>100%</code> more compute resources to complete. This adjustment is applied on top of the <a href="/docs/reference/property-settings/#base-difficulty">Base difficulty</a> and <strong>not</strong> the final difficulty. It means that on top of that automatic difficulty scaling will take place. You can both increase and decrease difficulty using this action.</p>
+<p><strong>Example</strong></p>
+<p><figure>
+    <img src="/images/reference/difficulty-rule-level.png" title="Example: require &#43;50% more compute resources" alt="Difficulty rules Level"  data-zoomable loading="lazy" />
+    <figcaption>Example: require &#43;50% more compute resources</figcaption>
+  </figure></p>
+<h4>Difficulty growth<span class="hx:absolute hx:-mt-20" id="difficulty-growth"></span>
+    <a href="#difficulty-growth" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><a href="/docs/reference/property-settings/#difficulty-growth">Difficulty growth</a> (how reactive is automatic difficulty scaling to changes in requests) can be adjusted to any valid level here.</p>
+<p><strong>Example</strong></p>
+<p><figure>
+    <img src="/images/reference/difficulty-rule-growth.png" title="Example: change difficulty growth to &#39;Fast&#39; for this request" alt="Difficulty rules Growth"  data-zoomable loading="lazy" />
+    <figcaption>Example: change difficulty growth to &#39;Fast&#39; for this request</figcaption>
+  </figure></p>
+<h4>Block request<span class="hx:absolute hx:-mt-20" id="block-request"></span>
+    <a href="#block-request" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>You can simply block the request, ultimately meaning that form submission will never pass CAPTCHA <a href="/docs/reference/verify-api/">verification</a> (because there will be no CAPTCHA solution in the first place).</p>
+<p>Note that blocking the request automatically means that following rules will not be processed (like if you clicked <em>&ldquo;Stop processing following rules&rdquo;</em> on any other rule action).</p>
+<p><strong>Example</strong></p>
+<p><figure>
+    <img src="/images/reference/difficulty-rule-block.png" title="Example: block CAPTCHA request completely" alt="Difficulty rules Block"  data-zoomable loading="lazy" />
+    <figcaption>Example: block CAPTCHA request completely</figcaption>
+  </figure></p>
+<h4>Break / noop<span class="hx:absolute hx:-mt-20" id="break--noop"></span>
+    <a href="#break--noop" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>There&rsquo;s a <code>break</code> semantics control flow that allows you to stop processing following rules without any action. This preserves any previous modifiers made by matching rules.</p>
+<p><strong>Example</strong></p>
+<p><figure>
+    <img src="/images/reference/difficulty-rule-break.png" title="Example: &#39;break&#39; from rules" alt="Difficulty rules Break"  data-zoomable loading="lazy" />
+    <figcaption>Example: &#39;break&#39; from rules</figcaption>
+  </figure></p>
+<h2>Priority and conflict resolution<span class="hx:absolute hx:-mt-20" id="priority-and-conflict-resolution"></span>
+    <a href="#priority-and-conflict-resolution" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Organization vs Property<span class="hx:absolute hx:-mt-20" id="organization-vs-property"></span>
+    <a href="#organization-vs-property" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Property-level rules will be applied to the request <strong>after</strong> Organization rules.</p></div>
+  </div>
+</div>
+<p>All rules defined on the Organization level will apply to all properties in that organization. This is a very convenient way to manage rules of many properties at once.</p>
+<h3>Multiple applied rules<span class="hx:absolute hx:-mt-20" id="multiple-applied-rules"></span>
+    <a href="#multiple-applied-rules" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>When the request is matched to a few rules and same action is applied (e.g. <code>Difficulty level</code> adjustment, but with different values), only last modification is preserved (aka <em>&ldquo;last-write wins&rdquo;</em>).</p>
+<h2>Reports<span class="hx:absolute hx:-mt-20" id="reports"></span>
+    <a href="#reports" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Usage reports are available only on property level and show how many times property rules were triggered.</p>
+<p><img src="/images/reference/difficulty-rule-reports.png" alt="Difficulty rules reports"  data-zoomable loading="lazy" /></p>
+<h2>Recommendations<span class="hx:absolute hx:-mt-20" id="recommendations"></span>
+    <a href="#recommendations" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>It is recommended to make use of <a href="#traffic-source">Traffic Source</a> (cover at least Cloud providers, Search/Crawlers and &ldquo;Threat&rdquo; lists) and bot <a href="#user-agent">User-Agent</a> right away as those are very classical spammers/abusers.</p>
+<p>You can also change both <a href="#difficulty-growth">Growth</a> and <a href="#difficulty-levels">Level</a> independently as they help each other and do not conflict.</p>
+<h2>Limits<span class="hx:absolute hx:-mt-20" id="limits"></span>
+    <a href="#limits" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>SaaS version of <a href="privatecaptcha.com">Private Captcha</a> has different limits for number of Organization-level and Property-level rules (subject to having specific add-ons). By default every Property has 1 rule included.</p>
+<p>Self-hosted version (<em>&ldquo;Enterprise Edition&rdquo;</em>) has no rule limit, while <em>&ldquo;Community Edition&rdquo;</em> does not have the rules feature at all.</p>
 
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-03-14T20:28:15.000Z">March 14, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/tutorials/complete-example/"
-        title="Complete example"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Complete example</a><a
-        href="/docs/tutorials/invisible-captcha/"
-        title="Invisible captcha"
+      Last updated on <time datetime="2026-03-16T15:48:38.000Z">March 16, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+        href="/docs/reference/dns-proxy/"
+        title="DNS proxy"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >Invisible captcha<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >DNS proxy<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
       </main>
     </article>
   </div>
@@ -1262,29 +1448,35 @@ sequenceDiagram actor User participant Browser participant Server participant CA
     
     <script defer src="/js/main.min.cbffe606b79d26f8813b28319505bce709860d948f62aae13c168f03af5872c6.js" integrity="sha256-y//mBredJviBOygxlQW85wmGDZSPYqrhPBaPA69YcsY="></script>
 <script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
-        <script defer src="/en.search.min.c4d5d567472e17d521a99e108d128a9a776843c98efd76415a1f69fda09040c2.js" integrity="sha256-xNXVZ0cuF9UhqZ4QjRKKmndoQ8mO/XZBWh9p/aCQQMI="></script><script defer src="/js/mermaid.min.3e2002bf333907fae7c1d6860bbc78f5da417bc70b64f3d2268581ba0ba8b96a.js" integrity="sha256-PiACvzM5B/rnwdaGC7x49dpBe8cLZPPSJoWBuguouWo=" crossorigin="anonymous"></script><script>
+        <script defer src="/en.search.min.c4d5d567472e17d521a99e108d128a9a776843c98efd76415a1f69fda09040c2.js" integrity="sha256-xNXVZ0cuF9UhqZ4QjRKKmndoQ8mO/XZBWh9p/aCQQMI="></script><script defer src="/js/medium-zoom.min.6603320c02180d81b16dca4971f52763035ebc6ff18bd38729a47ff062be8d67.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK&#43;jWc=" crossorigin="anonymous"></script><script>
   document.addEventListener("DOMContentLoaded", () => {
-    
-    document.querySelectorAll(".mermaid").forEach((el) => {
-      el.dataset.original = el.innerHTML;
+    if (!window.mediumZoom) {
+      return;
+    }
+
+    const getOverlay = () => {
+      return document.documentElement.classList.contains("dark")
+        ? "rgba(17, 17, 17, 0.98)"
+        : "rgba(255, 255, 255, 0.98)";
+    };
+
+    const zoom = window.mediumZoom("[data-zoomable]", {
+      background: getOverlay(),
     });
 
-    const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
-    mermaid.initialize({ startOnLoad: true, theme: theme });
+    const style = document.createElement("style");
+    style.textContent = `
+      .medium-zoom-overlay {
+        z-index: 1000;
+      }
+      .medium-zoom-image--opened {
+        z-index: 1001;
+      }
+    `;
+    document.head.appendChild(style);
 
-    let timeout;
     new MutationObserver(() => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
-        document.querySelectorAll(".mermaid").forEach((el) => {
-          
-          el.innerHTML = el.dataset.original;
-          el.removeAttribute("data-processed");
-        });
-        mermaid.initialize({ startOnLoad: true, theme: theme });
-        mermaid.init();
-      }, 150);
+      zoom.update({ background: getOverlay() });
     }).observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["class"],
