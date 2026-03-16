@@ -1,7 +1,6 @@
 ---
 title: "Difficulty rules"
 date: 2026-03-15T12:40:53+01:00
-draft: true
 ---
 
 Difficulty rules is a system of custom modifiers for CAPTCHA puzzle difficulty returned for the end-user, based on various conditions.
