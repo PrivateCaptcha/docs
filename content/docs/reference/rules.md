@@ -144,6 +144,12 @@ All rules defined on the Organization level will apply to all properties in that
 
 When the request is matched to a few rules and same action is applied (e.g. `Difficulty level` adjustment, but with different values), only last modification is preserved (aka _"last-write wins"_).
 
+## Reports
+
+Usage reports are available only on property level and show how many times property rules were triggered.
+
+![Difficulty rules reports](/images/reference/difficulty-rule-reports.png)
+
 ## Recommendations
 
 It is recommended to make use of [Traffic Source](#traffic-source) (cover at least Cloud providers, Search/Crawlers and "Threat" lists) and bot [User-Agent](#user-agent) right away as those are very classical spammers/abusers.

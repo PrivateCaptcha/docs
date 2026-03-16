@@ -22,4 +22,5 @@ Reference of API and parameters that you can use.
   {{< card link="/docs/reference/security" title="Security" icon="shield-exclamation" >}}
   {{< card link="/docs/reference/platform-api" title="Platform API" icon="terminal" >}}
   {{< card link="/docs/reference/dns-proxy" title="DNS proxy" icon="at-symbol" >}}
+  {{< card link="/docs/reference/rules" title="Difficulty rules" icon="lightning-bolt" >}}
 {{< /cards >}}
