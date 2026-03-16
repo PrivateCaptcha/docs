@@ -10,7 +10,7 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>How CAPTCHA works – Private Captcha</title>
   <meta name="description" content="Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).
-sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/captcha-basics/" itemprop="url" />
+sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider Browser-&gt;&gt;CAPTCHAProvider: Request challenge CAPTCHAProvider--&gt;&gt;Browser: Show challenge User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/captcha-basics/" itemprop="url" />
 
 <meta property="og:title" content="How CAPTCHA works">
 <meta
@@ -25,6 +25,9 @@ sequenceDiagram actor User participant Browser participant Server participant CA
     participant Browser
     participant Server
     participant CAPTCHAProvider as CAPTCHA Provider
+
+    Browser-&gt;&gt;CAPTCHAProvider: Request challenge
+    CAPTCHAProvider--&gt;&gt;Browser: Show challenge
 
     User-&gt;&gt;Browser: Solve the challenge
     Browser--&gt;&gt;Browser: Challenge passed — token generated
@@ -50,19 +53,19 @@ Frontend
 
 <meta
   property="article:modified_time"
-  content="2026-03-14T20:28:15+01:00">
+  content="2026-03-16T19:17:26+01:00">
 
 
 
   <meta itemprop="name" content="How CAPTCHA works">
   <meta itemprop="description" content="Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).
-sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers.">
-  <meta itemprop="dateModified" content="2026-03-14T20:28:15+01:00">
-  <meta itemprop="wordCount" content="238">
+sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider Browser-&gt;&gt;CAPTCHAProvider: Request challenge CAPTCHAProvider--&gt;&gt;Browser: Show challenge User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers.">
+  <meta itemprop="dateModified" content="2026-03-16T19:17:26+01:00">
+  <meta itemprop="wordCount" content="244">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="How CAPTCHA works">
   <meta name="twitter:description" content="Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).
-sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers.">
+sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider Browser-&gt;&gt;CAPTCHAProvider: Request challenge CAPTCHAProvider--&gt;&gt;Browser: Show challenge User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers.">
 
     <link rel="preload" href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" as="style" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
     <link href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" rel="stylesheet" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
@@ -1209,6 +1212,9 @@ sequenceDiagram actor User participant Browser participant Server participant CA
     participant Server
     participant CAPTCHAProvider as CAPTCHA Provider
 
+    Browser-&gt;&gt;CAPTCHAProvider: Request challenge
+    CAPTCHAProvider--&gt;&gt;Browser: Show challenge
+
     User-&gt;&gt;Browser: Solve the challenge
     Browser--&gt;&gt;Browser: Challenge passed — token generated
 
@@ -1241,7 +1247,7 @@ sequenceDiagram actor User participant Browser participant Server participant CA
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-03-14T20:28:15.000Z">March 14, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-03-16T19:17:26.000Z">March 16, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/tutorials/complete-example/"
         title="Complete example"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"

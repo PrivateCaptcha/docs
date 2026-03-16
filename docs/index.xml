@@ -5925,6 +5925,9 @@
     participant Server
     participant CAPTCHAProvider as CAPTCHA Provider
 
+    Browser-&amp;gt;&amp;gt;CAPTCHAProvider: Request challenge
+    CAPTCHAProvider--&amp;gt;&amp;gt;Browser: Show challenge
+
     User-&amp;gt;&amp;gt;Browser: Solve the challenge
     Browser--&amp;gt;&amp;gt;Browser: Challenge passed — token generated
 
