@@ -85,6 +85,10 @@ Match if the request has (or has not) one of up to `10` comma-separated HTTP hea
 
 ![Difficulty rules HTTP header](/images/reference/difficulty-rule-header.png "Example: match requests from Cloudflare Workers")
 
+#### Always
+
+There's a simple "Always" condition that always matches all requests. For example, if you need to quickly apply a rule over the organization to all properties.
+
 ### Actions
 
 > [!WARNING]
