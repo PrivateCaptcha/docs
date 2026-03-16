@@ -89,6 +89,10 @@ Match if the request has (or has not) one of up to `10` comma-separated HTTP hea
 
 There's a simple "Always" condition that always matches all requests. For example, if you need to quickly apply a rule over the organization to all properties.
 
+**Example**
+
+![Difficulty rules always](/images/reference/difficulty-rule-always.png "Example: always apply this rule")
+
 ### Actions
 
 > [!WARNING]
