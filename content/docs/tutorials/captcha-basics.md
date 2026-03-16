@@ -12,6 +12,9 @@ sequenceDiagram
     participant Server
     participant CAPTCHAProvider as CAPTCHA Provider
 
+    Browser->>CAPTCHAProvider: Request challenge
+    CAPTCHAProvider-->>Browser: Show challenge
+
     User->>Browser: Solve the challenge
     Browser-->>Browser: Challenge passed — token generated
 
