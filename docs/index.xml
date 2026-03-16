@@ -5,7 +5,7 @@
     <description>Recent content in Docs on Private Captcha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Mar 2026 09:39:18 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 12:40:53 +0100</lastBuildDate>
     
 	  <atom:link href="https://docs.privatecaptcha.com/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -738,7 +738,7 @@
     </item>
     
     <item>
-      <title>DNS Proxy</title>
+      <title>DNS proxy</title>
       <link>https://docs.privatecaptcha.com/docs/reference/dns-proxy/</link>
       <pubDate>Mon, 19 Jan 2026 16:42:03 +0200</pubDate>
       
@@ -5394,7 +5394,7 @@
     </item>
     
     <item>
-      <title>EU Isolation</title>
+      <title>EU isolation</title>
       <link>https://docs.privatecaptcha.com/docs/reference/eu-isolation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

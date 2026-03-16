@@ -1,4 +1,4 @@
-# DNS Proxy
+# DNS proxy
 It is possible for customers to use their own domains names (subdomains or vanity) with Private Captcha SaaS (at https://privatecaptcha.com) services. For example, a customer may want to use a domain like `captcha.customer.com` to point to `api.privatecaptcha.com` so that captcha widget does not contact _any_ other domains except of those of the customer. This is possible to achieve using DNS proxying (also known as _"CNAME proxy"_).
 
 > [!NOTE]

@@ -1,4 +1,4 @@
-# EU Isolation
+# EU isolation
 There's a way to use Private Captcha APIs in such a way that all requests are routed **exclusively** to our servers in EU locations.
 
 > [!NOTE]
