@@ -27,7 +27,9 @@ This is a sample captcha widget for testing:
 
 ### Server side
 
-On the server side, once you are using [Verify API]({{< relref "/docs/reference/verify-api.md" >}}), all responses will contain `{ "success": true }` ("verification passed") and `{ "error-codes": ["property-test"] }` (non-empty error codes). Of course, you should be mainly checking `success` field and `error-codes` semantics is just to distinguish actual errors.
+On the server side, once you are using [Verify API]({{< relref "/docs/reference/verify-api.md" >}}) `{ "error-codes": ["property-test"] }` (non-empty error codes). Of course, you should be mainly checking `success` field and `error-codes` semantics is just to distinguish actual errors.
+
+Note that by default when using "dummy" sitekey, the response will have `{"success": false}` to prevent security issue where a stub puzzle can be added to any form instead of the valid puzzle. However, if you're using `X-PC-Sitekey` header with test property sitekey, the response will have `{"success": true}`.
 
 {{% details title="Sending verify request" closed="true" %}}
 
@@ -37,6 +39,7 @@ This is a sample payload for test property, that should always return "success" 
 curl \
   -X POST \
   -H "X-Api-Key: your-api-key" \
+  -H "X-PC-Sitekey: aaaaaaaabbbbccccddddeeeeeeeeeeee" \
   -d "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.Aaqqqqq7u8zM3d3u7u7u7u4AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=.AQCBnM2czBK6rlq+l06lXBtIDQH/PFk=" \
   https://api.{{<domain>}}/verify
 ```
