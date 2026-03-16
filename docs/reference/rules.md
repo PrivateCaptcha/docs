@@ -132,6 +132,10 @@ There's a `break` semantics control flow that allows you to stop processing foll
 
 ## Priority and conflict resolution
 
+### Ordering
+
+Rules are always applied top to bottom (both for properties and organizations). Ordering of the rules matter and you can always change it using "Reorder" button.
+
 ### Organization vs Property
 
 > [!WARNING]
