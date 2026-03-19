@@ -8,22 +8,221 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Testing – Private Captcha</title>
-  <meta name="description" content="There’re 2 main ways how you can keep using Private Captcha for testing of your local website:
-use a predefined (“dummy”) sitekey allow localhost access for main property in Settings in portal Testing with predefined sitekey Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a “dummy” sitekey (aka “test property”): aaaaaaaabbbbccccddddeeeeeeeeeeee. This sitekey does not incur any actual solving “price” (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using data-start-mode=&#34;auto&#34; (in which case parent form needs to gain focus)." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/testing/" itemprop="url" />
+<title>Changelog – Private Captcha</title>
+  <meta name="description" content="v1.31.1 — 2026-03-19 Reorganized the property integrations page and its backing data into clearer sections, making integration guidance easier to scan and navigate. v1.31.0 — 2026-03-17 Introduced a full difficulty-rules system with rule matching, database support, portal UI, and reporting integration. Improved notifications with configurable From/Reply-To overrides, better name parsing, template ID visibility in viewemails, and graceful deduplication on conflicts. Hardened security and concurrency with IDOR fixes for difficulty-rule mutations, leaky-bucket race fixes, reduced 2FA logging exposure, and related cleanup. v1.30.3 — 2026-03-10 Improved observability with Postgres connection metrics and safer SQL trace logging. Fixed canceled-request handling in API and portal responses. Prevented chart UI races by disabling period buttons while data is loading. Also included metrics-handler cleanup and materially relevant runtime and dependency refreshes. v1.30.2 — 2026-03-04 Maintenance-only hotfix correcting unconditional ClickHouse rollback behavior. v1.30.1 — 2026-03-03 Made solver cancellation context-aware and improved solver performance. Fixed ClickHouse failure rollback handling and smarter cache refresh and bulk rereads. Separated stub and non-stub solution counts and shortened caching for test-property API responses. v1.30.0 — 2026-03-02 Added tooling to inspect error logs and fetch local 2FA codes from logs. Improved deployment behavior with better single-domain support, configurable handler timeouts, async ClickHouse inserts, and panic metrics. Fixed organization invite re-access behavior and added portal tab navigation by URL. Reworked difficulty computation across client and server, added database safeguards, and adjusted script cache-control behavior. v1.29.0 — 2026-02-09 Added configurable fetch timeouts in the widget to prevent hung network calls. Added enable/disable controls for properties and users, with API and portal enforcement. Improved operational safety with semaphore-based maintenance-job concurrency, readiness checks that respect maintenance mode, and a circuit breaker for invalid sitekeys. Extended licensing and audit visibility with community-edition license checks, unlicensed UI state, masked IPs in audit logs, and a 2FA grace period. v1.28.2 — 2026-01-28 Fixed auto-mode database lifecycle so migrations no longer close live connections. Expanded easyjson coverage for API types and improved load testing for test puzzles. Hardened local Docker setup with read-only containers and public-key checksum visibility. v1.28.1 — 2026-01-28 Maintenance-only release focused on CI and Docker workflow updates. v1.28.0 — 2026-01-27 Added migrate and serve modes, a lighter test path without ClickHouse, and stronger init, CI, and coverage workflows for developers and operators. Tightened auth and organization management with 2FA expiration handling, organization transfers, invites for users without accounts, and org-member property creation via API. Improved widget robustness and public API coverage, including safer custom-element handling and reset behavior. Added org-level usage stats, API key last-used tracking, Java integration support, and faster JSON handling for verify traffic. v0.0.27 — 2025-12-23 Expanded API key permissions with read-only and organization scopes, plus richer audit metadata for API key events. Added stricter JSON request validation. Otherwise mostly maintenance and publishing updates. v0.0.26 — 2025-12-19 Added the first substantial organizations and properties API: list/get/create/update/delete, bulk property creation, pagination, and OpenAPI coverage. Introduced API key scopes and the related database and UI groundwork. Greatly improved chart caching at both CDN and server layers while avoiding stale user-specific caching. Strengthened auth and operations with better email verification, stronger 2FA randomness, logout cache cleanup, and safer job locking. v0.0.25 — 2025-12-03 Tightened /verify by checking the expected sitekey and returning friendlier verification error bodies. Updated the OpenAPI spec to match verification behavior. Otherwise a small bug-fix release. v0.0.24 — 2025-11-29 Added audit logs with portal UI, retention controls, HTML-capable messages, and subscription-specific audit events. Expanded usage views with per-property and per-organization usage, longer session TTL, and better sitekey and IP handling. Fixed popup auto-start behavior and duplicate trigger execution. v0.0.23 — 2025-11-20 Unified login and 2FA into a single flow, with clearer 2FA emails and stale-session backfill support. Let organization members use the verify API for shared properties. Reworked user limiting to separate API and property checks, with better rechecks, backpressure, and cache tuning. v0.0.22 — 2025-11-13 Added retrying chart fetches, resend timers, and better metrics for portal HTTP errors before redirects. Introduced property move support and hid internal identifiers behind hashed portal URLs. Expanded integrations and self-hosted license activation flexibility, with additional security hardening. v0.0.21 — 2025-10-21 Added runtime widget restyling via data-styles and automatic language mode. Tightened catch-all path rate limiting and only records solutions after real user interaction with the widget. Added Go’s built-in cross-origin protection middleware to the portal. v0.0.20 — 2025-10-11 Added organization invitation emails and enforced organization ownership-count limits. Fixed widget visibility and styling regressions and expanded widget event coverage. Polished several portal layouts and settings screens. v0.0.19 — 2025-10-08 Added aggregated challenge statistics and easier sitekey visibility in the dashboard. Introduced API key rotation. Fixed missing portal login verification metrics. v0.0.18 — 2025-10-06 Fixed notification cleanup context handling and corrected truncated API key values in notifications. Added container image scanning to CI. Overall, a small bug-fix and security-maintenance release. v0.0.17 — 2025-10-04 Added stronger server-side validation for user, property, and API key names. Included additional bounds and type-safety checks for security hardening. v0.0.16 — 2025-10-04 Hardened validation around organization names, signatures, and license activation parsing. Moved the XSRF key into explicit configuration. v0.0.15 — 2025-09-30 Ensured account creation returns the refreshed user record. Otherwise a tiny maintenance release. v0.0.14 — 2025-09-30 Added configurable widget colors and relaxed some profile and onboarding validation. Fixed cache reads inside transactions and corrected internal subscription detection. v0.0.13 — 2025-09-24 Improved integration UX with visible sitekeys, better localhost layout, and WordPress integration support in the portal. Added asset ETags and stylesheet cache busting tied to the current Git commit. Restored widget auto-start as the default mode. v0.0.12 — 2025-09-15 Refactored session handling and shortened session flush timing so persisted session state updates more quickly. Added extra ID-safety checks and general session cleanup around session persistence. v0.0.11 — 2025-09-12 Improved structured logging with service tags and cleaner log levels. Fixed organization invite and member validation so organization users resolve more reliably. v0.0.10 — 2025-09-03 Mostly an observability and bug-fix release, correcting healthcheck job exclusivity and improving puzzle decode/debug logging. v0.0.9 — 2025-09-03 Replaced widget JavaScript callbacks with DOM events for integrations. Refactored puzzle issue/verify handling and corrected puzzle issue timestamps. v0.0.8 — 2025-08-25 Switched puzzle identifiers to XID and advanced the move from allow_replay to max_replay_count-based replay control. Improved puzzle cache and leaky-bucket performance, with better profiling and diagnostics around cache and property failures. Hardened the product by requiring property domains in the portal and protecting maintenance-job endpoints. v0.0.7 — 2025-08-20 Cached stub puzzles and expanded the integrations page with PHP and Ruby guidance. Otherwise a small maintenance release. v0.0.6 — 2025-08-18 Added a full notifications foundation, including persistent notifications, expiring API key alerts, and richer welcome emails. Expanded maintenance jobs for offboarding and trial expiry, with safer execution, lock checks, circuit breaking, and argument support. Added a Google reCAPTCHA-compatible site script mode, jittered Retry-After responses, and standardized configuration under PC_ environment variables. v0.0.5 — 2025-07-31 Improved runtime robustness with explicit ClickHouse read timeouts, safer context handling, and live log-level changes. Fixed API key limit updates and several cache/context edge cases in backend code. Reworked integrations content into data-driven portal pages and refreshed supporting dependencies. v0.0.4 — 2025-07-18 Made /siteverify fully reCAPTCHA-compatible, including successful handling for echo puzzles. Simplified the PrivateCaptcha-specific verify response format. v0.0.3 — 2025-07-14 Split the PrivateCaptcha verify API from the reCAPTCHA-compatible /siteverify flow. Improved verification responses and fixed fast-path handling for test puzzles. v0.0.2 — 2025-07-14 Small maintenance release with dependency refreshes and a fix for the enterprise activation URL format. v0.0.1 — 2025-07-09 Initial public release of the PrivateCaptcha stack, including the Go server, API, portal, widget, Docker setup, and CI/build workflows. Established core security and operations foundations such as security headers, request tracing, rate limiting, caching improvements, monitoring, and more resilient verification behavior. Added the first OpenAPI definition, widget package publishing flow, and early enterprise licensing and activation support. " /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/changelog/" itemprop="url" />
 
-<meta property="og:title" content="Testing">
+<meta property="og:title" content="Changelog">
 <meta
   property="og:description"
   content="
     
-      There&rsquo;re 2 main ways how you can keep using Private Captcha for testing of your local website:
+      v1.31.1 — 2026-03-19
+    
+Reorganized the property integrations page and its backing data into clearer sections, making integration guidance easier to scan and navigate.
 
-use a predefined (&ldquo;dummy&rdquo;) sitekey
-allow localhost access for main property in Settings in portal
+v1.31.0 — 2026-03-17
+    
+Introduced a full difficulty-rules system with rule matching, database support, portal UI, and reporting integration.
+Improved notifications with configurable From/Reply-To overrides, better name parsing, template ID visibility in viewemails, and graceful deduplication on conflicts.
+Hardened security and concurrency with IDOR fixes for difficulty-rule mutations, leaky-bucket race fixes, reduced 2FA logging exposure, and related cleanup.
 
-Testing with predefined sitekey
-    Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a &ldquo;dummy&rdquo; sitekey (aka &ldquo;test property&rdquo;): aaaaaaaabbbbccccddddeeeeeeeeeeee. This sitekey does not incur any actual solving &ldquo;price&rdquo; (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using data-start-mode=&quot;auto&quot; (in which case parent form needs to gain focus).
+v1.30.3 — 2026-03-10
+    
+Improved observability with Postgres connection metrics and safer SQL trace logging.
+Fixed canceled-request handling in API and portal responses.
+Prevented chart UI races by disabling period buttons while data is loading.
+Also included metrics-handler cleanup and materially relevant runtime and dependency refreshes.
+
+v1.30.2 — 2026-03-04
+    
+Maintenance-only hotfix correcting unconditional ClickHouse rollback behavior.
+
+v1.30.1 — 2026-03-03
+    
+Made solver cancellation context-aware and improved solver performance.
+Fixed ClickHouse failure rollback handling and smarter cache refresh and bulk rereads.
+Separated stub and non-stub solution counts and shortened caching for test-property API responses.
+
+v1.30.0 — 2026-03-02
+    
+Added tooling to inspect error logs and fetch local 2FA codes from logs.
+Improved deployment behavior with better single-domain support, configurable handler timeouts, async ClickHouse inserts, and panic metrics.
+Fixed organization invite re-access behavior and added portal tab navigation by URL.
+Reworked difficulty computation across client and server, added database safeguards, and adjusted script cache-control behavior.
+
+v1.29.0 — 2026-02-09
+    
+Added configurable fetch timeouts in the widget to prevent hung network calls.
+Added enable/disable controls for properties and users, with API and portal enforcement.
+Improved operational safety with semaphore-based maintenance-job concurrency, readiness checks that respect maintenance mode, and a circuit breaker for invalid sitekeys.
+Extended licensing and audit visibility with community-edition license checks, unlicensed UI state, masked IPs in audit logs, and a 2FA grace period.
+
+v1.28.2 — 2026-01-28
+    
+Fixed auto-mode database lifecycle so migrations no longer close live connections.
+Expanded easyjson coverage for API types and improved load testing for test puzzles.
+Hardened local Docker setup with read-only containers and public-key checksum visibility.
+
+v1.28.1 — 2026-01-28
+    
+Maintenance-only release focused on CI and Docker workflow updates.
+
+v1.28.0 — 2026-01-27
+    
+Added migrate and serve modes, a lighter test path without ClickHouse, and stronger init, CI, and coverage workflows for developers and operators.
+Tightened auth and organization management with 2FA expiration handling, organization transfers, invites for users without accounts, and org-member property creation via API.
+Improved widget robustness and public API coverage, including safer custom-element handling and reset behavior.
+Added org-level usage stats, API key last-used tracking, Java integration support, and faster JSON handling for verify traffic.
+
+v0.0.27 — 2025-12-23
+    
+Expanded API key permissions with read-only and organization scopes, plus richer audit metadata for API key events.
+Added stricter JSON request validation.
+Otherwise mostly maintenance and publishing updates.
+
+v0.0.26 — 2025-12-19
+    
+Added the first substantial organizations and properties API: list/get/create/update/delete, bulk property creation, pagination, and OpenAPI coverage.
+Introduced API key scopes and the related database and UI groundwork.
+Greatly improved chart caching at both CDN and server layers while avoiding stale user-specific caching.
+Strengthened auth and operations with better email verification, stronger 2FA randomness, logout cache cleanup, and safer job locking.
+
+v0.0.25 — 2025-12-03
+    
+Tightened /verify by checking the expected sitekey and returning friendlier verification error bodies.
+Updated the OpenAPI spec to match verification behavior.
+Otherwise a small bug-fix release.
+
+v0.0.24 — 2025-11-29
+    
+Added audit logs with portal UI, retention controls, HTML-capable messages, and subscription-specific audit events.
+Expanded usage views with per-property and per-organization usage, longer session TTL, and better sitekey and IP handling.
+Fixed popup auto-start behavior and duplicate trigger execution.
+
+v0.0.23 — 2025-11-20
+    
+Unified login and 2FA into a single flow, with clearer 2FA emails and stale-session backfill support.
+Let organization members use the verify API for shared properties.
+Reworked user limiting to separate API and property checks, with better rechecks, backpressure, and cache tuning.
+
+v0.0.22 — 2025-11-13
+    
+Added retrying chart fetches, resend timers, and better metrics for portal HTTP errors before redirects.
+Introduced property move support and hid internal identifiers behind hashed portal URLs.
+Expanded integrations and self-hosted license activation flexibility, with additional security hardening.
+
+v0.0.21 — 2025-10-21
+    
+Added runtime widget restyling via data-styles and automatic language mode.
+Tightened catch-all path rate limiting and only records solutions after real user interaction with the widget.
+Added Go&rsquo;s built-in cross-origin protection middleware to the portal.
+
+v0.0.20 — 2025-10-11
+    
+Added organization invitation emails and enforced organization ownership-count limits.
+Fixed widget visibility and styling regressions and expanded widget event coverage.
+Polished several portal layouts and settings screens.
+
+v0.0.19 — 2025-10-08
+    
+Added aggregated challenge statistics and easier sitekey visibility in the dashboard.
+Introduced API key rotation.
+Fixed missing portal login verification metrics.
+
+v0.0.18 — 2025-10-06
+    
+Fixed notification cleanup context handling and corrected truncated API key values in notifications.
+Added container image scanning to CI.
+Overall, a small bug-fix and security-maintenance release.
+
+v0.0.17 — 2025-10-04
+    
+Added stronger server-side validation for user, property, and API key names.
+Included additional bounds and type-safety checks for security hardening.
+
+v0.0.16 — 2025-10-04
+    
+Hardened validation around organization names, signatures, and license activation parsing.
+Moved the XSRF key into explicit configuration.
+
+v0.0.15 — 2025-09-30
+    
+Ensured account creation returns the refreshed user record.
+Otherwise a tiny maintenance release.
+
+v0.0.14 — 2025-09-30
+    
+Added configurable widget colors and relaxed some profile and onboarding validation.
+Fixed cache reads inside transactions and corrected internal subscription detection.
+
+v0.0.13 — 2025-09-24
+    
+Improved integration UX with visible sitekeys, better localhost layout, and WordPress integration support in the portal.
+Added asset ETags and stylesheet cache busting tied to the current Git commit.
+Restored widget auto-start as the default mode.
+
+v0.0.12 — 2025-09-15
+    
+Refactored session handling and shortened session flush timing so persisted session state updates more quickly.
+Added extra ID-safety checks and general session cleanup around session persistence.
+
+v0.0.11 — 2025-09-12
+    
+Improved structured logging with service tags and cleaner log levels.
+Fixed organization invite and member validation so organization users resolve more reliably.
+
+v0.0.10 — 2025-09-03
+    
+Mostly an observability and bug-fix release, correcting healthcheck job exclusivity and improving puzzle decode/debug logging.
+
+v0.0.9 — 2025-09-03
+    
+Replaced widget JavaScript callbacks with DOM events for integrations.
+Refactored puzzle issue/verify handling and corrected puzzle issue timestamps.
+
+v0.0.8 — 2025-08-25
+    
+Switched puzzle identifiers to XID and advanced the move from allow_replay to max_replay_count-based replay control.
+Improved puzzle cache and leaky-bucket performance, with better profiling and diagnostics around cache and property failures.
+Hardened the product by requiring property domains in the portal and protecting maintenance-job endpoints.
+
+v0.0.7 — 2025-08-20
+    
+Cached stub puzzles and expanded the integrations page with PHP and Ruby guidance.
+Otherwise a small maintenance release.
+
+v0.0.6 — 2025-08-18
+    
+Added a full notifications foundation, including persistent notifications, expiring API key alerts, and richer welcome emails.
+Expanded maintenance jobs for offboarding and trial expiry, with safer execution, lock checks, circuit breaking, and argument support.
+Added a Google reCAPTCHA-compatible site script mode, jittered Retry-After responses, and standardized configuration under PC_ environment variables.
+
+v0.0.5 — 2025-07-31
+    
+Improved runtime robustness with explicit ClickHouse read timeouts, safer context handling, and live log-level changes.
+Fixed API key limit updates and several cache/context edge cases in backend code.
+Reworked integrations content into data-driven portal pages and refreshed supporting dependencies.
+
+v0.0.4 — 2025-07-18
+    
+Made /siteverify fully reCAPTCHA-compatible, including successful handling for echo puzzles.
+Simplified the PrivateCaptcha-specific verify response format.
+
+v0.0.3 — 2025-07-14
+    
+Split the PrivateCaptcha verify API from the reCAPTCHA-compatible /siteverify flow.
+Improved verification responses and fixed fast-path handling for test puzzles.
+
+v0.0.2 — 2025-07-14
+    
+Small maintenance release with dependency refreshes and a fix for the enterprise activation URL format.
+
+v0.0.1 — 2025-07-09
+    
+Initial public release of the PrivateCaptcha stack, including the Go server, API, portal, widget, Docker setup, and CI/build workflows.
+Established core security and operations foundations such as security headers, request tracing, rate limiting, caching improvements, monitoring, and more resilient verification behavior.
+Added the first OpenAPI definition, widget package publishing flow, and early enterprise licensing and activation support.
+
     
   ">
 <meta
@@ -31,24 +230,27 @@ Testing with predefined sitekey
   content="
     article
   ">
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/reference/testing/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/changelog/"><meta property="article:section" content="docs">
+
+<meta
+  property="article:published_time"
+  content="2026-03-19T08:43:58+01:00">
 
 
 <meta
   property="article:modified_time"
-  content="2026-03-16T13:43:41+01:00">
+  content="2026-03-19T08:54:10+01:00">
 
 
 
-  <meta itemprop="name" content="Testing">
-  <meta itemprop="description" content="There’re 2 main ways how you can keep using Private Captcha for testing of your local website:
-use a predefined (“dummy”) sitekey allow localhost access for main property in Settings in portal Testing with predefined sitekey Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a “dummy” sitekey (aka “test property”): aaaaaaaabbbbccccddddeeeeeeeeeeee. This sitekey does not incur any actual solving “price” (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using data-start-mode=&#34;auto&#34; (in which case parent form needs to gain focus).">
-  <meta itemprop="dateModified" content="2026-03-16T13:43:41+01:00">
-  <meta itemprop="wordCount" content="369">
+  <meta itemprop="name" content="Changelog">
+  <meta itemprop="description" content="v1.31.1 — 2026-03-19 Reorganized the property integrations page and its backing data into clearer sections, making integration guidance easier to scan and navigate. v1.31.0 — 2026-03-17 Introduced a full difficulty-rules system with rule matching, database support, portal UI, and reporting integration. Improved notifications with configurable From/Reply-To overrides, better name parsing, template ID visibility in viewemails, and graceful deduplication on conflicts. Hardened security and concurrency with IDOR fixes for difficulty-rule mutations, leaky-bucket race fixes, reduced 2FA logging exposure, and related cleanup. v1.30.3 — 2026-03-10 Improved observability with Postgres connection metrics and safer SQL trace logging. Fixed canceled-request handling in API and portal responses. Prevented chart UI races by disabling period buttons while data is loading. Also included metrics-handler cleanup and materially relevant runtime and dependency refreshes. v1.30.2 — 2026-03-04 Maintenance-only hotfix correcting unconditional ClickHouse rollback behavior. v1.30.1 — 2026-03-03 Made solver cancellation context-aware and improved solver performance. Fixed ClickHouse failure rollback handling and smarter cache refresh and bulk rereads. Separated stub and non-stub solution counts and shortened caching for test-property API responses. v1.30.0 — 2026-03-02 Added tooling to inspect error logs and fetch local 2FA codes from logs. Improved deployment behavior with better single-domain support, configurable handler timeouts, async ClickHouse inserts, and panic metrics. Fixed organization invite re-access behavior and added portal tab navigation by URL. Reworked difficulty computation across client and server, added database safeguards, and adjusted script cache-control behavior. v1.29.0 — 2026-02-09 Added configurable fetch timeouts in the widget to prevent hung network calls. Added enable/disable controls for properties and users, with API and portal enforcement. Improved operational safety with semaphore-based maintenance-job concurrency, readiness checks that respect maintenance mode, and a circuit breaker for invalid sitekeys. Extended licensing and audit visibility with community-edition license checks, unlicensed UI state, masked IPs in audit logs, and a 2FA grace period. v1.28.2 — 2026-01-28 Fixed auto-mode database lifecycle so migrations no longer close live connections. Expanded easyjson coverage for API types and improved load testing for test puzzles. Hardened local Docker setup with read-only containers and public-key checksum visibility. v1.28.1 — 2026-01-28 Maintenance-only release focused on CI and Docker workflow updates. v1.28.0 — 2026-01-27 Added migrate and serve modes, a lighter test path without ClickHouse, and stronger init, CI, and coverage workflows for developers and operators. Tightened auth and organization management with 2FA expiration handling, organization transfers, invites for users without accounts, and org-member property creation via API. Improved widget robustness and public API coverage, including safer custom-element handling and reset behavior. Added org-level usage stats, API key last-used tracking, Java integration support, and faster JSON handling for verify traffic. v0.0.27 — 2025-12-23 Expanded API key permissions with read-only and organization scopes, plus richer audit metadata for API key events. Added stricter JSON request validation. Otherwise mostly maintenance and publishing updates. v0.0.26 — 2025-12-19 Added the first substantial organizations and properties API: list/get/create/update/delete, bulk property creation, pagination, and OpenAPI coverage. Introduced API key scopes and the related database and UI groundwork. Greatly improved chart caching at both CDN and server layers while avoiding stale user-specific caching. Strengthened auth and operations with better email verification, stronger 2FA randomness, logout cache cleanup, and safer job locking. v0.0.25 — 2025-12-03 Tightened /verify by checking the expected sitekey and returning friendlier verification error bodies. Updated the OpenAPI spec to match verification behavior. Otherwise a small bug-fix release. v0.0.24 — 2025-11-29 Added audit logs with portal UI, retention controls, HTML-capable messages, and subscription-specific audit events. Expanded usage views with per-property and per-organization usage, longer session TTL, and better sitekey and IP handling. Fixed popup auto-start behavior and duplicate trigger execution. v0.0.23 — 2025-11-20 Unified login and 2FA into a single flow, with clearer 2FA emails and stale-session backfill support. Let organization members use the verify API for shared properties. Reworked user limiting to separate API and property checks, with better rechecks, backpressure, and cache tuning. v0.0.22 — 2025-11-13 Added retrying chart fetches, resend timers, and better metrics for portal HTTP errors before redirects. Introduced property move support and hid internal identifiers behind hashed portal URLs. Expanded integrations and self-hosted license activation flexibility, with additional security hardening. v0.0.21 — 2025-10-21 Added runtime widget restyling via data-styles and automatic language mode. Tightened catch-all path rate limiting and only records solutions after real user interaction with the widget. Added Go’s built-in cross-origin protection middleware to the portal. v0.0.20 — 2025-10-11 Added organization invitation emails and enforced organization ownership-count limits. Fixed widget visibility and styling regressions and expanded widget event coverage. Polished several portal layouts and settings screens. v0.0.19 — 2025-10-08 Added aggregated challenge statistics and easier sitekey visibility in the dashboard. Introduced API key rotation. Fixed missing portal login verification metrics. v0.0.18 — 2025-10-06 Fixed notification cleanup context handling and corrected truncated API key values in notifications. Added container image scanning to CI. Overall, a small bug-fix and security-maintenance release. v0.0.17 — 2025-10-04 Added stronger server-side validation for user, property, and API key names. Included additional bounds and type-safety checks for security hardening. v0.0.16 — 2025-10-04 Hardened validation around organization names, signatures, and license activation parsing. Moved the XSRF key into explicit configuration. v0.0.15 — 2025-09-30 Ensured account creation returns the refreshed user record. Otherwise a tiny maintenance release. v0.0.14 — 2025-09-30 Added configurable widget colors and relaxed some profile and onboarding validation. Fixed cache reads inside transactions and corrected internal subscription detection. v0.0.13 — 2025-09-24 Improved integration UX with visible sitekeys, better localhost layout, and WordPress integration support in the portal. Added asset ETags and stylesheet cache busting tied to the current Git commit. Restored widget auto-start as the default mode. v0.0.12 — 2025-09-15 Refactored session handling and shortened session flush timing so persisted session state updates more quickly. Added extra ID-safety checks and general session cleanup around session persistence. v0.0.11 — 2025-09-12 Improved structured logging with service tags and cleaner log levels. Fixed organization invite and member validation so organization users resolve more reliably. v0.0.10 — 2025-09-03 Mostly an observability and bug-fix release, correcting healthcheck job exclusivity and improving puzzle decode/debug logging. v0.0.9 — 2025-09-03 Replaced widget JavaScript callbacks with DOM events for integrations. Refactored puzzle issue/verify handling and corrected puzzle issue timestamps. v0.0.8 — 2025-08-25 Switched puzzle identifiers to XID and advanced the move from allow_replay to max_replay_count-based replay control. Improved puzzle cache and leaky-bucket performance, with better profiling and diagnostics around cache and property failures. Hardened the product by requiring property domains in the portal and protecting maintenance-job endpoints. v0.0.7 — 2025-08-20 Cached stub puzzles and expanded the integrations page with PHP and Ruby guidance. Otherwise a small maintenance release. v0.0.6 — 2025-08-18 Added a full notifications foundation, including persistent notifications, expiring API key alerts, and richer welcome emails. Expanded maintenance jobs for offboarding and trial expiry, with safer execution, lock checks, circuit breaking, and argument support. Added a Google reCAPTCHA-compatible site script mode, jittered Retry-After responses, and standardized configuration under PC_ environment variables. v0.0.5 — 2025-07-31 Improved runtime robustness with explicit ClickHouse read timeouts, safer context handling, and live log-level changes. Fixed API key limit updates and several cache/context edge cases in backend code. Reworked integrations content into data-driven portal pages and refreshed supporting dependencies. v0.0.4 — 2025-07-18 Made /siteverify fully reCAPTCHA-compatible, including successful handling for echo puzzles. Simplified the PrivateCaptcha-specific verify response format. v0.0.3 — 2025-07-14 Split the PrivateCaptcha verify API from the reCAPTCHA-compatible /siteverify flow. Improved verification responses and fixed fast-path handling for test puzzles. v0.0.2 — 2025-07-14 Small maintenance release with dependency refreshes and a fix for the enterprise activation URL format. v0.0.1 — 2025-07-09 Initial public release of the PrivateCaptcha stack, including the Go server, API, portal, widget, Docker setup, and CI/build workflows. Established core security and operations foundations such as security headers, request tracing, rate limiting, caching improvements, monitoring, and more resilient verification behavior. Added the first OpenAPI definition, widget package publishing flow, and early enterprise licensing and activation support.">
+  <meta itemprop="datePublished" content="2026-03-19T08:43:58+01:00">
+  <meta itemprop="dateModified" content="2026-03-19T08:54:10+01:00">
+  <meta itemprop="wordCount" content="1300">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Testing">
-  <meta name="twitter:description" content="There’re 2 main ways how you can keep using Private Captcha for testing of your local website:
-use a predefined (“dummy”) sitekey allow localhost access for main property in Settings in portal Testing with predefined sitekey Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a “dummy” sitekey (aka “test property”): aaaaaaaabbbbccccddddeeeeeeeeeeee. This sitekey does not incur any actual solving “price” (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using data-start-mode=&#34;auto&#34; (in which case parent form needs to gain focus).">
+  <meta name="twitter:title" content="Changelog">
+  <meta name="twitter:description" content="v1.31.1 — 2026-03-19 Reorganized the property integrations page and its backing data into clearer sections, making integration guidance easier to scan and navigate. v1.31.0 — 2026-03-17 Introduced a full difficulty-rules system with rule matching, database support, portal UI, and reporting integration. Improved notifications with configurable From/Reply-To overrides, better name parsing, template ID visibility in viewemails, and graceful deduplication on conflicts. Hardened security and concurrency with IDOR fixes for difficulty-rule mutations, leaky-bucket race fixes, reduced 2FA logging exposure, and related cleanup. v1.30.3 — 2026-03-10 Improved observability with Postgres connection metrics and safer SQL trace logging. Fixed canceled-request handling in API and portal responses. Prevented chart UI races by disabling period buttons while data is loading. Also included metrics-handler cleanup and materially relevant runtime and dependency refreshes. v1.30.2 — 2026-03-04 Maintenance-only hotfix correcting unconditional ClickHouse rollback behavior. v1.30.1 — 2026-03-03 Made solver cancellation context-aware and improved solver performance. Fixed ClickHouse failure rollback handling and smarter cache refresh and bulk rereads. Separated stub and non-stub solution counts and shortened caching for test-property API responses. v1.30.0 — 2026-03-02 Added tooling to inspect error logs and fetch local 2FA codes from logs. Improved deployment behavior with better single-domain support, configurable handler timeouts, async ClickHouse inserts, and panic metrics. Fixed organization invite re-access behavior and added portal tab navigation by URL. Reworked difficulty computation across client and server, added database safeguards, and adjusted script cache-control behavior. v1.29.0 — 2026-02-09 Added configurable fetch timeouts in the widget to prevent hung network calls. Added enable/disable controls for properties and users, with API and portal enforcement. Improved operational safety with semaphore-based maintenance-job concurrency, readiness checks that respect maintenance mode, and a circuit breaker for invalid sitekeys. Extended licensing and audit visibility with community-edition license checks, unlicensed UI state, masked IPs in audit logs, and a 2FA grace period. v1.28.2 — 2026-01-28 Fixed auto-mode database lifecycle so migrations no longer close live connections. Expanded easyjson coverage for API types and improved load testing for test puzzles. Hardened local Docker setup with read-only containers and public-key checksum visibility. v1.28.1 — 2026-01-28 Maintenance-only release focused on CI and Docker workflow updates. v1.28.0 — 2026-01-27 Added migrate and serve modes, a lighter test path without ClickHouse, and stronger init, CI, and coverage workflows for developers and operators. Tightened auth and organization management with 2FA expiration handling, organization transfers, invites for users without accounts, and org-member property creation via API. Improved widget robustness and public API coverage, including safer custom-element handling and reset behavior. Added org-level usage stats, API key last-used tracking, Java integration support, and faster JSON handling for verify traffic. v0.0.27 — 2025-12-23 Expanded API key permissions with read-only and organization scopes, plus richer audit metadata for API key events. Added stricter JSON request validation. Otherwise mostly maintenance and publishing updates. v0.0.26 — 2025-12-19 Added the first substantial organizations and properties API: list/get/create/update/delete, bulk property creation, pagination, and OpenAPI coverage. Introduced API key scopes and the related database and UI groundwork. Greatly improved chart caching at both CDN and server layers while avoiding stale user-specific caching. Strengthened auth and operations with better email verification, stronger 2FA randomness, logout cache cleanup, and safer job locking. v0.0.25 — 2025-12-03 Tightened /verify by checking the expected sitekey and returning friendlier verification error bodies. Updated the OpenAPI spec to match verification behavior. Otherwise a small bug-fix release. v0.0.24 — 2025-11-29 Added audit logs with portal UI, retention controls, HTML-capable messages, and subscription-specific audit events. Expanded usage views with per-property and per-organization usage, longer session TTL, and better sitekey and IP handling. Fixed popup auto-start behavior and duplicate trigger execution. v0.0.23 — 2025-11-20 Unified login and 2FA into a single flow, with clearer 2FA emails and stale-session backfill support. Let organization members use the verify API for shared properties. Reworked user limiting to separate API and property checks, with better rechecks, backpressure, and cache tuning. v0.0.22 — 2025-11-13 Added retrying chart fetches, resend timers, and better metrics for portal HTTP errors before redirects. Introduced property move support and hid internal identifiers behind hashed portal URLs. Expanded integrations and self-hosted license activation flexibility, with additional security hardening. v0.0.21 — 2025-10-21 Added runtime widget restyling via data-styles and automatic language mode. Tightened catch-all path rate limiting and only records solutions after real user interaction with the widget. Added Go’s built-in cross-origin protection middleware to the portal. v0.0.20 — 2025-10-11 Added organization invitation emails and enforced organization ownership-count limits. Fixed widget visibility and styling regressions and expanded widget event coverage. Polished several portal layouts and settings screens. v0.0.19 — 2025-10-08 Added aggregated challenge statistics and easier sitekey visibility in the dashboard. Introduced API key rotation. Fixed missing portal login verification metrics. v0.0.18 — 2025-10-06 Fixed notification cleanup context handling and corrected truncated API key values in notifications. Added container image scanning to CI. Overall, a small bug-fix and security-maintenance release. v0.0.17 — 2025-10-04 Added stronger server-side validation for user, property, and API key names. Included additional bounds and type-safety checks for security hardening. v0.0.16 — 2025-10-04 Hardened validation around organization names, signatures, and license activation parsing. Moved the XSRF key into explicit configuration. v0.0.15 — 2025-09-30 Ensured account creation returns the refreshed user record. Otherwise a tiny maintenance release. v0.0.14 — 2025-09-30 Added configurable widget colors and relaxed some profile and onboarding validation. Fixed cache reads inside transactions and corrected internal subscription detection. v0.0.13 — 2025-09-24 Improved integration UX with visible sitekeys, better localhost layout, and WordPress integration support in the portal. Added asset ETags and stylesheet cache busting tied to the current Git commit. Restored widget auto-start as the default mode. v0.0.12 — 2025-09-15 Refactored session handling and shortened session flush timing so persisted session state updates more quickly. Added extra ID-safety checks and general session cleanup around session persistence. v0.0.11 — 2025-09-12 Improved structured logging with service tags and cleaner log levels. Fixed organization invite and member validation so organization users resolve more reliably. v0.0.10 — 2025-09-03 Mostly an observability and bug-fix release, correcting healthcheck job exclusivity and improving puzzle decode/debug logging. v0.0.9 — 2025-09-03 Replaced widget JavaScript callbacks with DOM events for integrations. Refactored puzzle issue/verify handling and corrected puzzle issue timestamps. v0.0.8 — 2025-08-25 Switched puzzle identifiers to XID and advanced the move from allow_replay to max_replay_count-based replay control. Improved puzzle cache and leaky-bucket performance, with better profiling and diagnostics around cache and property failures. Hardened the product by requiring property domains in the portal and protecting maintenance-job endpoints. v0.0.7 — 2025-08-20 Cached stub puzzles and expanded the integrations page with PHP and Ruby guidance. Otherwise a small maintenance release. v0.0.6 — 2025-08-18 Added a full notifications foundation, including persistent notifications, expiring API key alerts, and richer welcome emails. Expanded maintenance jobs for offboarding and trial expiry, with safer execution, lock checks, circuit breaking, and argument support. Added a Google reCAPTCHA-compatible site script mode, jittered Retry-After responses, and standardized configuration under PC_ environment variables. v0.0.5 — 2025-07-31 Improved runtime robustness with explicit ClickHouse read timeouts, safer context handling, and live log-level changes. Fixed API key limit updates and several cache/context edge cases in backend code. Reworked integrations content into data-driven portal pages and refreshed supporting dependencies. v0.0.4 — 2025-07-18 Made /siteverify fully reCAPTCHA-compatible, including successful handling for echo puzzles. Simplified the PrivateCaptcha-specific verify response format. v0.0.3 — 2025-07-14 Split the PrivateCaptcha verify API from the reCAPTCHA-compatible /siteverify flow. Improved verification responses and fixed fast-path handling for test puzzles. v0.0.2 — 2025-07-14 Small maintenance release with dependency refreshes and a fix for the enterprise activation URL format. v0.0.1 — 2025-07-09 Initial public release of the PrivateCaptcha stack, including the Go server, API, portal, widget, Docker setup, and CI/build workflows. Established core security and operations foundations such as security headers, request tracing, rate limiting, caching improvements, monitoring, and more resilient verification behavior. Added the first OpenAPI definition, widget package publishing flow, and early enterprise licensing and activation support.">
 
     <link rel="preload" href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" as="style" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
     <link href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" rel="stylesheet" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
@@ -64,32 +266,7 @@ use a predefined (“dummy”) sitekey allow localhost access for main property 
 
   
   
-  <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script><script async defer src="https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js"></script>
-<script type="text/javascript">
-function resetCaptcha(widget) {
-    setTimeout(() => widget.reset(), 1500);
-}
-function enableDisable(btn) {
-    btn.disabled = true;
-    setTimeout(() => { btn.disabled = false; }, 1500);
-}
-function invisibleStarted() {
-    document.getElementById('spinner').classList.remove('hidden');
-    document.getElementById('checkmark').classList.add('hidden');
-}
-function invisibleFinished(widget) {
-    setTimeout(() => {
-        document.getElementById('spinner').classList.add('hidden');
-        document.getElementById('checkmark').classList.remove('hidden');
-    }, 1500);
-
-    setTimeout(() => {
-        widget.reset();
-        document.getElementById('spinner').classList.add('hidden');
-        document.getElementById('checkmark').classList.add('hidden');
-    }, 3000);
-}
-</script></head>
+  <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script></head>
 <body>
     <a href="#content" class="hx:sr-only hx:focus-visible:not-sr-only hx:focus-visible:fixed hx:focus-visible:z-50 hx:focus-visible:top-2 hx:focus-visible:left-2 hx:focus-visible:bg-primary-500 hx:focus-visible:text-white hx:focus-visible:px-4 hx:focus-visible:py-2 hx:focus-visible:rounded-md hx:focus-visible:text-sm hx:focus-visible:font-medium">Skip to content</a><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
   <div
@@ -105,7 +282,7 @@ function invisibleFinished(widget) {
   title=""
   href="/docs/reference"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
 ><span class="hx:text-center">Reference</span>
 </a><a
   title=""
@@ -192,7 +369,7 @@ function invisibleFinished(widget) {
     <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
       
       
-          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:ltr:pr-8 hx:rtl:pl-8
       hx:hextra-focus-visible-inset
@@ -202,7 +379,7 @@ function invisibleFinished(widget) {
     >
       <span class="hx:min-w-0 [word-break:break-word]">Reference</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
@@ -288,32 +465,17 @@ function invisibleFinished(widget) {
     </a>
   </div>
               
-            </li><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
-        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/docs/reference/testing/"
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">Testing</span>
     </a>
   </div>
-  
-    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
-              <a
-                href="#testing-with-predefined-sitekey"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Testing with predefined sitekey</a>
-            </li>
-          <li>
-              <a
-                href="#testing-with-localhost-access"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Testing with localhost access</a>
-            </li>
-          </ul>
-  
               
             </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
@@ -737,7 +899,7 @@ function invisibleFinished(widget) {
               
             </li></ul>
       </div></li>
-          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:ltr:pr-8 hx:rtl:pl-8
       hx:hextra-focus-visible-inset
@@ -747,7 +909,7 @@ function invisibleFinished(widget) {
     >
       <span class="hx:min-w-0 [word-break:break-word]">Reference</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
@@ -833,11 +995,11 @@ function invisibleFinished(widget) {
     </a>
   </div>
               
-            </li><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
-        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/docs/reference/testing/"
       
     >
@@ -1030,11 +1192,11 @@ function invisibleFinished(widget) {
       <span class="hx:min-w-0 [word-break:break-word]">FAQ</span>
     </a>
   </div></li>
-          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
       href="/docs/changelog/"
       
     >
@@ -1129,22 +1291,154 @@ function invisibleFinished(widget) {
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="Table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#testing-with-predefined-sitekey">Testing with predefined sitekey
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1311--2026-03-19">v1.31.1 — 2026-03-19
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#client-side">Client side
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1310--2026-03-17">v1.31.0 — 2026-03-17
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#server-side">Server side
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1303--2026-03-10">v1.30.3 — 2026-03-10
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#testing-with-localhost-access">Testing with localhost access
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1302--2026-03-04">v1.30.2 — 2026-03-04
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1301--2026-03-03">v1.30.1 — 2026-03-03
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1300--2026-03-02">v1.30.0 — 2026-03-02
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1290--2026-02-09">v1.29.0 — 2026-02-09
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1282--2026-01-28">v1.28.2 — 2026-01-28
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1281--2026-01-28">v1.28.1 — 2026-01-28
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1280--2026-01-27">v1.28.0 — 2026-01-27
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0027--2025-12-23">v0.0.27 — 2025-12-23
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0026--2025-12-19">v0.0.26 — 2025-12-19
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0025--2025-12-03">v0.0.25 — 2025-12-03
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0024--2025-11-29">v0.0.24 — 2025-11-29
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0023--2025-11-20">v0.0.23 — 2025-11-20
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0022--2025-11-13">v0.0.22 — 2025-11-13
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0021--2025-10-21">v0.0.21 — 2025-10-21
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0020--2025-10-11">v0.0.20 — 2025-10-11
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0019--2025-10-08">v0.0.19 — 2025-10-08
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0018--2025-10-06">v0.0.18 — 2025-10-06
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0017--2025-10-04">v0.0.17 — 2025-10-04
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0016--2025-10-04">v0.0.16 — 2025-10-04
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0015--2025-09-30">v0.0.15 — 2025-09-30
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0014--2025-09-30">v0.0.14 — 2025-09-30
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0013--2025-09-24">v0.0.13 — 2025-09-24
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0012--2025-09-15">v0.0.12 — 2025-09-15
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0011--2025-09-12">v0.0.11 — 2025-09-12
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v0010--2025-09-03">v0.0.10 — 2025-09-03
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v009--2025-09-03">v0.0.9 — 2025-09-03
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v008--2025-08-25">v0.0.8 — 2025-08-25
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v007--2025-08-20">v0.0.7 — 2025-08-20
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v006--2025-08-18">v0.0.6 — 2025-08-18
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v005--2025-07-31">v0.0.5 — 2025-07-31
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v004--2025-07-18">v0.0.4 — 2025-07-18
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v003--2025-07-14">v0.0.3 — 2025-07-14
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v002--2025-07-14">v0.0.2 — 2025-07-14
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v001--2025-07-09">v0.0.1 — 2025-07-09
         </a>
       </li></ul>
-      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:inline-block hx:rounded-sm hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50 hx:hextra-focus-visible-inset" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/reference/testing.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:inline-block hx:rounded-sm hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50 hx:hextra-focus-visible-inset" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/changelog.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button id="backToTop" tabindex="-1" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -1161,21 +1455,18 @@ function invisibleFinished(widget) {
         <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
           <a href="/docs/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Docs</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/reference/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Reference</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Testing</div>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Changelog</div>
   </div>
 
         <div class="content">
           
           <div class="hx:flex hx:flex-col hx:sm:flex-row hx:items-start hx:sm:items-center hx:sm:justify-between hx:gap-4 hx:mb-4">
-            <h1 class="hx:mb-0">Testing</h1>
+            <h1 class="hx:mb-0">Changelog</h1>
             <div class="hextra-page-context-menu hx:relative hx:inline-flex hx:shrink-0">
       <div class="hx:inline-flex hx:rounded-lg hx:border hx:border-gray-200 hx:transition-colors hx:hover:border-gray-300 hx:dark:border-neutral-800 hx:dark:hover:border-neutral-700">
         <button
           class="hextra-page-context-menu-copy hx:group/copybtn hx:inline-flex hx:cursor-pointer hx:items-center hx:gap-1.5 hx:bg-transparent hx:px-2.5 hx:py-1 hx:text-sm hx:font-medium hx:text-gray-700 hx:transition-colors hx:hover:bg-slate-50 hx:dark:text-gray-300 hx:dark:hover:bg-neutral-900 hx:ltr:rounded-l-lg hx:rtl:rounded-r-lg hx:hextra-focus-visible-inset"
-          data-url="https://docs.privatecaptcha.com/docs/reference/testing.md"
+          data-url="https://docs.privatecaptcha.com/docs/changelog.md"
           title="Copy as Markdown"
           aria-label="Copy as Markdown"
         >
@@ -1207,7 +1498,7 @@ function invisibleFinished(widget) {
         <li role="none">
           <button
             data-action="view"
-            data-url="https://docs.privatecaptcha.com/docs/reference/testing.md"
+            data-url="https://docs.privatecaptcha.com/docs/changelog.md"
             role="menuitem"
             class="hx:flex hx:w-full hx:cursor-pointer hx:select-none hx:items-center hx:gap-2 hx:whitespace-nowrap hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:text-gray-700 hx:outline-none hx:transition-colors hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-gray-300 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100"
           >
@@ -1216,7 +1507,7 @@ function invisibleFinished(widget) {
           </button>
         </li><li class="hx:my-1 hx:h-px hx:bg-gray-200 hx:dark:bg-neutral-700" role="separator"></li><li role="none">
             <a
-              href="https://chat.openai.com/?q=Hi%20ChatGPT!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Freference%2Ftesting%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
+              href="https://chat.openai.com/?q=Hi%20ChatGPT!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Fchangelog%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
               target="_blank"
               rel="noopener noreferrer"
               role="menuitem"
@@ -1225,7 +1516,7 @@ function invisibleFinished(widget) {
             </a>
           </li><li role="none">
             <a
-              href="https://claude.ai/new?q=Hi%20Claude!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Freference%2Ftesting%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
+              href="https://claude.ai/new?q=Hi%20Claude!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Fchangelog%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
               target="_blank"
               rel="noopener noreferrer"
               role="menuitem"
@@ -1236,112 +1527,222 @@ function invisibleFinished(widget) {
     </div>
           </div>
           
-          <p>There&rsquo;re 2 main ways how you can keep using Private Captcha for testing of your local website:</p>
-<ul>
-<li>use a predefined (&ldquo;dummy&rdquo;) sitekey</li>
-<li>allow localhost access for main property in Settings in portal</li>
+          <h2>v1.31.1 — 2026-03-19<span class="hx:absolute hx:-mt-20" id="v1311--2026-03-19"></span>
+    <a href="#v1311--2026-03-19" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Reorganized the property integrations page and its backing data into clearer sections, making integration guidance easier to scan and navigate.</li>
 </ul>
-<h2>Testing with predefined sitekey<span class="hx:absolute hx:-mt-20" id="testing-with-predefined-sitekey"></span>
-    <a href="#testing-with-predefined-sitekey" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a &ldquo;dummy&rdquo; sitekey (aka &ldquo;test property&rdquo;): <code>aaaaaaaabbbbccccddddeeeeeeeeeeee</code>. This sitekey does not incur any actual solving &ldquo;price&rdquo; (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using <code>data-start-mode=&quot;auto&quot;</code> (in which case parent <code>form</code> needs to gain focus).</p>
-<h3>Client side<span class="hx:absolute hx:-mt-20" id="client-side"></span>
-    <a href="#client-side" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This is a sample captcha widget for testing:</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;private-captcha&#34;</span> <span class="na">data-sitekey</span><span class="o">=</span><span class="s">&#34;aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-    aria-label="Copy code"
-    data-copied-label="Copied!"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
-  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
-
-  <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Widget will show red <code>&quot;testing&quot;</code> text to highlight that it&rsquo;s not for production use once you click it.</p></div>
-  </div>
-</div>
-<form class="pc-form" style="">
-    <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
-        data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
-        data-theme="light"
-        data-lang="en"
-        data-styles=""></div>
-</form>
-<h3>Server side<span class="hx:absolute hx:-mt-20" id="server-side"></span>
-    <a href="#server-side" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>On the server side, once you are using <a href="/docs/reference/verify-api/">Verify API</a> <code>{ &quot;error-codes&quot;: [&quot;property-test&quot;] }</code> (non-empty error codes). Of course, you should be mainly checking <code>success</code> field and <code>error-codes</code> semantics is just to distinguish actual errors.</p>
-<p>Note that by default when using &ldquo;dummy&rdquo; sitekey, the response will have <code>{&quot;success&quot;: false}</code> to prevent security issue where a stub puzzle can be added to any form instead of the valid puzzle. However, if you&rsquo;re using <code>X-PC-Sitekey</code> header with test property sitekey, the response will have <code>{&quot;success&quot;: true}</code>.</p>
-<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">Sending verify request</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>This is a sample payload for test property, that should always return &ldquo;success&rdquo; (please note this is for illustration purposes <strong>only</strong> as payload can change)</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -X POST <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;X-Api-Key: your-api-key&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;X-PC-Sitekey: aaaaaaaabbbbccccddddeeeeeeeeeeee&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -d <span class="s2">&#34;AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.Aaqqqqq7u8zM3d3u7u7u7u4AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=.AQCBnM2czBK6rlq+l06lXBtIDQH/PFk=&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  https://api.privatecaptcha.com/verify</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-    aria-label="Copy code"
-    data-copied-label="Copied!"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p>And if everything is set up correctly, the output will be</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;success&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&#34;code&#34;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="nt">&#34;timestamp&#34;</span><span class="p">:</span><span class="s2">&#34;0001-01-01T00:00:00Z&#34;</span><span class="p">,</span><span class="nt">&#34;origin&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-    aria-label="Copy code"
-    data-copied-label="Copied!"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p>Code <code>10</code> corresponds to <code>&quot;property-test&quot;</code> error description.</p>
-  </div>
-</details>
-<h2>Testing with localhost access<span class="hx:absolute hx:-mt-20" id="testing-with-localhost-access"></span>
-    <a href="#testing-with-localhost-access" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
-  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
-
-  <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Captcha has a strict CORS policy and, by default, it will load <strong>only</strong> on the domain configured during property creation. Subdomains and <code>localhost</code> access needs to be explicitly allowed.</p></div>
-  </div>
-</div>
-<p>In order to make captcha widget to load on <code>localhost</code> domain, we need to allow it in the settings of the property you just created.</p>
-<p><img src="/images/tutorials/e2e-local/allow-localhost.png" alt="Allow localhost domain"  data-zoomable loading="lazy" /></p>
-<p>Worth noting that this is <strong>not required</strong> if you use the <a href="#testing-with-predefined-sitekey">dummy sitekey</a>.</p>
+<h2>v1.31.0 — 2026-03-17<span class="hx:absolute hx:-mt-20" id="v1310--2026-03-17"></span>
+    <a href="#v1310--2026-03-17" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Introduced a full difficulty-rules system with rule matching, database support, portal UI, and reporting integration.</li>
+<li>Improved notifications with configurable <code>From</code>/<code>Reply-To</code> overrides, better name parsing, template ID visibility in <code>viewemails</code>, and graceful deduplication on conflicts.</li>
+<li>Hardened security and concurrency with IDOR fixes for difficulty-rule mutations, leaky-bucket race fixes, reduced 2FA logging exposure, and related cleanup.</li>
+</ul>
+<h2>v1.30.3 — 2026-03-10<span class="hx:absolute hx:-mt-20" id="v1303--2026-03-10"></span>
+    <a href="#v1303--2026-03-10" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Improved observability with Postgres connection metrics and safer SQL trace logging.</li>
+<li>Fixed canceled-request handling in API and portal responses.</li>
+<li>Prevented chart UI races by disabling period buttons while data is loading.</li>
+<li>Also included metrics-handler cleanup and materially relevant runtime and dependency refreshes.</li>
+</ul>
+<h2>v1.30.2 — 2026-03-04<span class="hx:absolute hx:-mt-20" id="v1302--2026-03-04"></span>
+    <a href="#v1302--2026-03-04" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Maintenance-only hotfix correcting unconditional ClickHouse rollback behavior.</li>
+</ul>
+<h2>v1.30.1 — 2026-03-03<span class="hx:absolute hx:-mt-20" id="v1301--2026-03-03"></span>
+    <a href="#v1301--2026-03-03" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Made solver cancellation context-aware and improved solver performance.</li>
+<li>Fixed ClickHouse failure rollback handling and smarter cache refresh and bulk rereads.</li>
+<li>Separated stub and non-stub solution counts and shortened caching for test-property API responses.</li>
+</ul>
+<h2>v1.30.0 — 2026-03-02<span class="hx:absolute hx:-mt-20" id="v1300--2026-03-02"></span>
+    <a href="#v1300--2026-03-02" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added tooling to inspect error logs and fetch local 2FA codes from logs.</li>
+<li>Improved deployment behavior with better single-domain support, configurable handler timeouts, async ClickHouse inserts, and panic metrics.</li>
+<li>Fixed organization invite re-access behavior and added portal tab navigation by URL.</li>
+<li>Reworked difficulty computation across client and server, added database safeguards, and adjusted script cache-control behavior.</li>
+</ul>
+<h2>v1.29.0 — 2026-02-09<span class="hx:absolute hx:-mt-20" id="v1290--2026-02-09"></span>
+    <a href="#v1290--2026-02-09" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added configurable fetch timeouts in the widget to prevent hung network calls.</li>
+<li>Added enable/disable controls for properties and users, with API and portal enforcement.</li>
+<li>Improved operational safety with semaphore-based maintenance-job concurrency, readiness checks that respect maintenance mode, and a circuit breaker for invalid sitekeys.</li>
+<li>Extended licensing and audit visibility with community-edition license checks, unlicensed UI state, masked IPs in audit logs, and a 2FA grace period.</li>
+</ul>
+<h2>v1.28.2 — 2026-01-28<span class="hx:absolute hx:-mt-20" id="v1282--2026-01-28"></span>
+    <a href="#v1282--2026-01-28" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Fixed auto-mode database lifecycle so migrations no longer close live connections.</li>
+<li>Expanded easyjson coverage for API types and improved load testing for test puzzles.</li>
+<li>Hardened local Docker setup with read-only containers and public-key checksum visibility.</li>
+</ul>
+<h2>v1.28.1 — 2026-01-28<span class="hx:absolute hx:-mt-20" id="v1281--2026-01-28"></span>
+    <a href="#v1281--2026-01-28" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Maintenance-only release focused on CI and Docker workflow updates.</li>
+</ul>
+<h2>v1.28.0 — 2026-01-27<span class="hx:absolute hx:-mt-20" id="v1280--2026-01-27"></span>
+    <a href="#v1280--2026-01-27" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added <code>migrate</code> and <code>serve</code> modes, a lighter test path without ClickHouse, and stronger init, CI, and coverage workflows for developers and operators.</li>
+<li>Tightened auth and organization management with 2FA expiration handling, organization transfers, invites for users without accounts, and org-member property creation via API.</li>
+<li>Improved widget robustness and public API coverage, including safer custom-element handling and reset behavior.</li>
+<li>Added org-level usage stats, API key last-used tracking, Java integration support, and faster JSON handling for verify traffic.</li>
+</ul>
+<h2>v0.0.27 — 2025-12-23<span class="hx:absolute hx:-mt-20" id="v0027--2025-12-23"></span>
+    <a href="#v0027--2025-12-23" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Expanded API key permissions with read-only and organization scopes, plus richer audit metadata for API key events.</li>
+<li>Added stricter JSON request validation.</li>
+<li>Otherwise mostly maintenance and publishing updates.</li>
+</ul>
+<h2>v0.0.26 — 2025-12-19<span class="hx:absolute hx:-mt-20" id="v0026--2025-12-19"></span>
+    <a href="#v0026--2025-12-19" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added the first substantial organizations and properties API: list/get/create/update/delete, bulk property creation, pagination, and OpenAPI coverage.</li>
+<li>Introduced API key scopes and the related database and UI groundwork.</li>
+<li>Greatly improved chart caching at both CDN and server layers while avoiding stale user-specific caching.</li>
+<li>Strengthened auth and operations with better email verification, stronger 2FA randomness, logout cache cleanup, and safer job locking.</li>
+</ul>
+<h2>v0.0.25 — 2025-12-03<span class="hx:absolute hx:-mt-20" id="v0025--2025-12-03"></span>
+    <a href="#v0025--2025-12-03" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Tightened <code>/verify</code> by checking the expected sitekey and returning friendlier verification error bodies.</li>
+<li>Updated the OpenAPI spec to match verification behavior.</li>
+<li>Otherwise a small bug-fix release.</li>
+</ul>
+<h2>v0.0.24 — 2025-11-29<span class="hx:absolute hx:-mt-20" id="v0024--2025-11-29"></span>
+    <a href="#v0024--2025-11-29" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added audit logs with portal UI, retention controls, HTML-capable messages, and subscription-specific audit events.</li>
+<li>Expanded usage views with per-property and per-organization usage, longer session TTL, and better sitekey and IP handling.</li>
+<li>Fixed popup auto-start behavior and duplicate trigger execution.</li>
+</ul>
+<h2>v0.0.23 — 2025-11-20<span class="hx:absolute hx:-mt-20" id="v0023--2025-11-20"></span>
+    <a href="#v0023--2025-11-20" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Unified login and 2FA into a single flow, with clearer 2FA emails and stale-session backfill support.</li>
+<li>Let organization members use the verify API for shared properties.</li>
+<li>Reworked user limiting to separate API and property checks, with better rechecks, backpressure, and cache tuning.</li>
+</ul>
+<h2>v0.0.22 — 2025-11-13<span class="hx:absolute hx:-mt-20" id="v0022--2025-11-13"></span>
+    <a href="#v0022--2025-11-13" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added retrying chart fetches, resend timers, and better metrics for portal HTTP errors before redirects.</li>
+<li>Introduced property move support and hid internal identifiers behind hashed portal URLs.</li>
+<li>Expanded integrations and self-hosted license activation flexibility, with additional security hardening.</li>
+</ul>
+<h2>v0.0.21 — 2025-10-21<span class="hx:absolute hx:-mt-20" id="v0021--2025-10-21"></span>
+    <a href="#v0021--2025-10-21" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added runtime widget restyling via <code>data-styles</code> and automatic language mode.</li>
+<li>Tightened catch-all path rate limiting and only records solutions after real user interaction with the widget.</li>
+<li>Added Go&rsquo;s built-in cross-origin protection middleware to the portal.</li>
+</ul>
+<h2>v0.0.20 — 2025-10-11<span class="hx:absolute hx:-mt-20" id="v0020--2025-10-11"></span>
+    <a href="#v0020--2025-10-11" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added organization invitation emails and enforced organization ownership-count limits.</li>
+<li>Fixed widget visibility and styling regressions and expanded widget event coverage.</li>
+<li>Polished several portal layouts and settings screens.</li>
+</ul>
+<h2>v0.0.19 — 2025-10-08<span class="hx:absolute hx:-mt-20" id="v0019--2025-10-08"></span>
+    <a href="#v0019--2025-10-08" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added aggregated challenge statistics and easier sitekey visibility in the dashboard.</li>
+<li>Introduced API key rotation.</li>
+<li>Fixed missing portal login verification metrics.</li>
+</ul>
+<h2>v0.0.18 — 2025-10-06<span class="hx:absolute hx:-mt-20" id="v0018--2025-10-06"></span>
+    <a href="#v0018--2025-10-06" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Fixed notification cleanup context handling and corrected truncated API key values in notifications.</li>
+<li>Added container image scanning to CI.</li>
+<li>Overall, a small bug-fix and security-maintenance release.</li>
+</ul>
+<h2>v0.0.17 — 2025-10-04<span class="hx:absolute hx:-mt-20" id="v0017--2025-10-04"></span>
+    <a href="#v0017--2025-10-04" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added stronger server-side validation for user, property, and API key names.</li>
+<li>Included additional bounds and type-safety checks for security hardening.</li>
+</ul>
+<h2>v0.0.16 — 2025-10-04<span class="hx:absolute hx:-mt-20" id="v0016--2025-10-04"></span>
+    <a href="#v0016--2025-10-04" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Hardened validation around organization names, signatures, and license activation parsing.</li>
+<li>Moved the XSRF key into explicit configuration.</li>
+</ul>
+<h2>v0.0.15 — 2025-09-30<span class="hx:absolute hx:-mt-20" id="v0015--2025-09-30"></span>
+    <a href="#v0015--2025-09-30" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Ensured account creation returns the refreshed user record.</li>
+<li>Otherwise a tiny maintenance release.</li>
+</ul>
+<h2>v0.0.14 — 2025-09-30<span class="hx:absolute hx:-mt-20" id="v0014--2025-09-30"></span>
+    <a href="#v0014--2025-09-30" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added configurable widget colors and relaxed some profile and onboarding validation.</li>
+<li>Fixed cache reads inside transactions and corrected internal subscription detection.</li>
+</ul>
+<h2>v0.0.13 — 2025-09-24<span class="hx:absolute hx:-mt-20" id="v0013--2025-09-24"></span>
+    <a href="#v0013--2025-09-24" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Improved integration UX with visible sitekeys, better localhost layout, and WordPress integration support in the portal.</li>
+<li>Added asset ETags and stylesheet cache busting tied to the current Git commit.</li>
+<li>Restored widget auto-start as the default mode.</li>
+</ul>
+<h2>v0.0.12 — 2025-09-15<span class="hx:absolute hx:-mt-20" id="v0012--2025-09-15"></span>
+    <a href="#v0012--2025-09-15" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Refactored session handling and shortened session flush timing so persisted session state updates more quickly.</li>
+<li>Added extra ID-safety checks and general session cleanup around session persistence.</li>
+</ul>
+<h2>v0.0.11 — 2025-09-12<span class="hx:absolute hx:-mt-20" id="v0011--2025-09-12"></span>
+    <a href="#v0011--2025-09-12" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Improved structured logging with service tags and cleaner log levels.</li>
+<li>Fixed organization invite and member validation so organization users resolve more reliably.</li>
+</ul>
+<h2>v0.0.10 — 2025-09-03<span class="hx:absolute hx:-mt-20" id="v0010--2025-09-03"></span>
+    <a href="#v0010--2025-09-03" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Mostly an observability and bug-fix release, correcting healthcheck job exclusivity and improving puzzle decode/debug logging.</li>
+</ul>
+<h2>v0.0.9 — 2025-09-03<span class="hx:absolute hx:-mt-20" id="v009--2025-09-03"></span>
+    <a href="#v009--2025-09-03" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Replaced widget JavaScript callbacks with DOM events for integrations.</li>
+<li>Refactored puzzle issue/verify handling and corrected puzzle issue timestamps.</li>
+</ul>
+<h2>v0.0.8 — 2025-08-25<span class="hx:absolute hx:-mt-20" id="v008--2025-08-25"></span>
+    <a href="#v008--2025-08-25" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Switched puzzle identifiers to XID and advanced the move from <code>allow_replay</code> to <code>max_replay_count</code>-based replay control.</li>
+<li>Improved puzzle cache and leaky-bucket performance, with better profiling and diagnostics around cache and property failures.</li>
+<li>Hardened the product by requiring property domains in the portal and protecting maintenance-job endpoints.</li>
+</ul>
+<h2>v0.0.7 — 2025-08-20<span class="hx:absolute hx:-mt-20" id="v007--2025-08-20"></span>
+    <a href="#v007--2025-08-20" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Cached stub puzzles and expanded the integrations page with PHP and Ruby guidance.</li>
+<li>Otherwise a small maintenance release.</li>
+</ul>
+<h2>v0.0.6 — 2025-08-18<span class="hx:absolute hx:-mt-20" id="v006--2025-08-18"></span>
+    <a href="#v006--2025-08-18" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Added a full notifications foundation, including persistent notifications, expiring API key alerts, and richer welcome emails.</li>
+<li>Expanded maintenance jobs for offboarding and trial expiry, with safer execution, lock checks, circuit breaking, and argument support.</li>
+<li>Added a Google reCAPTCHA-compatible site script mode, jittered <code>Retry-After</code> responses, and standardized configuration under <code>PC_</code> environment variables.</li>
+</ul>
+<h2>v0.0.5 — 2025-07-31<span class="hx:absolute hx:-mt-20" id="v005--2025-07-31"></span>
+    <a href="#v005--2025-07-31" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Improved runtime robustness with explicit ClickHouse read timeouts, safer context handling, and live log-level changes.</li>
+<li>Fixed API key limit updates and several cache/context edge cases in backend code.</li>
+<li>Reworked integrations content into data-driven portal pages and refreshed supporting dependencies.</li>
+</ul>
+<h2>v0.0.4 — 2025-07-18<span class="hx:absolute hx:-mt-20" id="v004--2025-07-18"></span>
+    <a href="#v004--2025-07-18" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Made <code>/siteverify</code> fully reCAPTCHA-compatible, including successful handling for echo puzzles.</li>
+<li>Simplified the PrivateCaptcha-specific verify response format.</li>
+</ul>
+<h2>v0.0.3 — 2025-07-14<span class="hx:absolute hx:-mt-20" id="v003--2025-07-14"></span>
+    <a href="#v003--2025-07-14" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Split the PrivateCaptcha verify API from the reCAPTCHA-compatible <code>/siteverify</code> flow.</li>
+<li>Improved verification responses and fixed fast-path handling for test puzzles.</li>
+</ul>
+<h2>v0.0.2 — 2025-07-14<span class="hx:absolute hx:-mt-20" id="v002--2025-07-14"></span>
+    <a href="#v002--2025-07-14" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Small maintenance release with dependency refreshes and a fix for the enterprise activation URL format.</li>
+</ul>
+<h2>v0.0.1 — 2025-07-09<span class="hx:absolute hx:-mt-20" id="v001--2025-07-09"></span>
+    <a href="#v001--2025-07-09" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Initial public release of the PrivateCaptcha stack, including the Go server, API, portal, widget, Docker setup, and CI/build workflows.</li>
+<li>Established core security and operations foundations such as security headers, request tracing, rate limiting, caching improvements, monitoring, and more resilient verification behavior.</li>
+<li>Added the first OpenAPI definition, widget package publishing flow, and early enterprise licensing and activation support.</li>
+</ul>
 
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-03-16T13:43:41.000Z">March 16, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/reference/eu-isolation/"
-        title="EU isolation"
+      Last updated on <time datetime="2026-03-19T08:54:10.000Z">March 19, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+        href="/docs/faq/"
+        title="FAQ"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>EU isolation</a><a
-        href="/docs/reference/verify-api/"
-        title="Verify API"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >Verify API<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>FAQ</a></div>
       </main>
     </article>
   </div>
@@ -1354,41 +1755,6 @@ function invisibleFinished(widget) {
     
     <script defer src="/js/main.min.cbffe606b79d26f8813b28319505bce709860d948f62aae13c168f03af5872c6.js" integrity="sha256-y//mBredJviBOygxlQW85wmGDZSPYqrhPBaPA69YcsY="></script>
 <script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
-        <script defer src="/en.search.min.c4d5d567472e17d521a99e108d128a9a776843c98efd76415a1f69fda09040c2.js" integrity="sha256-xNXVZ0cuF9UhqZ4QjRKKmndoQ8mO/XZBWh9p/aCQQMI="></script><script defer src="/js/medium-zoom.min.6603320c02180d81b16dca4971f52763035ebc6ff18bd38729a47ff062be8d67.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK&#43;jWc=" crossorigin="anonymous"></script><script>
-  document.addEventListener("DOMContentLoaded", () => {
-    if (!window.mediumZoom) {
-      return;
-    }
-
-    const getOverlay = () => {
-      return document.documentElement.classList.contains("dark")
-        ? "rgba(17, 17, 17, 0.98)"
-        : "rgba(255, 255, 255, 0.98)";
-    };
-
-    const zoom = window.mediumZoom("[data-zoomable]", {
-      background: getOverlay(),
-    });
-
-    const style = document.createElement("style");
-    style.textContent = `
-      .medium-zoom-overlay {
-        z-index: 1000;
-      }
-      .medium-zoom-image--opened {
-        z-index: 1001;
-      }
-    `;
-    document.head.appendChild(style);
-
-    new MutationObserver(() => {
-      zoom.update({ background: getOverlay() });
-    }).observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-  });
-</script>
-
+        <script defer src="/en.search.min.c4d5d567472e17d521a99e108d128a9a776843c98efd76415a1f69fda09040c2.js" integrity="sha256-xNXVZ0cuF9UhqZ4QjRKKmndoQ8mO/XZBWh9p/aCQQMI="></script>
   </body>
 </html>
