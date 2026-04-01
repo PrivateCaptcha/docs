@@ -70,6 +70,8 @@ Here's the list of currently supported languages:
 - Polski (`pl`)
 - Suomi (`fi`)
 - Eesti (`et`)
+- Українська (`uk`)
+- Türkçe (`tr`)
 
 Here's how to localize a widget:
 ```diff {filename="index.html"}
