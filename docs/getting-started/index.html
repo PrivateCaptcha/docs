@@ -46,14 +46,14 @@ Create a new property in Private Captcha portal
 
 <meta
   property="article:modified_time"
-  content="2026-03-14T20:28:15+01:00">
+  content="2026-04-01T17:09:29+02:00">
 
 
 
   <meta itemprop="name" content="Getting started">
   <meta itemprop="description" content="If you’re new to using CAPTCHAs in general, read our quick explanation first. Prerequisites A Private Captcha account (sign up if you don’t have one) Setup steps Create a new property in Private Captcha portal A property represents a single CAPTCHA widget that can be used on a website, web page, or form. Each property is identified by a unique Sitekey.">
-  <meta itemprop="dateModified" content="2026-03-14T20:28:15+01:00">
-  <meta itemprop="wordCount" content="409">
+  <meta itemprop="dateModified" content="2026-04-01T17:09:29+02:00">
+  <meta itemprop="wordCount" content="453">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Getting started">
   <meta name="twitter:description" content="If you’re new to using CAPTCHAs in general, read our quick explanation first. Prerequisites A Private Captcha account (sign up if you don’t have one) Setup steps Create a new property in Private Captcha portal A property represents a single CAPTCHA widget that can be used on a website, web page, or form. Each property is identified by a unique Sitekey.">
@@ -1109,7 +1109,7 @@ Create a new property in Private Captcha portal
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#note-sitekey-of-the-property">Note Sitekey of the property
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#integrate-on-your-website">Integrate on your website
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
@@ -1117,7 +1117,7 @@ Create a new property in Private Captcha portal
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#copy-and-store-your-api-key">Copy and store your API key
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#integrate-with-your-backend">Integrate with your backend
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
@@ -1249,13 +1249,19 @@ Create a new property in Private Captcha portal
 </div>
 <p><img src="/images/integrations/new-wordpress-site.png" alt="Enter name and domain"  data-zoomable loading="lazy" /></p>
 <p>Click <strong>&ldquo;Create&rdquo;</strong> to complete property creation.</p>
-<h3>Note Sitekey of the property<span class="hx:absolute hx:-mt-20" id="note-sitekey-of-the-property"></span>
-    <a href="#note-sitekey-of-the-property" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After creating the property, you&rsquo;ll be presented with an integration snippet. The <em>Sitekey</em> is visible in the widget configuration.</p>
+<h3>Integrate on your website<span class="hx:absolute hx:-mt-20" id="integrate-on-your-website"></span>
+    <a href="#integrate-on-your-website" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After creating the property, you&rsquo;ll be presented with an integration snippet. The <em>Sitekey</em> is visible in the widget configuration.</p>
 <p>Alternatively, you can find it later by opening your property in the portal, going to the <strong>&ldquo;Integrations&rdquo;</strong> tab, and noting the <strong>Sitekey</strong> value.</p>
 <p><img src="/images/integrations/property-sitekey.png" alt="Property sitekey"  data-zoomable loading="lazy" /></p>
 <p>The <em>Sitekey</em> looks like <code>aaaaaaaabbbbccccddddeeeeeeeeeeee</code> and is used for the client-side widget initialization.</p>
+<div class="hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose" style="--hextra-cards-grid-cols: 3;">
+  <a
+    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/integrations/client-side"
+      ><div class="hx:mt-auto">
+      <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>Client-side integration</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Read more on a dedicated page</div></div></a>
+</div>
 <h3>Create a new API key<span class="hx:absolute hx:-mt-20" id="create-a-new-api-key"></span>
-    <a href="#create-a-new-api-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>API keys are used for server-side verification of CAPTCHA solutions. Each API key has an expiration date and can be revoked at any time.</p>
+    <a href="#create-a-new-api-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>API keys are used for <em>server-side</em> verification of CAPTCHA solutions. Each API key has an expiration date and can be revoked at any time.</p>
 <p>Go to <a href="https://portal.privatecaptcha.com/settings?tab=apikeys"target="_blank" rel="noopener">API key settings<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a> and click <strong>&ldquo;Create new key&rdquo;</strong>. Give it a meaningful name (e.g., &ldquo;Production API key&rdquo;, &ldquo;WordPress API key&rdquo;), and select scope <code>Captcha verification</code> (default).</p>
@@ -1264,8 +1270,8 @@ Create a new property in Private Captcha portal
     <figcaption>Make sure to select scope &#39;Captcha verification&#39;</figcaption>
   </figure></p>
 <p>Set an expiration date and click <strong>&ldquo;Create&rdquo;</strong>.</p>
-<h3>Copy and store your API key<span class="hx:absolute hx:-mt-20" id="copy-and-store-your-api-key"></span>
-    <a href="#copy-and-store-your-api-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After creation, the API key value will be displayed. <strong>Copy it immediately</strong> and store it securely (e.g., in a password manager).</p>
+<p><strong>Copy and store your API key</strong></p>
+<p>After creation, the API key value will be displayed. <strong>Copy it immediately</strong> and store it securely (e.g., in a password manager).</p>
 <p><img src="/images/integrations/copy-api-key.png" alt="Copy API key value"  data-zoomable loading="lazy" /></p>
 <div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
@@ -1274,6 +1280,14 @@ Create a new property in Private Captcha portal
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>The API key value is only shown once. If you lose it, you&rsquo;ll need to create a new API key. Store it securely and never commit it to version control.</p></div>
   </div>
 </div>
+<h3>Integrate with your backend<span class="hx:absolute hx:-mt-20" id="integrate-with-your-backend"></span>
+    <a href="#integrate-with-your-backend" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Once you have the API key, choose one of our backend <a href="/docs/integrations/">integrations</a> and follow the detailed guide inside.</p>
+<div class="hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose" style="--hextra-cards-grid-cols: 3;">
+  <a
+    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/integrations/"
+      ><div class="hx:mt-auto">
+      <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50">Server integrations</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Use one of the SDKs for server-side verification</div></div></a>
+</div>
 </div>
 <h2>Security checklist<span class="hx:absolute hx:-mt-20" id="security-checklist"></span>
     <a href="#security-checklist" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Just few useful thing to check if everything is setup correctly:</p>
@@ -1281,6 +1295,7 @@ Create a new property in Private Captcha portal
 <li><input disabled="" type="checkbox"> You cannot submit your HTML form without having to click captcha widget (form submission is not blocked automatically, you have to hook into captcha solved event)</li>
 <li><input disabled="" type="checkbox"> Your backend form processing does not process the form submission without verifying captcha <strong>first</strong></li>
 </ul>
+<p>Read more about security on our <a href="/docs/reference/security/">dedicated page</a>.</p>
 <h2>Next steps<span class="hx:absolute hx:-mt-20" id="next-steps"></span>
     <a href="#next-steps" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Now that you have a property with a <em>Sitekey</em> (for client-side widget) and an API key (for server-side verification), you can proceed to:</p>
 <div class="hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose" style="--hextra-cards-grid-cols: 3;">
@@ -1289,20 +1304,20 @@ Create a new property in Private Captcha portal
       ><div class="hx:mt-auto">
       <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>End-to-end example</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Follow along to see a complete integration example</div></div></a>
   <a
-    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/integrations/go"
-      ><div class="hx:mt-auto">
-      <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50">Integrations</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Use one of the SDKs for server-side verification</div></div></a>
-  <a
     class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/tutorials/widget-customization"
       ><div class="hx:mt-auto">
       <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>Widget customization</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Integrate the widget on your frontend</div></div></a>
+  <a
+    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/reference/"
+      ><div class="hx:mt-auto">
+      <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>Security</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Read more about security of CAPTCHA integration</div></div></a>
 </div>
 
 
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-03-14T20:28:15.000Z">March 14, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-04-01T17:09:29.000Z">April 1, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/faq/"
         title="FAQ"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"

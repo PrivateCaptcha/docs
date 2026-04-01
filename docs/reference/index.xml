@@ -1989,6 +1989,8 @@
 &lt;li&gt;Polski (&lt;code&gt;pl&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;Suomi (&lt;code&gt;fi&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;Eesti (&lt;code&gt;et&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Українська (&lt;code&gt;uk&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Türkçe (&lt;code&gt;tr&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Here&amp;rsquo;s how to localize a widget:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;

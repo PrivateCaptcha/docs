@@ -28,7 +28,7 @@ Enter a name for your property (e.g., _"My Website"_) and the domain where you'l
 
 Click **"Create"** to complete property creation.
 
-### Note Sitekey of the property
+### Integrate on your website
 
 After creating the property, you'll be presented with an integration snippet. The _Sitekey_ is visible in the widget configuration.
 
@@ -38,9 +38,15 @@ Alternatively, you can find it later by opening your property in the portal, goi
 
 The _Sitekey_ looks like `aaaaaaaabbbbccccddddeeeeeeeeeeee` and is used for the client-side widget initialization.
 
+{{< cards >}}
+  {{< card link="/docs/integrations/client-side" title="Client-side integration"
+  subtitle="Read more on a dedicated page"
+  icon="code" >}}
+{{< /cards >}}
+
 ### Create a new API key
 
-API keys are used for server-side verification of CAPTCHA solutions. Each API key has an expiration date and can be revoked at any time.
+API keys are used for _server-side_ verification of CAPTCHA solutions. Each API key has an expiration date and can be revoked at any time.
 
 Go to [API key settings](https://portal.{{< domain >}}/settings?tab=apikeys) and click **"Create new key"**. Give it a meaningful name (e.g., "Production API key", "WordPress API key"), and select scope `Captcha verification` (default).
 
@@ -48,7 +54,7 @@ Go to [API key settings](https://portal.{{< domain >}}/settings?tab=apikeys) and
 
 Set an expiration date and click **"Create"**.
 
-### Copy and store your API key
+**Copy and store your API key**
 
 After creation, the API key value will be displayed. **Copy it immediately** and store it securely (e.g., in a password manager).
 
@@ -56,6 +62,17 @@ After creation, the API key value will be displayed. **Copy it immediately** and
 
 > [!WARNING]
 > The API key value is only shown once. If you lose it, you'll need to create a new API key. Store it securely and never commit it to version control.
+
+### Integrate with your backend
+
+Once you have the API key, choose one of our backend [integrations]({{< relref "/docs/integrations/_index.md" >}}) and follow the detailed guide inside.
+
+
+{{< cards >}}
+  {{< card link="/docs/integrations/" title="Server integrations"  
+    subtitle="Use one of the SDKs for server-side verification"
+   >}}
+{{< /cards >}}
 
 {{% /steps %}}
 
@@ -67,6 +84,8 @@ Just few useful thing to check if everything is setup correctly:
 - [ ] You cannot submit your HTML form without having to click captcha widget (form submission is not blocked automatically, you have to hook into captcha solved event)
 - [ ] Your backend form processing does not process the form submission without verifying captcha **first**
 
+Read more about security on our [dedicated page]({{< relref "/docs/reference/security.md" >}}).
+
 ## Next steps
 
 Now that you have a property with a _Sitekey_ (for client-side widget) and an API key (for server-side verification), you can proceed to:
@@ -75,11 +94,11 @@ Now that you have a property with a _Sitekey_ (for client-side widget) and an AP
   {{< card link="/docs/tutorials/complete-example" title="End-to-end example"
   subtitle="Follow along to see a complete integration example"
   icon="code" >}}
-  {{< card link="/docs/integrations/go" title="Integrations"  
-  subtitle="Use one of the SDKs for server-side verification"
-   >}}
   {{< card link="/docs/tutorials/widget-customization" title="Widget customization"
   subtitle="Integrate the widget on your frontend"
   icon="light-bulb" >}}
+  {{< card link="/docs/reference/" title="Security"  
+  subtitle="Read more about security of CAPTCHA integration"
+  icon="lock-closed" >}}
 {{< /cards >}}
 
