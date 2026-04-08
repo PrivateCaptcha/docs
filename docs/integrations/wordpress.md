@@ -86,6 +86,7 @@ Now, open login dialog for your WordPress installation (e.g. in Private browser 
 - WordPress Comment Forms (logged-in and guest users)
 - WPForms
 - Contact Form 7 (use `[privatecaptcha]` tag)
+- Gravity Forms
 - _More forms support (including popular plugins) are currently **in progress**_
 
 ## WP-CLI Commands
