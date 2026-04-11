@@ -91,6 +91,7 @@ Now, open login dialog for your WordPress installation (e.g. in Private browser 
 - WPForms
 - Contact Form 7 (use `[privatecaptcha]` tag)
 - Gravity Forms
+- Elementor Pro (add "Private Captcha" element to the form)
 - _More forms support (including popular plugins) are currently **in progress**_
 
 ## WP-CLI Commands
