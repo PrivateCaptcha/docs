@@ -3,6 +3,11 @@ title: "Changelog"
 date: 2026-03-19T08:43:58+01:00
 ---
 
+## v1.32.0 - 2026-04-14
+
+- Added weekly and monthly email reporting feature for user- and organization-level stats
+- Added abiltiy to show a system notice on captcha widget (admin-configured)
+
 ## v1.31.1 — 2026-03-19
 
 - Reorganized the property integrations page and its backing data into clearer sections, making integration guidance easier to scan and navigate.

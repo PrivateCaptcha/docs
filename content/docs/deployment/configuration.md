@@ -54,6 +54,9 @@ Variable | Example | Description
 `PC_VERBOSE` | `true` | Boolean (`1`, `y`, `true`) to indicate verbose logging (trace level).
 `PC_COUNTRY_CODE_HEADER` | `CDN-RequestCountryCode` | HTTP header with 2-letter country code (usually comes from your CDN provider)
 `EE_AUDIT_LOGS_DAYS` | `365` | Enterprise-only config for retention period of audit log history (defaults to `365`)
+`PC_MAINTENANCE_JOB_CONCURRENCY` | `2` | How many maintenance jobs can run in parallel (tune up on a more powerful server)
+`PC_FINGERPRINT_HEADER` | `CDN-JA4` | HTTP header with a fingerprint hash, used for puzzle difficulty calculation instead of IP address.
+`PC_WIDGET_NOTICE` | `Hello world` | A string that will be shown as a `notice` tooltip on all widgets that have `show_notice` set to `TRUE`.
 
 > [!NOTE]
 "Default" rate limiter means the one for public APIs (`/puzzle`, `/verify` and some others). Various other APIs have pre-configured hardcoded limits, compiled in.
