@@ -41,6 +41,16 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
 
 ## Notable deployment changes
 
+{{< callout type="info" >}}
+These are only deployment-specific changes. For general feature changelog, click [here]({{< relref "/docs/changelog.md" >}}).
+{{< /callout >}}
+
+### v1.32.0
+
+- new important (yet optional) environment variable has been added: `PC_FINGERPRINT_HEADER` which, if set, will be used for puzzle requester identification instead of IP address. For example, if you use Bunny CDN, you can set it to `CDN-JA4` to use JA4 TLS fingerprint.
+- new environment variable `PC_WIDGET_NOTICE` allows to show a system notice on widgets, if respective properties have `show_notice` enabled in Postgres (admin-level action)
+- widget has been updated, purge your CDN cache
+
 ### v1.30.0
 
 - widget has been updated, purge your CDN cache
