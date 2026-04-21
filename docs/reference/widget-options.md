@@ -148,9 +148,9 @@ Event | Callback | Description
 `privatecaptcha:start` | `data-started-callback` | Captcha started solving the puzzle.
 `privatecaptcha:finish` | `data-finished-callback` | Puzzle has been solved. You can use this callback to enable the form submit button.
 `privatecaptcha:error` | `data-errored-callback` | Puzzle endpoint is not reachable or puzzle solving has failed
+`privatecaptcha:reset` | `data-reset-callback` | Widget has been reset and requires a new puzzle to be solved
 
 ### Example
-
 
 {{< tabs items="Callback,Event" >}}
 {{< tab >}}

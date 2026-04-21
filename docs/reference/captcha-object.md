@@ -26,7 +26,7 @@ Resets capcha widget to the initial state. Deletes found solution. Optionally ca
 Example:
 
 ```javascript
-window.privateCaptcha.autoWidget.reset();
+window.privateCaptcha.autoWidget.reset(); // (or, for this global method, `window.privateCaptcha.reset()`)
 // with options
 window.privateCaptcha.autoWidget.reset({debug: true, displayMode: 'popup'});
 ```
@@ -42,3 +42,7 @@ Example:
     <button type="button" onclick="window.privateCaptcha.autoWidget.execute()">Submit</button>
 </form>
 ```
+
+### `element()`
+
+Returns the `HTMLElement` where captcha widget is mounted. Can be used for listening to the events.
