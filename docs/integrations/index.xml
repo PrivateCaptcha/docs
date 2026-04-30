@@ -881,6 +881,8 @@
 &lt;li&gt;WooCommerce (Login, Registration, Password reset, Checkout guest/logged-in)&lt;/li&gt;
 &lt;li&gt;Fluent Forms&lt;/li&gt;
 &lt;li&gt;Forminator&lt;/li&gt;
+&lt;li&gt;Formidable&lt;/li&gt;
+&lt;li&gt;Ultimate Member (Login, Registration, Password reset)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;More forms support (including popular plugins) are currently &lt;strong&gt;in progress&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;WP-CLI Commands&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;wp-cli-commands&#34;&gt;&lt;/span&gt;
