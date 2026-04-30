@@ -92,6 +92,8 @@ Now, open login dialog for your WordPress installation (e.g. in Private browser 
 - WooCommerce (Login, Registration, Password reset, Checkout guest/logged-in)
 - Fluent Forms
 - Forminator
+- Formidable
+- Ultimate Member (Login, Registration, Password reset)
 - _More forms support (including popular plugins) are currently **in progress**_
 
 ## WP-CLI Commands
