@@ -5,7 +5,7 @@
       "extended": true,
       "version": "0.132.2"
     },
-    "ghcr.io/devcontainers/features/node:1": {}
+    "ghcr.io/devcontainers/features/node:2": {}
   },
   "forwardPorts": [1313]
 }
