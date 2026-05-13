@@ -22,13 +22,13 @@ cd private-captcha
 Copy sample environment variables and set all required ones.
 
 ```bash
-cp .env.example .env
+cp .env.prod.example .env
 $EDITOR .env
 ```
 
 Some notes on environment variables:
 
-- Private Captcha assumes to run on 3 subdomains in total: `api.`, `cdn.` and `portal.`
+- [In production]({{< relref "/docs/deployment/production.md" >}}) Private Captcha assumes to run on 3 subdomains: `api.`, `cdn.` and `portal.` for configuration flexibility (this is not required, but recommended).
 - `PC_USER_FINGERPRINT_KEY` you can generate using `openssl rand -hex 64`
 - `PC_ADMIN_EMAIL` will be used to create an actual admin account (see note for local use below)
 - `PC_RATE_LIMIT_HEADER` should be the header containing an actual client IP (comes from your CDN or reverse proxy, for example `X-Real-Ip`)
@@ -37,15 +37,28 @@ You can find full documentation on these and other _required_ environment variab
 
 {{% details title="Tips for local use" closed="true" %}}
 
-To run Private Captcha only locally, use `privatecaptcha.local:8080` instead of `yourdomain.com`. To make it work, you need to add a few lines to `/etc/hosts` file:
+To run Private Captcha _only_ locally, use `.env.local.example` instead of `.env.prod.example`. After startup, open `http://localhost:8080/portal` URL in browser and log in with `admin@privatecaptcha.local` email.
 
-```bash
+> NOTE: email with `.local` domain is **not** a valid RFC-5322 address, so for 2FA code (required for login) cannot be sent and you will need to find "two factor code" from docker logs manually
+
+The difference between prod and local setup is mostly that prod is designed to run on 3 separate subdomains (`api.`, `cdn.` and `portal.`) for flexibility. You can easily emulate this locally too if you add a few lines to `/etc/hosts` file:
+
+```
 127.0.0.1       portal.privatecaptcha.local
 127.0.0.1       api.privatecaptcha.local
 127.0.0.1       cdn.privatecaptcha.local
 ```
 
-> NOTE: email with `.local` domain is **not** a valid RFC-5322 address, so for 2FA code (required for login) you will need to find "two factor code" from docker logs manually
+Another point is that for local-only use you may throw away the `migration` service in `compose.yml` and merge the following to `compose.override.yml`:
+
+```yaml
+services:
+  privatecaptcha:
+    command:
+      /app/server -mode auto
+```
+
+Mode `auto` always runs migrations before serving traffic.
 
 {{% /details %}}
 

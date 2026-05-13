@@ -3,6 +3,17 @@ title: "Changelog"
 date: 2026-03-19T08:43:58+01:00
 ---
 
+## v1.34.0 - 2026-05-13
+
+- Added basic onboarding for new users
+- Introduced local cache persistence during restarts for most improtant entities
+- Lots of small security fixes and improvements (portal subscription checks, org membership checks in API, platform fixes)
+
+## v1.33.0 - 2026-04-21
+
+- Added property creation wizard
+- Improved widget API for richer integration with websites
+
 ## v1.32.0 - 2026-04-14
 
 - Added weekly and monthly email reporting feature for user- and organization-level stats
