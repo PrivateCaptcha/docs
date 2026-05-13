@@ -1,4 +1,5 @@
 # Difficulty rules
+
 Difficulty rules is a system of custom modifiers for CAPTCHA puzzle difficulty returned for the end-user, based on various conditions.
 
 ![Difficulty rules example](/images/reference/difficulty-rules-example.png "Example of a couple of difficulty rules")

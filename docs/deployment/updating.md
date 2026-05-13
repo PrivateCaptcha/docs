@@ -1,4 +1,5 @@
 # Updating
+
 ## Generic instructions
 
 {{< callout >}}
@@ -33,7 +34,7 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
     docker compose ps
     ```
 5. Perform all instructions below for each version between running version and the one you're about to upgrade to.
-    {{< callout >}}Changes in files to look out for: `compose.yml`, `.env.example` {{< /callout >}}
+    {{< callout >}}Changes in files to look out for: `compose.yml`, `.env.prod.example` {{< /callout >}}
 6. Recreate containers with new images
     ```bash
     docker compose up -d
@@ -44,6 +45,11 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
 {{< callout type="info" >}}
 These are only deployment-specific changes. For general feature changelog, click [here]({{< relref "/docs/changelog.md" >}}).
 {{< /callout >}}
+
+### v1.34.0
+
+- new recommended environment variable `CACHE_DIRECTORY` (systemd-style naming, no `PC_` prefix), if set, enabled cache persistence during restarts, which has great security benefits.
+- widget has been udpated, purge your CDN cache
 
 ### v1.32.0
 

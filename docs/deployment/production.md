@@ -1,4 +1,5 @@
 # Production use
+
 ## Updates
 
 {{< callout type="warning" >}}
@@ -17,7 +18,7 @@ Always check [upgrade instructions]({{< relref "docs/deployment/updating.md" >}}
 All responses from Private Captcha server already contain correct `Cache-Control` headers so your only job is to make sure CDN/proxy respects them and does not override them.
 {{< /callout >}}
 
-Private Captcha installation expects to be running on 3 subdomains (`cdn.`, `api.` and `portal.`) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice.
+Private Captcha installation expects to be running on 3 subdomains (`cdn.`, `api.` and `portal.`) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice. Using different subdomains allows for using different CDN zones with various network and security configuration to your liking.
 
 You can find [an example for Bunny CDN]({{< relref "docs/deployment/bunny-cdn.md" >}}) in the docs.
 

@@ -1,4 +1,5 @@
 # Platform API
+
 > [!NOTE]
 > API is also available [here](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/PrivateCaptcha/PrivateCaptcha/refs/heads/main/docs/openapi.yaml) as Swagger / OpenAPI definition.
 

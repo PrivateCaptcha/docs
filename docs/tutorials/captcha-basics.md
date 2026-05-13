@@ -1,4 +1,5 @@
 # How CAPTCHA works
+
 Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).
 
 ```mermaid

@@ -1,4 +1,5 @@
 # Security
+
 ## Client side
 
 ### Content-Security-Policy Settings

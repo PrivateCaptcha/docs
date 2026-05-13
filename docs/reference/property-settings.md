@@ -1,4 +1,5 @@
 # Property settings
+
 Protection of a website or a form starts with creating a property in the [Portal](https://portal.{{< domain >}}). Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like `aaaaaaaabbbbccccddddeeeeeeeeeeee`. Site Key is used in the [widget initialization]({{< relref "/docs/reference/widget-options.md" >}}).
 
 We'll go through all property settings that you can change.

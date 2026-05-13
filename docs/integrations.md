@@ -1,4 +1,5 @@
 # Integrations
+
 It is recommended to use one of the pre-built integrations. They use a more efficient API than reCAPTCHA-compatible `/siteverify` API, include retry mechanism and are officially supported. If you cannot find an integration you need, please get in touch.
 
 All server- and client-side integrations are not code-generated from OpenAPI/Swagger and instead are created independently to use optimal and idiomatic code for each platform/technology.

@@ -1,4 +1,5 @@
 # Bunny CDN
+
 > [!NOTE]
 > Using Bunny CDN is **not required**. This is an example of self-hosting Private Captcha behind [Bunny CDN](https://bunny.net). Instructions for other CDN providers will be different, but core ideas are the same.
 

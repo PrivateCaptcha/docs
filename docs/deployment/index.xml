@@ -124,7 +124,7 @@
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Changes in files to look out for: &lt;code&gt;compose.yml&lt;/code&gt;, &lt;code&gt;.env.example&lt;/code&gt;&lt;/div&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;Changes in files to look out for: &lt;code&gt;compose.yml&lt;/code&gt;, &lt;code&gt;.env.prod.example&lt;/code&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/li&gt;
@@ -154,6 +154,11 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;h3&gt;v1.34.0&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;v1340&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#v1340&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;new recommended environment variable &lt;code&gt;CACHE_DIRECTORY&lt;/code&gt; (systemd-style naming, no &lt;code&gt;PC_&lt;/code&gt; prefix), if set, enabled cache persistence during restarts, which has great security benefits.&lt;/li&gt;
+&lt;li&gt;widget has been udpated, purge your CDN cache&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3&gt;v1.32.0&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;v1320&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#v1320&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;new important (yet optional) environment variable has been added: &lt;code&gt;PC_FINGERPRINT_HEADER&lt;/code&gt; which, if set, will be used for puzzle requester identification instead of IP address. For example, if you use Bunny CDN, you can set it to &lt;code&gt;CDN-JA4&lt;/code&gt; to use JA4 TLS fingerprint.&lt;/li&gt;
@@ -357,7 +362,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Private Captcha installation expects to be running on 3 subdomains (&lt;code&gt;cdn.&lt;/code&gt;, &lt;code&gt;api.&lt;/code&gt; and &lt;code&gt;portal.&lt;/code&gt;) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice.&lt;/p&gt;
+&lt;p&gt;Private Captcha installation expects to be running on 3 subdomains (&lt;code&gt;cdn.&lt;/code&gt;, &lt;code&gt;api.&lt;/code&gt; and &lt;code&gt;portal.&lt;/code&gt;) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice. Using different subdomains allows for using different CDN zones with various network and security configuration to your liking.&lt;/p&gt;
 &lt;p&gt;You can find &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/bunny-cdn/&#34;&gt;an example for Bunny CDN&lt;/a&gt; in the docs.&lt;/p&gt;
 &lt;h2&gt;Security&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;security&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#security&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
@@ -533,7 +538,7 @@
     &lt;a href=&#34;#2-create-env-file&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Copy sample environment variables and set all required ones.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp .env.example .env
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp .env.prod.example .env
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$EDITOR&lt;/span&gt; .env&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
@@ -548,7 +553,7 @@
 &lt;/div&gt;
 &lt;p&gt;Some notes on environment variables:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Private Captcha assumes to run on 3 subdomains in total: &lt;code&gt;api.&lt;/code&gt;, &lt;code&gt;cdn.&lt;/code&gt; and &lt;code&gt;portal.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/production/&#34;&gt;In production&lt;/a&gt; Private Captcha assumes to run on 3 subdomains: &lt;code&gt;api.&lt;/code&gt;, &lt;code&gt;cdn.&lt;/code&gt; and &lt;code&gt;portal.&lt;/code&gt; for configuration flexibility (this is not required, but recommended).&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;PC_USER_FINGERPRINT_KEY&lt;/code&gt; you can generate using &lt;code&gt;openssl rand -hex 64&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;PC_ADMIN_EMAIL&lt;/code&gt; will be used to create an actual admin account (see note for local use below)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;PC_RATE_LIMIT_HEADER&lt;/code&gt; should be the header containing an actual client IP (comes from your CDN or reverse proxy, for example &lt;code&gt;X-Real-Ip&lt;/code&gt;)&lt;/li&gt;
@@ -559,11 +564,15 @@
     &lt;strong class=&#34;hx:text-lg&#34;&gt;Tips for local use&lt;/strong&gt;
   &lt;/summary&gt;
   &lt;div class=&#34;hx:p-2 hx:overflow-hidden&#34;&gt;
-    &lt;p&gt;To run Private Captcha only locally, use &lt;code&gt;privatecaptcha.local:8080&lt;/code&gt; instead of &lt;code&gt;yourdomain.com&lt;/code&gt;. To make it work, you need to add a few lines to &lt;code&gt;/etc/hosts&lt;/code&gt; file:&lt;/p&gt;
+    &lt;p&gt;To run Private Captcha &lt;em&gt;only&lt;/em&gt; locally, use &lt;code&gt;.env.local.example&lt;/code&gt; instead of &lt;code&gt;.env.prod.example&lt;/code&gt;. After startup, open &lt;code&gt;http://localhost:8080/portal&lt;/code&gt; URL in browser and log in with &lt;code&gt;admin@privatecaptcha.local&lt;/code&gt; email.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;NOTE: email with &lt;code&gt;.local&lt;/code&gt; domain is &lt;strong&gt;not&lt;/strong&gt; a valid RFC-5322 address, so for 2FA code (required for login) cannot be sent and you will need to find &amp;ldquo;two factor code&amp;rdquo; from docker logs manually&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The difference between prod and local setup is mostly that prod is designed to run on 3 separate subdomains (&lt;code&gt;api.&lt;/code&gt;, &lt;code&gt;cdn.&lt;/code&gt; and &lt;code&gt;portal.&lt;/code&gt;) for flexibility. You can easily emulate this locally too if you add a few lines to &lt;code&gt;/etc/hosts&lt;/code&gt; file:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;127.0.0.1       portal.privatecaptcha.local
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;127.0.0.1       api.privatecaptcha.local
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;127.0.0.1       cdn.privatecaptcha.local&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;127.0.0.1       portal.privatecaptcha.local
+127.0.0.1       api.privatecaptcha.local
+127.0.0.1       cdn.privatecaptcha.local&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;Copy code&#34;
@@ -575,9 +584,24 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;NOTE: email with &lt;code&gt;.local&lt;/code&gt; domain is &lt;strong&gt;not&lt;/strong&gt; a valid RFC-5322 address, so for 2FA code (required for login) you will need to find &amp;ldquo;two factor code&amp;rdquo; from docker logs manually&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Another point is that for local-only use you may throw away the &lt;code&gt;migration&lt;/code&gt; service in &lt;code&gt;compose.yml&lt;/code&gt; and merge the following to &lt;code&gt;compose.override.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;privatecaptcha&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;command&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;/app/server -mode auto&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Mode &lt;code&gt;auto&lt;/code&gt; always runs migrations before serving traffic.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/details&gt;
 &lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
@@ -877,6 +901,11 @@
           &lt;td&gt;&lt;code&gt;PC_WIDGET_NOTICE&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;Hello world&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;A string that will be shown as a &lt;code&gt;notice&lt;/code&gt; tooltip on all widgets that have &lt;code&gt;show_notice&lt;/code&gt; set to &lt;code&gt;TRUE&lt;/code&gt;.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;CACHE_DIRECTORY&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;/var/lib/pc/cache&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Local path, if not empty, will be used for cache persistence between restarts (NOTE: no &lt;code&gt;PC_&lt;/code&gt; prefix)&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;

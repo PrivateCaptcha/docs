@@ -1,4 +1,5 @@
 # Client side
+
 "Client-side" integration means where and how you add a widget to the protected website, page or form.
 
 There are 2 ways to do it: _"native"_ and _"pre-built"_.

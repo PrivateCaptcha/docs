@@ -1,4 +1,5 @@
 # React
+
 {{< callout type="warning" icon="key" >}}
   To use this integration you need to [create a property]({{< relref "docs/reference/property-settings.md" >}}) in your organization and get it's _sitekey_.
 {{< /callout >}}

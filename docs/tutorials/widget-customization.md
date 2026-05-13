@@ -1,4 +1,5 @@
 # Widget customization
+
 This tutorial is mostly a collection of **visual** changes to the widget through `data-styles` [attribute]({{< relref "/docs/reference/widget-options.md#data-styles" >}}).
 
 ## Full-width widget

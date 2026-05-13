@@ -1,4 +1,5 @@
 # Testing
+
 There're 2 main ways how you can keep using Private Captcha for testing of your local website:
 - use a predefined ("dummy") sitekey
 - allow localhost access for main property in Settings in portal

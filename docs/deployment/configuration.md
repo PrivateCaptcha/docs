@@ -1,4 +1,5 @@
 # Configuration
+
 ## Environmental variables
 
 ### Required
@@ -51,6 +52,7 @@ Variable | Example | Description
 `PC_MAINTENANCE_JOB_CONCURRENCY` | `2` | How many maintenance jobs can run in parallel (tune up on a more powerful server)
 `PC_FINGERPRINT_HEADER` | `CDN-JA4` | HTTP header with a fingerprint hash, used for puzzle difficulty calculation instead of IP address.
 `PC_WIDGET_NOTICE` | `Hello world` | A string that will be shown as a `notice` tooltip on all widgets that have `show_notice` set to `TRUE`.
+`CACHE_DIRECTORY` | `/var/lib/pc/cache` | Local path, if not empty, will be used for cache persistence between restarts (NOTE: no `PC_` prefix)
 
 > [!NOTE]
 "Default" rate limiter means the one for public APIs (`/puzzle`, `/verify` and some others). Various other APIs have pre-configured hardcoded limits, compiled in.

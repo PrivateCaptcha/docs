@@ -1,4 +1,5 @@
 # Widget options
+
 Here's the minimal captcha field declaration:
 
 ```html {filename="index.html"}
