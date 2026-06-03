@@ -31,7 +31,7 @@ This is where the actual form submissions will be forwarded after the captcha ve
 
 ### Method
 
-You can select one of the standard HTTP methods: `POST` (default), `PUT`, `DELETE` and `PATCH`. All forms use `POST` by default.
+You can select one of the standard HTTP methods: `POST` (default), `PUT`, `DELETE` and `PATCH`. All forms use `POST` by default for forwarding requests.
 
 ### Requests per minute
 
@@ -43,8 +43,18 @@ You can optionally configure requests to be retried when the endpoint returns `5
 
 ## Limits
 
+### Billing
+
 Number of forms is limited by the number of properties included in your plan. Form submissions are not limited themselves, but the number of captcha property requests is limited (again, by your plan). Forms submissions without a valid captcha solution are rejected.
+
+### Technical
+
+The only accepted inbound form type is `application/x-www-form-urlencoded` (`multipart/form-data` or _any_ other forms are not accepted).
+
+Form size is currently limited to `1 MB` max and will likely be reduced in future.
+
+The only HTTP method available for inbound requests is `POST`.
 
 ## Privacy
 
-Form submissions are not persisted in **any** storage, not logged, and are available on our servers only in transit.
+Form submissions are not persisted in **any** storage, not logged, and are available on our servers only in transit. You have an option to sign the [DPA](https://privatecaptcha.com/legal/dpa).
