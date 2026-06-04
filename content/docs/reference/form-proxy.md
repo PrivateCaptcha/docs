@@ -1,10 +1,9 @@
 ---
 title: "Form proxy"
 date: 2026-06-03T18:22:49+02:00
-draft: true
 ---
 
-Form proxy allows you to use our endpoint (e.g. `https://api.privatecaptcha.com/form/123`) instead of your endpoint for `<form>` request.
+Form proxy allows you to use our endpoint (e.g. `https://api.privatecaptcha.com/form/123`) instead of your endpoint for `<form>` request. We will forward ("proxy") only submissions when captcha and rate-limiting have passed.
 
 This allows to **secure** your endpoint:
 - we check if captcha was solved (this assumes you will use Private Captcha widget on the form)
