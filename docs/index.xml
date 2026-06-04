@@ -5,7 +5,7 @@
     <description>Recent content in Docs on Private Captcha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Mar 2026 08:43:58 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 18:22:49 +0200</lastBuildDate>
     
 	  <atom:link href="https://docs.privatecaptcha.com/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -260,6 +260,52 @@
 &lt;p&gt;Please check our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/complete-example/&#34;&gt;end-to-end tutorial&lt;/a&gt; to understand how the big picture works.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/details&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Form proxy</title>
+      <link>https://docs.privatecaptcha.com/docs/reference/form-proxy/</link>
+      <pubDate>Wed, 03 Jun 2026 18:22:49 +0200</pubDate>
+      
+      <guid>https://docs.privatecaptcha.com/docs/reference/form-proxy/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Form proxy allows you to use our endpoint (e.g. &lt;code&gt;https://api.privatecaptcha.com/form/123&lt;/code&gt;) instead of your endpoint for &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; request. We will forward (&amp;ldquo;proxy&amp;rdquo;) only submissions when captcha and rate-limiting have passed.&lt;/p&gt;
+&lt;p&gt;This allows to &lt;strong&gt;secure&lt;/strong&gt; your endpoint:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;we check if captcha was solved (this assumes you will use Private Captcha widget on the form)&lt;/li&gt;
+&lt;li&gt;your actual form URL is hidden (security-by-obscurity) and noone knows about it&lt;/li&gt;
+&lt;li&gt;we apply rate-limiting and other protection &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/rules/&#34;&gt;rules&lt;/a&gt; to the form endpoint and captcha&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This makes it for a perfect use-case for forms on static websites or general webhooks protection (e.g. forms backed by Google Docs, Webflow or Zapier / Make / N8N).&lt;/p&gt;
+&lt;h2&gt;Captcha property&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;captcha-property&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#captcha-property&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Each form proxy has to be used with a captcha property (the point of &amp;ldquo;form proxy&amp;rdquo; is that we check captcha solution for you).&lt;/p&gt;
+&lt;p&gt;When you create a new form, a new corresponding &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings/&#34;&gt;property&lt;/a&gt; is created. This property can be managed from the Form settings, but it cannot be moved or deleted independent of the form. You can configure various &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/rules/&#34;&gt;difficulty rules&lt;/a&gt; for the captcha property and they will be taken into account when performing Form security check prior to forwarding the submission.&lt;/p&gt;
+&lt;h2&gt;Settings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;settings&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#settings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;We&amp;rsquo;ll go through all form settings that you can change.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/form-settings-all.png&#34; alt=&#34;Property settings&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;URL&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;url&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#url&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This is where the actual form submissions will be forwarded after the captcha verification and other security (e.g. rate limiting) applied.&lt;/p&gt;
+&lt;h3&gt;Method&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;method&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#method&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You can select one of the standard HTTP methods: &lt;code&gt;POST&lt;/code&gt; (default), &lt;code&gt;PUT&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt; and &lt;code&gt;PATCH&lt;/code&gt;. All forms use &lt;code&gt;POST&lt;/code&gt; by default for forwarding requests.&lt;/p&gt;
+&lt;h3&gt;Requests per minute&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;requests-per-minute&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#requests-per-minute&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You can limit how many requests can be forwarded to your destination each minute (default is &lt;code&gt;10&lt;/code&gt;). Submissions exceeding this limit will be rejected with &lt;code&gt;429&lt;/code&gt; (Too Many Requests). Each configuration includes &amp;ldquo;burst&amp;rdquo; which is set to &lt;code&gt;RPM + 10&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Retry&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;retry&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#retry&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You can optionally configure requests to be retried when the endpoint returns &lt;code&gt;5xx&lt;/code&gt; HTTP error code or network connection problems occurred. Retries are attempted after a delay.&lt;/p&gt;
+&lt;h2&gt;Limits&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;limits&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#limits&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Billing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;billing&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#billing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Number of forms is limited by the number of properties included in your plan. Form submissions are not limited themselves, but the number of captcha property requests is limited (again, by your plan). Forms submissions without a valid captcha solution are rejected.&lt;/p&gt;
+&lt;h3&gt;Technical&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;technical&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#technical&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The only accepted inbound form type is &lt;code&gt;application/x-www-form-urlencoded&lt;/code&gt; (&lt;code&gt;multipart/form-data&lt;/code&gt; or &lt;em&gt;any&lt;/em&gt; other forms are not accepted).&lt;/p&gt;
+&lt;p&gt;Form size is currently limited to &lt;code&gt;1 MB&lt;/code&gt; max and will likely be reduced in future.&lt;/p&gt;
+&lt;p&gt;The only HTTP method available for inbound requests is &lt;code&gt;POST&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Privacy&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;privacy&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#privacy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Form submissions are not persisted in &lt;strong&gt;any&lt;/strong&gt; storage, not logged, and are available on our servers only in transit. You have an option to sign the &lt;a href=&#34;https://privatecaptcha.com/legal/dpa&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DPA&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
