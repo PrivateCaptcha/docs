@@ -8,33 +8,59 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>FAQ – Private Captcha</title>
-  <meta name="description" content=" Note
-This is a technical FAQ. If you’re looking for product FAQ, click here .
-API Captcha widget does not load the puzzle aka “Maximum number of attempts exceeded” error" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/faq/" itemprop="url" />
+<title>N8N webhook protection – Private Captcha</title>
+  <meta name="description" content="In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
+Setup a page with a form Create HTML form Let’s create a basic form:
+There’s nothing fancy inside:
+&lt;body&gt; &lt;div class=&#34;form-container&#34;&gt; &lt;h2&gt;Contact Us&lt;/h2&gt; &lt;form action=&#34;#&#34; method=&#34;post&#34;&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt; &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt; &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;message&#34;&gt;Message&lt;/label&gt; &lt;textarea id=&#34;message&#34; name=&#34;message&#34; required&gt;&lt;/textarea&gt; &lt;/div&gt; &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt; &lt;/form&gt; &lt;/div&gt; &lt;/body&gt; Process form in N8N To be able to submit this form, let’s create a new workflow in N8N and for Trigger select a webhook :" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/n8n-webhook-protection/" itemprop="url" />
 
-<meta property="og:title" content="FAQ">
+<meta property="og:title" content="N8N webhook protection">
 <meta
   property="og:description"
   content="
     
-      
-  Note
+      In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
+Setup a page with a form
+    Create HTML form
+    Let&rsquo;s create a basic form:
+
+There&rsquo;s nothing fancy inside:
+
+
+&lt;body&gt;
+    &lt;div class=&#34;form-container&#34;&gt;
+        &lt;h2&gt;Contact Us&lt;/h2&gt;
+
+        &lt;form action=&#34;#&#34; method=&#34;post&#34;&gt;
+            &lt;div class=&#34;form-group&#34;&gt;
+                &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt;
+                &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required &gt;
+            &lt;/div&gt;
+
+            &lt;div class=&#34;form-group&#34;&gt;
+                &lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt;
+                &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required &gt;
+            &lt;/div&gt;
+
+            &lt;div class=&#34;form-group&#34;&gt;
+                &lt;label for=&#34;message&#34;&gt;Message&lt;/label&gt;
+                &lt;textarea id=&#34;message&#34; name=&#34;message&#34; required&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+
+            &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+  
+    
 
   
-    This is a technical FAQ. If you&rsquo;re looking for product FAQ, click here
+
+
+Process form in N8N
+    To be able to submit this form, let&rsquo;s create a new workflow in N8N and for Trigger select a webhook
  
-.
-  
-
-API
-    
-  
-    Captcha widget does not load the puzzle
-  
-  
-    
-  aka &ldquo;Maximum number of attempts exceeded&rdquo; error
+:
     
   ">
 <meta
@@ -42,26 +68,33 @@ API
   content="
     article
   ">
-<meta property="og:url" content="https://docs.privatecaptcha.com/docs/faq/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://docs.privatecaptcha.com/docs/tutorials/n8n-webhook-protection/"><meta property="article:section" content="docs">
+
+<meta
+  property="article:published_time"
+  content="2026-06-07T13:18:58+02:00">
 
 
 <meta
   property="article:modified_time"
-  content="2026-03-06T13:51:56+00:00">
+  content="2026-06-07T15:17:31+02:00">
 
 
 
-  <meta itemprop="name" content="FAQ">
-  <meta itemprop="description" content="Note
-This is a technical FAQ. If you’re looking for product FAQ, click here .
-API Captcha widget does not load the puzzle aka “Maximum number of attempts exceeded” error">
-  <meta itemprop="dateModified" content="2026-03-06T13:51:56+00:00">
-  <meta itemprop="wordCount" content="564">
+  <meta itemprop="name" content="N8N webhook protection">
+  <meta itemprop="description" content="In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
+Setup a page with a form Create HTML form Let’s create a basic form:
+There’s nothing fancy inside:
+&lt;body&gt; &lt;div class=&#34;form-container&#34;&gt; &lt;h2&gt;Contact Us&lt;/h2&gt; &lt;form action=&#34;#&#34; method=&#34;post&#34;&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt; &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt; &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;message&#34;&gt;Message&lt;/label&gt; &lt;textarea id=&#34;message&#34; name=&#34;message&#34; required&gt;&lt;/textarea&gt; &lt;/div&gt; &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt; &lt;/form&gt; &lt;/div&gt; &lt;/body&gt; Process form in N8N To be able to submit this form, let’s create a new workflow in N8N and for Trigger select a webhook :">
+  <meta itemprop="datePublished" content="2026-06-07T13:18:58+02:00">
+  <meta itemprop="dateModified" content="2026-06-07T15:17:31+02:00">
+  <meta itemprop="wordCount" content="680">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="FAQ">
-  <meta name="twitter:description" content="Note
-This is a technical FAQ. If you’re looking for product FAQ, click here .
-API Captcha widget does not load the puzzle aka “Maximum number of attempts exceeded” error">
+  <meta name="twitter:title" content="N8N webhook protection">
+  <meta name="twitter:description" content="In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
+Setup a page with a form Create HTML form Let’s create a basic form:
+There’s nothing fancy inside:
+&lt;body&gt; &lt;div class=&#34;form-container&#34;&gt; &lt;h2&gt;Contact Us&lt;/h2&gt; &lt;form action=&#34;#&#34; method=&#34;post&#34;&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt; &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt; &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;message&#34;&gt;Message&lt;/label&gt; &lt;textarea id=&#34;message&#34; name=&#34;message&#34; required&gt;&lt;/textarea&gt; &lt;/div&gt; &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt; &lt;/form&gt; &lt;/div&gt; &lt;/body&gt; Process form in N8N To be able to submit this form, let’s create a new workflow in N8N and for Trigger select a webhook :">
 
     <link rel="preload" href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" as="style" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
     <link href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" rel="stylesheet" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
@@ -99,7 +132,7 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
   title=""
   href="/docs/tutorials"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
 ><span class="hx:text-center">Tutorials</span>
 </a><a
   title=""
@@ -302,7 +335,7 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
               
             </li></ul>
       </div></li>
-              <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+              <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:ltr:pr-8 hx:rtl:pl-8 hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/docs/tutorials/"
@@ -310,17 +343,44 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
     >
       <span class="hx:min-w-0 [word-break:break-word]">Tutorials</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
     <a
-      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
       href="/docs/tutorials/n8n-webhook-protection/"
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">N8N webhook protection</span>
     </a>
   </div>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#setup-a-page-with-a-form"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Setup a page with a form</a>
+            </li>
+          <li>
+              <a
+                href="#webhook-protection"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Webhook protection</a>
+            </li>
+          <li>
+              <a
+                href="#going-live"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Going live</a>
+            </li>
+          <li>
+              <a
+                href="#further-reading"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Further reading</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
@@ -766,7 +826,7 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
               
             </li></ul>
       </div></li>
-            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+            <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:ltr:pr-8 hx:rtl:pl-8 hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/docs/tutorials/"
@@ -774,11 +834,11 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
     >
       <span class="hx:min-w-0 [word-break:break-word]">Tutorials</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
     <a
-      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
       href="/docs/tutorials/n8n-webhook-protection/"
       
     >
@@ -900,9 +960,9 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
               
             </li></ul>
       </div></li>
-            <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
-      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
       href="/docs/faq/"
       
     >
@@ -1004,18 +1064,70 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="Table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#api">API
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#setup-a-page-with-a-form">Setup a page with a form
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#widget">Widget
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#create-html-form">Create HTML form
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#misc">Misc
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#process-form-in-n8n">Process form in N8N
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#test-webhook">Test webhook
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#webhook-protection">Webhook protection
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#create-form-proxy">Create form proxy
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#integrate-form-on-the-website">Integrate form on the website
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#add-captcha-widget-include">Add captcha widget include
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#update-form-action-url">Update form action URL
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#add-captcha-widget-to-the-form">Add captcha widget to the form
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#going-live">Going live
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#switch-to-n8n-production-webhook-url">Switch to N8N Production Webhook URL
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#final-testing">Final testing
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#via-private-captcha">Via Private Captcha
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#on-your-website">On your website
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#further-reading">Further reading
         </a>
       </li></ul>
-      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:inline-block hx:rounded-sm hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50 hx:hextra-focus-visible-inset" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/faq.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:inline-block hx:rounded-sm hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50 hx:hextra-focus-visible-inset" href="https://github.com/PrivateCaptcha/docs/edit/main/content/docs/tutorials/n8n-webhook-protection.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button id="backToTop" tabindex="-1" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -1032,18 +1144,21 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
         <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
           <a href="/docs/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Docs</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">FAQ</div>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/docs/tutorials/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Tutorials</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">N8N webhook protection</div>
   </div>
 
         <div class="content">
           
           <div class="hx:flex hx:flex-col hx:sm:flex-row hx:items-start hx:sm:items-center hx:sm:justify-between hx:gap-4 hx:mb-4">
-            <h1 class="hx:mb-0">FAQ</h1>
+            <h1 class="hx:mb-0">N8N webhook protection</h1>
             <div class="hextra-page-context-menu hx:relative hx:inline-flex hx:shrink-0">
       <div class="hx:inline-flex hx:rounded-lg hx:border hx:border-gray-200 hx:transition-colors hx:hover:border-gray-300 hx:dark:border-neutral-800 hx:dark:hover:border-neutral-700">
         <button
           class="hextra-page-context-menu-copy hx:group/copybtn hx:inline-flex hx:cursor-pointer hx:items-center hx:gap-1.5 hx:bg-transparent hx:px-2.5 hx:py-1 hx:text-sm hx:font-medium hx:text-gray-700 hx:transition-colors hx:hover:bg-slate-50 hx:dark:text-gray-300 hx:dark:hover:bg-neutral-900 hx:ltr:rounded-l-lg hx:rtl:rounded-r-lg hx:hextra-focus-visible-inset"
-          data-url="https://docs.privatecaptcha.com/docs/faq.md"
+          data-url="https://docs.privatecaptcha.com/docs/tutorials/n8n-webhook-protection.md"
           title="Copy as Markdown"
           aria-label="Copy as Markdown"
         >
@@ -1075,7 +1190,7 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
         <li role="none">
           <button
             data-action="view"
-            data-url="https://docs.privatecaptcha.com/docs/faq.md"
+            data-url="https://docs.privatecaptcha.com/docs/tutorials/n8n-webhook-protection.md"
             role="menuitem"
             class="hx:flex hx:w-full hx:cursor-pointer hx:select-none hx:items-center hx:gap-2 hx:whitespace-nowrap hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:text-gray-700 hx:outline-none hx:transition-colors hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-gray-300 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100"
           >
@@ -1084,7 +1199,7 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
           </button>
         </li><li class="hx:my-1 hx:h-px hx:bg-gray-200 hx:dark:bg-neutral-700" role="separator"></li><li role="none">
             <a
-              href="https://chat.openai.com/?q=Hi%20ChatGPT!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Ffaq%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
+              href="https://chat.openai.com/?q=Hi%20ChatGPT!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Ftutorials%2Fn8n-webhook-protection%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
               target="_blank"
               rel="noopener noreferrer"
               role="menuitem"
@@ -1093,7 +1208,7 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
             </a>
           </li><li role="none">
             <a
-              href="https://claude.ai/new?q=Hi%20Claude!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Ffaq%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
+              href="https://claude.ai/new?q=Hi%20Claude!%20Can%20you%20please%20read%20this%20page%20https%3A%2F%2Fdocs.privatecaptcha.com%2Fdocs%2Ftutorials%2Fn8n-webhook-protection%2F%20and%20prepare%20to%20answer%20questions%20about%20it%3F"
               target="_blank"
               rel="noopener noreferrer"
               role="menuitem"
@@ -1104,146 +1219,248 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
     </div>
           </div>
           
-          <div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
-  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
+          <p>In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha <a href="/docs/reference/form-proxy/">form proxy</a> feature.</p>
+<h2>Setup a page with a form<span class="hx:absolute hx:-mt-20" id="setup-a-page-with-a-form"></span>
+    <a href="#setup-a-page-with-a-form" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Create HTML form<span class="hx:absolute hx:-mt-20" id="create-html-form"></span>
+    <a href="#create-html-form" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Let&rsquo;s create a basic form:</p>
+<p><img src="/images/tutorials/n8n/n8n-form.png" alt="Basic form"  data-zoomable loading="lazy" /></p>
+<p>There&rsquo;s nothing fancy inside:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Contact Us<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;post&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;name&#34;</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;name&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;name&#34;</span> <span class="na">required</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;email&#34;</span><span class="p">&gt;</span>Email<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">required</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;message&#34;</span><span class="p">&gt;</span>Message<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;message&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;message&#34;</span> <span class="na">required</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Process form in N8N<span class="hx:absolute hx:-mt-20" id="process-form-in-n8n"></span>
+    <a href="#process-form-in-n8n" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To be able to submit this form, let&rsquo;s create a new workflow in N8N and for <em>Trigger</em> select a <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/"target="_blank" rel="noopener">webhook<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>:</p>
+<p><img src="/images/tutorials/n8n/n8n-webhook-url.png" alt="Basic form"  data-zoomable loading="lazy" /></p>
+<p>Now use the webhook URL as the form&rsquo;s <code>action</code> attribute:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -80,7 +80,7 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>         &lt;h2&gt;Contact Us&lt;/h2&gt;
+</span></span><span class="line"><span class="cl"><span class="gd">-        &lt;form action=&#34;#&#34; method=&#34;post&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+        &lt;form action=&#34;https://n8n.yourdomain.com/webhook-test/d41b4068-af05-4e82-8eb9-5fbf50409f37&#34; method=&#34;post&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>             &lt;div class=&#34;form-group&#34;&gt;
+</span></span><span class="line"><span class="cl">                 &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt;
+</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>This is a <em>technical</em> FAQ. If you&rsquo;re looking for product FAQ, <a href="https://privatecaptcha.com/faq/"target="_blank" rel="noopener">click here<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></a>.</p></div>
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Note that N8N gives you a <code>Test URL</code> by default - we will switch to <code>Production URL</code> later.</div>
   </div>
 </div>
-<h2>API<span class="hx:absolute hx:-mt-20" id="api"></span>
-    <a href="#api" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">Captcha widget does not load the puzzle</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <blockquote>
-  <p>aka &ldquo;Maximum number of attempts exceeded&rdquo; error</p>
-</blockquote>
-<p>Please check if you have an active subscription (or active trial period) in the <a href="https://portal.privatecaptcha.com/settings?tab=billing"target="_blank" rel="noopener">Billing settings<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></a>.</p>
+
+<h3>Test webhook<span class="hx:absolute hx:-mt-20" id="test-webhook"></span>
+    <a href="#test-webhook" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>When we click &ldquo;Test webhook&rdquo; in N8N and submit a form (e.g. from your browser), we will receive an event:</p>
+<p><img src="/images/tutorials/n8n/n8n-form-submission.png" alt="Form submission"  data-zoomable loading="lazy" /></p>
+<h2>Webhook protection<span class="hx:absolute hx:-mt-20" id="webhook-protection"></span>
+    <a href="#webhook-protection" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If you will just deploy this to your website, the problem is that this webhook is available publicly. Everyone who opens your webpage, can just access the URL <del>and send millions of requests with spam</del>.</p>
+<p>To fix that, we will add a captcha widget to the form and proxy it through Private Captcha server that will verify the submission.</p>
+<h3>Create form proxy<span class="hx:absolute hx:-mt-20" id="create-form-proxy"></span>
+    <a href="#create-form-proxy" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In Private Captcha Portal, click &ldquo;New Form Proxy&rdquo;:</p>
+<p><img src="/images/tutorials/n8n/private-captcha-form.png" alt="New form proxy"  data-zoomable loading="lazy" /></p>
+<p>For the <code>Domain</code>, enter the domain of your website (where contact form is hosted) and for <code>URL</code>, enter the URL of the webhook from N8N (the one you put into form&rsquo;s <code>action</code> attribute).</p>
+<h3>Integrate form on the website<span class="hx:absolute hx:-mt-20" id="integrate-form-on-the-website"></span>
+    <a href="#integrate-form-on-the-website" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After you&rsquo;ve created the form, you will be presented with integration steps. Here we duplicate them:</p>
+<div class="hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]">
+<h4>Add captcha widget include<span class="hx:absolute hx:-mt-20" id="add-captcha-widget-include"></span>
+    <a href="#add-captcha-widget-include" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>In the head of the website, we need to add widget include:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -75,6 +75,7 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>             background-color: #005fcc;
+</span></span><span class="line"><span class="cl">         }
+</span></span><span class="line"><span class="cl">     &lt;/style&gt;
+</span></span><span class="line"><span class="cl"><span class="gi">+    &lt;script defer src=&#34;https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span> &lt;/head&gt;
+</span></span><span class="line"><span class="cl"> &lt;body&gt;
+</span></span><span class="line"><span class="cl">     &lt;div class=&#34;form-container&#34;&gt;
+</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h4>Update form <code>action</code> URL<span class="hx:absolute hx:-mt-20" id="update-form-action-url"></span>
+    <a href="#update-form-action-url" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>We will use a URL generated by Private Captcha for our <code>action</code> attribute, instead of direct link to N8N webhook.</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -75,12 +75,13 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>         &lt;h2&gt;Contact Us&lt;/h2&gt;
+</span></span><span class="line"><span class="cl"><span class="gd">-        &lt;form action=&#34;https://ndmtion.intmaker.com/webhook-test/d41b4068-af05-4e82-8eb9-5fbf50409f37&#34; method=&#34;post&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+        &lt;form action=&#34;https://api.privatecaptcha.com/form/21dce88d638f4174aa8a6d1e2605903a&#34; method=&#34;POST&#34; &gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>             &lt;div class=&#34;form-group&#34;&gt;
+</span></span><span class="line"><span class="cl">                 &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt;
+</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h4>Add captcha widget to the form<span class="hx:absolute hx:-mt-20" id="add-captcha-widget-to-the-form"></span>
+    <a href="#add-captcha-widget-to-the-form" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -110,6 +111,7 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>                 &gt;&lt;/textarea&gt;
+</span></span><span class="line"><span class="cl">             &lt;/div&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="gi">+            &lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;a3bb25a00ba04664943754715ada96c9&#34;&gt;&lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>             &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt;
+</span></span><span class="line"><span class="cl">         &lt;/form&gt;
+</span></span><span class="line"><span class="cl">     &lt;/div&gt;
+</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>And disable the submit button by default, enabling it only when captcha is solved:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">     &lt;/style&gt;
+</span></span><span class="line"><span class="cl">     &lt;script defer src=&#34;https://cdn.staging.privatecaptcha.com/widget/js/privatecaptcha.js&#34;&gt;&lt;/script&gt;
+</span></span><span class="line"><span class="cl"><span class="gi">+    &lt;script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        function onCaptchaSolved() {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+            document.querySelector(&#39;button[type=&#34;submit&#34;]&#39;).disabled = false;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        }
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    &lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span> &lt;/head&gt;
+</span></span><span class="line"><span class="cl"> &lt;body&gt;
+</span></span><span class="line"><span class="cl"><span class="gu">@@ -110,7 +122,8 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>             &lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;a3bb25a00ba04664943754715ada96c9&#34; data-finished-callback=&#34;onCaptchaSolved&#34;&gt;&lt;/div&gt;
+</span></span><span class="line"><span class="cl"><span class="gd">-            &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+            &lt;button type=&#34;submit&#34; disabled&gt;Submit&lt;/button&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>         &lt;/form&gt;
+</span></span><span class="line"><span class="cl">     &lt;/div&gt;
+</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>If you did it correctly, on default the form submit button will be disabled:</p>
+<p><img src="/images/tutorials/n8n/n8n-form-submit-disabled.png" alt="Submit disabled"  data-zoomable loading="lazy" /></p>
+<p>And when the captcha is solved, submit button becomes enabled:</p>
+<p><img src="/images/tutorials/n8n/n8n-form-submit-enabled.png" alt="Submit enabled"  data-zoomable loading="lazy" /></p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Button is styled with CSS <code>button:disabled { cursor: not-allowed; opacity: 0.7; }</code></div>
   </div>
-</details>
-<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">Verification requests fail, but I did everything correctly</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>We need request ID to tell the exact reason why your request was rejected.</p>
-<p>Each request to Private Captcha API returns request ID, available in each <a href="/docs/integrations/">integration</a> as a method <code>traceID()</code> (or similar) of the response object (or in the exception object) or, if you&rsquo;re using HTTP API directly, in the response header <code>X-Trace-ID</code>.</p>
-<p>Please also check our <a href="https://status.privatecaptcha.com"target="_blank" rel="noopener">status page<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></a> to see if there&rsquo;re any ongoing incidents.</p>
+</div>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">If you are testing this on <strong>localhost</strong> and the widget fails to load, you need to enable <code>Allow localhost</code> in <a href="/docs/reference/property-settings/#localhost">Property settings</a> (you can click &ldquo;Manage&rdquo; in form settings)</div>
   </div>
-</details>
-<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">HTTP 400/403 to all verification requests</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>Chances are, you&rsquo;re not using a correct API key (e.g. you&rsquo;re using a sitekey instead of API key, or your API key is expired or has invalid scope). Check our <a href="/docs/getting-started/#create-a-new-api-key">Getting Started</a> guide.</p>
-  </div>
-</details>
-<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">Test solution passes verification for any sitekey</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p><a href="/docs/reference/testing/">Test solution</a> passes verification by design to enable testing.</p>
-<p>Private Captcha <a href="/docs/reference/verify-api/">verify API</a> returns <code>success</code> and <code>code</code> fields and <strong>both</strong> fields should be used for verification, which is done in all <a href="/docs/integrations/">integrations</a> by using method <code>OK()</code> (or similar).</p>
-<p>Additionally, you can specify <code>sitekey</code> argument with each <code>/verify</code> request which will cause <code>success</code> field to fail even without <code>code</code> check.</p>
-<p>Check our <a href="/docs/reference/security/#verification">security guide</a> for details.</p>
-  </div>
-</details>
-<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">Can we proxy/CNAME the API endpoints without self-hosting?</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>Yes, please check the <a href="/docs/reference/dns-proxy/">DNS Proxy</a> docs.</p>
-  </div>
-</details>
-<h2>Widget<span class="hx:absolute hx:-mt-20" id="widget"></span>
-    <a href="#widget" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">Widget takes 100% CPU and page freezes</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>Unless you set a really high difficulty in <a href="/docs/reference/property-settings/">Property Settings</a>, the likely problem is that a security policy is blocking WASM workers from doing proof-of-work verification so the plain JavaScript fallback is used (which is much slower). Another possible reason could be that you proxy (an outdated) Private Captcha script which you definitely should not - always make sure to load it from <code>cdn.privatecaptcha.com</code>.</p>
-  </div>
-</details>
-<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">&lsquo;Invisible&rsquo; mode does not stop bots</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>If you&rsquo;re using <code>auto</code> mode for captcha widget together with &ldquo;invisible&rdquo; mode, this offers the least protection (only resource utilization cost). Check our <a href="/docs/reference/security/">security guide</a> in the client section.</p>
-  </div>
-</details>
-<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">I want to use the same sitekey on multiple domains</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>This scenario is not possible as it compromises security of Private Captcha solution, not to mention inherent problems like &ldquo;noisy neighbor&rdquo; (load of one domain affects the other domains puzzle difficulty).</p>
-<p>Private Captcha allows to have the same sitekey on multiple <a href="/docs/reference/property-settings/#subdomains">subdomains</a> only (which is also not recommended for the same reasons).</p>
-  </div>
-</details>
-<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">Does WordPress integration support widget popup mode?</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>Currently widget only works in default mode, particularly for security reasons, but it is possible this will be available in future. Please contact support with your use-case.</p>
-  </div>
-</details>
-<h2>Misc<span class="hx:absolute hx:-mt-20" id="misc"></span>
-    <a href="#misc" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">Best practices for using Private Captcha during development</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>Create a separate property and set <a href="/docs/reference/property-settings/#localhost">Allow localhost</a> setting. Use a different sitekey and API key for prod.</p>
-<p>Alternatively you can use a <a href="/docs/reference/testing/">stub sitekey</a> which always passes verification.</p>
-  </div>
-</details>
-<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">Is it possible to import domains in bulk to Private Captcha?</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>Yes, please check our <a href="/docs/reference/platform-api/">Platform API</a> docs.</p>
-  </div>
-</details>
-<details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
-  <summary class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
-    <strong class="hx:text-lg">Still getting bot submissions (spam) even though widget is added</strong>
-  </summary>
-  <div class="hx:p-2 hx:overflow-hidden">
-    <p>Just inserting widget into the form is not enough:</p>
-<ol>
-<li>Form &ldquo;submit&rdquo; mechanism has to be disabled until the captcha is solved</li>
-<li>Captcha solution has to be verified on the backend before form submission is processed</li>
-</ol>
-<p>Please check our <a href="/docs/tutorials/complete-example/">end-to-end tutorial</a> to understand how the big picture works.</p>
-  </div>
-</details>
+</div>
+</div>
+<h2>Going live<span class="hx:absolute hx:-mt-20" id="going-live"></span>
+    <a href="#going-live" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Switch to N8N Production Webhook URL<span class="hx:absolute hx:-mt-20" id="switch-to-n8n-production-webhook-url"></span>
+    <a href="#switch-to-n8n-production-webhook-url" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>By default N8N webhook gives you <code>Test URL</code> and you need to switch to <code>Production URL</code> in the end.</p>
+<p><img src="/images/tutorials/n8n/n8n-prod-url.png" alt="N8N prod URL"  data-zoomable loading="lazy" /></p>
+<p>You can also update this URL in Private Captcha Portal in your form&rsquo;s settings (if it&rsquo;s still using <code>Test URL</code> there). Note that you have a <em>single</em> Private Captcha Form URL - you only change N8N URL in settings.</p>
+<h3>Final testing<span class="hx:absolute hx:-mt-20" id="final-testing"></span>
+    <a href="#final-testing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This is not required, but a good chance to test if everything is wired up together correctly.</p>
+<h4>Via Private Captcha<span class="hx:absolute hx:-mt-20" id="via-private-captcha"></span>
+    <a href="#via-private-captcha" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>In Private Captcha portal in your form&rsquo;s settings, you have an option to <code>Test</code> the webhook:</p>
+<p><img src="/images/tutorials/n8n/private-captcha-test.png" alt="Private Captcha Test"  data-zoomable loading="lazy" /></p>
+<p>You can observe this data arriving in N8N:</p>
+<p><img src="/images/tutorials/n8n/private-captcha-n8n-test.png" alt="Private Captcha N8N Test"  data-zoomable loading="lazy" /></p>
+<h4>On your website<span class="hx:absolute hx:-mt-20" id="on-your-website"></span>
+    <a href="#on-your-website" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>And, finally, make sure everything works together by visiting your website and submitting your form.</p>
+<p>Now your actual N8N webhook will only receive the submissions that passed CAPTCHA and rate limiting and they are hidden from public by default.</p>
+<h2>Further reading<span class="hx:absolute hx:-mt-20" id="further-reading"></span>
+    <a href="#further-reading" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose" style="--hextra-cards-grid-cols: 3;">
+  <a
+    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/reference/property-settings"
+      ><div class="hx:mt-auto">
+      <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50">Property settings</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Configuring the captcha widget</div></div></a>
+  <a
+    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/reference/form-proxy"
+      ><div class="hx:mt-auto">
+      <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50">Form settings</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Configuring the form</div></div></a>
+</div>
+
 
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-03-06T13:51:56.000Z">March 6, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/getting-started/"
-        title="Getting started"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Getting started</a><a
-        href="/docs/changelog/"
-        title="Changelog"
+      Last updated on <time datetime="2026-06-07T15:17:31.000Z">June 7, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+        href="/docs/tutorials/widget-customization/"
+        title="Widget customization"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >Changelog<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Widget customization<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
       </main>
     </article>
   </div>
@@ -1255,6 +1472,41 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
     </div></footer>
     
     <script defer src="/js/main.min.bdd63e89d06ec32bfc21a871f1e8e9c0e1c1e367fe8f0aaf11db1aea3da8eedc.js" integrity="sha256-vdY&#43;idBuwyv8Iahx8ejpwOHB42f&#43;jwqvEdsa6j2o7tw="></script>
-<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.803584c7a656280c231b253255c6cf1b5854ab147e5dc842acc080d7557d8b78.js" integrity="sha256-gDWEx6ZWKAwjGyUyVcbPG1hUqxR&#43;XchCrMCA11V9i3g="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.803584c7a656280c231b253255c6cf1b5854ab147e5dc842acc080d7557d8b78.js" integrity="sha256-gDWEx6ZWKAwjGyUyVcbPG1hUqxR&#43;XchCrMCA11V9i3g="></script><script defer src="/js/medium-zoom.min.6603320c02180d81b16dca4971f52763035ebc6ff18bd38729a47ff062be8d67.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK&#43;jWc=" crossorigin="anonymous"></script><script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (!window.mediumZoom) {
+      return;
+    }
+
+    const getOverlay = () => {
+      return document.documentElement.classList.contains("dark")
+        ? "rgba(17, 17, 17, 0.98)"
+        : "rgba(255, 255, 255, 0.98)";
+    };
+
+    const zoom = window.mediumZoom("[data-zoomable]", {
+      background: getOverlay(),
+    });
+
+    const style = document.createElement("style");
+    style.textContent = `
+      .medium-zoom-overlay {
+        z-index: 1000;
+      }
+      .medium-zoom-image--opened {
+        z-index: 1001;
+      }
+    `;
+    document.head.appendChild(style);
+
+    new MutationObserver(() => {
+      zoom.update({ background: getOverlay() });
+    }).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  });
+</script>
+
   </body>
 </html>
