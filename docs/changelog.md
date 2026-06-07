@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.35.0 - 2026-06-07
+
+- Added [form proxy]({{< relref "docs/reference/form-proxy.md" >}}) feature
+- Added support for "wildcard" domain mode via API for properties
+- Improve local testing with "direct" Postgres mode (now works without Docker)
+
 ## v1.34.0 - 2026-05-13
 
 - Added basic onboarding for new users
@@ -22,7 +28,7 @@
 
 ## v1.31.0 — 2026-03-17
 
-- Introduced a full difficulty-rules system with rule matching, database support, portal UI, and reporting integration.
+- Introduced a full [difficulty-rules system]({{< relref "docs/reference/rules.md" >}}) with rule matching, database support, portal UI, and reporting integration.
 - Improved notifications with configurable `From`/`Reply-To` overrides, better name parsing, template ID visibility in `viewemails`, and graceful deduplication on conflicts.
 - Hardened security and concurrency with IDOR fixes for difficulty-rule mutations, leaky-bucket race fixes, reduced 2FA logging exposure, and related cleanup.
 
@@ -82,7 +88,7 @@
 
 ## v0.0.26 — 2025-12-19
 
-- Added the first substantial organizations and properties API: list/get/create/update/delete, bulk property creation, pagination, and OpenAPI coverage.
+- Added the first substantial [organizations and properties API]({{< relref "docs/reference/platform-api.md" >}}): list/get/create/update/delete, bulk property creation, pagination, and OpenAPI coverage.
 - Introduced API key scopes and the related database and UI groundwork.
 - Greatly improved chart caching at both CDN and server layers while avoiding stale user-specific caching.
 - Strengthened auth and operations with better email verification, stronger 2FA randomness, logout cache cleanup, and safer job locking.

@@ -81,7 +81,7 @@
     &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Below is just one way how this can be done. Check &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/#events-and-callbacks&#34;&gt;widget reference&lt;/a&gt; for details.&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;For example, you can disable the &amp;ldquo;Submit&amp;rdquo; button by default and enable only after captcha is solved. This can be achieved by using &lt;code&gt;data-finished-callback&lt;/code&gt; attribute (listening to &lt;code&gt;privatecaptcha:finish&lt;/code&gt; event).&lt;/p&gt;
+&lt;p&gt;For example, you can disable the &amp;ldquo;Submit&amp;rdquo; button by default and enable only after captcha is solved. This can be achieved by using &lt;code&gt;data-finished-callback&lt;/code&gt; attribute (&lt;em&gt;or&lt;/em&gt; listening to &lt;code&gt;privatecaptcha:finish&lt;/code&gt; event).&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
 &lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;index.html&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;@@ -18,7 +18,13 @@

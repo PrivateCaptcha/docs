@@ -57,7 +57,7 @@ Make sure that you serve captcha script from our domain cdn.privatecaptcha.com a
 
 <meta
   property="article:modified_time"
-  content="2026-03-13T10:22:53+01:00">
+  content="2026-06-07T17:48:02+02:00">
 
 
 
@@ -67,8 +67,8 @@ There are 2 ways to do it: “native” and “pre-built”.
 Native integration “Native” integration means you use our CDN script directly (this is the recommended way) and add some code to handle the form submission.
 Add Private Captcha script to site header index.html... &lt;head&gt; &#43; &lt;script defer src=&#34;https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js&#34;&gt;&lt;/script&gt; &lt;/head&gt; &lt;body&gt; ... Make sure that you serve captcha script from our domain cdn.privatecaptcha.com and you don’t proxy or cache it on your side.">
   <meta itemprop="datePublished" content="2026-03-13T09:39:18+01:00">
-  <meta itemprop="dateModified" content="2026-03-13T10:22:53+01:00">
-  <meta itemprop="wordCount" content="320">
+  <meta itemprop="dateModified" content="2026-06-07T17:48:02+02:00">
+  <meta itemprop="wordCount" content="321">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Client side">
   <meta name="twitter:description" content="“Client-side” integration means where and how you add a widget to the protected website, page or form.
@@ -1201,7 +1201,7 @@ Add Private Captcha script to site header index.html... &lt;head&gt; &#43; &lt;s
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Below is just one way how this can be done. Check <a href="/docs/reference/widget-options/#events-and-callbacks">widget reference</a> for details.</p></div>
   </div>
 </div>
-<p>For example, you can disable the &ldquo;Submit&rdquo; button by default and enable only after captcha is solved. This can be achieved by using <code>data-finished-callback</code> attribute (listening to <code>privatecaptcha:finish</code> event).</p>
+<p>For example, you can disable the &ldquo;Submit&rdquo; button by default and enable only after captcha is solved. This can be achieved by using <code>data-finished-callback</code> attribute (<em>or</em> listening to <code>privatecaptcha:finish</code> event).</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div class="hextra-code-filename not-prose" dir="auto">index.html</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -18,7 +18,13 @@
@@ -1258,7 +1258,7 @@ Add Private Captcha script to site header index.html... &lt;head&gt; &#43; &lt;s
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-03-13T10:22:53.000Z">March 13, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-06-07T17:48:02.000Z">June 7, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/integrations/java/"
         title="Java"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"

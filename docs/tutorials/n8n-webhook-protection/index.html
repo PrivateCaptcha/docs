@@ -10,9 +10,8 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>N8N webhook protection – Private Captcha</title>
   <meta name="description" content="In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
-Setup a page with a form Create HTML form Let’s create a basic form:
-There’s nothing fancy inside:
-&lt;body&gt; &lt;div class=&#34;form-container&#34;&gt; &lt;h2&gt;Contact Us&lt;/h2&gt; &lt;form action=&#34;#&#34; method=&#34;post&#34;&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt; &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt; &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;message&#34;&gt;Message&lt;/label&gt; &lt;textarea id=&#34;message&#34; name=&#34;message&#34; required&gt;&lt;/textarea&gt; &lt;/div&gt; &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt; &lt;/form&gt; &lt;/div&gt; &lt;/body&gt; Process form in N8N To be able to submit this form, let’s create a new workflow in N8N and for Trigger select a webhook :" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/n8n-webhook-protection/" itemprop="url" />
+Short summary of “form proxy” is that by pointing your form to our endpoint, we check CAPTCHA solution and rate limit and then call your actual endpoint (in this case - N8N webhook).
+Setup a page with a form Create HTML form Let’s create a basic form:" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/tutorials/n8n-webhook-protection/" itemprop="url" />
 
 <meta property="og:title" content="N8N webhook protection">
 <meta
@@ -20,47 +19,12 @@ There’s nothing fancy inside:
   content="
     
       In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
+
+  Short summary of &ldquo;form proxy&rdquo; is that by pointing your form to our endpoint, we check CAPTCHA solution and rate limit and then call your actual endpoint (in this case - N8N webhook).
+
 Setup a page with a form
     Create HTML form
     Let&rsquo;s create a basic form:
-
-There&rsquo;s nothing fancy inside:
-
-
-&lt;body&gt;
-    &lt;div class=&#34;form-container&#34;&gt;
-        &lt;h2&gt;Contact Us&lt;/h2&gt;
-
-        &lt;form action=&#34;#&#34; method=&#34;post&#34;&gt;
-            &lt;div class=&#34;form-group&#34;&gt;
-                &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt;
-                &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required &gt;
-            &lt;/div&gt;
-
-            &lt;div class=&#34;form-group&#34;&gt;
-                &lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt;
-                &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required &gt;
-            &lt;/div&gt;
-
-            &lt;div class=&#34;form-group&#34;&gt;
-                &lt;label for=&#34;message&#34;&gt;Message&lt;/label&gt;
-                &lt;textarea id=&#34;message&#34; name=&#34;message&#34; required&gt;&lt;/textarea&gt;
-            &lt;/div&gt;
-
-            &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt;
-        &lt;/form&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-  
-    
-
-  
-
-
-Process form in N8N
-    To be able to submit this form, let&rsquo;s create a new workflow in N8N and for Trigger select a webhook
- 
-:
     
   ">
 <meta
@@ -77,24 +41,22 @@ Process form in N8N
 
 <meta
   property="article:modified_time"
-  content="2026-06-07T15:22:32+02:00">
+  content="2026-06-07T17:48:02+02:00">
 
 
 
   <meta itemprop="name" content="N8N webhook protection">
   <meta itemprop="description" content="In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
-Setup a page with a form Create HTML form Let’s create a basic form:
-There’s nothing fancy inside:
-&lt;body&gt; &lt;div class=&#34;form-container&#34;&gt; &lt;h2&gt;Contact Us&lt;/h2&gt; &lt;form action=&#34;#&#34; method=&#34;post&#34;&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt; &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt; &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;message&#34;&gt;Message&lt;/label&gt; &lt;textarea id=&#34;message&#34; name=&#34;message&#34; required&gt;&lt;/textarea&gt; &lt;/div&gt; &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt; &lt;/form&gt; &lt;/div&gt; &lt;/body&gt; Process form in N8N To be able to submit this form, let’s create a new workflow in N8N and for Trigger select a webhook :">
+Short summary of “form proxy” is that by pointing your form to our endpoint, we check CAPTCHA solution and rate limit and then call your actual endpoint (in this case - N8N webhook).
+Setup a page with a form Create HTML form Let’s create a basic form:">
   <meta itemprop="datePublished" content="2026-06-07T13:18:58+02:00">
-  <meta itemprop="dateModified" content="2026-06-07T15:22:32+02:00">
-  <meta itemprop="wordCount" content="681">
+  <meta itemprop="dateModified" content="2026-06-07T17:48:02+02:00">
+  <meta itemprop="wordCount" content="753">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="N8N webhook protection">
   <meta name="twitter:description" content="In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
-Setup a page with a form Create HTML form Let’s create a basic form:
-There’s nothing fancy inside:
-&lt;body&gt; &lt;div class=&#34;form-container&#34;&gt; &lt;h2&gt;Contact Us&lt;/h2&gt; &lt;form action=&#34;#&#34; method=&#34;post&#34;&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt; &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt; &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;message&#34;&gt;Message&lt;/label&gt; &lt;textarea id=&#34;message&#34; name=&#34;message&#34; required&gt;&lt;/textarea&gt; &lt;/div&gt; &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt; &lt;/form&gt; &lt;/div&gt; &lt;/body&gt; Process form in N8N To be able to submit this form, let’s create a new workflow in N8N and for Trigger select a webhook :">
+Short summary of “form proxy” is that by pointing your form to our endpoint, we check CAPTCHA solution and rate limit and then call your actual endpoint (in this case - N8N webhook).
+Setup a page with a form Create HTML form Let’s create a basic form:">
 
     <link rel="preload" href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" as="style" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
     <link href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" rel="stylesheet" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
@@ -1220,12 +1182,21 @@ There’s nothing fancy inside:
           </div>
           
           <p>In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha <a href="/docs/reference/form-proxy/">form proxy</a> feature.</p>
+<blockquote>
+  <p>Short summary of &ldquo;form proxy&rdquo; is that by pointing your form to our endpoint, we check CAPTCHA solution and rate limit and then call your actual endpoint (in this case - N8N webhook).</p>
+</blockquote>
 <h2>Setup a page with a form<span class="hx:absolute hx:-mt-20" id="setup-a-page-with-a-form"></span>
     <a href="#setup-a-page-with-a-form" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Create HTML form<span class="hx:absolute hx:-mt-20" id="create-html-form"></span>
     <a href="#create-html-form" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Let&rsquo;s create a basic form:</p>
 <p><img src="/images/tutorials/n8n/n8n-form.png" alt="Basic form"  data-zoomable loading="lazy" /></p>
 <p>There&rsquo;s nothing fancy inside:</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+
+
+<div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800" role="tablist"><button class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white hx:hextra-focus-visible-inset" id="tabs-tab-tabs-01-0" role="tab" type="button" aria-controls="tabs-panel-tabs-01-0" aria-selected="true" tabindex="0" data-state="selected"><span class="hx:inline-flex hx:items-center hx:gap-1.5"><span>HTML</span></span></button><button class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white hx:hextra-focus-visible-inset" id="tabs-tab-tabs-01-1" role="tab" type="button" aria-controls="tabs-panel-tabs-01-1" aria-selected="false" tabindex="-1"><span class="hx:inline-flex hx:items-center hx:gap-1.5"><span>CSS</span></span></button></div>
+</div>
+<div><div class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block" id="tabs-panel-tabs-01-0" role="tabpanel" aria-labelledby="tabs-tab-tabs-01-0" aria-hidden="false" tabindex="0" data-state="selected"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-container&#34;</span><span class="p">&gt;</span>
@@ -1262,11 +1233,55 @@ There’s nothing fancy inside:
   </button>
 </div>
 </div>
+</div><div class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block" id="tabs-panel-tabs-01-1" role="tabpanel" aria-labelledby="tabs-tab-tabs-01-1" aria-hidden="true"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">button</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">submit</span><span class="o">]</span><span class="p">:</span><span class="nd">disabled</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">button</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">reset</span><span class="o">]</span><span class="p">:</span><span class="nd">disabled</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">submit</span><span class="o">]</span><span class="p">:</span><span class="nd">disabled</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">button</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">button</span><span class="o">]</span><span class="p">:</span><span class="nd">disabled</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">button</span><span class="o">]</span><span class="p">:</span><span class="nd">disabled</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">cursor</span><span class="p">:</span> <span class="kc">not-allowed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">form-group</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">form-container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding</span><span class="p">:</span> <span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">12</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">max-width</span><span class="p">:</span> <span class="mi">450</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</div></div>
+
 <h3>Process form in N8N<span class="hx:absolute hx:-mt-20" id="process-form-in-n8n"></span>
     <a href="#process-form-in-n8n" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To be able to submit this form, let&rsquo;s create a new workflow in N8N and for <em>Trigger</em> select a <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/"target="_blank" rel="noopener">webhook<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a>:</p>
 <p><img src="/images/tutorials/n8n/n8n-webhook-url.png" alt="Basic form"  data-zoomable loading="lazy" /></p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Note that N8N gives you a <code>Test URL</code> by default - we will switch to <code>Production URL</code> later.</div>
+  </div>
+</div>
+
 <p>Now use the webhook URL as the form&rsquo;s <code>action</code> attribute:</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -1288,20 +1303,12 @@ There’s nothing fancy inside:
   </button>
 </div>
 </div>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
-  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-
-  <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Note that N8N gives you a <code>Test URL</code> by default - we will switch to <code>Production URL</code> later.</div>
-  </div>
-</div>
-
 <h3>Test webhook<span class="hx:absolute hx:-mt-20" id="test-webhook"></span>
     <a href="#test-webhook" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>When we click &ldquo;Test webhook&rdquo; in N8N and submit a form (e.g. from your browser), we will receive an event:</p>
 <p><img src="/images/tutorials/n8n/n8n-form-submission.png" alt="Form submission"  data-zoomable loading="lazy" /></p>
 <h2>Webhook protection<span class="hx:absolute hx:-mt-20" id="webhook-protection"></span>
     <a href="#webhook-protection" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If you will just deploy this to your website, the problem is that this webhook is available publicly. Everyone who opens your webpage, can just access the URL <del>and send millions of requests with spam</del>.</p>
-<p>To fix that, we will add a captcha widget to the form and proxy it through Private Captcha server that will verify the submission.</p>
+<p>To fix that, we will add a captcha widget to the form and proxy it through Private Captcha server that will verify the CAPTCHA solution first.</p>
 <h3>Create form proxy<span class="hx:absolute hx:-mt-20" id="create-form-proxy"></span>
     <a href="#create-form-proxy" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In Private Captcha Portal, click &ldquo;New Form Proxy&rdquo;:</p>
 <p><img src="/images/tutorials/n8n/private-captcha-form.png" alt="New form proxy"  data-zoomable loading="lazy" /></p>
@@ -1356,7 +1363,13 @@ There’s nothing fancy inside:
 </div>
 </div>
 <h4>Add captcha widget to the form<span class="hx:absolute hx:-mt-20" id="add-captcha-widget-to-the-form"></span>
-    <a href="#add-captcha-widget-to-the-form" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+    <a href="#add-captcha-widget-to-the-form" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Read more about client integration <a href="/docs/integrations/client-side/">here</a>.</div>
+  </div>
+</div>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -110,6 +111,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="gu"></span>                 &gt;&lt;/textarea&gt;
@@ -1409,16 +1422,10 @@ There’s nothing fancy inside:
   </button>
 </div>
 </div>
-<p>If you did it correctly, on default the form submit button will be disabled:</p>
+<p>If you did it correctly, by default the form submit button will be disabled:</p>
 <p><img src="/images/tutorials/n8n/n8n-form-submit-disabled.png" alt="Submit disabled"  data-zoomable loading="lazy" /></p>
 <p>And when the captcha is solved, submit button becomes enabled:</p>
 <p><img src="/images/tutorials/n8n/n8n-form-submit-enabled.png" alt="Submit enabled"  data-zoomable loading="lazy" /></p>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
-  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-  <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Button is styled with CSS <code>button:disabled { cursor: not-allowed; opacity: 0.7; }</code></div>
-  </div>
-</div>
 <div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
   <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg></div>
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
@@ -1451,13 +1458,17 @@ There’s nothing fancy inside:
     class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/reference/form-proxy"
       ><div class="hx:mt-auto">
       <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50">Form settings</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Configuring the form</div></div></a>
+  <a
+    class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900"href="/docs/integrations/client-side"
+      ><div class="hx:mt-auto">
+      <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50">Client-side integration</span><div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">Adding widget to form</div></div></a>
 </div>
 
 
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-06-07T15:22:32.000Z">June 7, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-06-07T17:48:02.000Z">June 7, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/tutorials/widget-customization/"
         title="Widget customization"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
