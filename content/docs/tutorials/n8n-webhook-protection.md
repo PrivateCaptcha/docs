@@ -1,7 +1,6 @@
 ---
 title: "N8N webhook protection"
 date: 2026-06-07T13:18:58+02:00
-draft: true
 ---
 
 In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha [form proxy]({{< relref "/docs/reference/form-proxy.md" >}}) feature.
