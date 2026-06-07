@@ -45,7 +45,7 @@ Make sure that your form **cannot** be submitted until captcha is solved.
 > [!NOTE]
 > Below is just one way how this can be done. Check [widget reference]({{< relref "docs/reference/widget-options.md#events-and-callbacks" >}}) for details.
 
-For example, you can disable the "Submit" button by default and enable only after captcha is solved. This can be achieved by using `data-finished-callback` attribute (listening to `privatecaptcha:finish` event).
+For example, you can disable the "Submit" button by default and enable only after captcha is solved. This can be achieved by using `data-finished-callback` attribute (_or_ listening to `privatecaptcha:finish` event).
 
 ```diff {filename="index.html"}
 @@ -18,7 +18,13 @@
