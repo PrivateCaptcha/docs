@@ -10,8 +10,7 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Form proxy – Private Captcha</title>
   <meta name="description" content="Form proxy allows you to use our endpoint (e.g. https://api.privatecaptcha.com/form/123) instead of your endpoint for &lt;form&gt; request. We will forward (“proxy”) only submissions when captcha and rate-limiting have passed.
-This allows to secure your endpoint:
-we check if captcha was solved (this assumes you will use Private Captcha widget on the form) your actual form URL is hidden (security-by-obscurity) and noone knows about it we apply rate-limiting and other protection rules to the form endpoint and captcha This makes it for a perfect use-case for forms on static websites or general webhooks protection (e.g. forms backed by Google Docs, Webflow or Zapier / Make / N8N)." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/form-proxy/" itemprop="url" />
+flowchart LR subgraph site[&#34;Your website&#34;] A[Form] end subgraph api[&#34;api.privatecaptcha.com&#34;] B[CAPTCHA &#43; rate limit] end A -- submission --&gt; B B -- ✓ --&gt; C[Your webhook] B -- ✗ --&gt; D[Blocked] style D stroke:#e24b4a,color:#e24b4a This allows to secure your endpoint:" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/form-proxy/" itemprop="url" />
 
 <meta property="og:title" content="Form proxy">
 <meta
@@ -19,13 +18,21 @@ we check if captcha was solved (this assumes you will use Private Captcha widget
   content="
     
       Form proxy allows you to use our endpoint (e.g. https://api.privatecaptcha.com/form/123) instead of your endpoint for &lt;form&gt; request. We will forward (&ldquo;proxy&rdquo;) only submissions when captcha and rate-limiting have passed.
+
+  
+    flowchart LR
+    subgraph site[&#34;Your website&#34;]
+        A[Form]
+    end
+    subgraph api[&#34;api.privatecaptcha.com&#34;]
+        B[CAPTCHA &#43; rate limit]
+    end
+    A -- submission --&gt; B
+    B -- ✓ --&gt; C[Your webhook]
+    B -- ✗ --&gt; D[Blocked]
+    style D stroke:#e24b4a,color:#e24b4a
+  
 This allows to secure your endpoint:
-
-we check if captcha was solved (this assumes you will use Private Captcha widget on the form)
-your actual form URL is hidden (security-by-obscurity) and noone knows about it
-we apply rate-limiting and other protection rules to the form endpoint and captcha
-
-This makes it for a perfect use-case for forms on static websites or general webhooks protection (e.g. forms backed by Google Docs, Webflow or Zapier / Make / N8N).
     
   ">
 <meta
@@ -42,22 +49,20 @@ This makes it for a perfect use-case for forms on static websites or general web
 
 <meta
   property="article:modified_time"
-  content="2026-06-04T13:31:19+02:00">
+  content="2026-06-07T15:02:55+02:00">
 
 
 
   <meta itemprop="name" content="Form proxy">
   <meta itemprop="description" content="Form proxy allows you to use our endpoint (e.g. https://api.privatecaptcha.com/form/123) instead of your endpoint for &lt;form&gt; request. We will forward (“proxy”) only submissions when captcha and rate-limiting have passed.
-This allows to secure your endpoint:
-we check if captcha was solved (this assumes you will use Private Captcha widget on the form) your actual form URL is hidden (security-by-obscurity) and noone knows about it we apply rate-limiting and other protection rules to the form endpoint and captcha This makes it for a perfect use-case for forms on static websites or general webhooks protection (e.g. forms backed by Google Docs, Webflow or Zapier / Make / N8N).">
+flowchart LR subgraph site[&#34;Your website&#34;] A[Form] end subgraph api[&#34;api.privatecaptcha.com&#34;] B[CAPTCHA &#43; rate limit] end A -- submission --&gt; B B -- ✓ --&gt; C[Your webhook] B -- ✗ --&gt; D[Blocked] style D stroke:#e24b4a,color:#e24b4a This allows to secure your endpoint:">
   <meta itemprop="datePublished" content="2026-06-03T18:22:49+02:00">
-  <meta itemprop="dateModified" content="2026-06-04T13:31:19+02:00">
-  <meta itemprop="wordCount" content="436">
+  <meta itemprop="dateModified" content="2026-06-07T15:02:55+02:00">
+  <meta itemprop="wordCount" content="646">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Form proxy">
   <meta name="twitter:description" content="Form proxy allows you to use our endpoint (e.g. https://api.privatecaptcha.com/form/123) instead of your endpoint for &lt;form&gt; request. We will forward (“proxy”) only submissions when captcha and rate-limiting have passed.
-This allows to secure your endpoint:
-we check if captcha was solved (this assumes you will use Private Captcha widget on the form) your actual form URL is hidden (security-by-obscurity) and noone knows about it we apply rate-limiting and other protection rules to the form endpoint and captcha This makes it for a perfect use-case for forms on static websites or general webhooks protection (e.g. forms backed by Google Docs, Webflow or Zapier / Make / N8N).">
+flowchart LR subgraph site[&#34;Your website&#34;] A[Form] end subgraph api[&#34;api.privatecaptcha.com&#34;] B[CAPTCHA &#43; rate limit] end A -- submission --&gt; B B -- ✓ --&gt; C[Your webhook] B -- ✗ --&gt; D[Blocked] style D stroke:#e24b4a,color:#e24b4a This allows to secure your endpoint:">
 
     <link rel="preload" href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" as="style" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
     <link href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" rel="stylesheet" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
@@ -207,6 +212,12 @@ we check if captcha was solved (this assumes you will use Private Captcha widget
                 href="#settings"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
               >Settings</a>
+            </li>
+          <li>
+              <a
+                href="#integration"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Integration</a>
             </li>
           <li>
               <a
@@ -1031,6 +1042,26 @@ we check if captcha was solved (this assumes you will use Private Captcha widget
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#integration">Integration
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#setup">Setup
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#create-form-in-the-provider">Create form in the provider
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#create-form-proxy">Create Form Proxy
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#use-proxy-url-in-your-form">Use proxy URL in your form
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#limits">Limits
         </a>
       </li>
@@ -1040,6 +1071,10 @@ we check if captcha was solved (this assumes you will use Private Captcha widget
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#technical">Technical
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#deactivation">Deactivation
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
@@ -1139,7 +1174,21 @@ we check if captcha was solved (this assumes you will use Private Captcha widget
           </div>
           
           <p>Form proxy allows you to use our endpoint (e.g. <code>https://api.privatecaptcha.com/form/123</code>) instead of your endpoint for <code>&lt;form&gt;</code> request. We will forward (&ldquo;proxy&rdquo;) only submissions when captcha and rate-limiting have passed.</p>
-<p>This allows to <strong>secure</strong> your endpoint:</p>
+<div role="img" aria-label="Diagram">
+  <pre class="mermaid hx:mt-6">
+    flowchart LR
+    subgraph site[&#34;Your website&#34;]
+        A[Form]
+    end
+    subgraph api[&#34;api.privatecaptcha.com&#34;]
+        B[CAPTCHA + rate limit]
+    end
+    A -- submission --&gt; B
+    B -- ✓ --&gt; C[Your webhook]
+    B -- ✗ --&gt; D[Blocked]
+    style D stroke:#e24b4a,color:#e24b4a
+  </pre>
+</div><p>This allows to <strong>secure</strong> your endpoint:</p>
 <ul>
 <li>we check if captcha was solved (this assumes you will use Private Captcha widget on the form)</li>
 <li>your actual form URL is hidden (security-by-obscurity) and noone knows about it</li>
@@ -1160,13 +1209,74 @@ we check if captcha was solved (this assumes you will use Private Captcha widget
     <a href="#requests-per-minute" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>You can limit how many requests can be forwarded to your destination each minute (default is <code>10</code>). Submissions exceeding this limit will be rejected with <code>429</code> (Too Many Requests). Each configuration includes &ldquo;burst&rdquo; which is set to <code>RPM + 10</code>.</p>
 <h3>Retry<span class="hx:absolute hx:-mt-20" id="retry"></span>
     <a href="#retry" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>You can optionally configure requests to be retried when the endpoint returns <code>5xx</code> HTTP error code or network connection problems occurred. Retries are attempted after a delay.</p>
+<h2>Integration<span class="hx:absolute hx:-mt-20" id="integration"></span>
+    <a href="#integration" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You can integrate this with a number of form backend services:</p>
+<ul>
+<li><a href="https://forminit.com/"target="_blank" rel="noopener">FormInit<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> (formerly Getform)</li>
+<li><a href="https://formspree.io/"target="_blank" rel="noopener">Formspree<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> - general backend</li>
+<li><a href="https://formsubmit.co/"target="_blank" rel="noopener">FormSubmit<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> - email forwarding</li>
+<li><a href="https://www.formspark.io/"target="_blank" rel="noopener">FormSpark<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> - email forwarding</li>
+<li><a href="https://usebasin.com/"target="_blank" rel="noopener">Basin<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a></li>
+<li><a href="https://www.staticforms.dev/"target="_blank" rel="noopener">StaticForms<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a></li>
+</ul>
+<p>And any other automation software like <a href="https://n8n.io/"target="_blank" rel="noopener">N8N<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> or <a href="https://www.make.com/"target="_blank" rel="noopener">Make<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>.</p>
+<h3>Setup<span class="hx:absolute hx:-mt-20" id="setup"></span>
+    <a href="#setup" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]">
+<h3>Create form in the provider<span class="hx:absolute hx:-mt-20" id="create-form-in-the-provider"></span>
+    <a href="#create-form-in-the-provider" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In the provider of your choice create a new form. Note the form URL they give you.</p>
+<p>In N8N/Make it will be the <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/"target="_blank" rel="noopener">webhook<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> URL.</p>
+<h3>Create Form Proxy<span class="hx:absolute hx:-mt-20" id="create-form-proxy"></span>
+    <a href="#create-form-proxy" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In Private Captcha portal create a new Form Proxy. Use that provider&rsquo;s URL in the <a href="#url">URL</a> field.</p>
+<h3>Use proxy URL in your form<span class="hx:absolute hx:-mt-20" id="use-proxy-url-in-your-form"></span>
+    <a href="#use-proxy-url-in-your-form" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In your actual website, use something like:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;https://api.privatecaptcha.com/form/&lt;long-id&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">method</span><span class="o">=</span><span class="s">&#34;POST&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="c">&lt;!--- the rest ---&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>You will get an exact snippet you need to use after you&rsquo;ve created the form.</p>
+</div>
 <h2>Limits<span class="hx:absolute hx:-mt-20" id="limits"></span>
     <a href="#limits" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Billing<span class="hx:absolute hx:-mt-20" id="billing"></span>
-    <a href="#billing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Number of forms is limited by the number of properties included in your plan. Form submissions are not limited themselves, but the number of captcha property requests is limited (again, by your plan). Forms submissions without a valid captcha solution are rejected.</p>
+    <a href="#billing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Forms limits are tied to property limits. Each form submission requires a valid captcha puzzle (and a solution). So number of forms is limited by the number of properties in your account and number of submissions is limited to the number of requests included for your properties.</p>
 <h3>Technical<span class="hx:absolute hx:-mt-20" id="technical"></span>
     <a href="#technical" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The only accepted inbound form type is <code>application/x-www-form-urlencoded</code> (<code>multipart/form-data</code> or <em>any</em> other forms are not accepted).</p>
 <p>Form size is currently limited to <code>1 MB</code> max and will likely be reduced in future.</p>
 <p>The only HTTP method available for inbound requests is <code>POST</code>.</p>
+<p>Redirects are treated as errors.</p>
+<h3>Deactivation<span class="hx:absolute hx:-mt-20" id="deactivation"></span>
+    <a href="#deactivation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Form will be deactivated in case of multiple sequential failures. You will receive an email notification in such case.</p>
+<p>Form is <em>not</em> immediately deactivated in case of requests limits violation (e.g. traffic spike). However, you will be contacted by support.</p>
 <h2>Privacy<span class="hx:absolute hx:-mt-20" id="privacy"></span>
     <a href="#privacy" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Form submissions are not persisted in <strong>any</strong> storage, not logged, and are available on our servers only in transit. You have an option to sign the <a href="https://privatecaptcha.com/legal/dpa"target="_blank" rel="noopener">DPA<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1175,7 +1285,7 @@ we check if captcha was solved (this assumes you will use Private Captcha widget
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-06-04T13:31:19.000Z">June 4, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-06-07T15:02:55.000Z">June 7, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/rules/"
         title="Difficulty rules"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
@@ -1191,7 +1301,36 @@ we check if captcha was solved (this assumes you will use Private Captcha widget
     </div></footer>
     
     <script defer src="/js/main.min.bdd63e89d06ec32bfc21a871f1e8e9c0e1c1e367fe8f0aaf11db1aea3da8eedc.js" integrity="sha256-vdY&#43;idBuwyv8Iahx8ejpwOHB42f&#43;jwqvEdsa6j2o7tw="></script>
-<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.803584c7a656280c231b253255c6cf1b5854ab147e5dc842acc080d7557d8b78.js" integrity="sha256-gDWEx6ZWKAwjGyUyVcbPG1hUqxR&#43;XchCrMCA11V9i3g="></script><script defer src="/js/medium-zoom.min.6603320c02180d81b16dca4971f52763035ebc6ff18bd38729a47ff062be8d67.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK&#43;jWc=" crossorigin="anonymous"></script><script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.803584c7a656280c231b253255c6cf1b5854ab147e5dc842acc080d7557d8b78.js" integrity="sha256-gDWEx6ZWKAwjGyUyVcbPG1hUqxR&#43;XchCrMCA11V9i3g="></script><script defer src="/js/mermaid.min.70137e77bb273bb2ef972b86e8b0400cca8be53cb25bfc45911a186dc98665de.js" integrity="sha256-cBN&#43;d7snO7LvlyuG6LBADMqL5TyyW/xFkRoYbcmGZd4=" crossorigin="anonymous"></script><script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    document.querySelectorAll(".mermaid").forEach((el) => {
+      el.dataset.original = el.innerHTML;
+    });
+
+    const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+    mermaid.initialize({ startOnLoad: true, theme: theme });
+
+    let timeout;
+    new MutationObserver(() => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+        document.querySelectorAll(".mermaid").forEach((el) => {
+          
+          el.innerHTML = el.dataset.original;
+          el.removeAttribute("data-processed");
+        });
+        mermaid.initialize({ startOnLoad: true, theme: theme });
+        mermaid.init();
+      }, 150);
+    }).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  });
+</script>
+<script defer src="/js/medium-zoom.min.6603320c02180d81b16dca4971f52763035ebc6ff18bd38729a47ff062be8d67.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK&#43;jWc=" crossorigin="anonymous"></script><script>
   document.addEventListener("DOMContentLoaded", () => {
     if (!window.mediumZoom) {
       return;
