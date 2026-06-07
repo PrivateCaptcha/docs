@@ -77,7 +77,7 @@ Process form in N8N
 
 <meta
   property="article:modified_time"
-  content="2026-06-07T15:17:31+02:00">
+  content="2026-06-07T15:22:32+02:00">
 
 
 
@@ -87,8 +87,8 @@ Setup a page with a form Create HTML form Let’s create a basic form:
 There’s nothing fancy inside:
 &lt;body&gt; &lt;div class=&#34;form-container&#34;&gt; &lt;h2&gt;Contact Us&lt;/h2&gt; &lt;form action=&#34;#&#34; method=&#34;post&#34;&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt; &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt; &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required &gt; &lt;/div&gt; &lt;div class=&#34;form-group&#34;&gt; &lt;label for=&#34;message&#34;&gt;Message&lt;/label&gt; &lt;textarea id=&#34;message&#34; name=&#34;message&#34; required&gt;&lt;/textarea&gt; &lt;/div&gt; &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt; &lt;/form&gt; &lt;/div&gt; &lt;/body&gt; Process form in N8N To be able to submit this form, let’s create a new workflow in N8N and for Trigger select a webhook :">
   <meta itemprop="datePublished" content="2026-06-07T13:18:58+02:00">
-  <meta itemprop="dateModified" content="2026-06-07T15:17:31+02:00">
-  <meta itemprop="wordCount" content="680">
+  <meta itemprop="dateModified" content="2026-06-07T15:22:32+02:00">
+  <meta itemprop="wordCount" content="681">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="N8N webhook protection">
   <meta name="twitter:description" content="In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
@@ -1391,8 +1391,9 @@ There’s nothing fancy inside:
 </span></span></span><span class="line"><span class="cl"><span class="gi"></span> &lt;/head&gt;
 </span></span><span class="line"><span class="cl"> &lt;body&gt;
 </span></span><span class="line"><span class="cl"><span class="gu">@@ -110,7 +122,8 @@
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span>             &lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;a3bb25a00ba04664943754715ada96c9&#34; data-finished-callback=&#34;onCaptchaSolved&#34;&gt;&lt;/div&gt;
-</span></span><span class="line"><span class="cl"><span class="gd">-            &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>             &lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;a3bb25a00ba04664943754715ada96c9&#34;
+</span></span><span class="line"><span class="cl"><span class="gi">+                 data-finished-callback=&#34;onCaptchaSolved&#34;&gt;&lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gd">-            &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt;
 </span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+            &lt;button type=&#34;submit&#34; disabled&gt;Submit&lt;/button&gt;
 </span></span></span><span class="line"><span class="cl"><span class="gi"></span>         &lt;/form&gt;
 </span></span><span class="line"><span class="cl">     &lt;/div&gt;
@@ -1456,7 +1457,7 @@ There’s nothing fancy inside:
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-06-07T15:17:31.000Z">June 7, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-06-07T15:22:32.000Z">June 7, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/tutorials/widget-customization/"
         title="Widget customization"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"

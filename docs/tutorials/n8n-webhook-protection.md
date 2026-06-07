@@ -140,7 +140,8 @@ And disable the submit button by default, enabling it only when captcha is solve
  </head>
  <body>
 @@ -110,7 +122,8 @@
-             <div class="private-captcha" data-sitekey="a3bb25a00ba04664943754715ada96c9" data-finished-callback="onCaptchaSolved"></div>
+             <div class="private-captcha" data-sitekey="a3bb25a00ba04664943754715ada96c9"
++                 data-finished-callback="onCaptchaSolved"></div>
 -            <button type="submit">Submit</button>
 +            <button type="submit" disabled>Submit</button>
          </form>
