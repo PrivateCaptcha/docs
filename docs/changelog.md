@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.37.0 - 2026-06-12
+
+> includes 1.36.0 changelog
+
+- Updated difficulty scaling algorithm
+- A lot of security (low impact) and product bugfixes
+
 ## v1.35.0 - 2026-06-07
 
 - Added [form proxy]({{< relref "docs/reference/form-proxy.md" >}}) feature

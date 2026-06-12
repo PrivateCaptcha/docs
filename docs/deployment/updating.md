@@ -46,10 +46,16 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
 These are only deployment-specific changes. For general feature changelog, click [here]({{< relref "/docs/changelog.md" >}}).
 {{< /callout >}}
 
+### v1.37.0
+
+> includes v1.36.0
+
+- widget has been updated, purge your CDN cache
+
 ### v1.34.0
 
 - new recommended environment variable `CACHE_DIRECTORY` (systemd-style naming, no `PC_` prefix), if set, enabled cache persistence during restarts, which has great security benefits.
-- widget has been udpated, purge your CDN cache
+- widget has been updated, purge your CDN cache
 
 ### v1.32.0
 
