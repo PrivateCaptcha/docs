@@ -21,7 +21,7 @@ flowchart LR
 
 This allows to **secure** your endpoint:
 - we check if captcha was solved (this assumes you will use Private Captcha widget on the form)
-- your actual form URL is hidden (security-by-obscurity) and noone knows about it
+- your actual form URL is hidden (security-by-obscurity) and no one knows about it
 - we apply rate-limiting and other protection [rules]({{< relref "docs/reference/rules.md" >}}) to the form endpoint and captcha
 
 This makes it for a perfect use-case for forms on static websites or general webhooks protection (e.g. forms backed by Google Docs, Webflow or Zapier / Make / N8N).
