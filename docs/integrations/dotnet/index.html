@@ -55,17 +55,17 @@ This is a server-side SDK, which you would use to verify captcha solution agains
 
 
 
-  <meta itemprop="name" content=".NET">
-  <meta itemprop="description" content="To use this integration you need to create an API key in your account. If you have a working reCAPTCHA integration, check our migration guide for easy instructions. This is a server-side SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does not solve puzzles on the client side (used to protect APIs).">
-  <meta itemprop="datePublished" content="2025-08-06T16:14:32+03:00">
-  <meta itemprop="dateModified" content="2026-01-25T19:11:02+02:00">
-  <meta itemprop="wordCount" content="586">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content=".NET">
-  <meta name="twitter:description" content="To use this integration you need to create an API key in your account. If you have a working reCAPTCHA integration, check our migration guide for easy instructions. This is a server-side SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does not solve puzzles on the client side (used to protect APIs).">
+	<meta itemprop="name" content=".NET">
+	<meta itemprop="description" content="To use this integration you need to create an API key in your account. If you have a working reCAPTCHA integration, check our migration guide for easy instructions. This is a server-side SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does not solve puzzles on the client side (used to protect APIs).">
+	<meta itemprop="datePublished" content="2025-08-06T16:14:32+03:00">
+	<meta itemprop="dateModified" content="2026-01-25T19:11:02+02:00">
+	<meta itemprop="wordCount" content="586">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content=".NET">
+	<meta name="twitter:description" content="To use this integration you need to create an API key in your account. If you have a working reCAPTCHA integration, check our migration guide for easy instructions. This is a server-side SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does not solve puzzles on the client side (used to protect APIs).">
 
-    <link rel="preload" href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" as="style" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
-    <link href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" rel="stylesheet" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
+    <link rel="preload" href="/css/compiled/main.min.b5b138259ce92100d86e6c30fe7a6c4763162b7626f0fae603c2b1063f0ae36e.css" as="style" integrity="sha256-tbE4JZzpIQDYbmww/npsR2MWK3Ym8PrmA8KxBj8K424=" />
+    <link href="/css/compiled/main.min.b5b138259ce92100d86e6c30fe7a6c4763162b7626f0fae603c2b1063f0ae36e.css" rel="stylesheet" integrity="sha256-tbE4JZzpIQDYbmww/npsR2MWK3Ym8PrmA8KxBj8K424=" />
 
   
 
@@ -1318,40 +1318,40 @@ This is a server-side SDK, which you would use to verify captcha solution agains
     <a href="#configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>You can customize the client&rsquo;s behavior by passing a <code>PrivateCaptchaConfiguration</code> object to the constructor.</p>
 <h4>Client options<span class="hx:absolute hx:-mt-20" id="client-options"></span>
     <a href="#client-options" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
-  <thead>
-      <tr>
-          <th>Property</th>
-          <th>Description</th>
-          <th>Default Value</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>ApiKey</code></td>
-          <td><strong>(Required)</strong> Your API key from the Private Captcha dashboard.</td>
-          <td><code>string.Empty</code></td>
-      </tr>
-      <tr>
-          <td><code>Domain</code></td>
-          <td>The API domain to use (use <code>Domains.EU</code> or an override in case of self-hosting)</td>
-          <td><code>Domains.Global</code></td>
-      </tr>
-      <tr>
-          <td><code>FormField</code></td>
-          <td>The name of the form field containing the CAPTCHA solution. Used by the middleware.</td>
-          <td><code>&quot;private-captcha-solution&quot;</code></td>
-      </tr>
-      <tr>
-          <td><code>FailedStatusCode</code></td>
-          <td>The <code>HttpStatusCode</code> to return when middleware verification fails.</td>
-          <td><code>HttpStatusCode.Forbidden</code> (403)</td>
-      </tr>
-      <tr>
-          <td><code>HttpClient</code></td>
-          <td>An optional <code>HttpClient</code> instance. If not provided, a new one will be created and managed by the client.</td>
-          <td><code>null</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Property</th>
+					<th>Description</th>
+					<th>Default Value</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>ApiKey</code></td>
+					<td><strong>(Required)</strong> Your API key from the Private Captcha dashboard.</td>
+					<td><code>string.Empty</code></td>
+			</tr>
+			<tr>
+					<td><code>Domain</code></td>
+					<td>The API domain to use (use <code>Domains.EU</code> or an override in case of self-hosting)</td>
+					<td><code>Domains.Global</code></td>
+			</tr>
+			<tr>
+					<td><code>FormField</code></td>
+					<td>The name of the form field containing the CAPTCHA solution. Used by the middleware.</td>
+					<td><code>&quot;private-captcha-solution&quot;</code></td>
+			</tr>
+			<tr>
+					<td><code>FailedStatusCode</code></td>
+					<td>The <code>HttpStatusCode</code> to return when middleware verification fails.</td>
+					<td><code>HttpStatusCode.Forbidden</code> (403)</td>
+			</tr>
+			<tr>
+					<td><code>HttpClient</code></td>
+					<td>An optional <code>HttpClient</code> instance. If not provided, a new one will be created and managed by the client.</td>
+					<td><code>null</code></td>
+			</tr>
+	</tbody>
 </table>
 <h4>Non-standard backend domains<span class="hx:absolute hx:-mt-20" id="non-standard-backend-domains"></span>
     <a href="#non-standard-backend-domains" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>For <a href="/docs/reference/eu-isolation/">EU isolation</a>, you can use built-in constant <code>Domains.EU</code>:</p>
@@ -1424,7 +1424,7 @@ This is a server-side SDK, which you would use to verify captcha solution agains
       <div class="hx:flex hx:w-full hx:flex-col hx:items-center hx:sm:items-start"><div class="hx:mt-6 hx:text-xs">© 2025 Intmaker OÜ</div></div>
     </div></footer>
     
-    <script defer src="/js/main.min.bdd63e89d06ec32bfc21a871f1e8e9c0e1c1e367fe8f0aaf11db1aea3da8eedc.js" integrity="sha256-vdY&#43;idBuwyv8Iahx8ejpwOHB42f&#43;jwqvEdsa6j2o7tw="></script>
-<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.803584c7a656280c231b253255c6cf1b5854ab147e5dc842acc080d7557d8b78.js" integrity="sha256-gDWEx6ZWKAwjGyUyVcbPG1hUqxR&#43;XchCrMCA11V9i3g="></script>
+    <script defer src="/js/main.min.13d8341408af37994bbbb802be718290440654cd6292030e7d10ebbd81899a11.js" integrity="sha256-E9g0FAivN5lLu7gCvnGCkEQGVM1ikgMOfRDrvYGJmhE="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.423a47566acadc2f8b92bbb4ca95334500545268040247c4966cf47d6d0eb1b3.js" integrity="sha256-QjpHVmrK3C&#43;Lkru0ypUzRQBUUmgEAkfElmz0fW0OsbM="></script>
   </body>
 </html>

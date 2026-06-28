@@ -22,6 +22,7 @@ Setup a page with a form Create HTML form Let’s create a basic form:" /><link 
 
   Short summary of &ldquo;form proxy&rdquo; is that by pointing your form to our endpoint, we check CAPTCHA solution and rate limit and then call your actual endpoint (in this case - N8N webhook).
 
+
 Setup a page with a form
     Create HTML form
     Let&rsquo;s create a basic form:
@@ -45,21 +46,21 @@ Setup a page with a form
 
 
 
-  <meta itemprop="name" content="N8N webhook protection">
-  <meta itemprop="description" content="In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
+	<meta itemprop="name" content="N8N webhook protection">
+	<meta itemprop="description" content="In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
 Short summary of “form proxy” is that by pointing your form to our endpoint, we check CAPTCHA solution and rate limit and then call your actual endpoint (in this case - N8N webhook).
 Setup a page with a form Create HTML form Let’s create a basic form:">
-  <meta itemprop="datePublished" content="2026-06-07T13:18:58+02:00">
-  <meta itemprop="dateModified" content="2026-06-07T17:48:02+02:00">
-  <meta itemprop="wordCount" content="753">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="N8N webhook protection">
-  <meta name="twitter:description" content="In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
+	<meta itemprop="datePublished" content="2026-06-07T13:18:58+02:00">
+	<meta itemprop="dateModified" content="2026-06-07T17:48:02+02:00">
+	<meta itemprop="wordCount" content="753">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="N8N webhook protection">
+	<meta name="twitter:description" content="In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha form proxy feature.
 Short summary of “form proxy” is that by pointing your form to our endpoint, we check CAPTCHA solution and rate limit and then call your actual endpoint (in this case - N8N webhook).
 Setup a page with a form Create HTML form Let’s create a basic form:">
 
-    <link rel="preload" href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" as="style" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
-    <link href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" rel="stylesheet" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
+    <link rel="preload" href="/css/compiled/main.min.b5b138259ce92100d86e6c30fe7a6c4763162b7626f0fae603c2b1063f0ae36e.css" as="style" integrity="sha256-tbE4JZzpIQDYbmww/npsR2MWK3Ym8PrmA8KxBj8K424=" />
+    <link href="/css/compiled/main.min.b5b138259ce92100d86e6c30fe7a6c4763162b7626f0fae603c2b1063f0ae36e.css" rel="stylesheet" integrity="sha256-tbE4JZzpIQDYbmww/npsR2MWK3Ym8PrmA8KxBj8K424=" />
 
   
 
@@ -1184,6 +1185,7 @@ Setup a page with a form Create HTML form Let’s create a basic form:">
           <p>In this tutorial we will create a new N8N webhook for contact form and will protect it with Private Captcha <a href="/docs/reference/form-proxy/">form proxy</a> feature.</p>
 <blockquote>
   <p>Short summary of &ldquo;form proxy&rdquo; is that by pointing your form to our endpoint, we check CAPTCHA solution and rate limit and then call your actual endpoint (in this case - N8N webhook).</p>
+
 </blockquote>
 <h2>Setup a page with a form<span class="hx:absolute hx:-mt-20" id="setup-a-page-with-a-form"></span>
     <a href="#setup-a-page-with-a-form" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Create HTML form<span class="hx:absolute hx:-mt-20" id="create-html-form"></span>
@@ -1286,10 +1288,10 @@ Setup a page with a form Create HTML form Let’s create a basic form:">
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -80,7 +80,7 @@
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span>         &lt;h2&gt;Contact Us&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl">         &lt;h2&gt;Contact Us&lt;/h2&gt;
 </span></span><span class="line"><span class="cl"><span class="gd">-        &lt;form action=&#34;#&#34; method=&#34;post&#34;&gt;
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+        &lt;form action=&#34;https://n8n.yourdomain.com/webhook-test/d41b4068-af05-4e82-8eb9-5fbf50409f37&#34; method=&#34;post&#34;&gt;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>             &lt;div class=&#34;form-group&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        &lt;form action=&#34;https://n8n.yourdomain.com/webhook-test/d41b4068-af05-4e82-8eb9-5fbf50409f37&#34; method=&#34;post&#34;&gt;
+</span></span></span><span class="line"><span class="cl">             &lt;div class=&#34;form-group&#34;&gt;
 </span></span><span class="line"><span class="cl">                 &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt;
 </span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
@@ -1321,11 +1323,11 @@ Setup a page with a form Create HTML form Let’s create a basic form:">
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -75,6 +75,7 @@
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span>             background-color: #005fcc;
+</span></span></span><span class="line"><span class="cl">             background-color: #005fcc;
 </span></span><span class="line"><span class="cl">         }
 </span></span><span class="line"><span class="cl">     &lt;/style&gt;
 </span></span><span class="line"><span class="cl"><span class="gi">+    &lt;script defer src=&#34;https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js&#34;&gt;&lt;/script&gt;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span> &lt;/head&gt;
+</span></span></span><span class="line"><span class="cl"> &lt;/head&gt;
 </span></span><span class="line"><span class="cl"> &lt;body&gt;
 </span></span><span class="line"><span class="cl">     &lt;div class=&#34;form-container&#34;&gt;
 </span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
@@ -1345,10 +1347,10 @@ Setup a page with a form Create HTML form Let’s create a basic form:">
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -75,12 +75,13 @@
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span>         &lt;h2&gt;Contact Us&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl">         &lt;h2&gt;Contact Us&lt;/h2&gt;
 </span></span><span class="line"><span class="cl"><span class="gd">-        &lt;form action=&#34;https://ndmtion.intmaker.com/webhook-test/d41b4068-af05-4e82-8eb9-5fbf50409f37&#34; method=&#34;post&#34;&gt;
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+        &lt;form action=&#34;https://api.privatecaptcha.com/form/21dce88d638f4174aa8a6d1e2605903a&#34; method=&#34;POST&#34; &gt;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>             &lt;div class=&#34;form-group&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        &lt;form action=&#34;https://api.privatecaptcha.com/form/21dce88d638f4174aa8a6d1e2605903a&#34; method=&#34;POST&#34; &gt;
+</span></span></span><span class="line"><span class="cl">             &lt;div class=&#34;form-group&#34;&gt;
 </span></span><span class="line"><span class="cl">                 &lt;label for=&#34;name&#34;&gt;Name&lt;/label&gt;
 </span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
@@ -1372,11 +1374,11 @@ Setup a page with a form Create HTML form Let’s create a basic form:">
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">@@ -110,6 +111,7 @@
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span>                 &gt;&lt;/textarea&gt;
+</span></span></span><span class="line"><span class="cl">                 &gt;&lt;/textarea&gt;
 </span></span><span class="line"><span class="cl">             &lt;/div&gt;
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"><span class="gi">+            &lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;a3bb25a00ba04664943754715ada96c9&#34;&gt;&lt;/div&gt;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>             &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt;
+</span></span></span><span class="line"><span class="cl">             &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt;
 </span></span><span class="line"><span class="cl">         &lt;/form&gt;
 </span></span><span class="line"><span class="cl">     &lt;/div&gt;
 </span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
@@ -1401,14 +1403,14 @@ Setup a page with a form Create HTML form Let’s create a basic form:">
 </span></span></span><span class="line"><span class="cl"><span class="gi">+            document.querySelector(&#39;button[type=&#34;submit&#34;]&#39;).disabled = false;
 </span></span></span><span class="line"><span class="cl"><span class="gi">+        }
 </span></span></span><span class="line"><span class="cl"><span class="gi">+    &lt;/script&gt;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span> &lt;/head&gt;
+</span></span></span><span class="line"><span class="cl"> &lt;/head&gt;
 </span></span><span class="line"><span class="cl"> &lt;body&gt;
 </span></span><span class="line"><span class="cl"><span class="gu">@@ -110,7 +122,8 @@
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span>             &lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;a3bb25a00ba04664943754715ada96c9&#34;
+</span></span></span><span class="line"><span class="cl">             &lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;a3bb25a00ba04664943754715ada96c9&#34;
 </span></span><span class="line"><span class="cl"><span class="gi">+                 data-finished-callback=&#34;onCaptchaSolved&#34;&gt;&lt;/div&gt;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gd">-            &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt;
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+            &lt;button type=&#34;submit&#34; disabled&gt;Submit&lt;/button&gt;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>         &lt;/form&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gd">-            &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+            &lt;button type=&#34;submit&#34; disabled&gt;Submit&lt;/button&gt;
+</span></span></span><span class="line"><span class="cl">         &lt;/form&gt;
 </span></span><span class="line"><span class="cl">     &lt;/div&gt;
 </span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
@@ -1483,8 +1485,8 @@ Setup a page with a form Create HTML form Let’s create a basic form:">
       <div class="hx:flex hx:w-full hx:flex-col hx:items-center hx:sm:items-start"><div class="hx:mt-6 hx:text-xs">© 2025 Intmaker OÜ</div></div>
     </div></footer>
     
-    <script defer src="/js/main.min.bdd63e89d06ec32bfc21a871f1e8e9c0e1c1e367fe8f0aaf11db1aea3da8eedc.js" integrity="sha256-vdY&#43;idBuwyv8Iahx8ejpwOHB42f&#43;jwqvEdsa6j2o7tw="></script>
-<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.803584c7a656280c231b253255c6cf1b5854ab147e5dc842acc080d7557d8b78.js" integrity="sha256-gDWEx6ZWKAwjGyUyVcbPG1hUqxR&#43;XchCrMCA11V9i3g="></script><script defer src="/js/medium-zoom.min.6603320c02180d81b16dca4971f52763035ebc6ff18bd38729a47ff062be8d67.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK&#43;jWc=" crossorigin="anonymous"></script><script>
+    <script defer src="/js/main.min.13d8341408af37994bbbb802be718290440654cd6292030e7d10ebbd81899a11.js" integrity="sha256-E9g0FAivN5lLu7gCvnGCkEQGVM1ikgMOfRDrvYGJmhE="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.423a47566acadc2f8b92bbb4ca95334500545268040247c4966cf47d6d0eb1b3.js" integrity="sha256-QjpHVmrK3C&#43;Lkru0ypUzRQBUUmgEAkfElmz0fW0OsbM="></script><script defer src="/js/medium-zoom.min.6603320c02180d81b16dca4971f52763035ebc6ff18bd38729a47ff062be8d67.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK&#43;jWc=" crossorigin="anonymous"></script><script>
   document.addEventListener("DOMContentLoaded", () => {
     if (!window.mediumZoom) {
       return;

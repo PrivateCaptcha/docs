@@ -55,17 +55,17 @@ This is a server-side SDK, which you would use to verify captcha solution agains
 
 
 
-  <meta itemprop="name" content="PHP">
-  <meta itemprop="description" content="To use this integration you need to create an API key in your account. If you have a working reCAPTCHA integration, check our migration guide for easy instructions. This is a server-side SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does not solve puzzles on the client side (used to protect APIs).">
-  <meta itemprop="datePublished" content="2025-08-20T08:35:57+03:00">
-  <meta itemprop="dateModified" content="2026-01-25T19:11:02+02:00">
-  <meta itemprop="wordCount" content="405">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="PHP">
-  <meta name="twitter:description" content="To use this integration you need to create an API key in your account. If you have a working reCAPTCHA integration, check our migration guide for easy instructions. This is a server-side SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does not solve puzzles on the client side (used to protect APIs).">
+	<meta itemprop="name" content="PHP">
+	<meta itemprop="description" content="To use this integration you need to create an API key in your account. If you have a working reCAPTCHA integration, check our migration guide for easy instructions. This is a server-side SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does not solve puzzles on the client side (used to protect APIs).">
+	<meta itemprop="datePublished" content="2025-08-20T08:35:57+03:00">
+	<meta itemprop="dateModified" content="2026-01-25T19:11:02+02:00">
+	<meta itemprop="wordCount" content="405">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="PHP">
+	<meta name="twitter:description" content="To use this integration you need to create an API key in your account. If you have a working reCAPTCHA integration, check our migration guide for easy instructions. This is a server-side SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does not solve puzzles on the client side (used to protect APIs).">
 
-    <link rel="preload" href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" as="style" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
-    <link href="/css/compiled/main.min.216ef57ef744059a62dfc6e6b323a573241dfc424ae1a33a52c96a11b93ff96f.css" rel="stylesheet" integrity="sha256-IW71fvdEBZpi38bmsyOlcyQd/EJK4aM6UslqEbk/&#43;W8=" />
+    <link rel="preload" href="/css/compiled/main.min.b5b138259ce92100d86e6c30fe7a6c4763162b7626f0fae603c2b1063f0ae36e.css" as="style" integrity="sha256-tbE4JZzpIQDYbmww/npsR2MWK3Ym8PrmA8KxBj8K424=" />
+    <link href="/css/compiled/main.min.b5b138259ce92100d86e6c30fe7a6c4763162b7626f0fae603c2b1063f0ae36e.css" rel="stylesheet" integrity="sha256-tbE4JZzpIQDYbmww/npsR2MWK3Ym8PrmA8KxBj8K424=" />
 
   
 
@@ -1239,10 +1239,10 @@ This is a server-side SDK, which you would use to verify captcha solution agains
 </span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nx">PrivateCaptcha\Client</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Initialize the client with your API key
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span><span class="nx">apiKey</span><span class="o">:</span> <span class="s2">&#34;your-api-key-here&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span><span class="nx">apiKey</span><span class="o">:</span> <span class="s2">&#34;your-api-key-here&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Verify a captcha solution
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">try</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">verify</span><span class="p">(</span><span class="nx">solution</span><span class="o">:</span> <span class="s2">&#34;user-solution-from-frontend&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$result</span><span class="o">-&gt;</span><span class="na">isOK</span><span class="p">())</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;Captcha verified successfully!&#34;</span><span class="p">;</span>
@@ -1286,10 +1286,10 @@ This is a server-side SDK, which you would use to verify captcha solution agains
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">try</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// Verify captcha from form data
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">client</span><span class="o">-&gt;</span><span class="na">verifyRequest</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">all</span><span class="p">());</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">client</span><span class="o">-&gt;</span><span class="na">verifyRequest</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">all</span><span class="p">());</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="c1">// Process your form data here
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">return</span> <span class="nx">response</span><span class="p">(</span><span class="s1">&#39;Form submitted successfully!&#39;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">response</span><span class="p">(</span><span class="s1">&#39;Form submitted successfully!&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">SolutionException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">response</span><span class="p">(</span><span class="s1">&#39;Captcha verification failed&#39;</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
@@ -1331,7 +1331,7 @@ This is a server-side SDK, which you would use to verify captcha solution agains
 </span></span><span class="line"><span class="cl">        <span class="k">try</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">client</span><span class="o">-&gt;</span><span class="na">verifyRequest</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">all</span><span class="p">());</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// Process form data
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">&#39;Success!&#39;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">&#39;Success!&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">SolutionException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">&#39;Captcha failed&#39;</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
@@ -1360,9 +1360,9 @@ This is a server-side SDK, which you would use to verify captcha solution agains
 </span></span><span class="line"><span class="cl"><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">apiKey</span><span class="o">:</span> <span class="s2">&#34;your-api-key&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">domain</span><span class="o">:</span> <span class="nx">Client</span><span class="o">::</span><span class="na">EU_DOMAIN</span><span class="p">,</span>                      <span class="c1">// replace domain for self-hosting or EU isolation
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">formField</span><span class="o">:</span> <span class="s2">&#34;private-captcha-solution&#34;</span><span class="p">,</span>          <span class="c1">// custom form field name
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">timeout</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>                                    <span class="c1">// request timeout in seconds
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">);</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</span></span></span><span class="line"><span class="cl">    <span class="nx">formField</span><span class="o">:</span> <span class="s2">&#34;private-captcha-solution&#34;</span><span class="p">,</span>          <span class="c1">// custom form field name
+</span></span></span><span class="line"><span class="cl">    <span class="nx">timeout</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>                                    <span class="c1">// request timeout in seconds
+</span></span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -1382,13 +1382,13 @@ This is a server-side SDK, which you would use to verify captcha solution agains
 </span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nx">PrivateCaptcha\Client</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Use EU domain
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$euClient</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$euClient</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">apiKey</span><span class="o">:</span> <span class="s2">&#34;your-api-key&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">domain</span><span class="o">:</span> <span class="nx">Client</span><span class="o">::</span><span class="na">EU_DOMAIN</span>  <span class="c1">// api.eu.privatecaptcha.com
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Or specify custom domain in case of self-hosting
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$customClient</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$customClient</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">apiKey</span><span class="o">:</span> <span class="s2">&#34;your-api-key&#34;</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">    <span class="nx">domain</span><span class="o">:</span> <span class="s2">&#34;your-custom-domain.com&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
@@ -1411,8 +1411,8 @@ This is a server-side SDK, which you would use to verify captcha solution agains
 </span></span><span class="line"><span class="cl"><span class="nv">$result</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">verify</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">solution</span><span class="o">:</span> <span class="s2">&#34;user-solution&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">maxBackoffSeconds</span><span class="o">:</span> <span class="mi">15</span><span class="p">,</span>  <span class="c1">// maximum wait between retries
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">attempts</span><span class="o">:</span> <span class="mi">3</span>             <span class="c1">// number of retry attempts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">);</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</span></span></span><span class="line"><span class="cl">    <span class="nx">attempts</span><span class="o">:</span> <span class="mi">3</span>             <span class="c1">// number of retry attempts
+</span></span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -1453,7 +1453,7 @@ This is a server-side SDK, which you would use to verify captcha solution agains
       <div class="hx:flex hx:w-full hx:flex-col hx:items-center hx:sm:items-start"><div class="hx:mt-6 hx:text-xs">© 2025 Intmaker OÜ</div></div>
     </div></footer>
     
-    <script defer src="/js/main.min.bdd63e89d06ec32bfc21a871f1e8e9c0e1c1e367fe8f0aaf11db1aea3da8eedc.js" integrity="sha256-vdY&#43;idBuwyv8Iahx8ejpwOHB42f&#43;jwqvEdsa6j2o7tw="></script>
-<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.803584c7a656280c231b253255c6cf1b5854ab147e5dc842acc080d7557d8b78.js" integrity="sha256-gDWEx6ZWKAwjGyUyVcbPG1hUqxR&#43;XchCrMCA11V9i3g="></script>
+    <script defer src="/js/main.min.13d8341408af37994bbbb802be718290440654cd6292030e7d10ebbd81899a11.js" integrity="sha256-E9g0FAivN5lLu7gCvnGCkEQGVM1ikgMOfRDrvYGJmhE="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.423a47566acadc2f8b92bbb4ca95334500545268040247c4966cf47d6d0eb1b3.js" integrity="sha256-QjpHVmrK3C&#43;Lkru0ypUzRQBUUmgEAkfElmz0fW0OsbM="></script>
   </body>
 </html>
