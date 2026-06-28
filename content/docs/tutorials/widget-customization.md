@@ -52,6 +52,28 @@ There're 2 things you can do: changing `font-size` scales everything inside the 
 
 {{< /tabs >}}
 
+## Small widget
+
+To "squish" the widget you need to add `min-width: 0;` to `data-styles`.
+
+{{< tabs items="Widget,HTML" >}}
+
+{{< tab >}}
+{{< captchawidget formclass="pc-form hx:rounded" parentstyle="width: 200px; height: 100px;" widgetstyle="display: block; min-width: 0; height: 100%;" >}}
+{{< /tab >}}
+
+{{< tab >}}
+```html
+<form style="width: 200px; height: 100px;">
+    <div class="private-captcha"
+         data-styles="display: block; min-width: 0; height: 100%;">
+    </div>
+</form>
+```
+{{< /tab >}}
+
+{{< /tabs >}}
+
 ## Border customization
 
 Border color is customized with `--border` variable (a proxy to `border` CSS property) and border radius is customized with `--border-radius`
