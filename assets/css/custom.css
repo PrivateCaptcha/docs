@@ -1,12 +1,12 @@
 :root {
-  --primary-hue: 180deg;
-  --primary-saturation: 71%;
-  --primary-lightness: 32%;
-  --image-zoom-background-color: #fff;
+  --primary-hue: 117deg;
+  --primary-saturation: 29%;
+  --primary-lightness: 35%;
+  --image-zoom-background-color: #faf8f5;
 }
 
 html[class~="dark"] {
-  --image-zoom-background-color: #111111;
+  --image-zoom-background-color: #0e0f0e;
 }
 
 .pc-form {
