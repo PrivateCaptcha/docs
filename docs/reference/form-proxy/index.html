@@ -49,7 +49,7 @@ This allows to secure your endpoint:
 
 <meta
   property="article:modified_time"
-  content="2026-06-07T15:02:55+02:00">
+  content="2026-07-01T06:35:30+00:00">
 
 
 
@@ -57,8 +57,8 @@ This allows to secure your endpoint:
 	<meta itemprop="description" content="Form proxy allows you to use our endpoint (e.g. https://api.privatecaptcha.com/form/123) instead of your endpoint for &lt;form&gt; request. We will forward (“proxy”) only submissions when captcha and rate-limiting have passed.
 flowchart LR subgraph site[&#34;Your website&#34;] A[Form] end subgraph api[&#34;api.privatecaptcha.com&#34;] B[CAPTCHA &#43; rate limit] end A -- submission --&gt; B B -- ✓ --&gt; C[Your webhook] B -- ✗ --&gt; D[Blocked] style D stroke:#e24b4a,color:#e24b4a This allows to secure your endpoint:">
 	<meta itemprop="datePublished" content="2026-06-03T18:22:49+02:00">
-	<meta itemprop="dateModified" content="2026-06-07T15:02:55+02:00">
-	<meta itemprop="wordCount" content="646">
+	<meta itemprop="dateModified" content="2026-07-01T06:35:30+00:00">
+	<meta itemprop="wordCount" content="647">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Form proxy">
 	<meta name="twitter:description" content="Form proxy allows you to use our endpoint (e.g. https://api.privatecaptcha.com/form/123) instead of your endpoint for &lt;form&gt; request. We will forward (“proxy”) only submissions when captcha and rate-limiting have passed.
@@ -1211,7 +1211,7 @@ flowchart LR subgraph site[&#34;Your website&#34;] A[Form] end subgraph api[&#34
 </div><p>This allows to <strong>secure</strong> your endpoint:</p>
 <ul>
 <li>we check if captcha was solved (this assumes you will use Private Captcha widget on the form)</li>
-<li>your actual form URL is hidden (security-by-obscurity) and noone knows about it</li>
+<li>your actual form URL is hidden (security-by-obscurity) and no one knows about it</li>
 <li>we apply rate-limiting and other protection <a href="/docs/reference/rules/">rules</a> to the form endpoint and captcha</li>
 </ul>
 <p>This makes it for a perfect use-case for forms on static websites or general webhooks protection (e.g. forms backed by Google Docs, Webflow or Zapier / Make / N8N).</p>
@@ -1305,7 +1305,7 @@ flowchart LR subgraph site[&#34;Your website&#34;] A[Form] end subgraph api[&#34
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-06-07T15:02:55.000Z">June 7, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-07-01T06:35:30.000Z">July 1, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/rules/"
         title="Difficulty rules"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
