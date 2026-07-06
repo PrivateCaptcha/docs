@@ -49,6 +49,10 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
 These are only deployment-specific changes. For general feature changelog, click [here]({{< relref "/docs/changelog.md" >}}).
 {{< /callout >}}
 
+### v1.38.0
+
+- both widget and portal were updated, pur your CDN cache
+
 ### v1.37.0
 
 > includes v1.36.0
