@@ -58,7 +58,7 @@ These lists are kept up-to-date automatically.
 
 **Example**
 
-![Difficulty rules Traffic Source](/images/reference/difficulty-rule-traffic-source.png "Example: match requests from TOR, VPN and search crawlers")
+![Difficulty rules Traffic Source](/images/reference/difficulty-rule-traffic-source.png "Example: match requests from Public Cloud providers, VPN and CDNs")
 
 #### IP Address
 
