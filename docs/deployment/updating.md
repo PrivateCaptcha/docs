@@ -48,7 +48,7 @@ These are only deployment-specific changes. For general feature changelog, click
 
 ### v1.38.0
 
-- both widget and portal were updated, pur your CDN cache
+- both widget and portal were updated, purge your CDN cache
 
 ### v1.37.0
 
