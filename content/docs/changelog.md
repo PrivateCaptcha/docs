@@ -3,6 +3,11 @@ title: "Changelog"
 date: 2026-03-19T08:43:58+01:00
 ---
 
+## v1.38.0 - 2026-07-05
+
+- Complete redesign (to match main website theme)
+- Improvements related to negative caching
+
 ## v1.37.0 - 2026-06-12
 
 > includes 1.36.0 changelog
