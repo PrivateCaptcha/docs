@@ -83,7 +83,7 @@ Now, open login dialog for your WordPress installation (e.g. in Private browser 
 
 - WordPress (Login, Registrations, Password reset, Comment forms for logged-in/guests)
 - WPForms
-- Contact Form 7 (use `[privatcaptcha]` tag)
+- Contact Form 7 (use `[privatecaptcha]` tag)
 - Gravity Forms
 - Elementor Pro (add "Private Captcha" field to form)
 - WooCommerce (Login, Registration, Password reset, Checkout guest/logged-in)
