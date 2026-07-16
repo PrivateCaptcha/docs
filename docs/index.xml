@@ -5251,7 +5251,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2&gt;2. Create &lt;code&gt;.env&lt;/code&gt; file&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2-create-env-file&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#2-create-env-file&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Option 1.&lt;/strong&gt; Use bootstrap script&lt;/p&gt;
+    &lt;a href=&#34;#2-create-env-file&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Option 1.&lt;/strong&gt; Use bootstrap script (&lt;em&gt;recommended&lt;/em&gt;)&lt;/p&gt;
 &lt;p&gt;Run bootstrap script and pass the domain name (without domain name will use &lt;code&gt;localhost:8080&lt;/code&gt;):&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -5285,6 +5285,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;p&gt;The difference from bootstrap script option is that you will need to generate random strings yourself.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Some notes on environment variables:&lt;/p&gt;
 &lt;ul&gt;

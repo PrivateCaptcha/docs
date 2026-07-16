@@ -42,14 +42,14 @@ At least 2GB of RAM
 
 <meta
   property="article:modified_time"
-  content="2026-07-16T11:28:35+03:00">
+  content="2026-07-16T11:30:01+03:00">
 
 
 
 	<meta itemprop="name" content="Private Captcha">
 	<meta itemprop="description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (required for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.">
-	<meta itemprop="dateModified" content="2026-07-16T11:28:35+03:00">
-	<meta itemprop="wordCount" content="467">
+	<meta itemprop="dateModified" content="2026-07-16T11:30:01+03:00">
+	<meta itemprop="wordCount" content="484">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Private Captcha">
 	<meta name="twitter:description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (required for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.">
@@ -1073,7 +1073,7 @@ At least 2GB of RAM
 </div>
 </div>
 <h2>2. Create <code>.env</code> file<span class="hx:absolute hx:-mt-20" id="2-create-env-file"></span>
-    <a href="#2-create-env-file" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>Option 1.</strong> Use bootstrap script</p>
+    <a href="#2-create-env-file" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>Option 1.</strong> Use bootstrap script (<em>recommended</em>)</p>
 <p>Run bootstrap script and pass the domain name (without domain name will use <code>localhost:8080</code>):</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -1107,6 +1107,7 @@ At least 2GB of RAM
   </button>
 </div>
 </div>
+<p>The difference from bootstrap script option is that you will need to generate random strings yourself.</p>
 <p><strong>Notes</strong></p>
 <p>Some notes on environment variables:</p>
 <ul>
@@ -1229,7 +1230,7 @@ At least 2GB of RAM
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-07-16T11:28:35.000Z">July 16, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-07-16T11:30:01.000Z">July 16, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/production/"
         title="Production use"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"

@@ -20,7 +20,7 @@ cd private-captcha
 
 ## 2. Create `.env` file
 
-**Option 1.** Use bootstrap script
+**Option 1.** Use bootstrap script (_recommended_)
 
 Run bootstrap script and pass the domain name (without domain name will use `localhost:8080`):
 
@@ -36,6 +36,8 @@ Copy sample environment files (separate for prod or local use) and set or change
 cp .env.prod.example .env
 $EDITOR .env
 ```
+
+The difference from bootstrap script option is that you will need to generate random strings yourself.
 
 **Notes**
 
