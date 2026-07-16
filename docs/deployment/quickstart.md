@@ -5,7 +5,7 @@
 
 - Docker [installed](https://docs.docker.com/engine/install/)
 - (optional) Reverse proxy like Caddy or Nginx
-- Domain name `yourdomain.com` (for local-only installs, use `privatecaptcha.local`)
+- Domain name `mydomain.com` (for local-only installs, you can use `privatecaptcha.local`)
 - Transactional email provider with SMTP credentials (required for production)
 - At least 2GB of RAM
 
@@ -22,10 +22,10 @@ cd private-captcha
 
 **Option 1.** Use bootstrap script (_recommended_)
 
-Run bootstrap script and pass the domain name (without domain name will use `localhost:8080`):
+Run bootstrap script and pass the domain name (without arguments will use `localhost:8080`):
 
 ```bash
-./bootstrap-env.sh > .env
+./bootstrap-env.sh mydomain.com > .env
 $EDITOR .env
 ```
 **Option 2.** Use example files
@@ -37,7 +37,7 @@ cp .env.prod.example .env
 $EDITOR .env
 ```
 
-The difference from bootstrap script option is that you will need to generate random strings yourself.
+The difference from bootstrap script option is that you will need to set values for most environment variables yourself.
 
 **Notes**
 
@@ -52,11 +52,11 @@ You can find full documentation on these and other _required_ environment variab
 
 {{% details title="Tips for local use" closed="true" %}}
 
-To run Private Captcha _only_ locally, use `.env.local.example` instead of `.env.prod.example`. After startup, open `http://localhost:8080/portal` URL in browser and log in with `admin@privatecaptcha.local` email.
+To run Private Captcha _only_ locally, don't pass any arguments to the bootstrap script (or use `.env.local.example` instead of `.env.prod.example`). After the startup, open `http://localhost:8080/portal` URL in browser and log in with `admin@privatecaptcha.local` email.
 
 > NOTE: email with `.local` domain is **not** a valid RFC-5322 address, so for 2FA code (required for login) cannot be sent and you will need to find "two factor code" from docker logs manually
 
-The difference between prod and local setup is mostly that prod is designed to run on 3 separate subdomains (`api.`, `cdn.` and `portal.`) for flexibility. You can easily emulate this locally too if you add a few lines to `/etc/hosts` file:
+The difference between prod and local setup is mostly that **prod** is designed to run on 3 separate subdomains (`api.`, `cdn.` and `portal.`) for flexibility. You can easily emulate this locally too if you add a few lines to `/etc/hosts` file and use `privatecaptcha.local` as a domain:
 
 ```
 127.0.0.1       portal.privatecaptcha.local
@@ -98,7 +98,7 @@ docker compose up
 
 ## 4. Navigate to the Portal
 
-Now you can open `$PC_PORTAL_BASE_URL` (e.g. `portal.yourdomain.com` or http://portal.privatecaptcha.local:8080) in browser and log in.
+Now you can open `$PC_PORTAL_BASE_URL` (e.g. `portal.mydomain.com` or `http://localhost:8080/portal`) in browser and log in.
 
 > NOTE: For local-only use, when asked for a verification code, you might need to find it in the logs of `privatecaptcha` container. Search for "two factor code".
 

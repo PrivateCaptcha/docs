@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Private Captcha</title>
-  <meta name="description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (required for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/deployment/quickstart/" itemprop="url" />
+  <meta name="description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name mydomain.com (for local-only installs, you can use privatecaptcha.local) Transactional email provider with SMTP credentials (required for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/deployment/quickstart/" itemprop="url" />
 
 <meta property="og:title" content="">
 <meta
@@ -22,7 +22,7 @@ Docker installed
  
 
 (optional) Reverse proxy like Caddy or Nginx
-Domain name yourdomain.com (for local-only installs, use privatecaptcha.local)
+Domain name mydomain.com (for local-only installs, you can use privatecaptcha.local)
 Transactional email provider with SMTP credentials (required for production)
 At least 2GB of RAM
 
@@ -42,17 +42,17 @@ At least 2GB of RAM
 
 <meta
   property="article:modified_time"
-  content="2026-07-16T11:30:01+03:00">
+  content="2026-07-16T11:41:27+03:00">
 
 
 
 	<meta itemprop="name" content="Private Captcha">
-	<meta itemprop="description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (required for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.">
-	<meta itemprop="dateModified" content="2026-07-16T11:30:01+03:00">
-	<meta itemprop="wordCount" content="484">
+	<meta itemprop="description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name mydomain.com (for local-only installs, you can use privatecaptcha.local) Transactional email provider with SMTP credentials (required for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.">
+	<meta itemprop="dateModified" content="2026-07-16T11:41:27+03:00">
+	<meta itemprop="wordCount" content="504">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Private Captcha">
-	<meta name="twitter:description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (required for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.">
+	<meta name="twitter:description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name mydomain.com (for local-only installs, you can use privatecaptcha.local) Transactional email provider with SMTP credentials (required for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.">
 
     <link rel="preload" href="/css/compiled/main.min.5b15fe4b28a16db5bda4d29114d74af1d4a88556805703e17cc7e2914494a6aa.css" as="style" integrity="sha256-WxX&#43;SyihbbW9pNKRFNdK8dSohVaAVwPhfMfikUSUpqo=" />
     <link href="/css/compiled/main.min.5b15fe4b28a16db5bda4d29114d74af1d4a88556805703e17cc7e2914494a6aa.css" rel="stylesheet" integrity="sha256-WxX&#43;SyihbbW9pNKRFNdK8dSohVaAVwPhfMfikUSUpqo=" />
@@ -1049,7 +1049,7 @@ At least 2GB of RAM
  <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a></li>
 <li>(optional) Reverse proxy like Caddy or Nginx</li>
-<li>Domain name <code>yourdomain.com</code> (for local-only installs, use <code>privatecaptcha.local</code>)</li>
+<li>Domain name <code>mydomain.com</code> (for local-only installs, you can use <code>privatecaptcha.local</code>)</li>
 <li>Transactional email provider with SMTP credentials (required for production)</li>
 <li>At least 2GB of RAM</li>
 </ul>
@@ -1074,10 +1074,10 @@ At least 2GB of RAM
 </div>
 <h2>2. Create <code>.env</code> file<span class="hx:absolute hx:-mt-20" id="2-create-env-file"></span>
     <a href="#2-create-env-file" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>Option 1.</strong> Use bootstrap script (<em>recommended</em>)</p>
-<p>Run bootstrap script and pass the domain name (without domain name will use <code>localhost:8080</code>):</p>
+<p>Run bootstrap script and pass the domain name (without arguments will use <code>localhost:8080</code>):</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./bootstrap-env.sh &gt; .env
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./bootstrap-env.sh mydomain.com &gt; .env
 </span></span><span class="line"><span class="cl"><span class="nv">$EDITOR</span> .env</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
@@ -1107,7 +1107,7 @@ At least 2GB of RAM
   </button>
 </div>
 </div>
-<p>The difference from bootstrap script option is that you will need to generate random strings yourself.</p>
+<p>The difference from bootstrap script option is that you will need to set values for most environment variables yourself.</p>
 <p><strong>Notes</strong></p>
 <p>Some notes on environment variables:</p>
 <ul>
@@ -1122,11 +1122,11 @@ At least 2GB of RAM
     <strong class="hx:text-lg">Tips for local use</strong>
   </summary>
   <div class="hx:p-2 hx:overflow-hidden">
-    <p>To run Private Captcha <em>only</em> locally, use <code>.env.local.example</code> instead of <code>.env.prod.example</code>. After startup, open <code>http://localhost:8080/portal</code> URL in browser and log in with <code>admin@privatecaptcha.local</code> email.</p>
+    <p>To run Private Captcha <em>only</em> locally, don&rsquo;t pass any arguments to the bootstrap script (or use <code>.env.local.example</code> instead of <code>.env.prod.example</code>). After the startup, open <code>http://localhost:8080/portal</code> URL in browser and log in with <code>admin@privatecaptcha.local</code> email.</p>
 <blockquote>
   <p>NOTE: email with <code>.local</code> domain is <strong>not</strong> a valid RFC-5322 address, so for 2FA code (required for login) cannot be sent and you will need to find &ldquo;two factor code&rdquo; from docker logs manually</p>
 </blockquote>
-<p>The difference between prod and local setup is mostly that prod is designed to run on 3 separate subdomains (<code>api.</code>, <code>cdn.</code> and <code>portal.</code>) for flexibility. You can easily emulate this locally too if you add a few lines to <code>/etc/hosts</code> file:</p>
+<p>The difference between prod and local setup is mostly that <strong>prod</strong> is designed to run on 3 separate subdomains (<code>api.</code>, <code>cdn.</code> and <code>portal.</code>) for flexibility. You can easily emulate this locally too if you add a few lines to <code>/etc/hosts</code> file and use <code>privatecaptcha.local</code> as a domain:</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 <div><pre><code>127.0.0.1       portal.privatecaptcha.local
 127.0.0.1       api.privatecaptcha.local
@@ -1202,9 +1202,7 @@ At least 2GB of RAM
 </div>
 </div>
 <h2>4. Navigate to the Portal<span class="hx:absolute hx:-mt-20" id="4-navigate-to-the-portal"></span>
-    <a href="#4-navigate-to-the-portal" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Now you can open <code>$PC_PORTAL_BASE_URL</code> (e.g. <code>portal.yourdomain.com</code> or <a href="http://portal.privatecaptcha.local:8080"target="_blank" rel="noopener">http://portal.privatecaptcha.local:8080<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
- <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></a>) in browser and log in.</p>
+    <a href="#4-navigate-to-the-portal" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Now you can open <code>$PC_PORTAL_BASE_URL</code> (e.g. <code>portal.mydomain.com</code> or <code>http://localhost:8080/portal</code>) in browser and log in.</p>
 <blockquote>
   <p>NOTE: For local-only use, when asked for a verification code, you might need to find it in the logs of <code>privatecaptcha</code> container. Search for &ldquo;two factor code&rdquo;.</p>
 
@@ -1230,7 +1228,7 @@ At least 2GB of RAM
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-07-16T11:30:01.000Z">July 16, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-07-16T11:41:27.000Z">July 16, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/production/"
         title="Production use"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
