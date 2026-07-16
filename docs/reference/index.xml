@@ -912,6 +912,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;page&lt;/code&gt;: Page number (optional)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;per_page&lt;/code&gt;: Items per page (optional, max 50)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sort&lt;/code&gt;: Sort order (&lt;code&gt;date_asc&lt;/code&gt; - &lt;em&gt;default&lt;/em&gt;, &lt;code&gt;date_desc&lt;/code&gt;, &lt;code&gt;name_asc&lt;/code&gt;, &lt;code&gt;name_desc&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Output:&lt;/strong&gt; Array of objects containing &lt;code&gt;id&lt;/code&gt;, &lt;code&gt;name&lt;/code&gt;, and &lt;code&gt;sitekey&lt;/code&gt;.&lt;/li&gt;

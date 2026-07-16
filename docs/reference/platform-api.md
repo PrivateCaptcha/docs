@@ -269,6 +269,7 @@ Lists properties associated with a specific organization. This endpoint supports
 * **Query Parameters:**
     * `page`: Page number (optional)
     * `per_page`: Items per page (optional, max 50)
+    * `sort`: Sort order (`date_asc` - _default_, `date_desc`, `name_asc`, `name_desc`)
 * **Output:** Array of objects containing `id`, `name`, and `sitekey`.
 
 {{< tabs items="Request,Response" >}}

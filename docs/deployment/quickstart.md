@@ -20,12 +20,24 @@ cd private-captcha
 
 ## 2. Create `.env` file
 
-Copy sample environment variables and set all required ones.
+**Option 1.** Use bootstrap script
+
+Run bootstrap script and pass the domain name (without domain name will use `localhost:8080`):
+
+```bash
+./bootstrap-env.sh > .env
+$EDITOR .env
+```
+**Option 2.** Use example files
+
+Copy sample environment files (separate for prod or local use) and set or change the required ones:
 
 ```bash
 cp .env.prod.example .env
 $EDITOR .env
 ```
+
+**Notes**
 
 Some notes on environment variables:
 

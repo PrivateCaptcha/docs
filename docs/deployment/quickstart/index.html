@@ -42,14 +42,14 @@ At least 2GB of RAM
 
 <meta
   property="article:modified_time"
-  content="2026-05-13T13:59:06+02:00">
+  content="2026-07-16T11:28:35+03:00">
 
 
 
 	<meta itemprop="name" content="Private Captcha">
 	<meta itemprop="description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (required for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.">
-	<meta itemprop="dateModified" content="2026-05-13T13:59:06+02:00">
-	<meta itemprop="wordCount" content="429">
+	<meta itemprop="dateModified" content="2026-07-16T11:28:35+03:00">
+	<meta itemprop="wordCount" content="467">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Private Captcha">
 	<meta name="twitter:description" content="Quick startPrerequisites Docker installed (optional) Reverse proxy like Caddy or Nginx Domain name yourdomain.com (for local-only installs, use privatecaptcha.local) Transactional email provider with SMTP credentials (required for production) At least 2GB of RAM 1. Clone the self-hosting repo Self-hosting repository contains a Docker-based quickstart template.">
@@ -1073,7 +1073,25 @@ At least 2GB of RAM
 </div>
 </div>
 <h2>2. Create <code>.env</code> file<span class="hx:absolute hx:-mt-20" id="2-create-env-file"></span>
-    <a href="#2-create-env-file" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Copy sample environment variables and set all required ones.</p>
+    <a href="#2-create-env-file" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>Option 1.</strong> Use bootstrap script</p>
+<p>Run bootstrap script and pass the domain name (without domain name will use <code>localhost:8080</code>):</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./bootstrap-env.sh &gt; .env
+</span></span><span class="line"><span class="cl"><span class="nv">$EDITOR</span> .env</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Option 2.</strong> Use example files</p>
+<p>Copy sample environment files (separate for prod or local use) and set or change the required ones:</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp .env.prod.example .env
@@ -1089,6 +1107,7 @@ At least 2GB of RAM
   </button>
 </div>
 </div>
+<p><strong>Notes</strong></p>
 <p>Some notes on environment variables:</p>
 <ul>
 <li><a href="/docs/deployment/production/">In production</a> Private Captcha assumes to run on 3 subdomains: <code>api.</code>, <code>cdn.</code> and <code>portal.</code> for configuration flexibility (this is not required, but recommended).</li>
@@ -1210,7 +1229,7 @@ At least 2GB of RAM
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-05-13T13:59:06.000Z">May 13, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-07-16T11:28:35.000Z">July 16, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/production/"
         title="Production use"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
