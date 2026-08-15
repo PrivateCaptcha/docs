@@ -3,6 +3,10 @@ title: "Changelog"
 date: 2026-03-19T08:43:58+01:00
 ---
 
+## v1.41.0 - 2026-08-14
+
+- Multiple bugfixes (mostly security-related)
+
 ## v1.38.0 - 2026-07-05
 
 - Complete redesign (to match main website theme)
