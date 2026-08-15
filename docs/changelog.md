@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.41.0 - 2026-08-14
+
+- Multiple bugfixes (mostly security-related)
+
 ## v1.38.0 - 2026-07-05
 
 - Complete redesign (to match main website theme)
