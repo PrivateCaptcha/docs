@@ -144,7 +144,7 @@ Rules are always applied top to bottom (both for properties and organizations). 
 ### Organization vs Property
 
 > [!WARNING]
-> Property-level rules will be applied to the request **after** Organization rules.
+> Property-level rules will be applied to the request **before** Organization rules. If you want to prevent Organization rules to be applied, select _"Stop processing following rules"_ in Property rule.
 
 All rules defined on the Organization level will apply to all properties in that organization. This is a very convenient way to manage rules of many properties at once.
 
