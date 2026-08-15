@@ -36,9 +36,11 @@ You can also verify puzzle solutions against the same configured domain, but, on
 
 {{% steps %}}
 
-### Add a new DNS record
+### Add new DNS records
 
-With your DNS provider, setup a CNAME record for the chosen domain/subdomain to point to `api.privatecaptcha.com` (also possible to choose [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}}) endpoint `api.eu.privatecaptcha.com`).
+With your domain name registar (or DNS provider), setup:
+1. a TXT record with a secret token to prove domain ownership.
+2. a CNAME record for the chosen domain/subdomain to point to `api.privatecaptcha.com` (also possible to choose [EU isolation]({{< relref "/docs/reference/eu-isolation.md" >}}) endpoint `api.eu.privatecaptcha.com`).
 
 Example with CloudFlare:
 
@@ -51,7 +53,7 @@ Example with CloudFlare:
 
 Go to the [Private Captcha Portal](https://portal.{{< domain >}}) and navigate to `Settings -> DNS Proxy`. Enter you domain and select the same endpoint (Global/EU) that you added in the previous step with your DNS provider.
 
-![DNS proxy setup in private captcha](/images/reference/dns-proxy-privatecaptcha.png "Enter your domain and select Global/EU endpoint")
+![DNS proxy setup in private captcha](/images/reference/dns-proxy-domain.png "Enter your domain and select Global/EU endpoint")
 
 ### Update widget snippet
 
