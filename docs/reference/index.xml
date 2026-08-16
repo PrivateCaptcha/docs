@@ -235,7 +235,7 @@
 &lt;/div&gt;
 &lt;p&gt;Match if browser version differs from the latest version by this much. Useful, because scrapers/bots frequently use outdated browsers.&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
-    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-browser-version.png&#34; title=&#34;Example: match browsers which are trailing latest release by more than 5 major versions&#34; alt=&#34;Difficulty rules structure&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-old-browser.png&#34; title=&#34;Example: match browsers which are trailing latest release by more than 5 major versions&#34; alt=&#34;Difficulty rules structure&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: match browsers which are trailing latest release by more than 5 major versions&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h4&gt;Always&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;always&#34;&gt;&lt;/span&gt;
