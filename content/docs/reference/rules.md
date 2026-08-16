@@ -96,7 +96,7 @@ Match if the request has (or has not) one of up to `10` comma-separated HTTP hea
 
 Match if browser version differs from the latest version by this much. Useful, because scrapers/bots frequently use outdated browsers.
 
-![Difficulty rules structure](/images/reference/difficulty-rule-browser-version.png "Example: match browsers which are trailing latest release by more than 5 major versions")
+![Difficulty rules structure](/images/reference/difficulty-rule-old-browser.png "Example: match browsers which are trailing latest release by more than 5 major versions")
 
 #### Always
 
