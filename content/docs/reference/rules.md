@@ -89,6 +89,15 @@ Match if the request has (or has not) one of up to `10` comma-separated HTTP hea
 
 ![Difficulty rules HTTP header](/images/reference/difficulty-rule-header.png "Example: match requests from Cloudflare Workers")
 
+#### Browser version
+
+> [!WARNING]
+> Browser version is parsed from `User-Agent` which is ultimately spoofable. So don't rely on it alone.
+
+Match if browser version differs from the latest version by this much. Useful, because scrapers/bots frequently use outdated browsers.
+
+![Difficulty rules structure](/images/reference/difficulty-rule-browser-version.png "Example: match browsers which are trailing latest release by more than 5 major versions")
+
 #### Always
 
 There's a simple "Always" condition that always matches all requests. For example, if you need to quickly apply a rule over the organization to all properties.
