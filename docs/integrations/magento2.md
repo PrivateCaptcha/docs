@@ -9,7 +9,7 @@ This is a **all-in-one** plugin for Magento 2 ("Adobe Commerce") that allows you
 
 ## Features
 
-- **Form Protection**: Customer Login, Registration, Forgot Password, Contact, Product Review, Send to Friend, Wishlist Share, Orders & Returns
+- **Form Protection**: most standard store forms (see [below](#supported-forms))
 - **Flexible Configuration**: Theme, language, start mode, and custom styling options
 - **EU Compliance**: Support for EU-only endpoints and custom domains
 
@@ -28,7 +28,7 @@ Enter name and domain of your Magento website e.g. `mydomain.com` and _"My Magen
 > [!WARNING]
 > Domain of the property should **exactly** match your Magento website domain.
 
-![Enter name and domain](/images/integrations/new-wordpress-site.png)
+![Enter name and domain](/images/integrations/new-magento-site.png)
 
 ### Note Sitekey of the property
 
@@ -40,7 +40,7 @@ Open _"Integrations"_ tab and note the **Sitekey** of the property you just crea
 
 Go to [API key settings](https://portal.{{< domain >}}/settings?tab=apikeys) and click _"Create new key"_. Give it some meaningful name, like _"Magento API key"_ and select the scope `Captcha verification`.
 
-![Create a new API key](/images/integrations/new-api-key-scope-org.png "Make sure to select scope 'Captcha verification'")
+![Create a new API key](/images/integrations/new-magento-api-key.png "Make sure to select scope 'Captcha verification'")
 
 Copy API key value to your password manager to temporarily save it (note the expiration time you selected when creating above).
 
