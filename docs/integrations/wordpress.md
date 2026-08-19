@@ -120,5 +120,5 @@ Possible reasons:
 ## Requirements
 
 - WordPress 5.6+
-- PHP 8.2+
+- PHP 8.1+
 - [Private Captcha account](https://portal.{{< domain >}}/signup)
