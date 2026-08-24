@@ -46,7 +46,7 @@ Condition and Action have different background colors in the list of rules and i
 
 <meta
   property="article:modified_time"
-  content="2026-08-16T15:57:26+03:00">
+  content="2026-08-24T10:23:25+03:00">
 
 
 
@@ -55,8 +55,8 @@ Condition and Action have different background colors in the list of rules and i
 Example of a couple of difficulty rules Building a Difficulty rule Difficulty rule consists of two parts: Condition and Action.
 Structure of the difficulty rule Condition and Action have different background colors in the list of rules and in the rule builder.">
 	<meta itemprop="datePublished" content="2026-03-15T12:40:53+01:00">
-	<meta itemprop="dateModified" content="2026-08-16T15:57:26+03:00">
-	<meta itemprop="wordCount" content="971">
+	<meta itemprop="dateModified" content="2026-08-24T10:23:25+03:00">
+	<meta itemprop="wordCount" content="967">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Difficulty rules">
 	<meta name="twitter:description" content="Difficulty rules is a system of custom modifiers for CAPTCHA puzzle difficulty returned for the end-user, based on various conditions.
@@ -1379,10 +1379,10 @@ Structure of the difficulty rule Condition and Action have different background 
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
-    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Property-level rules will be applied to the request <strong>before</strong> Organization rules. If you want to prevent Organization rules to be applied, select <em>&ldquo;Stop processing following rules&rdquo;</em> in Property rule.</p></div>
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Property-level rules will be applied to the request <strong>before</strong> Organization rules. Selecting <em>&ldquo;Stop processing following rules&rdquo;</em> in Property rule only applies to property-level rules.</p></div>
   </div>
 </div>
-<p>All rules defined on the Organization level will apply to all properties in that organization. This is a very convenient way to manage rules of many properties at once.</p>
+<p>All rules defined on the Organization level will <strong>always</strong> apply to all properties in that organization. This is a very convenient way to manage rules of many properties at once.</p>
 <h3>Multiple applied rules<span class="hx:absolute hx:-mt-20" id="multiple-applied-rules"></span>
     <a href="#multiple-applied-rules" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>When the request is matched to a few rules and same action is applied (e.g. <code>Difficulty level</code> adjustment, but with different values), only last modification is preserved (aka <em>&ldquo;last-write wins&rdquo;</em>).</p>
 <h2>Reports<span class="hx:absolute hx:-mt-20" id="reports"></span>
@@ -1398,7 +1398,7 @@ Structure of the difficulty rule Condition and Action have different background 
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-08-16T15:57:26.000Z">August 16, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-08-24T10:23:25.000Z">August 24, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/form-proxy/"
         title="Form proxy"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
