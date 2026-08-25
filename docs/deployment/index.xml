@@ -15,6 +15,104 @@
     
     
     <item>
+      <title>VPS</title>
+      <link>https://docs.privatecaptcha.com/docs/deployment/vps/</link>
+      <pubDate>Tue, 25 Aug 2026 18:47:33 +0300</pubDate>
+      
+      <guid>https://docs.privatecaptcha.com/docs/deployment/vps/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Note that this is the setup &lt;strong&gt;for testing&lt;/strong&gt;. Production (and secure) use requires much more effort.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This guide covers &lt;strong&gt;basics&lt;/strong&gt; of deployment to a VPS (from providers like &lt;a href=&#34;https://www.hetzner.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hetzner&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; or &lt;a href=&#34;https://www.digitalocean.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Ocean&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;) of the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/quickstart/&#34;&gt;Docker-based setup&lt;/a&gt; only.&lt;/p&gt;
+&lt;p&gt;We will be using a ready-made &lt;a href=&#34;https://cloud-init.io/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cloud-init&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; config to deploy to Hetzner.&lt;/p&gt;
+&lt;h2&gt;Prerequisites&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;prerequisites&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#prerequisites&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;account with your VPS provider of choice (with payment method configured)&lt;/li&gt;
+&lt;li&gt;SMTP credentials&lt;/li&gt;
+&lt;li&gt;purchased domain name (e.g. &lt;code&gt;mydomain.com&lt;/code&gt;) and access to your DNS provider&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Steps&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;steps&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#steps&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]&#34;&gt;
+&lt;h3&gt;Create the cloud-init config&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-the-cloud-init-config&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#create-the-cloud-init-config&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Take our &lt;a href=&#34;https://github.com/PrivateCaptcha/self-hosting/blob/main/cloud-init/userdata&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;example config&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; as a starting point. It&amp;rsquo;s intentionally small enough so it&amp;rsquo;s easier to keep it in the head. Download the file and edit header to set your own domain name and (potentially) SMTP credentials.&lt;/p&gt;
+&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;It&amp;rsquo;s a great idea to read the config file line by line to understand what it will be doing.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you plan to run it in &lt;strong&gt;production&lt;/strong&gt;, you need to tighten it&amp;rsquo;s security, add monitoring, backups etc.&lt;/p&gt;
+&lt;h3&gt;Setup cloud-init when creating the VM&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup-cloud-init-when-creating-the-vm&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#setup-cloud-init-when-creating-the-vm&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;With your VPS provider of choice (we use Hetzner here as an example), configure a new VM (4GB / 2 vCPU should be enough to start).&lt;/p&gt;
+&lt;p&gt;In the section with &lt;code&gt;Cloud-init&lt;/code&gt; (aka &lt;em&gt;&amp;ldquo;User script&amp;rdquo;&lt;/em&gt;) paste the config you created before:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/hetzner-cloud-init.png&#34; alt=&#34;Hetzner cloud-init&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;Start the VM&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;start-the-vm&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#start-the-vm&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;That&amp;rsquo;s it, after you start the VM, the bootstrap script will download &lt;a href=&#34;https://github.com/PrivateCaptcha/self-hosting&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;self-hosting repository&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;, install few of the required packages, pull Docker images of Private Captcha server, Postgres and ClickHouse and setup the server.&lt;/p&gt;
+&lt;p&gt;You will have to login to the VM (possible without SSH via your VPS provider e.g. in Hetzner it&amp;rsquo;s &lt;em&gt;&amp;ldquo;Actions -&amp;gt; Console&amp;rdquo;&lt;/em&gt;) and check if everything is running correctly (e.g. &lt;code&gt;sudo systemctl status privatecaptcha&lt;/code&gt; and/or &lt;code&gt;docker ps&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Potentially at this stage you will go to &lt;code&gt;/opt/privatecaptcha&lt;/code&gt; and, as root, edit &lt;code&gt;.env&lt;/code&gt; file to setup various secrets or other &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/configuration/&#34;&gt;configuration&lt;/a&gt; such as your license key.&lt;/p&gt;
+&lt;h3&gt;Setup domain names&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup-domain-names&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#setup-domain-names&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After you will start the VM, you will get its IP address. Example from Hetzner:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/hetzner-ip.png&#34; alt=&#34;Hetzner IP address&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Using this IP address you can go to your DNS provider of choice and setup &lt;code&gt;portal.mydomain.com&lt;/code&gt;, &lt;code&gt;cdn.mydomain.com&lt;/code&gt; and &lt;code&gt;api.mydomain.com&lt;/code&gt; addresses as &lt;code&gt;A&lt;/code&gt; records, pointing to that IP:&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/bunny-dns-records.png&#34; title=&#34;Three new records in Bunny DNS dashboard&#34; alt=&#34;Add records in Bunny&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Three new records in Bunny DNS dashboard&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;After this Caddy will be able to provision the certificates and Private Captcha service will be fully functional.&lt;/p&gt;
+&lt;h3&gt;Open portal&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;open-portal&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#open-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Navigate to &lt;code&gt;https://portal.mydomain.com&lt;/code&gt; and login with &lt;code&gt;admin@mydomain.com&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/deployment/private-captcha-login.png&#34; alt=&#34;Portal login&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The definition of success is if you&amp;rsquo;re able to login. It will mean that admin user and portal domains were provisioned correctly, CAPTCHA puzzle was fetched and verified (from &lt;code&gt;api.&lt;/code&gt; subdomain), and SMTP credentails are working.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2&gt;Next steps&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;next-steps&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#next-steps&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Security&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;security&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#security&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Note that you should rather &lt;strong&gt;not&lt;/strong&gt; connect this VM directly to the internet, it&amp;rsquo;s better to use a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/bunny-cdn/&#34;&gt;CDN&lt;/a&gt; or a load-balancer in front of it.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;General information about securely running a server in production is out of scope of this article. But there&amp;rsquo;s &lt;strong&gt;a lot&lt;/strong&gt; that can be done on top of that cloud-init config.&lt;/p&gt;
+&lt;p&gt;Some information, specific to Private Captcha itself, can be found &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/production/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Monitoring&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;monitoring&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#monitoring&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;There&amp;rsquo;re plenty of services to check if your deployed service is working. In particular critical part is the &lt;code&gt;/puzzle&lt;/code&gt; and &lt;code&gt;/verify&lt;/code&gt; paths (as they are used by your captcha widgets and their dependents) - you can setup simple tests using the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/testing/&#34;&gt;test sitekey&lt;/a&gt; (you will still need to create a separate API key for monitoring).&lt;/p&gt;
+&lt;h3&gt;Backups&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;backups&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#backups&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Configuring backups (and monitoring them as well) is always a great idea, especially when done from day 1. With VPS it&amp;rsquo;s as easy as checking the checkbox in settings (note that this will backup the whole VM, and not the Private Captcha databases), which is not ideal but much better than no backups.&lt;/p&gt;
+&lt;h2&gt;Troubleshooting&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;troubleshooting&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#troubleshooting&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Cloud-init&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;cloud-init&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#cloud-init&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;If cloud-init script failed, you need to login to the VM and check last lines in &lt;code&gt;/var/log/cloud-init.log&lt;/code&gt; and &lt;code&gt;/var/log/cloud-init-output.log&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Private Captcha&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;private-captcha&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#private-captcha&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Typically, you will login to the VM and in the &lt;code&gt;/opt/privatecaptcha&lt;/code&gt; you will examine logs of various docker containers (starting with &lt;code&gt;docker compose logs privatecaptcha&lt;/code&gt;) and if the &lt;code&gt;.env&lt;/code&gt; file.&lt;/p&gt;
+&lt;h3&gt;Local test&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;local-test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#local-test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You can test almost the whole setup locally using &lt;a href=&#34;https://developer.hashicorp.com/vagrant&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vagrant&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;. Clone &lt;a href=&#34;https://github.com/PrivateCaptcha/self-hosting/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;self-hosting repo&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; and in the &lt;code&gt;cloud-init/&lt;/code&gt; directory run &lt;code&gt;vagrant up&lt;/code&gt; (note that to open portal, you will need to setup a few entries in the &lt;code&gt;/etc/hosts&lt;/code&gt; like &lt;code&gt;{portal,api,cdn}.privatecaptcha-vagrant.local&lt;/code&gt; for &lt;code&gt;127.0.0.1&lt;/code&gt;).&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Updating</title>
       <link>https://docs.privatecaptcha.com/docs/deployment/updating/</link>
       <pubDate>Thu, 13 Nov 2025 11:58:19 +0200</pubDate>
@@ -519,7 +617,11 @@
       <description>
         
         
-        &lt;h1&gt;Quick start&lt;/h1&gt;&lt;h2&gt;Prerequisites&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;prerequisites&#34;&gt;&lt;/span&gt;
+        &lt;h1&gt;Quick start&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;If you&amp;rsquo;re deploying to VPS, you might take a look at our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/vps/&#34;&gt;VPS guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+&lt;h2&gt;Prerequisites&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;prerequisites&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#prerequisites&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Docker &lt;a href=&#34;https://docs.docker.com/engine/install/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;installed&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
@@ -529,8 +631,10 @@
 &lt;li&gt;Transactional email provider with SMTP credentials (required for production)&lt;/li&gt;
 &lt;li&gt;At least 2GB of RAM&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;1. Clone the self-hosting repo&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-clone-the-self-hosting-repo&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#1-clone-the-self-hosting-repo&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/PrivateCaptcha/self-hosting&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Self-hosting repository&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;h2&gt;Steps&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;steps&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#steps&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]&#34;&gt;
+&lt;h3&gt;Clone the self-hosting repo&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;clone-the-self-hosting-repo&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#clone-the-self-hosting-repo&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/PrivateCaptcha/self-hosting&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Self-hosting repository&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; contains a Docker-based quickstart template.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
@@ -548,8 +652,8 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;2. Create &lt;code&gt;.env&lt;/code&gt; file&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2-create-env-file&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#2-create-env-file&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Option 1.&lt;/strong&gt; Use bootstrap script (&lt;em&gt;recommended&lt;/em&gt;)&lt;/p&gt;
+&lt;h3&gt;Create &lt;code&gt;.env&lt;/code&gt; file&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-env-file&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#create-env-file&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Option 1.&lt;/strong&gt; Use bootstrap script (&lt;em&gt;recommended&lt;/em&gt;)&lt;/p&gt;
 &lt;p&gt;Run bootstrap script and pass the domain name (without arguments will use &lt;code&gt;localhost:8080&lt;/code&gt;):&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -662,8 +766,8 @@
 &lt;/div&gt;
   &lt;/div&gt;
 &lt;/details&gt;
-&lt;h2&gt;3. Run the stack&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;3-run-the-stack&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#3-run-the-stack&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+&lt;h3&gt;Run the stack&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;run-the-stack&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#run-the-stack&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose up&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
@@ -677,12 +781,13 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;4. Navigate to the Portal&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4-navigate-to-the-portal&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4-navigate-to-the-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Now you can open &lt;code&gt;$PC_PORTAL_BASE_URL&lt;/code&gt; (e.g. &lt;code&gt;portal.mydomain.com&lt;/code&gt; or &lt;code&gt;http://localhost:8080/portal&lt;/code&gt;) in browser and log in.&lt;/p&gt;
+&lt;h3&gt;Navigate to the Portal&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;navigate-to-the-portal&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#navigate-to-the-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Now you can open &lt;code&gt;$PC_PORTAL_BASE_URL&lt;/code&gt; (e.g. &lt;code&gt;portal.mydomain.com&lt;/code&gt; or &lt;code&gt;http://localhost:8080/portal&lt;/code&gt;) in browser and log in.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;NOTE: For local-only use, when asked for a verification code, you might need to find it in the logs of &lt;code&gt;privatecaptcha&lt;/code&gt; container. Search for &amp;ldquo;two factor code&amp;rdquo;.&lt;/p&gt;
 
 &lt;/blockquote&gt;
+&lt;/div&gt;
 &lt;h2&gt;Next steps&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;next-steps&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#next-steps&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;How to go live, check this:&lt;/p&gt;
 &lt;div class=&#34;hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose&#34; style=&#34;--hextra-cards-grid-cols: 3;&#34;&gt;

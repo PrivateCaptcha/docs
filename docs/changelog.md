@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.42.1 - 2026-08-25
+
+- Difficulty rules for [stale browser version]({{< relref "docs/reference/rules.md#browser-version" >}}) detection
+- Reports tab for orgs
+- Weekly/Monthly reports now include protection highlights (bot attacks etc.)
+- [Magento 2]({{< relref "docs/integrations/magento2.md" >}}) added to the setup
+- Security-related minor bugfixes
+
 ## v1.41.0 - 2026-08-14
 
 - Multiple bugfixes (mostly security-related)
