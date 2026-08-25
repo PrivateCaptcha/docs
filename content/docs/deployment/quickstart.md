@@ -1,5 +1,7 @@
 # Quick start
 
+> If you're deploying to VPS, you might take a look at our [VPS guide]({{< relref "docs/deployment/vps.md" >}}).
+
 ## Prerequisites
 
 - Docker [installed](https://docs.docker.com/engine/install/)
@@ -8,7 +10,11 @@
 - Transactional email provider with SMTP credentials (required for production)
 - At least 2GB of RAM
 
-## 1. Clone the self-hosting repo
+## Steps
+
+{{% steps %}}
+
+### Clone the self-hosting repo
 
 [Self-hosting repository](https://github.com/PrivateCaptcha/self-hosting) contains a Docker-based quickstart template.
 
@@ -17,7 +23,7 @@ git clone https://github.com/PrivateCaptcha/self-hosting.git private-captcha
 cd private-captcha
 ```
 
-## 2. Create `.env` file
+### Create `.env` file
 
 **Option 1.** Use bootstrap script (_recommended_)
 
@@ -89,17 +95,19 @@ services:
 
 {{% /details %}}
 
-## 3. Run the stack
+### Run the stack
 
 ```bash
 docker compose up
 ```
 
-## 4. Navigate to the Portal
+### Navigate to the Portal
 
 Now you can open `$PC_PORTAL_BASE_URL` (e.g. `portal.mydomain.com` or `http://localhost:8080/portal`) in browser and log in.
 
 > NOTE: For local-only use, when asked for a verification code, you might need to find it in the logs of `privatecaptcha` container. Search for "two factor code".
+
+{{% /steps %}}
 
 ## Next steps
 
