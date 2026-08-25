@@ -9,4 +9,6 @@ Information related to self-hosting topics.
   {{< card link="/docs/deployment/configuration" title="Configuration" icon="cog" >}}
   {{< card link="/docs/deployment/production" title="Production use" icon="briefcase" >}}
   {{< card link="/docs/deployment/updating" title="Updating" icon="refresh" >}}
+  {{< card link="/docs/deployment/vps" title="VPS" icon="server" >}}
+  {{< card link="/docs/deployment/vps" title="Bunny CDN" icon="chevron-double-right" >}}
 {{< /cards >}}
