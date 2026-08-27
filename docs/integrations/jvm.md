@@ -1,4 +1,4 @@
-# Java
+# JVM
 
 {{< callout type="warning" icon="key" >}}
   To use this integration you need to [create an API key](https://portal.{{< domain >}}/settings?tab=apikeys) in your account.
