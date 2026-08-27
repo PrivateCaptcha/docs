@@ -1,6 +1,8 @@
 ---
-title: "Java"
+title: "JVM"
 date: 2026-01-25T18:47:05+02:00
+aliases:
+    - /docs/integrations/java/
 ---
 
 {{< callout type="warning" icon="key" >}}
