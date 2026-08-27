@@ -20,7 +20,7 @@ All server- and client-side integrations are _not_ code-generated from OpenAPI/S
   {{< card link="/docs/integrations/dotnet" title=".NET" subtitle="Server-side .NET/C# library" tag="Server-side" tagType="info" image="https://privatecaptcha.com/images/home/process/integrations/dotnet.svg" imageStyle="margin: 24px 24px 0; min-height: 100px; height: 100%;"  >}}
   {{< card link="/docs/integrations/ruby" title="Ruby" subtitle="Server-side Ruby library" tag="Server-side" tagType="info" image="https://privatecaptcha.com/images/home/process/integrations/ruby.svg" imageStyle="margin: 24px 24px 0; min-height: 100px; height: 100%;">}}
   {{< card link="/docs/integrations/javascript" title="JavaScript" subtitle="Server-side JavaScript library" tag="Server-side" tagType="info" image="https://privatecaptcha.com/images/home/process/integrations/javascript.svg" imageStyle="margin: 24px 24px 0; min-height: 100px; height: 100%;" >}}
-  {{< card link="/docs/integrations/java" title="Java" subtitle="Server-side Java library" tag="Server-side" tagType="info" image="https://privatecaptcha.com/images/home/process/integrations/java.svg" imageStyle="margin: 24px 24px 0; min-height: 100px; height: 100%;" >}}
+  {{< card link="/docs/integrations/java" title="JVM" subtitle="Server-side Java library" tag="Server-side" tagType="info" image="https://privatecaptcha.com/images/home/process/integrations/java.svg" imageStyle="margin: 24px 24px 0; min-height: 100px; height: 100%;" >}}
   {{< card link="/docs/integrations/openapi" title="OpenAPI" subtitle="OpenAPI/Swagger API definition" tag="Server-side" tagType="info" image="https://privatecaptcha.com/images/home/process/integrations/openapi.svg" imageStyle="margin: 24px 24px 0; min-height: 100px; height: 100%;" >}}
 {{< /cards >}}
 
