@@ -16,6 +16,8 @@ This is a **all-in-one** plugin for Magento 2 ("Adobe Commerce") that allows you
 - **Flexible Configuration**: Theme, language, start mode, and custom styling options
 - **EU Compliance**: Support for EU-only endpoints and custom domains
 
+Admin panel is available in English, German and French.
+
 ## Step-by-step setup guide
 
 {{% steps %}}
