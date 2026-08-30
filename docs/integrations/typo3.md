@@ -1,4 +1,4 @@
-# TYPO 3
+# TYPO3
 
 This is a **all-in-one** plugin for TYPO3 that allows you to configure _client-side_ captcha widget and _server-side_ verification.
 
