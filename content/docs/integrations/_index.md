@@ -13,7 +13,7 @@ All server- and client-side integrations are _not_ code-generated from OpenAPI/S
 {{< cards >}}
   {{< card link="/docs/integrations/wordpress" title="WordPress" subtitle="WordPress plugin" tag="All-in-one" tagType="debug" image="https://privatecaptcha.com/images/home/process/integrations/wordpress.svg" imageStyle="margin: 24px 24px 0; min-height: 60px; max-height: 80px; height: 100%;" >}}
   {{< card link="/docs/integrations/magento2" title="Magento 2" subtitle="Magento 2 plugin" tag="All-in-one" tagType="debug" image="https://privatecaptcha.com/images/home/process/integrations/magento.svg" imageStyle="margin: 24px 24px 0; min-height: 60px; max-height: 80px; height: 100%;" >}}
-  {{< card link="/docs/integrations/typo3" title="TYPO3" subtitle="TYPO3 plugin" tag="All-in-one" tagType="debug" image="https://privatecaptcha.com/images/home/process/integrations/typo3.svg" imageStyle="margin: 24px 24px 0; min-height: 60px; max-height: 80px; height: 100%;" >}}
+  {{< card link="/docs/integrations/typo3" title="TYPO3" subtitle="TYPO3 plugin" tag="All-in-one" tagType="debug" image="https://privatecaptcha.com/images/home/process/integrations/typo3.svg" imageStyle="margin: 24px 24px 0; min-height: 60px; max-height: 80px; height: 100%; object-fit: contain;" >}}
 {{< /cards >}}
 
 ## Backend
