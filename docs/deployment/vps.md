@@ -40,7 +40,8 @@ That's it, after you start the VM, the bootstrap script will download [self-host
 
 You will have to login to the VM (possible without SSH via your VPS provider e.g. in Hetzner it's _"Actions -> Console"_) and check if everything is running correctly (e.g. `sudo systemctl status privatecaptcha` and/or `docker ps`).
 
-Potentially at this stage you will go to `/opt/privatecaptcha` and, as root, edit `.env` file to setup various secrets or other [configuration]({{< relref "docs/deployment/configuration.md" >}}) such as your license key.
+> [!WARNING]
+> Sample `.env` config is **intentionally** minimal. You can go to `/opt/privatecaptcha` and, as root, edit `.env` file to setup various secrets or other [configuration]({{< relref "docs/deployment/configuration.md" >}}) such as your license key.
 
 ### Setup domain names
 
@@ -71,11 +72,17 @@ The definition of success is if you're able to login. It will mean that admin us
 > [!WARNING]
 > Note that you should rather **not** connect this VM directly to the internet, it's better to use a [CDN]({{< relref "docs/deployment/bunny-cdn.md" >}}) or a load-balancer in front of it.
 
-General information about securely running a server in production is out of scope of this article. But there's **a lot** that can be done on top of that cloud-init config.
+General information about securely running a server in production is well out of scope of this article. But there's **a lot** that can and should be done on top of that cloud-init config.
 
-Some information, specific to Private Captcha itself, can be found [here]({{< relref "docs/deployment/production.md" >}}).
+Some information, specific only to Private Captcha, can be found [here]({{< relref "docs/deployment/production.md" >}}).
 
 ### Monitoring
+
+#### Internal
+
+Private Captcha server exposes Prometheus metrics if `PC_LOCAL_ADDRESS` variable is set. You can monitor local metrics with a wide array of software (e.g. Netdata).
+
+#### External
 
 There're plenty of services to check if your deployed service is working. In particular critical part is the `/puzzle` and `/verify` paths (as they are used by your captcha widgets and their dependents) - you can setup simple tests using the [test sitekey]({{< relref "docs/reference/testing.md" >}}) (you will still need to create a separate API key for monitoring).
 

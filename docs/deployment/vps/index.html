@@ -46,7 +46,7 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner
 
 <meta
   property="article:modified_time"
-  content="2026-08-25T19:41:02+03:00">
+  content="2026-08-30T21:23:04+03:00">
 
 
 
@@ -55,8 +55,8 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner
 Note that this is the setup for testing. Production (and secure) use requires much more effort.
 This guide covers basics of deployment to a VPS (from providers like Hetzner or Digital Ocean ) of the Docker-based setup only.">
 	<meta itemprop="datePublished" content="2026-08-25T18:47:33+03:00">
-	<meta itemprop="dateModified" content="2026-08-25T19:41:02+03:00">
-	<meta itemprop="wordCount" content="697">
+	<meta itemprop="dateModified" content="2026-08-30T21:23:04+03:00">
+	<meta itemprop="wordCount" content="729">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="VPS">
 	<meta name="twitter:description" content="Warning
@@ -1094,6 +1094,14 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner or 
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#internal">Internal
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#external">External
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#backups">Backups
         </a>
       </li>
@@ -1249,7 +1257,13 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner or 
  <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a>, install few of the required packages, pull Docker images of Private Captcha server, Postgres and ClickHouse and setup the server.</p>
 <p>You will have to login to the VM (possible without SSH via your VPS provider e.g. in Hetzner it&rsquo;s <em>&ldquo;Actions -&gt; Console&rdquo;</em>) and check if everything is running correctly (e.g. <code>sudo systemctl status privatecaptcha</code> and/or <code>docker ps</code>).</p>
-<p>Potentially at this stage you will go to <code>/opt/privatecaptcha</code> and, as root, edit <code>.env</code> file to setup various secrets or other <a href="/docs/deployment/configuration/">configuration</a> such as your license key.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Sample <code>.env</code> config is <strong>intentionally</strong> minimal. You can go to <code>/opt/privatecaptcha</code> and, as root, edit <code>.env</code> file to setup various secrets or other <a href="/docs/deployment/configuration/">configuration</a> such as your license key.</p></div>
+  </div>
+</div>
 <h3>Setup domain names<span class="hx:absolute hx:-mt-20" id="setup-domain-names"></span>
     <a href="#setup-domain-names" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After you will start the VM, you will get its IP address. Example from Hetzner:</p>
 <p><img src="/images/deployment/hetzner-ip.png" alt="Hetzner IP address"  data-zoomable loading="lazy" /></p>
@@ -1273,10 +1287,13 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner or 
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Note that you should rather <strong>not</strong> connect this VM directly to the internet, it&rsquo;s better to use a <a href="/docs/deployment/bunny-cdn/">CDN</a> or a load-balancer in front of it.</p></div>
   </div>
 </div>
-<p>General information about securely running a server in production is out of scope of this article. But there&rsquo;s <strong>a lot</strong> that can be done on top of that cloud-init config.</p>
-<p>Some information, specific to Private Captcha itself, can be found <a href="/docs/deployment/production/">here</a>.</p>
+<p>General information about securely running a server in production is well out of scope of this article. But there&rsquo;s <strong>a lot</strong> that can and should be done on top of that cloud-init config.</p>
+<p>Some information, specific only to Private Captcha, can be found <a href="/docs/deployment/production/">here</a>.</p>
 <h3>Monitoring<span class="hx:absolute hx:-mt-20" id="monitoring"></span>
-    <a href="#monitoring" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>There&rsquo;re plenty of services to check if your deployed service is working. In particular critical part is the <code>/puzzle</code> and <code>/verify</code> paths (as they are used by your captcha widgets and their dependents) - you can setup simple tests using the <a href="/docs/reference/testing/">test sitekey</a> (you will still need to create a separate API key for monitoring).</p>
+    <a href="#monitoring" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>Internal<span class="hx:absolute hx:-mt-20" id="internal"></span>
+    <a href="#internal" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Private Captcha server exposes Prometheus metrics if <code>PC_LOCAL_ADDRESS</code> variable is set. You can monitor local metrics with a wide array of software (e.g. Netdata).</p>
+<h4>External<span class="hx:absolute hx:-mt-20" id="external"></span>
+    <a href="#external" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>There&rsquo;re plenty of services to check if your deployed service is working. In particular critical part is the <code>/puzzle</code> and <code>/verify</code> paths (as they are used by your captcha widgets and their dependents) - you can setup simple tests using the <a href="/docs/reference/testing/">test sitekey</a> (you will still need to create a separate API key for monitoring).</p>
 <h3>Backups<span class="hx:absolute hx:-mt-20" id="backups"></span>
     <a href="#backups" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Configuring backups (and monitoring them as well) is always a great idea, especially when done from day 1. With VPS it&rsquo;s as easy as checking the checkbox in settings (note that this will backup the whole VM, and not the Private Captcha databases), which is not ideal but much better than no backups.</p>
 <h2>Troubleshooting<span class="hx:absolute hx:-mt-20" id="troubleshooting"></span>
@@ -1294,7 +1311,7 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner or 
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-08-25T19:41:02.000Z">August 25, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-08-30T21:23:04.000Z">August 30, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/deployment/updating/"
         title="Updating"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
