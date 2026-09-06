@@ -45,9 +45,11 @@ sections:
 
       - question: I want to use the same sitekey on multiple domains
         answer: |
-          This scenario is not possible as it compromises security of Private Captcha solution, not to mention inherent problems like "noisy neighbor" (load of one domain affects the other domains puzzle difficulty).
+          You need to create a property/domain via our [Platform API](https://docs.privatecaptcha.com/docs/reference/platform-api/) only to achieve this.
 
-          Private Captcha allows to have the same sitekey on multiple [subdomains](/docs/reference/property-settings/#subdomains) only (which is also not recommended for the same reasons).
+          Be adviced, that this scenario compromises security of Private Captcha solution, not to mention inherent problems like "noisy neighbor" (load of one domain affects the other domains puzzle difficulty).
+
+          Private Captcha allows to have the same sitekey on multiple [subdomains](/docs/reference/property-settings/#subdomains), which is also not recommended for the same reasons.
 
       - question: Does WordPress integration support widget popup mode?
         answer: |
