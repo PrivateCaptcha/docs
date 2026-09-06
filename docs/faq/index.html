@@ -56,7 +56,7 @@ API
 This is a technical FAQ. If you’re looking for product FAQ, click here .
 API Captcha widget does not load the puzzle aka “Maximum number of attempts exceeded” error">
 	<meta itemprop="dateModified" content="2026-03-06T13:51:56+00:00">
-	<meta itemprop="wordCount" content="564">
+	<meta itemprop="wordCount" content="575">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="FAQ">
 	<meta name="twitter:description" content="Note
@@ -1238,8 +1238,11 @@ API Captcha widget does not load the puzzle aka “Maximum number of attempts ex
     <strong class="hx:text-lg">I want to use the same sitekey on multiple domains</strong>
   </summary>
   <div class="hx:p-2 hx:overflow-hidden">
-    <p>This scenario is not possible as it compromises security of Private Captcha solution, not to mention inherent problems like &ldquo;noisy neighbor&rdquo; (load of one domain affects the other domains puzzle difficulty).</p>
-<p>Private Captcha allows to have the same sitekey on multiple <a href="/docs/reference/property-settings/#subdomains">subdomains</a> only (which is also not recommended for the same reasons).</p>
+    <p>You need to create a property/domain via our <a href="https://docs.privatecaptcha.com/docs/reference/platform-api/"target="_blank" rel="noopener">Platform API<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a> only to achieve this.</p>
+<p>Be adviced, that this scenario compromises security of Private Captcha solution, not to mention inherent problems like &ldquo;noisy neighbor&rdquo; (load of one domain affects the other domains puzzle difficulty).</p>
+<p>Private Captcha allows to have the same sitekey on multiple <a href="/docs/reference/property-settings/#subdomains">subdomains</a>, which is also not recommended for the same reasons.</p>
   </div>
 </details>
 <details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >

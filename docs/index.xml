@@ -217,8 +217,11 @@
     &lt;strong class=&#34;hx:text-lg&#34;&gt;I want to use the same sitekey on multiple domains&lt;/strong&gt;
   &lt;/summary&gt;
   &lt;div class=&#34;hx:p-2 hx:overflow-hidden&#34;&gt;
-    &lt;p&gt;This scenario is not possible as it compromises security of Private Captcha solution, not to mention inherent problems like &amp;ldquo;noisy neighbor&amp;rdquo; (load of one domain affects the other domains puzzle difficulty).&lt;/p&gt;
-&lt;p&gt;Private Captcha allows to have the same sitekey on multiple &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings/#subdomains&#34;&gt;subdomains&lt;/a&gt; only (which is also not recommended for the same reasons).&lt;/p&gt;
+    &lt;p&gt;You need to create a property/domain via our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/platform-api/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Platform API&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; only to achieve this.&lt;/p&gt;
+&lt;p&gt;Be adviced, that this scenario compromises security of Private Captcha solution, not to mention inherent problems like &amp;ldquo;noisy neighbor&amp;rdquo; (load of one domain affects the other domains puzzle difficulty).&lt;/p&gt;
+&lt;p&gt;Private Captcha allows to have the same sitekey on multiple &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings/#subdomains&#34;&gt;subdomains&lt;/a&gt;, which is also not recommended for the same reasons.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/details&gt;
 &lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
