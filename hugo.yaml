@@ -58,9 +58,12 @@ menu:
       params:
         type: separator
       weight: 1
+    - name: "Create an account ↗"
+      url: "https://portal.privatecaptcha.com/signup"
+      weight: 2
     - name: "Status ↗"
       url: "https://status.privatecaptcha.com"
-      weight: 2
+      weight: 3
 
 params:
   displayUpdatedDate: true
