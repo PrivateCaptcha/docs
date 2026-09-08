@@ -141,6 +141,10 @@ html:not(.dark) .hextra-card:hover, .hextra-feature-card:has(img):hover {
     border-radius: 2px;
 }
 
+.content code:not(.code-block code) {
+    border-radius: 2px;
+}
+
 .hextra-code-block .hextra-code-filename {
     border-radius: 2px 2px 0 0;
 }
