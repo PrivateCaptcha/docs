@@ -49,14 +49,16 @@ All API responses follow a standard JSON structure containing `meta`, `data`, an
 
 ### Status codes
 
-Common status codes:
+{{% details title="Common status codes (10xx)" closed="true" %}}
 
 | Code | Description |
 | ---- | ----------- |
 | 1000 | OK          |
 | 1001 | Failure     |
 
-Organization management status codes:
+{{% /details %}}
+
+{{% details title="Organization management status codes (11xx)" closed="true" %}}
 
 | Code | Description                                                                      |
 | ---- | -------------------------------------------------------------------------------- |
@@ -71,7 +73,9 @@ Organization management status codes:
 | 1108 | Organization ID must not be empty.                                               |
 | 1109 | Organization ID is not valid.                                                    |
 
-Property management status codes:
+{{% /details %}}
+
+{{% details title="Property management status codes (12xx)" closed="true" %}}
 
 | Code | Description                                  |
 | ---- | -------------------------------------------- |
@@ -91,13 +95,17 @@ Property management status codes:
 | 1213 | Duplicate property ID found in request.      |
 | 1214 | Insufficient permissions to update settings. |
 
-Subscription status codes:
+{{% /details %}}
+
+{{% details title="Subscription status codes (13xx)" closed="true" %}}
 
 | Code | Description                                           |
 | ---- | ----------------------------------------------------- |
 | 1300 | Property limit reached for current subscription plan. |
 
-Rule management status codes:
+{{% /details %}}
+
+{{% details title="Rule management status codes (14xx)" closed="true" %}}
 
 | Code | Description                                                                           |
 | ---- | ------------------------------------------------------------------------------------- |
@@ -129,7 +137,9 @@ Rule management status codes:
 | 1427 | Rule name can only contain letters, numbers, spaces, hyphens, and dots.               |
 | 1428 | Condition value is invalid.                                                           |
 
-Form management status codes:
+{{% /details %}}
+
+{{% details title="Form management status codes (15xx)" closed="true" %}}
 
 | Code | Description                            |
 | ---- | -------------------------------------- |
@@ -137,6 +147,8 @@ Form management status codes:
 | 1501 | Name is too long.                      |
 | 1502 | Form name contains invalid characters. |
 | 1503 | Form with this name already exists.    |
+
+{{% /details %}}
 
 ## Organizations
 
