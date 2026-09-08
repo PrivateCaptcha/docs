@@ -5,7 +5,9 @@
 
 This reference documentation describes the Portal API for Private Captcha, which allows for the management of organizations, properties, and asynchronous tasks.
 
+<div class="pc-callout">
 {{< callout type="warning" >}}If you are looking for an API to verify captcha challenges, see [Verify API]({{< relref "docs/reference/verify-api.md" >}}).{{</callout>}}
+</div>
 
 ## Authentication
 
@@ -402,7 +404,9 @@ curl -X GET https://api.privatecaptcha.com/org/vDWtASYqrB/property/0VgGggmbGa \
 {{< /tab >}}
 {{< /tabs >}}
 
+<div class="pc-callout">
 {{< callout type="info" >}}See also [Property Settings]({{< relref "docs/reference/property-settings.md" >}}) for details on each specific field.{{</ callout >}}
+</div>
 
 | Field | Type | Description |
 |---|---|---|

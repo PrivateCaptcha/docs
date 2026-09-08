@@ -1,8 +1,10 @@
 # Getting started
 
+<div class="pc-callout">
 {{< callout >}}
 If you're new to using CAPTCHAs in general, read our [quick explanation]({{< relref "docs/tutorials/captcha-basics.md" >}}) first.
 {{< /callout >}}
+</div>
 
 ## Prerequisites
 

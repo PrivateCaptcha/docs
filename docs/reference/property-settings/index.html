@@ -52,8 +52,8 @@ We’ll go through all property settings that you can change.">
 	<meta name="twitter:description" content="Protection of a website or a form starts with creating a property in the Portal . Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like aaaaaaaabbbbccccddddeeeeeeeeeeee. Site Key is used in the widget initialization.
 We’ll go through all property settings that you can change.">
 
-    <link rel="preload" href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" as="style" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
-    <link href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" rel="stylesheet" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
+    <link rel="preload" href="/css/compiled/main.min.2d4a85a8fd21fe2ff79bd0fdddce6d3f6e1732ba1b0c6109e89ea0da1e3f7b51.css" as="style" integrity="sha256-LUqFqP0h/i/3m9D93c5tP24XMrobDGEJ6J6g2h4/e1E=" />
+    <link href="/css/compiled/main.min.2d4a85a8fd21fe2ff79bd0fdddce6d3f6e1732ba1b0c6109e89ea0da1e3f7b51.css" rel="stylesheet" integrity="sha256-LUqFqP0h/i/3m9D93c5tP24XMrobDGEJ6J6g2h4/e1E=" />
 
   
 
@@ -1211,12 +1211,13 @@ We’ll go through all property settings that you can change.">
 <h3>Verification window<span class="hx:absolute hx:-mt-20" id="verification-window"></span>
     <a href="#verification-window" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Captcha challenges (or &ldquo;puzzles&rdquo;) have a validity period during which they can be &ldquo;solved&rdquo; and verified. You can set validity period from few minutes to a couple of days. If a CAPTCHA solution is checked outside of validity period, it&rsquo;s considered invalid.</p>
 <h3>Repeated solutions<span class="hx:absolute hx:-mt-20" id="repeated-solutions"></span>
-    <a href="#repeated-solutions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+    <a href="#repeated-solutions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>This is an advanced setting that allows to build different applications out of Private Captcha API.</p></div>
   </div>
+</div>
 </div>
 <p>By default you cannot submit a solution to the same CAPTCHA puzzle more than once. Second time it will be considered invalid. This is a protection against so called &ldquo;replay attack&rdquo;, where a malicious actor solves puzzle only once, but sends your form or accesses your page multiple times.</p>
 <p>However, there are cases when you want to allow this. One example if when Private Captcha is used as a proxy in front of your website, like in the use-case of AI scrapers protection (or API endpoints protection). In such case when the user requests a webpage with a valid solution (solved challenge/puzzle), we want to grant them access, up to a certain number of times.</p>

@@ -2,17 +2,23 @@
 
 ## Generic instructions
 
+<div class="pc-callout">
 {{< callout >}}
 Backward compatibility is kept on the level of public APIs of Private Captcha, not service configuration itself. It is your responsibility to check for any and all changes before applying updates.
 {{< /callout >}}
+</div>
 
+<div class="pc-callout">
 {{< callout type="info" >}}
 It is **not** recommended to use something like a ~~now-dead~~ [Watchtower](https://github.com/containrrr/watchtower) or any other solution that automatically bumps tag versions.
 {{< /callout >}}
+</div>
 
+<div class="pc-callout">
 {{< callout type="warning" >}}
   Before **each** update make sure to backup your data in case you're using any backup solutions.
 {{< /callout >}}
+</div>
 
 For this guide it is assumed you are using the [self-hosting repository](https://github.com/PrivateCaptcha/self-hosting) setup.
 
@@ -34,7 +40,9 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
     docker compose ps
     ```
 5. Perform all instructions below for each version between running version and the one you're about to upgrade to.
+    <div class="pc-callout">
     {{< callout >}}Changes in files to look out for: `compose.yml`, `.env.prod.example` {{< /callout >}}
+    </div>
 6. Recreate containers with new images
     ```bash
     docker compose up -d
@@ -42,9 +50,11 @@ For this guide it is assumed you are using the [self-hosting repository](https:/
 
 ## Notable deployment changes
 
+<div class="pc-callout">
 {{< callout type="info" >}}
 These are only deployment-specific changes. For general feature changelog, click [here]({{< relref "/docs/changelog.md" >}}).
 {{< /callout >}}
+</div>
 
 ### v1.38.0
 

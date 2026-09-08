@@ -25,6 +25,7 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner or 
     Note that this is the setup for testing. Production (and secure) use requires much more effort.
   
 
+
 This guide covers basics of deployment to a VPS (from providers like Hetzner
  
  or Digital Ocean
@@ -63,8 +64,8 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner or 
 Note that this is the setup for testing. Production (and secure) use requires much more effort.
 This guide covers basics of deployment to a VPS (from providers like Hetzner or Digital Ocean ) of the Docker-based setup only.">
 
-    <link rel="preload" href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" as="style" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
-    <link href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" rel="stylesheet" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
+    <link rel="preload" href="/css/compiled/main.min.2d4a85a8fd21fe2ff79bd0fdddce6d3f6e1732ba1b0c6109e89ea0da1e3f7b51.css" as="style" integrity="sha256-LUqFqP0h/i/3m9D93c5tP24XMrobDGEJ6J6g2h4/e1E=" />
+    <link href="/css/compiled/main.min.2d4a85a8fd21fe2ff79bd0fdddce6d3f6e1732ba1b0c6109e89ea0da1e3f7b51.css" rel="stylesheet" integrity="sha256-LUqFqP0h/i/3m9D93c5tP24XMrobDGEJ6J6g2h4/e1E=" />
 
   
 
@@ -1213,12 +1214,13 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner or 
     </div>
           </div>
           
-          <div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+          <div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Note that this is the setup <strong>for testing</strong>. Production (and secure) use requires much more effort.</p></div>
   </div>
+</div>
 </div>
 <p>This guide covers <strong>basics</strong> of deployment to a VPS (from providers like <a href="https://www.hetzner.com/"target="_blank" rel="noopener">Hetzner<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1240,12 +1242,13 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner or 
     <a href="#create-the-cloud-init-config" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Take our <a href="https://github.com/PrivateCaptcha/self-hosting/blob/main/cloud-init/userdata"target="_blank" rel="noopener">example config<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a> as a starting point. It&rsquo;s intentionally small enough so it&rsquo;s easier to keep it in the head. Download the file and edit header to set your own domain name and (potentially) SMTP credentials.</p>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+<div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>It&rsquo;s a great idea to read the config file line by line to understand what it will be doing.</p></div>
   </div>
+</div>
 </div>
 <p>If you plan to run it in <strong>production</strong>, you need to tighten it&rsquo;s security, add monitoring, backups etc.</p>
 <h3>Setup cloud-init when creating the VM<span class="hx:absolute hx:-mt-20" id="setup-cloud-init-when-creating-the-vm"></span>
@@ -1257,12 +1260,13 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner or 
  <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a>, install few of the required packages, pull Docker images of Private Captcha server, Postgres and ClickHouse and setup the server.</p>
 <p>You will have to login to the VM (possible without SSH via your VPS provider e.g. in Hetzner it&rsquo;s <em>&ldquo;Actions -&gt; Console&rdquo;</em>) and check if everything is running correctly (e.g. <code>sudo systemctl status privatecaptcha</code> and/or <code>docker ps</code>).</p>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+<div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Sample <code>.env</code> config is <strong>intentionally</strong> minimal. You can go to <code>/opt/privatecaptcha</code> and, as root, edit <code>.env</code> file to setup various secrets or other <a href="/docs/deployment/configuration/">configuration</a> such as your license key.</p></div>
   </div>
+</div>
 </div>
 <h3>Setup domain names<span class="hx:absolute hx:-mt-20" id="setup-domain-names"></span>
     <a href="#setup-domain-names" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After you will start the VM, you will get its IP address. Example from Hetzner:</p>
@@ -1280,12 +1284,13 @@ This guide covers basics of deployment to a VPS (from providers like Hetzner or 
 </div>
 <h2>Next steps<span class="hx:absolute hx:-mt-20" id="next-steps"></span>
     <a href="#next-steps" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Security<span class="hx:absolute hx:-mt-20" id="security"></span>
-    <a href="#security" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+    <a href="#security" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Note that you should rather <strong>not</strong> connect this VM directly to the internet, it&rsquo;s better to use a <a href="/docs/deployment/bunny-cdn/">CDN</a> or a load-balancer in front of it.</p></div>
   </div>
+</div>
 </div>
 <p>General information about securely running a server in production is well out of scope of this article. But there&rsquo;s <strong>a lot</strong> that can and should be done on top of that cloud-init config.</p>
 <p>Some information, specific only to Private Captcha, can be found <a href="/docs/deployment/production/">here</a>.</p>

@@ -29,9 +29,11 @@ Apply TYPO3's database schema update after installation. The extension adds the 
 
 ## Configuration
 
+<div class="pc-callout">
 {{< callout type="warning" icon="key" >}}
   To use this integration you need to [create an API key](https://portal.{{< domain >}}/settings?tab=apikeys) in your account.
 {{< /callout >}}
+</div>
 
 1. Sign in as a TYPO3 administrator and open **Site > Private Captcha**.
 2. Select a site, enter its API key and sitekey, choose integrations, and use **Save**.
@@ -74,9 +76,11 @@ Backend protection supports only TYPO3's native username/password provider. SSO,
 
 ### Powermail
 
+<div class="pc-callout">
 {{< callout type="warning" >}}
 Supported only on TYPO3 `^13.4` with Powermail `>=13.2,<14.0`. Other integrations remain available on TYPO3 14.
 {{< /callout >}}
+</div>
 
 The adapter registers automatically when compatible Powermail is active.
 

@@ -50,8 +50,8 @@ use a predefined (“dummy”) sitekey allow localhost access for main property 
 	<meta name="twitter:description" content="There’re 2 main ways how you can keep using Private Captcha for testing of your local website:
 use a predefined (“dummy”) sitekey allow localhost access for main property in Settings in portal Testing with predefined sitekey Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a “dummy” sitekey (aka “test property”): aaaaaaaabbbbccccddddeeeeeeeeeeee. This sitekey does not incur any actual solving “price” (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using data-start-mode=&#34;auto&#34; (in which case parent form needs to gain focus).">
 
-    <link rel="preload" href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" as="style" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
-    <link href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" rel="stylesheet" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
+    <link rel="preload" href="/css/compiled/main.min.2d4a85a8fd21fe2ff79bd0fdddce6d3f6e1732ba1b0c6109e89ea0da1e3f7b51.css" as="style" integrity="sha256-LUqFqP0h/i/3m9D93c5tP24XMrobDGEJ6J6g2h4/e1E=" />
+    <link href="/css/compiled/main.min.2d4a85a8fd21fe2ff79bd0fdddce6d3f6e1732ba1b0c6109e89ea0da1e3f7b51.css" rel="stylesheet" integrity="sha256-LUqFqP0h/i/3m9D93c5tP24XMrobDGEJ6J6g2h4/e1E=" />
 
   
 
@@ -1212,12 +1212,13 @@ function invisibleFinished(widget) {
   </button>
 </div>
 </div>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+<div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Widget will show red <code>&quot;testing&quot;</code> text to highlight that it&rsquo;s not for production use once you click it.</p></div>
   </div>
+</div>
 </div>
 <form class="pc-form" style="">
     <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
@@ -1271,12 +1272,13 @@ function invisibleFinished(widget) {
   </div>
 </details>
 <h2>Testing with localhost access<span class="hx:absolute hx:-mt-20" id="testing-with-localhost-access"></span>
-    <a href="#testing-with-localhost-access" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+    <a href="#testing-with-localhost-access" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Captcha has a strict CORS policy and, by default, it will load <strong>only</strong> on the domain configured during property creation. Subdomains and <code>localhost</code> access needs to be explicitly allowed.</p></div>
   </div>
+</div>
 </div>
 <p>In order to make captcha widget to load on <code>localhost</code> domain, we need to allow it in the settings of the property you just created.</p>
 <p><img src="/images/tutorials/e2e-local/allow-localhost.png" alt="Allow localhost domain"  data-zoomable loading="lazy" /></p>

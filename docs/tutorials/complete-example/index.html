@@ -17,11 +17,13 @@
   content="
     
       
+
   
 
   
     If you&rsquo;re new to using CAPTCHAs in general, read our quick explanation first.
   
+
 
 
 In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer (meaning, you don&rsquo;t have to have a running server in the cloud).
@@ -37,20 +39,20 @@ In this tutorial we will create a simple html form, serve it locally with a simp
 
 <meta
   property="article:modified_time"
-  content="2026-03-14T20:44:51+01:00">
+  content="2026-09-08T15:41:57+03:00">
 
 
 
 	<meta itemprop="name" content="Complete example">
 	<meta itemprop="description" content="If you’re new to using CAPTCHAs in general, read our quick explanation first. In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer (meaning, you don’t have to have a running server in the cloud).">
-	<meta itemprop="dateModified" content="2026-03-14T20:44:51+01:00">
+	<meta itemprop="dateModified" content="2026-09-08T15:41:57+03:00">
 	<meta itemprop="wordCount" content="1524">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Complete example">
 	<meta name="twitter:description" content="If you’re new to using CAPTCHAs in general, read our quick explanation first. In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer (meaning, you don’t have to have a running server in the cloud).">
 
-    <link rel="preload" href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" as="style" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
-    <link href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" rel="stylesheet" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
+    <link rel="preload" href="/css/compiled/main.min.2d4a85a8fd21fe2ff79bd0fdddce6d3f6e1732ba1b0c6109e89ea0da1e3f7b51.css" as="style" integrity="sha256-LUqFqP0h/i/3m9D93c5tP24XMrobDGEJ6J6g2h4/e1E=" />
+    <link href="/css/compiled/main.min.2d4a85a8fd21fe2ff79bd0fdddce6d3f6e1732ba1b0c6109e89ea0da1e3f7b51.css" rel="stylesheet" integrity="sha256-LUqFqP0h/i/3m9D93c5tP24XMrobDGEJ6J6g2h4/e1E=" />
 
   
 
@@ -1206,7 +1208,8 @@ In this tutorial we will create a simple html form, serve it locally with a simp
     </div>
           </div>
           
-          <div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200">
+          <div class="pc-callout">
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200">
   <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
@@ -1214,13 +1217,15 @@ In this tutorial we will create a simple html form, serve it locally with a simp
   </div>
 </div>
 
+</div>
 <p>In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer (meaning, you don&rsquo;t have to have a running server in the cloud).</p>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+<div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>For transparency, in this tutorial everything is implemented from scratch, but in production one would typically use our <a href="/docs/integrations/">existing integrations</a>.</p></div>
   </div>
+</div>
 </div>
 <h2>Basic webpage and server<span class="hx:absolute hx:-mt-20" id="basic-webpage-and-server"></span>
     <a href="#basic-webpage-and-server" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-filetree hx:mt-6 hx:select-none hx:text-sm hx:text-gray-800 hx:dark:text-gray-300 not-prose">
@@ -1426,12 +1431,13 @@ In this tutorial we will create a simple html form, serve it locally with a simp
 <p><img src="/images/tutorials/e2e-local/snippet.png" alt="Integration snippet"  data-zoomable loading="lazy" /></p>
 <h3>Add captcha widget to the form<span class="hx:absolute hx:-mt-20" id="add-captcha-widget-to-the-form-1"></span>
     <a href="#add-captcha-widget-to-the-form-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To integrate the widget, we need to add javascript include for <code>privatecaptcha.js</code> and the widget itself to the form. You can get them from the integration snippet above.</p>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+<div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Make sure to use your own sitekey</p></div>
   </div>
+</div>
 </div>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -1461,12 +1467,13 @@ In this tutorial we will create a simple html form, serve it locally with a simp
 </div>
 <p>If you did everything correctly, when you refresh the page (and/or restart your server), you will see the captcha widget inside your form:</p>
 <p><img src="/images/tutorials/e2e-local/form-with-widget.png" alt="Captcha widget"  data-zoomable loading="lazy" /></p>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+<div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Captcha has a strict CORS policy and, by default, it will load <strong>only</strong> on the domain configured during property creation. Subdomains and <code>localhost</code> access needs to be explicitly allowed.</p></div>
   </div>
+</div>
 </div>
 <p>In order to make captcha widget to load on <code>localhost</code> domain, we need to allow it in the settings of the property you just created (this is <strong>not</strong> required if you used <code>ngrok</code> domain).</p>
 <p><img src="/images/tutorials/e2e-local/allow-localhost.png" alt="Allow localhost domain"  data-zoomable loading="lazy" /></p>
@@ -1579,19 +1586,21 @@ In this tutorial we will create a simple html form, serve it locally with a simp
 </div>
 </div>
 <p>To <a href="/docs/reference/verify-api/">verify solution</a> we need to send a <code>POST</code> request with the contents of this field to <code>/verify</code> endpoint and check the result. This is done in the server-side handler of the form.</p>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+<div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Warning</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Below we are using API directly only <strong>for demonstration</strong> purposes. Most likely you want to use of of the <a href="/docs/integrations/">integration SDKs</a> that are available for popular languages.</p></div>
   </div>
 </div>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+</div>
+<div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Make sure to use your own API key</p></div>
   </div>
+</div>
 </div>
 
 
@@ -1826,7 +1835,7 @@ In this tutorial we will create a simple html form, serve it locally with a simp
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-03-14T20:44:51.000Z">March 14, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-09-08T15:41:57.000Z">September 8, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/tutorials/migrate-from-recaptcha/"
         title="Migrate from reCAPTCHA"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"

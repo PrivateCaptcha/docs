@@ -48,8 +48,8 @@
 	<meta name="twitter:title" content="DNS proxy">
 	<meta name="twitter:description" content="It is possible for customers to use their own domains names (subdomains or vanity) with Private Captcha SaaS (at https://privatecaptcha.com ) services. For example, a customer may want to use a domain like captcha.customer.com to point to api.privatecaptcha.com so that captcha widget does not contact any other domains except of those of the customer. This is possible to achieve using DNS proxying (also known as “CNAME proxy”).">
 
-    <link rel="preload" href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" as="style" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
-    <link href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" rel="stylesheet" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
+    <link rel="preload" href="/css/compiled/main.min.2d4a85a8fd21fe2ff79bd0fdddce6d3f6e1732ba1b0c6109e89ea0da1e3f7b51.css" as="style" integrity="sha256-LUqFqP0h/i/3m9D93c5tP24XMrobDGEJ6J6g2h4/e1E=" />
+    <link href="/css/compiled/main.min.2d4a85a8fd21fe2ff79bd0fdddce6d3f6e1732ba1b0c6109e89ea0da1e3f7b51.css" rel="stylesheet" integrity="sha256-LUqFqP0h/i/3m9D93c5tP24XMrobDGEJ6J6g2h4/e1E=" />
 
   
 
@@ -1178,12 +1178,13 @@
           <p>It is possible for customers to use their own domains names (subdomains or vanity) with Private Captcha SaaS (at <a href="https://privatecaptcha.com"target="_blank" rel="noopener">https://privatecaptcha.com<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a>) services. For example, a customer may want to use a domain like <code>captcha.customer.com</code> to point to <code>api.privatecaptcha.com</code> so that captcha widget does not contact <em>any</em> other domains except of those of the customer. This is possible to achieve using DNS proxying (also known as <em>&ldquo;CNAME proxy&rdquo;</em>).</p>
-<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+<div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>This feature does not apply to the <a href="/docs/deployment/quickstart/">self-hosted</a> version, which <strong>always</strong> uses &ldquo;custom&rdquo; DNS.</p></div>
   </div>
+</div>
 </div>
 <h2>How it works<span class="hx:absolute hx:-mt-20" id="how-it-works"></span>
     <a href="#how-it-works" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>To make this setup work we need two DNS changes: one on customer side and one on Private Captcha SaaS side. Customer can point their own domains via domain name registar to <code>api.privatecaptcha.com</code> and we handle similar setup on our side. As a result, when end-user visits customer&rsquo;s website, all interaction with <code>*.privatecaptcha.com</code> domains is fully transparent to them.</p>
@@ -1219,12 +1220,13 @@
     <figcaption>In CloudFlare use &#39;DNS only&#39; record type</figcaption>
   </figure></p>
 <h3>Setup DNS proxy in Portal<span class="hx:absolute hx:-mt-20" id="setup-dns-proxy-in-portal"></span>
-    <a href="#setup-dns-proxy-in-portal" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+    <a href="#setup-dns-proxy-in-portal" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>&ldquo;DNS Proxy&rdquo; functionality requires to have an add-on purchased via the <code>Billing</code> settings.</p></div>
   </div>
+</div>
 </div>
 <p>Go to the <a href="https://portal.privatecaptcha.com"target="_blank" rel="noopener">Private Captcha Portal<svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1256,12 +1258,13 @@
 </div>
 </div>
 <h2>Testing<span class="hx:absolute hx:-mt-20" id="testing"></span>
-    <a href="#testing" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+    <a href="#testing" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="pc-alert"><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
   <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Note</p>
 
   <div class="hx:w-full hx:min-w-0 hx:leading-7">
     <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>DNS changes (on both sides!) can take up to 24 hours to propagate.</p></div>
   </div>
+</div>
 </div>
 <p>You can test this locally using a <a href="/docs/reference/testing/">test puzzle</a>:</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">

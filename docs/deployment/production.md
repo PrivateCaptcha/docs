@@ -2,9 +2,11 @@
 
 ## Updates
 
+<div class="pc-callout">
 {{< callout type="warning" >}}
   Before bumping docker tag you need to read [upgrade instructions]({{< relref "docs/deployment/updating.md" >}}) for each version.
 {{< /callout >}}
+</div>
 
 You should monitor updates (new docker tags) and update frequently. Updates are meant to be backwards compatible and bring fixes, including security. There currently is no built-in update notification mechanism.
 
@@ -14,9 +16,11 @@ Always check [upgrade instructions]({{< relref "docs/deployment/updating.md" >}}
 
 ## CDN integration
 
+<div class="pc-callout">
 {{< callout >}}
 All responses from Private Captcha server already contain correct `Cache-Control` headers so your only job is to make sure CDN/proxy respects them and does not override them.
 {{< /callout >}}
+</div>
 
 Private Captcha installation expects to be running on 3 subdomains (`cdn.`, `api.` and `portal.`) and it is meant to be behind a reverse proxy and/or CDN (in other words, not directly connected to the internet). It is expected to cache captcha script, portal assets (e.g. for emails) and test puzzle API requests on CDN of your choice. Using different subdomains allows for using different CDN zones with various network and security configuration to your liking.
 
@@ -24,9 +28,11 @@ You can find [an example for Bunny CDN]({{< relref "docs/deployment/bunny-cdn.md
 
 ## Security
 
+<div class="pc-callout">
 {{< callout type="warning" >}}
 If you're running Private Captcha in production, security is completely **your responsibility**. It is a very large topic and completely outside the scope of this note.
 {{< /callout >}}
+</div>
 
 Some **very basic** advice, specific to Private Captcha server itself:
 - [update]({{< relref "docs/deployment/updating.md" >}}) Private Captcha server frequently
@@ -100,9 +106,11 @@ As you can see, it's possible to use `-certifle` and `-keyfile` to force `HTTPS`
 
 ### Migrations
 
+<div class="pc-callout">
 {{< callout type="info" >}}
 If you use docker compose based setup, you can skip this. Below information is only relevant for "large" _custom_ installations.
 {{< /callout >}}
+</div>
 
 While in docker compose single-node setup migrations have been taken care of, if you run larger installation of Private Captcha with separate DB and server nodes, you might want to run migrations manually.
 
