@@ -43,58 +43,97 @@ All API responses follow a standard JSON structure containing `meta`, `data`, an
 | `data` | yes | The payload of the response (object or array). |
 | `pagination` | no | (Optional) Present on list endpoints. |
 
+
 ### Status codes
 
 Common status codes:
 
 | Code | Description |
-|---|---|
-| 1000 | OK |
-| 1001 | Failure |
-| 1002 | Undefined |
-| 1003 | Not implemented |
-| 1004 | API is deprecated |
+| ---- | ----------- |
+| 1000 | OK          |
+| 1001 | Failure     |
 
 Organization management status codes:
 
-| Code | Description |
-|---|---|
-| 1100 | Name cannot be empty. |
-| 1101 | Name is too long. |
-| 1102 | Organization name contains invalid characters. |
-| 1103 | Organization with this name already exists. |
+| Code | Description                                                                      |
+| ---- | -------------------------------------------------------------------------------- |
+| 1100 | Name cannot be empty.                                                            |
+| 1101 | Name is too long.                                                                |
+| 1102 | Organization name contains invalid characters.                                   |
+| 1103 | Organization with this name already exists.                                      |
 | 1104 | Organizations limit reached on your current plan, please upgrade to create more. |
-| 1105 | Requested organization does not seem to exist. |
-| 1106 | You do not have permissions to access this organization. |
-| 1107 | Organization ID must be empty. |
-| 1108 | Organization ID must not be empty. |
-| 1109 | Organization ID is not valid. |
+| 1105 | Requested organization does not seem to exist.                                   |
+| 1106 | You do not have permissions to access this organization.                         |
+| 1107 | Organization ID must be empty.                                                   |
+| 1108 | Organization ID must not be empty.                                               |
+| 1109 | Organization ID is not valid.                                                    |
 
 Property management status codes:
 
-| Code | Description |
-|---|---|
-| 1200 | Properties batch limit size was exceeded. |
-| 1201 | Name cannot be empty. |
-| 1202 | Name is too long. |
-| 1203 | Property name contains invalid characters. |
-| 1204 | Property with this name already exists. |
-| 1205 | Domain name cannot be empty. |
-| 1206 | Localhost is not allowed as a domain. |
-| 1207 | IP address cannot be used as a domain. |
-| 1208 | Domain name is not valid. |
-| 1209 | Failed to resolve domain name. |
-| 1210 | Invalid format of domain name. |
-| 1211 | Property ID cannot be empty. |
-| 1212 | Property ID is not valid. |
-| 1213 | Duplicate property ID found in request. |
+| Code | Description                                  |
+| ---- | -------------------------------------------- |
+| 1200 | Properties batch limit size was exceeded.    |
+| 1201 | Name cannot be empty.                        |
+| 1202 | Name is too long.                            |
+| 1203 | Property name contains invalid characters.   |
+| 1204 | Property with this name already exists.      |
+| 1205 | Domain name cannot be empty.                 |
+| 1206 | Localhost is not allowed as a domain.        |
+| 1207 | IP address cannot be used as a domain.       |
+| 1208 | Domain name is not valid.                    |
+| 1209 | Failed to resolve domain name.               |
+| 1210 | Invalid format of domain name.               |
+| 1211 | Property ID cannot be empty.                 |
+| 1212 | Property ID is not valid.                    |
+| 1213 | Duplicate property ID found in request.      |
 | 1214 | Insufficient permissions to update settings. |
 
 Subscription status codes:
 
-| Code | Description |
-|---|---|
+| Code | Description                                           |
+| ---- | ----------------------------------------------------- |
 | 1300 | Property limit reached for current subscription plan. |
+
+Rule management status codes:
+
+| Code | Description                                                                           |
+| ---- | ------------------------------------------------------------------------------------- |
+| 1400 | Rule name is required.                                                                |
+| 1401 | Condition property is required.                                                       |
+| 1402 | Invalid operator for this condition property.                                         |
+| 1403 | Condition value is required for this operator.                                        |
+| 1404 | Invalid condition property.                                                           |
+| 1405 | Action property is required.                                                          |
+| 1406 | Action value is required.                                                             |
+| 1407 | Invalid action value.                                                                 |
+| 1408 | Invalid action property.                                                              |
+| 1409 | IP address or prefix is required.                                                     |
+| 1410 | At least one country must be selected.                                                |
+| 1411 | Country code is not valid.                                                            |
+| 1412 | Domain is required.                                                                   |
+| 1413 | Invalid domain name.                                                                  |
+| 1414 | Domain has to be a subdomain of main domain.                                          |
+| 1415 | Difficulty adjustment must be within the range.                                       |
+| 1416 | Difficulty growth must be a known value.                                              |
+| 1419 | Organization rules limit reached on your current plan, please upgrade to create more. |
+| 1420 | Property rules limit reached on your current plan, please upgrade to create more.     |
+| 1421 | You need an active subscription to create organization rules.                         |
+| 1422 | You need an active subscription to create property rules.                             |
+| 1423 | One or more IP address values are invalid.                                            |
+| 1424 | Too many IP addresses provided.                                                       |
+| 1425 | HTTP header name is required.                                                         |
+| 1426 | HTTP header name is not valid.                                                        |
+| 1427 | Rule name can only contain letters, numbers, spaces, hyphens, and dots.               |
+| 1428 | Condition value is invalid.                                                           |
+
+Form management status codes:
+
+| Code | Description                            |
+| ---- | -------------------------------------- |
+| 1500 | Name cannot be empty.                  |
+| 1501 | Name is too long.                      |
+| 1502 | Form name contains invalid characters. |
+| 1503 | Form with this name already exists.    |
 
 ## Organizations
 

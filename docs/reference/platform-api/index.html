@@ -44,7 +44,7 @@ This reference documentation describes the Portal API for Private Captcha, which
 
 <meta
   property="article:modified_time"
-  content="2026-07-16T11:28:35+03:00">
+  content="2026-09-08T13:06:50+03:00">
 
 
 
@@ -53,16 +53,16 @@ This reference documentation describes the Portal API for Private Captcha, which
 API is also available here as Swagger / OpenAPI definition.
 This reference documentation describes the Portal API for Private Captcha, which allows for the management of organizations, properties, and asynchronous tasks.">
 	<meta itemprop="datePublished" content="2025-12-19T17:50:22+01:00">
-	<meta itemprop="dateModified" content="2026-07-16T11:28:35+03:00">
-	<meta itemprop="wordCount" content="1212">
+	<meta itemprop="dateModified" content="2026-09-08T13:06:50+03:00">
+	<meta itemprop="wordCount" content="1433">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Platform API">
 	<meta name="twitter:description" content="Note
 API is also available here as Swagger / OpenAPI definition.
 This reference documentation describes the Portal API for Private Captcha, which allows for the management of organizations, properties, and asynchronous tasks.">
 
-    <link rel="preload" href="/css/compiled/main.min.5b15fe4b28a16db5bda4d29114d74af1d4a88556805703e17cc7e2914494a6aa.css" as="style" integrity="sha256-WxX&#43;SyihbbW9pNKRFNdK8dSohVaAVwPhfMfikUSUpqo=" />
-    <link href="/css/compiled/main.min.5b15fe4b28a16db5bda4d29114d74af1d4a88556805703e17cc7e2914494a6aa.css" rel="stylesheet" integrity="sha256-WxX&#43;SyihbbW9pNKRFNdK8dSohVaAVwPhfMfikUSUpqo=" />
+    <link rel="preload" href="/css/compiled/main.min.5391fd9c76f22d5dd7d0888ec6e57874f0239e2d47f03766ac46296da7cb82ea.css" as="style" integrity="sha256-U5H9nHbyLV3X0IiOxuV4dPAjni1H8DdmrEYpbafLguo=" />
+    <link href="/css/compiled/main.min.5391fd9c76f22d5dd7d0888ec6e57874f0239e2d47f03766ac46296da7cb82ea.css" rel="stylesheet" integrity="sha256-U5H9nHbyLV3X0IiOxuV4dPAjni1H8DdmrEYpbafLguo=" />
 
   
 
@@ -1347,18 +1347,6 @@ This reference documentation describes the Portal API for Private Captcha, which
 					<td>1001</td>
 					<td>Failure</td>
 			</tr>
-			<tr>
-					<td>1002</td>
-					<td>Undefined</td>
-			</tr>
-			<tr>
-					<td>1003</td>
-					<td>Not implemented</td>
-			</tr>
-			<tr>
-					<td>1004</td>
-					<td>API is deprecated</td>
-			</tr>
 	</tbody>
 </table>
 <p>Organization management status codes:</p>
@@ -1495,6 +1483,152 @@ This reference documentation describes the Portal API for Private Captcha, which
 			<tr>
 					<td>1300</td>
 					<td>Property limit reached for current subscription plan.</td>
+			</tr>
+	</tbody>
+</table>
+<p>Rule management status codes:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Code</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>1400</td>
+					<td>Rule name is required.</td>
+			</tr>
+			<tr>
+					<td>1401</td>
+					<td>Condition property is required.</td>
+			</tr>
+			<tr>
+					<td>1402</td>
+					<td>Invalid operator for this condition property.</td>
+			</tr>
+			<tr>
+					<td>1403</td>
+					<td>Condition value is required for this operator.</td>
+			</tr>
+			<tr>
+					<td>1404</td>
+					<td>Invalid condition property.</td>
+			</tr>
+			<tr>
+					<td>1405</td>
+					<td>Action property is required.</td>
+			</tr>
+			<tr>
+					<td>1406</td>
+					<td>Action value is required.</td>
+			</tr>
+			<tr>
+					<td>1407</td>
+					<td>Invalid action value.</td>
+			</tr>
+			<tr>
+					<td>1408</td>
+					<td>Invalid action property.</td>
+			</tr>
+			<tr>
+					<td>1409</td>
+					<td>IP address or prefix is required.</td>
+			</tr>
+			<tr>
+					<td>1410</td>
+					<td>At least one country must be selected.</td>
+			</tr>
+			<tr>
+					<td>1411</td>
+					<td>Country code is not valid.</td>
+			</tr>
+			<tr>
+					<td>1412</td>
+					<td>Domain is required.</td>
+			</tr>
+			<tr>
+					<td>1413</td>
+					<td>Invalid domain name.</td>
+			</tr>
+			<tr>
+					<td>1414</td>
+					<td>Domain has to be a subdomain of main domain.</td>
+			</tr>
+			<tr>
+					<td>1415</td>
+					<td>Difficulty adjustment must be within the range.</td>
+			</tr>
+			<tr>
+					<td>1416</td>
+					<td>Difficulty growth must be a known value.</td>
+			</tr>
+			<tr>
+					<td>1419</td>
+					<td>Organization rules limit reached on your current plan, please upgrade to create more.</td>
+			</tr>
+			<tr>
+					<td>1420</td>
+					<td>Property rules limit reached on your current plan, please upgrade to create more.</td>
+			</tr>
+			<tr>
+					<td>1421</td>
+					<td>You need an active subscription to create organization rules.</td>
+			</tr>
+			<tr>
+					<td>1422</td>
+					<td>You need an active subscription to create property rules.</td>
+			</tr>
+			<tr>
+					<td>1423</td>
+					<td>One or more IP address values are invalid.</td>
+			</tr>
+			<tr>
+					<td>1424</td>
+					<td>Too many IP addresses provided.</td>
+			</tr>
+			<tr>
+					<td>1425</td>
+					<td>HTTP header name is required.</td>
+			</tr>
+			<tr>
+					<td>1426</td>
+					<td>HTTP header name is not valid.</td>
+			</tr>
+			<tr>
+					<td>1427</td>
+					<td>Rule name can only contain letters, numbers, spaces, hyphens, and dots.</td>
+			</tr>
+			<tr>
+					<td>1428</td>
+					<td>Condition value is invalid.</td>
+			</tr>
+	</tbody>
+</table>
+<p>Form management status codes:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Code</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>1500</td>
+					<td>Name cannot be empty.</td>
+			</tr>
+			<tr>
+					<td>1501</td>
+					<td>Name is too long.</td>
+			</tr>
+			<tr>
+					<td>1502</td>
+					<td>Form name contains invalid characters.</td>
+			</tr>
+			<tr>
+					<td>1503</td>
+					<td>Form with this name already exists.</td>
 			</tr>
 	</tbody>
 </table>
@@ -2134,7 +2268,7 @@ This reference documentation describes the Portal API for Private Captcha, which
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-07-16T11:28:35.000Z">July 16, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-09-08T13:06:50.000Z">September 8, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/dns-proxy/"
         title="DNS proxy"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
