@@ -116,7 +116,7 @@ html:not(.dark) .hextra-footer {
     border-color: #686868;
 }
 
-html:not(.dark) .hextra-card, .hextra-feature-card {
+html:not(.dark) .hextra-card, html:not(.dark) .hextra-feature-card {
     background-color: #ffffff;/*#faf8f5;*/
 }
 
