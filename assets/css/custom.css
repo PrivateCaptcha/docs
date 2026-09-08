@@ -75,10 +75,67 @@
   --primary-saturation: 29%;
   --primary-lightness: 35%;
   --image-zoom-background-color: #faf8f5;
+  --site-bg: #fffffc;
 }
 
 html[class~="dark"] {
   --image-zoom-background-color: #0e0f0e;
+}
+
+/* Main page */
+html:not(.dark) body {
+  background-color: var(--site-bg);
+}
+
+/* Navbar */
+html:not(.dark) .hextra-nav-container-blur {
+  background-color: var(--site-bg) !important;
+}
+
+/* Sidebar — especially important on mobile */
+html:not(.dark) .hextra-sidebar-container {
+  background-color: var(--site-bg);
+}
+
+/* Bottom section of sidebar containing theme/language controls */
+html:not(.dark) .hextra-sidebar-container > div:last-child {
+  background-color: var(--site-bg);
+}
+
+/* Footer */
+html:not(.dark) .hextra-footer {
+  background-color: var(--site-bg);
+}
+
+.hextra-card, .hextra-feature-card {
+    border: 1px dashed #bfbebc;
+    border-radius: 2px;
+    background-color: #ffffff;/*#faf8f5;*/
+}
+
+.hextra-card:hover, .hextra-feature-card:has(img):hover {
+    background-color: #f5f7f0;
+    border-color: #686868;
+}
+
+.hextra-badge div {
+    border-radius: 2px;
+}
+
+.hextra-code-block pre.chroma:not(.lntable pre) {
+  border-radius: 2px;
+}
+
+.hextra-code-copy-btn-container, .hextra-code-copy-btn {
+    border-radius: 2px;
+}
+
+.hextra-code-block .hextra-code-filename {
+    border-radius: 2px 2px 0 0;
+}
+
+div[role="tablist"] {
+    border-bottom: 1px dashed #bfbebc;
 }
 
 .pc-form {
