@@ -110,12 +110,18 @@ html:not(.dark) .hextra-footer {
 .hextra-card, .hextra-feature-card {
     border: 1px dashed #bfbebc;
     border-radius: 2px;
-    background-color: #ffffff;/*#faf8f5;*/
 }
 
 .hextra-card:hover, .hextra-feature-card:has(img):hover {
-    background-color: #f5f7f0;
     border-color: #686868;
+}
+
+html:not(.dark) .hextra-card, .hextra-feature-card {
+    background-color: #ffffff;/*#faf8f5;*/
+}
+
+html:not(.dark) .hextra-card:hover, .hextra-feature-card:has(img):hover {
+    background-color: #f5f7f0;
 }
 
 .hextra-badge div {
