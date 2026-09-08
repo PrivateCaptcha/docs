@@ -229,3 +229,24 @@ div[role="tablist"] {
 h1, h2, h3, h4, h5 {
     font-family: 'Erode', 'serif';
 }
+
+.pc-button {
+    border-radius: 2px;
+}
+
+html:not(.dark) .pc-button {
+    background-color: #000 !important;
+}
+
+html:not(.dark) .pc-button:hover {
+    background-color: #2f522d !important;
+}
+
+html.dark .pc-button {
+    background-color: #fff !important;
+    color: #000;
+}
+
+html.dark .pc-button:hover {
+    background-color: #bfbebc !important;
+}
