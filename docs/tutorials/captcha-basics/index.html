@@ -67,8 +67,8 @@ sequenceDiagram actor User participant Browser participant Server participant CA
 	<meta name="twitter:description" content="Implementing a CAPTCHA is a standard security practice to prevent automated bots from abusing your forms (e.g., for spam, brute-force attacks, or fake registrations).
 sequenceDiagram actor User participant Browser participant Server participant CAPTCHAProvider as CAPTCHA Provider Browser-&gt;&gt;CAPTCHAProvider: Request challenge CAPTCHAProvider--&gt;&gt;Browser: Show challenge User-&gt;&gt;Browser: Solve the challenge Browser--&gt;&gt;Browser: Challenge passed — token generated User-&gt;&gt;Browser: Submit form Browser-&gt;&gt;Server: Form data &#43; token Server-&gt;&gt;CAPTCHAProvider: Is this token valid? CAPTCHAProvider--&gt;&gt;Server: Yes / No Server-&gt;&gt;Server: Process form (only if valid) Frontend You add two things to your HTML page: a widget (the visual challenge the user interacts with) and a script loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider’s servers.">
 
-    <link rel="preload" href="/css/compiled/main.min.b9f5fa98c61bcad97f67fad30e5251240cd4a250198d010232584a74b553b59c.css" as="style" integrity="sha256-ufX6mMYbytl/Z/rTDlJRJAzUolAZjQECMlhKdLVTtZw=" />
-    <link href="/css/compiled/main.min.b9f5fa98c61bcad97f67fad30e5251240cd4a250198d010232584a74b553b59c.css" rel="stylesheet" integrity="sha256-ufX6mMYbytl/Z/rTDlJRJAzUolAZjQECMlhKdLVTtZw=" />
+    <link rel="preload" href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" as="style" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
+    <link href="/css/compiled/main.min.cfea6030f3d8a3917d9e00d2e3c05ebac37aa1d38d4450d75efa6a5f0ffd6469.css" rel="stylesheet" integrity="sha256-z&#43;pgMPPYo5F9ngDS48BeusN6odONRFDXXvpqXw/9ZGk=" />
 
   
 
