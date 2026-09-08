@@ -140,6 +140,14 @@ html:not(.dark) .hextra-card:hover, .hextra-feature-card:has(img):hover {
     border-radius: 2px 2px 0 0;
 }
 
+.hextra-filetree > div {
+    border-radius: 2px;
+}
+
+.hextra-page-context-menu > div, .hextra-page-context-menu-dropdown {
+    border-radius: 2px;
+}
+
 div[role="tablist"] {
     border-bottom: 1px dashed #bfbebc;
 }
