@@ -128,6 +128,11 @@ html:not(.dark) .hextra-card:hover, .hextra-feature-card:has(img):hover {
     border-radius: 2px;
 }
 
+.pc-alert > div,
+.pc-callout > div {
+    border-radius: 2px;
+}
+
 .hextra-code-block pre.chroma:not(.lntable pre) {
   border-radius: 2px;
 }

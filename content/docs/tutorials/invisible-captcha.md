@@ -6,9 +6,11 @@ captcha_scripts: true
 
 Invisible captcha refers to the situation when you don't want to show captcha widget for various reasons (e.g. custom UI integraion or design restrictions).
 
+<div class="pc-callout">
 {{< callout type="warning" >}}
 Invisible captcha **can** provide the lowest level of protection, when implemented incorrectly. [Read more]({{< relref "/docs/reference/security" >}})
 {{< /callout >}}
+</div>
 
 ## Setup
 

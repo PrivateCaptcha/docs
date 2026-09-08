@@ -94,9 +94,11 @@ Here's how to localize a widget:
 
 #### `data-styles`
 
+<div class="pc-callout">
 {{< callout >}}
   Check out [a collection of examples]({{< relref "/docs/tutorials/widget-customization.md" >}}) of widget customization using this attribute.
 {{< /callout >}}
+</div>
 
 `data-styles` allows you to override some of the widget styles to better fit into your website's design, on top of `data-theme`. Example of override: `data-style="--border-radius: .75rem;"`.
 

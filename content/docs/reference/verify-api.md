@@ -20,7 +20,9 @@ When handling form submission on the server-side, this is the field you need to 
 
 ## Request
 
+<div class="pc-callout">
 {{<callout type="info">}}All endpoints in this section require an API key with the _"Captcha verification"_ scope. This key must be sent in the `X-API-Key` header.{{</callout>}}
+</div>
 
 To verify solutions you need to make a `POST` request to `https://api.{{<domain>}}/verify` with the body of the request being solution field's contents from your form.
 

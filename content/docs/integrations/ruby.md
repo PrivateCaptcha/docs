@@ -3,13 +3,17 @@ title: "Ruby"
 date: 2025-10-26T08:48:32+02:00
 ---
 
+<div class="pc-callout">
 {{< callout type="warning" icon="key" >}}
   To use this integration you need to [create an API key](https://portal.{{< domain >}}/settings?tab=apikeys) in your account.
 {{< /callout >}}
+</div>
 
+<div class="pc-callout">
 {{< callout >}}
   If you have a working reCAPTCHA integration, check our [migration guide]({{< relref "/docs/tutorials/migrate-from-recaptcha.md" >}}) for easy instructions.
 {{< /callout >}}
+</div>
 
 This is a **server-side** SDK, which you would use to verify captcha solution against Private Captcha API. This SDK does _not_ solve puzzles on the client side (used to protect APIs).
 
@@ -40,9 +44,11 @@ gem install private_captcha
 
 ## Usage
 
+<div class="pc-callout">
 {{< callout >}}
 Always check our [security recommendations]({{< relref "/docs/reference/security.md#server-side" >}}) when using this integration.
 {{< /callout >}}
+</div>
 
 > [!NOTE]
 > Before using this SDK, you'll need an API key. If you don't have one yet, see how to [create an API key]({{< relref "/docs/getting-started.md#create-a-new-api-key" >}}) in the Getting Started guide.
