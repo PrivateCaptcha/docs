@@ -2149,7 +2149,7 @@
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;&lt;code&gt;12&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;org-scope-error&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;property-org-scope&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Property belongs to a different org than API key scope&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
