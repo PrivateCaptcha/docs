@@ -8,25 +8,23 @@ cascade:
       enable: true
 ---
 
-{{< hextra/hero-badge style="border-radius: 2px" >}}
+{{< hextra/hero-badge style="border-radius: 2px; font-family: 'DM Sans', sans-serif;" >}}
   <div class="hx:w-2 hx:h-2 hx:rounded-full hx:bg-primary-400"></div>
-  <span>Private, open source</span>
+  <span>Independent, privacy-first</span>
   {{< icon name="arrow-circle-right" attributes="height=14" >}}
 {{< /hextra/hero-badge >}}
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-headline >}}
-  Protect your websites&nbsp;<br class="sm:hx:block hx:hidden" />from bots and spam
+  Protect your websites&nbsp;<br class="sm:hx:block hx:hidden" />from bots and abuse
 {{< /hextra/hero-headline >}}
 </div>
 
-<div class="hx:mb-12">
-{{< hextra/hero-subtitle >}}
-  Open-source, GDPR- and CCPA-compliant&nbsp;<br class="sm:hx:block hx:hidden" />solution for bot and abuse protection
-{{< /hextra/hero-subtitle >}}
-</div>
+<div class="hx:mb-12 font-dm-sans">{{< hextra/hero-subtitle >}} Self-hostable,
+GDPR-compliant, and user-friendly&nbsp;<br class="sm:hx:block
+hx:hidden" />CAPTCHA made in EU{{< /hextra/hero-subtitle >}} </div>
 
-<div class="hx:mb-6">
+<div class="hx:mb-6 font-dm-sans">
 {{< pc-button text="Get Started" link="docs/getting-started" >}}
 </div>
 
@@ -65,8 +63,8 @@ cascade:
     subtitle="Simple examples with code that you copy and paste"
   >}}
   {{< hextra/feature-card
-    title="Detailed parameters"
-    subtitle="Customizations you can make to meet any needs you have"
+    title="Detailed specification"
+    subtitle="Each API endpoint and use-case explained in-depth"
   >}}
   {{< hextra/feature-card
     title="Built to be self-hostable"

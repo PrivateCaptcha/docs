@@ -124,6 +124,10 @@ html:not(.dark) .hextra-card:hover, .hextra-feature-card:has(img):hover {
     background-color: #f5f7f0;
 }
 
+.font-dm-sans {
+    font-family: 'DM Sans', sans-serif;
+}
+
 .hextra-badge div {
     border-radius: 2px;
 }
