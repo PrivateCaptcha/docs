@@ -29,5 +29,6 @@ All server- and client-side integrations are _not_ code-generated from OpenAPI/S
 
 {{< cards >}}
   {{< card link="/docs/integrations/client-side" title="Client-side" subtitle="Generic website integration" tag="Client-side" tagType="warning" image="https://privatecaptcha.com/images/home/process/integrations/html5.svg" imageStyle="margin: 32px 48px 0; min-height: 60px; max-height: 80px; height: 100%;" >}}
-  {{< card link="/docs/integrations/react" title="React" subtitle="Client-side captcha component" tag="Client-side" tagType="warning" image="https://privatecaptcha.com/images/home/process/integrations/react.svg" imageStyle="margin: 24px 24px 0; min-height: 60px; max-height: 80px; height: 100%;" >}}
+  {{< card link="/docs/integrations/react" title="React" subtitle="Client-side captcha component" tag="Client-side" tagType="warning" image="https://privatecaptcha.com/images/home/process/integrations/react.svg" imageStyle="margin: 32px 24px 0 24px; min-height: 60px; max-height: 80px; height: 100%;" >}}
+  {{< card link="/docs/integrations/vue" title="Vue" subtitle="Client-side captcha component" tag="Client-side" tagType="warning" image="https://privatecaptcha.com/images/home/process/integrations/vue.svg" imageStyle="margin: 32px 24px 0 24px; min-height: 60px; max-height: 80px; height: 100%;" >}}
 {{< /cards >}}
