@@ -9,14 +9,25 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Changelog – Private Captcha</title>
-  <meta name="description" content="v1.42.1 - 2026-08-25 Difficulty rules for stale browser version detection Reports tab for orgs Weekly/Monthly reports now include protection highlights (bot attacks etc.) Magento 2 added to the setup Security-related minor bugfixes v1.41.0 - 2026-08-14 Multiple bugfixes (mostly security-related) v1.38.0 - 2026-07-05 Complete redesign (to match main website theme) Improvements related to negative caching v1.37.0 - 2026-06-12 includes 1.36.0 changelog" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/changelog/" itemprop="url" />
+  <meta name="description" content="v1.43.0 - 2026-09-17 Save much more puzzle/verification stats in ClickHouse for User-Agent and IPs Refactor sessions to use more Postgres for authoritative state Add TYPO3 integration Add brand styling to usage reports (emails) Notify org owner when member accepts the invite Show tips in the portal sometimes Stop purging data of soft-deleted properties (affects account usage/billing) A lot of bugfixes v1.42.1 - 2026-08-25 Difficulty rules for stale browser version detection Reports tab for orgs Weekly/Monthly reports now include protection highlights (bot attacks etc.) Magento 2 added to the setup Security-related minor bugfixes v1.41.0 - 2026-08-14 Multiple bugfixes (mostly security-related) v1.38.0 - 2026-07-05 Complete redesign (to match main website theme) Improvements related to negative caching v1.37.0 - 2026-06-12 includes 1.36.0 changelog" /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/changelog/" itemprop="url" />
 
 <meta property="og:title" content="Changelog">
 <meta
   property="og:description"
   content="
     
-      v1.42.1 - 2026-08-25
+      v1.43.0 - 2026-09-17
+    
+Save much more puzzle/verification stats in ClickHouse for User-Agent and IPs
+Refactor sessions to use more Postgres for authoritative state
+Add TYPO3 integration
+Add brand styling to usage reports (emails)
+Notify org owner when member accepts the invite
+Show tips in the portal sometimes
+Stop purging data of soft-deleted properties (affects account usage/billing)
+A lot of bugfixes
+
+v1.42.1 - 2026-08-25
     
 Difficulty rules for stale browser version detection
 Reports tab for orgs
@@ -52,18 +63,18 @@ v1.37.0 - 2026-06-12
 
 <meta
   property="article:modified_time"
-  content="2026-08-25T18:47:22+03:00">
+  content="2026-09-17T09:50:38+02:00">
 
 
 
 	<meta itemprop="name" content="Changelog">
-	<meta itemprop="description" content="v1.42.1 - 2026-08-25 Difficulty rules for stale browser version detection Reports tab for orgs Weekly/Monthly reports now include protection highlights (bot attacks etc.) Magento 2 added to the setup Security-related minor bugfixes v1.41.0 - 2026-08-14 Multiple bugfixes (mostly security-related) v1.38.0 - 2026-07-05 Complete redesign (to match main website theme) Improvements related to negative caching v1.37.0 - 2026-06-12 includes 1.36.0 changelog">
+	<meta itemprop="description" content="v1.43.0 - 2026-09-17 Save much more puzzle/verification stats in ClickHouse for User-Agent and IPs Refactor sessions to use more Postgres for authoritative state Add TYPO3 integration Add brand styling to usage reports (emails) Notify org owner when member accepts the invite Show tips in the portal sometimes Stop purging data of soft-deleted properties (affects account usage/billing) A lot of bugfixes v1.42.1 - 2026-08-25 Difficulty rules for stale browser version detection Reports tab for orgs Weekly/Monthly reports now include protection highlights (bot attacks etc.) Magento 2 added to the setup Security-related minor bugfixes v1.41.0 - 2026-08-14 Multiple bugfixes (mostly security-related) v1.38.0 - 2026-07-05 Complete redesign (to match main website theme) Improvements related to negative caching v1.37.0 - 2026-06-12 includes 1.36.0 changelog">
 	<meta itemprop="datePublished" content="2026-03-19T08:43:58+01:00">
-	<meta itemprop="dateModified" content="2026-08-25T18:47:22+03:00">
-	<meta itemprop="wordCount" content="1478">
+	<meta itemprop="dateModified" content="2026-09-17T09:50:38+02:00">
+	<meta itemprop="wordCount" content="1538">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Changelog">
-	<meta name="twitter:description" content="v1.42.1 - 2026-08-25 Difficulty rules for stale browser version detection Reports tab for orgs Weekly/Monthly reports now include protection highlights (bot attacks etc.) Magento 2 added to the setup Security-related minor bugfixes v1.41.0 - 2026-08-14 Multiple bugfixes (mostly security-related) v1.38.0 - 2026-07-05 Complete redesign (to match main website theme) Improvements related to negative caching v1.37.0 - 2026-06-12 includes 1.36.0 changelog">
+	<meta name="twitter:description" content="v1.43.0 - 2026-09-17 Save much more puzzle/verification stats in ClickHouse for User-Agent and IPs Refactor sessions to use more Postgres for authoritative state Add TYPO3 integration Add brand styling to usage reports (emails) Notify org owner when member accepts the invite Show tips in the portal sometimes Stop purging data of soft-deleted properties (affects account usage/billing) A lot of bugfixes v1.42.1 - 2026-08-25 Difficulty rules for stale browser version detection Reports tab for orgs Weekly/Monthly reports now include protection highlights (bot attacks etc.) Magento 2 added to the setup Security-related minor bugfixes v1.41.0 - 2026-08-14 Multiple bugfixes (mostly security-related) v1.38.0 - 2026-07-05 Complete redesign (to match main website theme) Improvements related to negative caching v1.37.0 - 2026-06-12 includes 1.36.0 changelog">
 
     <link rel="preload" href="/css/compiled/main.min.08294ee117d4c8176a83a1e254872bfd5be7be81ab8fdadd95fec6b8b1f844f5.css" as="style" integrity="sha256-CClO4RfUyBdqg6HiVIcr/VvnvoGrj9rdlf7GuLH4RPU=" />
     <link href="/css/compiled/main.min.08294ee117d4c8176a83a1e254872bfd5be7be81ab8fdadd95fec6b8b1f844f5.css" rel="stylesheet" integrity="sha256-CClO4RfUyBdqg6HiVIcr/VvnvoGrj9rdlf7GuLH4RPU=" />
@@ -1074,6 +1085,10 @@ v1.37.0 - 2026-06-12
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="Table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1430---2026-09-17">v1.43.0 - 2026-09-17
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#v1421---2026-08-25">v1.42.1 - 2026-08-25
         </a>
       </li>
@@ -1342,7 +1357,18 @@ v1.37.0 - 2026-06-12
     </div>
           </div>
           
-          <h2>v1.42.1 - 2026-08-25<span class="hx:absolute hx:-mt-20" id="v1421---2026-08-25"></span>
+          <h2>v1.43.0 - 2026-09-17<span class="hx:absolute hx:-mt-20" id="v1430---2026-09-17"></span>
+    <a href="#v1430---2026-09-17" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Save much more puzzle/verification stats in ClickHouse for User-Agent and IPs</li>
+<li>Refactor sessions to use more Postgres for authoritative state</li>
+<li>Add <a href="/docs/integrations/typo3/">TYPO3</a> integration</li>
+<li>Add brand styling to usage reports (emails)</li>
+<li>Notify org owner when member accepts the invite</li>
+<li>Show tips in the portal sometimes</li>
+<li>Stop purging data of soft-deleted properties (affects account usage/billing)</li>
+<li>A lot of bugfixes</li>
+</ul>
+<h2>v1.42.1 - 2026-08-25<span class="hx:absolute hx:-mt-20" id="v1421---2026-08-25"></span>
     <a href="#v1421---2026-08-25" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
 <li>Difficulty rules for <a href="/docs/reference/rules/#browser-version">stale browser version</a> detection</li>
 <li>Reports tab for orgs</li>
@@ -1601,7 +1627,7 @@ v1.37.0 - 2026-06-12
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-08-25T18:47:22.000Z">August 25, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-09-17T09:50:38.000Z">September 17, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/faq/"
         title="FAQ"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"

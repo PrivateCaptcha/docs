@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.43.0 - 2026-09-17
+
+- Save much more puzzle/verification stats in ClickHouse for User-Agent and IPs
+- Refactor sessions to use more Postgres for authoritative state
+- Add [TYPO3]({{< relref "docs/integrations/typo3.md" >}}) integration
+- Add brand styling to usage reports (emails)
+- Notify org owner when member accepts the invite
+- Show tips in the portal sometimes
+- Stop purging data of soft-deleted properties (affects account usage/billing)
+- A lot of bugfixes
+
 ## v1.42.1 - 2026-08-25
 
 - Difficulty rules for [stale browser version]({{< relref "docs/reference/rules.md#browser-version" >}}) detection
