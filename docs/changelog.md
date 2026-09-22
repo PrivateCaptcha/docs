@@ -1,13 +1,14 @@
 # Changelog
 
-## v1.43.0 - 2026-09-17
+## v1.43.1 - 2026-09-22
 
 - Save much more puzzle/verification stats in ClickHouse for User-Agent and IPs
 - Refactor sessions to use more Postgres for authoritative state
-- Add [TYPO3]({{< relref "docs/integrations/typo3.md" >}}) integration
+- Add [TYPO3]({{< relref "docs/integrations/typo3.md" >}}) and [Vue.js]({{< relref "docs/integrations/vue.md" >}}) integration
 - Add brand styling to usage reports (emails)
 - Notify org owner when member accepts the invite
 - Show tips in the portal sometimes
+- Use online verification rate into difficulty calculation
 - Stop purging data of soft-deleted properties (affects account usage/billing)
 - A lot of bugfixes
 
