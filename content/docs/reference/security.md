@@ -9,7 +9,7 @@ date: 2025-10-15T12:26:01+03:00
 
 If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use [EU Isolation]({{< relref "/docs/reference/eu-isolation.md" >}})).
 
-You need to add `https://{{< domain >}}`, `https://*.{{< domain >}}` to `script-src`, `frame-src`, `style-src`, `connect-src`.
+You need to add `https://{{< domain >}}`, `https://*.{{< domain >}}` to `script-src`, `frame-src`, `style-src`, `connect-src` and `wasm-unsafe-eval`.
 
 Do **not** hard-code specific subdomains, like `api.{{< domain >}}`, into your CSP.
 
