@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.44.0 - 2026-09-25
+
+- Significant optimization (~x4) of the client-side JS solver (in WASM)
+
 ## v1.43.1 - 2026-09-22
 
 - Save much more puzzle/verification stats in ClickHouse for User-Agent and IPs
