@@ -7368,6 +7368,11 @@
 					&lt;td&gt;&lt;code&gt;/var/lib/pc/cache&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Local path, if not empty, will be used for cache persistence between restarts (NOTE: no &lt;code&gt;PC_&lt;/code&gt; prefix)&lt;/td&gt;
 			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;PC_GRADUAL_DATA_CLEANUP&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;If &lt;code&gt;true&lt;/code&gt;, purges deleted property&amp;rsquo;s usage data &lt;em&gt;before&lt;/em&gt; the account is deleted (&lt;code&gt;false&lt;/code&gt; by default)&lt;/td&gt;
+			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
