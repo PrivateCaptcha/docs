@@ -43,7 +43,7 @@ Attributes
 
 <meta
   property="article:modified_time"
-  content="2026-09-08T15:41:57+03:00">
+  content="2026-09-28T09:42:05+02:00">
 
 
 
@@ -51,8 +51,8 @@ Attributes
 	<meta itemprop="description" content="Here’s the minimal captcha field declaration:
 index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&gt;&lt;/div&gt; Private Captcha widget is automatically initialized on all elements with private-captcha class name.
 Attributes Apart from the required sitekey data attribute, the following optional attributes are supported:">
-	<meta itemprop="dateModified" content="2026-09-08T15:41:57+03:00">
-	<meta itemprop="wordCount" content="846">
+	<meta itemprop="dateModified" content="2026-09-28T09:42:05+02:00">
+	<meta itemprop="wordCount" content="880">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Widget options">
 	<meta name="twitter:description" content="Here’s the minimal captcha field declaration:
@@ -1142,6 +1142,10 @@ function invisibleFinished(widget) {
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#data-start-mode">data-start-mode
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#data-display-mode">data-display-mode
         </a>
       </li>
@@ -1294,7 +1298,7 @@ function invisibleFinished(widget) {
 	<tbody>
 			<tr>
 					<td><code>data-start-mode</code></td>
-					<td><code>auto</code>, <code>click</code></td>
+					<td><code>auto</code>, <code>click</code>, <code>load</code></td>
 					<td>In <code>auto</code> mode (default) captcha widget starts solving captcha whenever parent form receives focus.</td>
 			</tr>
 			<tr>
@@ -1345,7 +1349,13 @@ function invisibleFinished(widget) {
 	</tbody>
 </table>
 <h3>Notes and examples<span class="hx:absolute hx:-mt-20" id="notes-and-examples"></span>
-    <a href="#notes-and-examples" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4><code>data-display-mode</code><span class="hx:absolute hx:-mt-20" id="data-display-mode"></span>
+    <a href="#notes-and-examples" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4><code>data-start-mode</code><span class="hx:absolute hx:-mt-20" id="data-start-mode"></span>
+    <a href="#data-start-mode" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><ul>
+<li><code>auto</code> (puzzle is obtained and solving starts when parent form receives focus)</li>
+<li><code>click</code> (puzzle and solving starts when user explicitly clicks the widget)</li>
+<li><code>load</code> (puzzle and solving starts when the widget initializes/renders)</li>
+</ul>
+<h4><code>data-display-mode</code><span class="hx:absolute hx:-mt-20" id="data-display-mode"></span>
     <a href="#data-display-mode" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><ul>
 <li>
 <p><code>widget</code> is the default display mode of captcha</p>
@@ -1678,7 +1688,7 @@ function invisibleFinished(widget) {
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-09-08T15:41:57.000Z">September 8, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-09-28T09:42:05.000Z">September 28, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/verify-api/"
         title="Verify API"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
