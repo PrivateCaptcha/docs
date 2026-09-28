@@ -18,7 +18,7 @@ Apart from the required `sitekey` data attribute, the following _optional_ attri
 
 Attribute | Values | Description
 --- | --- | ---
-`data-start-mode` | `auto`, `click` | In `auto` mode (default) captcha widget starts solving captcha whenever parent form receives focus.
+`data-start-mode` | `auto`, `click`, `load` | In `auto` mode (default) captcha widget starts solving captcha whenever parent form receives focus.
 `data-debug` | `true` | When set to `true`, will show widget's internal state and print debug logs.
 `data-solution-field` | `private-captcha-solution`, your value | Name of the hidden form field with captcha solution that has to be verified on the server side.
 `data-eu` | `true` | When set to `true`, will make widget to use only EU endpoints for [EU-isolation]({{< relref "/docs/reference/eu-isolation.md" >}}).
@@ -30,6 +30,12 @@ Attribute | Values | Description
 `data-store-variable` | `{JS variable name}` | If present, attaches Captcha Object to the html element (helps with multiple widgets on a page)
 
 ### Notes and examples
+
+#### `data-start-mode`
+
+- `auto` (puzzle is obtained and solving starts when parent form receives focus)
+- `click` (puzzle and solving starts when user explicitly clicks the widget)
+- `load` (puzzle and solving starts when the widget initializes/renders)
 
 #### `data-display-mode`
 
