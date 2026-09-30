@@ -182,20 +182,18 @@ Depending on preferred widget size, you might want to add more horizontal paddin
 
 ## Forcing color theme
 
-If `data-theme="auto"`, but you want to force a dark theme, you can set CSS `color-scheme: dark;` on any parent of `.private-captcha` div. Simple version of that is just setting `data-theme="dark"` attribute.
+If `data-theme="auto"`, but you want to force a dark theme, you can set CSS `color-scheme: dark;` on any parent of `.private-captcha` div. Simple(r) version of that is just setting `data-theme="dark"` attribute, but this way you can make it dynamic.
 
 {{< tabs items="Widget,HTML" >}}
 
 {{< tab >}}
-{{< captchawidget formclass="pc-form" theme=auto widgetstyle="color-scheme: dark;" >}}
+{{< captchawidget formclass="pc-form" theme=auto parentstyle="color-scheme: dark;" >}}
 {{< /tab >}}
 
 {{< tab >}}
 ```html
-<form>
-    <div class="private-captcha"
-         data-theme="auto"
-         data-styles="color-scheme: dark;">
+<form style="color-scheme: dark;">
+    <div class="private-captcha" data-theme="auto">
     </div>
 </form>
 ```
