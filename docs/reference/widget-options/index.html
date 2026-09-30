@@ -43,7 +43,7 @@ Attributes
 
 <meta
   property="article:modified_time"
-  content="2026-09-28T09:42:05+02:00">
+  content="2026-09-30T17:07:23+02:00">
 
 
 
@@ -51,8 +51,8 @@ Attributes
 	<meta itemprop="description" content="Here’s the minimal captcha field declaration:
 index.html&lt;div class=&#34;private-captcha&#34; data-sitekey=&#34;abcdef&#34;&gt;&lt;/div&gt; Private Captcha widget is automatically initialized on all elements with private-captcha class name.
 Attributes Apart from the required sitekey data attribute, the following optional attributes are supported:">
-	<meta itemprop="dateModified" content="2026-09-28T09:42:05+02:00">
-	<meta itemprop="wordCount" content="880">
+	<meta itemprop="dateModified" content="2026-09-30T17:07:23+02:00">
+	<meta itemprop="wordCount" content="887">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Widget options">
 	<meta name="twitter:description" content="Here’s the minimal captcha field declaration:
@@ -1333,8 +1333,8 @@ function invisibleFinished(widget) {
 			</tr>
 			<tr>
 					<td><code>data-theme</code></td>
-					<td><code>light</code>, <code>dark</code></td>
-					<td>Widget theme (defaults to <code>light</code>)</td>
+					<td><code>light</code>, <code>dark</code>, <code>auto</code></td>
+					<td>Widget theme (<code>light</code> is default, <code>auto</code> follows system theme)</td>
 			</tr>
 			<tr>
 					<td><code>data-styles</code></td>
@@ -1465,6 +1465,7 @@ function invisibleFinished(widget) {
 			<tr>
 					<th><code>light</code> theme</th>
 					<th><code>dark</code> theme</th>
+					<th><code>auto</code> theme</th>
 			</tr>
 	</thead>
 	<tbody>
@@ -1474,14 +1475,21 @@ function invisibleFinished(widget) {
         data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
         data-theme="light"
         data-lang="en"
-        data-styles=""></div>
+        data-styles="font-size: 12px;"></div>
 </form></td>
 					<td><form class="pc-form" style="">
     <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
         data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
         data-theme="dark"
         data-lang="en"
-        data-styles=""></div>
+        data-styles="font-size: 12px;"></div>
+</form></td>
+					<td><form class="pc-form" style="">
+    <div class="private-captcha hx:h-full" data-sitekey="aaaaaaaabbbbccccddddeeeeeeeeeeee"
+        data-puzzle-endpoint="https://api.privatecaptcha.com/puzzle"
+        data-theme="auto"
+        data-lang="en"
+        data-styles="font-size: 12px;"></div>
 </form></td>
 			</tr>
 	</tbody>
@@ -1588,9 +1596,9 @@ function invisibleFinished(widget) {
 
 
 <div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
-  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800" role="tablist"><button class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white hx:hextra-focus-visible-inset" id="tabs-tab-tabs-11-0" role="tab" type="button" aria-controls="tabs-panel-tabs-11-0" aria-selected="true" tabindex="0" data-state="selected"><span class="hx:inline-flex hx:items-center hx:gap-1.5"><span>Callback</span></span></button><button class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white hx:hextra-focus-visible-inset" id="tabs-tab-tabs-11-1" role="tab" type="button" aria-controls="tabs-panel-tabs-11-1" aria-selected="false" tabindex="-1"><span class="hx:inline-flex hx:items-center hx:gap-1.5"><span>Event</span></span></button></div>
+  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800" role="tablist"><button class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white hx:hextra-focus-visible-inset" id="tabs-tab-tabs-12-0" role="tab" type="button" aria-controls="tabs-panel-tabs-12-0" aria-selected="true" tabindex="0" data-state="selected"><span class="hx:inline-flex hx:items-center hx:gap-1.5"><span>Callback</span></span></button><button class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white hx:hextra-focus-visible-inset" id="tabs-tab-tabs-12-1" role="tab" type="button" aria-controls="tabs-panel-tabs-12-1" aria-selected="false" tabindex="-1"><span class="hx:inline-flex hx:items-center hx:gap-1.5"><span>Event</span></span></button></div>
 </div>
-<div><div class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block" id="tabs-panel-tabs-11-0" role="tabpanel" aria-labelledby="tabs-tab-tabs-11-0" aria-hidden="false" tabindex="0" data-state="selected"><p>HTML:</p>
+<div><div class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block" id="tabs-panel-tabs-12-0" role="tabpanel" aria-labelledby="tabs-tab-tabs-12-0" aria-hidden="false" tabindex="0" data-state="selected"><p>HTML:</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div class="hextra-code-filename not-prose" dir="auto">index.html</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
@@ -1625,7 +1633,7 @@ function invisibleFinished(widget) {
   </button>
 </div>
 </div>
-</div><div class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block" id="tabs-panel-tabs-11-1" role="tabpanel" aria-labelledby="tabs-tab-tabs-11-1" aria-hidden="true"><p>HTML:</p>
+</div><div class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block" id="tabs-panel-tabs-12-1" role="tabpanel" aria-labelledby="tabs-tab-tabs-12-1" aria-hidden="true"><p>HTML:</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div class="hextra-code-filename not-prose" dir="auto">index.html</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
@@ -1688,7 +1696,7 @@ function invisibleFinished(widget) {
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-09-28T09:42:05.000Z">September 28, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-09-30T17:07:23.000Z">September 30, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/verify-api/"
         title="Verify API"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
