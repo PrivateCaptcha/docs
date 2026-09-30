@@ -192,7 +192,7 @@ If `data-theme="auto"`, but you want to force a dark theme, you can set CSS `col
 
 {{< tab >}}
 ```html
-<form style="width: 400px">
+<form>
     <div class="private-captcha"
          data-theme="auto"
          data-styles="color-scheme: dark;">
