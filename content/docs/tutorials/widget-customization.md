@@ -184,6 +184,29 @@ Depending on preferred widget size, you might want to add more horizontal paddin
 
 {{< /tabs >}}
 
+## Forcing color theme
+
+If `data-theme="auto"`, but you want to force a dark theme, you can set CSS `color-scheme: dark;` on any parent of `.private-captcha` div. Simple version of that is just setting `data-theme="dark"` attribute.
+
+{{< tabs items="Widget,HTML" >}}
+
+{{< tab >}}
+{{< captchawidget formclass="pc-form" theme=auto widgetstyle="color-scheme: dark;" >}}
+{{< /tab >}}
+
+{{< tab >}}
+```html
+<form style="width: 400px">
+    <div class="private-captcha"
+         data-theme="auto"
+         data-styles="color-scheme: dark;">
+    </div>
+</form>
+```
+{{< /tab >}}
+
+{{< /tabs >}}
+
 ## Even more customization
 
 For _absolutely custom visualization_, you can make Private Captcha widget ["invisible"]({{< relref "/docs/tutorials/invisible-captcha.md" >}}) and make your own visualizations based on widget's callbacks and/or events. You can see an example of it in the linked page.

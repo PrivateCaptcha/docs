@@ -25,7 +25,7 @@ Attribute | Values | Description
 `data-puzzle-endpoint` | `''` or your value | Endpoint to get captcha puzzle (override in case of self-hosting).
 `data-display-mode` | `widget`, `popup`, `hidden` | How captcha widget will be shown. Defaults to `widget`. When hidden, you need to setup widget callbacks (see below).
 `data-lang` | `en` | Captcha widget localization (defaults to `auto`)
-`data-theme` | `light`, `dark` | Widget theme (defaults to `light`)
+`data-theme` | `light`, `dark`, `auto` | Widget theme (`light` is default, `auto` follows system theme)
 `data-styles` | `{valid CSS}` | Overrides for host variables of the widget's web component, on top of theme.
 `data-store-variable` | `{JS variable name}` | If present, attaches Captcha Object to the html element (helps with multiple widgets on a page)
 
@@ -94,9 +94,9 @@ Here's how to localize a widget:
 
 > TIP: Use theme toggle on this website to check how the widget will look like
 
-`light` theme | `dark` theme
---- | ---
-{{< captchawidget theme=light >}} | {{< captchawidget theme=dark >}}
+`light` theme | `dark` theme | `auto` theme
+--- | --- | ---
+{{< captchawidget theme=light widgetstyle="font-size: 12px;" >}} | {{< captchawidget theme=dark widgetstyle="font-size: 12px;" >}} | {{< captchawidget theme=auto widgetstyle="font-size: 12px;" >}}
 
 #### `data-styles`
 
