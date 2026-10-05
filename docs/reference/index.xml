@@ -1675,7 +1675,14 @@
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Extended script is already supported in our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/wordpress/&#34;&gt;WordPress&lt;/a&gt; (1.0.46+) and &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/magento2/&#34;&gt;Magento 2&lt;/a&gt; (1.0.8+) integrations.&lt;/p&gt;
+&lt;p&gt;Extended script is already supported in our integrations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/wordpress/&#34;&gt;WordPress&lt;/a&gt; (1.0.46+)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/magento2/&#34;&gt;Magento 2&lt;/a&gt; (1.0.8+) integrations.&lt;/li&gt;
+&lt;li&gt;JavaScript widget corelib (0.0.31+)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/vue/&#34;&gt;Vue.js&lt;/a&gt; (0.0.5+)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/react/&#34;&gt;React&lt;/a&gt; (0.0.12+)&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>

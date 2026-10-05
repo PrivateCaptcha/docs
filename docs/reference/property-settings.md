@@ -106,4 +106,9 @@ Service | Requirements
 Self-hosted | [Configured]({{< relref "docs/deployment/configuration.md" >}}) `PC_ARGON2_MEMORY_BUDGET_MIB` to positive value and version is higher than `1.45.0`
 SaaS | Contact Support in [Portal](https://portal.{{< domain >}}/)
 
-Extended script is already supported in our [WordPress]({{< relref "docs/integrations/wordpress.md" >}}) (1.0.46+) and [Magento 2]({{< relref "docs/integrations/magento2.md" >}}) (1.0.8+) integrations.
+Extended script is already supported in our integrations:
+- [WordPress]({{< relref "docs/integrations/wordpress.md" >}}) (1.0.46+)
+- [Magento 2]({{< relref "docs/integrations/magento2.md" >}}) (1.0.8+) integrations.
+- JavaScript widget corelib (0.0.31+)
+- [Vue.js]({{< relref "docs/integrations/vue.md" >}}) (0.0.5+)
+- [React]({{< relref "docs/integrations/react.md" >}}) (0.0.12+)
