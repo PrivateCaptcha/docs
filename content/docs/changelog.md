@@ -3,6 +3,15 @@ title: "Changelog"
 date: 2026-03-19T08:43:58+01:00
 ---
 
+## v1.45.0 - 2026-10-05
+
+- Support for memory-hard (Argon2id) challenges
+- Auto theme support widget (based on system/website theme)
+- "On load" click mode for widget (solves challenge immediately after load)
+- Accessibility improvements for captcha widget (reduced motion)
+- Improve widget's reCAPTCHA compatibility for manual rendering
+- Multiple bugfixes
+
 ## v1.44.0 - 2026-09-25
 
 - Significant optimization (~x4) of the client-side JS solver (in WASM)

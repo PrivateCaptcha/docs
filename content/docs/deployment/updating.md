@@ -59,6 +59,10 @@ These are only deployment-specific changes. For general feature changelog, click
 {{< /callout >}}
 </div>
 
+### v1.45.0
+
+- widget was updated, purge your CDN cache
+
 ### v1.44.0
 
 - big change to the widget's solver, purge your CDN cache and test the difficulty
