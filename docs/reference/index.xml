@@ -1614,6 +1614,59 @@
 &lt;li&gt;&lt;strong&gt;Normal&lt;/strong&gt; (default setting of difficulty growth)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Fast&lt;/strong&gt; (difficulty growth is very reactive and will grow faster as more requests come)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2&gt;Challenge type&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;challenge-type&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#challenge-type&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Starting from version 1.45.0 (for self-hosted) and from October 2026 for SaaS, Private Captcha supports memory-hard challenges (via Argon2id hash). Default option will stay compute-hard (via Blake2b hash).&lt;/p&gt;
+&lt;h3&gt;Configuration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;configuration&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#configuration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]&#34;&gt;
+&lt;h4&gt;Property settings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;property-settings&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#property-settings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Change challenge type to memory-hard version in the &lt;code&gt;Advanced&lt;/code&gt; section of property settings:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/property-challenge-type.png&#34; alt=&#34;Property challenge type&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Note that due ot caching, it might take a couple of minutes for the effect to propagate.&lt;/p&gt;
+&lt;h4&gt;Change client-side script&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;change-client-side-script&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#change-client-side-script&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Add &lt;code&gt;?v=ext&lt;/code&gt; to your script include:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;index.html&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &amp;lt;head&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;-    &amp;lt;script defer src=&amp;#34;https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+    &amp;lt;script defer src=&amp;#34;https://cdn.privatecaptcha.com/widget/js/privatecaptcha.js?v=ext&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &amp;lt;/head&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;For WordPress/Magento2 you can select &amp;ldquo;Extended&amp;rdquo; script type in Private Captcha extension&amp;rsquo;s &lt;code&gt;Advanced&lt;/code&gt; settings.&lt;/p&gt;
+&lt;p&gt;Default &lt;code&gt;privatecaptcha.js&lt;/code&gt; script does &lt;strong&gt;not&lt;/strong&gt; include Argon2id implementation. It is only available via an &amp;ldquo;extended&amp;rdquo; script (received via either &lt;code&gt;privatecaptcha-ext.js&lt;/code&gt; or &lt;code&gt;privatecaptcha.js?v=ext&lt;/code&gt;). Extended script is a few KB &amp;ldquo;heavier&amp;rdquo; than the usual script.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3&gt;Availability&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;availability&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#availability&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Service&lt;/th&gt;
+					&lt;th&gt;Requirements&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Self-hosted&lt;/td&gt;
+					&lt;td&gt;&lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/configuration/&#34;&gt;Configured&lt;/a&gt; &lt;code&gt;PC_ARGON2_MEMORY_BUDGET_MIB&lt;/code&gt; to positive value and version is higher than &lt;code&gt;1.45.0&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SaaS&lt;/td&gt;
+					&lt;td&gt;Contact Support in &lt;a href=&#34;https://portal.privatecaptcha.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Extended script is already supported in our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/wordpress/&#34;&gt;WordPress&lt;/a&gt; (1.0.46+) and &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/magento2/&#34;&gt;Magento 2&lt;/a&gt; (1.0.8+) integrations.&lt;/p&gt;
 
       </description>
     </item>

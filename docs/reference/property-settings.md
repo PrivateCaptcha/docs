@@ -65,3 +65,45 @@ When user (or bots) requests to your resources (websites, forms, API) keep comin
 - **Slow** (difficulty changes slower than usual, it will take more requests to increase the difficulty on average)
 - **Normal** (default setting of difficulty growth)
 - **Fast** (difficulty growth is very reactive and will grow faster as more requests come)
+
+## Challenge type
+
+Starting from version 1.45.0 (for self-hosted) and from October 2026 for SaaS, Private Captcha supports memory-hard challenges (via Argon2id hash). Default option will stay compute-hard (via Blake2b hash).
+
+### Configuration
+
+{{% steps %}}
+
+#### Property settings
+
+Change challenge type to memory-hard version in the `Advanced` section of property settings:
+
+![Property challenge type](/images/reference/property-challenge-type.png)
+
+Note that due ot caching, it might take a couple of minutes for the effect to propagate.
+
+#### Change client-side script
+
+Add `?v=ext` to your script include:
+
+```diff {filename="index.html"}
+ <head>
+-    <script defer src="https://cdn.{{< domain >}}/widget/js/privatecaptcha.js"></script>
++    <script defer src="https://cdn.{{< domain >}}/widget/js/privatecaptcha.js?v=ext"></script>
+ </head>
+```
+
+For WordPress/Magento2 you can select "Extended" script type in Private Captcha extension's `Advanced` settings.
+
+Default `privatecaptcha.js` script does **not** include Argon2id implementation. It is only available via an "extended" script (received via either `privatecaptcha-ext.js` or `privatecaptcha.js?v=ext`). Extended script is a few KB "heavier" than the usual script.
+
+{{% /steps %}}
+
+### Availability
+
+Service | Requirements
+--- | ---
+Self-hosted | [Configured]({{< relref "docs/deployment/configuration.md" >}}) `PC_ARGON2_MEMORY_BUDGET_MIB` to positive value and version is higher than `1.45.0`
+SaaS | Contact Support in [Portal](https://portal.{{< domain >}}/)
+
+Extended script is already supported in our [WordPress]({{< relref "docs/integrations/wordpress.md" >}}) (1.0.46+) and [Magento 2]({{< relref "docs/integrations/magento2.md" >}}) (1.0.8+) integrations.

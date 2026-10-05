@@ -276,6 +276,10 @@
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;h3&gt;v1.45.0&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;v1450&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#v1450&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;widget was updated, purge your CDN cache&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3&gt;v1.44.0&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;v1440&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#v1440&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;big change to the widget&amp;rsquo;s solver, purge your CDN cache and test the difficulty&lt;/li&gt;
@@ -1088,6 +1092,11 @@
 					&lt;td&gt;&lt;code&gt;PC_GRADUAL_DATA_CLEANUP&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;If &lt;code&gt;true&lt;/code&gt;, purges deleted property&amp;rsquo;s usage data &lt;em&gt;before&lt;/em&gt; the account is deleted (&lt;code&gt;false&lt;/code&gt; by default)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;PC_ARGON2_MEMORY_BUDGET_MIB&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;256&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;If positive, enables Argon2id (memory-hard) challenge type and sets memory limit for concurrent &lt;code&gt;/verify&lt;/code&gt; requests.&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
