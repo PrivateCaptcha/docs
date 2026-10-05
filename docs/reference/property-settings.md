@@ -68,7 +68,7 @@ When user (or bots) requests to your resources (websites, forms, API) keep comin
 
 ## Challenge type
 
-Starting from version 1.45.0 (for self-hosted) and from October 2026 for SaaS, Private Captcha supports memory-hard challenges (via Argon2id hash). Default option will stay compute-hard (via Blake2b hash).
+Starting from version 1.45.0 (for self-hosted) and from October 2026 for SaaS, Private Captcha supports memory-hard challenges (via Argon2id hash). Default option will stay compute-hard (via Blake2b hash) and does not require _any_ extra changes.
 
 ### Configuration
 

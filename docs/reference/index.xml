@@ -45,57 +45,57 @@
 &lt;li&gt;we apply rate-limiting and other protection &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/rules/&#34;&gt;rules&lt;/a&gt; to the form endpoint and captcha&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This makes it for a perfect use-case for forms on static websites or general webhooks protection (e.g. forms backed by Google Docs, Webflow or Zapier / Make / N8N).&lt;/p&gt;
-&lt;h2&gt;Captcha property&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;captcha-property&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;captcha-property&#34;&gt;Captcha property&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;captcha-property&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#captcha-property&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Each form proxy has to be used with a captcha property (the point of &amp;ldquo;form proxy&amp;rdquo; is that we check captcha solution for you).&lt;/p&gt;
 &lt;p&gt;When you create a new form, a new corresponding &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings/&#34;&gt;property&lt;/a&gt; is created. This property can be managed from the Form settings, but it cannot be moved or deleted independent of the form. You can configure various &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/rules/&#34;&gt;difficulty rules&lt;/a&gt; for the captcha property and they will be taken into account when performing Form security check prior to forwarding the submission.&lt;/p&gt;
-&lt;h2&gt;Settings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;settings&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;settings&#34;&gt;Settings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;settings&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#settings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;We&amp;rsquo;ll go through all form settings that you can change.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/form-settings-all.png&#34; alt=&#34;Property settings&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h3&gt;URL&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;url&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;url&#34;&gt;URL&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;url&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#url&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This is where the actual form submissions will be forwarded after the captcha verification and other security (e.g. rate limiting) applied.&lt;/p&gt;
-&lt;h3&gt;Method&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;method&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;method&#34;&gt;Method&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;method&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#method&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You can select one of the standard HTTP methods: &lt;code&gt;POST&lt;/code&gt; (default), &lt;code&gt;PUT&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt; and &lt;code&gt;PATCH&lt;/code&gt;. All forms use &lt;code&gt;POST&lt;/code&gt; by default for forwarding requests.&lt;/p&gt;
-&lt;h3&gt;Requests per minute&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;requests-per-minute&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;requests-per-minute&#34;&gt;Requests per minute&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;requests-per-minute&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#requests-per-minute&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You can limit how many requests can be forwarded to your destination each minute (default is &lt;code&gt;10&lt;/code&gt;). Submissions exceeding this limit will be rejected with &lt;code&gt;429&lt;/code&gt; (Too Many Requests). Each configuration includes &amp;ldquo;burst&amp;rdquo; which is set to &lt;code&gt;RPM + 10&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;Retry&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;retry&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;retry&#34;&gt;Retry&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;retry&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#retry&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You can optionally configure requests to be retried when the endpoint returns &lt;code&gt;5xx&lt;/code&gt; HTTP error code or network connection problems occurred. Retries are attempted after a delay.&lt;/p&gt;
-&lt;h2&gt;Integration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;integration&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;integration&#34;&gt;Integration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;integration&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#integration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can integrate this with a number of form backend services:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://forminit.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FormInit&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://forminit.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FormInit&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; (formerly Getform)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://formspree.io/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Formspree&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://formspree.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Formspree&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; - general backend&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://formsubmit.co/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FormSubmit&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://formsubmit.co/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FormSubmit&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; - email forwarding&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.formspark.io/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FormSpark&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.formspark.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FormSpark&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; - email forwarding&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://usebasin.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Basin&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://usebasin.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Basin&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.staticforms.dev/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StaticForms&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.staticforms.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StaticForms&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;And any other automation software like &lt;a href=&#34;https://n8n.io/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;N8N&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;p&gt;And any other automation software like &lt;a href=&#34;https://n8n.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;N8N&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
-&lt;/svg&gt;&lt;/a&gt; or &lt;a href=&#34;https://www.make.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Make&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;/svg&gt;&lt;/a&gt; or &lt;a href=&#34;https://www.make.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Make&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Setup&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;setup&#34;&gt;Setup&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#setup&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h3&gt;Create form in the provider&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-form-in-the-provider&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;create-form-in-the-provider&#34;&gt;Create form in the provider&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-form-in-the-provider&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#create-form-in-the-provider&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the provider of your choice create a new form. Note the form URL they give you.&lt;/p&gt;
-&lt;p&gt;In N8N/Make it will be the &lt;a href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;webhook&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;p&gt;In N8N/Make it will be the &lt;a href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;webhook&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; URL.&lt;/p&gt;
-&lt;h3&gt;Create Form Proxy&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-form-proxy&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;create-form-proxy&#34;&gt;Create Form Proxy&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-form-proxy&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#create-form-proxy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In Private Captcha portal create a new Form Proxy. Use that provider&amp;rsquo;s URL in the &lt;a href=&#34;#url&#34;&gt;URL&lt;/a&gt; field.&lt;/p&gt;
-&lt;h3&gt;Use proxy URL in your form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;use-proxy-url-in-your-form&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;use-proxy-url-in-your-form&#34;&gt;Use proxy URL in your form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;use-proxy-url-in-your-form&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#use-proxy-url-in-your-form&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In your actual website, use something like:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -116,19 +116,19 @@
 &lt;/div&gt;
 &lt;p&gt;You will get an exact snippet you need to use after you&amp;rsquo;ve created the form.&lt;/p&gt;
 &lt;/div&gt;
-&lt;h2&gt;Limits&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;limits&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#limits&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Billing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;billing&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;limits&#34;&gt;Limits&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;limits&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#limits&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;billing&#34;&gt;Billing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;billing&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#billing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Forms limits are tied to property limits. Each form submission requires a valid captcha puzzle (and a solution). So number of forms is limited by the number of properties in your account and number of submissions is limited to the number of requests included for your properties.&lt;/p&gt;
-&lt;h3&gt;Technical&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;technical&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;technical&#34;&gt;Technical&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;technical&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#technical&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The only accepted inbound form type is &lt;code&gt;application/x-www-form-urlencoded&lt;/code&gt; (&lt;code&gt;multipart/form-data&lt;/code&gt; or &lt;em&gt;any&lt;/em&gt; other forms are not accepted).&lt;/p&gt;
 &lt;p&gt;Form size is currently limited to &lt;code&gt;1 MB&lt;/code&gt; max and will likely be reduced in future.&lt;/p&gt;
 &lt;p&gt;The only HTTP method available for inbound requests is &lt;code&gt;POST&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Redirects are treated as errors.&lt;/p&gt;
-&lt;h3&gt;Deactivation&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;deactivation&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;deactivation&#34;&gt;Deactivation&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;deactivation&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#deactivation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Form will be deactivated in case of multiple sequential failures. You will receive an email notification in such case.&lt;/p&gt;
 &lt;p&gt;Form is &lt;em&gt;not&lt;/em&gt; immediately deactivated in case of requests limits violation (e.g. traffic spike). However, you will be contacted by support.&lt;/p&gt;
-&lt;h2&gt;Privacy&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;privacy&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#privacy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Form submissions are not persisted in &lt;strong&gt;any&lt;/strong&gt; storage, not logged, and are available on our servers only in transit. You have an option to sign the &lt;a href=&#34;https://privatecaptcha.com/legal/dpa&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DPA&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;h2 data-hextra-search-id=&#34;privacy&#34;&gt;Privacy&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;privacy&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#privacy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Form submissions are not persisted in &lt;strong&gt;any&lt;/strong&gt; storage, not logged, and are available on our servers only in transit. You have an option to sign the &lt;a href=&#34;https://privatecaptcha.com/legal/dpa&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DPA&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;
 
@@ -149,16 +149,16 @@
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rules-example.png&#34; title=&#34;Example of a couple of difficulty rules&#34; alt=&#34;Difficulty rules example&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example of a couple of difficulty rules&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h2&gt;Building a Difficulty rule&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;building-a-difficulty-rule&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;building-a-difficulty-rule&#34;&gt;Building a Difficulty rule&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;building-a-difficulty-rule&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#building-a-difficulty-rule&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Difficulty rule consists of two parts: &lt;strong&gt;Condition&lt;/strong&gt; and &lt;strong&gt;Action&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-structure.png&#34; title=&#34;Structure of the difficulty rule&#34; alt=&#34;Difficulty rules structure&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Structure of the difficulty rule&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Condition and Action have different background colors in the list of rules and in the rule builder.&lt;/p&gt;
-&lt;h3&gt;Conditions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;conditions&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;conditions&#34;&gt;Conditions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;conditions&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#conditions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Conditions consist of the property of the request being matched, an operator that is applied to that property and a value it is matched against.&lt;/p&gt;
-&lt;h4&gt;User Agent&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;user-agent&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;user-agent&#34;&gt;User Agent&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;user-agent&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#user-agent&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Standard condition is the condition that matches &lt;code&gt;User-Agent&lt;/code&gt; HTTP header using the following operators:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Equals&lt;/li&gt;
@@ -173,13 +173,14 @@
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-user-agent.png&#34; title=&#34;Example: match all &amp;#39;curl&amp;#39; requests&#34; alt=&#34;Difficulty rules User Agent&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: match all &amp;#39;curl&amp;#39; requests&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h4&gt;Traffic Source&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;traffic-source&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#traffic-source&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;h4 data-hextra-search-id=&#34;traffic-source&#34;&gt;Traffic Source&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;traffic-source&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#traffic-source&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;This condition is available &lt;strong&gt;only&lt;/strong&gt; in SaaS version of Private Captcha at &lt;em&gt;privatecaptcha.com&lt;/em&gt;. It is not available in the self-hosted version.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;This condition is available &lt;strong&gt;only&lt;/strong&gt; in SaaS version of Private Captcha at &lt;em&gt;privatecaptcha.com&lt;/em&gt;. It is not available in the self-hosted version.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Traffic sources are IP ranges maintained by &lt;em&gt;privatecaptcha.com&lt;/em&gt; service and consist of the following lists:&lt;/p&gt;
@@ -200,7 +201,7 @@
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-traffic-source.png&#34; title=&#34;Example: match requests from Public Cloud providers, VPN and CDNs&#34; alt=&#34;Difficulty rules Traffic Source&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: match requests from Public Cloud providers, VPN and CDNs&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h4&gt;IP Address&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;ip-address&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;ip-address&#34;&gt;IP Address&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;ip-address&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#ip-address&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;You can match standard IP addresses using standard CIDR notation with a list of up to &lt;code&gt;10&lt;/code&gt; comma-separated prefixes. Both IPv4 and IPv6 addresses work. Supported operators:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Matches&lt;/li&gt;
@@ -212,27 +213,28 @@
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-ip-address.png&#34; title=&#34;Example: match local networks&#34; alt=&#34;Difficulty rules IP address&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: match local networks&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h4&gt;Country&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;country&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;country&#34;&gt;Country&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;country&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#country&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Detected country of the request, available as a list of countries.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-country.png&#34; title=&#34;Example: match suspicious requests from Antarctica&#34; alt=&#34;Difficulty rules Country&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: match suspicious requests from Antarctica&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h4&gt;HTTP Header&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;http-header&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;http-header&#34;&gt;HTTP Header&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;http-header&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#http-header&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Match if the request has (or has not) one of up to &lt;code&gt;10&lt;/code&gt; comma-separated HTTP headers.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-header.png&#34; title=&#34;Example: match requests from Cloudflare Workers&#34; alt=&#34;Difficulty rules HTTP header&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: match requests from Cloudflare Workers&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h4&gt;Browser version&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;browser-version&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#browser-version&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+&lt;h4 data-hextra-search-id=&#34;browser-version&#34;&gt;Browser version&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;browser-version&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#browser-version&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;warning&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Warning&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Browser version is parsed from &lt;code&gt;User-Agent&lt;/code&gt; which is ultimately spoofable. So don&amp;rsquo;t rely on it alone.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Browser version is parsed from &lt;code&gt;User-Agent&lt;/code&gt; which is ultimately spoofable. So don&amp;rsquo;t rely on it alone.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Match if browser version differs from the latest version by this much. Useful, because scrapers/bots frequently use outdated browsers.&lt;/p&gt;
@@ -240,38 +242,39 @@
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-old-browser.png&#34; title=&#34;Example: match browsers which are trailing latest release by more than 5 major versions&#34; alt=&#34;Difficulty rules structure&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: match browsers which are trailing latest release by more than 5 major versions&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h4&gt;Always&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;always&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;always&#34;&gt;Always&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;always&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#always&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;There&amp;rsquo;s a simple &amp;ldquo;Always&amp;rdquo; condition that always matches all requests. For example, if you need to quickly apply a rule over the organization to all properties.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-always.png&#34; title=&#34;Example: always apply this rule&#34; alt=&#34;Difficulty rules always&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: always apply this rule&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h3&gt;Actions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;actions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#actions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+&lt;h3 data-hextra-search-id=&#34;actions&#34;&gt;Actions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;actions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#actions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;warning&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Warning&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;When few conditions match and have the same action type, only the last modification counts.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;When few conditions match and have the same action type, only the last modification counts.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Actions typically mean adjusting the puzzle difficulty or blocking the request completely. Also here you can decide on the control flow if to keep processing the other difficulty rules after this one.&lt;/p&gt;
-&lt;h4&gt;Difficulty level&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;difficulty-level&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;difficulty-level&#34;&gt;Difficulty level&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;difficulty-level&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#difficulty-level&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Difficulty of the puzzle can be adjusted in percents (&lt;code&gt;%&lt;/code&gt;) where percents mean &amp;ldquo;resources&amp;rdquo;. So &lt;code&gt;+100%&lt;/code&gt; adjustment means puzzle will require &lt;code&gt;100%&lt;/code&gt; more compute resources to complete. This adjustment is applied on top of the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings/#base-difficulty&#34;&gt;Base difficulty&lt;/a&gt; and &lt;strong&gt;not&lt;/strong&gt; the final difficulty. It means that on top of that automatic difficulty scaling will take place. You can both increase and decrease difficulty using this action.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-level.png&#34; title=&#34;Example: require &amp;#43;50% more compute resources&#34; alt=&#34;Difficulty rules Level&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: require &amp;#43;50% more compute resources&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h4&gt;Difficulty growth&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;difficulty-growth&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;difficulty-growth&#34;&gt;Difficulty growth&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;difficulty-growth&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#difficulty-growth&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings/#difficulty-growth&#34;&gt;Difficulty growth&lt;/a&gt; (how reactive is automatic difficulty scaling to changes in requests) can be adjusted to any valid level here.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-growth.png&#34; title=&#34;Example: change difficulty growth to &amp;#39;Fast&amp;#39; for this request&#34; alt=&#34;Difficulty rules Growth&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: change difficulty growth to &amp;#39;Fast&amp;#39; for this request&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h4&gt;Block request&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;block-request&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;block-request&#34;&gt;Block request&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;block-request&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#block-request&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;You can simply block the request, ultimately meaning that form submission will never pass CAPTCHA &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/verify-api/&#34;&gt;verification&lt;/a&gt; (because there will be no CAPTCHA solution in the first place).&lt;/p&gt;
 &lt;p&gt;Note that blocking the request automatically means that following rules will not be processed (like if you clicked &lt;em&gt;&amp;ldquo;Stop processing following rules&amp;rdquo;&lt;/em&gt; on any other rule action).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
@@ -279,35 +282,36 @@
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-block.png&#34; title=&#34;Example: block CAPTCHA request completely&#34; alt=&#34;Difficulty rules Block&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: block CAPTCHA request completely&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h4&gt;Break / noop&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;break--noop&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;break--noop&#34;&gt;Break / noop&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;break--noop&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#break--noop&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;There&amp;rsquo;s a &lt;code&gt;break&lt;/code&gt; semantics control flow that allows you to stop processing following rules without any action. This preserves any previous modifiers made by matching rules.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-break.png&#34; title=&#34;Example: &amp;#39;break&amp;#39; from rules&#34; alt=&#34;Difficulty rules Break&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: &amp;#39;break&amp;#39; from rules&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h2&gt;Priority and conflict resolution&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;priority-and-conflict-resolution&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#priority-and-conflict-resolution&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Ordering&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;ordering&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;priority-and-conflict-resolution&#34;&gt;Priority and conflict resolution&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;priority-and-conflict-resolution&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#priority-and-conflict-resolution&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;ordering&#34;&gt;Ordering&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;ordering&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#ordering&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Rules are always applied top to bottom (both for properties and organizations). Ordering of the rules matter and you can always change it using &amp;ldquo;Reorder&amp;rdquo; button.&lt;/p&gt;
-&lt;h3&gt;Organization vs Property&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;organization-vs-property&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#organization-vs-property&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+&lt;h3 data-hextra-search-id=&#34;organization-vs-property&#34;&gt;Organization vs Property&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;organization-vs-property&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#organization-vs-property&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;warning&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Warning&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Property-level rules will be applied to the request &lt;strong&gt;before&lt;/strong&gt; Organization rules. Selecting &lt;em&gt;&amp;ldquo;Stop processing following rules&amp;rdquo;&lt;/em&gt; in Property rule only applies to property-level rules.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Property-level rules will be applied to the request &lt;strong&gt;before&lt;/strong&gt; Organization rules. Selecting &lt;em&gt;&amp;ldquo;Stop processing following rules&amp;rdquo;&lt;/em&gt; in Property rule only applies to property-level rules.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;All rules defined on the Organization level will &lt;strong&gt;always&lt;/strong&gt; apply to all properties in that organization. This is a very convenient way to manage rules of many properties at once.&lt;/p&gt;
-&lt;h3&gt;Multiple applied rules&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;multiple-applied-rules&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;multiple-applied-rules&#34;&gt;Multiple applied rules&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;multiple-applied-rules&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#multiple-applied-rules&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;When the request is matched to a few rules and same action is applied (e.g. &lt;code&gt;Difficulty level&lt;/code&gt; adjustment, but with different values), only last modification is preserved (aka &lt;em&gt;&amp;ldquo;last-write wins&amp;rdquo;&lt;/em&gt;).&lt;/p&gt;
-&lt;h2&gt;Reports&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;reports&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;reports&#34;&gt;Reports&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;reports&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#reports&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Usage reports are available only on property level and show how many times property rules were triggered.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-reports.png&#34; alt=&#34;Difficulty rules reports&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h2&gt;Recommendations&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;recommendations&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;recommendations&#34;&gt;Recommendations&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;recommendations&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#recommendations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;It is recommended to make use of &lt;a href=&#34;#traffic-source&#34;&gt;Traffic Source&lt;/a&gt; (cover at least Cloud providers, Search/Crawlers and &amp;ldquo;Threat&amp;rdquo; lists) and bot &lt;a href=&#34;#user-agent&#34;&gt;User-Agent&lt;/a&gt; right away as those are very classical spammers/abusers.&lt;/p&gt;
 &lt;p&gt;You can also change both &lt;a href=&#34;#difficulty-growth&#34;&gt;Growth&lt;/a&gt; and &lt;a href=&#34;#difficulty-levels&#34;&gt;Level&lt;/a&gt; independently as they help each other and do not conflict.&lt;/p&gt;
-&lt;h2&gt;Limits&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;limits&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;limits&#34;&gt;Limits&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;limits&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#limits&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SaaS version of &lt;a href=&#34;privatecaptcha.com&#34;&gt;Private Captcha&lt;/a&gt; has different limits for number of Organization-level and Property-level rules (subject to having specific add-ons). By default every Property has 1 rule included.&lt;/p&gt;
 &lt;p&gt;Self-hosted version (&lt;em&gt;&amp;ldquo;Enterprise Edition&amp;rdquo;&lt;/em&gt;) has no rule limit, while &lt;em&gt;&amp;ldquo;Community Edition&amp;rdquo;&lt;/em&gt; does not have the rules feature at all.&lt;/p&gt;
 
@@ -323,18 +327,19 @@
       <description>
         
         
-        &lt;p&gt;It is possible for customers to use their own domains names (subdomains or vanity) with Private Captcha SaaS (at &lt;a href=&#34;https://privatecaptcha.com&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://privatecaptcha.com&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;p&gt;It is possible for customers to use their own domains names (subdomains or vanity) with Private Captcha SaaS (at &lt;a href=&#34;https://privatecaptcha.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://privatecaptcha.com&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;) services. For example, a customer may want to use a domain like &lt;code&gt;captcha.customer.com&lt;/code&gt; to point to &lt;code&gt;api.privatecaptcha.com&lt;/code&gt; so that captcha widget does not contact &lt;em&gt;any&lt;/em&gt; other domains except of those of the customer. This is possible to achieve using DNS proxying (also known as &lt;em&gt;&amp;ldquo;CNAME proxy&amp;rdquo;&lt;/em&gt;).&lt;/p&gt;
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;This feature does not apply to the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/quickstart/&#34;&gt;self-hosted&lt;/a&gt; version, which &lt;strong&gt;always&lt;/strong&gt; uses &amp;ldquo;custom&amp;rdquo; DNS.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;This feature does not apply to the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/deployment/quickstart/&#34;&gt;self-hosted&lt;/a&gt; version, which &lt;strong&gt;always&lt;/strong&gt; uses &amp;ldquo;custom&amp;rdquo; DNS.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;How it works&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;how-it-works&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;how-it-works&#34;&gt;How it works&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;how-it-works&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#how-it-works&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To make this setup work we need two DNS changes: one on customer side and one on Private Captcha SaaS side. Customer can point their own domains via domain name registar to &lt;code&gt;api.privatecaptcha.com&lt;/code&gt; and we handle similar setup on our side. As a result, when end-user visits customer&amp;rsquo;s website, all interaction with &lt;code&gt;*.privatecaptcha.com&lt;/code&gt; domains is fully transparent to them.&lt;/p&gt;
 &lt;div role=&#34;img&#34; aria-label=&#34;Diagram&#34;&gt;
   &lt;pre class=&#34;mermaid hx:mt-6&#34;&gt;
@@ -354,9 +359,9 @@
     Note over User,API: ✓ User only sees customer.com domain
   &lt;/pre&gt;
 &lt;/div&gt;&lt;p&gt;You can also verify puzzle solutions against the same configured domain, but, on the backend, this has little value.&lt;/p&gt;
-&lt;h2&gt;Step-by-step setup&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;step-by-step-setup&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;step-by-step-setup&#34;&gt;Step-by-step setup&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;step-by-step-setup&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#step-by-step-setup&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h3&gt;Add new DNS records&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-new-dns-records&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;add-new-dns-records&#34;&gt;Add new DNS records&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-new-dns-records&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#add-new-dns-records&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;With your domain name registar (or DNS provider), setup:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;a TXT record with a secret token to prove domain ownership.&lt;/li&gt;
@@ -367,23 +372,24 @@
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/dns-proxy-cloudflare.png&#34; title=&#34;In CloudFlare use &amp;#39;DNS only&amp;#39; record type&#34; alt=&#34;CloudFlare example&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;In CloudFlare use &amp;#39;DNS only&amp;#39; record type&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h3&gt;Setup DNS proxy in Portal&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup-dns-proxy-in-portal&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#setup-dns-proxy-in-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;h3 data-hextra-search-id=&#34;setup-dns-proxy-in-portal&#34;&gt;Setup DNS proxy in Portal&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup-dns-proxy-in-portal&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#setup-dns-proxy-in-portal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;&amp;ldquo;DNS Proxy&amp;rdquo; functionality requires to have an add-on purchased via the &lt;code&gt;Billing&lt;/code&gt; settings.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;&amp;ldquo;DNS Proxy&amp;rdquo; functionality requires to have an add-on purchased via the &lt;code&gt;Billing&lt;/code&gt; settings.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Go to the &lt;a href=&#34;https://portal.privatecaptcha.com&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Private Captcha Portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;p&gt;Go to the &lt;a href=&#34;https://portal.privatecaptcha.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Private Captcha Portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; and navigate to &lt;code&gt;Settings -&amp;gt; DNS Proxy&lt;/code&gt;. Enter you domain and select the same endpoint (Global/EU) that you added in the previous step with your DNS provider.&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/dns-proxy-domain.png&#34; title=&#34;Enter your domain and select Global/EU endpoint&#34; alt=&#34;DNS proxy setup in private captcha&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Enter your domain and select Global/EU endpoint&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;h3&gt;Update widget snippet&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;update-widget-snippet&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;update-widget-snippet&#34;&gt;Update widget snippet&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;update-widget-snippet&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#update-widget-snippet&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The last step is to update the widget to fetch puzzles via your domain. To achieve that you need to set &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34;&gt;&lt;code&gt;data-puzzle-endpoint&lt;/code&gt; attribute&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -405,13 +411,14 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Testing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;testing&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#testing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;h2 data-hextra-search-id=&#34;testing&#34;&gt;Testing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;testing&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#testing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;DNS changes (on both sides!) can take up to 24 hours to propagate.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;DNS changes (on both sides!) can take up to 24 hours to propagate.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;You can test this locally using a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/testing/&#34;&gt;test puzzle&lt;/a&gt;:&lt;/p&gt;
@@ -443,14 +450,15 @@
       <description>
         
         
-        &lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+        &lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;API is also available &lt;a href=&#34;https://petstore.swagger.io/?url=https://raw.githubusercontent.com/PrivateCaptcha/PrivateCaptcha/refs/heads/main/docs/openapi.yaml&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;API is also available &lt;a href=&#34;https://petstore.swagger.io/?url=https://raw.githubusercontent.com/PrivateCaptcha/PrivateCaptcha/refs/heads/main/docs/openapi.yaml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; as Swagger / OpenAPI definition.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;This reference documentation describes the Portal API for Private Captcha, which allows for the management of organizations, properties, and asynchronous tasks.&lt;/p&gt;
@@ -464,7 +472,7 @@
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;h2&gt;Authentication&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;authentication&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;authentication&#34;&gt;Authentication&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;authentication&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#authentication&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;All endpoints in this section require an API key with the &lt;em&gt;&amp;ldquo;Portal operations&amp;rdquo;&lt;/em&gt; scope. This key must be sent in the &lt;code&gt;X-API-Key&lt;/code&gt; header.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example Header:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
@@ -481,7 +489,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Response structure&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;response-structure&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;response-structure&#34;&gt;Response structure&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;response-structure&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#response-structure&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;All API responses follow a standard JSON structure containing &lt;code&gt;meta&lt;/code&gt;, &lt;code&gt;data&lt;/code&gt;, and optional &lt;code&gt;pagination&lt;/code&gt; objects.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -535,7 +543,7 @@
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3&gt;Status codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;status-codes&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;status-codes&#34;&gt;Status codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;status-codes&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#status-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
   &lt;summary class=&#34;hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[&#39;&#39;] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90&#34;&gt;
     &lt;strong class=&#34;hx:text-lg&#34;&gt;Common status codes (10xx)&lt;/strong&gt;
@@ -874,8 +882,8 @@
 &lt;/table&gt;
   &lt;/div&gt;
 &lt;/details&gt;
-&lt;h2&gt;Organizations&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;organizations&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#organizations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Get User Organizations&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;get-user-organizations&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;organizations&#34;&gt;Organizations&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;organizations&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#organizations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;get-user-organizations&#34;&gt;Get User Organizations&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;get-user-organizations&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#get-user-organizations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Retrieves a list of all organizations owned by the authenticated user.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;GET&lt;/code&gt;&lt;/li&gt;
@@ -932,7 +940,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h3&gt;Create Organization&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-organization&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;create-organization&#34;&gt;Create Organization&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-organization&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#create-organization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Creates a new organization for the user. Note that the &lt;code&gt;id&lt;/code&gt; field in the input must be empty.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;POST&lt;/code&gt;&lt;/li&gt;
@@ -989,7 +997,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h3&gt;Update Organization&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;update-organization&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;update-organization&#34;&gt;Update Organization&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;update-organization&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#update-organization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Updates an existing organization. Only the owner can perform this action.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;PUT&lt;/code&gt;&lt;/li&gt;
@@ -1046,7 +1054,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h3&gt;Delete Organization&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;delete-organization&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;delete-organization&#34;&gt;Delete Organization&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;delete-organization&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#delete-organization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Deletes an existing organization. Only the owner can perform this action.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;DELETE&lt;/code&gt;&lt;/li&gt;
@@ -1099,8 +1107,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Properties&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;properties&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#properties&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Get Org Properties&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;get-org-properties&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;properties&#34;&gt;Properties&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;properties&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#properties&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;get-org-properties&#34;&gt;Get Org Properties&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;get-org-properties&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#get-org-properties&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Lists properties associated with a specific organization. This endpoint supports pagination.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;GET&lt;/code&gt;&lt;/li&gt;
@@ -1168,7 +1176,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h3&gt;Get Property details&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;get-property-details&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;get-property-details&#34;&gt;Get Property details&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;get-property-details&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#get-property-details&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Retrieves detailed settings for a specific property.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;GET&lt;/code&gt;&lt;/li&gt;
@@ -1297,7 +1305,7 @@
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3&gt;Create Properties (Async)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-properties-async&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;create-properties-async&#34;&gt;Create Properties (Async)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-properties-async&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#create-properties-async&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Triggers an asynchronous task to create a batch of properties (up to 128). It returns a task ID that can be used to check the status.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;POST&lt;/code&gt;&lt;/li&gt;
@@ -1349,7 +1357,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h3&gt;Update Properties (Async)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;update-properties-async&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;update-properties-async&#34;&gt;Update Properties (Async)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;update-properties-async&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#update-properties-async&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Triggers an asynchronous task to update a batch of properties.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;PUT&lt;/code&gt;&lt;/li&gt;
@@ -1401,7 +1409,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h3&gt;Delete Properties (Async)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;delete-properties-async&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;delete-properties-async&#34;&gt;Delete Properties (Async)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;delete-properties-async&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#delete-properties-async&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Triggers an asynchronous task to delete a batch of properties.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;DELETE&lt;/code&gt;&lt;/li&gt;
@@ -1453,8 +1461,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Async Tasks&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;async-tasks&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#async-tasks&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Get Task details&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;get-task-details&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;async-tasks&#34;&gt;Async Tasks&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;async-tasks&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#async-tasks&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;get-task-details&#34;&gt;Get Task details&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;get-task-details&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#get-task-details&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Retrieves the current status and results of an asynchronous task.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; &lt;code&gt;GET&lt;/code&gt;&lt;/li&gt;
@@ -1521,23 +1529,23 @@
       <description>
         
         
-        &lt;h2&gt;Client side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#client-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Content-Security-Policy Settings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;content-security-policy-settings&#34;&gt;&lt;/span&gt;
+        &lt;h2 data-hextra-search-id=&#34;client-side&#34;&gt;Client side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#client-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;content-security-policy-settings&#34;&gt;Content-Security-Policy Settings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;content-security-policy-settings&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#content-security-policy-settings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/eu-isolation/&#34;&gt;EU Isolation&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;You need to add &lt;code&gt;https://privatecaptcha.com&lt;/code&gt;, &lt;code&gt;https://*.privatecaptcha.com&lt;/code&gt; to &lt;code&gt;script-src&lt;/code&gt;, &lt;code&gt;frame-src&lt;/code&gt;, &lt;code&gt;style-src&lt;/code&gt;, &lt;code&gt;connect-src&lt;/code&gt; and &lt;code&gt;wasm-unsafe-eval&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Do &lt;strong&gt;not&lt;/strong&gt; hard-code specific subdomains, like &lt;code&gt;api.privatecaptcha.com&lt;/code&gt;, into your CSP.&lt;/p&gt;
-&lt;h3&gt;Widget display mode&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;widget-display-mode&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;widget-display-mode&#34;&gt;Widget display mode&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;widget-display-mode&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#widget-display-mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Usual &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34;&gt;widget type&lt;/a&gt; (&lt;code&gt;data-display-mode=&amp;quot;widget&amp;quot;&lt;/code&gt;) is the safest option.&lt;/p&gt;
 &lt;p&gt;Equally secure is using a popup widget &lt;strong&gt;IF&lt;/strong&gt; it has &lt;code&gt;data-start-mode=&amp;quot;click&amp;quot;&lt;/code&gt;, thus forcing user to click the widget in the popup. Using popup widget with &lt;code&gt;auto&lt;/code&gt; start mode (the default) is not the most secure option and is &lt;strong&gt;not recommended&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;When you &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/invisible-captcha/&#34;&gt;hide the widget&lt;/a&gt; using &lt;code&gt;data-display-mode=&amp;quot;hidden&amp;quot;&lt;/code&gt;, security of the CAPTCHA protection depends entirely on your implementation. For example, if you start solving captcha automatically (instead of somehow forcing user to click on something), it is relatively similar for bots to having no captcha at all (sans the resource cost of proof-of-work).&lt;/p&gt;
-&lt;h3&gt;Widget script (CDN)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;widget-script-cdn&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;widget-script-cdn&#34;&gt;Widget script (CDN)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;widget-script-cdn&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#widget-script-cdn&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Make sure that you are &lt;strong&gt;not&lt;/strong&gt; serving the Private Captcha widget yourself (especially relevant for various WordPress caching plugins) and your website is &lt;em&gt;always&lt;/em&gt; loading widget from &lt;code&gt;cdn.privatecaptcha.com&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;Localhost access&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;localhost-access&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;localhost-access&#34;&gt;Localhost access&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;localhost-access&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#localhost-access&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Make sure that &lt;em&gt;&amp;ldquo;Allow localhost&amp;rdquo;&lt;/em&gt; is &lt;strong&gt;not&lt;/strong&gt; enabled in &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings/&#34;&gt;Property settings&lt;/a&gt; for the &amp;ldquo;production&amp;rdquo; sitekey. It is acceptable only for the development version of the property (which you should use).&lt;/p&gt;
-&lt;h3&gt;Sitekey rotation&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;sitekey-rotation&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;sitekey-rotation&#34;&gt;Sitekey rotation&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;sitekey-rotation&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#sitekey-rotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Usually you do not need to rotate the &lt;strong&gt;client&lt;/strong&gt; widget sitekey.&lt;/p&gt;
-&lt;h2&gt;Server side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#server-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Verification&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;verification&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;server-side&#34;&gt;Server side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#server-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;verification&#34;&gt;Verification&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;verification&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#verification&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;All &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;server-side integrations&lt;/a&gt; have some kind of a &lt;code&gt;Verify(solution)&lt;/code&gt; method that returns an object that has a method &lt;code&gt;OK()&lt;/code&gt;. This is the only method you should be checking to see if CAPTCHA solution is valid. If the result is &lt;code&gt;false&lt;/code&gt;, you can get more details by checking underlying fields &lt;code&gt;Success&lt;/code&gt; and &lt;code&gt;Code&lt;/code&gt; (for debugging purposes only).&lt;/p&gt;
 &lt;p&gt;All &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;server-side integrations&lt;/a&gt; allow you to specify an optional &lt;code&gt;sitekey&lt;/code&gt; parameter with each verification request. This is the sitekey that you are expected to check the solution against and, while being optional, is recommended to make use of.&lt;/p&gt;
 &lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
@@ -1551,9 +1559,9 @@
 &lt;/blockquote&gt;
   &lt;/div&gt;
 &lt;/details&gt;
-&lt;h3&gt;Client libraries&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-libraries&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;client-libraries&#34;&gt;Client libraries&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-libraries&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#client-libraries&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Make sure to automatically update your client library version for Private Captcha (e.g. using Renovate or Dependabot). Safe option is to have a &amp;ldquo;stability days&amp;rdquo; buffer (e.g. 7 days) before automatically merging updates.&lt;/p&gt;
-&lt;h3&gt;API key rotation&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;api-key-rotation&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;api-key-rotation&#34;&gt;API key rotation&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;api-key-rotation&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#api-key-rotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each API key that you use for the &lt;strong&gt;server-side&lt;/strong&gt; validation, has an expiration date and will either expire or will have to be rotated. You should receive an email notification before your API key is expired.&lt;/p&gt;
 &lt;p&gt;When you rotate an API key, it gets invalidated/replaced &lt;em&gt;almost&lt;/em&gt; immediately (taking into account few minutes for DB cache / replication).&lt;/p&gt;
 
@@ -1569,44 +1577,45 @@
       <description>
         
         
-        &lt;p&gt;Protection of a website or a form starts with creating a property in the &lt;a href=&#34;https://portal.privatecaptcha.com&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;p&gt;Protection of a website or a form starts with creating a property in the &lt;a href=&#34;https://portal.privatecaptcha.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;. Property corresponds to a single CAPTCHA widget - it can be used on a website, a particular web page, form, subdomain etc. Property is identified by a Site Key, which looks like &lt;code&gt;aaaaaaaabbbbccccddddeeeeeeeeeeee&lt;/code&gt;. Site Key is used in the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34;&gt;widget initialization&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;ll go through all property settings that you can change.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/property-settings.png&#34; alt=&#34;Property settings&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h2&gt;Domain&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;domain&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;domain&#34;&gt;Domain&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;domain&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#domain&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/integrations/new-wordpress-site.png&#34; alt=&#34;Enter name and domain&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;You set domain when you create the property in the Portal. You can change the property name, but you &lt;strong&gt;cannot&lt;/strong&gt; change Domain in settings.&lt;/p&gt;
-&lt;h3&gt;Subdomains&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;subdomains&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;subdomains&#34;&gt;Subdomains&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;subdomains&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#subdomains&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/property-settings-subdomains.png&#34; alt=&#34;Property settings subdomains&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;By default CAPTCHA requests are only allowed on the domain that you used to create the property. If you created property with domain &lt;code&gt;example.com&lt;/code&gt;, then you cannot use the same widget on &lt;code&gt;portal.example.com&lt;/code&gt;. However, if you enable &lt;em&gt;&amp;ldquo;Allow subdomains&amp;rdquo;&lt;/em&gt; checkbox, all subdomains are allowed.&lt;/p&gt;
-&lt;h3&gt;Localhost&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;localhost&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;localhost&#34;&gt;Localhost&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;localhost&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#localhost&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/property-settings-localhost.png&#34; alt=&#34;Property settings localhost&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;In the lieu of the &amp;ldquo;Subdomains&amp;rdquo; logic, localhost access (for development) is also not allowed by default (in that case anybody can use your property Site Key locally). But you can temporarily enable &lt;em&gt;&amp;ldquo;Allow localhost&amp;rdquo;&lt;/em&gt; for development purposes. In that case you will have a &amp;ldquo;testing&amp;rdquo; label added to your property.&lt;/p&gt;
-&lt;h2&gt;Challenge verification&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;challenge-verification&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;challenge-verification&#34;&gt;Challenge verification&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;challenge-verification&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#challenge-verification&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There&amp;rsquo;re 2 important settings in this section:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/property-settings-verification.png&#34; alt=&#34;Property settings verification&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h3&gt;Verification window&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;verification-window&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;verification-window&#34;&gt;Verification window&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;verification-window&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#verification-window&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Captcha challenges (or &amp;ldquo;puzzles&amp;rdquo;) have a validity period during which they can be &amp;ldquo;solved&amp;rdquo; and verified. You can set validity period from few minutes to a couple of days. If a CAPTCHA solution is checked outside of validity period, it&amp;rsquo;s considered invalid.&lt;/p&gt;
-&lt;h3&gt;Repeated solutions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;repeated-solutions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#repeated-solutions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;h3 data-hextra-search-id=&#34;repeated-solutions&#34;&gt;Repeated solutions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;repeated-solutions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#repeated-solutions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;This is an advanced setting that allows to build different applications out of Private Captcha API.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;This is an advanced setting that allows to build different applications out of Private Captcha API.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;By default you cannot submit a solution to the same CAPTCHA puzzle more than once. Second time it will be considered invalid. This is a protection against so called &amp;ldquo;replay attack&amp;rdquo;, where a malicious actor solves puzzle only once, but sends your form or accesses your page multiple times.&lt;/p&gt;
 &lt;p&gt;However, there are cases when you want to allow this. One example if when Private Captcha is used as a proxy in front of your website, like in the use-case of AI scrapers protection (or API endpoints protection). In such case when the user requests a webpage with a valid solution (solved challenge/puzzle), we want to grant them access, up to a certain number of times.&lt;/p&gt;
 &lt;p&gt;This is where the setting with the number of repeated solutions comes into play. If you set the value to, say, &lt;code&gt;5&lt;/code&gt;, it means user can solve the CAPTCHA puzzle once to access your resources &lt;code&gt;5&lt;/code&gt; times before being requested to pass another challenge. The exact number you want to use is the trade off between annoying your user base and protecting your resources against automated access or AI scrapers.&lt;/p&gt;
-&lt;h2&gt;Challenge difficulty&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;challenge-difficulty&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;challenge-difficulty&#34;&gt;Challenge difficulty&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;challenge-difficulty&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#challenge-difficulty&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Each CAPTCHA challenge has a certain &amp;ldquo;difficulty&amp;rdquo;. Difficulty corresponds to the amount of resource the client has to use in order to &amp;ldquo;solve&amp;rdquo; the challenge. The higher the difficulty, more resources are required to &amp;ldquo;solve&amp;rdquo; (pass) the challenge.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/property-settings-difficulty.png&#34; alt=&#34;Property settings difficulty&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Private Captcha offers dynamic (automatically scaled) difficulty out of the box in all plans. This means when there are more requests, the difficulty of each subsequent challenge will grow, and when there are less requests, it will fall back to base settings. This is the basis of the security of scale.&lt;/p&gt;
-&lt;h3&gt;Base difficulty&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;base-difficulty&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;base-difficulty&#34;&gt;Base difficulty&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;base-difficulty&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#base-difficulty&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This is the &amp;ldquo;default&amp;rdquo; challenge difficulty level when there are no user requests at all. You can test how does it feel using the playground right below those settings.&lt;/p&gt;
-&lt;h3&gt;Difficulty growth&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;difficulty-growth&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;difficulty-growth&#34;&gt;Difficulty growth&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;difficulty-growth&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#difficulty-growth&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;When user (or bots) requests to your resources (websites, forms, API) keep coming, Private Captcha automatically scales the difficulty. You have 3 options of how fast the difficulty changes based on the number of requests:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Constant&lt;/strong&gt; (difficulty does not change at all and the value you set will always be returned)&lt;/li&gt;
@@ -1614,15 +1623,15 @@
 &lt;li&gt;&lt;strong&gt;Normal&lt;/strong&gt; (default setting of difficulty growth)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Fast&lt;/strong&gt; (difficulty growth is very reactive and will grow faster as more requests come)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Challenge type&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;challenge-type&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#challenge-type&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Starting from version 1.45.0 (for self-hosted) and from October 2026 for SaaS, Private Captcha supports memory-hard challenges (via Argon2id hash). Default option will stay compute-hard (via Blake2b hash).&lt;/p&gt;
-&lt;h3&gt;Configuration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;configuration&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;challenge-type&#34;&gt;Challenge type&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;challenge-type&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#challenge-type&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Starting from version 1.45.0 (for self-hosted) and from October 2026 for SaaS, Private Captcha supports memory-hard challenges (via Argon2id hash). Default option will stay compute-hard (via Blake2b hash) and does not require &lt;em&gt;any&lt;/em&gt; extra changes.&lt;/p&gt;
+&lt;h3 data-hextra-search-id=&#34;configuration&#34;&gt;Configuration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;configuration&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#configuration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h4&gt;Property settings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;property-settings&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;property-settings&#34;&gt;Property settings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;property-settings&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#property-settings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Change challenge type to memory-hard version in the &lt;code&gt;Advanced&lt;/code&gt; section of property settings:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/property-challenge-type.png&#34; alt=&#34;Property challenge type&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Note that due ot caching, it might take a couple of minutes for the effect to propagate.&lt;/p&gt;
-&lt;h4&gt;Change client-side script&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;change-client-side-script&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;change-client-side-script&#34;&gt;Change client-side script&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;change-client-side-script&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#change-client-side-script&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Add &lt;code&gt;?v=ext&lt;/code&gt; to your script include:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -1645,7 +1654,7 @@
 &lt;p&gt;For WordPress/Magento2 you can select &amp;ldquo;Extended&amp;rdquo; script type in Private Captcha extension&amp;rsquo;s &lt;code&gt;Advanced&lt;/code&gt; settings.&lt;/p&gt;
 &lt;p&gt;Default &lt;code&gt;privatecaptcha.js&lt;/code&gt; script does &lt;strong&gt;not&lt;/strong&gt; include Argon2id implementation. It is only available via an &amp;ldquo;extended&amp;rdquo; script (received via either &lt;code&gt;privatecaptcha-ext.js&lt;/code&gt; or &lt;code&gt;privatecaptcha.js?v=ext&lt;/code&gt;). Extended script is a few KB &amp;ldquo;heavier&amp;rdquo; than the usual script.&lt;/p&gt;
 &lt;/div&gt;
-&lt;h3&gt;Availability&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;availability&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;availability&#34;&gt;Availability&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;availability&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#availability&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
 	&lt;thead&gt;
 			&lt;tr&gt;
@@ -1660,7 +1669,7 @@
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;SaaS&lt;/td&gt;
-					&lt;td&gt;Contact Support in &lt;a href=&#34;https://portal.privatecaptcha.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+					&lt;td&gt;Contact Support in &lt;a href=&#34;https://portal.privatecaptcha.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;&lt;/td&gt;
 			&lt;/tr&gt;
@@ -1681,8 +1690,8 @@
         
         
         &lt;p&gt;Captcha object is available as the &lt;code&gt;window.privateCaptcha.autoWidget&lt;/code&gt; or as attached via &lt;code&gt;data-store-variable&lt;/code&gt; &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/#data-store-variable&#34;&gt;attribute&lt;/a&gt;. It is also passed as the only parameter into all of the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/#callbacks&#34;&gt;callbacks&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Methods&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;methods&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#methods&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;solution()&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;solution&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;methods&#34;&gt;Methods&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;methods&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#methods&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;solution&#34;&gt;&lt;code&gt;solution()&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;solution&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#solution&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Returns the found solution. Can be used in &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/#callbacks&#34;&gt;callbacks&lt;/a&gt; for custom processing of the form.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
@@ -1715,8 +1724,8 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;&lt;code&gt;reset()&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;reset&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#reset&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Resets capcha widget to the initial state. Deletes found solution. Optionally can accept an object with options, that correspond to the &lt;code&gt;data&lt;/code&gt;-attributes, that are set on the widget itself. Please mind the &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset#name_conversion&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;name conversion&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;h3 data-hextra-search-id=&#34;reset&#34;&gt;&lt;code&gt;reset()&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;reset&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#reset&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Resets capcha widget to the initial state. Deletes found solution. Optionally can accept an object with options, that correspond to the &lt;code&gt;data&lt;/code&gt;-attributes, that are set on the widget itself. Please mind the &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset#name_conversion&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;name conversion&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; rules for &lt;code&gt;dataset&lt;/code&gt; attributes. For &lt;code&gt;popup&lt;/code&gt; display mode, &lt;code&gt;reset()&lt;/code&gt; will hide the widget.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
@@ -1736,7 +1745,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;&lt;code&gt;execute()&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;execute&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;execute&#34;&gt;&lt;code&gt;execute()&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;execute&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#execute&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Starts solving captcha puzzle, shows widget if needed (e.g. for display style &lt;code&gt;popup&lt;/code&gt;). Can be used instead of default handler for forms (make sure &lt;em&gt;not&lt;/em&gt; to use input type &lt;code&gt;submit&lt;/code&gt; for the button).&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
@@ -1755,7 +1764,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;&lt;code&gt;element()&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;element&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;element&#34;&gt;&lt;code&gt;element()&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;element&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#element&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Returns the &lt;code&gt;HTMLElement&lt;/code&gt; where captcha widget is mounted. Can be used for listening to the events.&lt;/p&gt;
 
       </description>
@@ -1771,17 +1780,18 @@
         
         
         &lt;p&gt;There&amp;rsquo;s a way to use Private Captcha APIs in such a way that all requests are routed &lt;strong&gt;exclusively&lt;/strong&gt; to our servers in EU locations.&lt;/p&gt;
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Private Captcha uses EU-only suppliers so by &amp;ldquo;servers in EU locations&amp;rdquo; we don&amp;rsquo;t mean a US-based company (e.g. AWS) with EU points of presence.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Private Captcha uses EU-only suppliers so by &amp;ldquo;servers in EU locations&amp;rdquo; we don&amp;rsquo;t mean a US-based company (e.g. AWS) with EU points of presence.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;To achieve this you need to make 2 changes: one on the frontend and second on the backend.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;TL;DR;&lt;/strong&gt; version is that you need to replace in your code &lt;code&gt;api.privatecaptcha.com&lt;/code&gt; to &lt;code&gt;api.eu.privatecaptcha.com&lt;/code&gt; and set &lt;code&gt;data-eu=&amp;quot;true&amp;quot;&lt;/code&gt; in widget.&lt;/p&gt;
-&lt;h2&gt;Frontend changes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;frontend-changes&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;frontend-changes&#34;&gt;Frontend changes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;frontend-changes&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#frontend-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To make sure captcha widget only talks to EU APIs you need to set a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/#attributes&#34;&gt;&lt;code&gt;data-eu&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;true&lt;/code&gt; in the widget declaration:&lt;/p&gt;
 
 
@@ -1828,16 +1838,17 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;This does not affect the captcha widget Javascript snippet itself which loads from CDN points of presence over the world to decrease latency. No end-user PII is involved.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;This does not affect the captcha widget Javascript snippet itself which loads from CDN points of presence over the world to decrease latency. No end-user PII is involved.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Backend changes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;backend-changes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#backend-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;SDKs&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;sdks&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;backend-changes&#34;&gt;Backend changes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;backend-changes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#backend-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;sdks&#34;&gt;SDKs&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;sdks&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#sdks&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;When you&amp;rsquo;re using one of the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;integration SDKs&lt;/a&gt; you need to specify EU isolation during configuration.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s an example for Go:&lt;/p&gt;
 
@@ -1883,7 +1894,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h3&gt;reCAPTCHA-compatible API&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;recaptcha-compatible-api&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;recaptcha-compatible-api&#34;&gt;reCAPTCHA-compatible API&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;recaptcha-compatible-api&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#recaptcha-compatible-api&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;When you verify the form submission on the server side, you need to make &lt;code&gt;POST&lt;/code&gt; request to the corresponding EU endpoint: &lt;code&gt;https://api.eu.privatecaptcha.com/siteverify&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -1904,7 +1915,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Implications&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;implications&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;implications&#34;&gt;Implications&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;implications&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#implications&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The cost of EU isolation is the potential slowdown of the initial widget initialization, in case the end-user is accessing website geographically far from Europe. In most cases it should not be noticeable to the end-user as most operations happen strictly in the background.&lt;/p&gt;
 
       </description>
@@ -1924,9 +1935,9 @@
 &lt;li&gt;use a predefined (&amp;ldquo;dummy&amp;rdquo;) sitekey&lt;/li&gt;
 &lt;li&gt;allow localhost access for main property in Settings in portal&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Testing with predefined sitekey&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;testing-with-predefined-sitekey&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;testing-with-predefined-sitekey&#34;&gt;Testing with predefined sitekey&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;testing-with-predefined-sitekey&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#testing-with-predefined-sitekey&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Recommended way to use Private Captcha for development is to use different sitekeys for production and testing. For testing you can use a &amp;ldquo;dummy&amp;rdquo; sitekey (aka &amp;ldquo;test property&amp;rdquo;): &lt;code&gt;aaaaaaaabbbbccccddddeeeeeeeeeeee&lt;/code&gt;. This sitekey does not incur any actual solving &amp;ldquo;price&amp;rdquo; (in compute resources) on the frontend and the result always passes verification. Please note that captcha widget still has to be clicked to pass by default, unless you are using &lt;code&gt;data-start-mode=&amp;quot;auto&amp;quot;&lt;/code&gt; (in which case parent &lt;code&gt;form&lt;/code&gt; needs to gain focus).&lt;/p&gt;
-&lt;h3&gt;Client side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;client-side&#34;&gt;Client side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#client-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This is a sample captcha widget for testing:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -1943,12 +1954,13 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Widget will show red &lt;code&gt;&amp;quot;testing&amp;quot;&lt;/code&gt; text to highlight that it&amp;rsquo;s not for production use once you click it.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Widget will show red &lt;code&gt;&amp;quot;testing&amp;quot;&lt;/code&gt; text to highlight that it&amp;rsquo;s not for production use once you click it.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;form class=&#34;pc-form&#34; style=&#34;&#34;&gt;
@@ -1958,7 +1970,7 @@
         data-lang=&#34;en&#34;
         data-styles=&#34;&#34;&gt;&lt;/div&gt;
 &lt;/form&gt;
-&lt;h3&gt;Server side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;server-side&#34;&gt;Server side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#server-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;On the server side, once you are using &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/verify-api/&#34;&gt;Verify API&lt;/a&gt; &lt;code&gt;{ &amp;quot;error-codes&amp;quot;: [&amp;quot;property-test&amp;quot;] }&lt;/code&gt; (non-empty error codes). Of course, you should be mainly checking &lt;code&gt;success&lt;/code&gt; field and &lt;code&gt;error-codes&lt;/code&gt; semantics is just to distinguish actual errors.&lt;/p&gt;
 &lt;p&gt;Note that by default when using &amp;ldquo;dummy&amp;rdquo; sitekey, the response will have &lt;code&gt;{&amp;quot;success&amp;quot;: false}&lt;/code&gt; to prevent security issue where a stub puzzle can be added to any form instead of the valid puzzle. However, if you&amp;rsquo;re using &lt;code&gt;X-PC-Sitekey&lt;/code&gt; header with test property sitekey, the response will have &lt;code&gt;{&amp;quot;success&amp;quot;: true}&lt;/code&gt;.&lt;/p&gt;
 &lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
@@ -2002,13 +2014,14 @@
 &lt;p&gt;Code &lt;code&gt;10&lt;/code&gt; corresponds to &lt;code&gt;&amp;quot;property-test&amp;quot;&lt;/code&gt; error description.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/details&gt;
-&lt;h2&gt;Testing with localhost access&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;testing-with-localhost-access&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#testing-with-localhost-access&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+&lt;h2 data-hextra-search-id=&#34;testing-with-localhost-access&#34;&gt;Testing with localhost access&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;testing-with-localhost-access&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#testing-with-localhost-access&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;warning&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Warning&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Captcha has a strict CORS policy and, by default, it will load &lt;strong&gt;only&lt;/strong&gt; on the domain configured during property creation. Subdomains and &lt;code&gt;localhost&lt;/code&gt; access needs to be explicitly allowed.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Captcha has a strict CORS policy and, by default, it will load &lt;strong&gt;only&lt;/strong&gt; on the domain configured during property creation. Subdomains and &lt;code&gt;localhost&lt;/code&gt; access needs to be explicitly allowed.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;In order to make captcha widget to load on &lt;code&gt;localhost&lt;/code&gt; domain, we need to allow it in the settings of the property you just created.&lt;/p&gt;
@@ -2027,14 +2040,15 @@
       <description>
         
         
-        &lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+        &lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;There&amp;rsquo;re many &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;ready integrations&lt;/a&gt; available and API is also available &lt;a href=&#34;https://petstore.swagger.io/?url=https://raw.githubusercontent.com/PrivateCaptcha/PrivateCaptcha/refs/heads/main/docs/openapi.yaml&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;There&amp;rsquo;re many &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;ready integrations&lt;/a&gt; available and API is also available &lt;a href=&#34;https://petstore.swagger.io/?url=https://raw.githubusercontent.com/PrivateCaptcha/PrivateCaptcha/refs/heads/main/docs/openapi.yaml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; as Swagger / OpenAPI definition.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by &lt;code&gt;data-solution-field&lt;/code&gt; &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34;&gt;attribute&lt;/a&gt;).&lt;/p&gt;
@@ -2057,7 +2071,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;When handling form submission on the server-side, this is the field you need to validate using Private Captcha API.&lt;/p&gt;
-&lt;h2&gt;Request&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;request&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;request&#34;&gt;Request&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;request&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#request&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;pc-callout&#34;&gt;
 &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
@@ -2087,16 +2101,17 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Usually you would &lt;strong&gt;not&lt;/strong&gt; send that &lt;code&gt;POST&lt;/code&gt; request yourself, but use one of our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;pre-built integrations&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Usually you would &lt;strong&gt;not&lt;/strong&gt; send that &lt;code&gt;POST&lt;/code&gt; request yourself, but use one of our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;pre-built integrations&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Additionally, for &lt;code&gt;/verify&lt;/code&gt; request you can set &lt;code&gt;X-PC-Sitekey&lt;/code&gt; header with the &amp;ldquo;intended&amp;rdquo; sitekey for which you are verifying the solution. This reduces number of attack vectors and tightens security.&lt;/p&gt;
-&lt;h2&gt;Response&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;response&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;response&#34;&gt;Response&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;response&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#response&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s how a successful response from &lt;code&gt;/verify&lt;/code&gt; endpoint looks like:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -2117,15 +2132,16 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;Verifying captcha&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;verifying-captcha&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;verifying-captcha&#34;&gt;Verifying captcha&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;verifying-captcha&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#verifying-captcha&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Verification status is defined by 2 fields: &lt;code&gt;success&lt;/code&gt; (boolean) must be equal to &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;code&lt;/code&gt; (integer) must be &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;
-&lt;h2&gt;Error codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;error-codes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#error-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;h2 data-hextra-search-id=&#34;error-codes&#34;&gt;Error codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;error-codes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#error-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;If &lt;code&gt;code&lt;/code&gt; is not zero, it does &lt;strong&gt;not&lt;/strong&gt; mean that verification failed. See details &lt;a href=&#34;#errors-during-successful-verification&#34;&gt;below&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;If &lt;code&gt;code&lt;/code&gt; is not zero, it does &lt;strong&gt;not&lt;/strong&gt; mean that verification failed. See details &lt;a href=&#34;#errors-during-successful-verification&#34;&gt;below&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Default &lt;code&gt;/verify&lt;/code&gt; endpoint should be used with one of the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;integration SDKs&lt;/a&gt; which allow you to get a string description of the numeric error code.&lt;/p&gt;
@@ -2207,7 +2223,7 @@
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3&gt;Errors during successful verification&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;errors-during-successful-verification&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;errors-during-successful-verification&#34;&gt;Errors during successful verification&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;errors-during-successful-verification&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#errors-during-successful-verification&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;There are a couple of cases, when &lt;code&gt;success&lt;/code&gt; in response will be equal to &lt;code&gt;true&lt;/code&gt; (successful verification), but &lt;code&gt;code&lt;/code&gt; will not be zero. This is made in order to help you distinguish certain use-cases of captcha (and decide yourself if you trust submissions):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;When you&amp;rsquo;re using a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/testing/&#34;&gt;test property&lt;/a&gt;, &lt;code&gt;code&lt;/code&gt; will be &lt;code&gt;property-test&lt;/code&gt; (but verification might succeed).&lt;/li&gt;
@@ -2243,7 +2259,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Private Captcha widget is automatically initialized on all elements with &lt;code&gt;private-captcha&lt;/code&gt; class name.&lt;/p&gt;
-&lt;h2&gt;Attributes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;attributes&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;attributes&#34;&gt;Attributes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;attributes&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#attributes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Apart from the required &lt;code&gt;sitekey&lt;/code&gt; data attribute, the following &lt;em&gt;optional&lt;/em&gt; attributes are supported:&lt;/p&gt;
 &lt;table&gt;
 	&lt;thead&gt;
@@ -2306,14 +2322,14 @@
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3&gt;Notes and examples&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;notes-and-examples&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#notes-and-examples&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;&lt;code&gt;data-start-mode&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-start-mode&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;notes-and-examples&#34;&gt;Notes and examples&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;notes-and-examples&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#notes-and-examples&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4 data-hextra-search-id=&#34;data-start-mode&#34;&gt;&lt;code&gt;data-start-mode&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-start-mode&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#data-start-mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;auto&lt;/code&gt; (puzzle is obtained and solving starts when parent form receives focus)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;click&lt;/code&gt; (puzzle and solving starts when user explicitly clicks the widget)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;load&lt;/code&gt; (puzzle and solving starts when the widget initializes/renders)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;&lt;code&gt;data-display-mode&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-display-mode&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;data-display-mode&#34;&gt;&lt;code&gt;data-display-mode&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-display-mode&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#data-display-mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;widget&lt;/code&gt; is the default display mode of captcha&lt;/p&gt;
@@ -2362,8 +2378,8 @@
 &lt;p&gt;&lt;code&gt;hidden&lt;/code&gt; captcha widget is permanently hidden and you need to handle all callbacks yourself. &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/invisible-captcha/&#34;&gt;See example&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;&lt;code&gt;data-lang&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-lang&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#data-lang&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;data-lang&lt;/code&gt; allows you to show widget localization in your own language. Translations are defined in the &lt;code&gt;widget/js/strings.js&lt;/code&gt; &lt;a href=&#34;https://github.com/PrivateCaptcha/PrivateCaptcha/blob/main/widget/js/strings.js&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;file&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;h4 data-hextra-search-id=&#34;data-lang&#34;&gt;&lt;code&gt;data-lang&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-lang&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#data-lang&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;data-lang&lt;/code&gt; allows you to show widget localization in your own language. Translations are defined in the &lt;code&gt;widget/js/strings.js&lt;/code&gt; &lt;a href=&#34;https://github.com/PrivateCaptcha/PrivateCaptcha/blob/main/widget/js/strings.js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;file&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;. If translation to your language is not there, feel free to contribute it.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -2413,7 +2429,7 @@
         data-lang=&#34;de&#34;
         data-styles=&#34;display: block; width: 350px;&#34;&gt;&lt;/div&gt;
 &lt;/form&gt;
-&lt;h4&gt;&lt;code&gt;data-theme&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-theme&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;data-theme&#34;&gt;&lt;code&gt;data-theme&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-theme&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#data-theme&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;blockquote&gt;
   &lt;p&gt;TIP: Use theme toggle on this website to check how the widget will look like&lt;/p&gt;
 
@@ -2452,7 +2468,7 @@
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h4&gt;&lt;code&gt;data-styles&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-styles&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;data-styles&#34;&gt;&lt;code&gt;data-styles&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-styles&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#data-styles&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#34;pc-callout&#34;&gt;
 &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200&#34;&gt;
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
@@ -2488,7 +2504,7 @@
 &lt;li&gt;&lt;code&gt;font-size&lt;/code&gt; (defaults to &lt;code&gt;1rem&lt;/code&gt;, change to &amp;ldquo;scale&amp;rdquo; widget)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Check few ready-made examples of using these properties &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/widget-customization/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h4&gt;&lt;code&gt;data-store-variable&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-store-variable&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;data-store-variable&#34;&gt;&lt;code&gt;data-store-variable&lt;/code&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;data-store-variable&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#data-store-variable&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Captcha object, that is created from the widget configuration, provides a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/&#34;&gt;number of APIs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If this is the only captcha widget on a page, you can access this object via &lt;code&gt;window.privateCaptcha.autoWidget&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;However, in case of multiple widgets, you can assign this attribute to a variable name and then access it as a field of the &lt;code&gt;HTMLElement&lt;/code&gt;.&lt;/p&gt;
@@ -2511,7 +2527,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Events and Callbacks&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;events-and-callbacks&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;events-and-callbacks&#34;&gt;Events and Callbacks&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;events-and-callbacks&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#events-and-callbacks&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Element, where &lt;code&gt;private-captcha&lt;/code&gt; class is set, will receive various lifecycle events (alternative to &lt;a href=&#34;#callbacks&#34;&gt;Callbacks&lt;/a&gt;). All events receive a &lt;code&gt;detail&lt;/code&gt; parameter with &lt;code&gt;widget&lt;/code&gt; (&lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/&#34;&gt;Captcha Object&lt;/a&gt;) and &lt;code&gt;element&lt;/code&gt; properties. As an alternative, you can set &lt;code&gt;data&lt;/code&gt; attributes with JavaScript handlers (all callbacks receive a single argument which is the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/&#34;&gt;Captcha Object&lt;/a&gt; itself).&lt;/p&gt;
 &lt;table&gt;
 	&lt;thead&gt;
@@ -2549,7 +2565,7 @@
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3&gt;Example&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;example&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;example&#34;&gt;Example&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;example&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#example&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 
 
@@ -2627,7 +2643,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Explicit rendering&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;explicit-rendering&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;explicit-rendering&#34;&gt;Explicit rendering&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;explicit-rendering&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#explicit-rendering&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;All the above assumed that when you include the JavaScript &lt;code&gt;privatecaptcha.js&lt;/code&gt;, it automatically initializes all of the elements with CSS class &lt;code&gt;private-captcha&lt;/code&gt;. However, it&amp;rsquo;s possible to omit that and instead do it manually in JavaScript.&lt;/p&gt;
 &lt;p&gt;To achieve that, you need to add parameter &lt;code&gt;?render=explicit&lt;/code&gt; to the script include:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
@@ -2647,7 +2663,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Then, you can use function &lt;code&gt;privateCaptcha.render(htmlElement, options)&lt;/code&gt; to explicitly render captcha widget. &lt;code&gt;options&lt;/code&gt; parameter allows to set properties with the same names as data-attributes above, taking into account the &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;naming convention&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;p&gt;Then, you can use function &lt;code&gt;privateCaptcha.render(htmlElement, options)&lt;/code&gt; to explicitly render captcha widget. &lt;code&gt;options&lt;/code&gt; parameter allows to set properties with the same names as data-attributes above, taking into account the &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;naming convention&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;
 

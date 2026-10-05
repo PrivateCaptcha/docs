@@ -28,8 +28,8 @@
   &lt;p&gt;Short summary of &amp;ldquo;form proxy&amp;rdquo; is that by pointing your form to our endpoint, we check CAPTCHA solution and rate limit and then call your actual endpoint (in this case - N8N webhook).&lt;/p&gt;
 
 &lt;/blockquote&gt;
-&lt;h2&gt;Setup a page with a form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup-a-page-with-a-form&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#setup-a-page-with-a-form&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Create HTML form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-html-form&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;setup-a-page-with-a-form&#34;&gt;Setup a page with a form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup-a-page-with-a-form&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#setup-a-page-with-a-form&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;create-html-form&#34;&gt;Create HTML form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-html-form&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#create-html-form&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Let&amp;rsquo;s create a basic form:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/n8n/n8n-form.png&#34; alt=&#34;Basic form&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;There&amp;rsquo;s nothing fancy inside:&lt;/p&gt;
@@ -112,8 +112,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h3&gt;Process form in N8N&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;process-form-in-n8n&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#process-form-in-n8n&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;To be able to submit this form, let&amp;rsquo;s create a new workflow in N8N and for &lt;em&gt;Trigger&lt;/em&gt; select a &lt;a href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;webhook&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;h3 data-hextra-search-id=&#34;process-form-in-n8n&#34;&gt;Process form in N8N&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;process-form-in-n8n&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#process-form-in-n8n&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;To be able to submit this form, let&amp;rsquo;s create a new workflow in N8N and for &lt;em&gt;Trigger&lt;/em&gt; select a &lt;a href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;webhook&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/n8n/n8n-webhook-url.png&#34; alt=&#34;Basic form&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
@@ -148,20 +148,20 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;Test webhook&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;test-webhook&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;test-webhook&#34;&gt;Test webhook&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;test-webhook&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#test-webhook&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;When we click &amp;ldquo;Test webhook&amp;rdquo; in N8N and submit a form (e.g. from your browser), we will receive an event:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/n8n/n8n-form-submission.png&#34; alt=&#34;Form submission&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h2&gt;Webhook protection&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;webhook-protection&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;webhook-protection&#34;&gt;Webhook protection&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;webhook-protection&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#webhook-protection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;If you will just deploy this to your website, the problem is that this webhook is available publicly. Everyone who opens your webpage, can just access the URL &lt;del&gt;and send millions of requests with spam&lt;/del&gt;.&lt;/p&gt;
 &lt;p&gt;To fix that, we will add a captcha widget to the form and proxy it through Private Captcha server that will verify the CAPTCHA solution first.&lt;/p&gt;
-&lt;h3&gt;Create form proxy&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-form-proxy&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;create-form-proxy&#34;&gt;Create form proxy&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-form-proxy&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#create-form-proxy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In Private Captcha Portal, click &amp;ldquo;New Form Proxy&amp;rdquo;:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/n8n/private-captcha-form.png&#34; alt=&#34;New form proxy&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;For the &lt;code&gt;Domain&lt;/code&gt;, enter the domain of your website (where contact form is hosted) and for &lt;code&gt;URL&lt;/code&gt;, enter the URL of the webhook from N8N (the one you put into form&amp;rsquo;s &lt;code&gt;action&lt;/code&gt; attribute).&lt;/p&gt;
-&lt;h3&gt;Integrate form on the website&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;integrate-form-on-the-website&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;integrate-form-on-the-website&#34;&gt;Integrate form on the website&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;integrate-form-on-the-website&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#integrate-form-on-the-website&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After you&amp;rsquo;ve created the form, you will be presented with integration steps. Here we duplicate them:&lt;/p&gt;
 &lt;div class=&#34;hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h4&gt;Add captcha widget include&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-captcha-widget-include&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;add-captcha-widget-include&#34;&gt;Add captcha widget include&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-captcha-widget-include&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#add-captcha-widget-include&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;In the head of the website, we need to add widget include:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -185,7 +185,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h4&gt;Update form &lt;code&gt;action&lt;/code&gt; URL&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;update-form-action-url&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;update-form-action-url&#34;&gt;Update form &lt;code&gt;action&lt;/code&gt; URL&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;update-form-action-url&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#update-form-action-url&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;We will use a URL generated by Private Captcha for our &lt;code&gt;action&lt;/code&gt; attribute, instead of direct link to N8N webhook.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -207,7 +207,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h4&gt;Add captcha widget to the form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-captcha-widget-to-the-form&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;add-captcha-widget-to-the-form&#34;&gt;Add captcha widget to the form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-captcha-widget-to-the-form&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#add-captcha-widget-to-the-form&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#34;pc-callout&#34;&gt;
 &lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
   &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
@@ -282,34 +282,28 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Going live&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;going-live&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#going-live&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Switch to N8N Production Webhook URL&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;switch-to-n8n-production-webhook-url&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;going-live&#34;&gt;Going live&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;going-live&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#going-live&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;switch-to-n8n-production-webhook-url&#34;&gt;Switch to N8N Production Webhook URL&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;switch-to-n8n-production-webhook-url&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#switch-to-n8n-production-webhook-url&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;By default N8N webhook gives you &lt;code&gt;Test URL&lt;/code&gt; and you need to switch to &lt;code&gt;Production URL&lt;/code&gt; in the end.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/n8n/n8n-prod-url.png&#34; alt=&#34;N8N prod URL&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;You can also update this URL in Private Captcha Portal in your form&amp;rsquo;s settings (if it&amp;rsquo;s still using &lt;code&gt;Test URL&lt;/code&gt; there). Note that you have a &lt;em&gt;single&lt;/em&gt; Private Captcha Form URL - you only change N8N URL in settings.&lt;/p&gt;
-&lt;h3&gt;Final testing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;final-testing&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;final-testing&#34;&gt;Final testing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;final-testing&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#final-testing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This is not required, but a good chance to test if everything is wired up together correctly.&lt;/p&gt;
-&lt;h4&gt;Via Private Captcha&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;via-private-captcha&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;via-private-captcha&#34;&gt;Via Private Captcha&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;via-private-captcha&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#via-private-captcha&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;In Private Captcha portal in your form&amp;rsquo;s settings, you have an option to &lt;code&gt;Test&lt;/code&gt; the webhook:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/n8n/private-captcha-test.png&#34; alt=&#34;Private Captcha Test&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;You can observe this data arriving in N8N:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/n8n/private-captcha-n8n-test.png&#34; alt=&#34;Private Captcha N8N Test&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h4&gt;On your website&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;on-your-website&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;on-your-website&#34;&gt;On your website&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;on-your-website&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#on-your-website&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;And, finally, make sure everything works together by visiting your website and submitting your form.&lt;/p&gt;
 &lt;p&gt;Now your actual N8N webhook will only receive the submissions that passed CAPTCHA and rate limiting and they are hidden from public by default.&lt;/p&gt;
-&lt;h2&gt;Further reading&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;further-reading&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;further-reading&#34;&gt;Further reading&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;further-reading&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#further-reading&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose&#34; style=&#34;--hextra-cards-grid-cols: 3;&#34;&gt;
-  &lt;a
-    class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34;href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings&#34;
-      &gt;&lt;div class=&#34;hx:mt-auto&#34;&gt;
+  &lt;a class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34; href=&#34;https://docs.privatecaptcha.com/docs/reference/property-settings&#34;&gt;&lt;div class=&#34;hx:mt-auto&#34;&gt;
       &lt;span class=&#34;hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50&#34;&gt;Property settings&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2&#34;&gt;Configuring the captcha widget&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
-  &lt;a
-    class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34;href=&#34;https://docs.privatecaptcha.com/docs/reference/form-proxy&#34;
-      &gt;&lt;div class=&#34;hx:mt-auto&#34;&gt;
+  &lt;a class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34; href=&#34;https://docs.privatecaptcha.com/docs/reference/form-proxy&#34;&gt;&lt;div class=&#34;hx:mt-auto&#34;&gt;
       &lt;span class=&#34;hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50&#34;&gt;Form settings&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2&#34;&gt;Configuring the form&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
-  &lt;a
-    class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34;href=&#34;https://docs.privatecaptcha.com/docs/integrations/client-side&#34;
-      &gt;&lt;div class=&#34;hx:mt-auto&#34;&gt;
+  &lt;a class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34; href=&#34;https://docs.privatecaptcha.com/docs/integrations/client-side&#34;&gt;&lt;div class=&#34;hx:mt-auto&#34;&gt;
       &lt;span class=&#34;hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50&#34;&gt;Client-side integration&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2&#34;&gt;Adding widget to form&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
 &lt;/div&gt;
 
@@ -327,7 +321,7 @@
         
         
         &lt;p&gt;This tutorial is mostly a collection of &lt;strong&gt;visual&lt;/strong&gt; changes to the widget through &lt;code&gt;data-styles&lt;/code&gt; &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/#data-styles&#34;&gt;attribute&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Full-width widget&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;full-width-widget&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;full-width-widget&#34;&gt;Full-width widget&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;full-width-widget&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#full-width-widget&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The only thing you need to do is to add &lt;code&gt;display: block&lt;/code&gt; to &lt;code&gt;data-styles&lt;/code&gt; (and make sure &lt;code&gt;form&lt;/code&gt; itself is wide enough).&lt;/p&gt;
 
 
@@ -365,7 +359,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Large widget&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;large-widget&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;large-widget&#34;&gt;Large widget&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;large-widget&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#large-widget&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There&amp;rsquo;re 2 things you can do: changing &lt;code&gt;font-size&lt;/code&gt; scales everything inside the widget and stretching widget itself is done with &lt;code&gt;display&lt;/code&gt; attribute (which by default is &lt;code&gt;inline-block&lt;/code&gt;).&lt;/p&gt;
 
 
@@ -404,7 +398,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Small widget&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;small-widget&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;small-widget&#34;&gt;Small widget&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;small-widget&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#small-widget&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To &amp;ldquo;squish&amp;rdquo; the widget you need to add &lt;code&gt;min-width: 0;&lt;/code&gt; to &lt;code&gt;data-styles&lt;/code&gt;.&lt;/p&gt;
 
 
@@ -442,7 +436,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Border customization&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;border-customization&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;border-customization&#34;&gt;Border customization&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;border-customization&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#border-customization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Border color is customized with &lt;code&gt;--border&lt;/code&gt; variable (a proxy to &lt;code&gt;border&lt;/code&gt; CSS property) and border radius is customized with &lt;code&gt;--border-radius&lt;/code&gt;&lt;/p&gt;
 
 
@@ -480,7 +474,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Box shadow&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;box-shadow&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;box-shadow&#34;&gt;Box shadow&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;box-shadow&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#box-shadow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Make sure that container&amp;rsquo;s parent (or &lt;code&gt;form&lt;/code&gt; itself) has the same &lt;code&gt;border-radius&lt;/code&gt; so there&amp;rsquo;re no visual conflicts. Also make sure the container does &lt;strong&gt;not&lt;/strong&gt; have &lt;code&gt;overflow: hidden&lt;/code&gt;.&lt;/p&gt;
 
 
@@ -518,7 +512,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Accent colors&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;accent-colors&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;accent-colors&#34;&gt;Accent colors&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;accent-colors&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#accent-colors&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s how to make a red widget. You need to override &lt;code&gt;--border&lt;/code&gt; (obviously), then &lt;code&gt;--accent-color&lt;/code&gt;, &lt;code&gt;--pie-color&lt;/code&gt; and &lt;code&gt;--checkbox-hover-color&lt;/code&gt;.&lt;/p&gt;
 
 
@@ -556,7 +550,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Responsive size&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;responsive-size&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;responsive-size&#34;&gt;Responsive size&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;responsive-size&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#responsive-size&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;For mobile clients we want to show a smaller widget. We can achieve this using &lt;code&gt;font-size&lt;/code&gt; and &lt;code&gt;clamp&lt;/code&gt; CSS built-in to have smth like &lt;code&gt;font-size: clamp(18px, 4vw, 20px)&lt;/code&gt;. Trick can be also used to things like &lt;code&gt;--extra-spacing&lt;/code&gt;.&lt;/p&gt;
 
 
@@ -594,7 +588,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Extra spacing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;extra-spacing&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;extra-spacing&#34;&gt;Extra spacing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;extra-spacing&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#extra-spacing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Depending on preferred widget size, you might want to add more horizontal padding between sides and checkbox and logo. You can achieve that using &lt;code&gt;--extra-spacing&lt;/code&gt;.&lt;/p&gt;
 
 
@@ -632,7 +626,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Forcing color theme&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;forcing-color-theme&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;forcing-color-theme&#34;&gt;Forcing color theme&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;forcing-color-theme&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#forcing-color-theme&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;If &lt;code&gt;data-theme=&amp;quot;auto&amp;quot;&lt;/code&gt;, but you want to force a dark theme, you can set CSS &lt;code&gt;color-scheme: dark;&lt;/code&gt; on any parent of &lt;code&gt;.private-captcha&lt;/code&gt; div. Simple(r) version of that is just setting &lt;code&gt;data-theme=&amp;quot;dark&amp;quot;&lt;/code&gt; attribute, but this way you can make it dynamic.&lt;/p&gt;
 
 
@@ -669,7 +663,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Even more customization&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;even-more-customization&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;even-more-customization&#34;&gt;Even more customization&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;even-more-customization&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#even-more-customization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;For &lt;em&gt;absolutely custom visualization&lt;/em&gt;, you can make Private Captcha widget &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/invisible-captcha/&#34;&gt;&amp;ldquo;invisible&amp;rdquo;&lt;/a&gt; and make your own visualizations based on widget&amp;rsquo;s callbacks and/or events. You can see an example of it in the linked page.&lt;/p&gt;
 
       </description>
@@ -685,12 +679,12 @@
         
         
         &lt;p&gt;You can migrate from Google reCAPTCHA &amp;ldquo;fast&amp;rdquo; using compatibility mode for server-side and client-side parts or you can fully migrate to Private Captcha.&lt;/p&gt;
-&lt;p&gt;To proceed with migration, in Private Captcha &lt;a href=&#34;https://portal.privatecaptcha.com&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;p&gt;To proceed with migration, in Private Captcha &lt;a href=&#34;https://portal.privatecaptcha.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; you need to get a sitekey for client-side (property integrations) and API key for backend (account settings).&lt;/p&gt;
-&lt;h2&gt;Fast migration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fast-migration&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;fast-migration&#34;&gt;Fast migration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fast-migration&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#fast-migration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Fast&amp;rdquo; migration makes it possible to migrate with &lt;em&gt;absolutely minimal&lt;/em&gt; amount of changes to front-end &lt;em&gt;or&lt;/em&gt; backend-end to use your existing integration code.&lt;/p&gt;
-&lt;h3&gt;Client-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;client-side&#34;&gt;Client-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#client-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Private Captcha offers a compatibility mode for the website integration: just add &lt;code&gt;?compat=recaptcha&lt;/code&gt; script parameters when you include Private Captcha script.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -714,22 +708,23 @@
 &lt;li&gt;solution form field will be called &lt;code&gt;g-recaptcha-response&lt;/code&gt; instead of &lt;code&gt;private-captcha-solution&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Private Captcha &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/&#34;&gt;JavaScript object&lt;/a&gt; is available as &lt;code&gt;grecaptcha&lt;/code&gt; global property&lt;/li&gt;
 &lt;li&gt;Private Captcha looks for elements with &lt;code&gt;g-recaptcha&lt;/code&gt; class instead of &lt;code&gt;private-captcha&lt;/code&gt; for automatic widget rendering&lt;/li&gt;
-&lt;li&gt;All compatible &lt;a href=&#34;https://developers.google.com/recaptcha/docs/display#js_api&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;global APIs for reCAPTCHA&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;li&gt;All compatible &lt;a href=&#34;https://developers.google.com/recaptcha/docs/display#js_api&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;global APIs for reCAPTCHA&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; like &lt;code&gt;render()&lt;/code&gt; or &lt;code&gt;getResponse()&lt;/code&gt; are also present&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Private Captcha offers &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/invisible-captcha/&#34;&gt;invisible mode&lt;/a&gt; with &lt;code&gt;execute()&lt;/code&gt; API too&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Private Captcha offers &lt;a href=&#34;https://docs.privatecaptcha.com/docs/tutorials/invisible-captcha/&#34;&gt;invisible mode&lt;/a&gt; with &lt;code&gt;execute()&lt;/code&gt; API too&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h4&gt;Explicit rendering&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;explicit-rendering&#34;&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id=&#34;explicit-rendering&#34;&gt;Explicit rendering&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;explicit-rendering&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#explicit-rendering&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;By default, when you include the client script, Private Captcha initializes all elements that have &lt;code&gt;g-recaptcha&lt;/code&gt; class attached (that is, in reCAPTCHA compatibility mode).&lt;/p&gt;
 &lt;p&gt;However, you can also explicitly render captcha elements using &lt;code&gt;window.grecaptcha.render(htmlElement, options)&lt;/code&gt; API. To do so, add another argument to Javascript script include: &lt;code&gt;render=explicit&lt;/code&gt; and then explicitly call &lt;code&gt;render()&lt;/code&gt; for all elements that you need.&lt;/p&gt;
-&lt;h3&gt;Server-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;server-side&#34;&gt;Server-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#server-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Private Captcha offers reCAPTCHA compatible API endpoint &lt;code&gt;/siteverify&lt;/code&gt;, that you can use like this:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -747,26 +742,28 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;warning&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Warning&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Google reCAPTCHA also supports &lt;code&gt;GET&lt;/code&gt; request type to &lt;code&gt;/siteverify&lt;/code&gt; endpoint (in addition to &lt;code&gt;POST&lt;/code&gt;), but Private Captcha &lt;strong&gt;only&lt;/strong&gt; supports &lt;code&gt;POST&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Google reCAPTCHA also supports &lt;code&gt;GET&lt;/code&gt; request type to &lt;code&gt;/siteverify&lt;/code&gt; endpoint (in addition to &lt;code&gt;POST&lt;/code&gt;), but Private Captcha &lt;strong&gt;only&lt;/strong&gt; supports &lt;code&gt;POST&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;By default endpoint returns responses in reCAPTCHA v2 format. In case you are using reCAPTCHA v3, you need to add an additional header &lt;code&gt;X-Captcha-Compat-Version: rcV3&lt;/code&gt; to your requests and response will follow v3-compatible API.&lt;/p&gt;
-&lt;h2&gt;Full migration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;full-migration&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#full-migration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;h2 data-hextra-search-id=&#34;full-migration&#34;&gt;Full migration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;full-migration&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#full-migration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Full migration is recommended as it is quite easy and it uses more efficient codepaths.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Full migration is recommended as it is quite easy and it uses more efficient codepaths.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;To migrate from reCAPTCHA completely, you need to rely on Private Captcha semantics on the client-side and use one of the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;pre-built integrations&lt;/a&gt; on the server side.&lt;/p&gt;
-&lt;h3&gt;Client-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side-1&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;client-side-1&#34;&gt;Client-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side-1&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#client-side-1&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Even without compatibility mode (above), Private Captcha offers a similar client-side API as reCAPTCHA, so migration shouldn&amp;rsquo;t cause a lot of pain.&lt;/p&gt;
 &lt;p&gt;Things you generally will need to do:&lt;/p&gt;
 &lt;ul&gt;
@@ -776,7 +773,7 @@
 &lt;li&gt;change stub sitekeys for &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/testing/&#34;&gt;testing&lt;/a&gt;, if you have any&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You can check &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34;&gt;full widget documentation&lt;/a&gt; for front-end details.&lt;/p&gt;
-&lt;h3&gt;Server-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side-1&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;server-side-1&#34;&gt;Server-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side-1&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#server-side-1&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Private Captcha offers a lot of &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;pre-built integrations&lt;/a&gt; so your backend technology is very likely covered. If not, you can rely on &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/openapi/&#34;&gt;OpenAPI spec&lt;/a&gt; to generate your client (or write one yourself, as it&amp;rsquo;s doing only a single &lt;code&gt;POST&lt;/code&gt; request to an API endpoint).&lt;/p&gt;
 
       </description>
@@ -802,15 +799,16 @@
 
 &lt;/div&gt;
 &lt;p&gt;In this tutorial we will create a simple html form, serve it locally with a simple web-server, then protect using Private Captcha and, finally, verify form submission. And all this in the comfort of your own computer (meaning, you don&amp;rsquo;t have to have a running server in the cloud).&lt;/p&gt;
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;For transparency, in this tutorial everything is implemented from scratch, but in production one would typically use our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;existing integrations&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;For transparency, in this tutorial everything is implemented from scratch, but in production one would typically use our &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;existing integrations&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Basic webpage and server&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;basic-webpage-and-server&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;basic-webpage-and-server&#34;&gt;Basic webpage and server&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;basic-webpage-and-server&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#basic-webpage-and-server&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-filetree hx:mt-6 hx:select-none hx:text-sm hx:text-gray-800 hx:dark:text-gray-300 not-prose&#34;&gt;
   &lt;div class=&#34;hx:inline-block hx:rounded-lg hx:px-4 hx:py-2 hx:border hx:border-gray-200 hx:dark:border-neutral-800&#34;&gt;
     &lt;ul class=&#34;hx:flex hx:flex-col&#34;&gt;
@@ -927,7 +925,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;You can run it using &lt;code&gt;go run main.go&lt;/code&gt; and open &lt;a href=&#34;http://localhost:8081/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://localhost:8081/&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;p&gt;You can run it using &lt;code&gt;go run main.go&lt;/code&gt; and open &lt;a href=&#34;http://localhost:8081/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://localhost:8081/&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; in the browser.&lt;/p&gt;&lt;/div&gt;&lt;div class=&#34;hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block&#34; id=&#34;tabs-panel-tabs-03-1&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;tabs-tab-tabs-03-1&#34; aria-hidden=&#34;true&#34;&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -967,7 +965,7 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;You can run it using &lt;code&gt;node server.js&lt;/code&gt; and open &lt;a href=&#34;http://localhost:8081/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://localhost:8081/&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;p&gt;You can run it using &lt;code&gt;node server.js&lt;/code&gt; and open &lt;a href=&#34;http://localhost:8081/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://localhost:8081/&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; in the browser.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -978,9 +976,9 @@
     &lt;strong class=&#34;hx:text-lg&#34;&gt;(optional) Making this server available publicly&lt;/strong&gt;
   &lt;/summary&gt;
   &lt;div class=&#34;hx:p-2 hx:overflow-hidden&#34;&gt;
-    &lt;p&gt;We can use &lt;a href=&#34;https://ngrok.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ngrok&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;p&gt;We can use &lt;a href=&#34;https://ngrok.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ngrok&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
-&lt;/svg&gt;&lt;/a&gt; for this purpose, but you can use any compatible solution, such as &lt;a href=&#34;https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CloudFlare Tunnel&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;/svg&gt;&lt;/a&gt; for this purpose, but you can use any compatible solution, such as &lt;a href=&#34;https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CloudFlare Tunnel&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt; or even reverse SSH tunnel from your own server.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
@@ -1001,25 +999,26 @@
 &lt;p&gt;You can use this domain as a property domain below.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/details&gt;
-&lt;h2&gt;Add captcha widget to the form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-captcha-widget-to-the-form&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#add-captcha-widget-to-the-form&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This assumes that you already have an account with Private Captcha. If you don&amp;rsquo;t, go ahead and &lt;a href=&#34;https://portal.privatecaptcha.com/signup&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;create one&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;h2 data-hextra-search-id=&#34;add-captcha-widget-to-the-form&#34;&gt;Add captcha widget to the form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-captcha-widget-to-the-form&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#add-captcha-widget-to-the-form&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This assumes that you already have an account with Private Captcha. If you don&amp;rsquo;t, go ahead and &lt;a href=&#34;https://portal.privatecaptcha.com/signup&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;create one&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Create new property&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-new-property&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;create-new-property&#34;&gt;Create new property&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-new-property&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#create-new-property&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the dashboard, click &amp;ldquo;Add new property&amp;rdquo;:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/create-property.png&#34; alt=&#34;Create new property&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;For a domain, enter any valid domain (if you used &lt;code&gt;ngrok&lt;/code&gt; in the previous step, add the generated domain):&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/e2e-local/property-wizard.png&#34; alt=&#34;Enter domain domain&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;After property is created, we will be presented with the integration snippet:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/e2e-local/snippet.png&#34; alt=&#34;Integration snippet&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h3&gt;Add captcha widget to the form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-captcha-widget-to-the-form-1&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;add-captcha-widget-to-the-form-1&#34;&gt;Add captcha widget to the form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-captcha-widget-to-the-form-1&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#add-captcha-widget-to-the-form-1&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;To integrate the widget, we need to add javascript include for &lt;code&gt;privatecaptcha.js&lt;/code&gt; and the widget itself to the form. You can get them from the integration snippet above.&lt;/p&gt;
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Make sure to use your own sitekey&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Make sure to use your own sitekey&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
@@ -1050,19 +1049,20 @@
 &lt;/div&gt;
 &lt;p&gt;If you did everything correctly, when you refresh the page (and/or restart your server), you will see the captcha widget inside your form:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/e2e-local/form-with-widget.png&#34; alt=&#34;Captcha widget&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;warning&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Warning&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Captcha has a strict CORS policy and, by default, it will load &lt;strong&gt;only&lt;/strong&gt; on the domain configured during property creation. Subdomains and &lt;code&gt;localhost&lt;/code&gt; access needs to be explicitly allowed.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Captcha has a strict CORS policy and, by default, it will load &lt;strong&gt;only&lt;/strong&gt; on the domain configured during property creation. Subdomains and &lt;code&gt;localhost&lt;/code&gt; access needs to be explicitly allowed.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;In order to make captcha widget to load on &lt;code&gt;localhost&lt;/code&gt; domain, we need to allow it in the settings of the property you just created (this is &lt;strong&gt;not&lt;/strong&gt; required if you used &lt;code&gt;ngrok&lt;/code&gt; domain).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/e2e-local/allow-localhost.png&#34; alt=&#34;Allow localhost domain&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;However, currently captcha widget is not yet particularly useful as we do not take it into account when submitting the form.&lt;/p&gt;
-&lt;h2&gt;Integrating with Private Captcha&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;integrating-with-private-captcha&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#integrating-with-private-captcha&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Client-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;integrating-with-private-captcha&#34;&gt;Integrating with Private Captcha&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;integrating-with-private-captcha&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#integrating-with-private-captcha&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;client-side&#34;&gt;Client-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#client-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In our simple web-page, let&amp;rsquo;s add a JavaScript function to enable the &amp;ldquo;Submit&amp;rdquo; button when captcha is solved.&lt;/p&gt;
 
 
@@ -1143,12 +1143,12 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Now client-side should be ready. What is left is only to verify captcha on the server-side.&lt;/p&gt;
-&lt;h3&gt;Server-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;server-side&#34;&gt;Server-side&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;server-side&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#server-side&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;For server-side, we need to add a handler for the form and verify captcha solution.&lt;/p&gt;
-&lt;p&gt;To verify captcha solutions, we need an API key. Head to the &lt;a href=&#34;https://portal.privatecaptcha.com/settings?tab=apikeys&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;p&gt;To verify captcha solutions, we need an API key. Head to the &lt;a href=&#34;https://portal.privatecaptcha.com/settings?tab=apikeys&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;portal&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;, open your user&amp;rsquo;s Settings, then API keys and click &amp;ldquo;Create new key&amp;rdquo;.&lt;/p&gt;
-&lt;h3&gt;Add code to verify solution&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-code-to-verify-solution&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;add-code-to-verify-solution&#34;&gt;Add code to verify solution&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;add-code-to-verify-solution&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#add-code-to-verify-solution&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After captcha widget has finished solving the puzzle, it adds a hidden form field with solution (defined by &lt;code&gt;data-solution-field&lt;/code&gt; &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/&#34;&gt;attribute&lt;/a&gt;).&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -1169,20 +1169,22 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;To &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/verify-api/&#34;&gt;verify solution&lt;/a&gt; we need to send a &lt;code&gt;POST&lt;/code&gt; request with the contents of this field to &lt;code&gt;/verify&lt;/code&gt; endpoint and check the result. This is done in the server-side handler of the form.&lt;/p&gt;
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;Warning&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;warning&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Warning&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Below we are using API directly only &lt;strong&gt;for demonstration&lt;/strong&gt; purposes. Most likely you want to use of of the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;integration SDKs&lt;/a&gt; that are available for popular languages.&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Below we are using API directly only &lt;strong&gt;for demonstration&lt;/strong&gt; purposes. Most likely you want to use of of the &lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/&#34;&gt;integration SDKs&lt;/a&gt; that are available for popular languages.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&#34;pc-alert&#34;&gt;&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
-  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+&lt;div class=&#34;pc-alert&#34;&gt;&lt;div
+  data-alert=&#34;note&#34; class=&#34;hextra-alert&#34;
+&gt;
+  &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Note&lt;/span&gt;
+  &lt;/p&gt;
 
-  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
-    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Make sure to use your own API key&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Make sure to use your own API key&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1374,8 +1376,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h2&gt;Finale&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;finale&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#finale&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Test your form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;test-your-form&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;finale&#34;&gt;Finale&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;finale&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#finale&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id=&#34;test-your-form&#34;&gt;Test your form&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;test-your-form&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#test-your-form&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Now you can finally click &amp;ldquo;Submit&amp;rdquo; on your page and see if you get a &amp;ldquo;green result&amp;rdquo; in the end.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://docs.privatecaptcha.com/images/tutorials/e2e-local/verified.png&#34; alt=&#34;Verified&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Now, if you did everything correct, your property dashboard in portal will also show some activity.&lt;/p&gt;
@@ -1395,13 +1397,13 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;Full code&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;full-code&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#full-code&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Congratulations on completing this tutorial! You can find the full Go version of the code in &lt;a href=&#34;https://gist.github.com/ribtoks/1c0c0f70c89cdda7de656df01d5d19c8&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this gist&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;h3 data-hextra-search-id=&#34;full-code&#34;&gt;Full code&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;full-code&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#full-code&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Congratulations on completing this tutorial! You can find the full Go version of the code in &lt;a href=&#34;https://gist.github.com/ribtoks/1c0c0f70c89cdda7de656df01d5d19c8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this gist&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
-&lt;/svg&gt;&lt;/a&gt; and Node JS version in &lt;a href=&#34;https://gist.github.com/ribtoks/c59a9fed190532bde91b947e97a5e80c&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this gist&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;/svg&gt;&lt;/a&gt; and Node JS version in &lt;a href=&#34;https://gist.github.com/ribtoks/c59a9fed190532bde91b947e97a5e80c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this gist&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
  &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Troubleshooting&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;troubleshooting&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;troubleshooting&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#troubleshooting&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;To access browser logs you can add &lt;code&gt;data-debug=&amp;quot;true&amp;quot;&lt;/code&gt; attribute to the widget and then see if there are any errors in the console.&lt;/p&gt;
 &lt;details class=&#34;hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group&#34; &gt;
   &lt;summary class=&#34;hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[&#39;&#39;] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90&#34;&gt;
@@ -1449,21 +1451,17 @@
     Server-&amp;gt;&amp;gt;Server: Process form (only if valid)
   &lt;/pre&gt;
 &lt;/div&gt;&lt;div class=&#34;hextra-steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h3&gt;Frontend&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;frontend&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;frontend&#34;&gt;Frontend&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;frontend&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#frontend&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You add two things to your HTML page: &lt;strong&gt;a widget&lt;/strong&gt; (the visual challenge the user interacts with) and &lt;strong&gt;a script&lt;/strong&gt; loaded from the CAPTCHA provider. The script drives the widget and handles all communication with the provider&amp;rsquo;s servers.&lt;/p&gt;
 &lt;p&gt;When the user completes the challenge, the provider&amp;rsquo;s script injects a hidden input field into your form containing a short-lived token. The user never sees this field — it travels silently alongside the rest of the form data when the form is submitted.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.privatecaptcha.com/docs/integrations/client-side/&#34;&gt;Read more&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Backend&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;backend&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;backend&#34;&gt;Backend&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;backend&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#backend&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;On the server, &lt;strong&gt;before&lt;/strong&gt; you do anything with the submission, you take that token and send it to the CAPTCHA provider&amp;rsquo;s verification API. The provider confirms whether the token is valid and was genuinely earned by a human. Only if verification passes do you proceed to process the form — save the data, send the email, create the account, etc. If it fails, you reject the submission outright.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose&#34; style=&#34;--hextra-cards-grid-cols: 3;&#34;&gt;
-  &lt;a
-    class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34;href=&#34;https://docs.privatecaptcha.com/docs/getting-started.md&#34;
-      &gt;&lt;div class=&#34;hx:mt-auto&#34;&gt;
+  &lt;a class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34; href=&#34;https://docs.privatecaptcha.com/docs/getting-started.md&#34;&gt;&lt;div class=&#34;hx:mt-auto&#34;&gt;
       &lt;span class=&#34;hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50&#34;&gt;Getting started&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2&#34;&gt;How to start using Private Captcha&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
-  &lt;a
-    class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34;href=&#34;https://docs.privatecaptcha.com/docs/tutorials/complete-example&#34;
-      &gt;&lt;div class=&#34;hx:mt-auto&#34;&gt;
+  &lt;a class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34; href=&#34;https://docs.privatecaptcha.com/docs/tutorials/complete-example&#34;&gt;&lt;div class=&#34;hx:mt-auto&#34;&gt;
       &lt;span class=&#34;hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:pt-4 hx:px-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4&#34;/&gt;&lt;/svg&gt;End-to-end example&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2&#34;&gt;Follow along to see a complete integration example&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
 &lt;/div&gt;
 
@@ -1491,7 +1489,7 @@
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;h2&gt;Setup&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;setup&#34;&gt;Setup&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;setup&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#setup&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To permanently hide the widget, set &lt;code&gt;data-display-mode&lt;/code&gt; &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/#data-display-mode&#34;&gt;attribute&lt;/a&gt; to &lt;code&gt;hidden&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -1535,10 +1533,10 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;Triggering solving&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;triggering-solving&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;triggering-solving&#34;&gt;Triggering solving&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;triggering-solving&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#triggering-solving&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;By default, captcha will begin solving when any input from the parent form will receive input. For example, it will happen when you fill out input fields or click the Submit button.&lt;/p&gt;
 &lt;p&gt;However, if you want to control when the solving will start, you can set &lt;code&gt;data-start-mode&lt;/code&gt; &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/widget-options/#attributes&#34;&gt;attribute&lt;/a&gt; to &lt;code&gt;click&lt;/code&gt; and trigger solving captcha using &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/captcha-object/#execute&#34;&gt;API method&lt;/a&gt; &lt;code&gt;execute()&lt;/code&gt;.&lt;/p&gt;
-&lt;h2&gt;Example&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;example&#34;&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id=&#34;example&#34;&gt;Example&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;example&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#example&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s how a more complete example of the above looks like:&lt;/p&gt;
 
 
@@ -1606,7 +1604,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;h3&gt;Demo&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;demo&#34;&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id=&#34;demo&#34;&gt;Demo&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;demo&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#demo&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You can try the above setup by clicking this button:&lt;/p&gt;
 &lt;form class=&#34;pc-form form-with-spinner&#34;&gt;
 &lt;div class=&#34;private-captcha&#34;
