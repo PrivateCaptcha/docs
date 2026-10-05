@@ -182,7 +182,7 @@ Depending on preferred widget size, you might want to add more horizontal paddin
 
 ## Forcing color theme
 
-If `data-theme="auto"`, but you want to force a dark theme, you can set CSS `color-scheme: dark;` on any parent of `.private-captcha` div. Simple(r) version of that is just setting `data-theme="dark"` attribute, but this way you can make it dynamic.
+If `data-theme="auto"`, but you want to force a dark theme, you can set CSS `color-scheme: dark;` on any parent of `.private-captcha` div. Simple(r) version of that is just setting `data-theme="dark"` attribute, but this way you can make it more dynamic or add custom logic for your website.
 
 {{< tabs items="Widget,HTML" >}}
 
