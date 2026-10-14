@@ -40,6 +40,14 @@ Edge protection is disabled by default. To enable it, select `"Verified access d
 
 This setting means how long each visitor can access your resource without triggering another challenge.
 
+#### Changing access duration in runtime
+
+You can configure variable access duration depending on a number of conditions (`User-Agent`, Country, IP range etc.) using a [difficulty rule]({{< relref "docs/reference/rules.md" >}}).
+
+![Edge token change](/images/reference/difficulty-rule-edge-validity.png "Example: changing validity of the difficulty rule")
+
+For example, having default validity interval as `30` minutes, you can change it to `5` minutes if the request is coming from AWS Data Center IP range.
+
 ### Widget click mode
 
 Challenge page contains a CAPTCHA widget, that can either start solving automatically (if you select `On load`) or requires a user interaction (`On click`). Automatic solving offers less protection, but smoother user experience.

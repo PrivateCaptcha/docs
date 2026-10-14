@@ -126,6 +126,14 @@ Difficulty of the puzzle can be adjusted in percents (`%`) where percents mean "
 
 ![Difficulty rules Growth](/images/reference/difficulty-rule-growth.png "Example: change difficulty growth to 'Fast' for this request")
 
+#### Edge validity duration
+
+You can change validity duration of [edge protection]({{< relref "docs/reference/edge-protection.md" >}}) token with a difficulty rule. This can work as an override for suspicious `User-Agent` or IP source.
+
+**Example**
+
+![Edge token change](/images/reference/difficulty-rule-edge-validity.png "Example: changing validity of the difficulty rule")
+
 #### Block request
 
 You can simply block the request, ultimately meaning that form submission will never pass CAPTCHA [verification]({{< relref "/docs/reference/verify-api.md" >}}) (because there will be no CAPTCHA solution in the first place).

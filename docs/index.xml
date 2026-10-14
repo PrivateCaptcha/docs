@@ -298,6 +298,13 @@
 &lt;h3 data-hextra-search-id=&#34;verified-access-duration&#34;&gt;Verified access duration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;verified-access-duration&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#verified-access-duration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Edge protection is disabled by default. To enable it, select &lt;code&gt;&amp;quot;Verified access duration&amp;quot;&lt;/code&gt; value other than &lt;code&gt;&amp;quot;Disabled&amp;quot;&lt;/code&gt;: you can choose time from 5 minutes to 24 hours.&lt;/p&gt;
 &lt;p&gt;This setting means how long each visitor can access your resource without triggering another challenge.&lt;/p&gt;
+&lt;h4 data-hextra-search-id=&#34;changing-access-duration-in-runtime&#34;&gt;Changing access duration in runtime&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;changing-access-duration-in-runtime&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#changing-access-duration-in-runtime&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;You can configure variable access duration depending on a number of conditions (&lt;code&gt;User-Agent&lt;/code&gt;, Country, IP range etc.) using a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/rules/&#34;&gt;difficulty rule&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-edge-validity.png&#34; title=&#34;Example: changing validity of the difficulty rule&#34; alt=&#34;Edge token change&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: changing validity of the difficulty rule&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;For example, having default validity interval as &lt;code&gt;30&lt;/code&gt; minutes, you can change it to &lt;code&gt;5&lt;/code&gt; minutes if the request is coming from AWS Data Center IP range.&lt;/p&gt;
 &lt;h3 data-hextra-search-id=&#34;widget-click-mode&#34;&gt;Widget click mode&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;widget-click-mode&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#widget-click-mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Challenge page contains a CAPTCHA widget, that can either start solving automatically (if you select &lt;code&gt;On load&lt;/code&gt;) or requires a user interaction (&lt;code&gt;On click&lt;/code&gt;). Automatic solving offers less protection, but smoother user experience.&lt;/p&gt;
 &lt;h2 data-hextra-search-id=&#34;integration&#34;&gt;Integration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;integration&#34;&gt;&lt;/span&gt;
@@ -2024,6 +2031,13 @@
 &lt;p&gt;&lt;figure&gt;
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-growth.png&#34; title=&#34;Example: change difficulty growth to &amp;#39;Fast&amp;#39; for this request&#34; alt=&#34;Difficulty rules Growth&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: change difficulty growth to &amp;#39;Fast&amp;#39; for this request&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4 data-hextra-search-id=&#34;edge-validity-duration&#34;&gt;Edge validity duration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;edge-validity-duration&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#edge-validity-duration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;You can change validity duration of &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/edge-protection/&#34;&gt;edge protection&lt;/a&gt; token with a difficulty rule. This can work as an override for suspicious &lt;code&gt;User-Agent&lt;/code&gt; or IP source.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-edge-validity.png&#34; title=&#34;Example: changing validity of the difficulty rule&#34; alt=&#34;Edge token change&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: changing validity of the difficulty rule&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h4 data-hextra-search-id=&#34;block-request&#34;&gt;Block request&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;block-request&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#block-request&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;You can simply block the request, ultimately meaning that form submission will never pass CAPTCHA &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/verify-api/&#34;&gt;verification&lt;/a&gt; (because there will be no CAPTCHA solution in the first place).&lt;/p&gt;
