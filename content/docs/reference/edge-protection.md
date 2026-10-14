@@ -280,7 +280,7 @@ We offer a ready-made [Edge script](https://bunny.net/docs/scripting/middleware/
 4. In your Pull Zone settings (section _"Origin -> General"_), select _Middleware_ script that you previously created.
 
 > [!INFO]
-> Middleware script can run **before** or **after** cache in your Pull Zone. If it runs after cache, it is possible to serve content without verification by Private Captcha, but this can be mitigated by setting lower `Cache-Control` duration. If it runs before cache, all requests are verified.
+> Middleware script can run **before** or **after** cache in your Pull Zone. If it runs after cache, it is possible to serve content without verification by Private Captcha, but this can be mitigated by setting lower `Cache-Control` duration. If it runs before cache, all requests are verified, but with more Edge scripts executions.
 
 Make sure `POST` requests are not blocked in the Bunny's Pull Zone.
 
