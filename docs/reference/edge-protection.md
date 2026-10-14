@@ -30,6 +30,10 @@ Using [difficulty rules]({{< relref "docs/reference/rules.md" >}}) you can chang
 
 {{% /steps %}}
 
+## Technology
+
+Edge tokens are signed using ES256 (ECDSA with SHA-256) and a P-256 elliptic-curve key pair. The public key is published through JWKS so verifiers can validate token signatures.
+
 ## Configuration
 
 ![Edge protection](/images/reference/edge-protection.png)

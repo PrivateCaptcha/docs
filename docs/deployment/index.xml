@@ -1099,6 +1099,26 @@
 					&lt;td&gt;&lt;code&gt;256&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;If positive, enables Argon2id (memory-hard) challenge type and sets memory limit for concurrent &lt;code&gt;/verify&lt;/code&gt; requests.&lt;/td&gt;
 			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;PC_EDGE_TOKEN_SIGNING_PRIVATE_KEY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;qwerty&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Private Key for ES256 (ECDSA with SHA-256) and a P-256 elliptic-curve key pair&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;PC_EDGE_TOKEN_SIGNING_PUBLIC_KEY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;qwerty&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Public key for ES256 (ECDSA with SHA-256) and a P-256 elliptic-curve key pair&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;PC_EDGE_TOKEN_SECONDARY_PUBLIC_KEY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;qwerty&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Old/New public key used during rotation of Edge Token signing keys&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;PC_SHUTDOWN_DELAY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;5s&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Shutdown delay in Go duration format. Useful for load-balancer and &lt;code&gt;/ready&lt;/code&gt; combination.&lt;/td&gt;
+			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;div class=&#34;pc-alert&#34;&gt;&lt;div
