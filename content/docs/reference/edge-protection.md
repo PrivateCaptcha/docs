@@ -277,6 +277,10 @@ We offer a ready-made [Edge script](https://bunny.net/docs/scripting/middleware/
 2. Add **Environment** variables: `PC_SITEKEY` with the value from Private Captcha dashboard, `PC_PROTECTED_ORIGIN` equal to the domain name of your Pull Zone in Bunny
     ![Bunny vars](/images/reference/bunny-edge-script-vars.png)
 3. Add Secret `PC_API_KEY` that you created in Private Captcha portal
+4. In your Pull Zone settings (section _"Origin -> General"_), select _Middleware_ script that you previously created.
+
+> [!INFO]
+> Middleware script can run **before** or **after** cache in your Pull Zone. If it runs after cache, it is possible to serve content without verification by Private Captcha, but this can be mitigated by setting lower `Cache-Control` duration. If it runs before cache, all requests are verified.
 
 Make sure `POST` requests are not blocked in the Bunny's Pull Zone.
 
