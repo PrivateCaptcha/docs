@@ -365,7 +365,7 @@
   &lt;p class=&#34;hextra-alert-title&#34;&gt;&lt;svg height=16px class=&#34;hextra-alert-icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;&lt;span class=&#34;hextra-alert-title-text&#34;&gt;Info&lt;/span&gt;
   &lt;/p&gt;
 
-  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Middleware script can run &lt;strong&gt;before&lt;/strong&gt; or &lt;strong&gt;after&lt;/strong&gt; cache in your Pull Zone. If it runs after cache, it is possible to serve content without verification by Private Captcha, but this can be mitigated by setting lower &lt;code&gt;Cache-Control&lt;/code&gt; duration. If it runs before cache, all requests are verified.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&#34;hextra-alert-content&#34;&gt;&lt;p&gt;Middleware script can run &lt;strong&gt;before&lt;/strong&gt; or &lt;strong&gt;after&lt;/strong&gt; cache in your Pull Zone. If it runs after cache, it is possible to serve content without verification by Private Captcha, but this can be mitigated by setting lower &lt;code&gt;Cache-Control&lt;/code&gt; duration. If it runs before cache, all requests are verified, but with more Edge scripts executions.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Make sure &lt;code&gt;POST&lt;/code&gt; requests are not blocked in the Bunny&amp;rsquo;s Pull Zone.&lt;/p&gt;
