@@ -115,3 +115,9 @@ Extended script is already supported in our integrations:
 - JavaScript widget corelib (0.0.31+)
 - [Vue.js]({{< relref "docs/integrations/vue.md" >}}) (0.0.5+)
 - [React]({{< relref "docs/integrations/react.md" >}}) (0.0.12+)
+
+## Edge protection
+
+Edge protection allows you to challenge visitors (or bots) before they reach your website.
+
+Documentation is available in a [separate page]({{< relref "docs/reference/edge-protection.md" >}}).
