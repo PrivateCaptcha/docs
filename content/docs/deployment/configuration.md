@@ -60,6 +60,10 @@ Variable | Example | Description
 `CACHE_DIRECTORY` | `/var/lib/pc/cache` | Local path, if not empty, will be used for cache persistence between restarts (NOTE: no `PC_` prefix)
 `PC_GRADUAL_DATA_CLEANUP` | `true` | If `true`, purges deleted property's usage data _before_ the account is deleted (`false` by default)
 `PC_ARGON2_MEMORY_BUDGET_MIB` | `256` | If positive, enables Argon2id (memory-hard) challenge type and sets memory limit for concurrent `/verify` requests.
+`PC_EDGE_TOKEN_SIGNING_PRIVATE_KEY` | `qwerty` | Private Key for ES256 (ECDSA with SHA-256) and a P-256 elliptic-curve key pair
+`PC_EDGE_TOKEN_SIGNING_PUBLIC_KEY` | `qwerty` | Public key for ES256 (ECDSA with SHA-256) and a P-256 elliptic-curve key pair
+`PC_EDGE_TOKEN_SECONDARY_PUBLIC_KEY` | `qwerty` | Old/New public key used during rotation of Edge Token signing keys
+`PC_SHUTDOWN_DELAY` | `5s` | Shutdown delay in Go duration format. Useful for load-balancer and `/ready` combination.
 
 > [!NOTE]
 "Default" rate limiter means the one for public APIs (`/puzzle`, `/verify` and some others). Various other APIs have pre-configured hardcoded limits, compiled in.
