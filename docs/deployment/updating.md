@@ -56,6 +56,11 @@ These are only deployment-specific changes. For general feature changelog, click
 {{< /callout >}}
 </div>
 
+### v1.46.0
+
+- widget was updated, purge CDN cache
+- to enable [Edge protection]({{< relref "docs/reference/edge-protection.md" >}}) you need to setup `PC_EDGE_TOKEN_SIGNING_PRIVATE_KEY` and `PC_EDGE_TOKEN_SIGNING_PUBLIC_KEY`
+
 ### v1.45.0
 
 - widget was updated, purge your CDN cache
