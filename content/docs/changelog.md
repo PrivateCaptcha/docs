@@ -3,6 +3,13 @@ title: "Changelog"
 date: 2026-03-19T08:43:58+01:00
 ---
 
+## v1.46.0 - 2026-10-20
+
+- Support for [Edge protection]({{< relref "docs/reference/edge-protection.md" >}}) to fight scrapers
+- Add command-line mode to check config validity
+- Improve shutdown/restart time drastically
+- Various bugfixes
+
 ## v1.45.0 - 2026-10-05
 
 - Support for memory-hard (Argon2id) challenges
