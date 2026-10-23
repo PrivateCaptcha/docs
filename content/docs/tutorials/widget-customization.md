@@ -205,6 +205,33 @@ If `data-theme="auto"`, but you want to force a dark theme, you can set CSS `col
 
 {{< /tabs >}}
 
+## Compact widget
+
+To build a "squished" widget (vertically), you can change `height` and set `--logo-direction: row`. After that you can adjust, as needed, a bunch of other properties: `--control-size` and `--logo-height` for checkbox and logo dimensions and `--widget-padding` for self-evident padding.
+
+{{< tabs items="Widget,HTML" >}}
+
+{{< tab >}}
+{{< captchawidget formclass="pc-form" widgetstyle="--border-radius: 4px; height: 36px; --control-size: 20px; --logo-direction: row; --logo-height: 24px; --logo-margin: 8px; --widget-padding: 0.5rem;" >}}
+{{< /tab >}}
+
+{{< tab >}}
+```html
+<form>
+    <div class="private-captcha" data-theme="auto"
+        data-styles="height: 36px;
+                     --control-size: 20px; 
+                     --logo-direction: row; 
+                     --logo-height: 24px; 
+                     --logo-margin: 8px; 
+                     --widget-padding: 0.5rem;">
+    </div>
+</form>
+```
+{{< /tab >}}
+
+{{< /tabs >}}
+
 ## Even more customization
 
 For _absolutely custom visualization_, you can make Private Captcha widget ["invisible"]({{< relref "/docs/tutorials/invisible-captcha.md" >}}) and make your own visualizations based on widget's callbacks and/or events. You can see an example of it in the linked page.
