@@ -120,11 +120,19 @@ Colors:
 Spacing:
 
 - `--border-radius`
+- `--widget-padding`
+- `--logo-margin` (distance between logo and "Private Captcha" text)
 - `--extra-spacing` (adds equal distance from sides and between checkbox and label)
 - `--label-spacing` ("base" distance from checkbox and label)
 
+Size:
+
+- `--logo-size`
+- `--control-size` (size of the checkbox and progress circle)
+
 Additionally, you can change the following CSS properties:
 
+- `--logo-direction` (`column` by default, can be set to `row` for "squished" widgets)
 - `display` (defaults to `inline-block`, set to `block` together with `height: 100%;` to "stretch" widget)
 - `font-size` (defaults to `1rem`, change to "scale" widget)
 
