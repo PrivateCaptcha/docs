@@ -218,7 +218,7 @@ To build a "squished" widget (vertically), you can change `height` and set `--lo
 {{< tab >}}
 ```html
 <form>
-    <div class="private-captcha" data-theme="auto"
+    <div class="private-captcha"
         data-styles="height: 36px;
                      --control-size: 20px; 
                      --logo-direction: row; 
