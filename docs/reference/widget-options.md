@@ -114,6 +114,7 @@ Colors:
 - `--background-color`
 - `--checkbox-background-color`
 - `--checkbox-hover-color`
+- `--checkbox-border-color`
 - `--accent-color`
 - `--warn-color`
 

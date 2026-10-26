@@ -2885,6 +2885,7 @@
 &lt;li&gt;&lt;code&gt;--background-color&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;--checkbox-background-color&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;--checkbox-hover-color&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--checkbox-border-color&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;--accent-color&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;--warn-color&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
