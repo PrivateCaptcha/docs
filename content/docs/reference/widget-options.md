@@ -160,6 +160,10 @@ However, in case of multiple widgets, you can assign this attribute to a variabl
 </button>
 ```
 
+#### `data-state`
+
+This is a read-only attribute that can have values `empty`, `error`, `loading`, `ready`, `inprogress`, `verified` and `invalid`. You can use it for CSS conditions.
+
 ## Events and Callbacks
 
 Element, where `private-captcha` class is set, will receive various lifecycle events (alternative to [Callbacks](#callbacks)). All events receive a `detail` parameter with `widget` ([Captcha Object]({{< relref "/docs/reference/captcha-object.md" >}})) and `element` properties. As an alternative, you can set `data` attributes with JavaScript handlers (all callbacks receive a single argument which is the [Captcha Object]({{< relref "/docs/reference/captcha-object.md" >}}) itself).
