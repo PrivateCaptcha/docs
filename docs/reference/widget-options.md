@@ -219,3 +219,15 @@ To achieve that, you need to add parameter `?render=explicit` to the script incl
 ```
 
 Then, you can use function `privateCaptcha.render(htmlElement, options)` to explicitly render captcha widget. `options` parameter allows to set properties with the same names as data-attributes above, taking into account the [naming convention](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset).
+
+## Unbranded widget
+
+It is possible to use the standard widget, but without Private Captcha logo. For SaaS version that comes as an addon and for self-hosted version it comes with an Enterprise version.
+
+In both cases you need to add an argument `branding` to the include of `privatecaptcha.js` script on your website. For SaaS version you will see a branding ID in every integration snippet and for self-hosted version you need to pass `none` instead of the ID.
+
+```diff {filename="index.html"}
+@@ -18,7 +18,13 @@
+- <script defer src="https://cdn.{{< domain >}}/widget/js/privatecaptcha.js"></script>
++ <script defer src="https://cdn.{{< domain >}}/widget/js/privatecaptcha.js?branding=Bh78Ot69Du"></script>
+```

@@ -228,6 +228,10 @@ To build a "squished" widget (vertically), you can change `height` and set `--lo
 
 {{< /tabs >}}
 
+## Unbranded widget
+
+It is possible to use the standard widget, but without Private Captcha logo. For SaaS version that comes as an addon and for self-hosted version it comes with an Enterprise version. [Read more]({{< relref "docs/reference/widget-options.md#unbranded-widget" >}}).
+
 ## Even more customization
 
 For _absolutely custom visualization_, you can make Private Captcha widget ["invisible"]({{< relref "/docs/tutorials/invisible-captcha.md" >}}) and make your own visualizations based on widget's callbacks and/or events. You can see an example of it in the linked page.
