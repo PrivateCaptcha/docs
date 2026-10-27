@@ -26,6 +26,10 @@ Private Captcha installation expects to be running on 3 subdomains (`cdn.`, `api
 
 You can find [an example for Bunny CDN]({{< relref "docs/deployment/bunny-cdn.md" >}}) in the docs.
 
+## Configuration
+
+Correct functioning of rate-limiting and difficulty rules based on country data comes from HTTP headers. Which means if you connect Private Captcha directly to the internet, without CDN/proxy, **and** configure these headers, they are controlled by the user. Pay attention to `PC_COUNTRY_CODE_HEADER` and `PC_RATE_LIMIT_HEADER`. They are non-configured (empty) by default, but correct usage requires knowing what you're doing.
+
 ## Security
 
 <div class="pc-callout">
@@ -36,7 +40,7 @@ If you're running Private Captcha in production, security is completely **your r
 
 Some **very basic** advice, specific to Private Captcha server itself:
 - [update]({{< relref "docs/deployment/updating.md" >}}) Private Captcha server frequently
-- make sure server is behind CDN/proxy and is not directly connected to the internet
+- make sure server is behind CDN/proxy and is **not** directly connected to the internet
 - do not expose public port from docker container, keep it listening on localhost and use `Nginx/Caddy` (Docker has it's own security issues)
 - do not enable registration if you're the only admin/user (`PC_REGISTRATION_ALLOWED` is empty/unset by default)
 - you can configure CDN/reverse proxy rate limits accordingly to your use-case (that is, _in addition_ to rate limit configuration of Private Captcha server itself)
