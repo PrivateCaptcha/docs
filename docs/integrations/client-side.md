@@ -82,3 +82,27 @@ Pre-built integrations mean you handle the widget yourself using web components 
   subtitle="Read more on a dedicated page"
   icon="code" >}}
 {{< /cards >}}
+
+## Integration options
+
+> [!NOTE]
+> See technical details about these options in the [widget reference]({{< relref "docs/reference/widget-options.md" >}}).
+
+### Extended script
+
+Enables support for memory-hard [challenge type]({{< relref "docs/reference/property-settings.md#challenge-type" >}}) in addition to compute-hard one. This comes at the expense of approximately `10 KiB` more of the script so it's not included in the base option.
+
+### Explicit rendering
+
+By default widget script auto-initializes all `<div>` elements with `private-captcha` CSS class. With explicit rendering, this mode is disabled and you can initialize widgets in JavaScript explicitly.
+
+### reCAPTCHA migration
+
+> [!NOTE]
+> See our [detailed guide]({{< relref "docs/tutorials/migrate-from-recaptcha.md" >}}) for the step-by-step tutorial to migrate from reCAPTCHA.
+
+Client script supports compatibility mode with Google reCAPTCHA so you can switch vendors with less pain. One parameter for script import registeres on-page API similar to the one reCAPTCHA has, so your client code does not break.
+
+### Unbranded widget
+
+It is possible to use widget without Private Captcha logo. It is available in SaaS version with an add-on or for self-hosted Enterprise version.
