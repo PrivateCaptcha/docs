@@ -74,3 +74,9 @@ sections:
           2. Captcha solution has to be verified on the backend before form submission is processed
 
           Please check our [end-to-end tutorial](/docs/tutorials/complete-example/) to understand how the big picture works.
+
+  - title: Portal
+    items:
+      - question: Where is the billing of my organization
+        answer: |
+          In Private Captcha billing is connected to the user account. Each organization created or owned by this user inherits the billing and can host non-paying members.
