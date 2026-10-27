@@ -9,10 +9,8 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Security – Private Captcha</title>
-  <meta name="description" content="Client side Content-Security-Policy Settings If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use EU Isolation).
-You need to add https://privatecaptcha.com, https://*.privatecaptcha.com to script-src, frame-src, style-src, connect-src and wasm-unsafe-eval.
-Do not hard-code specific subdomains, like api.privatecaptcha.com, into your CSP.
-Widget display mode Usual widget type (data-display-mode=&#34;widget&#34;) is the safest option." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/security/" itemprop="url" />
+  <meta name="description" content="Client side Frontend basics Make sure your HTML form cannot be submitted without having to click captcha widget (form submission is not blocked automatically, you have to hook into captcha solved event).
+Content-Security-Policy Settings If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use EU Isolation)." /><link rel="canonical" href="https://docs.privatecaptcha.com/docs/reference/security/" itemprop="url" />
 
 <meta property="og:title" content="Security">
 <meta
@@ -20,12 +18,10 @@ Widget display mode Usual widget type (data-display-mode=&#34;widget&#34;) is th
   content="
     
       Client side
-    Content-Security-Policy Settings
+    Frontend basics
+    Make sure your HTML form cannot be submitted without having to click captcha widget (form submission is not blocked automatically, you have to hook into captcha solved event).
+Content-Security-Policy Settings
     If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use EU Isolation).
-You need to add https://privatecaptcha.com, https://*.privatecaptcha.com to script-src, frame-src, style-src, connect-src and wasm-unsafe-eval.
-Do not hard-code specific subdomains, like api.privatecaptcha.com, into your CSP.
-Widget display mode
-    Usual widget type (data-display-mode=&quot;widget&quot;) is the safest option.
     
   ">
 <meta
@@ -42,24 +38,20 @@ Widget display mode
 
 <meta
   property="article:modified_time"
-  content="2026-09-22T16:32:03+02:00">
+  content="2026-10-27T10:45:24+01:00">
 
 
 
 	<meta itemprop="name" content="Security">
-	<meta itemprop="description" content="Client side Content-Security-Policy Settings If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use EU Isolation).
-You need to add https://privatecaptcha.com, https://*.privatecaptcha.com to script-src, frame-src, style-src, connect-src and wasm-unsafe-eval.
-Do not hard-code specific subdomains, like api.privatecaptcha.com, into your CSP.
-Widget display mode Usual widget type (data-display-mode=&#34;widget&#34;) is the safest option.">
+	<meta itemprop="description" content="Client side Frontend basics Make sure your HTML form cannot be submitted without having to click captcha widget (form submission is not blocked automatically, you have to hook into captcha solved event).
+Content-Security-Policy Settings If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use EU Isolation).">
 	<meta itemprop="datePublished" content="2025-10-15T12:26:01+03:00">
-	<meta itemprop="dateModified" content="2026-09-22T16:32:03+02:00">
-	<meta itemprop="wordCount" content="503">
+	<meta itemprop="dateModified" content="2026-10-27T10:45:24+01:00">
+	<meta itemprop="wordCount" content="550">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Security">
-	<meta name="twitter:description" content="Client side Content-Security-Policy Settings If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use EU Isolation).
-You need to add https://privatecaptcha.com, https://*.privatecaptcha.com to script-src, frame-src, style-src, connect-src and wasm-unsafe-eval.
-Do not hard-code specific subdomains, like api.privatecaptcha.com, into your CSP.
-Widget display mode Usual widget type (data-display-mode=&#34;widget&#34;) is the safest option.">
+	<meta name="twitter:description" content="Client side Frontend basics Make sure your HTML form cannot be submitted without having to click captcha widget (form submission is not blocked automatically, you have to hook into captcha solved event).
+Content-Security-Policy Settings If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use EU Isolation).">
 
     <link rel="preload" href="/css/compiled/main.min.858fe2deb560f618649f2d63ad1c5bddb20f80815b955841aced2fb4a04e2f0a.css" as="style" integrity="sha256-hY/i3rVg9hhkny1jrRxb3bIPgIFblVhBrO0vtKBOLwo=" />
     <link href="/css/compiled/main.min.858fe2deb560f618649f2d63ad1c5bddb20f80815b955841aced2fb4a04e2f0a.css" rel="stylesheet" integrity="sha256-hY/i3rVg9hhkny1jrRxb3bIPgIFblVhBrO0vtKBOLwo=" />
@@ -1086,6 +1078,10 @@ Widget display mode Usual widget type (data-display-mode=&#34;widget&#34;) is th
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#frontend-basics">Frontend basics
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#content-security-policy-settings">Content-Security-Policy Settings
         </a>
       </li>
@@ -1107,6 +1103,10 @@ Widget display mode Usual widget type (data-display-mode=&#34;widget&#34;) is th
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#server-side">Server side
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#backend-basics">Backend basics
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
@@ -1216,7 +1216,9 @@ Widget display mode Usual widget type (data-display-mode=&#34;widget&#34;) is th
           
           
           <h2 data-hextra-search-id="client-side">Client side<span class="hx:absolute hx:-mt-20" id="client-side"></span>
-    <a href="#client-side" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3 data-hextra-search-id="content-security-policy-settings">Content-Security-Policy Settings<span class="hx:absolute hx:-mt-20" id="content-security-policy-settings"></span>
+    <a href="#client-side" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3 data-hextra-search-id="frontend-basics">Frontend basics<span class="hx:absolute hx:-mt-20" id="frontend-basics"></span>
+    <a href="#frontend-basics" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Make sure your HTML form cannot be submitted without having to click captcha widget (form submission is not blocked automatically, you have to hook into captcha solved event).</p>
+<h3 data-hextra-search-id="content-security-policy-settings">Content-Security-Policy Settings<span class="hx:absolute hx:-mt-20" id="content-security-policy-settings"></span>
     <a href="#content-security-policy-settings" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use <a href="/docs/reference/eu-isolation/">EU Isolation</a>).</p>
 <p>You need to add <code>https://privatecaptcha.com</code>, <code>https://*.privatecaptcha.com</code> to <code>script-src</code>, <code>frame-src</code>, <code>style-src</code>, <code>connect-src</code> and <code>wasm-unsafe-eval</code>.</p>
 <p>Do <strong>not</strong> hard-code specific subdomains, like <code>api.privatecaptcha.com</code>, into your CSP.</p>
@@ -1231,7 +1233,9 @@ Widget display mode Usual widget type (data-display-mode=&#34;widget&#34;) is th
 <h3 data-hextra-search-id="sitekey-rotation">Sitekey rotation<span class="hx:absolute hx:-mt-20" id="sitekey-rotation"></span>
     <a href="#sitekey-rotation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Usually you do not need to rotate the <strong>client</strong> widget sitekey.</p>
 <h2 data-hextra-search-id="server-side">Server side<span class="hx:absolute hx:-mt-20" id="server-side"></span>
-    <a href="#server-side" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3 data-hextra-search-id="verification">Verification<span class="hx:absolute hx:-mt-20" id="verification"></span>
+    <a href="#server-side" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3 data-hextra-search-id="backend-basics">Backend basics<span class="hx:absolute hx:-mt-20" id="backend-basics"></span>
+    <a href="#backend-basics" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Make sure your backend form processing does not process the submission without verifying captcha <strong>first</strong>.</p>
+<h3 data-hextra-search-id="verification">Verification<span class="hx:absolute hx:-mt-20" id="verification"></span>
     <a href="#verification" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>All <a href="/docs/integrations/">server-side integrations</a> have some kind of a <code>Verify(solution)</code> method that returns an object that has a method <code>OK()</code>. This is the only method you should be checking to see if CAPTCHA solution is valid. If the result is <code>false</code>, you can get more details by checking underlying fields <code>Success</code> and <code>Code</code> (for debugging purposes only).</p>
 <p>All <a href="/docs/integrations/">server-side integrations</a> allow you to specify an optional <code>sitekey</code> parameter with each verification request. This is the sitekey that you are expected to check the solution against and, while being optional, is recommended to make use of.</p>
 <details class="hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
@@ -1255,7 +1259,7 @@ Widget display mode Usual widget type (data-display-mode=&#34;widget&#34;) is th
         </div>
         
     <div class="hx:mt-12 hx:mb-8 hx:block hx:text-xs hx:text-gray-500 hx:ltr:text-right hx:rtl:text-left hx:dark:text-gray-400">
-      Last updated on <time datetime="2026-09-22T16:32:03.000Z">September 22, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+      Last updated on <time datetime="2026-10-27T10:45:24.000Z">October 27, 2026</time></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
         href="/docs/reference/platform-api/"
         title="Platform API"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
@@ -1315,7 +1319,7 @@ Widget display mode Usual widget type (data-display-mode=&#34;widget&#34;) is th
     </div>
   </dialog>
     <script defer src="/js/main.min.b92364177596421c7ae15e83b3b0ed2c17ddcf4eedb8f07f9bbecc43aade8258.js" integrity="sha256-uSNkF3WWQhx64V6Ds7DtLBfdz07tuPB/m77MQ6reglg="></script>
-<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.761820eae99f73efff2b3f38213861bbba331242b3dae0be7faca7e53d356ae1.js" integrity="sha256-dhgg6umfc&#43;//Kz84IThhu7ozEkKz2uC&#43;f6yn5T01auE="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.14f41fcaa89c80c9fdca90aa7311c171f249c63e8304865f294d788fe9d6a89c.js" integrity="sha256-FPQfyqicgMn9ypCqcxHBcfJJxj6DBIZfKU14j&#43;nWqJw="></script>
     <script defer src="/en.search-dialog.min.fda123910557b5b3a328696105af51f85abc3cfc6784387c49b11b5b857b256f.js" integrity="sha256-/aEjkQVXtbOjKGlhBa9R&#43;Fq8PPxnhDh8SbEbW4V7JW8="></script>
   </body>
 </html>
