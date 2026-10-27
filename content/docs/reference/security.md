@@ -5,6 +5,10 @@ date: 2025-10-15T12:26:01+03:00
 
 ## Client side
 
+### Frontend basics
+
+Make sure your HTML form cannot be submitted without having to click captcha widget (form submission is not blocked automatically, you have to hook into captcha solved event).
+
 ### Content-Security-Policy Settings
 
 If you use Content Security Policy (CSP) headers, you need to add few domains to your configuration (also applies if you use [EU Isolation]({{< relref "/docs/reference/eu-isolation.md" >}})).
@@ -34,6 +38,10 @@ Make sure that _"Allow localhost"_ is **not** enabled in [Property settings]({{<
 Usually you do not need to rotate the **client** widget sitekey.
 
 ## Server side
+
+### Backend basics
+
+Make sure your backend form processing does not process the submission without verifying captcha **first**.
 
 ### Verification
 
