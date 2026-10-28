@@ -7969,6 +7969,11 @@
 					&lt;td&gt;&lt;code&gt;5s&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Shutdown delay in Go duration format. Useful for load-balancer and &lt;code&gt;/ready&lt;/code&gt; combination.&lt;/td&gt;
 			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;PC_MIN_SOLVE_TIME_AT_MEDIUM&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;100ms&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;If set, will enable timing heuristic to detect bot farms with &amp;ldquo;too fast&amp;rdquo; challenge solving. Requires benchmarking and monitoring.&lt;/td&gt;
+			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;div class=&#34;pc-alert&#34;&gt;&lt;div
@@ -8891,6 +8896,11 @@
 					&lt;td&gt;&lt;code&gt;property-org-scope&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Property belongs to a different org than API key scope&lt;/td&gt;
 			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;13&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;solution-timing&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Challenge was solved too fast on the client side&lt;/td&gt;
+			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 data-hextra-search-id=&#34;errors-during-successful-verification&#34;&gt;Errors during successful verification&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;errors-during-successful-verification&#34;&gt;&lt;/span&gt;
@@ -8899,6 +8909,7 @@
 &lt;li&gt;When you&amp;rsquo;re using a &lt;a href=&#34;https://docs.privatecaptcha.com/docs/reference/testing/&#34;&gt;test property&lt;/a&gt;, &lt;code&gt;code&lt;/code&gt; will be &lt;code&gt;property-test&lt;/code&gt; (but verification might succeed).&lt;/li&gt;
 &lt;li&gt;During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, &lt;code&gt;success&lt;/code&gt; in response is equal to &lt;code&gt;true&lt;/code&gt;, but &lt;code&gt;code&lt;/code&gt; will be &lt;code&gt;maintenance-mode&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;If you configured property to &lt;em&gt;&amp;ldquo;Accept repeated solutions&amp;rdquo;&lt;/em&gt; (during verification window), verification of repeated solution will cause &lt;code&gt;code&lt;/code&gt; to be &lt;code&gt;solution-verified-before&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;When captcha challenge was solved surprisingly fast (as in - orders of magnitude faster than usual), error code will be &lt;code&gt;solution-timing&lt;/code&gt;. This may or may not suggest a bot farm use with special equipment.&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

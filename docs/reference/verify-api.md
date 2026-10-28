@@ -79,6 +79,7 @@ Code | Error | Description
 `10` | `property-test` | Test property is used for verification
 `11` | `integrity-error` | Puzzle or solution integrity is compromised
 `12` | `property-org-scope` | Property belongs to a different org than API key scope
+`13` | `solution-timing` | Challenge was solved too fast on the client side
 
 ### Errors during successful verification
 
@@ -87,3 +88,4 @@ There are a couple of cases, when `success` in response will be equal to `true` 
 - When you're using a [test property]({{< relref "/docs/reference/testing.md" >}}), `code` will be `property-test` (but verification might succeed).
 - During maintenance mode, Private Captcha still verifies cryptographic solution validity, however, account validity might not be possible to verify. If solution is valid, `success` in response is equal to `true`, but `code` will be `maintenance-mode`.
 - If you configured property to _"Accept repeated solutions"_ (during verification window), verification of repeated solution will cause `code` to be `solution-verified-before`.
+- When captcha challenge was solved surprisingly fast (as in - orders of magnitude faster than usual), error code will be `solution-timing`. This may or may not suggest a bot farm use with special equipment.

@@ -1126,6 +1126,11 @@
 					&lt;td&gt;&lt;code&gt;5s&lt;/code&gt;&lt;/td&gt;
 					&lt;td&gt;Shutdown delay in Go duration format. Useful for load-balancer and &lt;code&gt;/ready&lt;/code&gt; combination.&lt;/td&gt;
 			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;PC_MIN_SOLVE_TIME_AT_MEDIUM&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;100ms&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;If set, will enable timing heuristic to detect bot farms with &amp;ldquo;too fast&amp;rdquo; challenge solving. Requires benchmarking and monitoring.&lt;/td&gt;
+			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;div class=&#34;pc-alert&#34;&gt;&lt;div
