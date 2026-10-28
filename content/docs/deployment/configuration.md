@@ -64,6 +64,7 @@ Variable | Example | Description
 `PC_EDGE_TOKEN_SIGNING_PUBLIC_KEY` | `qwerty` | Public key for ES256 (ECDSA with SHA-256) and a P-256 elliptic-curve key pair
 `PC_EDGE_TOKEN_SECONDARY_PUBLIC_KEY` | `qwerty` | Old/New public key used during rotation of Edge Token signing keys
 `PC_SHUTDOWN_DELAY` | `5s` | Shutdown delay in Go duration format. Useful for load-balancer and `/ready` combination.
+`PC_MIN_SOLVE_TIME_AT_MEDIUM` | `100ms` | If set, will enable timing heuristic to detect bot farms with "too fast" challenge solving. Requires benchmarking and monitoring.
 
 > [!NOTE]
 "Default" rate limiter means the one for public APIs (`/puzzle`, `/verify` and some others). Various other APIs have pre-configured hardcoded limits, compiled in.
