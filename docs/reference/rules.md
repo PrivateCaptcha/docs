@@ -186,7 +186,7 @@ Usage reports are available only on property level and show how many times prope
 
 ## Recommendations
 
-It is recommended to make use of [Traffic Source](#traffic-source) (cover at least Cloud providers, Search/Crawlers and "Threat" lists) and bot [User-Agent](#user-agent) right away as those are very classical spammers/abusers.
+It is recommended to make use of [Traffic Source](#traffic-source) (cover at least Cloud providers, Search/Crawlers and "Threat" lists), [Client-side automation detection](#client-side-detection), and bot [User-Agent](#user-agent) right away as those are very classical spammers/abusers.
 
 You can also change both [Growth](#difficulty-growth) and [Level](#difficulty-levels) independently as they help each other and do not conflict.
 
