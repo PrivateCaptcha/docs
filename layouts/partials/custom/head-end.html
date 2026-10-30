@@ -1,4 +1,45 @@
-<script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://stats.intmaker.com/js/pa-HG7ZIuTVEc7rSshH_U3wO.js"></script>
+<script>
+  // Queue events and save options until the async tracker loads.
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  // Send pageviews only through the interaction handler below.
+  plausible.init({ autoCapturePageviews: false });
+
+  (() => {
+    let controller;
+    const trackPageview = (event) => {
+      // Ignore events dispatched by page scripts.
+      if (!event.isTrusted) return;
+
+      // Count once per visit and remove all interaction listeners together.
+      controller.abort();
+      plausible("pageview");
+    };
+
+    // Register listeners for the next interaction without sending a pageview.
+    const armPageview = () => {
+      // Remove pending listeners; an aborted controller cannot be reused.
+      controller?.abort();
+      controller = new AbortController();
+
+      ["touchmove", "mousemove", "keydown", "pointerdown", "wheel", "click"].forEach((eventName) => {
+        document.addEventListener(eventName, trackPageview, {
+          capture: true, // Observe input before components can stop propagation.
+          passive: true, // The handler never needs to prevent default behavior.
+          signal: controller.signal,
+        });
+      });
+    };
+
+    armPageview();
+    // Back/forward cache restores keep JS state and do not rerun this script.
+    window.addEventListener("pageshow", (event) => {
+      if (event.persisted) armPageview();
+    });
+  })();
+</script>
+
 {{- if .Params.captcha_scripts }}
 
 {{- if .Params.captcha_branding }}
