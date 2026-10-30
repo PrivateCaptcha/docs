@@ -2018,6 +2018,13 @@
     &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-old-browser.png&#34; title=&#34;Example: match browsers which are trailing latest release by more than 5 major versions&#34; alt=&#34;Difficulty rules structure&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Example: match browsers which are trailing latest release by more than 5 major versions&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
+&lt;h4 data-hextra-search-id=&#34;client-side-detection&#34;&gt;Client-side detection&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;client-side-detection&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#client-side-detection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Currently detects only local automation (e.g. Selenium, CDP etc.). Detections, as the name suggest, are done by the client script.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://docs.privatecaptcha.com/images/reference/difficulty-rule-client-side-detection.png&#34; title=&#34;Example: Match Selenium automation&#34; alt=&#34;Difficulty rules client-side detection&#34;  data-zoomable loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Example: Match Selenium automation&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;h4 data-hextra-search-id=&#34;always&#34;&gt;Always&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;always&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#always&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;There&amp;rsquo;s a simple &amp;ldquo;Always&amp;rdquo; condition that always matches all requests. For example, if you need to quickly apply a rule over the organization to all properties.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;

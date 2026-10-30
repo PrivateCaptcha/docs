@@ -66,7 +66,47 @@ You can see a demo page here .">
 
   
   
-  <script defer data-domain="docs.privatecaptcha.com" src="https://stats.intmaker.com/js/script.js"></script></head>
+  
+<script async src="https://stats.intmaker.com/js/pa-HG7ZIuTVEc7rSshH_U3wO.js"></script>
+<script>
+  
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  
+  plausible.init({ autoCapturePageviews: false });
+
+  (() => {
+    let controller;
+    const trackPageview = (event) => {
+      
+      if (!event.isTrusted) return;
+
+      
+      controller.abort();
+      plausible("pageview");
+    };
+
+    
+    const armPageview = () => {
+      
+      controller?.abort();
+      controller = new AbortController();
+
+      ["touchmove", "mousemove", "keydown", "pointerdown", "wheel", "click"].forEach((eventName) => {
+        document.addEventListener(eventName, trackPageview, {
+          capture: true, 
+          passive: true, 
+          signal: controller.signal,
+        });
+      });
+    };
+
+    armPageview();
+    
+    window.addEventListener("pageshow", (event) => {
+      if (event.persisted) armPageview();
+    });
+  })();
+</script></head>
 <body>
     <a href="#content" class="hx:sr-only hx:focus-visible:not-sr-only hx:focus-visible:fixed hx:focus-visible:z-50 hx:focus-visible:top-2 hx:focus-visible:left-2 hx:focus-visible:bg-primary-500 hx:focus-visible:text-white hx:focus-visible:px-4 hx:focus-visible:py-2 hx:focus-visible:rounded-md hx:focus-visible:text-sm hx:focus-visible:font-medium">Skip to content</a><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
   <div
@@ -1683,7 +1723,7 @@ You can see a demo page here .">
     </div>
   </dialog>
     <script defer src="/js/main.min.b92364177596421c7ae15e83b3b0ed2c17ddcf4eedb8f07f9bbecc43aade8258.js" integrity="sha256-uSNkF3WWQhx64V6Ds7DtLBfdz07tuPB/m77MQ6reglg="></script>
-<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.9be4410ef75150271c417b154bb9f4976517bf9641f407b975c97f62b09dbc9e.js" integrity="sha256-m&#43;RBDvdRUCccQXsVS7n0l2UXv5ZB9Ae5dcl/YrCdvJ4="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script><script defer src="/en.search.min.d5d3be02a5411b71568754ee6ef6be9e2e7327d0241aba4da1d17ee075d4c29b.js" integrity="sha256-1dO&#43;AqVBG3FWh1Tubva&#43;ni5zJ9AkGrpNodF&#43;4HXUwps="></script>
     <script defer src="/en.search-dialog.min.fda123910557b5b3a328696105af51f85abc3cfc6784387c49b11b5b857b256f.js" integrity="sha256-/aEjkQVXtbOjKGlhBa9R&#43;Fq8PPxnhDh8SbEbW4V7JW8="></script><script defer src="/js/medium-zoom.min.6603320c02180d81b16dca4971f52763035ebc6ff18bd38729a47ff062be8d67.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK&#43;jWc=" crossorigin="anonymous"></script><script>
   document.addEventListener("DOMContentLoaded", () => {
     if (!window.mediumZoom) {

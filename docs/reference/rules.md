@@ -95,6 +95,15 @@ Match if browser version differs from the latest version by this much. Useful, b
 
 ![Difficulty rules structure](/images/reference/difficulty-rule-old-browser.png "Example: match browsers which are trailing latest release by more than 5 major versions")
 
+#### Client-side detection
+
+Currently detects only local automation (e.g. Selenium, CDP etc.). Detections, as the name suggest, are done by the client script.
+
+**Example**
+
+![Difficulty rules client-side detection](/images/reference/difficulty-rule-client-side-detection.png "Example: Match Selenium automation")
+
+
 #### Always
 
 There's a simple "Always" condition that always matches all requests. For example, if you need to quickly apply a rule over the organization to all properties.
