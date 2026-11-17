@@ -5,6 +5,7 @@ This is a **all-in-one** plugin for Magento 2 ("Adobe Commerce") that allows you
 {{< cards >}}
   {{< card link="https://github.com/PrivateCaptcha/private-captcha-magento2" title="GitHub repository" icon="github" >}}
   {{< card link="https://packagist.org/packages/private-captcha/magento2" title="Packagist package" icon="cube" >}}
+  {{< card link="https://commercemarketplace.adobe.com/private-captcha-magento2.html" title="Adobe marketplace" icon="collection" >}}
 {{< /cards >}}
 
 ## Features
