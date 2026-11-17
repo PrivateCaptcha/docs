@@ -160,6 +160,19 @@ However, in case of multiple widgets, you can assign this attribute to a variabl
 
 This is a read-only attribute that can have values `empty`, `error`, `loading`, `ready`, `inprogress`, `verified` and `invalid`. You can use it for CSS conditions.
 
+#### `data-custom-detection-callback`
+
+Private Captcha widget detects various automations out of the box, but you have an option to pass your own function to detect bots (alternatively, via `customDetectionCallback` option via JavaScript). If this function returns truthful value, on the backend in the [difficulty rules]({{< relref "docs/reference/rules.md#client-side-detection" >}}) you can match it with `Custom` value of "Client-side detection".
+
+```html
+<div class="private-captcha" data-sitekey="xyz" data-custom-detection-callback="detectCustom"></div>
+<script>
+    function detectCustom() {
+        return true;
+    }
+</script>
+```
+
 ## Events and Callbacks
 
 Element, where `private-captcha` class is set, will receive various lifecycle events (alternative to [Callbacks](#callbacks)). All events receive a `detail` parameter with `widget` ([Captcha Object]({{< relref "/docs/reference/captcha-object.md" >}})) and `element` properties. As an alternative, you can set `data` attributes with JavaScript handlers (all callbacks receive a single argument which is the [Captcha Object]({{< relref "/docs/reference/captcha-object.md" >}}) itself).

@@ -97,12 +97,13 @@ Match if browser version differs from the latest version by this much. Useful, b
 
 #### Client-side detection
 
-Currently detects only local automation (e.g. Selenium, CDP etc.). Detections, as the name suggest, are done by the client script.
+Widgets detects various client-side automations (e.g. Selenium, CDP etc.) and in the portal you can match this condition with `Automation` option.
+
+Additionally, you have an option to add your custom client-side detection in the widget using [`data-custom-detection-callback` attribute]({{< relref "docs/reference/widget-options.md#data-custom-detection-callback" >}}) and in the rule it will be shown as `"Custom"`.
 
 **Example**
 
-![Difficulty rules client-side detection](/images/reference/difficulty-rule-client-side-detection.png "Example: Match Selenium automation")
-
+![Difficulty rules client-side detection](/images/reference/difficulty-rule-client-side-detections.png "Example: Match Selenium automation")
 
 #### Always
 
@@ -183,6 +184,10 @@ When the request is matched to a few rules and same action is applied (e.g. `Dif
 Usage reports are available only on property level and show how many times property rules were triggered.
 
 ![Difficulty rules reports](/images/reference/difficulty-rule-reports.png)
+
+## System rules
+
+There are a couple of default difficulty rules applied to all puzzle requests **if** there're no user-configured rules. These rules match few bot markers via client-side detections and HTTP headers. They are not applied when you add your own rules either on Organization or Property level.
 
 ## Recommendations
 

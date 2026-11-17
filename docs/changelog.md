@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.47.0 - 2026-11-17
+
+- Add [automation detection]({{< relref "docs/reference/rules.md#client-side-detection" >}}) on the client-side with difficulty rules on the backend
+- Add [whitelabeled widget]({{< relref "docs/reference/widget-options.md#unbranded-widget" >}}) support
+- More customizations for the widget style
+- Add letters to verification codes
+- Add system difficulty rules that are applied if there're no custom ones
+- Various security bugfixes and dependency updates
+
 ## v1.46.0 - 2026-10-20
 
 - Support for [Edge protection]({{< relref "docs/reference/edge-protection.md" >}}) to fight scrapers
