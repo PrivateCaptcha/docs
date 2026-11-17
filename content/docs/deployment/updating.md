@@ -59,6 +59,10 @@ These are only deployment-specific changes. For general feature changelog, click
 {{< /callout >}}
 </div>
 
+### v1.47.0
+
+- widget has been updated, purge CDN cache
+
 ### v1.46.0
 
 - widget was updated, purge CDN cache

@@ -5,7 +5,8 @@ date: 2026-10-13T17:09:38+02:00
 
 Edge protection allows you to integrate Private Captcha challenges directly to your web-server (e.g. Caddy, Nginx) or CDN (e.g. Bunny CDN) to challenge visitors before they reach your website (at the "edge"). After passing the challenge, each visitor is authorized for a specific duration of time to access resources without challenges.
 
-You can see a [demo page here](https://portal.privatecaptcha.com/gate/demo).
+> [!INFO]
+> You can see a [demo page here](https://portal.privatecaptcha.com/gate/demo).
 
 ## How it works
 
